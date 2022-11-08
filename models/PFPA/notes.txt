@@ -1,0 +1,25 @@
+11/7/22
+
+-URL: https://reader.elsevier.com/reader/sd/pii/S0045653521021573?token=3EED1EE47B2F9654FE55B56A7F67193322C1C5311DD7F32A73E7C471882158674F9862ED3C2E27BC7B40542449987CFB&originRegion=us-east-1&originCreation=20221107141437
+
+Notes from Alterawneh: 
+
+- perfluoropentanoic acid (C4F9COOH)
+- focused only on gas phase reactions
+- submodel consists of 56 reactions and 45 species
+    - new features of submodel: 
+        - formation of n-C4F9 radical
+        - abstraction of hydroxyl H by O/H radicals
+        - fragmentation of the n-C4F9 radical
+        - reactions between HF and perfluoropentanoic acid 
+        - reactions between HF and C3F7COF
+        - cyclisation reactions 
+- illustrates formation of many small CnFm and CnHFm compounds from 800-1500K
+- modeling used a PFR model at 1 atm, 500-1500 K, and a residence time of 25 s.
+    - Inlet stream consists of 2% mol of perfluoropentanoic acid (M0) in N2 (i.e., purely pyrolytic conditions). 
+
+-results: 
+    - At 1500 K, predict emission of ꞉CF2 (biradical difluorocarbene), HF, CO2, CO, CF4, C2F6, C2F4
+    - < 1400 K, the formation of 1H-nonafluorobutane (C4HF9), phosgene (COF2), and heptafluorobutanoyl fluoride (C3F7COF), with 1-C4F8,
+        2-C4F8 and C3HF7 persisting to 1500 K. 
+    - concludes that gas-phase pyrolysis by itself can convert PFAS to HF and short chain fluorocarbons

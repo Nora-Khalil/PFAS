@@ -1,0 +1,388 @@
+N2
+1 N u0 p1 c0 {2,T}
+2 N u0 p1 c0 {1,T}
+
+F
+multiplicity 2
+1 F u1 p3 c0
+
+F2
+1 F u0 p3 c0 {2,S}
+2 F u0 p3 c0 {1,S}
+
+CF4
+1 F u0 p3 c0 {5,S}
+2 F u0 p3 c0 {5,S}
+3 F u0 p3 c0 {5,S}
+4 F u0 p3 c0 {5,S}
+5 C u0 p0 c0 {1,S} {2,S} {3,S} {4,S}
+
+#M0
+H1C5O2F9
+1  C u0 p0 c0 {2,D} {3,S} {16,S}
+2  O u0 p2 c0 {1,D}
+3  C u0 p0 c0 {1,S} {4,S} {14,S} {15,S}
+4  C u0 p0 c0 {3,S} {5,S} {12,S} {13,S}
+5  C u0 p0 c0 {4,S} {6,S} {10,S} {11,S}
+6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+7  F u0 p3 c0 {6,S}
+8  F u0 p3 c0 {6,S}
+9  F u0 p3 c0 {6,S}
+10 F u0 p3 c0 {5,S}
+11 F u0 p3 c0 {5,S}
+12 F u0 p3 c0 {4,S}
+13 F u0 p3 c0 {4,S}
+14 F u0 p3 c0 {3,S}
+15 F u0 p3 c0 {3,S}
+16 O u0 p2 c0 {1,S} {17,S}
+17 H u0 p0 c0 {16,S}
+
+#M1
+C5O2F8
+1  C u0 p0 c0 {2,D} {3,S} {15,S}
+2  O u0 p2 c0 {1,D}
+3  C u0 p0 c0 {1,S} {4,S} {14,S} {15,S}
+4  C u0 p0 c0 {3,S} {5,S} {12,S} {13,S}
+5  C u0 p0 c0 {4,S} {6,S} {10,S} {11,S}
+6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+7  F u0 p3 c0 {6,S}
+8  F u0 p3 c0 {6,S}
+9  F u0 p3 c0 {6,S}
+10 F u0 p3 c0 {5,S}
+11 F u0 p3 c0 {5,S}
+12 F u0 p3 c0 {4,S}
+13 F u0 p3 c0 {4,S}
+14 F u0 p3 c0 {3,S}
+15 O u0 p2 c0 {1,S} {3,S}
+
+#M2
+C4O1F8
+1  F u0 p3 c0 {10,S}
+2  F u0 p3 c0 {10,S}
+3  F u0 p3 c0 {11,S}
+4  F u0 p3 c0 {11,S}
+5  F u0 p3 c0 {12,S}
+6  F u0 p3 c0 {12,S}
+7  F u0 p3 c0 {12,S}
+8  F u0 p3 c0 {13,S}
+9  O u0 p2 c0 {13,D}
+10 C u0 p0 c0 {1,S} {2,S} {11,S} {12,S}
+11 C u0 p0 c0 {3,S} {4,S} {10,S} {13,S}
+12 C u0 p0 c0 {5,S} {6,S} {7,S} {10,S}
+13 C u0 p0 c0 {8,S} {9,D} {11,S}
+
+#M3
+sin-C4F8
+multiplicity 3
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {11,S}
+6  F u0 p3 c0 {11,S}
+7  F u0 p3 c0 {11,S}
+8  F u0 p3 c0 {12,S}
+9  C u0 p0 c0 {1,S} {2,S} {10,S} {11,S}
+10 C u0 p0 c0 {3,S} {4,S} {9,S} {12,S}
+11 C u0 p0 c0 {5,S} {6,S} {7,S} {9,S}
+12 C u2 p0 c0 {8,S} {10,S}
+
+#M4
+C5O2F9
+multiplicity 2
+1  C u0 p0 c0 {2,D} {3,S} {16,S}
+2  O u0 p2 c0 {1,D}
+3  C u0 p0 c0 {1,S} {4,S} {14,S} {15,S}
+4  C u0 p0 c0 {3,S} {5,S} {12,S} {13,S}
+5  C u0 p0 c0 {4,S} {6,S} {10,S} {11,S}
+6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+7  F u0 p3 c0 {6,S}
+8  F u0 p3 c0 {6,S}
+9  F u0 p3 c0 {6,S}
+10 F u0 p3 c0 {5,S}
+11 F u0 p3 c0 {5,S}
+12 F u0 p3 c0 {4,S}
+13 F u0 p3 c0 {4,S}
+14 F u0 p3 c0 {3,S}
+15 F u0 p3 c0 {3,S}
+16 O u1 p2 c0 {1,S} 
+
+#M5
+H1C4F9
+1  F u0 p3 c0 {10,S}
+2  F u0 p3 c0 {10,S}
+3  F u0 p3 c0 {11,S}
+4  F u0 p3 c0 {11,S}
+5  F u0 p3 c0 {12,S}
+6  F u0 p3 c0 {12,S}
+7  F u0 p3 c0 {13,S}
+8  F u0 p3 c0 {13,S}
+9  F u0 p3 c0 {13,S}
+10 C u0 p0 c0 {1,S} {2,S} {11,S} {12,S}
+11 C u0 p0 c0 {3,S} {4,S} {10,S} {13,S}
+12 C u0 p0 c0 {5,S} {6,S} {10,S} {14,S}
+13 C u0 p0 c0 {7,S} {8,S} {9,S} {11,S}
+14 H u0 p0 c0 {12,S}
+
+#M6
+n-C4F8
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {10,S}
+6  F u0 p3 c0 {11,S}
+7  F u0 p3 c0 {12,S}
+8  F u0 p3 c0 {12,S}
+9  C u0 p0 c0 {1,S} {2,S} {10,S} {11,S}
+10 C u0 p0 c0 {3,S} {4,S} {5,S} {9,S}
+11 C u0 p0 c0 {6,S} {9,S} {12,D}
+12 C u0 p0 c0 {7,S} {8,S} {11,D}
+
+#M7
+n-C4F9
+1  F u0 p3 c0 {10,S}
+2  F u0 p3 c0 {10,S}
+3  F u0 p3 c0 {11,S}
+4  F u0 p3 c0 {11,S}
+5  F u0 p3 c0 {12,S}
+6  F u0 p3 c0 {12,S}
+7  F u0 p3 c0 {12,S}
+8  F u0 p3 c0 {13,S}
+9  F u0 p3 c0 {13,S}
+10 C u0 p0 c0 {1,S} {2,S} {11,S} {12,S}
+11 C u0 p0 c0 {3,S} {4,S} {10,S} {13,S}
+12 C u0 p0 c0 {5,S} {6,S} {7,S} {10,S}
+13 C u1 p0 c0 {8,S} {9,S} {11,S}
+
+#M8
+n-C3F7
+multiplicity 2
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {9,S}
+6  F u0 p3 c0 {10,S}
+7  F u0 p3 c0 {10,S}
+8  C u0 p0 c0 {1,S} {2,S} {9,S} {10,S}
+9  C u0 p0 c0 {3,S} {4,S} {5,S} {8,S}
+10 C u1 p0 c0 {6,S} {7,S} {8,S}
+
+#M9
+C3F6
+
+1 F u0 p3 c0 {7,S}
+2 F u0 p3 c0 {7,S}
+3 F u0 p3 c0 {7,S}
+4 F u0 p3 c0 {8,S}
+5 F u0 p3 c0 {9,S}
+6 F u0 p3 c0 {9,S}
+7 C u0 p0 c0 {1,S} {2,S} {3,S} {8,S}
+8 C u0 p0 c0 {4,S} {7,S} {9,D}
+9 C u0 p0 c0 {5,S} {6,S} {8,D}
+
+#M10
+C5O2H2F10
+1  C u0 p0 c0 {2,S} {3,S} {16,S} {19,S}
+2  O u0 p2 c0 {1,S} {18,S}
+3  C u0 p0 c0 {1,S} {4,S} {14,S} {15,S}
+4  C u0 p0 c0 {3,S} {5,S} {12,S} {13,S}
+5  C u0 p0 c0 {4,S} {6,S} {10,S} {11,S}
+6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+7  F u0 p3 c0 {6,S}
+8  F u0 p3 c0 {6,S}
+9  F u0 p3 c0 {6,S}
+10 F u0 p3 c0 {5,S}
+11 F u0 p3 c0 {5,S}
+12 F u0 p3 c0 {4,S}
+13 F u0 p3 c0 {4,S}
+14 F u0 p3 c0 {3,S}
+15 F u0 p3 c0 {3,S}
+16 O u0 p2 c0 {1,S} {17,S}
+17 H u0 p0 c0 {16,S}
+18 H u0 p0 c0 {2,S}
+19 F u0 p3 c0 {1,S}
+
+#M11
+FOHCO
+1  C u0 p0 c0 {2,D} {3,S} {5,S} 
+2  O u0 p2 c0 {1,D}
+3  O u0 p2 c0 {1,S} {4,S}
+4  H u0 p0 c0 {3,S} 
+5  F u0 p3 c0 {1,S} 
+
+#M12
+############# not added into mechanism 
+#1  C u0 p0 c0 {2,S} {3,S} {15,S} {17,S}
+#2  O u0 p2 c0 {1,S} {16,S}
+#3  C u0 p0 c0 {1,S} {4,S} {14,S} {15,S}
+#4  C u0 p0 c0 {3,S} {5,S} {12,S} {13,S}
+#5  C u0 p0 c0 {4,S} {6,S} {10,S} {11,S}
+#6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+#7  F u0 p3 c0 {6,S}
+#8  F u0 p3 c0 {6,S}
+#9  F u0 p3 c0 {6,S}
+#10 F u0 p3 c0 {5,S}
+#11 F u0 p3 c0 {5,S}
+#12 F u0 p3 c0 {4,S}
+#13 F u0 p3 c0 {4,S}
+#14 F u0 p3 c0 {3,S}
+#15 O u0 p2 c0 {1,S} {3,S}
+#16 H u0 p0 c0 {2,S}
+#17 F u0 p3 c0 {1,S}
+
+#M13
+########## this is also not in the mechanism 
+1  C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2  F u0 p3 c0 {1,S}
+3  F u0 p3 c0 {1,S}
+4  F u0 p3 c0 {1,S}
+5  C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
+6  F u0 p3 c0 {5,S}
+7  F u0 p3 c0 {5,S}
+8  C u0 p0 c0 {5,S} {9,S} {10,S} {11,S}
+9  F u0 p3 c0 {8,S}
+10 F u0 p3 c0 {8,S}
+11 C u0 p0 c0 {8,S} {12,S} {13,D} 
+12 F u0 p3 c0 {11,S}
+13 C u0 p0 c0 {11,D} {14,S} {15,S}
+14 F u0 p3 c0 {13,S}
+15 O u0 p2 c0 {13,S} {16,S}
+16 C u0 p0 c0 {15,S} {17,D} {18,S}
+17 O u0 p2 c0 {16,D} 
+18 F u0 p3 c0 {16,S}
+
+#M14
+C4O1H1F9
+1  F u0 p3 c0 {10,S}
+2  F u0 p3 c0 {10,S}
+3  F u0 p3 c0 {11,S}
+4  F u0 p3 c0 {13,S}
+6  F u0 p3 c0 {12,S}
+7  F u0 p3 c0 {12,S}
+8  F u0 p3 c0 {13,S}
+9  F u0 p3 c0 {13,S}
+10 C u0 p0 c0 {1,S} {2,S} {11,S} {12,S}
+11 C u0 p0 c0 {3,S} {10,S} {13,S} {14,S}
+12 C u0 p0 c0 {15,S} {6,S} {7,S} {10,S}
+13 C u0 p0 c0 {4,S} {8,S} {9,S} {11,S}
+14 F u0 p3 c0 {11,S}
+15 O u0 p2 c0 {12,S} {16,S}
+16 H u0 p0 c0 {15,S}
+
+#M15
+F2CO
+1  C u0 p0 c0 {2,D} {3,S} {4,S} 
+2  O u0 p2 c0 {1,D} 
+3  F u0 p3 c0 {1,S}
+4  F u0 p3 c0 {1,S}
+
+#M16
+#why is this not in the mechanism?? 
+1  F u0 p3 c0 {10,S}
+2  F u0 p3 c0 {10,S}
+3  F u0 p3 c0 {11,S}
+4  F u0 p3 c0 {12,S}
+5  F u0 p3 c0 {12,S}
+6  F u0 p3 c0 {12,S}
+7  F u0 p3 c0 {13,S}
+8  F u0 p3 c0 {13,S}
+9  O u0 p2 c0 {11,S} {13,S}
+10 C u0 p0 c0 {1,S} {2,S} {11,S} {12,S}
+11 C u0 p0 c0 {3,S} {9,S} {10,S} {13,S}
+12 C u0 p0 c0 {4,S} {5,S} {6,S} {10,S}
+13 C u0 p0 c0 {7,S} {8,S} {11,S} {9,S}
+
+#M17
+C3H1F7
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {10,S}
+6  F u0 p3 c0 {10,S}
+7  F u0 p3 c0 {10,S}
+8  C u0 p0 c0 {1,S} {2,S} {9,S} {10,S}
+9  C u0 p0 c0 {3,S} {4,S} {8,S} {11,S}
+10 C u0 p0 c0 {5,S} {6,S} {7,S} {8,S}
+11 H u0 p0 c0 {9,S}
+
+C4F8 
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {11,S}
+6  F u0 p3 c0 {11,S}
+7  F u0 p3 c0 {12,S}
+8  F u0 p3 c0 {12,S}
+9  C u0 p0 c0 {1,S} {2,S} {10,S} {11,S}
+10 C u0 p0 c0 {3,S} {4,S} {9,S} {12,S}
+11 C u0 p0 c0 {5,S} {6,S} {9,S} {12,S}
+12 C u0 p0 c0 {7,S} {8,S} {10,S} {11,S}
+
+
+
+
+ 
+
+
+
+*cyc-C3F6
+cyc-C4F8
+
+
+cyc-C5F10,
+cyc-C6F12, cyc-C7F14, and cyc-C8F16 
+
+
+
+SPECIES
+ ---   N2
+ ---   F
+ ---   F2
+       CF2:CF
+       C4F6
+ ---   CF4
+    CF2:CF2
+    CF3-CF3
+---    C3F6
+    C3F8 
+---    C4F8 - this is ring 
+    C4F10
+    CF2
+    CF3
+    C2F5
+---    n-C3F7
+    i-C4F8
+    t-C4F8
+    c-C3F6
+    CF3CF
+#    C(S)
+---    n-C4F9
+ ---   H1C5O2F9 (PFOA)
+ ---   C5O2F8
+ ---   C4O1F8 
+    HF
+    CO
+    CO2
+---    H1C4F9
+    COOH 
+    OCF
+---    C4O1H1F9
+---    C3H1F7
+---    n-C4F8 - linear with double bond 
+    FOHCO
+    F2CO
+---    sin-C4F8
+---    C5O2F9
+---    C5O2H2F10
+    C2F5H
+    CHF3
+    CHF2
+    CH2F2
+    C2H2F4
+    C2HF2
+    C2HF3
+END

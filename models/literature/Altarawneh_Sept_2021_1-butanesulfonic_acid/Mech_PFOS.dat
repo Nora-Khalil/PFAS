@@ -1,0 +1,110 @@
+ELEMENTS N C F H O S END
+SPECIES N2 F F2 CF2:CF C4F6 CF4 CF2:CF2 CF3-CF3 C3F6 C3F8 
+C4F8 C4F10 CF2 CF3 C2F5 n-C3F7 i-C4F8 t-C4F8 c-C3F6 CF3CF C(S) n-C4F9
+H1C5O2F9  C5O2F8 C4O1F8  HF CO CO2 H1C4F9 COOH OCF C4O1H1F9 C3H1F7
+n-C4F8 FOHCO F2CO C5O2F9 C5O2H2F10 C2F5H CHF3 CHF2 CH2F2 C2H2F4 C2HF2
+C4O3H1S1F9 C4O3S1F8  C4O3S1F9 C4O2S1F9 SO SO2 SO3 H2SO3 HSO3 OH H2O H H2
+C2HF3  C2HF5O  C3HF7O   C2H1F3O2   C2F4O1   C3F4O2 C3H1F5O2  C3F6O1                 
+C4F6O2 C4H1F7O2          
+END
+REACTIONS 
+HSO3=OH+SO2 4.34E+14  0.0 25800
+C4O3H1S1F9<=>C4O3S1F8+HF 2.2E+12 0.63 64000
+C4O3S1F8<=>C4O1F8+SO2 3.73E+13 0.37 10500
+C4O3S1F8<=>n-C4F8+SO3 1.58E+13 0.27 64900
+C4O3H1S1F9<=>H1C4F9+SO3 8.38E+11 0.57 70400
+C4O3H1S1F9=>n-C4F8+SO3+HF 5.11E+11 0.49 63300
+C4O3H1S1F9=HSO3+n-C4F9  9.22E+12 0.68 72000
+C4O3H1S1F9+HSO3=H2SO3 + C4O3S1F9 1.26 2.97 32200
+C4O3H1S1F9+F=HF + C4O3S1F9 1.3E+12 0.0 4800
+C4O3H1S1F9+OH=H2O + C4O3S1F9 24.8E+2  2.46 1300
+C4O3H1S1F9+H=H2 + C4O3S1F9 6.5E+2  2.90 12800
+C4O3S1F9=SO3+n-C4F9  1E+14 0.00 8000
+C4O1F8+HF<=>C4O1H1F9  8.56E+14 0.0  33580
+C4O1H1F9=>C3F6+HF+F2CO 3.61E+12 0.82 78337
+C4O1H1F9<=>F2CO+C3H1F7  9.19E+13 0.9 88234
+C4O1F8=OCF+n-C3F7  1E+14 0.0  87000
+OCF+F<=>F2CO 1.5E+14 0.00 2000
+OCF<=>F+CO 1.16E+14 0.00 118000
+C4F10<=>n-C4F9+F  3.0E+13  0.0  127000
+n-C4F9<=>CF2:CF2+C2F5  5.1E+11 0.91 42600
+n-C4F9<=>CF2+n-C3F7  7.47E+12 0.86  53737
+n-C3F7<=>CF2:CF2+CF3  5.1E+11 0.91 42600
+OCF+OCF<=>CO+F2CO  1.1E+14 0.00 0.00
+H1C4F9<=>n-C4F8+HF  6.18E+9 1.2 89000
+C3H1F7<=>C3F6+ HF 6.18E+9 1.2 89000
+CF2:CF2+HF=C2F5H  6.98E+10 0.0  48000
+2CHF2 <=> CH2F2+CF2                         3E+013        0    1600.00
+CF2+CHF3 <=> CF3+CHF2                       1E+013        0   40000.00
+CHF3+CF2 <=> CF2:CF2+HF                     1E+013        0   41000.00
+CHF3<=>HF+CF2                              3.95E+10      1.1  76900
+2CHF2 <=> C2H2F4                     2.26E+024     -3.5    3360.00
+2CHF2 <=> C2HF3+HF                      2.2E+019    -1.95    4100.00
+  C4F10=C2F5+C2F5                               5.14E+16    0.0    84720.0
+  C4F10=CF3+n-C3F7                              5.14E+16    0.0    82300.0
+  CF2:CF2+CF2=C3F6                              5.00E+12    0.0    18400.0
+F2+M=2F+M                                     1.26E+10    0.0    28011.0
+ CF3+F=CF4                                     1.58E+38   -7.9     8939.0
+   CF2+F=CF3                                     7.94E+12    0.0        0.0
+CF3+CF2=C2F5                                  1.00E+13   0.0        0.0 
+CF3+CF3=CF3-CF3                                   3.16E+13    0.0        0.0 
+C2F5=CF2:CF2+F                                    5.01E+13    0.0    79995.0  
+CF2:CF2+F=CF3+CF2                             3.16E+13    0.0        0.0
+   CF2+CF2=CF2:CF2                               8.73E+12    0.0        0.0
+   CF2:CF+F=CF2+CF2                              2.00E+13    0.0        0.0
+  C3F6=CF3CF+CF2                                1.00E+13    0.0    78393.0  
+CF3CF=CF2:CF2                                 3.16E+11    0.0    40009.0
+  C3F6=CF2:CF+CF3                               5.01E+15    0.0   104995.0
+C3F8=C2F5+CF3                                 1.00E+14    0.0    88000.0
+CF2:CF2+CF2:CF2=C4F8                            5.01E+11    0.0    24000
+C3F6+F=C2F5+CF2                               5.01E+51  -10.9    42351.0
+  C3F6+F=CF2:CF2+CF3                            6.31E+49  -10.8    37739.0 
+CF2:CF2+CF2=c-C3F6                            2.00E+11    0.0     8505.0  
+C2F5+CF2=n-C3F7                               3.98E+12    0.0     2008.0  
+  CF3CF+CF3CF=t-C4F8                            6.31E+12    0.0     2008.0  
+CHF2+CF3 <=> CF2:CF2+HF                     7E+016    -1.17    4330.00
+C3F6+CF2=i-C4F8                               3.98E+13    0.0    36879.0
+  CF2:CF2+CF2:CF2=C3F6+CF2                      1.00E+12    0.0    29995.0
+ CF2:CF+CF2:CF=C4F6                            3.16E+12    0.0        0.0 
+n-C4F9<=>n-C4F8+F     1.22E+12 0.54  58276  
+C3F6O1 = OCF+C2F5 1E+14 0.0 87000
+C2F4O1 = OCF +CF3 1E+14 0.0 94400
+C4O1F8 + H2O = C4H1F7O2 + HF 10.23E+8 0.00 24600
+C4H1F7O2 = C4F6O2  + HF 9.71E+10 0.60  61800
+C4F6O2 = C3F6O1 + CO 5.60E+10 0.81  19500
+C3F6O1 + HF = C3HF7O  24.47E+9 0.00 26300
+C3HF7O =>HF + F2CO + CF2:CF2 4.35E+10 0.99 81200
+C3F6O1 + H2O = C3H1F5O2 + HF 14.15E+8 0.00 26300
+C3H1F5O2 = HF + C3F4O2 7.61E+12 0.0  62300
+C3F4O2 = CO + C2F4O1 9.61E+10 0.82 20500
+C2F4O1 + HF = C2HF5O 10.84E+9 0.00 25800
+C2HF5O = F2CO + CHF3 8.24E+12 0.40  93800
+C2F4O1 + H2O = C2H1F3O2  + HF 14.06E+8 0.00 26400
+C2H1F3O2  = CO2 + CHF3 5.18E+11 0.69 78600
+END
+
+
+
+
+
+
+
+
+  
+   
+   
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+

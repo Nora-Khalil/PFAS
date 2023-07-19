@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/julia/pseudo_python_cli.py", line 308, in main
+    python(**vars(ns))
+  File "/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/julia/pseudo_python_cli.py", line 59, in python
+    scope = runpy.run_path(script, run_name="__main__")
+  File "/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/khalil.nor/Code/RMG-Py/rmg.py", line 118, in <module>
+    main()
+  File "/home/khalil.nor/Code/RMG-Py/rmg.py", line 112, in main
+    rmg.execute(**kwargs)
+  File "/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py", line 742, in execute
+    self.initialize(**kwargs)
+  File "/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py", line 584, in initialize
+    self.reaction_model.add_seed_mechanism_to_core(seed_mechanism, react=False)
+  File "/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/model.py", line 1607, in add_seed_mechanism_to_core
+    " explicitly allow it.".format(spec.label, seed_mechanism.label))
+rmgpy.exceptions.ForbiddenStructureException: Species constraints forbids species C(T) from seed mechanism FFCM1(-). Please reformulate constraints, remove the species, or explicitly allow it.

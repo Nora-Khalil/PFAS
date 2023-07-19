@@ -1,0 +1,133 @@
+Global RMG Settings:
+   database.directory   = /home/khalil.nor/Code/RMG-database/input (Default, relative to RMG-Py source code)
+   test_data.directory  = /home/khalil.nor/Code/RMG-Py/rmgpy/test_data (Default, relative to RMG-Py source code)
+RMG execution initiated at Tue Nov  8 12:16:54 2022
+
+#########################################################
+# RMG-Py - Reaction Mechanism Generator in Python       #
+# Version: 3.1.0                                        #
+# Authors: RMG Developers (rmg_dev@mit.edu)             #
+# P.I.s:   William H. Green (whgreen@mit.edu)           #
+#          Richard H. West (r.west@neu.edu)             #
+# Website: http://reactionmechanismgenerator.github.io/ #
+#########################################################
+
+The current git HEAD for RMG-Py is:
+	b'77dddc0b3c614b2c42b79a29342d0da080cb4952'
+	b'Mon Jan 17 13:31:19 2022 -0500'
+
+The current git HEAD for RMG-database is:
+	b'014d2acaa8ad053f4f655d95145876c730b40813'
+	b'Wed Feb 16 14:12:37 2022 -0500'
+
+Reading input file "/work/westgroup/nora/Code/projects/PFAS/models/PFPA/input.py"...
+
+thermolibs = [
+'primaryThermoLibrary',
+'FFCM1(-)',
+'halogens',
+'CHOF_G4',
+'CHOCl_G4',
+'CHOBr_G4',
+'CHOFCl_G4',
+'CHOFBr_G4',
+'CHOFClBr_G4',
+'DFT_QCI_thermo',
+'Fluorine',
+'2-BTP_G4',
+'thermo_DFT_CCSDTF12_BAC',
+'SulfurHaynes',
+]
+
+database(
+thermoLibraries = thermolibs,
+reactionLibraries = ['halogens_pdep'],
+seedMechanisms = ['FFCM1(-)'],
+kineticsDepositories = ['training'],
+kineticsFamilies = ['default','halogens','Disproportionation-Y'],
+frequenciesLibraries = ['halogens_G4'],
+kineticsEstimator = 'rate rules',
+)
+
+#Only put PFPA in core initially, want to see what RMG will place in the core on its own
+species(
+    label = 'PFPA',
+    reactive = True,
+    structure = SMILES('OC(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F')
+)
+
+#in N2 bath gas 
+species(
+    label = 'N2',
+    reactive = False,
+    structure = SMILES('N#N')
+)
+
+
+simpleReactor(
+        temperature=[(1000,'K'),(2000,'K')],
+        pressure=(1.0,'bar'),
+        nSims=12,
+        initialMoleFractions={
+        "PFPA": 0.02, #2% mole fraction
+        "N2": 0.98,
+        },
+        terminationConversion={
+        "PFPA": 0.95,
+        },
+        #terminationRateRatio=1e-6,
+        terminationTime=(1,'s'), #source says its in PFR for 2 and 25 s, should i try and change this to 2 
+        )
+    
+model(
+    toleranceMoveToCore = 0.1,
+    toleranceInterruptSimulation = 0.1,
+    maximumEdgeSpecies = 3e5,
+    filterReactions = True,
+    filterThreshold = 5e8,
+    minCoreSizeForPrune = 50,
+    minSpeciesExistIterationsForPrune = 4,
+)
+
+pressureDependence(
+    method='modified strong collision',
+    #method = 'reservoir state',
+    maximumGrainSize=(0.5,'kcal/mol'),
+    minimumNumberOfGrains=250,
+    temperatures=(300,2500,'K',8),
+    pressures=(0.01,100,'bar',5),
+    interpolation=('Chebyshev', 6, 4),
+    maximumAtoms=16,
+)
+
+
+
+Loading transport library from PrimaryTransportLibrary.py in /home/khalil.nor/Code/RMG-database/input/transport/libraries...
+Loading transport library from GRI-Mech.py in /home/khalil.nor/Code/RMG-database/input/transport/libraries...
+Loading transport library from NOx2018.py in /home/khalil.nor/Code/RMG-database/input/transport/libraries...
+Loading transport library from NIST_Fluorine.py in /home/khalil.nor/Code/RMG-database/input/transport/libraries...
+Loading transport library from OneDMinN2.py in /home/khalil.nor/Code/RMG-database/input/transport/libraries...
+Loading transport group database from /home/khalil.nor/Code/RMG-database/input/transport/groups...
+Loading kinetics library FFCM1(-) from /home/khalil.nor/Code/RMG-database/input/kinetics/libraries/FFCM1(-)/reactions.py...
+Loading kinetics library halogens_pdep from /home/khalil.nor/Code/RMG-database/input/kinetics/libraries/halogens_pdep/reactions.py...
+Loading frequencies library from halogens_G4.py in /home/khalil.nor/Code/RMG-database/input/statmech/libraries...
+Loading frequencies group database from /home/khalil.nor/Code/RMG-database/input/statmech/groups...
+Loading solvation thermodynamics group database from /home/khalil.nor/Code/RMG-database/input/solvation/groups...
+Loading thermodynamics library from primaryThermoLibrary.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from FFCM1(-).py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from halogens.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOF_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOCl_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOBr_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOFCl_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOFBr_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from CHOFClBr_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from DFT_QCI_thermo.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from Fluorine.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from 2-BTP_G4.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics library from SulfurHaynes.py in /home/khalil.nor/Code/RMG-database/input/thermo/libraries...
+Loading thermodynamics group database from /home/khalil.nor/Code/RMG-database/input/thermo/groups...
+Adding rate rules from training set in kinetics families...
+Filling in rate rules in kinetics families by averaging...
+Adding seed mechanism FFCM1(-) to model core...

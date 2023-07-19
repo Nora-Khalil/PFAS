@@ -1,0 +1,123 @@
+NOTES from "Thermal decomposition of perfluorinated carboxylic acids: Kinetic model
+and theoretical requirements for PFAS incineration" (2022) Altarawneh
+
+
+Image on Title Page: model PFAS species going to CF2, C2F4, CnFm, cyclic perfluorinated compounds, CO2, COF2, HF, CnF(2n+1)COF
+
+
+
+Abstract: 
+
+- studies the thermal transformation of PFPA, as a model PFAS species, in gas-phase reactions over broad ranges of temperature and     
+  residence time, which characterise incinerators and cement kilns. *only gas-phase reactions
+  
+- submodel consists of 56 reactions, 45 species
+
+- temp window of 800-1500K, 2 and 25 s residence time in a plug flow reactor
+
+- demonstrates that gas-phase pyrolysis processes by themselves convert PFAS to HF and short-chain fluorocarbons, with similar treatments for short (2 s) and long (25 s) residence times, as long as treatment temp exceeds 1500 K. 
+
+
+
+Introduction:
+
+
+- discusses concentration percentages in Light Water AFFF. Treatment processes to handle concentrates of AFFF must be capable of PFAS   destruction at high PFAS conc.
+
+- In this work, executed submodel under pyrolysis conditions, but submodel can accept concentrations of moisture and oxygen typically   encountered in practical systems. 
+
+- GAC : A recent study by Xiao et al. (2020) investigated thermal decomposition of different PFAS compounds with a varying chain  
+  length of the CF2 groups over spent granular activated carbon (GAC). The mass spectra revealed both the sublimation of PFOA from GAC 
+  and its partial decomposition at temperatures as low as 473 K.
+  
+- Thermal degradation of PFOA under inert N2 in a gas-phase process from 300-750 C for long residence times (46 s): Another study     
+  reported the formation of perfluoro-1-heptene (1-C7F14), 1H-perfluorohexane (C6HF13, 1H-tridecafluorohexane) and 1H-perfluoroheptane   (C7HF15, 1H-pentadecafluoroheptane), and formation of HF, CO, CO2. Production of HF was shown to be sensitive to the applied   
+  residence time, in which longer residence time suppressed the generation of HF.
+  
+- In summary, all experimental results on the decomposition of PFOA suggest that the process starts with the emission of HF from the 
+  head group and leads to the initial formation of 1H-perfluoroheptane and perfluoro-1-heptene (Krusic et al., 2005; Liu et al.,
+  2017; Stockenhuber et al., 2019; Xiao et al., 2020), BUT the mechanistic details of the process remain unknown. 
+  
+_ Previously, Altarawneh 2012 provides DFT study of reactions and activation energies for pathways of initial decomposition of a model compoad of PFOA. This study only focused on initial decomposition pathways without considering channels that lead to smaller CnFm fragments from decomposition reactions. Also did not include bimolecular reactions involving HF and H/O radical pool. 
+
+- https://www.sciencedirect.com/science/article/pii/S0045653520324516 kinetic model for model compound of PFOS
+    - Altarawneh 2021 modeled PFOS degradation, demonstrated SO2 as a major sulfur species with a noticeable contribution by SO3. 
+    - included hydrofluorination, hydrolysis, and fragmentation of alkyl chain. 
+- https://pubs.acs.org/doi/10.1021/acs.iecr.1c01504 also decomposition mechanism for PFOS
+
+
+ABOUT PFOS Decomposition (still introduction): 
+
+- Khan et al. (2020) found that, for PFOS, the length of the perfluoroalkyl chain exerts a minor influence on the reaction and activation energies for the initial decomposition chain. 
+
+
+COMPUTATIONAL DETAIL: 
+
+- modified arrhenius parameters fitted between 500 and 2000K. Table 1 assembles all estimated constants for the reaction rates in this study or by Altarawneh 2021. 
+
+- CHEMKIN-RRO software performed kinetic modeling based on PFR. Modeled pyrolysis of PFPA in a N2 bath gas. 
+
+- Table 1: modified arrhenius parameters fitted in the temp range of 500-2000K. Some of these reactions appear in presented kinetic model for PFOS. 
+
+RESULTS & DISCUSSION
+
+- updated previously suggested mechanism (Altarawneh 2012) for decomposition of PFPA by including 
+    - pathways leading to n-C4F9  radical and its further decomposition into smaller CnFm fragments
+    - abstraction of hydroxyl H by O/H radicals
+    - bimolecular reactions involving HF molecules
+    - cyclisation reactions
+    
+*Initial Decomposition of PFPA * 
+
+- WHAT PLAYS A MINOR ROLE: previous DFT study (2012) found that direct dissociation of C-C bond at alpha, beta, gamma locations away from carboxylic group are sizable endothermic reactions. Also fission of hydroxl O-H bond also very endothermic. CO2 expulsion reactions have high activation enthalpy. 
+
+- WHAT'S IMPORTANT: 
+    - *From previous DFT study*, HF elimination that leads to an alpha-lactone intermediate. Alpha-lactone intermediate leads two channels: pentafluoropropanyl fluoride molecule or single CF3CF2CF: species. Scheme 2 figure. 
+    - * the leading channel is the formation of the alpha-lactone. 
+    - The scission of the O-H bond most likely proceeds via biomolecular reactions with H/OH/F radicals in the pyrolytic 
+      andoxidative environment. 
+      
+      
+* Abstraction of the hydroxyl by O/H radicals
+
+    - in this study, unsuccessful in finding the activation enthalpy for thermally-neutral H abstraction by F atoms. literature rate constants for abstraction of hydroxyl H by F atomsoften features temp-independent behavior (rxn doesn't have a geniune barrier).
+    *** as a result, this study has an "adapted" (i think this means made up) rate parameters for the reaction 
+    
+    F + methanol -> HF + methoxy
+      
+* Fragmentation of the n-C4F9 radical
+    
+    - Fig 1 shows a lot of the details here 
+    - n-C4F9 branches into 3 plausible channels: 
+        - barrierless endothermic reaction of 55.2 kcal/mole
+        - more energy-demanding pathway, departure of F atom to produce perfluoro-1-butene. 
+            **** even tho it is energy demanding, it is still lower than bond dissociation enthalpies for secondary C-F in alkanes
+                (115.4 kcal/mole)
+        - most plausible (with lowest reaction enthalpy of 40.1 kcal/mol) breaks n-C4F9 into C2F4 and C2F5*
+    - Fig 3, higher entropy of activation for the channel :CF2 + nC3F7 * renders it to be competitive with the degradation reaction C2F4 + nC2F5* across temp window in Fig 3. 
+    - concluded that the length of perfluorinated alkyl n-CnFm radicals induces a rather minor influence on energies pertinant to their gas-phase fragmentation, i.e. via the :CF2 and C2F4 routes. 
+    -**** with a very strong bond dissociation enthalpy (~110 kcal/mol), fission of secondary C-F bonds is unlikely to contribute significantly in the homogeneous gas phase decomposition of PFCA.
+    
+    
+* Hydrofluorination of perfluorpentanoic acid and heptafluorobutanoyl fluoride *    
+
+- hydrogen halides (HCl and HBr) are by far the most important haliogen carriers during thermal decomp. of halogenated compounds. 
+- Fig 4a. M10 -> M0 + HF is more favorable, so importance of further decomposition pathways of M10 shown in Fig 4a are diminished. 
+- Length of carbon chain exerts a minor influence on values of activation energies pertinant to HF addition. 
+- heptafluorobutanoyl fluoride + HF goes to adduct of M14. Three decomposition pathways of M14, similar to decomposition of M10. 
+- :CF + HF this reaction is super important!
+
+* Formation of Perfluorinated Cyclic Compounds * 
+
+- 
+    
+- Nomenclature 
+
+    - M0 - PFPA
+    - M1 - alpha-lactone intermediate
+    - M2 - heptafluorobutanoyl fluoride
+    - M3 - CF3CF2CF2CF:
+    - M5 - 1H-perfluorobutane
+    - M6 - perfluoro-1-butene (1-C4F8)
+    - M7 - n-C4F9 
+    - M8 - n-CF3CF2CF2 radical 

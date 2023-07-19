@@ -23,3 +23,8 @@ Notes from Alterawneh:
     - < 1400 K, the formation of 1H-nonafluorobutane (C4HF9), phosgene (COF2), and heptafluorobutanoyl fluoride (C3F7COF), with 1-C4F8,
         2-C4F8 and C3HF7 persisting to 1500 K. 
     - concludes that gas-phase pyrolysis by itself can convert PFAS to HF and short chain fluorocarbons
+    
+    
+Notes for generating RMG model: 
+
+- first try, PFPA model takes about one hour to run 

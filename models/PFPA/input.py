@@ -54,7 +54,7 @@ simpleReactor(
         },
         #terminationRateRatio=1e-6,
         terminationTime=(1,'s'), #source says its in PFR for 2 and 25 s, should i try and change this to 2 
-        )
+)
     
 model(
     toleranceMoveToCore = 0.1,
@@ -76,4 +76,35 @@ pressureDependence(
     interpolation=('Chebyshev', 6, 4),
     maximumAtoms=16,
 )
+
+
+simulator(
+    atol = 1e-16,
+    rtol = 1e-08,
+    sens_atol = 1e-06,
+    sens_rtol = 0.0001,
+)
+
+#left the same as when David ran his refrigerants
+generatedSpeciesConstraints(
+    allowed=['input species','seed mechanisms','reaction libraries'],
+    maximumCarbonAtoms=6, 
+    maximumOxygenAtoms=4,
+    maximumRadicalElectrons=2,
+    maximumSingletCarbenes=1,
+    maximumCarbeneRadicals=0,
+    allowSingletO2 = True,
+)
+
+options(
+    units = "si",
+    generateSeedEachIteration = True,
+    generateOutputHTML = True,
+    generatePlots = True,
+    saveSimulationProfiles = True,
+    saveEdgeSpecies = True,
+    keepIrreversible = True,
+    verboseComments = False,
+)
+
 

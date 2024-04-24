@@ -1,0 +1,3 @@
+first added forbidden SPECIES to halocarbon_CO_dimerization family. Didnt work. 
+
+Then focused on fixing nodes in family. 

@@ -1,0 +1,86 @@
+/work/westgroup/nora/miniconda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:2077: LinAlgWarning: Ill-conditioned matrix (rcond=9.79237e-18): result may not be accurate.
+  fu = func(x, *args)
+┌ Warning: Error requiring `BandedMatrices` from `FiniteDiff`
+│   exception =
+│    LoadError: UndefVarError: BlockBandedMatrices not defined
+│    Stacktrace:
+│      [1] top-level scope
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/FiniteDiff/WOowp/ext/FiniteDiffBandedMatricesExt.jl:8
+│      [2] include(mod::Module, _path::String)
+│        @ Base ./Base.jl:419
+│      [3] include(x::String)
+│        @ FiniteDiff /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/FiniteDiff/WOowp/src/FiniteDiff.jl:1
+│      [4] macro expansion
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/Requires.jl:40 [inlined]
+│      [5] top-level scope
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/FiniteDiff/WOowp/src/FiniteDiff.jl:45
+│      [6] eval
+│        @ ./boot.jl:368 [inlined]
+│      [7] eval
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/FiniteDiff/WOowp/src/FiniteDiff.jl:1 [inlined]
+│      [8] (::FiniteDiff.var"#40#46")()
+│        @ FiniteDiff /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:101
+│      [9] macro expansion
+│        @ timing.jl:382 [inlined]
+│     [10] err(f::Any, listener::Module, modname::String, file::String, line::Any)
+│        @ Requires /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:47
+│     [11] (::FiniteDiff.var"#39#45")()
+│        @ FiniteDiff /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:100
+│     [12] withpath(f::Any, path::String)
+│        @ Requires /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:37
+│     [13] (::FiniteDiff.var"#38#44")()
+│        @ FiniteDiff /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:99
+│     [14] #invokelatest#2
+│        @ ./essentials.jl:729 [inlined]
+│     [15] invokelatest
+│        @ ./essentials.jl:726 [inlined]
+│     [16] foreach(f::typeof(Base.invokelatest), itr::Vector{Function})
+│        @ Base ./abstractarray.jl:2774
+│     [17] loadpkg(pkg::Base.PkgId)
+│        @ Requires /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:27
+│     [18] #invokelatest#2
+│        @ ./essentials.jl:729 [inlined]
+│     [19] invokelatest
+│        @ ./essentials.jl:726 [inlined]
+│     [20] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:869
+│     [21] _tryrequire_from_serialized(modkey::Base.PkgId, path::String, sourcepath::String, depmods::Vector{Any})
+│        @ Base ./loading.jl:944
+│     [22] _require_search_from_serialized(pkg::Base.PkgId, sourcepath::String, build_id::UInt64)
+│        @ Base ./loading.jl:1028
+│     [23] _require(pkg::Base.PkgId)
+│        @ Base ./loading.jl:1315
+│     [24] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1200
+│     [25] macro expansion
+│        @ ./loading.jl:1180 [inlined]
+│     [26] macro expansion
+│        @ ./lock.jl:223 [inlined]
+│     [27] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1144
+│     [28] macro expansion
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/exception.jl:108 [inlined]
+│     [29] #107
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:43 [inlined]
+│     [30] disable_sigint
+│        @ ./c.jl:473 [inlined]
+│     [31] __pycall!
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:42 [inlined]
+│     [32] _pycall!(ret::PyObject, o::PyObject, args::Tuple{Vector{String}}, nargs::Int64, kw::Ptr{Nothing})
+│        @ PyCall /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:29
+│     [33] _pycall!
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:11 [inlined]
+│     [34] #_#114
+│        @ /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:86 [inlined]
+│     [35] (::PyObject)(args::Vector{String})
+│        @ PyCall /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/PyCall/twYvK/src/pyfncall.jl:86
+│     [36] top-level scope
+│        @ none:4
+│     [37] eval
+│        @ ./boot.jl:368 [inlined]
+│     [38] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:276
+│     [39] _start()
+│        @ Base ./client.jl:522
+│    in expression starting at /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/FiniteDiff/WOowp/ext/FiniteDiffBandedMatricesExt.jl:1
+└ @ Requires /work/westgroup/nora/miniconda/envs/rmg_env/share/julia/site/packages/Requires/Z8rfN/src/require.jl:51

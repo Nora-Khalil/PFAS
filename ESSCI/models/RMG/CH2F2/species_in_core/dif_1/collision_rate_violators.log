@@ -1,0 +1,38 @@
+*** Collision rate limit violators report ***
+"Violation factor" is the ratio of the rate coefficient to the collision limit rate at the relevant conditions
+
+! Template reaction: R_Recombination
+! Flux pairs: OH(4), OH(4); O2(2), OH(4); 
+! Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_3R!H->O_N-2R->C
+! Multiplied by reaction path degeneracy 2.0
+O2(2)+OH(4)<=>O2(176)+OH(4)                         4.983020e+14 0.047     22.927   
+
+Direction: reverse
+Violation factor: 2.00
+Violation condition: 1000.0 K, 1.0 bar
+
+
+! Template reaction: R_Recombination
+! Flux pairs: OH(4), OH(4); O2(2), OH(4); 
+! Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_3R!H->O_N-2R->C
+! Multiplied by reaction path degeneracy 2.0
+O2(2)+OH(4)<=>O2(176)+OH(4)                         4.983020e+14 0.047     22.927   
+
+Direction: reverse
+Violation factor: 1.79
+Violation condition: 2000.0 K, 1.0 bar
+
+
+! Template reaction: H_Abstraction
+! Flux pairs: F(37), HF(38); H2(7), H(5); 
+! Fitted to 50 data points; dA = *|/ 1.00957, dn = +|- 0.00125137, dEa = +|- 0.0068099 kJ/molMatched reaction 3439 F + H2-2 <=> FH + H-2 in
+! H_Abstraction/training
+! This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_N-3CClHINOS->C_3ClHO-u1_N-3ClHO->O_3ClH->H]
+! family: H_Abstraction
+F(37)+H2(7)<=>H(5)+HF(38)                           8.023870e+10 1.183     0.017    
+
+Direction: forward
+Violation factor: 1.29
+Violation condition: 2000.0 K, 1.0 bar
+
+

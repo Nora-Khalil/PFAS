@@ -1,0 +1,4231 @@
+Phases:
+- Species:
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: N2
+    radicalelectrons: 0
+    smiles: N#N
+    thermo:
+      polys:
+      - Tmax: 1000.0
+        Tmin: 200.0
+        coefs:
+        - 3.53101
+        - -0.000123661
+        - -5.02999e-07
+        - 2.43531e-09
+        - -1.40881e-12
+        - -1046.98
+        - 2.96747
+        type: NASApolynomial
+      - Tmax: 6000.0
+        Tmin: 1000.0
+        coefs:
+        - 2.95258
+        - 0.0013969
+        - -4.92632e-07
+        - 7.8601e-11
+        - -4.60755e-15
+        - -923.949
+        - 5.87189
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: Ne
+    radicalelectrons: 0
+    smiles: '[Ne]'
+    thermo:
+      polys:
+      - Tmax: 1000.0
+        Tmin: 200.0
+        coefs:
+        - 2.5
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - -745.375
+        - 3.35532
+        type: NASApolynomial
+      - Tmax: 6000.0
+        Tmin: 1000.0
+        coefs:
+        - 2.5
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - -745.375
+        - 3.35532
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CH2F2
+    radicalelectrons: 0
+    smiles: FCF
+    thermo:
+      polys:
+      - Tmax: 788.976
+        Tmin: 10.0
+        coefs:
+        - 4.06909
+        - -0.00454455
+        - 4.03365e-05
+        - -4.87809e-08
+        - 1.9023e-11
+        - -55555.1
+        - 6.40435
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 788.976
+        coefs:
+        - 1.30655
+        - 0.0154345
+        - -9.00408e-06
+        - 2.50681e-09
+        - -2.68973e-13
+        - -55305.1
+        - 17.899
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: O2
+    radicalelectrons: 0
+    smiles: '[O][O]'
+    thermo:
+      polys:
+      - Tmax: 1074.55552821406
+        Tmin: 100.0
+        coefs:
+        - 3.5373217968382487
+        - -0.001215709174958237
+        - 5.316177821833235e-06
+        - -4.8944336925144414e-09
+        - 1.4584502051660697e-12
+        - -1038.5884605686026
+        - 4.68368409988499
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1074.55552821406
+        coefs:
+        - 3.1538243107205455
+        - 0.0016780379149587193
+        - -7.699709636013206e-07
+        - 1.5127470060734006e-10
+        - -1.0878178943877341e-14
+        - -1040.8188103752725
+        - 6.167538488384575
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: H2O
+    radicalelectrons: 0
+    smiles: O
+    thermo:
+      polys:
+      - Tmax: 1130.2390419731998
+        Tmin: 100.0
+        coefs:
+        - 4.057635855069867
+        - -0.0007879361119367
+        - 2.9087757649227147e-06
+        - -1.4751896107964952e-09
+        - 2.128433325379528e-13
+        - -30281.58663756546
+        - -0.31136414202518736
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1130.2390419731998
+        coefs:
+        - 2.8432503410197274
+        - 0.002751085644014247
+        - -7.810315960324144e-07
+        - 1.0724366533378489e-10
+        - -5.7939245271857246e-15
+        - -29958.612718836892
+        - 5.910420545335512
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: OH
+    radicalelectrons: 1
+    smiles: '[OH]'
+    thermo:
+      polys:
+      - Tmax: 1145.755395574057
+        Tmin: 100.0
+        coefs:
+        - 3.5145683925690583
+        - 2.9273438464952266e-05
+        - -5.321506274974449e-07
+        - 1.0194752422338734e-09
+        - -3.859394186338611e-13
+        - 3414.2541816728963
+        - 2.104347565385583
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1145.755395574057
+        coefs:
+        - 3.071937247765971
+        - 0.0006040198299497971
+        - -1.398058782189921e-08
+        - -2.1344082493873343e-11
+        - 2.4806137612958255e-15
+        - 3579.38791842202
+        - 4.578014656297732
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: HF
+    radicalelectrons: 0
+    smiles: F
+    thermo:
+      polys:
+      - Tmax: 1250.0
+        Tmin: 298.0
+        coefs:
+        - 3.43657
+        - 0.000486021
+        - -1.2524e-06
+        - 1.36475e-09
+        - -4.09574e-13
+        - -33800.1
+        - 1.20682
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 1250.0
+        coefs:
+        - 2.7813
+        - 0.00103959
+        - -2.41735e-07
+        - 2.68416e-11
+        - -1.09766e-15
+        - -33504.2
+        - 5.0197
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: halogens'
+    name: CHF
+    radicalelectrons: 0
+    smiles: '[CH]F'
+    thermo:
+      polys:
+      - Tmax: 1300.0
+        Tmin: 298.0
+        coefs:
+        - 3.34484
+        - 0.00235461
+        - 1.93983e-06
+        - -2.65251e-09
+        - 7.91169e-13
+        - 16766.1
+        - 7.05286
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 1300.0
+        coefs:
+        - 4.48366
+        - 0.00174964
+        - -5.0479e-07
+        - 1.08953e-10
+        - -9.87898e-15
+        - 16210.2
+        - 0.289222
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CHF2
+    radicalelectrons: 1
+    smiles: F[CH]F
+    thermo:
+      polys:
+      - Tmax: 697.139
+        Tmin: 10.0
+        coefs:
+        - 4.05476
+        - -0.0040567
+        - 3.90133e-05
+        - -5.51349e-08
+        - 2.50461e-11
+        - -30875.2
+        - 7.58714
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 697.139
+        coefs:
+        - 2.58942
+        - 0.0108145
+        - -6.89144e-06
+        - 2.06262e-09
+        - -2.34597e-13
+        - -30827.9
+        - 13.0014
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: FC1OO1
+    radicalelectrons: 0
+    smiles: FC1OO1
+    thermo:
+      polys:
+      - Tmax: 624.171
+        Tmin: 10.0
+        coefs:
+        - 4.07975
+        - -0.00670713
+        - 7.61072e-05
+        - -1.23288e-07
+        - 6.38153e-11
+        - -30112.0
+        - 8.13301
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 624.171
+        coefs:
+        - 2.49608
+        - 0.0165225
+        - -1.11531e-05
+        - 3.48846e-09
+        - -4.10791e-13
+        - -30169.1
+        - 12.9858
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4 + radical(O2sj(Cs-F1sO2sH)) + radical(O2sj(Cs-F1sO2sH))'
+    name: '[O]C([O])F'
+    radicalelectrons: 2
+    smiles: '[O]C([O])F'
+    thermo:
+      polys:
+      - Tmax: 944.7429435543802
+        Tmin: 100.0
+        coefs:
+        - 3.47854098837738
+        - 0.0027869009175851417
+        - 3.401580236493451e-05
+        - -4.8741764361625965e-08
+        - 1.946904690398981e-11
+        - -17414.915093646592
+        - 12.39612305393425
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 944.7429435543802
+        coefs:
+        - 8.928132881915632
+        - 0.0019022340663248424
+        - 1.9073107222182055e-07
+        - -1.2630697228659467e-11
+        - -4.3164316765695606e-15
+        - -19434.82049483037
+        - -18.82588595996613
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: H
+    radicalelectrons: 1
+    smiles: '[H]'
+    thermo:
+      polys:
+      - Tmax: 3959.158529181363
+        Tmin: 100.0
+        coefs:
+        - 2.499999999997577
+        - 1.4929770084936615e-14
+        - -2.0532721206496297e-17
+        - 9.239271653004295e-21
+        - -1.2806360018580486e-24
+        - 25474.217768729257
+        - -0.44497289632393067
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 3959.158529181363
+        coefs:
+        - 2.499999875151451
+        - 1.1900927803963965e-10
+        - -4.239874076670129e-14
+        - 6.68965198776295e-18
+        - -3.94352206794236e-22
+        - 25474.21787318206
+        - -0.44497211515458496
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: '[O]C(=O)F'
+    radicalelectrons: 1
+    smiles: '[O]C(=O)F'
+    thermo:
+      polys:
+      - Tmax: 575.482
+        Tmin: 10.0
+        coefs:
+        - 4.05952
+        - -0.0056915
+        - 7.13967e-05
+        - -1.29651e-07
+        - 7.44832e-11
+        - -45874.2
+        - 8.21459
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 575.482
+        coefs:
+        - 3.42951
+        - 0.0118543
+        - -8.65614e-06
+        - 2.84335e-09
+        - -3.46285e-13
+        - -46019.7
+        - 9.01155
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: FFCM1(-)'
+    name: CO2
+    radicalelectrons: 0
+    smiles: O=C=O
+    thermo:
+      polys:
+      - Tmax: 1000.0
+        Tmin: 200.0
+        coefs:
+        - 2.35681
+        - 0.00898413
+        - -7.12206e-06
+        - 2.4573e-09
+        - -1.42885e-13
+        - -48372.0
+        - 9.9009
+        type: NASApolynomial
+      - Tmax: 6000.0
+        Tmin: 1000.0
+        coefs:
+        - 4.63651
+        - 0.00274146
+        - -9.95898e-07
+        - 1.60387e-10
+        - -9.16199e-15
+        - -49024.9
+        - -1.9349
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: F
+    radicalelectrons: 1
+    smiles: '[F]'
+    thermo:
+      polys:
+      - Tmax: 1400.0
+        Tmin: 298.0
+        coefs:
+        - 2.90371
+        - -0.000635296
+        - 2.64735e-07
+        - 7.69063e-11
+        - -5.45254e-14
+        - 8672.27
+        - 2.70828
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 1400.0
+        coefs:
+        - 2.65117
+        - -0.00014013
+        - 5.19236e-08
+        - -8.84954e-12
+        - 5.9028e-16
+        - 8758.29
+        - 4.07857
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: FFCM1(-)'
+    name: HO2
+    radicalelectrons: 1
+    smiles: '[O]O'
+    thermo:
+      polys:
+      - Tmax: 1000.0
+        Tmin: 200.0
+        coefs:
+        - 4.3018
+        - -0.00474912
+        - 2.11583e-05
+        - -2.42764e-08
+        - 9.29225e-12
+        - 264.018
+        - 3.71666
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1000.0
+        coefs:
+        - 4.17229
+        - 0.00188118
+        - -3.46277e-07
+        - 1.94658e-11
+        - 1.76257e-16
+        - 31.0207
+        - 2.95768
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: '[O]OC(F)F'
+    radicalelectrons: 1
+    smiles: '[O]OC(F)F'
+    thermo:
+      polys:
+      - Tmax: 497.316
+        Tmin: 10.0
+        coefs:
+        - 3.92725
+        - 0.00470123
+        - 7.24333e-05
+        - -1.66658e-07
+        - 1.13367e-10
+        - -51470.2
+        - 11.559
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 497.316
+        coefs:
+        - 3.77619
+        - 0.0196241
+        - -1.39226e-05
+        - 4.52949e-09
+        - -5.50671e-13
+        - -51624.7
+        - 10.478
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: H2
+    radicalelectrons: 0
+    smiles: '[H][H]'
+    thermo:
+      polys:
+      - Tmax: 1959.067140124931
+        Tmin: 100.0
+        coefs:
+        - 3.4353638594365172
+        - 0.0002127125933323419
+        - -2.7863012263041324e-07
+        - 3.4027115129678677e-10
+        - -7.760418645362392e-14
+        - -1031.3598256589069
+        - -3.9084163298545733
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1959.067140124931
+        coefs:
+        - 2.7881927916747773
+        - 0.0005876059153173257
+        - 1.5902681453779967e-07
+        - -5.527719371510355e-11
+        - 4.343349722811627e-15
+        - -596.1601764055179
+        - 0.11257284236795365
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: O
+    radicalelectrons: 2
+    smiles: '[O]'
+    thermo:
+      polys:
+      - Tmax: 3959.158529181363
+        Tmin: 100.0
+        coefs:
+        - 2.499999999997577
+        - 1.4929770084936615e-14
+        - -2.0532721206496297e-17
+        - 9.239271653004295e-21
+        - -1.2806360018580486e-24
+        - 29230.24412855102
+        - 5.126164272698952
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 3959.158529181363
+        coefs:
+        - 2.499999875151451
+        - 1.1900927803963965e-10
+        - -4.239874076670129e-14
+        - 6.68965198776295e-18
+        - -3.94352206794236e-22
+        - 29230.244233003832
+        - 5.126165053868299
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CF2O
+    radicalelectrons: 0
+    smiles: O=C(F)F
+    thermo:
+      polys:
+      - Tmax: 584.627
+        Tmin: 10.0
+        coefs:
+        - 4.06775
+        - -0.00614966
+        - 6.73615e-05
+        - -1.17623e-07
+        - 6.56735e-11
+        - -74400.6
+        - 7.68563
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 584.627
+        coefs:
+        - 3.15981
+        - 0.0116963
+        - -8.27581e-06
+        - 2.66621e-09
+        - -3.20585e-13
+        - -74493.3
+        - 9.87819
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CHFO
+    radicalelectrons: 0
+    smiles: O=CF
+    thermo:
+      polys:
+      - Tmax: 745.315
+        Tmin: 10.0
+        coefs:
+        - 4.05425
+        - -0.00375329
+        - 3.18277e-05
+        - -4.07297e-08
+        - 1.68956e-11
+        - -47423.0
+        - 6.56837
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 745.315
+        coefs:
+        - 2.27714
+        - 0.0104751
+        - -6.24845e-06
+        - 1.77292e-09
+        - -1.93455e-13
+        - -47288.4
+        - 13.7455
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: FC(F)C(F)F
+    radicalelectrons: 0
+    smiles: FC(F)C(F)F
+    thermo:
+      polys:
+      - Tmax: 364.788
+        Tmin: 10.0
+        coefs:
+        - 3.82031
+        - 0.0147869
+        - 0.000107838
+        - -3.6422e-07
+        - 3.48305e-10
+        - -108046.0
+        - 10.1766
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 364.788
+        coefs:
+        - 4.39024
+        - 0.0270428
+        - -1.86515e-05
+        - 6.01125e-09
+        - -7.31459e-13
+        - -108211.0
+        - 6.31415
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CHF3
+    radicalelectrons: 0
+    smiles: FC(F)F
+    thermo:
+      polys:
+      - Tmax: 615.111
+        Tmin: 10.0
+        coefs:
+        - 4.06655
+        - -0.00569699
+        - 7.11567e-05
+        - -1.16193e-07
+        - 6.06504e-11
+        - -85150.3
+        - 7.48265
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 615.111
+        coefs:
+        - 2.45498
+        - 0.0163704
+        - -1.09138e-05
+        - 3.38161e-09
+        - -3.95687e-13
+        - -85171.3
+        - 12.6925
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: '[O]C(F)F'
+    radicalelectrons: 1
+    smiles: '[O]C(F)F'
+    thermo:
+      polys:
+      - Tmax: 577.889
+        Tmin: 10.0
+        coefs:
+        - 4.07235
+        - -0.00674902
+        - 8.67846e-05
+        - -1.53143e-07
+        - 8.6196e-11
+        - -51263.6
+        - 9.19392
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 577.889
+        coefs:
+        - 2.80054
+        - 0.016572
+        - -1.1432e-05
+        - 3.6345e-09
+        - -4.33761e-13
+        - -51359.0
+        - 12.5348
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: primaryThermoLibrary'
+    name: CO
+    radicalelectrons: 0
+    smiles: '[C-]#[O+]'
+    thermo:
+      polys:
+      - Tmax: 1571.644408976193
+        Tmin: 100.0
+        coefs:
+        - 3.5683796590814567
+        - -0.0008521225082688074
+        - 2.4891698184651446e-06
+        - -1.563302929393815e-09
+        - 3.135930932289823e-13
+        - -14284.25492276079
+        - 3.579122999118597
+        type: NASApolynomial
+      - Tmax: 5000.0
+        Tmin: 1571.644408976193
+        coefs:
+        - 2.913074975234101
+        - 0.0016465666078327467
+        - -6.886091408950179e-07
+        - 1.2103614498265694e-10
+        - -7.84008722622794e-15
+        - -14180.88891577912
+        - 6.710409255333213
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CHF2-CF2
+    radicalelectrons: 1
+    smiles: F[C](F)C(F)F
+    thermo:
+      polys:
+      - Tmax: 312.948
+        Tmin: 10.0
+        coefs:
+        - 3.65487
+        - 0.037773
+        - -0.000124349
+        - 3.3166e-07
+        - -3.40885e-10
+        - -82732.6
+        - 11.9893
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 312.948
+        coefs:
+        - 3.84306
+        - 0.0255446
+        - -1.86543e-05
+        - 6.20308e-09
+        - -7.68055e-13
+        - -82696.3
+        - 12.0686
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: halogens'
+    name: CF2
+    radicalelectrons: 0
+    smiles: F[C]F
+    thermo:
+      polys:
+      - Tmax: 1300.0
+        Tmin: 298.0
+        coefs:
+        - 2.28591
+        - 0.0107608
+        - -1.05382e-05
+        - 4.89881e-09
+        - -8.86384e-13
+        - -24340.7
+        - 13.1348
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 1300.0
+        coefs:
+        - 5.33121
+        - 0.00197748
+        - -9.60248e-07
+        - 2.10704e-10
+        - -1.5954e-14
+        - -25190.9
+        - -2.56367
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  - comment: 'Thermo library: CHOF_G4'
+    name: CHFCF2
+    radicalelectrons: 0
+    smiles: FC=C(F)F
+    thermo:
+      polys:
+      - Tmax: 540.182
+        Tmin: 10.0
+        coefs:
+        - 3.93201
+        - 0.00413887
+        - 7.03233e-05
+        - -1.49827e-07
+        - 9.42397e-11
+        - -61509.2
+        - 9.50863
+        type: NASApolynomial
+      - Tmax: 3000.0
+        Tmin: 540.182
+        coefs:
+        - 3.82032
+        - 0.0197002
+        - -1.38027e-05
+        - 4.49179e-09
+        - -5.49698e-13
+        - -61712.1
+        - 7.9889
+        type: NASApolynomial
+      type: NASA
+    type: Species
+  name: phase
+Reactions:
+- comment: ''
+  kinetics:
+    arr:
+      A: 304000000000000.06
+      Ea: 16987.04
+      n: -3.26
+      type: Arrhenius
+    efficiencies:
+      CF2O: 5.0
+      CH2F2: 6.0
+      CHF3: 6.0
+      CO: 1.5
+      CO2: 2.0
+      H2: 2.0
+      H2O: 9.0
+      HF: 2.0
+    type: ThirdBody
+  products:
+  - CH2F2
+  radicalchange: 0
+  reactants:
+  - HF
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -0.8563713285559981
+      - 1.9996107036316666
+      - -0.00027090296671437376
+      - -0.00015035086477326496
+    - - 1.6334176146044241
+      - -0.00021084770771642586
+      - -0.00014671436700896902
+      - -8.141715612055471e-05
+    - - -0.17492328874685598
+      - 0.0002813374794610978
+      - 0.0001957479271486804
+      - 0.0001086135708960231
+    - - 0.009044995634937063
+      - 0.00018290092154693438
+      - 0.00012724184243604
+      - 7.058709046623675e-05
+    - - 0.0772907590865702
+      - -3.7053669601351016e-05
+      - -2.5773672394012975e-05
+      - -1.4294133264822804e-05
+    - - 0.035749679770603324
+      - -8.168428732788597e-05
+      - -5.68138457418249e-05
+      - -3.150555641648813e-05
+    type: Chebyshev
+  products:
+  - FC1OO1
+  radicalchange: 0
+  reactants:
+  - O2
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -0.02090572864920964
+      - 1.9996127106663497
+      - -0.00026950798642737467
+      - -0.0001495781819911758
+    - - 1.9003535285210909
+      - -0.0002008552866349648
+      - -0.00013976120005176448
+      - -7.755847033219548e-05
+    - - -0.16530560819938964
+      - 0.0002830386349691676
+      - 0.00019693282896085664
+      - 0.00010927220051615179
+    - - -0.03704993975663162
+      - 0.00018134235898823898
+      - 0.00012615858503514272
+      - 6.998708481958052e-05
+    - - 0.017304424519579312
+      - -3.7522937935633224e-05
+      - -2.6099913221857773e-05
+      - -1.4474910265048054e-05
+    - - 0.03592104636949579
+      - -8.176009550164177e-05
+      - -5.68671074086771e-05
+      - -3.153558170534664e-05
+    type: Chebyshev
+  products:
+  - '[O]C([O])F'
+  radicalchange: 2
+  reactants:
+  - O2
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 9.236611306226465
+      - 2.2331460837506385
+      - 0.036264507968759054
+      - -0.01810171571637974
+    - - -0.825669922466803
+      - 0.36559036592943894
+      - 0.06734299182058455
+      - -0.02548456109803006
+    - - -0.5816690919585915
+      - 0.18554035199667843
+      - 0.04624183288535022
+      - -0.007823665681137862
+    - - -0.28997945809081344
+      - 0.06608084013534586
+      - 0.019008639933400504
+      - 0.00047559498777405317
+    - - -0.1352686700250684
+      - 0.02086375976945021
+      - 0.0015919635818497097
+      - 0.0003648232993959725
+    - - -0.006706347091223716
+      - 0.00909110574666804
+      - -0.003319613573795998
+      - -0.0011351969815615985
+    type: Chebyshev
+  products:
+  - FC1OO1
+  radicalchange: -2
+  reactants:
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 6.060000000000001e+21
+      Ea: 505427.2
+      n: -3.322
+      type: Arrhenius
+    efficiencies:
+      CO: 2.4
+      CO2: 4.67
+      H2: 3.77
+      H2O: 0.0
+      N2: 2.46
+      O2: 1.5
+    type: ThirdBody
+  products:
+  - H
+  - OH
+  radicalchange: 2
+  reactants:
+  - H2O
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 7.528000000000002e+19
+    Ea: 502916.80000000005
+    n: -2.44
+    type: Arrhenius
+  products:
+  - H
+  - OH
+  - H2O
+  radicalchange: 2
+  reactants:
+  - H2O
+  - H2O
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -4.489149942354125
+      - 1.0121970862571352
+      - -0.26384685486757375
+      - 0.0160771763345709
+    - - 1.5485385980268394
+      - 0.5645790353489093
+      - 0.06048166141161318
+      - -0.05437925288364711
+    - - -0.4325123117197125
+      - 0.18240175615689072
+      - 0.06468983659907035
+      - -0.005686561090305749
+    - - -0.20837662068188872
+      - 0.04633023910821882
+      - 0.030038955249179874
+      - 0.006974061347819708
+    - - -0.09803997060592115
+      - 0.005091920211048055
+      - 0.008895720936686636
+      - 0.005341114484082563
+    - - -0.044868477821963085
+      - -0.003142749134465391
+      - 0.0009304768918362006
+      - 0.00206562401549377
+    type: Chebyshev
+  products:
+  - CH2F2
+  radicalchange: -2
+  reactants:
+  - H
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 4.251735443544579
+      - -0.0003737051998658704
+      - -0.0002600565832230982
+      - -0.00014433403843860666
+    - - 2.3200927421184017
+      - -0.00018315912850445142
+      - -0.00012744797566247883
+      - -7.072569704784396e-05
+    - - 0.01307291180171982
+      - 0.00028564137613922285
+      - 0.0001987461176669185
+      - 0.0001102804925630875
+    - - 0.04861485709741376
+      - 0.0001779179412981513
+      - 0.0001237782438396118
+      - 6.866841099271577e-05
+    - - 0.06407143801302795
+      - -3.914882707708181e-05
+      - -2.7230792201288183e-05
+      - -1.5102050704306178e-05
+    - - 0.018845956425529265
+      - -8.123999839866283e-05
+      - -5.650605993924571e-05
+      - -3.133600299274617e-05
+    type: Chebyshev
+  products:
+  - H
+  - '[O]C(=O)F'
+  radicalchange: 2
+  reactants:
+  - O2
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 6.432759475607575
+      - 1.616639073621394
+      - -0.17234462306001777
+      - -0.03370877678605029
+    - - 2.9116748365980163
+      - 0.40407635066139447
+      - 0.16358098481610206
+      - 0.016800045130819688
+    - - -0.1446540447334234
+      - 0.011930446377287882
+      - 0.022543630885666067
+      - 0.017278550962841213
+    - - -0.1171392706968973
+      - -0.03158348770068952
+      - -0.01227983793723963
+      - 0.0004137643250991348
+    - - -0.06408726915900763
+      - -0.014377264799894726
+      - -0.008378611713812783
+      - -0.0029562111532506186
+    - - 0.0015362229581524203
+      - 0.0002939729351240781
+      - -0.0013510221194530036
+      - -0.0016043553836426212
+    type: Chebyshev
+  products:
+  - H
+  - '[O]C(=O)F'
+  radicalchange: 0
+  reactants:
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -1.1614916735025076
+      - 1.59236168280944
+      - -0.1773498958708234
+      - -0.03293439609851772
+    - - 3.646312994743303
+      - 0.418706857101826
+      - 0.15837828539815102
+      - 0.010828486042813392
+    - - -0.2933494663906889
+      - 0.008429478252514784
+      - 0.02508597750202027
+      - 0.018786634743707772
+    - - -0.08534040970232529
+      - -0.025431330830896246
+      - -0.009421300719532465
+      - 0.0013941011629467742
+    - - -0.0010382893763608296
+      - -0.012376454957672308
+      - -0.0073319909329444995
+      - -0.002480531858633378
+    - - 0.008213350443756822
+      - -0.0012152501333655107
+      - -0.0018954050430263693
+      - -0.0015596204280841528
+    type: Chebyshev
+  products:
+  - FC1OO1
+  radicalchange: -2
+  reactants:
+  - H
+  - '[O]C(=O)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_Ext-4R-R_5R!H-u0_Ext-1R!H-R_N-5R!H->S_N-4R->O_N-Sp-6R!H=1R!H_4CS->C_N-Sp-5BrBrBrCCCClClClFFFNNNOOO#4C_N-5BrCClFNO->O_Ext-4C-R_Ext-1R!H-R
+  kinetics:
+    A: 25600000.0
+    Ea: 0.0
+    n: -0.35
+    type: Arrhenius
+  products:
+  - '[O]C(=O)F'
+  - CH2F2
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->F_4BrCClHINOPSSi->H_N-3Br1sCl1sF1s->Cl1s_Sp-2R!H-1R!H_N-2R!H->C
+  kinetics:
+    A: 100000000.0
+    Ea: 0.0
+    n: 1.66049e-08
+    type: Arrhenius
+  products:
+  - HF
+  - CO2
+  radicalchange: -2
+  reactants:
+  - H
+  - '[O]C(=O)F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 1700000000.0000002
+      Ea: 0.0
+      n: -2.0
+      type: Arrhenius
+    efficiencies:
+      CF2O: 5.0
+      CH2F2: 6.0
+      CHF3: 6.0
+      CO: 1.5
+      CO2: 2.0
+      H2: 2.0
+      H2O: 9.0
+      HF: 2.0
+    type: ThirdBody
+  products:
+  - HF
+  radicalchange: -2
+  reactants:
+  - F
+  - H
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 0.45414630888311935
+      - 1.1208371289811665
+      - -0.23398813629699197
+      - -0.01143900840216491
+    - - 2.0896205188078323
+      - -0.3439331813707561
+      - -0.009831913725463246
+      - 0.01944517713167912
+    - - -0.45818828999351535
+      - -0.06610446177216768
+      - -0.0042326259454298
+      - 0.006385329024677306
+    - - -0.1280451703047426
+      - -0.04192169035248143
+      - -0.0038673086175713915
+      - 0.007209938776869404
+    - - -0.03289722695707951
+      - -0.03239353037017754
+      - -7.15762227609403e-06
+      - 0.004652629313633084
+    - - -0.007469237111420618
+      - -0.020323080660638766
+      - 0.00137416543564853
+      - 0.002794727325239976
+    type: Chebyshev
+  products:
+  - '[O]C(=O)F'
+  radicalchange: 0
+  reactants:
+  - F
+  - CO2
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_4BrFHO->F_N-2R!H->C
+  kinetics:
+    A: 10000000.0
+    Ea: 0.0
+    n: -1.29534e-08
+    type: Arrhenius
+  products:
+  - HF
+  - '[O]C(=O)F'
+  radicalchange: -2
+  reactants:
+  - F
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3755 CH2F2 + F <=> CHF2-2 + HF in H_Abstraction/training
+    This reaction matched rate rule [Root_3R->F_N-1R->H_Ext-1BrCClFINOS-R_N-4R!H->O_N-Sp-4BrBrBrBrBrCCCCCClClClClClFFFFFIIIIINNNNNOOPPPSSSSSSiSiSi#1BrBrBrBrBrBrCCCCCCClClClClClClFFFFFFIIIIIINNNNNNOOOPPPSSSSSSSiSiSi_N-4BrCClFINPSSi->Cl_4BrCF->F_1BrCClFINOS->C_Ext-1C-R_Sp-5R!H-1C_5R!H->F]
+    family: H_Abstraction
+  kinetics:
+    A: 39000000.00000001
+    Ea: 2770.0
+    n: 0.16
+    type: Arrhenius
+  products:
+  - HF
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - F
+  - CH2F2
+  type: ElementaryReaction
+- comment: 'Reaction library: ''FFCM1(-)'''
+  kinetics:
+    T1: 90000.0
+    T2: 90000.0
+    T3: 30.0
+    a: 0.5
+    arrhigh:
+      A: 4565000.000000001
+      Ea: 0.0
+      n: 0.44
+      type: Arrhenius
+    arrlow:
+      A: 637000000.0000001
+      Ea: 2196.6
+      n: -1.72
+      type: Arrhenius
+    efficiencies:
+      CO: 1.9
+      CO2: 3.45
+      H2: 1.87
+      H2O: 15.81
+      N2: 0.96
+      O2: 0.75
+    type: Troe
+  products:
+  - HO2
+  radicalchange: 0
+  reactants:
+  - O2
+  - H
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 58880000.00000001
+    Ea: 1255.2
+    n: 0.0
+    type: Arrhenius
+  products:
+  - OH
+  - OH
+  radicalchange: 0
+  reactants:
+  - H
+  - HO2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arrs:
+    - A: 7347000.000000001
+      Ea: -4573.112
+      n: 0.0
+      type: Arrhenius
+    - A: 453400000.00000006
+      Ea: 45731.12
+      n: 0.0
+      type: Arrhenius
+    type: MultiArrhenius
+  products:
+  - O2
+  - H2O
+  radicalchange: -2
+  reactants:
+  - OH
+  - HO2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3102 CHF2-2 + HO2-4 <=> CH2F2-2 + O2-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_3O-u1_N-4R!H->Cl_N-4BrCFNOS->C_4BrFNOS-u0_4BrFNOS->F_Ext-1CNO-R_N-5R!H->Br_N-5CClFINOPSSi->O_5CF->F_Ext-3O-R_N-6R!H-u0]
+    family: H_Abstraction
+  kinetics:
+    A: 12600000.000000002
+    Ea: 20878.16
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O2
+  - CH2F2
+  radicalchange: -2
+  reactants:
+  - HO2
+  - CHF2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3101 HO2-4 + F <=> O2-2 + FH in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_N-3CClHINOS->C_3ClHO-u1_3ClHO->O_Ext-3O-R_N-4R!H-u0]
+    family: H_Abstraction
+  kinetics:
+    A: 2890000.0000000005
+    Ea: 0.0
+    n: 0.5
+    type: Arrhenius
+  products:
+  - O2
+  - HF
+  radicalchange: -2
+  reactants:
+  - F
+  - HO2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -31.83855740024727
+      - 0.7202551855753381
+      - -0.1584725551963311
+      - 0.007647109395218275
+    - - 35.567888539771694
+      - 0.5545092053051638
+      - -0.011394026779280843
+      - -0.021081354096620437
+    - - -0.3239073923544425
+      - 0.1600723291281313
+      - 0.03216477343546136
+      - -0.0038593731745657886
+    - - -0.16715005707762615
+      - 0.04833145792772766
+      - 0.014432269239822722
+      - 0.0016409001793696064
+    - - -0.07072468060164704
+      - 0.008878203806549072
+      - 0.004796789981473765
+      - 0.0017056766069425424
+    - - -0.029816712283123638
+      - 0.00041235341282796004
+      - 0.0014441283070296602
+      - 0.0007577594752822888
+    type: Chebyshev
+  products:
+  - F
+  - CHF
+  radicalchange: 0
+  reactants:
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 5.499459199107553
+      - 0.9222939213389638
+      - -0.15932850186895867
+      - 0.005473220800690207
+    - - -1.110990288948321
+      - 0.7419834591776769
+      - 0.03401659033842896
+      - -0.026610112238548908
+    - - -0.5010381918680286
+      - 0.1939562874067777
+      - 0.058624634179691854
+      - 0.000837983374722139
+    - - -0.18799389088523202
+      - 0.024868007378384252
+      - 0.019255200255555924
+      - 0.006215154265541044
+    - - -0.04765834157718785
+      - -0.01240614300361045
+      - 0.000789777902125034
+      - 0.0023948336101492587
+    - - 0.0024301825341955423
+      - -0.011741278989920504
+      - -0.0029059356596587062
+      - -3.746831623774893e-05
+    type: Chebyshev
+  products:
+  - '[O]OC(F)F'
+  radicalchange: 0
+  reactants:
+  - O2
+  - CHF2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3758 CH2F2 + HO <=> CHF2-2 + H2O-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_3O-u1_N-4R!H->Cl_N-4BrCFNOS->C_4BrFNOS-u0_4BrFNOS->F_Ext-1CNO-R_N-5R!H->Br_N-5CClFINOPSSi->O_5CF->F]
+    family: H_Abstraction
+  kinetics:
+    A: 0.13000000000000003
+    Ea: 6670.0
+    n: 2.35
+    type: Arrhenius
+  products:
+  - H2O
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - OH
+  - CH2F2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 225.60000000000005
+    Ea: 14380.408000000001
+    n: 1.51
+    type: Arrhenius
+  products:
+  - H
+  - H2O
+  radicalchange: 0
+  reactants:
+  - OH
+  - H2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 45800000000000.01
+      Ea: 436767.76
+      n: -1.4
+      type: Arrhenius
+    efficiencies:
+      CO: 1.95
+      CO2: 3.83
+      H2: 2.55
+      H2O: 12.02
+      N2: 1.01
+    type: ThirdBody
+  products:
+  - H
+  - H
+  radicalchange: 2
+  reactants:
+  - H2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 2.9450000000000003
+    Ea: -6087.72
+    n: 2.087
+    type: Arrhenius
+  products:
+  - O2
+  - H2
+  radicalchange: -2
+  reactants:
+  - H
+  - HO2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3748 CH2F2 + H <=> CHF2-2 + H2-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_N-3BrHINOS->O_3BrHINS->H_Ext-1CNO-R_4R!H->F_5R!H->F]
+    family: H_Abstraction
+  kinetics:
+    A: 0.1340000000000001
+    Ea: 33100.0
+    n: 2.65
+    type: Arrhenius
+  products:
+  - H2
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - H
+  - CH2F2
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 1.00957, dn = +|- 0.00125137, dEa = +|- 0.0068099 kJ/molMatched reaction 3439 F + H2-2 <=> FH + H-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_N-3CClHINOS->C_3ClHO-u1_N-3ClHO->O_3ClH->H]
+    family: H_Abstraction
+  kinetics:
+    A: 80238.70000000001
+    Ea: 69.13560000000001
+    n: 1.18301
+    type: Arrhenius
+  products:
+  - H
+  - HF
+  radicalchange: 0
+  reactants:
+  - F
+  - H2
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_N-4BrFHO->F_4BrHO->H_Sp-2R!H-1CN_2R!H-u1_1CN->C_N-2R!H->C_2NO->O
+  kinetics:
+    A: 18100000.0
+    Ea: 0.0
+    n: -2.51399e-08
+    type: Arrhenius
+  products:
+  - H2
+  - '[O]C(=O)F'
+  radicalchange: -2
+  reactants:
+  - H
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -14.764240012236643
+      - -6.012580385239666e-05
+      - -4.185056436437669e-05
+      - -2.3236454343434368e-05
+    - - 17.409323579437828
+      - 4.8917182247719147e-05
+      - 3.4048278942900465e-05
+      - 1.890395517974103e-05
+    - - 0.145927456714388
+      - 4.8982457523377585e-06
+      - 3.4096063308732874e-06
+      - 1.893263557796872e-06
+    - - 0.0465866221882586
+      - -7.508015811451588e-06
+      - -5.225807913566687e-06
+      - -2.9013621715422124e-06
+    - - 0.015634108511543773
+      - -1.6877650796390317e-06
+      - -1.1748055033231e-06
+      - -6.523141982613081e-07
+    - - 0.006427108868571443
+      - 3.091186171541896e-06
+      - 2.1515420404514564e-06
+      - 1.1945172942454183e-06
+    type: Chebyshev
+  products:
+  - O2
+  - '[O]C([O])F'
+  radicalchange: 2
+  reactants:
+  - O2
+  - FC1OO1
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 98410000.00000001
+    Ea: 64057.04
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O
+  - OH
+  radicalchange: 2
+  reactants:
+  - O2
+  - H
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arrs:
+    - A: 3848000.0000000005
+      Ea: 33262.8
+      n: 0.0
+      type: Arrhenius
+    - A: 668700000.0000001
+      Ea: 80249.12000000001
+      n: 0.0
+      type: Arrhenius
+    type: MultiArrhenius
+  products:
+  - H
+  - OH
+  radicalchange: 0
+  reactants:
+  - O
+  - H2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 0.031610000000000006
+    Ea: -8066.752
+    n: 2.42
+    type: Arrhenius
+  products:
+  - O
+  - H2O
+  radicalchange: 0
+  reactants:
+  - OH
+  - OH
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 6160.000000000001
+      Ea: 0.0
+      n: -0.5
+      type: Arrhenius
+    efficiencies:
+      CO: 1.9
+      CO2: 3.8
+      H2: 2.5
+      H2O: 12.0
+    type: ThirdBody
+  products:
+  - O2
+  radicalchange: -4
+  reactants:
+  - O
+  - O
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 4710000.000000001
+      Ea: 0.0
+      n: -1.0
+      type: Arrhenius
+    efficiencies:
+      CO: 2.52
+      CO2: 5.01
+      H2: 2.5
+      H2O: 15.8
+      N2: 1.32
+    type: ThirdBody
+  products:
+  - OH
+  radicalchange: -2
+  reactants:
+  - O
+  - H
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 1632000.0000000002
+    Ea: 0.0
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O
+  - H2O
+  radicalchange: 0
+  reactants:
+  - H
+  - HO2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 16090000.000000002
+    Ea: -1861.88
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O2
+  - OH
+  radicalchange: -2
+  reactants:
+  - O
+  - HO2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 2.704518090300657
+      - 1.9994564137421846
+      - -0.0003782623797405618
+      - -0.00020992827142762515
+    - - 0.09638179811084718
+      - 0.00021070855712267304
+      - 0.0001466096283841593
+      - 8.135179173930772e-05
+    - - -0.03535873602013981
+      - 6.206032800129014e-05
+      - 4.3185301580465896e-05
+      - 2.3966749298188055e-05
+    - - -0.019052486017458247
+      - 9.244681181284103e-06
+      - 6.435375146077408e-06
+      - 3.573639788474172e-06
+    - - -0.005077816225068525
+      - -5.440786834892229e-06
+      - -3.7837096115719545e-06
+      - -2.0977435481668217e-06
+    - - -0.006684003709982679
+      - 1.0421415982192308e-06
+      - 7.255060979070458e-07
+      - 4.0293161240104325e-07
+    type: Chebyshev
+  products:
+  - HO2
+  radicalchange: -2
+  reactants:
+  - O
+  - OH
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3751 CH2F2 + O <=> CHF2-2 + HO-4 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_N-3O-u1_N-4R!H->N_N-4BrCClFOS->Cl_N-1CNO->O_N-4BrCFO->C_N-4BrFO->O_Ext-1CN-R_N-5R!H->C_5BrClFINOPSSi->F]
+    family: H_Abstraction
+  kinetics:
+    A: 0.0005580000000000001
+    Ea: 21600.0
+    n: 3.2
+    type: Arrhenius
+  products:
+  - OH
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - O
+  - CH2F2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3100 F + HO-4 <=> O-2 + FH in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_N-3CClHINOS->C_N-3ClHO-u1]
+    family: H_Abstraction
+  kinetics:
+    A: 20000000.000000004
+    Ea: 0.0
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O
+  - HF
+  radicalchange: 0
+  reactants:
+  - F
+  - OH
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 1.04919, dn = +|- 0.00630874, dEa = +|- 0.0343319 kJ/molMatched reaction 3422 F + H2O-2 <=> FH + HO-3 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_N-3CClHINOS->C_3ClHO-u1_3ClHO->O]
+    family: H_Abstraction
+  kinetics:
+    A: 136.508
+    Ea: -2250.03
+    n: 1.74742
+    type: Arrhenius
+  products:
+  - HF
+  - OH
+  radicalchange: 0
+  reactants:
+  - F
+  - H2O
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 3.490928528845023
+      - -0.6773038409318688
+      - -0.16354281877564056
+      - -0.007087732779548093
+    - - 0.9902701283793731
+      - 0.7288782677973853
+      - 0.1258038396536807
+      - -0.016728265846081496
+    - - 0.20508422959378036
+      - 0.020812800543016943
+      - 0.05638815221075993
+      - 0.018943557597266413
+    - - 0.04933052319774111
+      - -0.0587090866155825
+      - -0.007707399476125848
+      - 0.007164927130101095
+    - - 0.02013477164065821
+      - -0.02475380567899948
+      - -0.012977798638179166
+      - -0.002021595410963104
+    - - 0.009965583270088875
+      - -0.002874056584022984
+      - -0.005113417732128068
+      - -0.0026090180242730617
+    type: Chebyshev
+  products:
+  - OH
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - O2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -4.10135049007175
+      - 0.7929881346220538
+      - -0.07577633183834873
+      - -0.010129048110027954
+    - - 11.18894128203158
+      - 0.8812061944689898
+      - 0.012587003148297313
+      - -0.019270420670884063
+    - - -0.5290439423379869
+      - 0.2678895166701385
+      - 0.042196039303084104
+      - 0.00693547558878679
+    - - -0.19328919559333804
+      - 0.03417979046116167
+      - 0.010907733214146533
+      - 0.010144541713116418
+    - - -0.03566542476238901
+      - -0.016113396773332008
+      - -0.004853941089638495
+      - 0.003735876620981405
+    - - 0.01672275004201495
+      - -0.01528543184100874
+      - -0.005382671901589253
+      - 0.00014938513637341124
+    type: Chebyshev
+  products:
+  - OH
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - '[O]OC(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_N-4BrFHO->F_N-4BrHO->H_Sp-2R!H-1CN_1CN->C_N-2R!H->C_2NO->O
+  kinetics:
+    A: 10000000.0
+    Ea: 0.0
+    n: 1.3714e-08
+    type: Arrhenius
+  products:
+  - H2O
+  - '[O]C(=O)F'
+  radicalchange: -2
+  reactants:
+  - OH
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 3.602136023813312
+      - -0.00037444680070406974
+      - -0.00026057156316402585
+      - -0.00014461885981631114
+    - - -0.21051870992354813
+      - -0.0001824893580248602
+      - -0.0001269806556633467
+      - -7.046519930506186e-05
+    - - -0.49261700439091116
+      - 0.00028927149438877353
+      - 0.0002012718820359794
+      - 0.00011168196273096017
+    - - -0.04978934071441557
+      - 0.00018117280415426865
+      - 0.00012604240834130596
+      - 6.992426553891582e-05
+    - - 0.0612955801621037
+      - -3.840034353035879e-05
+      - -2.6710083636394736e-05
+      - -1.4813190713084902e-05
+    - - 0.03135448897153495
+      - -8.213880354647845e-05
+      - -5.713116507698674e-05
+      - -3.168261181255966e-05
+    type: Chebyshev
+  products:
+  - O
+  - CHFO
+  radicalchange: 2
+  reactants:
+  - O2
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 3.7122138805772606
+      - 1.9215867660161994
+      - -0.051232642747014605
+      - -0.025444971727126973
+    - - 2.6684856942916535
+      - 0.061580715561248826
+      - 0.039665882312997974
+      - 0.019160489446246955
+    - - -1.0487286230385109
+      - 0.02382876758353724
+      - 0.015460754607585132
+      - 0.00757731153607324
+    - - -0.3680512111670774
+      - -0.010641006402054645
+      - -0.006322558755956551
+      - -0.002548055993272054
+    - - -0.1670998327182797
+      - -0.0030623364333608764
+      - -0.0020673301992096523
+      - -0.0010870393171495232
+    - - -0.03316596515453361
+      - -0.0006231976304202562
+      - -0.0005319914518650747
+      - -0.00038060445217133205
+    type: Chebyshev
+  products:
+  - O
+  - CHFO
+  radicalchange: 0
+  reactants:
+  - '[O]C([O])F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -3.799774841020539
+      - 1.9105590221311237
+      - -0.057639474858672296
+      - -0.02789709880744609
+    - - 2.7399365511858247
+      - 0.07065076417235888
+      - 0.04413176667589498
+      - 0.02003793371649272
+    - - -0.9320282521887239
+      - 0.013129261149861751
+      - 0.00916173130435562
+      - 0.00508300280354651
+    - - -0.2851336465673725
+      - -0.0037447637959183554
+      - -0.002161487028718212
+      - -0.0008029299188810276
+    - - -0.07857232172615049
+      - -0.0032299973208690866
+      - -0.002094862398979186
+      - -0.001023388042971069
+    - - -0.02442807237959577
+      - -0.0013741471819578843
+      - -0.000942882994056267
+      - -0.0005102535311578906
+    type: Chebyshev
+  products:
+  - FC1OO1
+  radicalchange: -2
+  reactants:
+  - O
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -1.593881589025012
+      - -0.0631789049308499
+      - -0.04097709305636707
+      - -0.020080402475961198
+    - - 3.7508721229970954
+      - 0.06241481072532142
+      - 0.03971664805251436
+      - 0.018742030523057788
+    - - -0.6101170380645304
+      - 0.005173731909079287
+      - 0.004010596282165425
+      - 0.002575616975140945
+    - - -0.23606914404279553
+      - -0.006073305801334543
+      - -0.0038437165522209127
+      - -0.0017882702661570185
+    - - -0.10727985864800677
+      - -0.0020835832967243595
+      - -0.0014346809339393857
+      - -0.0007805896618423841
+    - - -0.06035969076715483
+      - -0.0002236510348882603
+      - -0.0001988500380914842
+      - -0.00014870369612355545
+    type: Chebyshev
+  products:
+  - H
+  - '[O]C(=O)F'
+  radicalchange: 0
+  reactants:
+  - O
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 7.777183500752474
+      - -0.10397640597565028
+      - -0.06710743684151792
+      - -0.032557417962819454
+    - - -0.020454135722110103
+      - 0.09417356178684448
+      - 0.05904750421159891
+      - 0.026999135792736842
+    - - -0.05286703292341569
+      - 0.007753525366804272
+      - 0.006327248778171221
+      - 0.004313724345192763
+    - - -0.0403092023514825
+      - -0.0024707043767394727
+      - -0.0013987952480346403
+      - -0.0004828778579038774
+    - - -0.02575106443840686
+      - -0.0025451956814651804
+      - -0.001714714366615275
+      - -0.0008984929028632272
+    - - -0.01483786473403709
+      - -0.00139764285079441
+      - -0.0009801049149019024
+      - -0.0005503010635782267
+    type: Chebyshev
+  products:
+  - HF
+  - CHFO
+  radicalchange: -2
+  reactants:
+  - OH
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -70.80325827005906
+      - -0.00016389629682951506
+      - -0.00011407549924336145
+      - -6.333337035977585e-05
+    - - 60.809281760567224
+      - -3.6210273766227455e-05
+      - -2.520115985664858e-05
+      - -1.398955396732102e-05
+    - - 0.20276993734169385
+      - -4.701315379308313e-06
+      - -3.2716958692118214e-06
+      - -1.815926581256942e-06
+    - - 0.05175770441562606
+      - 2.027352806127689e-06
+      - 1.4110723323583876e-06
+      - 7.834009896570183e-07
+    - - 0.012694014492819122
+      - 2.5662163675827962e-06
+      - 1.7860128001428002e-06
+      - 9.914530923973875e-07
+    - - 0.0040877430250802005
+      - 1.7454592170631254e-06
+      - 1.214765029467551e-06
+      - 6.743193122109693e-07
+    type: Chebyshev
+  products:
+  - CHF
+  - '[O]C([O])F'
+  radicalchange: 2
+  reactants:
+  - CHFO
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 6.5489719149014185
+      - 0.6028518113659918
+      - -0.14419492311889717
+      - 0.01825246027812619
+    - - -1.059403773562786
+      - 0.5609821514730122
+      - -0.03956745941343833
+      - -0.016702857122829984
+    - - -0.7439879409163035
+      - 0.27885663660520466
+      - 9.104127979303927e-05
+      - -0.010341467791550877
+    - - -0.30660373206674374
+      - 0.10735423231760928
+      - 0.012400147092945162
+      - -0.0052878604233764755
+    - - -0.12434411408110682
+      - 0.030124802729801937
+      - 0.011286285706997367
+      - -0.002762795199231858
+    - - -0.04642975435763359
+      - 0.0029364955474146946
+      - 0.00671918940928392
+      - -0.0010731621341202118
+    type: Chebyshev
+  products:
+  - FC(F)C(F)F
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - CHF2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 79 CHF3 + H <=> CHF2 + HF in F_Abstraction/training
+    This reaction matched rate rule [Root_N-1R->O_N-3R->O_N-1BrCClFHINPSSi->C_1ClFH->H_N-3CClFH->Cl_N-3CFH->F_Ext-3C-R_4R!H->F_Ext-3C-R_N-5R!H->O_5BrCClFINPSSi->F]
+    family: F_Abstraction
+  kinetics:
+    A: 1.9200000000000003e-06
+    Ea: 137800.0
+    n: 4.04
+    type: Arrhenius
+  products:
+  - HF
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - H
+  - CHF3
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->F
+  kinetics:
+    A: 1916180000.0
+    Ea: 0.0
+    n: -0.545726
+    type: Arrhenius
+  products:
+  - CO2
+  - CHF3
+  radicalchange: -2
+  reactants:
+  - '[O]C(=O)F'
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -7.293903229965939
+      - -0.015034978007796131
+      - -0.01014194734151428
+      - -0.005342025534917445
+    - - 9.457090437631066
+      - -0.007041073161033651
+      - -0.004577293385045253
+      - -0.0022536535163558804
+    - - 0.31671960370991276
+      - 0.008555754180158885
+      - 0.005787418640734433
+      - 0.0030611144204401894
+    - - 0.09832336266862501
+      - 0.006766824131371328
+      - 0.004401175204068867
+      - 0.002168094361153568
+    - - 0.027612293996634986
+      - 0.0012948023211560987
+      - 0.0007505171944895007
+      - 0.00028462436055934923
+    - - 0.004424855659015384
+      - -0.001074828401734951
+      - -0.000724597025826982
+      - -0.0003795263719247732
+    type: Chebyshev
+  products:
+  - CHF
+  - CHF3
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -37.0805724929043
+      - 1.9652671908738955
+      - -0.022386328590322708
+      - -0.010881408063695376
+    - - 38.81842068361527
+      - -0.03219125094766928
+      - -0.019896359043441253
+      - -0.00889269868848006
+    - - -0.17019802537488962
+      - 0.005493644193217893
+      - 0.004298144161813074
+      - 0.002759465327009247
+    - - -0.10948311146324838
+      - 0.014105239539162408
+      - 0.009001000999527144
+      - 0.004264298058757377
+    - - -0.036238886698694836
+      - 0.007865672667786615
+      - 0.0045495179022565285
+      - 0.0017277289867953783
+    - - -0.004969475421584972
+      - 0.0015670418779922498
+      - 0.0006378377002590857
+      - -1.640567875051874e-05
+    type: Chebyshev
+  products:
+  - CHF
+  - CHF3
+  radicalchange: 0
+  reactants:
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 4.930058054903459
+      - 1.1989262411555348
+      - -0.271151373410216
+      - -0.007881542928869925
+    - - -0.7918568327093418
+      - 0.5007994639749533
+      - 0.10439258559598169
+      - -0.040140747179518065
+    - - -0.38853665180964253
+      - 0.14417784549514848
+      - 0.0658369139612525
+      - 0.0053434955122284335
+    - - -0.18747530785250685
+      - 0.03183955044651254
+      - 0.02407536347770046
+      - 0.009472659088423721
+    - - -0.08721841435698827
+      - 0.001062534624496596
+      - 0.005296910457023457
+      - 0.004857995794410641
+    - - -0.039379986405871016
+      - -0.003588778068679796
+      - -0.00030557969531326865
+      - 0.0013754030980441822
+    type: Chebyshev
+  products:
+  - CHF3
+  radicalchange: -2
+  reactants:
+  - F
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -1.894798501213599
+      - -0.05662086266017936
+      - -0.03768879656739561
+      - -0.019371328643816552
+    - - 6.815114879222224
+      - 0.05691825710114592
+      - 0.03743889399917815
+      - 0.0188228597172401
+    - - 0.16911511041702815
+      - 0.0027782673575006108
+      - 0.0022442781242036827
+      - 0.0015223138498212275
+    - - 0.05350237986401797
+      - -0.003947423090710993
+      - -0.0025803284869778246
+      - -0.001280797752636071
+    - - 0.013271077516832892
+      - -0.0021883324425243807
+      - -0.0015044039909482125
+      - -0.0008177485229661723
+    - - 0.0016577319400820803
+      - -0.00041797866063798047
+      - -0.0003129366507042083
+      - -0.0001935384288559843
+    type: Chebyshev
+  products:
+  - O
+  - '[O]C(F)F'
+  radicalchange: 2
+  reactants:
+  - O2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -11.710230523761549
+      - 1.9397904036404232
+      - -0.04004926755467482
+      - -0.02055804584937882
+    - - 18.323640185149365
+      - 0.0570390109622164
+      - 0.03743694313908901
+      - 0.01874487289091512
+    - - -0.2778682574745934
+      - 0.00480980056589419
+      - 0.0035858799252132456
+      - 0.0022014850391245005
+    - - -0.06979441684890453
+      - -0.003204703822597863
+      - -0.0020592509424707224
+      - -0.000988028917491389
+    - - 0.007171322244968361
+      - -0.0023918394652039402
+      - -0.001625301853510283
+      - -0.0008661151776569607
+    - - 0.023278217479473808
+      - -0.0007345482519035857
+      - -0.000525206193484873
+      - -0.00030400973628907647
+    type: Chebyshev
+  products:
+  - O
+  - '[O]C(F)F'
+  radicalchange: 2
+  reactants:
+  - '[O]OC(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_Ext-4R-R_5R!H-u0_Ext-1R!H-R_N-5R!H->S_N-4R->O_N-Sp-6R!H=1R!H_4CS->C_N-Sp-5BrBrBrCCCClClClFFFNNNOOO#4C_N-5BrCClFNO->O_Ext-4C-R_Ext-1R!H-R
+  kinetics:
+    A: 25600000.0
+    Ea: 0.0
+    n: -0.35
+    type: Arrhenius
+  products:
+  - CF2O
+  - CH2F2
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_N-4BrFHO->F_N-4BrHO->H_Sp-2R!H-1CN_1CN->C_N-2R!H->C_2NO->O
+  kinetics:
+    A: 10000000.0
+    Ea: 0.0
+    n: 1.3714e-08
+    type: Arrhenius
+  products:
+  - H2O
+  - CF2O
+  radicalchange: -2
+  reactants:
+  - OH
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_N-4BrFHO-u1_Sp-2R!H-1CN_1CN->C_Ext-1C-R
+  kinetics:
+    A: 30000000.0
+    Ea: 0.0
+    n: 2.28759e-09
+    type: Arrhenius
+  products:
+  - OH
+  - CF2O
+  radicalchange: -2
+  reactants:
+  - O
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_4BrFHO->F_N-2R!H->C
+  kinetics:
+    A: 10000000.0
+    Ea: 0.0
+    n: -1.29534e-08
+    type: Arrhenius
+  products:
+  - HF
+  - CF2O
+  radicalchange: -2
+  reactants:
+  - F
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-4R->C_N-4BrClFHNOS->N_N-1R!H->O_N-4BrClFHO->Cl_4BrFHO-u1_N-4BrFHO->F_4BrHO->H_Sp-2R!H-1CN_2R!H-u1_1CN->C_N-2R!H->C_2NO->O
+  kinetics:
+    A: 18100000.0
+    Ea: 0.0
+    n: -2.51399e-08
+    type: Arrhenius
+  products:
+  - H2
+  - CF2O
+  radicalchange: -2
+  reactants:
+  - H
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: |-
+    Estimated from node Root_Ext-4R-R_N-5R!H-u0_Sp-2R!H-1R!H_1R!H->C_Ext-1C-R_N-6R!H->C_N-2R!H->C
+    Multiplied by reaction path degeneracy 2.0
+  kinetics:
+    A: 600000.0
+    Ea: 3763.959716687354
+    n: -2.45082e-09
+    type: Arrhenius
+  products:
+  - HO2
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - O2
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 1.539206156103829
+      - -0.08305021935915612
+      - -0.05416454813837985
+      - -0.026808023767495352
+    - - 2.6677771024511836
+      - 0.08570130501638609
+      - 0.05482510950411646
+      - 0.026123405155109962
+    - - 0.4926225588551486
+      - 0.00181757311939417
+      - 0.0022951604887292507
+      - 0.0021799039333003697
+    - - 0.10033283050941821
+      - -0.004380068896147155
+      - -0.002831310915452838
+      - -0.0013704678962879657
+    - - 0.008376739585564454
+      - -0.0021937377553905677
+      - -0.0015492971583351933
+      - -0.0008789549703332843
+    - - -0.004134562687928684
+      - -0.0006730711882320502
+      - -0.0004947270834045306
+      - -0.00029858151092614375
+    type: Chebyshev
+  products:
+  - H
+  - '[O]C(F)F'
+  radicalchange: 0
+  reactants:
+  - OH
+  - CHF2
+  type: ElementaryReaction
+- comment: |-
+    Estimated from node Root_N-4R->F_4BrCClHINOPSSi->H_N-3Br1sCl1sF1s->Cl1s_Sp-2R!H-1R!H_N-2R!H->C
+    Multiplied by reaction path degeneracy 2.0
+  kinetics:
+    A: 200000000.0
+    Ea: 0.0
+    n: 1.66049e-08
+    type: Arrhenius
+  products:
+  - HF
+  - CHFO
+  radicalchange: -2
+  reactants:
+  - H
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: |-
+    Estimated from node Root_N-4R->F
+    Multiplied by reaction path degeneracy 2.0
+  kinetics:
+    A: 3832360000.0
+    Ea: 0.0
+    n: -0.545726
+    type: Arrhenius
+  products:
+  - CHF3
+  - CHFO
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 0.6514288754614944
+      - 1.9999685742773419
+      - -2.1874154812135785e-05
+      - -1.214532174417201e-05
+    - - 0.6829987558471449
+      - -2.0489287198312583e-05
+      - -1.4261357970223184e-05
+      - -7.918061841039238e-06
+    - - 0.240117898065361
+      - -1.490957831314526e-05
+      - -1.0377583219381366e-05
+      - -5.761678415790725e-06
+    - - 0.14858168234312796
+      - -1.2199841640103886e-05
+      - -8.491508206128861e-06
+      - -4.714517527252876e-06
+    - - 0.05567287251819834
+      - -6.935050318129906e-06
+      - -4.826962774289834e-06
+      - -2.679883884742282e-06
+    - - 0.014892485152638454
+      - -3.524218739554488e-06
+      - -2.452889614413038e-06
+      - -1.3617735580228083e-06
+    type: Chebyshev
+  products:
+  - '[O]C(F)F'
+  radicalchange: -2
+  reactants:
+  - O
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 4.416084988362448
+      - -3.0393266091197967e-05
+      - -2.1155534443576268e-05
+      - -1.1746345395415469e-05
+    - - -1.6421895890765428
+      - -1.8730692896037478e-05
+      - -1.3037332071803155e-05
+      - -7.238492711570483e-06
+    - - -0.4956380784264676
+      - -1.3590427350574252e-05
+      - -9.459430967964009e-06
+      - -5.251936988984522e-06
+    - - -0.13623901386706758
+      - -1.1267607904146096e-05
+      - -7.84266528214886e-06
+      - -4.354299188520539e-06
+    - - -0.058572940003361426
+      - -6.3210794472761675e-06
+      - -4.399639884584056e-06
+      - -2.4426526299312534e-06
+    - - -0.024588199408353023
+      - -3.153878410899834e-06
+      - -2.1951378430961866e-06
+      - -1.2186850837222212e-06
+    type: Chebyshev
+  products:
+  - F
+  - CHFO
+  radicalchange: -2
+  reactants:
+  - O
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 6.325728492684151
+      - -2.9654956933116387e-05
+      - -2.0641647872170907e-05
+      - -1.1461035385016812e-05
+    - - 0.5869297849501591
+      - -1.740844288219115e-05
+      - -1.2117007558536987e-05
+      - -6.727531319741161e-06
+    - - 0.058694751548097765
+      - -1.2535416409250024e-05
+      - -8.725117631379464e-06
+      - -4.8442530148442025e-06
+    - - 0.05129254849703798
+      - -1.0482997560083377e-05
+      - -7.2965618356140535e-06
+      - -4.0511117035181265e-06
+    - - 0.012845855039472475
+      - -5.776992083460348e-06
+      - -4.0209484968553e-06
+      - -2.2324127832574767e-06
+    - - 0.004320640127943394
+      - -2.8055187420867164e-06
+      - -1.952677864203663e-06
+      - -1.0840798023307413e-06
+    type: Chebyshev
+  products:
+  - H
+  - CF2O
+  radicalchange: -2
+  reactants:
+  - O
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 5.640226079977298
+      - 1.1606572120949425
+      - -0.12639740627444024
+      - -0.0074376143036524855
+    - - 3.8582702647718823
+      - 0.7064711652460531
+      - 0.05989518966554897
+      - -0.008849302148121654
+    - - -0.16633689263259208
+      - 0.06521621992082194
+      - 0.03396642552824611
+      - 0.0059674793620744385
+    - - -0.025187507477649897
+      - -0.007699271867588305
+      - 0.0002977155933482418
+      - 0.0013763589850401647
+    - - 0.013551704215308777
+      - -0.006627143261254956
+      - -0.0009229937860137587
+      - -0.0002833205661106192
+    - - 0.008229679018841887
+      - -0.002513330053160334
+      - 0.000744588340826633
+      - -3.2280587309773584e-05
+    type: Chebyshev
+  products:
+  - H
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - '[O]C(F)F'
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 3.208294043481486
+      - -0.0042125996759087014
+      - -0.0029235389580194167
+      - -0.0016153225056641518
+    - - 0.2764766726702945
+      - 0.0025565857959949363
+      - 0.0017735929566522002
+      - 0.0009793300994946448
+    - - -0.5219266099217232
+      - -0.00046881340024907883
+      - -0.0003230392862186185
+      - -0.00017636567554908813
+    - - -0.16861437349915187
+      - -0.00013746480316696987
+      - -9.514447438203556e-05
+      - -5.2336142821990415e-05
+    - - -0.06147328331437595
+      - -7.513931311536617e-05
+      - -5.1840521541942525e-05
+      - -2.836367609926801e-05
+    - - -0.023775222061686502
+      - -2.0766032097941324e-05
+      - -1.4160198040550621e-05
+      - -7.594204810087852e-06
+    type: Chebyshev
+  products:
+  - H
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - F
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -0.3691064436259766
+      - 1.9946494707615343
+      - -0.0037096673863484396
+      - -0.0020463925337451715
+    - - -0.0005951366684926185
+      - 0.0013043516960962382
+      - 0.0009103733214679633
+      - 0.0005077059615509395
+    - - -0.5029203397265238
+      - -0.0012371591513699192
+      - -0.0008507889951174656
+      - -0.00046295270277777866
+    - - -0.13922484884852568
+      - -0.0005594893692535103
+      - -0.00038383125355939067
+      - -0.00020800925294743843
+    - - -0.04440584147962997
+      - -0.0003016223271434141
+      - -0.0002060254925685894
+      - -0.00011082187819667841
+    - - -0.022550782928279545
+      - -0.00011853091312223564
+      - -8.00833286932288e-05
+      - -4.226188589008735e-05
+    type: Chebyshev
+  products:
+  - '[O]C(F)F'
+  radicalchange: 0
+  reactants:
+  - F
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arrhigh:
+      A: 188000.00000000003
+      Ea: 10167.12
+      n: 0.0
+      type: Arrhenius
+    arrlow:
+      A: 1400000000.0000002
+      Ea: 23012.0
+      n: -2.1
+      type: Arrhenius
+    efficiencies:
+      CO: 1.9
+      CO2: 3.8
+      H2O: 12.0
+    type: Lindemann
+  products:
+  - CO2
+  radicalchange: -2
+  reactants:
+  - O
+  - CO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 1533000.0000000002
+    Ea: 199576.80000000002
+    n: 0.0
+    type: Arrhenius
+  products:
+  - O
+  - CO2
+  radicalchange: 2
+  reactants:
+  - O2
+  - CO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arrs:
+    - A: 0.06187000000000001
+      Ea: -1489.5040000000001
+      n: 2.053
+      type: Arrhenius
+    - A: 5017000.000000001
+      Ea: 1389.088
+      n: -0.664
+      type: Arrhenius
+    type: MultiArrhenius
+  products:
+  - H
+  - CO2
+  radicalchange: 0
+  reactants:
+  - OH
+  - CO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    A: 0.15700000000000003
+    Ea: 75077.696
+    n: 2.18
+    type: Arrhenius
+  products:
+  - OH
+  - CO2
+  radicalchange: 0
+  reactants:
+  - HO2
+  - CO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 2.4800000000000004e+19
+      Ea: 179912.0
+      n: -3.0
+      type: Arrhenius
+    efficiencies: {}
+    type: ThirdBody
+  products:
+  - HF
+  - CO
+  radicalchange: 0
+  reactants:
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -51.44543495418947
+      - -0.0005691637367130036
+      - -0.00039607237630088794
+      - -0.00021982302905570813
+    - - 41.85078926820037
+      - 0.00015148871009459003
+      - 0.00010540111205766007
+      - 5.848229838284582e-05
+    - - 0.03419510643992116
+      - 6.775339081360945e-05
+      - 4.714408832859517e-05
+      - 2.6161224447189454e-05
+    - - -0.0009245384205855679
+      - 3.386594084307196e-05
+      - 2.3565785809502957e-05
+      - 1.3078260212392494e-05
+    - - -0.012301138238393275
+      - 1.626027639348261e-05
+      - 1.131557372555002e-05
+      - 6.280495071163421e-06
+    - - -0.011316269562541026
+      - 7.920493406401813e-06
+      - 5.512203816862088e-06
+      - 3.059727560843593e-06
+    type: Chebyshev
+  products:
+  - CO
+  - '[O]C([O])F'
+  radicalchange: 2
+  reactants:
+  - CO2
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -0.22393672307671816
+      - -0.0804116041825652
+      - -0.04970996442031216
+      - -0.02237520569642467
+    - - 1.9006024126422292
+      - 0.0038787147378990905
+      - 0.005095720264532871
+      - 0.00462968588960333
+    - - -0.8875359390472453
+      - 0.051298951467686864
+      - 0.029710908026346548
+      - 0.0114874367238283
+    - - -0.29243747260834096
+      - 0.017005694230937715
+      - 0.008129384619824116
+      - 0.00167674261243928
+    - - -0.11867556302075555
+      - -0.003136306139275149
+      - -0.001945543929075571
+      - -0.0007394972709160316
+    - - -0.052820699579103736
+      - -0.004571721397430216
+      - -0.002003924011323629
+      - -0.0001992492969798456
+    type: Chebyshev
+  products:
+  - H
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - CHF2
+  - CHF2
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 1.06112, dn = +|- 0.00779413, dEa = +|- 0.0424154 kJ/molMatched reaction 3679 C2HF4-4 + HO2-4 <=> C2H2F4-4 + O2-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_3O-u1_N-4R!H->Cl_Ext-4BrCFNOS-R_Ext-3O-R_N-6R!H-u0_5R!H->F_Ext-1CNO-R_Ext-1CNO-R_Ext-4BrCFNOS-R]
+    family: H_Abstraction
+  kinetics:
+    A: 3.1971500000000017e-06
+    Ea: -4564.39
+    n: 3.44889
+    type: Arrhenius
+  products:
+  - O2
+  - FC(F)C(F)F
+  radicalchange: -2
+  reactants:
+  - HO2
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 3.51517, dn = +|- 0.165156, dEa = +|- 0.898774 kJ/molMatched reaction 3653 C2HF4-4 + CH2F2 <=> C2H2F4-4 + CHF2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS-inRing_Ext-3BrCClHINOS-R_Sp-4R!H-1R_N-5R!H->S_N-5BrCClFO->O_Sp-5BrCClF-3BrBrCCClClFHINOS_Ext-3BrCClHINOS-R_Sp-6R!H-3BrCClHINOS_N-5BrCClF->Cl_N-4R!H->Cl_5CF->F_4CFOS->C_Ext-4C-R_Ext-4C-R_Ext-1R-R_Ext-1R-R]
+    family: H_Abstraction
+  kinetics:
+    A: 3.5562100000000003e-13
+    Ea: 26588.40000000001
+    n: 5.91675
+    type: Arrhenius
+  products:
+  - CHF2
+  - FC(F)C(F)F
+  radicalchange: 0
+  reactants:
+  - CH2F2
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: Estimated from node Root_Ext-4R-R_5R!H-u0_Ext-1R!H-R_N-5R!H->S_N-4R->O_N-Sp-6R!H=1R!H_4CS->C_N-Sp-5BrBrBrCCCClClClFFFNNNOOO#4C_N-5BrCClFNO->O_Ext-4C-R_Ext-1R!H-R
+  kinetics:
+    A: 25600000.0
+    Ea: 0.0
+    n: -0.35
+    type: Arrhenius
+  products:
+  - CF2O
+  - FC(F)C(F)F
+  radicalchange: -2
+  reactants:
+  - '[O]C(F)F'
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -29.098568496679928
+      - 1.8310303198227524
+      - -0.09389692124545419
+      - -0.0344336205788082
+    - - 30.985168995189525
+      - -0.08060042204897008
+      - -0.033244798564504636
+      - -0.0026483488576740295
+    - - -1.4789685848972205
+      - 0.06718186986310333
+      - 0.03847941770395878
+      - 0.014036410324372181
+    - - -0.530377916272908
+      - 0.05383343879744098
+      - 0.022757074972396724
+      - 0.002301823778626958
+    - - -0.19280470091291685
+      - 0.017010067891923424
+      - 0.004623290933682152
+      - -0.0014083890166288141
+    - - -0.06774889369245564
+      - 0.0006411000652157566
+      - -0.000395428268835485
+      - -0.00010424196427453616
+    type: Chebyshev
+  products:
+  - H
+  - CHF2-CF2
+  radicalchange: 2
+  reactants:
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 1.14562, dn = +|- 0.0178605, dEa = +|- 0.097196 kJ/molMatched reaction 3353 HO + C2H2F4-2 <=> H2O + C2HF4-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_3O-u1_N-4R!H->Cl_Ext-4BrCFNOS-R_N-4BrCFNOS->S_N-5R!H->C_N-Sp-5BrCClClFFFNNNOOO=4BrBrCCClClFFFFNNNNOOOO_4BrCFNO->C_5ClFNO->F_Ext-1CNO-R_Ext-1CNO-R_Ext-4C-R]
+    family: H_Abstraction
+  kinetics:
+    A: 0.00016852700000000005
+    Ea: 1864.8899999999999
+    n: 3.39716
+    type: Arrhenius
+  products:
+  - H2O
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - OH
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 2.44203, dn = +|- 0.1173, dEa = +|- 0.638342 kJ/molMatched reaction 3603 H + C2H2F4-2 <=> H2 + C2HF4-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_N-3BrHINOS->O_3BrHINS->H_Ext-1CNO-R_4R!H->F_Ext-5R!H-R_Ext-5R!H-R_N-6R!H->Cl_N-6BrF->Br_Ext-1CNO-R]
+    family: H_Abstraction
+  kinetics:
+    A: 3.875650000000001e-05
+    Ea: 20101.0
+    n: 3.70877
+    type: Arrhenius
+  products:
+  - H2
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - H
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: Estimated from node Root_Ext-4R-R_5R!H-u0_Ext-1R!H-R_N-5R!H->S_N-4R->O_N-Sp-6R!H=1R!H_4CS->C_N-Sp-5BrBrBrCCCClClClFFFNNNOOO#4C_N-5BrCClFNO->O_Ext-4C-R_Ext-1R!H-R
+  kinetics:
+    A: 25600000.0
+    Ea: 0.0
+    n: -0.35
+    type: Arrhenius
+  products:
+  - '[O]C(=O)F'
+  - FC(F)C(F)F
+  radicalchange: -2
+  reactants:
+  - '[O]C([O])F'
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: |-
+    Fitted to 50 data points; dA = *|/ 2.55651, dn = +|- 0.123319, dEa = +|- 0.671098 kJ/molMatched reaction 3547 O + C2H2F4-2 <=> HO-2 + C2HF4-2 in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_Ext-1R-R_N-3BrCClHINOS->C_N-3BrClHINOS->Cl_Sp-4R!H-1R_N-1R->S_3BrHINOS->O_N-3O-u1_N-4R!H->N_Ext-4BrCClFOS-R_N-Sp-5R!H=4BrBrCCClClFFOOSS_4BrCClFOS->C_N-5R!H->O_1CNO->C_Ext-4C-R_N-5BrCClF->Cl_N-5BrF->Br_Ext-1C-R_N-7R!H->O_N-7BrCClFINPSSi->Cl_Ext-1C-R]
+    family: H_Abstraction
+  kinetics:
+    A: 2.3583300000000003e-06
+    Ea: 24164.6
+    n: 4.04531
+    type: Arrhenius
+  products:
+  - OH
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - O
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 3124 C2H2F4-2 + F <=> C2HF4-2 + FH in H_Abstraction/training
+    This reaction matched rate rule [Root_N-3R->F_N-1R->O_1BrCClFHINS->F_N-3BrCClHINOS->Br_3CClHINOS->C_Ext-3C-R_Sp-4R!H-3C_Ext-3C-R_N-5R!H->O_Sp-5BrCClFINPSSi-3C_4R!H->F_Ext-5BrCClFINPSSi-R_Ext-5BrCClFINPSSi-R_N-6R!H->Cl_N-6BrF->Br_Ext-3C-R]
+    family: H_Abstraction
+  kinetics:
+    A: 0.12500000000000003
+    Ea: 3305.36
+    n: 2.49
+    type: Arrhenius
+  products:
+  - HF
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - F
+  - FC(F)C(F)F
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    arr:
+      A: 2.0484000000000004e+26
+      Ea: 288905.2
+      n: -4.0
+      type: Arrhenius
+    efficiencies:
+      CH2F2: 6.0
+      CHF3: 6.0
+      CO: 1.5
+      CO2: 2.0
+      H2: 2.0
+      H2O: 9.0
+      HF: 2.0
+    type: ThirdBody
+  products:
+  - HF
+  - CF2
+  radicalchange: 0
+  reactants:
+  - CHF3
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -7.291739784186038
+      - 0.27760036615294437
+      - -0.04870240692737886
+      - 0.00203925867777331
+    - - 9.699642641488444
+      - 0.4763131782855457
+      - -0.07172545941967762
+      - -0.0007779324434046581
+    - - 0.07909276909514772
+      - 0.303775941766153
+      - -0.02297344873891248
+      - -0.007007880848423802
+    - - -0.07464112571865093
+      - 0.14485167481463646
+      - 0.008755216294111391
+      - -0.006364836049108407
+    - - -0.06251713855599547
+      - 0.05024237670288861
+      - 0.01486347732863489
+      - -0.001678246825072241
+    - - -0.03532743460473256
+      - 0.010772053215079255
+      - 0.008842012260150254
+      - 0.0014538712110636143
+    type: Chebyshev
+  products:
+  - CH2F2
+  radicalchange: 0
+  reactants:
+  - H2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -3.6080441711792854
+      - 0.0039783698192021036
+      - 0.00010426925675247846
+      - -0.0001730159788066457
+    - - 2.321920945975752
+      - 0.007730482397318544
+      - 0.000212912875724618
+      - -0.0003363750866608366
+    - - -0.041961359685797055
+      - 0.007086756969916078
+      - 0.00022199296294652367
+      - -0.0003082356273044143
+    - - -0.018642085302418523
+      - 0.006116960379489722
+      - 0.00022748681917124383
+      - -0.0002652132076951356
+    - - -0.010450807536202868
+      - 0.00494195661256798
+      - 0.0002203310039250035
+      - -0.00021290152231381193
+    - - -0.00647954812869989
+      - 0.00367961019474801
+      - 0.0001936817631300922
+      - -0.00015712112622595628
+    type: Chebyshev
+  products:
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - H
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -4.91432273860582
+      - -0.013174184571588775
+      - -0.00908335646576493
+      - -0.004964345904456307
+    - - 7.6930018562826845
+      - 0.013106767100666357
+      - 0.009010128262486027
+      - 0.0048997199300051635
+    - - 0.43473486306103293
+      - 0.00015311721491047638
+      - 0.00012921589172754035
+      - 9.235241650443863e-05
+    - - 0.12009888405630759
+      - -0.0006898215617758937
+      - -0.0004751927698741309
+      - -0.0002593003528658838
+    - - 0.0358536811899972
+      - -0.0004131260913670854
+      - -0.00028714295552479725
+      - -0.00015904750476947643
+    - - 0.011171739971166444
+      - -0.00011574514406209787
+      - -8.128567498265555e-05
+      - -4.5789769313390144e-05
+    type: Chebyshev
+  products:
+  - O2
+  - CHF2
+  radicalchange: 0
+  reactants:
+  - HO2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -8.081513652801263
+      - 1.986392543534396
+      - -0.0093806593963476
+      - -0.005125517530702049
+    - - 7.0913243720472465
+      - 0.013251227545481655
+      - 0.009106514387513793
+      - 0.0049494420751475384
+    - - 0.26298063743331307
+      - 0.0002902738344216078
+      - 0.00022412056799284998
+      - 0.00014452842002656558
+    - - 0.10073173385368121
+      - -0.0006626875078175673
+      - -0.00045593513739373233
+      - -0.00024827003409601576
+    - - 0.0649689287797935
+      - -0.00043557520633393714
+      - -0.0003024675689043474
+      - -0.00016728095928096059
+    - - 0.04387854570823467
+      - -0.0001371475478911726
+      - -9.612803631613803e-05
+      - -5.3980296198830906e-05
+    type: Chebyshev
+  products:
+  - '[O]OC(F)F'
+  radicalchange: 0
+  reactants:
+  - HO2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -4.228782075051968
+      - -0.847188170162666
+      - -0.23309180741958965
+      - 0.010413096301873133
+    - - 2.8703069604394145
+      - 0.6808856677305465
+      - 0.11881786594088634
+      - -0.04659698015082478
+    - - 0.06771408172045716
+      - 0.17208295243117788
+      - 0.0847858569857898
+      - 0.009590928521624829
+    - - -0.01864934302559547
+      - 0.004762026648785363
+      - 0.023645060122287315
+      - 0.01483737392331437
+    - - -0.021965325664059083
+      - -0.02312457598237573
+      - -0.0027862991142787795
+      - 0.005575868481039087
+    - - -0.010609897283555561
+      - -0.014324068342715619
+      - -0.006366794741001053
+      - -0.0001383128052934719
+    type: Chebyshev
+  products:
+  - H2
+  - CF2
+  radicalchange: -2
+  reactants:
+  - H
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 2.7289935599611383
+      - -0.9143659625929496
+      - -0.14244173989946673
+      - 0.0011589457260182483
+    - - 1.9280925208513537
+      - 0.7585718270335795
+      - 0.05505556076225146
+      - -0.020157179940672454
+    - - 0.330785503592838
+      - 0.16883556629814442
+      - 0.04754762795654599
+      - 0.0014821302247045303
+    - - 0.07783031571532496
+      - -0.008525865174119776
+      - 0.019335865059480147
+      - 0.003861702159654591
+    - - 0.018311480049095143
+      - -0.02509230089774667
+      - 0.0030994119046317504
+      - 0.002371804768666644
+    - - 0.005255307361586326
+      - -0.014241226749431221
+      - -0.0021537343998081593
+      - 0.0013864038052905675
+    type: Chebyshev
+  products:
+  - CF2
+  - CH2F2
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 6.378241450757192
+      - -0.10005221820077953
+      - -0.06457948074890936
+      - -0.03133489933059616
+    - - 0.5798784730116715
+      - 0.0961062999116362
+      - 0.060488351559746495
+      - 0.027881463729636433
+    - - 0.22636271841181807
+      - 0.006830216987268732
+      - 0.005784189669332282
+      - 0.004102514944920885
+    - - 0.07046738371284106
+      - -0.0034422002511663163
+      - -0.002057348721682053
+      - -0.0008318287146746717
+    - - 0.013559914022969626
+      - -0.0028369631969112213
+      - -0.0019355877139416498
+      - -0.0010370113871116977
+    - - -0.0016302801755169124
+      - -0.0012780248337297608
+      - -0.0009120613274515635
+      - -0.0005263903588519881
+    type: Chebyshev
+  products:
+  - H2O
+  - CF2
+  radicalchange: -2
+  reactants:
+  - OH
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -58.74789929421417
+      - -0.0008070541544585814
+      - -0.0005615497443934168
+      - -0.0003116029085456471
+    - - 51.71107859317208
+      - 0.00028201540292874114
+      - 0.0001961773804194546
+      - 0.00010881321636990899
+    - - 0.077862739354534
+      - 0.00011320917593332889
+      - 7.876328260319114e-05
+      - 4.369839938073537e-05
+    - - -0.0028560472548487524
+      - 4.733050581620042e-05
+      - 3.293343808971495e-05
+      - 1.827542271491617e-05
+    - - -0.0124186341231998
+      - 1.8627706874803184e-05
+      - 1.296337677311622e-05
+      - 7.1953525038691235e-06
+    - - -0.009486156881577796
+      - 6.367484726855989e-06
+      - 4.432305594625153e-06
+      - 2.461123611656635e-06
+    type: Chebyshev
+  products:
+  - CF2
+  - '[O]C([O])F'
+  radicalchange: 2
+  reactants:
+  - CF2O
+  - CHFO
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -9.56621782969702
+      - 0.4267664516640584
+      - -0.07230043641831486
+      - 0.006963285503105121
+    - - 11.099461287271334
+      - 0.6698218642978404
+      - -0.0853289937890061
+      - -0.0009325410787960928
+    - - -0.004018013746510518
+      - 0.3602539093344787
+      - -0.013797553567615327
+      - -0.009291475366161407
+    - - -0.09225573619114556
+      - 0.1382456388889554
+      - 0.015104999521982175
+      - -0.007134064129628962
+    - - -0.050215767949472453
+      - 0.03528613854476888
+      - 0.014835615435976545
+      - -0.0032341674723529584
+    - - -0.016550922149394326
+      - 0.0008991068647654923
+      - 0.008487414555885867
+      - -0.001285424334399582
+    type: Chebyshev
+  products:
+  - FC(F)C(F)F
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CH2F2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -17.88437002497574
+      - -0.0006671127011112352
+      - -0.0004640748415261666
+      - -0.0002574196863740146
+    - - 19.512815857830947
+      - -0.0007524676054020919
+      - -0.0005233071294426137
+      - -0.0002901431856035583
+    - - 0.09049043935572675
+      - -0.0003772650488699996
+      - -0.0002623280740527592
+      - -0.00014540650531313332
+    - - 0.03035417062196934
+      - -5.177396487041995e-05
+      - -3.5969221692872855e-05
+      - -1.990875454494822e-05
+    - - 0.010094828608003512
+      - 0.00012878579884280738
+      - 8.956143044201361e-05
+      - 4.965359206669831e-05
+    - - 0.003014506017237856
+      - 0.0001636784195564769
+      - 0.0001137830152742687
+      - 6.304217315748397e-05
+    type: Chebyshev
+  products:
+  - CF2
+  - '[O]C(F)F'
+  radicalchange: 0
+  reactants:
+  - CF2O
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 5.743685980616287
+      - 0.5930682407835716
+      - -0.09449846666094174
+      - 0.009988977629181928
+    - - -0.5151990242826268
+      - 0.7869879953301624
+      - -0.04840932549624536
+      - -0.014283328611530376
+    - - -0.45870615125704356
+      - 0.3196427710420688
+      - 0.03485566790580823
+      - -0.011081388426971287
+    - - -0.22239416164896675
+      - 0.07489022787398504
+      - 0.03138210993202728
+      - 0.001126637950201392
+    - - -0.07715631309203344
+      - -0.004985349227916648
+      - 0.010468080696713023
+      - 0.003370745552360215
+    - - -0.012479419099894017
+      - -0.01644383579734996
+      - -0.00019784813618084753
+      - 0.001149964341907153
+    type: Chebyshev
+  products:
+  - CHF2-CF2
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -24.31149897177999
+      - -0.008940227322670427
+      - -0.0061882657486735755
+      - -0.0034042912592038357
+    - - 22.96916335689458
+      - 0.007270200306492728
+      - 0.00501626520206033
+      - 0.002744830093560179
+    - - 0.263217638885679
+      - -0.0017396626366699213
+      - -0.0011950335024837556
+      - -0.0006490375506588486
+    - - 0.06872000340172846
+      - -0.001153285428540357
+      - -0.0008007305688018626
+      - -0.0004427389330658431
+    - - 0.0377462883436849
+      - -0.0003168224617860518
+      - -0.00022109823080456923
+      - -0.00012328257359881992
+    - - -0.0014671070617425816
+      - -0.00011282836342385896
+      - -7.801363610893914e-05
+      - -4.283994144676705e-05
+    type: Chebyshev
+  products:
+  - CF2
+  - '[O]OC(F)F'
+  radicalchange: 0
+  reactants:
+  - O2
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -24.489726688658358
+      - -0.014098827457822634
+      - -0.009532283496189257
+      - -0.005040614791555701
+    - - 23.229868903102115
+      - -0.005479695805628027
+      - -0.003553109241843966
+      - -0.0017403564081113943
+    - - 0.9178952028954868
+      - 0.008674711942938682
+      - 0.005861663090843581
+      - 0.003094961140030215
+    - - 0.31799134308740595
+      - 0.0063773619881220085
+      - 0.004158413819501434
+      - 0.0020584099903674913
+    - - 0.11506295541327148
+      - 0.0010353721851488235
+      - 0.0005973684025436481
+      - 0.00022356162083673624
+    - - 0.04047197126810799
+      - -0.0011678229304368055
+      - -0.0007794543019690366
+      - -0.00040160441720433045
+    type: Chebyshev
+  products:
+  - CHF
+  - CHF3
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CH2F2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -17.479707314426467
+      - -0.06649644593368147
+      - -0.041827550306328
+      - -0.01943426039103937
+    - - 15.665385459687322
+      - 0.01310842226173769
+      - 0.00994994607936784
+      - 0.0061058430250529
+    - - -0.30149062914160396
+      - 0.0418137258847334
+      - 0.024667767674756008
+      - 0.009952873568740809
+    - - -0.08304944189279674
+      - 0.010932758940362877
+      - 0.0054875263080745975
+      - 0.0013903050843267538
+    - - -0.0374955099248712
+      - -0.0040686474702989585
+      - -0.002316154852707575
+      - -0.0007982509022235673
+    - - -0.02084149172062801
+      - -0.004089037009689531
+      - -0.0019724917546504717
+      - -0.0004082078537249624
+    type: Chebyshev
+  products:
+  - H
+  - CHF2-CF2
+  radicalchange: 2
+  reactants:
+  - CF2
+  - CH2F2
+  type: ElementaryReaction
+- comment: Estimated from node Root_N-3R->H_Ext-3BrCClFINOPSSi-R
+  kinetics:
+    A: 128827.0
+    Ea: 0.0
+    n: 0.469398
+    type: Arrhenius
+  products:
+  - OH
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - HO2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -5.8463688024351645
+      - -0.01172262440803749
+      - -0.008087212018119813
+      - -0.004424221387041008
+    - - 8.348239087789004
+      - 0.012438779234329057
+      - 0.008560190033730188
+      - 0.004663581480486879
+    - - 0.7095153568684832
+      - -0.0002932837963285831
+      - -0.0001805272235774375
+      - -7.872307795032532e-05
+    - - 0.2057032085147977
+      - -0.0007227383903770109
+      - -0.0004996730544194515
+      - -0.00027432307206067203
+    - - 0.06147437884349473
+      - -0.0003186883360091998
+      - -0.00022224211402244607
+      - -0.0001237743366250892
+    - - 0.019855280820527593
+      - -5.252487875609473e-05
+      - -3.7283713680702875e-05
+      - -2.1361953087971488e-05
+    type: Chebyshev
+  products:
+  - O
+  - '[O]C(F)F'
+  radicalchange: 2
+  reactants:
+  - HO2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -6.580031273950577
+      - -0.012824622529385436
+      - -0.008843064356429583
+      - -0.004833684016437858
+    - - 8.102208012682206
+      - 0.013065219235279483
+      - 0.008983963470600433
+      - 0.004887701372559776
+    - - 0.5829637863616158
+      - 5.9205223925549645e-05
+      - 6.43864359552707e-05
+      - 5.6850807584362284e-05
+    - - 0.17556167493243308
+      - -0.0007120858668433204
+      - -0.0004909312257289624
+      - -0.0002682585537864125
+    - - 0.05903496480242053
+      - -0.00039397548429645577
+      - -0.0002740537175408555
+      - -0.00015199983161193897
+    - - 0.020581925437237886
+      - -9.462966672275995e-05
+      - -6.664648526912179e-05
+      - -3.771514520550713e-05
+    type: Chebyshev
+  products:
+  - OH
+  - CF2O
+  radicalchange: 0
+  reactants:
+  - HO2
+  - CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 4.9600124673085455
+      - -1.1984432846685749
+      - -0.13996705512866076
+      - 0.010784669234793782
+    - - 0.35591526247984984
+      - 0.720326017758523
+      - 0.002093161827398548
+      - -0.022733812964820334
+    - - -0.1874342710579627
+      - 0.2880437888340465
+      - 0.028811049750564026
+      - -0.00781905758495048
+    - - -0.09654396917983644
+      - 0.07087588476366603
+      - 0.0235018385948735
+      - -0.001444861752793481
+    - - -0.04978132635038858
+      - -0.000247990763801522
+      - 0.012198472288159998
+      - 2.9066318946150435e-05
+    - - -0.023592408769352896
+      - -0.012885680847497033
+      - 0.004489248182228695
+      - 0.0006729335678822435
+    type: Chebyshev
+  products:
+  - HF
+  - CHFCF2
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -13.18364457335202
+      - 0.1300420258789099
+      - -0.028623550732779623
+      - 0.0036802051160417237
+    - - 13.952058339733632
+      - 0.24271020075089778
+      - -0.0516727870056991
+      - 0.006064828875612735
+    - - -0.05932041743064975
+      - 0.19689309610244649
+      - -0.037495867717836195
+      - 0.002967425572391793
+    - - -0.08042668995981173
+      - 0.1379063108654772
+      - -0.020605161873635897
+      - -0.0002271054965415353
+    - - -0.06901653499852343
+      - 0.08209351088505806
+      - -0.006654755069316343
+      - -0.0021579532677994686
+    - - -0.045590936026000506
+      - 0.04020724866745356
+      - 0.0015093041918323052
+      - -0.002526513365349703
+    type: Chebyshev
+  products:
+  - FC(F)C(F)F
+  radicalchange: 0
+  reactants:
+  - HF
+  - CHFCF2
+  type: ElementaryReaction
+- comment: |-
+    Estimated from node Root_N-4R->F
+    Multiplied by reaction path degeneracy 2.0
+  kinetics:
+    A: 3832360000.0
+    Ea: 0.0
+    n: -0.545726
+    type: Arrhenius
+  products:
+  - CHF3
+  - CHFCF2
+  radicalchange: -2
+  reactants:
+  - CHF2
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -16.542679715477796
+      - 1.66015557023014
+      - -0.17312992803041888
+      - -0.04732586819068506
+    - - 21.450446178818726
+      - 0.2922486160752185
+      - 0.1375239805636211
+      - 0.02678842895381047
+    - - -0.5782703161360281
+      - 0.05613384177814808
+      - 0.034848860456385744
+      - 0.01505773465471622
+    - - -0.1953438800426685
+      - -0.00983459015930067
+      - -0.0017076886892306103
+      - 0.00277045515651
+    - - -0.04060133585926449
+      - -0.013536864966814102
+      - -0.006752232310533854
+      - -0.0015780294015740742
+    - - 0.010584888130051252
+      - -0.006413377125647919
+      - -0.0039189518911451815
+      - -0.0016486387044770206
+    type: Chebyshev
+  products:
+  - F
+  - CHFCF2
+  radicalchange: 0
+  reactants:
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -11.462044621086848
+      - -1.386685123988995
+      - -0.0693287513254545
+      - 0.002697487358571964
+    - - 12.869675495804575
+      - 0.8881312674450222
+      - -0.0555523191382106
+      - -0.008722473564556958
+    - - 0.5895951231693272
+      - 0.37093868059283835
+      - 0.02233243499807137
+      - -0.009423057824284101
+    - - 0.12529424722391086
+      - 0.07617444319713003
+      - 0.03105646305032602
+      - -0.0028121784317555504
+    - - 0.036613345415819204
+      - -0.013242716947744112
+      - 0.01537926311309403
+      - 0.0002258736970705546
+    - - 0.016591083527306233
+      - -0.022517679553636188
+      - 0.005310233186888805
+      - 0.0006507643073846358
+    type: Chebyshev
+  products:
+  - HF
+  - CHFCF2
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CH2F2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -1.7415417733181309
+      - -0.2598413238022256
+      - -0.13852915847211283
+      - -0.04328498063809734
+    - - 5.66957016028694
+      - 0.2639867216893565
+      - 0.13408034514491826
+      - 0.03542662257552292
+    - - 0.1475399045140806
+      - 0.0282594654798221
+      - 0.02076635075131888
+      - 0.011878982425410954
+    - - 0.045032471694468265
+      - -0.022846815758605872
+      - -0.010061539279315643
+      - -0.0010261756857215712
+    - - 0.015143612852179331
+      - -0.013564346273596211
+      - -0.007909208105091001
+      - -0.003051313228324714
+    - - 0.007313384428272487
+      - -0.0023441560169783736
+      - -0.0021506721461204002
+      - -0.001530991025790623
+    type: Chebyshev
+  products:
+  - F
+  - CHFCF2
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CHF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - 5.380957067311796
+      - 1.4314433104106392
+      - -0.25615542787425233
+      - -0.046150665091885104
+    - - -1.2588452942885393
+      - 0.3370083138809078
+      - 0.11516474331526083
+      - -0.010716409813175206
+    - - -0.6528939531993895
+      - 0.10400677523646185
+      - 0.05286361792775886
+      - 0.011041925566601185
+    - - -0.2505524322804614
+      - 0.028242146969602096
+      - 0.019728495817521972
+      - 0.009181129488631179
+    - - -0.10240654255042861
+      - 0.0039672122690223004
+      - 0.005396801056358001
+      - 0.004638010064122727
+    - - -0.04174279919407715
+      - -0.002227697567126956
+      - 0.0002825033849379506
+      - 0.0016444465385558207
+    type: Chebyshev
+  products:
+  - CHFCF2
+  radicalchange: 0
+  reactants:
+  - CF2
+  - CHF
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -16.358222561355674
+      - -1.2114084768995481
+      - -0.15758951523452797
+      - 0.006027588760050581
+    - - 14.619180277319167
+      - 0.6151087392008104
+      - 0.002374280880623492
+      - -0.022180050357948917
+    - - -0.3593209259746837
+      - 0.17806524264316806
+      - 0.039421791881295166
+      - -0.002537867920411268
+    - - -0.13204338854233738
+      - 0.051069318677585296
+      - 0.01640984427822946
+      - 0.0024779946632455595
+    - - -0.05119441369985537
+      - 0.007602611366553756
+      - 0.0048251488641142945
+      - 0.0019047648259658365
+    - - -0.01997787641386358
+      - -0.0009717534962254245
+      - 0.0011866050095563708
+      - 0.0007421227515102119
+    type: Chebyshev
+  products:
+  - F
+  - CHF
+  radicalchange: 0
+  reactants:
+  - H
+  - CF2
+  type: ElementaryReaction
+- comment: |-
+    Matched reaction 13 CHF2-CF2_r423 + H_r1 <=> FCDC(F)F_p23 + F_p41 in Disproportionation-Y/training
+    This reaction matched rate rule [Root_N-4R->F_4BrCClHINOPSSi->H_N-3Br1sCl1sF1s->Cl1s_Ext-2R!H-R_Sp-2R!H-1R!H_Ext-1R!H-R_3Br1sF1s->F1s_Ext-2R!H-R]
+    family: Disproportionation-Y
+  kinetics:
+    A: 1.81e+16
+    Ea: 12844.880000000001
+    n: -2.92
+    type: Arrhenius
+  products:
+  - HF
+  - CHFCF2
+  radicalchange: -2
+  reactants:
+  - H
+  - CHF2-CF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -35.34222901585109
+      - -0.022625791265630118
+      - -0.014996608896959694
+      - -0.00766240367505038
+    - - 31.862091583553912
+      - -0.015054426145335168
+      - -0.009582273529691557
+      - -0.004534451325286801
+    - - 0.4659644801476329
+      - 0.00939468831178498
+      - 0.00640663159948335
+      - 0.003430772606417806
+    - - 0.1461065038671904
+      - 0.010880201160095809
+      - 0.006970021971824637
+      - 0.0033348910984732478
+    - - 0.055067413399928926
+      - 0.004162052053269226
+      - 0.0024551550094868103
+      - 0.0009791865550232745
+    - - 0.019338280878897468
+      - -0.00031304193510467356
+      - -0.0003179303523130802
+      - -0.00025697208347083984
+    type: Chebyshev
+  products:
+  - CHF
+  - CHF3
+  radicalchange: 0
+  reactants:
+  - HF
+  - CHFCF2
+  type: ElementaryReaction
+- comment: ''
+  kinetics:
+    Pmax: 10000000.000000004
+    Pmin: 1000.0
+    Tmax: 2500.0
+    Tmin: 300.0
+    coefs:
+    - - -27.90044804588302
+      - -0.10266886694009236
+      - -0.061756789483018014
+      - -0.02639619447243002
+    - - 24.08758398239095
+      - -0.009413200495792596
+      - -0.0013036847761619696
+      - 0.0031595589442007473
+    - - -0.8136713239659747
+      - 0.058929758628714524
+      - 0.03345419577296545
+      - 0.012331040924643953
+    - - -0.2652499758534788
+      - 0.028558608736503663
+      - 0.013521734911245252
+      - 0.0027522820543952327
+    - - -0.09803804831315918
+      - 0.002264246370074775
+      - 0.0003737549009766295
+      - -0.00042593309484388186
+    - - -0.04199927026251867
+      - -0.004386729415428699
+      - -0.0019252498130282046
+      - -0.0001568280906669172
+    type: Chebyshev
+  products:
+  - H
+  - CHF2-CF2
+  radicalchange: 2
+  reactants:
+  - HF
+  - CHFCF2
+  type: ElementaryReaction
+Units: {}

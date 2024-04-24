@@ -1,0 +1,3 @@
+path to original RMG model: 
+
+projects/halogens/refrigerants/blends/redos_for_march_conference/Papas/difluoromethane/cantera

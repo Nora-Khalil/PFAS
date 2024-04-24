@@ -1,0 +1,4 @@
+
+signal (7): Bus error
+in expression starting at none:4
+/var/spool/slurmd/job41227815/slurm_script: line 13: 41287 Bus error               python-jl /home/khalil.nor/Code/RMG-Py/rmg.py input.py

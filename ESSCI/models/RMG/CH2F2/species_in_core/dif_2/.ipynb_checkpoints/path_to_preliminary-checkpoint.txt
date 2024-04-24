@@ -1,0 +1,3 @@
+path to original model: 
+
+projects/PFAS/ESSCI/models/RMG/CH2F2/species_in_core/dif_2/get_core_species.ipynb

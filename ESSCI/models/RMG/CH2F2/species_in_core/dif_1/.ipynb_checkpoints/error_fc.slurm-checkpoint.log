@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/work/westgroup/nora/Code/projects/PFAS/ESSCI/models/RMG/CH2F2/species_in_core/dif_1/flame_speed_calc.py", line 21, in <module>
+    gas = ct.Solution('./cantera/chem.yaml')
+  File "interfaces/cython/cantera/base.pyx", line 57, in cantera._cantera._SolutionBase.__cinit__
+  File "interfaces/cython/cantera/base.pyx", line 146, in cantera._cantera._SolutionBase._init_yaml
+cantera._cantera.CanteraError: 
+***********************************************************************
+InputFileError thrown by Kinetics::checkDuplicates:
+Error on lines 1274 and 1424 of ././cantera/chem.yaml:
+Undeclared duplicate reactions detected:
+Reaction 60: HO2(10) + OH(4) <=> H2O(3) + O2(2)
+Reaction 16: H2O(3) + O2(2) <=> HO2(10) + OH(4)
+
+|  Line |
+|  1269 |   rate-constant: {A: 5.888e+13, b: 0.0, Ea: 0.3}
+|  1270 | - equation: H(5) + HO2(10) <=> O(6) + H2O(3)  # Reaction 14
+|  1271 |   rate-constant: {A: 1.632e+12, b: 0.0, Ea: 0.0}
+|  1272 | - equation: O(6) + HO2(10) <=> O2(2) + OH(4)  # Reaction 15
+|  1273 |   rate-constant: {A: 1.609e+13, b: 0.0, Ea: -0.445}
+>  1274 > - equation: OH(4) + HO2(10) <=> O2(2) + H2O(3)  # Reaction 16
+            ^
+|  1275 |   duplicate: true
+|  1276 |   rate-constant: {A: 7.347e+12, b: 0.0, Ea: -1.093}
+|  1277 | - equation: OH(4) + HO2(10) <=> O2(2) + H2O(3)  # Reaction 17
+...
+|  1419 |   rate-constant: {A: 1.34e+05, b: 2.65, Ea: 7.911}
+|  1420 | - equation: O(6) + CH2F2(1) <=> OH(4) + CHF2(81)  # Reaction 58
+|  1421 |   rate-constant: {A: 558.0, b: 3.2, Ea: 5.163}
+|  1422 | - equation: H2O2(11) + CHF2(81) <=> HO2(10) + CH2F2(1)  # Reaction 59
+|  1423 |   rate-constant: {A: 2.27e-04, b: 4.47, Ea: 3.37}
+>  1424 > - equation: O2(2) + H2O(3) <=> OH(4) + HO2(10)  # Reaction 60
+            ^
+|  1425 |   rate-constant: {A: 9.3e+12, b: 0.0, Ea: 74.12}
+|  1426 | - equation: O(6) + HO2(10) <=> O2(2) + OH(4)  # Reaction 61
+|  1427 |   rate-constant: {A: 7.2e+13, b: 0.0, Ea: 0.0}
+***********************************************************************
+

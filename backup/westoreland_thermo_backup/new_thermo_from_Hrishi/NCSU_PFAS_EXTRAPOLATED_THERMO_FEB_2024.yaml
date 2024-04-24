@@ -1,0 +1,1908 @@
+description: |-
+  *****************************************************************************************************************************************************************************
+  ************************************************* North Carolina State University - PFSA & PFCA Destruction Thermochemistry *************************************************
+  PI: Phillip R. Westmoreland <prwestmo@ncsu.edu>
+  Authors: Hrishikesh Ram <hram@ncsu.edu>, Tommy J. Sadej <tpsadej@ncsu.edu>, C. Claire Murphy <ccmurph@ncsu.edu>, Tim J. Mallo <tmallo@ncsu.edu>
+
+  02/2024 - Hrishikesh Ram
+      - Compiled extrapolated NASA polynomials for 126 large species > C8/C8S1 in size, for PFSA and PFCA oxidation mechanisms (based on present work and Ref. [1])
+      - Maximum absolute percentage deviations between polynomial fits of Cp(T) and "true" (directly extrapolated) values of Cp(T) and corresponding temperatures are given
+
+  References:
+      [1] Ram et al., J. Phys. Chem. A, 2024, DOI: 10.1021/acs.jpca.3c06937.
+  Comments:
+      NCSU24 = present work from North Carolina State University
+
+generator: ck2yaml
+input-files: [NCSU_PFAS_EXTRAPOLATED_THERMO_FEB_2024.dat]
+cantera-version: 3.0.0
+date: Thu, 22 Feb 2024 14:19:04 -0500
+
+units: {length: cm, time: s, quantity: mol, activation-energy: kcal/mol}
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  elements: [H, C, O, F, S]
+  species: [PF9acid, PF10acid, PF11acid, PF12acid, PF13acid, PF14acid, PF15acid,
+    PF16acid, PF9carboxylr, PF10carboxylr, PF11carboxylr, PF12carboxylr,
+    PF13carboxylr, PF14carboxylr, PF15carboxylr, PF16carboxylr, PF8acylF,
+    PF9acylF, PF10acylF, PF11acylF, PF12acylF, PF13acylF, PF14acylF, PF15acylF,
+    PF16acylF, PF9alkane, PF10alkane, PF11alkane, PF12alkane, PF13alkane,
+    PF14alkane, PF15alkane, PF16alkane, PF8-1H, PF9-1H, PF10-1H, PF11-1H,
+    PF12-1H, PF13-1H, PF14-1H, PF15-1H, PF16-1H, PF8ene, PF9ene, PF10ene,
+    PF11ene, PF12ene, PF13ene, PF14ene, PF15ene, PF16ene, PF8ol, PF9ol,
+    PF10ol, PF11ol, PF12ol, PF13ol, PF14ol, PF15ol, PF16ol, PF8diol, PF9diol,
+    PF10diol, PF11diol, PF12diol, PF13diol, PF14diol, PF15diol, PF16diol,
+    PF9lactone, PF10lactone, PF11lactone, PF12lactone, PF13lactone, PF14lactone,
+    PF15lactone, PF16lactone, PF9alkylr, PF10alkylr, PF11alkylr, PF12alkylr,
+    PF13alkylr, PF14alkylr, PF15alkylr, PF16alkylr, PF8alkyl(s), PF9alkyl(s),
+    PF10alkyl(s), PF11alkyl(s), PF12alkyl(s), PF13alkyl(s), PF14alkyl(s),
+    PF15alkyl(s), PF16alkyl(s), PF9Sacid, PF10Sacid, PF11Sacid, PF12Sacid,
+    PF13Sacid, PF14Sacid, PF15Sacid, PF16Sacid, PF9Sulfonater, PF10Sulfonater,
+    PF11Sulfonater, PF12Sulfonater, PF13Sulfonater, PF14Sulfonater, PF15Sulfonater,
+    PF16Sulfonater, PF9Sulfite, PF10Sulfite, PF11Sulfite, PF12Sulfite, PF13Sulfite,
+    PF14Sulfite, PF15Sulfite, PF16Sulfite, PF9Sultone, PF10Sultone, PF11Sultone,
+    PF12Sultone, PF13Sultone, PF14Sultone, PF15Sultone, PF16Sultone]
+  state: {T: 300.0, P: 1 atm}
+
+species:
+- name: PF9acid
+  composition: {C: 9, F: 17, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.80394391, 0.201304214, -2.22527806e-04, 1.17138908e-07, -2.39308e-11,
+      -4.70083993e+05, 8.1485859]
+    - [40.0200577, 0.0701595993, -4.68874663e-05, 1.40548872e-08, -1.5778257e-12,
+      -4.7797417e+05, -169.925925]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10acid
+  composition: {C: 10, F: 19, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.04177771, 0.224395054, -2.49079994e-04, 1.31594213e-07, -2.69878855e-11,
+      -5.19725811e+05, 6.92247653]
+    - [44.5270896, 0.0775362143, -5.19730309e-05, 1.56054314e-08, -1.75373992e-12,
+      -5.28533658e+05, -192.080402]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11acid
+  composition: {C: 11, F: 21, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.27961157, 0.247485893, -2.75632182e-04, 1.46049517e-07, -3.00449708e-11,
+      -5.69367628e+05, 5.69636689]
+    - [49.0341216, 0.0849128291, -5.70585953e-05, 1.71559756e-08, -1.92965414e-12,
+      -5.79093147e+05, -214.234881]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12acid
+  composition: {C: 12, F: 23, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.51744566, 0.270576731, -3.02184366e-04, 1.60504817e-07, -3.31020548e-11,
+      -6.19009446e+05, 4.47025631]
+    - [53.5411537, 0.0922894436, -6.21441595e-05, 1.87065196e-08, -2.10556835e-12,
+      -6.29652635e+05, -236.389359]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13acid
+  composition: {C: 13, F: 25, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.75527965, 0.29366757, -3.28736551e-04, 1.74960119e-07, -3.61591393e-11,
+      -6.68651264e+05, 3.24414615]
+    - [58.0481856, 0.0996660585, -6.7229724e-05, 2.02570638e-08, -2.28148257e-12,
+      -6.80212124e+05, -258.543837]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14acid
+  composition: {C: 14, F: 27, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.99311369, 0.316758408, -3.55288735e-04, 1.8941542e-07, -3.92162235e-11,
+      -7.18293081e+05, 2.01803575]
+    - [62.5552178, 0.107042673, -7.23152878e-05, 2.18076078e-08, -2.45739676e-12,
+      -7.30771613e+05, -280.698317]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15acid
+  composition: {C: 15, F: 29, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.2309475, 0.339849248, -3.81840924e-04, 2.03870725e-07, -4.22733091e-11,
+      -7.67934899e+05, 0.791926339]
+    - [67.0622498, 0.114419287, -7.74008521e-05, 2.33581519e-08, -2.63331097e-12,
+      -7.81331101e+05, -302.852796]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16acid
+  composition: {C: 16, F: 31, H: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.46878147, 0.362940087, -4.08393109e-04, 2.18326027e-07, -4.53303936e-11,
+      -8.17576717e+05, -0.434183751]
+    - [71.5692817, 0.121795902, -8.24864168e-05, 2.49086961e-08, -2.8092252e-12,
+      -8.3189059e+05, -325.007273]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: 
+    O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9carboxylr
+  composition: {C: 9, F: 17, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.41690951, 0.193544905, -2.14058731e-04, 1.12785566e-07, -2.31515252e-11,
+      -4.37145215e+05, 1.61462094]
+    - [39.3812042, 0.0699666185, -4.75808629e-05, 1.43730552e-08, -1.6202763e-12,
+      -4.44516111e+05, -165.241704]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1373K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF10carboxylr
+  composition: {C: 10, F: 19, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.92765534, 0.215124738, -2.37694707e-04, 1.25064909e-07, -2.56342915e-11,
+      -4.86279974e+05, -0.868271197]
+    - [43.6261996, 0.0780376241, -5.31469595e-05, 1.60633427e-08, -1.81128427e-12,
+      -4.94465087e+05, -186.089246]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF11carboxylr
+  composition: {C: 11, F: 21, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.43840121, 0.236704571, -2.61330683e-04, 1.37344251e-07, -2.81170576e-11,
+      -5.35414733e+05, -3.35116352]
+    - [47.8711947, 0.0861086306, -5.87130569e-05, 1.77536305e-08, -2.00229227e-12,
+      -5.44414063e+05, -206.936786]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF12carboxylr
+  composition: {C: 12, F: 23, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.94914699, 0.258284404, -2.8496666e-04, 1.49623594e-07, -3.05998242e-11,
+      -5.84549492e+05, -5.83405548]
+    - [52.11619, 0.0941796365, -6.42791538e-05, 1.94439182e-08, -2.19330026e-12,
+      -5.94363039e+05, -227.784327]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF13carboxylr
+  composition: {C: 13, F: 25, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.45989292, 0.279864236, -3.08602634e-04, 1.61902935e-07, -3.30825899e-11,
+      -6.33684251e+05, -8.31694804]
+    - [56.3611853, 0.102250642, -6.98452507e-05, 2.11342058e-08, -2.38430824e-12,
+      -6.44312015e+05, -248.631868]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF14carboxylr
+  composition: {C: 14, F: 27, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.97063881, 0.301444068, -3.32238609e-04, 1.74182277e-07, -3.55653559e-11,
+      -6.8281901e+05, -10.7998404]
+    - [60.6061803, 0.110321649, -7.54113483e-05, 2.28244937e-08, -2.57531626e-12,
+      -6.94260991e+05, -269.479407]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF15carboxylr
+  composition: {C: 15, F: 29, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.48138459, 0.323023901, -3.55874586e-04, 1.8646162e-07, -3.80481225e-11,
+      -7.31953769e+05, -13.2827323]
+    - [64.851176, 0.118392654, -8.09774444e-05, 2.45147811e-08, -2.7663242e-12,
+      -7.44209967e+05, -290.32695]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF16carboxylr
+  composition: {C: 16, F: 31, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.99213059, 0.344603733, -3.79510559e-04, 1.9874096e-07, -4.05308877e-11,
+      -7.81088527e+05, -15.7656252]
+    - [69.0961711, 0.12646366, -8.65435416e-05, 2.62050689e-08, -2.9573322e-12,
+      -7.94158943e+05, -311.17449]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: '[O]C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF8acylF
+  composition: {C: 8, F: 16, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.92240113, 0.184340712, -2.14635047e-04, 1.19141093e-07, -2.57762479e-11,
+      -4.18679989e+05, 12.37521]
+    - [36.6468422, 0.0584017638, -3.97610649e-05, 1.20581684e-08, -1.36399554e-12,
+      -4.25838003e+05, -152.491774]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9acylF
+  composition: {C: 9, F: 18, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.05418847, 0.208147084, -2.42456202e-04, 1.34534795e-07, -2.90873138e-11,
+      -4.68017337e+05, 11.7450803]
+    - [41.1570147, 0.0658744682, -4.49530945e-05, 1.36464469e-08, -1.54431174e-12,
+      -4.76104738e+05, -174.528492]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10acylF
+  composition: {C: 10, F: 20, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.18597586, 0.231953456, -2.70277357e-04, 1.49928496e-07, -3.23983794e-11,
+      -5.17354685e+05, 11.1149503]
+    - [45.6671875, 0.0733471722, -5.01451236e-05, 1.52347253e-08, -1.72462792e-12,
+      -5.26371473e+05, -196.565211]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11acylF
+  composition: {C: 11, F: 22, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.31776321, 0.255759828, -2.98098513e-04, 1.65322198e-07, -3.57094453e-11,
+      -5.66692032e+05, 10.4848205]
+    - [50.17736, 0.0808198768, -5.53371533e-05, 1.68230039e-08, -1.90494413e-12,
+      -5.76638208e+05, -218.601929]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12acylF
+  composition: {C: 12, F: 24, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.44955059, 0.2795662, -3.25919668e-04, 1.80715898e-07, -3.90205109e-11,
+      -6.1602938e+05, 9.85469059]
+    - [54.6875325, 0.0882925813, -6.05291828e-05, 1.84112825e-08, -2.08526033e-12,
+      -6.26904944e+05, -240.638647]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13acylF
+  composition: {C: 13, F: 26, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.58133786, 0.303372573, -3.53740825e-04, 1.96109601e-07, -4.23315772e-11,
+      -6.65366728e+05, 9.22456113]
+    - [59.1977051, 0.0957652858, -6.57212124e-05, 1.99995611e-08, -2.26557653e-12,
+      -6.77171679e+05, -262.675366]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14acylF
+  composition: {C: 14, F: 28, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.71312544, 0.327178944, -3.81561976e-04, 2.11503299e-07, -4.56426418e-11,
+      -7.14704075e+05, 8.59443038]
+    - [63.7078777, 0.10323799, -7.09132418e-05, 2.15878396e-08, -2.44589272e-12,
+      -7.27438414e+05, -284.712084]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15acylF
+  composition: {C: 15, F: 30, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.84491257, 0.350985318, -4.09383136e-04, 2.26897005e-07, -4.8953709e-11,
+      -7.64041423e+05, 7.96430154]
+    - [68.2180504, 0.110710694, -7.61052712e-05, 2.31761181e-08, -2.62620892e-12,
+      -7.77705149e+05, -306.748803]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16acylF
+  composition: {C: 16, F: 32, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.97670003, 0.374791689, -4.37204289e-04, 2.42290704e-07, -5.2264774e-11,
+      -8.13378771e+05, 7.33417126]
+    - [72.7282231, 0.118183398, -8.12973004e-05, 2.47643966e-08, -2.80652511e-12,
+      -8.27971884e+05, -328.785522]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9alkane
+  composition: {C: 9, F: 20}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.73818789, 0.196924176, -2.00712077e-04, 9.36169582e-08, -1.61398782e-11,
+      -5.0429986e+05, 3.74741768]
+    - [39.3737581, 0.0783843816, -5.37581925e-05, 1.6233158e-08, -1.82354572e-12,
+      -5.12167477e+05, -168.228257]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10alkane
+  composition: {C: 10, F: 22}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.23600408, 0.217435483, -2.20837967e-04, 1.02488853e-07, -1.753386e-11,
+      -5.53160495e+05, 1.54438182]
+    - [43.1858946, 0.0876356865, -6.01938649e-05, 1.81866864e-08, -2.04328398e-12,
+      -5.61781095e+05, -186.898351]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11alkane
+  composition: {C: 11, F: 24}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.73382069, 0.237946787, -2.40963851e-04, 1.11360741e-07, -1.89278394e-11,
+      -6.0202113e+05, -0.658655774]
+    - [46.9980311, 0.0968869912, -6.6629537e-05, 2.01402147e-08, -2.26302223e-12,
+      -6.11394712e+05, -205.568446]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12alkane
+  composition: {C: 12, F: 26}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.23163666, 0.258458095, -2.61089745e-04, 1.20232639e-07, -2.03218223e-11,
+      -6.50881765e+05, -2.8616907]
+    - [50.8101673, 0.106138297, -7.30652098e-05, 2.20937432e-08, -2.48276051e-12,
+      -6.6100833e+05, -224.23854]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13alkane
+  composition: {C: 13, F: 28}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.7294528, 0.278969403, -2.81215636e-04, 1.29104534e-07, -2.17158043e-11,
+      -6.997424e+05, -5.06472634]
+    - [54.6223036, 0.115389602, -7.95008826e-05, 2.40472717e-08, -2.7024988e-12,
+      -7.10621947e+05, -242.908634]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14alkane
+  composition: {C: 14, F: 30}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.22726901, 0.29948071, -3.01341527e-04, 1.37976429e-07, -2.31097862e-11,
+      -7.48603035e+05, -7.26776231]
+    - [58.43444, 0.124640907, -8.59365551e-05, 2.60008001e-08, -2.92223707e-12,
+      -7.60235564e+05, -261.578728]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15alkane
+  composition: {C: 15, F: 32}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.72508543, 0.319992015, -3.21467413e-04, 1.4684832e-07, -2.45037666e-11,
+      -7.9746367e+05, -9.47079915]
+    - [62.2465764, 0.133892212, -9.23722274e-05, 2.79543285e-08, -3.14197532e-12,
+      -8.09849182e+05, -280.248823]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16alkane
+  composition: {C: 16, F: 34}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.22290163, 0.340503322, -3.41593304e-04, 1.55720214e-07, -2.58977482e-11,
+      -8.46324305e+05, -11.673835]
+    - [66.0587127, 0.143143517, -9.88079001e-05, 2.99078569e-08, -3.3617136e-12,
+      -8.59462799e+05, -298.918917]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF8-1H
+  composition: {C: 8, H: 1, F: 17}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.09222386, 0.168267383, -1.6325143e-04, 7.06145845e-08, -1.06575238e-11,
+      -4.28087283e+05, 7.22264904]
+    - [34.4376688, 0.0684547967, -4.60793902e-05, 1.37596075e-08, -1.53335233e-12,
+      -4.35194871e+05, -144.499076]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9-1H
+  composition: {C: 9, H: 1, F: 19}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.49071465, 0.189214504, -1.83879245e-04, 7.96721723e-08, -1.20729497e-11,
+      -4.77256649e+05, 5.41314805]
+    - [38.5960523, 0.0769807295, -5.19941549e-05, 1.55472765e-08, -1.73353296e-12,
+      -4.85243456e+05, -165.096837]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10-1H
+  composition: {C: 10, H: 1, F: 21}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.88920561, 0.210161624, -2.04507057e-04, 8.87297569e-08, -1.34883746e-11,
+      -5.26426016e+05, 3.60364639]
+    - [42.7544361, 0.0855066613, -5.79089187e-05, 1.73349452e-08, -1.93371355e-12,
+      -5.3529204e+05, -185.694601]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11-1H
+  composition: {C: 11, H: 1, F: 23}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.28769656, 0.231108744, -2.25134869e-04, 9.77873421e-08, -1.49037996e-11,
+      -5.75595382e+05, 1.79414475]
+    - [46.9128195, 0.0940325944, -6.38236836e-05, 1.91226143e-08, -2.13389419e-12,
+      -5.85340624e+05, -206.292362]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12-1H
+  composition: {C: 12, H: 1, F: 25}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.68618768, 0.252055862, -2.45762678e-04, 1.06844924e-07, -1.63192235e-11,
+      -6.24764748e+05, -0.0153575845]
+    - [51.0712033, 0.102558526, -6.97384473e-05, 2.0910283e-08, -2.33407477e-12,
+      -6.35389209e+05, -226.890125]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13-1H
+  composition: {C: 13, H: 1, F: 27}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.08467805, 0.273002986, -2.663905e-04, 1.15902519e-07, -1.77346518e-11,
+      -6.73934114e+05, -1.8248568]
+    - [55.2295871, 0.111084458, -7.56532112e-05, 2.26979517e-08, -2.53425537e-12,
+      -6.85437793e+05, -247.487888]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14-1H
+  composition: {C: 14, H: 1, F: 29}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.48316906, 0.293950106, -2.87018311e-04, 1.24960103e-07, -1.91500764e-11,
+      -7.23103481e+05, -3.63435866]
+    - [59.3879707, 0.119610391, -8.15679756e-05, 2.44856206e-08, -2.73443598e-12,
+      -7.35486378e+05, -268.08565]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15-1H
+  composition: {C: 15, H: 1, F: 31}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.88166015, 0.314897225, -3.07646121e-04, 1.34017685e-07, -2.05655005e-11,
+      -7.72272847e+05, -5.44386087]
+    - [63.546354, 0.128136324, -8.74827406e-05, 2.62732897e-08, -2.93461663e-12,
+      -7.85534962e+05, -288.683411]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.04% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16-1H
+  composition: {C: 16, H: 1, F: 33}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.28015085, 0.335844346, -3.28273937e-04, 1.43075275e-07, -2.19809272e-11,
+      -8.21442213e+05, -7.25336149]
+    - [67.7047375, 0.136662257, -9.33975051e-05, 2.80609587e-08, -3.13479725e-12,
+      -8.35583546e+05, -309.281172]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.04% @ 1000K
+  note: 
+    FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF8ene
+  composition: {C: 8, F: 16}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.57612422, 0.171455908, -1.96198389e-04, 1.06608131e-07, -2.24062494e-11,
+      -3.87015062e+05, 11.103662]
+    - [34.4407181, 0.0566265051, -3.83150416e-05, 1.15915424e-08, -1.30944975e-12,
+      -3.9355795e+05, -139.815674]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 897K
+  note: FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9ene
+  composition: {C: 9, F: 18}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.71584342, 0.194666431, -2.22420271e-04, 1.20312921e-07, -2.5099979e-11,
+      -4.37360931e+05, 10.6610359]
+    - [38.7440096, 0.0644228332, -4.37500463e-05, 1.32592165e-08, -1.49908818e-12,
+      -4.44780792e+05, -160.612134]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10ene
+  composition: {C: 10, F: 20}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.85556248, 0.217876955, -2.48642156e-04, 1.34017714e-07, -2.77937093e-11,
+      -4.87706799e+05, 10.2184104]
+    - [43.0473012, 0.0722191614, -4.91850509e-05, 1.49268906e-08, -1.68872661e-12,
+      -4.96003633e+05, -181.408593]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11ene
+  composition: {C: 11, F: 22}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.99528242, 0.241087473, -2.74864026e-04, 1.47722492e-07, -3.04874345e-11,
+      -5.38052667e+05, 9.77578123]
+    - [47.3505928, 0.0800154893, -5.46200554e-05, 1.65945647e-08, -1.87836503e-12,
+      -5.47226475e+05, -202.205054]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12ene
+  composition: {C: 12, F: 24}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.13500137, 0.264297997, -3.01085913e-04, 1.61427286e-07, -3.31811653e-11,
+      -5.88398535e+05, 9.33315619]
+    - [51.6538844, 0.0878118174, -6.005506e-05, 1.82622387e-08, -2.06800346e-12,
+      -5.98449317e+05, -223.001514]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13ene
+  composition: {C: 13, F: 26}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.27472069, 0.287508519, -3.27307794e-04, 1.75132074e-07, -3.58748942e-11,
+      -6.38744403e+05, 8.89052954]
+    - [55.9571759, 0.0956081456, -6.54900647e-05, 1.99299128e-08, -2.25764189e-12,
+      -6.49672158e+05, -243.797973]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14ene
+  composition: {C: 14, F: 28}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.41443966, 0.310719044, -3.5352968e-04, 1.88836868e-07, -3.85686249e-11,
+      -6.89090272e+05, 8.44790443]
+    - [60.2604675, 0.103404474, -7.09250693e-05, 2.15975869e-08, -2.44728032e-12,
+      -7.00895e+05, -264.594433]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15ene
+  composition: {C: 15, F: 30}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.55415997, 0.333929559, -3.79751544e-04, 2.0254164e-07, -4.1262348e-11,
+      -7.3943614e+05, 8.00527367]
+    - [64.563759, 0.111200802, -7.63600741e-05, 2.32652611e-08, -2.63691876e-12,
+      -7.52117841e+05, -285.390893]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16ene
+  composition: {C: 16, F: 32}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.69387769, 0.357140092, -4.05973451e-04, 2.16246455e-07, -4.39560858e-11,
+      -7.89782008e+05, 7.56265376]
+    - [68.8670507, 0.11899713, -8.17950785e-05, 2.49329351e-08, -2.82655718e-12,
+      -8.03340683e+05, -306.187354]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 897K
+  note: 
+    FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF8ol
+  composition: {C: 8, H: 1, F: 17, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.43120286, 0.175856991, -1.72312455e-04, 7.5227014e-08, -1.14700618e-11,
+      -4.5529308e+05, 3.90285253]
+    - [36.6922064, 0.0693901769, -4.68272193e-05, 1.40150041e-08, -1.56563098e-12,
+      -4.62826972e+05, -157.296173]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9ol
+  composition: {C: 9, H: 1, F: 19, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.05097933, 0.194936753, -1.88187572e-04, 7.98542361e-08, -1.14753533e-11,
+      -5.04863319e+05, 0.840741282]
+    - [40.8939683, 0.0779881167, -5.27754774e-05, 1.58052447e-08, -1.76551719e-12,
+      -5.13299074e+05, -178.589061]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10ol
+  composition: {C: 10, H: 1, F: 21, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.67075541, 0.214016517, -2.04062695e-04, 8.44814655e-08, -1.14806473e-11,
+      -5.54433559e+05, -2.22136838]
+    - [45.0957293, 0.0865860586, -5.87237374e-05, 1.7595486e-08, -1.9654035e-12,
+      -5.63771176e+05, -199.881945]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11ol
+  composition: {C: 11, H: 1, F: 23, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.29053198, 0.233096278, -2.19937809e-04, 8.91086853e-08, -1.14859379e-11,
+      -6.04003798e+05, -5.28348003]
+    - [49.2974907, 0.0951839998, -6.46719968e-05, 1.93857271e-08, -2.16528977e-12,
+      -6.14243279e+05, -221.17483]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12ol
+  composition: {C: 12, H: 1, F: 25, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.91030828, 0.252176041, -2.35812929e-04, 9.37359114e-08, -1.14912308e-11,
+      -6.53574038e+05, -8.34559062]
+    - [53.4992526, 0.10378194, -7.0620255e-05, 2.11759677e-08, -2.36517599e-12,
+      -6.64715381e+05, -242.467718]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13ol
+  composition: {C: 13, H: 1, F: 27, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.53008465, 0.271255803, -2.51688046e-04, 9.83631338e-08, -1.14965223e-11,
+      -7.03144277e+05, -11.4077014]
+    - [57.7010139, 0.112379881, -7.65685143e-05, 2.29662088e-08, -2.56506227e-12,
+      -7.15187484e+05, -263.760604]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14ol
+  composition: {C: 14, H: 1, F: 29, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.14986074, 0.290335567, -2.6756317e-04, 1.02990363e-07, -1.15018164e-11,
+      -7.52714517e+05, -14.4698111]
+    - [61.9027755, 0.120977822, -8.25167733e-05, 2.47564497e-08, -2.76494852e-12,
+      -7.65659586e+05, -285.05349]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15ol
+  composition: {C: 15, H: 1, F: 31, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.76963716, 0.309415329, -2.83438286e-04, 1.07617586e-07, -1.15071079e-11,
+      -8.02284756e+05, -17.5319222]
+    - [66.1045375, 0.129575761, -8.84650311e-05, 2.65466902e-08, -2.96483473e-12,
+      -8.16131688e+05, -306.346379]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16ol
+  composition: {C: 16, H: 1, F: 33, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [9.38941362, 0.328495091, -2.99313404e-04, 1.1224481e-07, -1.15124001e-11,
+      -8.51854996e+05, -20.5940334]
+    - [70.3062989, 0.138173702, -9.44132903e-05, 2.83369312e-08, -3.16472099e-12,
+      -8.66603791e+05, -327.639265]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF8diol
+  composition: {C: 8, H: 2, F: 16, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.62354823, 0.175649501, -1.68206794e-04, 7.15762271e-08, -1.04464213e-11,
+      -4.54669051e+05, 2.72160401]
+    - [36.0936181, 0.0726301619, -4.8302278e-05, 1.43401262e-08, -1.59392299e-12,
+      -4.62059097e+05, -154.73328]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9diol
+  composition: {C: 9, H: 2, F: 18, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.45816448, 0.193174569, -1.81221324e-04, 7.40846588e-08, -9.88280876e-12,
+      -5.04684146e+05, -1.14277709]
+    - [40.1020438, 0.081479336, -5.43501235e-05, 1.61426249e-08, -1.79366535e-12,
+      -5.12903129e+05, -174.902859]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10diol
+  composition: {C: 10, H: 2, F: 20, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.29278074, 0.210699638, -1.94235854e-04, 7.65930901e-08, -9.3191961e-12,
+      -5.54699241e+05, -5.00715822]
+    - [44.1104696, 0.0903285101, -6.03979689e-05, 1.79451235e-08, -1.9934077e-12,
+      -5.6374716e+05, -195.072438]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11diol
+  composition: {C: 11, H: 2, F: 22, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.12739748, 0.228224702, -2.07250376e-04, 7.91015131e-08, -8.75558054e-12,
+      -6.04714335e+05, -8.87154137]
+    - [48.1188955, 0.0991776841, -6.64458143e-05, 1.97476221e-08, -2.19315005e-12,
+      -6.14591191e+05, -215.242018]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12diol
+  composition: {C: 12, H: 2, F: 24, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.96201385, 0.24574977, -2.20264904e-04, 8.16099427e-08, -8.19196732e-12,
+      -6.5472943e+05, -12.7359229]
+    - [52.1273222, 0.108026856, -7.24936579e-05, 2.155012e-08, -2.39289231e-12,
+      -6.65435223e+05, -235.411602]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13diol
+  composition: {C: 13, H: 2, F: 26, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [8.79663039, 0.263274836, -2.33279429e-04, 8.41183688e-08, -7.6283528e-12,
+      -7.04744525e+05, -16.6003052]
+    - [56.1357476, 0.116876031, -7.8541504e-05, 2.33526189e-08, -2.5926347e-12,
+      -7.16279254e+05, -255.581179]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14diol
+  composition: {C: 14, H: 2, F: 28, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [9.63124701, 0.280799901, -2.46293952e-04, 8.66267928e-08, -7.06473754e-12,
+      -7.5475962e+05, -20.4646878]
+    - [60.1441735, 0.125725205, -8.45893494e-05, 2.51551175e-08, -2.79237705e-12,
+      -7.67123286e+05, -275.750759]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15diol
+  composition: {C: 15, H: 2, F: 30, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [10.4658627, 0.298324974, -2.59308494e-04, 8.91352364e-08, -6.50112924e-12,
+      -8.04774714e+05, -24.3290665]
+    - [64.1525993, 0.134574379, -9.06371949e-05, 2.69576161e-08, -2.9921194e-12,
+      -8.17967317e+05, -295.920338]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16diol
+  composition: {C: 16, H: 2, F: 32, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [11.3004795, 0.315850038, -2.72323013e-04, 9.16436569e-08, -5.93751283e-12,
+      -8.54789809e+05, -28.1934502]
+    - [68.1610255, 0.143423552, -9.66850394e-05, 2.87601144e-08, -3.19186171e-12,
+      -8.68811348e+05, -316.08992]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9lactone
+  composition: {C: 9, F: 16, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.83295958, 0.184695413, -1.89743514e-04, 8.86319538e-08, -1.5160005e-11,
+      -4.20842701e+05, 9.62874944]
+    - [38.5107451, 0.0671757714, -4.56543982e-05, 1.37377631e-08, -1.54005538e-12,
+      -4.28790813e+05, -162.88208]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1374K
+  note: O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10lactone
+  composition: {C: 10, F: 18, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.22485471, 0.205586417, -2.09995151e-04, 9.70807591e-08, -1.63127953e-11,
+      -4.70880124e+05, 7.91161567]
+    - [42.8833048, 0.0751974898, -5.12228406e-05, 1.54247222e-08, -1.72933262e-12,
+      -4.79770897e+05, -184.555912]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1374K
+  note: O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11lactone
+  composition: {C: 11, F: 20, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.61674961, 0.226477422, -2.30246792e-04, 1.05529568e-07, -1.74655867e-11,
+      -5.20917547e+05, 6.19448285]
+    - [47.2558646, 0.083219208, -5.67912829e-05, 1.71116813e-08, -1.91860985e-12,
+      -5.30750981e+05, -206.229744]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1375K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12lactone
+  composition: {C: 12, F: 22, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.00864476, 0.247368426, -2.5049843e-04, 1.13978373e-07, -1.8618377e-11,
+      -5.7095497e+05, 4.47734899]
+    - [51.6284237, 0.0912409278, -6.23597265e-05, 1.87986408e-08, -2.10788715e-12,
+      -5.81731066e+05, -227.903573]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1375K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13lactone
+  composition: {C: 13, F: 24, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.4005399, 0.26825943, -2.70750066e-04, 1.22427178e-07, -1.97711667e-11,
+      -6.20992393e+05, 2.76021515]
+    - [56.0009833, 0.0992626464, -6.7928169e-05, 2.04856e-08, -2.29716439e-12,
+      -6.3271115e+05, -249.577405]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1375K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14lactone
+  composition: {C: 14, F: 26, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.79243528, 0.289150432, -2.91001699e-04, 1.30875978e-07, -2.09239554e-11,
+      -6.71029816e+05, 1.04308032]
+    - [60.3735433, 0.107284364, -7.34966109e-05, 2.21725589e-08, -2.4864416e-12,
+      -6.83691234e+05, -271.251238]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1375K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15lactone
+  composition: {C: 15, F: 28, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.18433022, 0.310041437, -3.11253339e-04, 1.39324787e-07, -2.20767467e-11,
+      -7.21067239e+05, -0.674052674]
+    - [64.7461029, 0.115306083, -7.90650534e-05, 2.38595181e-08, -2.67571885e-12,
+      -7.34671318e+05, -292.92507]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1375K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16lactone
+  composition: {C: 16, F: 30, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.57622549, 0.33093244, -3.31504974e-04, 1.4777359e-07, -2.32295361e-11,
+      -7.71104662e+05, -2.39118703]
+    - [69.1186624, 0.123327802, -8.46334964e-05, 2.55464774e-08, -2.86499611e-12,
+      -7.85651403e+05, -314.598901]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 908K
+  note: 
+    O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9alkylr
+  composition: {C: 9, F: 19}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.23125788, 0.197784178, -2.14541595e-04, 1.08590151e-07, -2.09909866e-11,
+      -4.53885685e+05, 7.03281317]
+    - [40.7785637, 0.0687032992, -4.70776885e-05, 1.42540907e-08, -1.60651602e-12,
+      -4.62006732e+05, -173.478871]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10alkylr
+  composition: {C: 10, F: 21}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.52429268, 0.219903697, -2.38052671e-04, 1.20116249e-07, -2.31234142e-11,
+      -5.03356929e+05, 5.6561663]
+    - [45.1358107, 0.0766845343, -5.26173722e-05, 1.59381368e-08, -1.79644965e-12,
+      -5.12391496e+05, -194.982453]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11alkylr
+  composition: {C: 11, F: 23}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.8173275, 0.242023215, -2.61563746e-04, 1.31642346e-07, -2.52558418e-11,
+      -5.52828172e+05, 4.27951933]
+    - [49.4930582, 0.0846657682, -5.81570549e-05, 1.76221824e-08, -1.98638324e-12,
+      -5.62776261e+05, -216.486037]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12alkylr
+  composition: {C: 12, F: 25}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.11036222, 0.264142735, -2.85074824e-04, 1.43168446e-07, -2.73882699e-11,
+      -6.02299416e+05, 2.90287282]
+    - [53.8503053, 0.0926470032, -6.36967386e-05, 1.93062284e-08, -2.17631687e-12,
+      -6.13161025e+05, -237.98962]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13alkylr
+  composition: {C: 13, F: 27}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.40339719, 0.286262253, -3.08585897e-04, 1.54694541e-07, -2.95206966e-11,
+      -6.5177066e+05, 1.52622521]
+    - [58.2075526, 0.100628238, -6.92364217e-05, 2.09902742e-08, -2.36625048e-12,
+      -6.63545789e+05, -259.493203]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14alkylr
+  composition: {C: 14, F: 29}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.6964317, 0.308381774, -3.32096978e-04, 1.66220644e-07, -3.1653126e-11,
+      -7.01241904e+05, 0.149579559]
+    - [62.5647999, 0.108609472, -7.47761047e-05, 2.267432e-08, -2.55618408e-12,
+      -7.13930553e+05, -280.996787]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15alkylr
+  composition: {C: 15, F: 31}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.98946655, 0.330501292, -3.55608053e-04, 1.77746741e-07, -3.37855533e-11,
+      -7.50713148e+05, -1.22706755]
+    - [66.9220473, 0.116590706, -8.03157877e-05, 2.43583658e-08, -2.74611768e-12,
+      -7.64315317e+05, -302.500371]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16alkylr
+  composition: {C: 16, F: 33}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.28250132, 0.352620811, -3.7911913e-04, 1.8927284e-07, -3.59179812e-11,
+      -8.00184391e+05, -2.60371431]
+    - [71.2792944, 0.124571941, -8.58554713e-05, 2.60424118e-08, -2.93605131e-12,
+      -8.14700081e+05, -324.003953]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.02% @ 1000K
+  note: 
+    F[C](F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF8alkyl(s)
+  composition: {C: 8, F: 16}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.44667589, 0.178423116, -2.15060984e-04, 1.2412417e-07, -2.79913791e-11,
+      -3.5762147e+05, 9.4178231]
+    - [36.0757586, 0.0534438163, -3.640672e-05, 1.10766441e-08, -1.25792668e-12,
+      -3.64397133e+05, -149.324582]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F, singlet
+- name: PF9alkyl(s)
+  composition: {C: 9, F: 18}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.66064623, 0.202487086, -2.44433576e-04, 1.4123084e-07, -3.1880301e-11,
+      -4.07041924e+05, 8.16450601]
+    - [40.7204045, 0.0604438204, -4.12414436e-05, 1.25573609e-08, -1.42673567e-12,
+      -4.14733104e+05, -172.110267]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F, singlet
+- name: PF10alkyl(s)
+  composition: {C: 10, F: 20}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [3.87461658, 0.226551056, -2.73806168e-04, 1.58337511e-07, -3.5769223e-11,
+      -4.56462378e+05, 6.91118893]
+    - [45.36505, 0.0674438256, -4.6076168e-05, 1.40380781e-08, -1.59554471e-12,
+      -4.65069074e+05, -194.89595]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF11alkyl(s)
+  composition: {C: 11, F: 22}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.08858694, 0.250615026, -3.03178759e-04, 1.7544418e-07, -3.96581448e-11,
+      -5.05882832e+05, 5.65787175]
+    - [50.0096961, 0.0744438295, -5.09108914e-05, 1.55187948e-08, -1.76435369e-12,
+      -5.15405044e+05, -217.681636]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF12alkyl(s)
+  composition: {C: 12, F: 24}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.3025573, 0.274678996, -3.32551351e-04, 1.9255085e-07, -4.35470667e-11,
+      -5.55303286e+05, 4.40455459]
+    - [54.6543423, 0.0814438329, -5.57456143e-05, 1.69995114e-08, -1.93316265e-12,
+      -5.65741015e+05, -240.467323]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF13alkyl(s)
+  composition: {C: 13, F: 26}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.51652769, 0.298742965, -3.61923942e-04, 2.0965752e-07, -4.74359883e-11,
+      -6.0472374e+05, 3.15123729]
+    - [59.2989881, 0.0884438375, -6.05803382e-05, 1.84802284e-08, -2.10197166e-12,
+      -6.16076985e+05, -263.253007]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF14alkyl(s)
+  composition: {C: 14, F: 28}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.73049805, 0.322806935, -3.91296534e-04, 2.26764189e-07, -5.13249102e-11,
+      -6.54144194e+05, 1.89792013]
+    - [63.9436338, 0.0954438421, -6.54150622e-05, 1.99609454e-08, -2.27078067e-12,
+      -6.66412956e+05, -286.038692]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF15alkyl(s)
+  composition: {C: 15, F: 30}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.94446841, 0.346870905, -4.20669125e-04, 2.43870859e-07, -5.52138321e-11,
+      -7.03564648e+05, 0.644602975]
+    - [68.5882798, 0.102443846, -7.02497857e-05, 2.14416622e-08, -2.43958967e-12,
+      -7.16748926e+05, -308.824377]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF16alkyl(s)
+  composition: {C: 16, F: 32}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.15843875, 0.370934874, -4.50041717e-04, 2.6097753e-07, -5.91027541e-11,
+      -7.52985102e+05, -0.608714094]
+    - [73.2329255, 0.109443851, -7.50845097e-05, 2.29223792e-08, -2.60839868e-12,
+      -7.67084896e+05, -331.610062]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1372K
+  note: 
+    F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,
+    singlet
+- name: PF9Sacid
+  composition: {C: 9, H: 1, F: 19, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.08944983, 0.229758937, -2.40695287e-04, 1.17092385e-07, -2.16573594e-11,
+      -5.30263835e+05, 6.45872105]
+    - [42.0016383, 0.0972674416, -7.11707857e-05, 2.33557931e-08, -2.8911821e-12,
+      -5.3875753e+05, -181.146168]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF10Sacid
+  composition: {C: 10, H: 1, F: 21, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.52341146, 0.250056832, -2.59680149e-04, 1.24677084e-07, -2.26233455e-11,
+      -5.7954395e+05, 4.435523]
+    - [45.7788348, 0.106878443, -7.81874413e-05, 2.56209571e-08, -3.16546809e-12,
+      -5.88835292e+05, -199.960571]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF11Sacid
+  composition: {C: 11, H: 1, F: 23, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.95737311, 0.270354726, -2.7866501e-04, 1.32261783e-07, -2.35893314e-11,
+      -6.28824066e+05, 2.41232488]
+    - [49.5560307, 0.116489446, -8.52040982e-05, 2.78861215e-08, -3.43975415e-12,
+      -6.38913054e+05, -218.774971]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF12Sacid
+  composition: {C: 12, H: 1, F: 25, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.39133521, 0.290652618, -2.97649864e-04, 1.39846474e-07, -2.45553146e-11,
+      -6.78104181e+05, 0.389124912]
+    - [53.3332271, 0.126100448, -9.2220754e-05, 3.01512855e-08, -3.71404016e-12,
+      -6.88990816e+05, -237.589373]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF13Sacid
+  composition: {C: 13, H: 1, F: 27, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.82529737, 0.310950509, -3.16634717e-04, 1.47431163e-07, -2.55212975e-11,
+      -7.27384296e+05, -1.63407536]
+    - [57.1104235, 0.135711451, -9.92374099e-05, 3.24164496e-08, -3.98832617e-12,
+      -7.39068578e+05, -256.403776]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF14Sacid
+  composition: {C: 14, H: 1, F: 29, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.25925909, 0.331248403, -3.35619577e-04, 1.5501586e-07, -2.64872828e-11,
+      -7.76664412e+05, -3.65727374]
+    - [60.8876204, 0.145322451, -1.06254065e-04, 3.46816132e-08, -4.26261212e-12,
+      -7.8914634e+05, -275.218181]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF15Sacid
+  composition: {C: 15, H: 1, F: 31, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.69322141, 0.351546293, -3.54604427e-04, 1.62600548e-07, -2.74532647e-11,
+      -8.25944527e+05, -5.68047468]
+    - [64.6648164, 0.154933454, -1.13270721e-04, 3.69467775e-08, -4.53689816e-12,
+      -8.39224102e+05, -294.032581]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF16Sacid
+  composition: {C: 16, H: 1, F: 33, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.12718288, 0.371844189, -3.73589292e-04, 1.7018525e-07, -2.84192518e-11,
+      -8.75224642e+05, -7.70367202]
+    - [68.4420127, 0.164544456, -1.20287377e-04, 3.92119417e-08, -4.81118418e-12,
+      -8.89301864e+05, -312.846983]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: 
+    OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+- name: PF9Sulfonater
+  composition: {C: 9, F: 19, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.54753028, 0.225481515, -2.42885713e-04, 1.23063118e-07, -2.41646457e-11,
+      -4.98618356e+05, -0.211853132]
+    - [41.3990695, 0.0966736263, -7.20539361e-05, 2.40219892e-08, -3.01904303e-12,
+      -5.06478715e+05, -176.746204]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF10Sulfonater
+  composition: {C: 10, F: 21, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.86165952, 0.246791244, -2.64155747e-04, 1.32654943e-07, -2.57463446e-11,
+      -5.4748135e+05, -2.01394132]
+    - [45.1111167, 0.106523288, -7.93702745e-05, 2.6438301e-08, -3.31947625e-12,
+      -5.561232e+05, -195.465536]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF11Sulfonater
+  composition: {C: 11, F: 23, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.17578856, 0.268100976, -2.85425785e-04, 1.42246772e-07, -2.73280447e-11,
+      -5.96344344e+05, -3.81602866]
+    - [48.8231632, 0.116372952, -8.66866142e-05, 2.88546132e-08, -3.61990954e-12,
+      -6.05767684e+05, -214.184865]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF12Sulfonater
+  composition: {C: 12, F: 25, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.48991773, 0.289410706, -3.0669582e-04, 1.51838599e-07, -2.8909744e-11,
+      -6.45207339e+05, -5.61811652]
+    - [52.5352105, 0.126222614, -9.40029522e-05, 3.12709249e-08, -3.92034274e-12,
+      -6.55412169e+05, -232.904198]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF13Sulfonater
+  composition: {C: 13, F: 27, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.80404709, 0.310720435, -3.27965852e-04, 1.61430423e-07, -3.04914423e-11,
+      -6.94070333e+05, -7.42020521]
+    - [56.2472574, 0.136072276, -1.01319291e-04, 3.36872369e-08, -4.220776e-12,
+      -7.05056654e+05, -251.623528]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF14Sulfonater
+  composition: {C: 14, F: 29, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.11817576, 0.332030169, -3.49235896e-04, 1.71022259e-07, -3.20731447e-11,
+      -7.42933327e+05, -9.22229101]
+    - [59.9593047, 0.145921938, -1.08635629e-04, 3.61035485e-08, -4.52120921e-12,
+      -7.54701139e+05, -270.342861]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF15Sulfonater
+  composition: {C: 15, F: 31, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.4323053, 0.353339897, -3.70505925e-04, 1.80614079e-07, -3.36548417e-11,
+      -7.91796322e+05, -11.0243804]
+    - [63.6713515, 0.155771601, -1.15951968e-04, 3.85198605e-08, -4.82164246e-12,
+      -8.04345624e+05, -289.062191]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF16Sulfonater
+  composition: {C: 16, F: 33, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.74643412, 0.37464963, -3.91775966e-04, 1.90205912e-07, -3.52365431e-11,
+      -8.40659316e+05, -12.8264668]
+    - [67.3833988, 0.165621263, -1.23268307e-04, 4.09361722e-08, -5.12207568e-12,
+      -8.53990108e+05, -307.781523]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.03% @ 1000K
+  note: '[O]S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F'
+- name: PF9Sulfite
+  composition: {C: 9, H: 1, F: 19, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [1.66416153, 0.249891716, -2.84856215e-04, 1.53450019e-07, -3.21780347e-11,
+      -5.38117521e+05, 17.5680882]
+    - [44.2209903, 0.0926960758, -6.92219375e-05, 2.31824419e-08, -2.92519835e-12,
+      -5.47238295e+05, -190.916253]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF10Sulfite
+  composition: {C: 10, H: 1, F: 21, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [1.83032493, 0.271982057, -3.07022796e-04, 1.63222544e-07, -3.36812157e-11,
+      -5.88023317e+05, 16.6038084]
+    - [48.3729263, 0.101619757, -7.58464318e-05, 2.535414e-08, -3.19221521e-12,
+      -5.98074255e+05, -211.793089]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF11Sulfite
+  composition: {C: 11, H: 1, F: 23, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [1.99648777, 0.294072403, -3.29189387e-04, 1.72995079e-07, -3.51844e-11,
+      -6.37929113e+05, 15.639531]
+    - [52.5248625, 0.110543438, -8.24709256e-05, 2.7525838e-08, -3.45923205e-12,
+      -6.48910215e+05, -232.669926]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF12Sulfite
+  composition: {C: 12, H: 1, F: 25, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.16265145, 0.316162743, -3.51355963e-04, 1.827676e-07, -3.66875794e-11,
+      -6.87834909e+05, 14.6752501]
+    - [56.6767983, 0.119467119, -8.90954205e-05, 2.96975364e-08, -3.72624894e-12,
+      -6.99746175e+05, -253.546761]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF13Sulfite
+  composition: {C: 13, H: 1, F: 27, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.32881571, 0.338253079, -3.7352253e-04, 1.92540111e-07, -3.81907554e-11,
+      -7.37740705e+05, 13.7109668]
+    - [60.8287346, 0.1283908, -9.57199142e-05, 3.18692344e-08, -3.99326577e-12,
+      -7.50582135e+05, -274.423599]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF14Sulfite
+  composition: {C: 14, H: 1, F: 29, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.49497929, 0.360343419, -3.95689107e-04, 2.02312634e-07, -3.96939354e-11,
+      -7.87646501e+05, 12.7466863]
+    - [64.980671, 0.13731448, -1.02344408e-04, 3.40409322e-08, -4.26028259e-12,
+      -8.01418094e+05, -295.300437]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF15Sulfite
+  composition: {C: 15, H: 1, F: 31, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.66114184, 0.382433767, -4.17855703e-04, 2.12085174e-07, -4.11971214e-11,
+      -8.37552296e+05, 11.7824101]
+    - [69.132607, 0.146238161, -1.08968902e-04, 3.62126304e-08, -4.52729946e-12,
+      -8.52254054e+05, -316.177273]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF16Sulfite
+  composition: {C: 16, H: 1, F: 33, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [2.82730616, 0.404524103, -4.40022268e-04, 2.21857684e-07, -4.27002971e-11,
+      -8.87458093e+05, 10.8181265]
+    - [73.2845432, 0.155161842, -1.15593396e-04, 3.83843284e-08, -4.7943163e-12,
+      -9.03090014e+05, -337.054111]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(OS(=O)O)F
+- name: PF9Sultone
+  composition: {C: 9, F: 18, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.48071526, 0.216938789, -2.29510148e-04, 1.12696061e-07, -2.10331322e-11,
+      -4.82252617e+05, 6.04919476]
+    - [41.0868986, 0.088752833, -6.50521416e-05, 2.14241844e-08, -2.66356474e-12,
+      -4.90441102e+05, -175.028842]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF10Sultone
+  composition: {C: 10, F: 20, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [4.86816761, 0.237655849, -2.49295145e-04, 1.20748772e-07, -2.20781526e-11,
+      -5.31997063e+05, 4.20836078]
+    - [45.1500167, 0.0976953692, -7.16041381e-05, 2.35545372e-08, -2.92395625e-12,
+      -5.41061288e+05, -195.324289]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF11Sultone
+  composition: {C: 11, F: 22, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.25561983, 0.258372911, -2.69080145e-04, 1.28801486e-07, -2.31231739e-11,
+      -5.81741509e+05, 2.36752736]
+    - [49.2131353, 0.106637904, -7.81561335e-05, 2.56848896e-08, -3.18434771e-12,
+      -5.91681474e+05, -215.619739]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1374K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF12Sultone
+  composition: {C: 12, F: 24, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [5.64307226, 0.279089971, -2.88865141e-04, 1.36854196e-07, -2.4168194e-11,
+      -6.31485955e+05, 0.526692996]
+    - [53.2762534, 0.11558044, -8.470813e-05, 2.78152424e-08, -3.44473922e-12,
+      -6.42301661e+05, -235.915186]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1375K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF13Sultone
+  composition: {C: 13, F: 26, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.03052479, 0.299807031, -3.08650136e-04, 1.44906904e-07, -2.52132134e-11,
+      -6.81230401e+05, -1.31414171]
+    - [57.3393714, 0.124522977, -9.12601266e-05, 2.99455953e-08, -3.70513074e-12,
+      -6.92921847e+05, -256.210633]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1375K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF14Sultone
+  composition: {C: 14, F: 28, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.41797681, 0.320524094, -3.2843514e-04, 1.52959622e-07, -2.62582361e-11,
+      -7.30974848e+05, -3.15497433]
+    - [61.4024899, 0.133465512, -9.78121221e-05, 3.20759478e-08, -3.96552221e-12,
+      -7.43542033e+05, -276.506082]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1375K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF15Sultone
+  composition: {C: 15, F: 30, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [6.8054294, 0.341241152, -3.48220133e-04, 1.61012329e-07, -2.7303255e-11,
+      -7.80719294e+05, -4.99580933]
+    - [65.4656082, 0.142408047, -1.04364118e-04, 3.42063004e-08, -4.2259137e-12,
+      -7.94162219e+05, -296.801531]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1375K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+- name: PF16Sultone
+  composition: {C: 16, F: 32, O: 3, S: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2500.0]
+    data:
+    - [7.19288182, 0.361958213, -3.6800513e-04, 1.69065039e-07, -2.83482753e-11,
+      -8.3046374e+05, -6.8366436]
+    - [69.5287263, 0.151350583, -1.10916115e-04, 3.63366532e-08, -4.48630521e-12,
+      -8.44782406e+05, -317.096978]
+    note: |-
+      NCSU24
+       max abs. dev in Cp(T): 0.01% @ 1375K
+  note: 
+    FC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F

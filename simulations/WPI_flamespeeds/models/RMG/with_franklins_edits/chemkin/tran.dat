@@ -1,0 +1,105 @@
+! Species         Shape    LJ-depth  LJ-diam   DiplMom   Polzblty  RotRelaxNum Data     
+! Name            Index    epsilon/k_B sigma     mu        alpha     Zrot      Source   
+H(5)                0     145.000     2.050     0.000     0.000     0.000    ! GRI-Mech
+O(6)                0      80.000     2.750     0.000     0.000     0.000    ! GRI-Mech
+OH(7)               1      80.000     2.750     0.000     0.000     0.000    ! GRI-Mech
+H2(8)               1      38.000     2.920     0.000     0.790   280.000    ! GRI-Mech
+He(9)               0      10.200     2.576     0.000     0.000     0.000    ! NOx2018
+HO2(10)             2     107.400     3.458     0.000     0.000     1.000    ! GRI-Mech
+H2O2(11)            2     107.400     3.458     0.000     0.000     3.800    ! GRI-Mech
+C2H4(12)            2     280.801     3.971     0.000     0.000     1.500    ! GRI-Mech
+CH3(13)             2     144.001     3.800     0.000     0.000     0.000    ! GRI-Mech
+HCO(14)             2     498.002     3.590     0.000     0.000     0.000    ! GRI-Mech
+CH3CO(15)           2     436.001     3.970     0.000     0.000     2.000    ! GRI-Mech
+CH2CHO(16)          2     436.001     3.970     0.000     0.000     2.000    ! GRI-Mech
+C2H3(17)            2     209.001     4.100     0.000     0.000     1.000    ! GRI-Mech
+CH2(18)             2     144.001     3.800     0.000     0.000     0.000    ! GRI-Mech
+CH2O(19)            2     498.002     3.590     0.000     0.000     2.000    ! GRI-Mech
+CH2CO(20)           2     436.001     3.970     0.000     0.000     2.000    ! GRI-Mech
+CH4(21)             2     141.400     3.746     0.000     2.600    13.000    ! GRI-Mech
+CO(22)              1      98.100     3.650     0.000     1.950     1.800    ! GRI-Mech
+C2H2(23)            1     209.001     4.100     0.000     0.000     2.500    ! GRI-Mech
+Ar                  0     136.501     3.330     0.000     0.000     0.000    ! GRI-Mech
+N2                  1      97.530     3.621     0.000     1.760     4.000    ! GRI-Mech
+Ne                  0     148.600     3.758     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+CH2F2(1)            2     262.000     4.123     1.800     0.000     0.000    ! NIST_Fluorine
+C3H8(2)             2     266.801     4.982     0.000     0.000     1.000    ! GRI-Mech
+O2(3)               1     107.400     3.458     0.000     1.600     3.800    ! GRI-Mech
+H2O(4)              2     572.402     2.605     1.844     0.000     4.000    ! GRI-Mech
+C2H5(37)            2     252.301     4.302     0.000     0.000     1.500    ! GRI-Mech
+CHF2(24)            2     262.000     4.123     1.800     0.000     0.000    ! NIST_Fluorine
+IC3H7(96)           2     266.801     4.982     0.000     0.000     1.000    ! GRI-Mech
+IC3H7O2(101)        2     422.794     6.057     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=549.08 K, Pc=35.9 bar (from Joback method)
+NC3H7(95)           2     266.801     4.982     0.000     0.000     1.000    ! GRI-Mech
+CHF(689)            2     262.000     4.123     1.800     0.000     0.000    ! NIST_Fluorine
+C3H6(98)            2     266.801     4.982     0.000     0.000     1.000    ! GRI-Mech
+CHF2OO(25)          2     386.937     5.198     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=502.52 K, Pc=51.98 bar (from Joback method)
+C2H5O2(51)          2     395.000     4.037     1.300     0.000     1.000    ! NOx2018
+CH3O2(49)           2     417.000     3.690     1.700     0.000     2.000    ! NOx2018
+OOC(F)F(940)        2     386.937     5.198     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=502.52 K, Pc=51.98 bar (from Joback method)
+[O]C(F)F(923)       2     368.461     4.998     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=478.52 K, Pc=55.69 bar (from Joback method)
+CF2O(26)            2     350.500     4.906     0.000     0.000     0.000    ! NIST_Fluorine
+NC3H7O2(99)         2     420.255     6.025     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=545.79 K, Pc=36.25 bar (from Joback method)
+C[C]C-2(910)        2     237.100     5.118     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+HF(687)             1     330.001     3.148     1.920     2.460     1.000    ! NIST_Fluorine
+FC1OO1(1274)        2     356.513     4.926     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=463.00 K, Pc=56.28 bar (from Joback method)
+[O]C([O])F(1276)    2     438.966     5.815     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=570.09 K, Pc=42.11 bar (from Joback method)
+C2H6(36)            2     252.301     4.302     0.000     0.000     1.500    ! GRI-Mech
+CFO2(1293)          2     433.932     5.199     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=563.55 K, Pc=58.27 bar (from Joback method)
+CO2(27)             1     244.001     3.763     0.000     2.650     2.100    ! GRI-Mech
+F(686)              0      80.000     2.750     0.000     0.000     0.000    ! NIST_Fluorine
+[CH]C(771)          2     110.700     4.443     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+FC(F)C(F)F(1007)    2     323.400     4.850     2.000     0.000     0.000    ! NIST_Fluorine
+[CH2]C[CH2](884)    2     329.271     5.092     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=427.62 K, Pc=47.04 bar (from Joback method)
+C3H6OOH1-3(118)     2     420.255     6.025     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=545.79 K, Pc=36.25 bar (from Joback method)
+CHF2-CF2(716)       2     323.400     4.850     2.000     0.000     0.000    ! NIST_Fluorine
+C2HF4O2(2464)       2     406.622     5.632     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=528.08 K, Pc=42.94 bar (from Joback method)
+CF2(691)            2     108.000     3.977     0.000     0.000     0.000    ! NIST_Fluorine
+OO[C](F)F(1046)     2     386.937     5.198     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=502.52 K, Pc=51.98 bar (from Joback method)
+CHFO(695)           2     350.500     4.906     0.000     0.000     0.000    ! NIST_Fluorine
+CHFCF2(702)         2     251.500     4.442     1.400     0.000     0.000    ! NIST_Fluorine
+C3H5-A(97)          2     260.001     4.850     0.000     0.000     1.000    ! GRI-Mech
+C3H5O2(3303)        2     420.239     5.815     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=545.77 K, Pc=40.31 bar (from Joback method)
+C3H4-A(170)         2     330.322     4.785     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=428.99 K, Pc=56.87 bar (from Joback method)
+[CH]1COOC1(3536)    2     418.482     5.997     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=543.48 K, Pc=36.6 bar (from Joback method)
+C4H8-1(193)         2     357.002     5.176     0.000     0.000     1.000    ! GRI-Mech
+F[C]C(F)F(1113)     2     341.100     5.784     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C4H8-2(194)         2     359.053     5.289     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=466.30 K, Pc=45.78 bar (from Joback method)
+C2F2(707)           1     240.000     4.400     0.000     0.000     0.000    ! NIST_Fluorine
+C[C]CC(4597)        2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C1OO1(2723)         2     362.248     5.143     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=470.45 K, Pc=50.23 bar (from Joback method)
+[O]C[O](783)        2     436.691     5.898     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=567.13 K, Pc=40.16 bar (from Joback method)
+HOCHO(44)           2     481.800     3.626     1.700     0.000     1.000    ! NOx2018
+OCHO(42)            2     498.000     3.590     0.000     0.000     2.000    ! NOx2018
+C6H101-5(346)       2     385.401     5.648     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=500.52 K, Pc=40.36 bar (from Joback method)
+[CH2]CC(F)F(941)    2     331.544     4.911     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=430.58 K, Pc=52.82 bar (from Joback method)
+C3F4(5688)          2     399.300     5.949     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C3F4(5216)          2     357.208     4.889     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=463.91 K, Pc=57.65 bar (from Joback method)
+CH3O(35)            2     417.002     3.690     1.700     0.000     2.000    ! GRI-Mech
+CHFCF[Z](719)       2     251.500     4.442     1.400     0.000     0.000    ! NIST_Fluorine
+CF2CH(720)          2     251.500     4.442     1.400     0.000     0.000    ! NIST_Fluorine
+CHF3(690)           2     262.000     4.123     1.800     0.000     0.000    ! NIST_Fluorine
+C2HF(705)           1     225.000     4.250     1.000     0.000     0.000    ! NIST_Fluorine
+C3H4-P(172)         2     330.551     4.844     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=429.29 K, Pc=54.87 bar (from Joback method)
+C2HF(7121)          2     237.100     5.118     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C3H4(7636)          2     237.100     5.118     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+[CH2]C[CH]C(888)    2     348.415     5.415     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=452.49 K, Pc=41.41 bar (from Joback method)
+C3H4O2(842)         2     409.099     5.626     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=531.30 K, Pc=43.34 bar (from Joback method)
+C3H3(69)            2     252.000     4.760     0.000     0.000     1.000    ! GRI-Mech
+FC1(F)OO1(8853)     2     358.004     5.210     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=464.94 K, Pc=47.76 bar (from Joback method)
+C3H4F2(1337)        2     331.337     4.703     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=430.31 K, Pc=60.09 bar (from Joback method)
+C[C]C(F)F(7101)     2     341.100     5.784     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C3H4F2(2544)        2     341.564     4.768     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=443.59 K, Pc=59.45 bar (from Joback method)
+CH2(S)(33)          2     144.001     3.800     0.000     0.000     0.000    ! GRI-Mech
+C3H4F2(1086)        2     331.544     4.911     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=430.58 K, Pc=52.82 bar (from Joback method)
+CHF2-CH2(711)       2     323.400     4.798     2.300     0.000     0.000    ! NIST_Fluorine
+CH2CF2(704)         2     251.500     4.442     1.400     0.000     0.000    ! NIST_Fluorine
+C6H9(3752)          2     385.401     5.648     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=500.52 K, Pc=40.36 bar (from Joback method)
+C3H4O2(835)         2     472.903     6.337     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=614.16 K, Pc=35.05 bar (from Joback method)
+CF2O2(1187)         2     438.579     6.013     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=569.58 K, Pc=38.06 bar (from Joback method)
+C3H5O(133)          2     402.351     5.617     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=522.53 K, Pc=42.83 bar (from Joback method)
+CH3-CF2(712)        2     323.400     4.798     2.300     0.000     0.000    ! NIST_Fluorine
+O2(780)             1     223.367     4.347     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=290.09 K, Pc=51.31 bar (from Joback method)
+C2H3OCH2(135)       2     348.879     5.098     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=453.09 K, Pc=49.66 bar (from Joback method)
+C3H5O(13752)        2     371.145     5.437     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=482.01 K, Pc=43.57 bar (from Joback method)
+C2H3CHO(78)         2     377.211     5.142     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=489.88 K, Pc=52.36 bar (from Joback method)

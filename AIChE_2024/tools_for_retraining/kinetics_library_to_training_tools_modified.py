@@ -317,6 +317,61 @@ def process_reactions(database, libraries, families, compare_kinetics=True, show
     return master_dict, multiple_dict, lib_fam_rxn_dict
 
 
+
+def pick_out_unmatched_rxns(database, libraries, families):
+    """
+    Main function to recreate library reactions from families and display the results.
+    """
+    #for storing all the unmatched rxns
+    unmatched_rxns = []
+    
+    #start html
+    full=12
+    html=['<table style="width:100%;table-layout:fixed;"><tr></tr>']
+    
+    for library_name in libraries:
+        library = database.kinetics.libraries[library_name]
+        for index, entry in library.entries.items(): #goes through each rxn in the new library that we specified
+            lib_rxn = entry.item
+            lib_rxn.kinetics = entry.data
+            lib_rxn.index = index
+
+            # Let's make RMG try to generate this reaction from the families!
+            fam_rxn_list = database.kinetics.generate_reactions_from_families(
+                reactants=lib_rxn.reactants,
+                products=lib_rxn.products,
+                only_families=None if families == 'all' else families,
+                resonance=True,
+            )
+
+            
+            if len(fam_rxn_list) == 0:
+                unmatched_rxns.append(lib_rxn)
+    
+    html+='<th colspan="{1}">{0} unmatched reactions</th>'.format(len(unmatched_rxns), full)
+
+    for rxn in unmatched_rxns:
+        html += ['<td colspan="{0}"><img src="data:image/png;base64,{1}">'
+                 '</td>'.format(full, b64encode(rxn._repr_png_()).decode())]
+        html += ['</tr><tr>']
+        html += ['<th colspan="{0}">Reactant SMILES</th>'.format(half)]
+        html += ['<td colspan="{0}">{1}</td>'.format(half, ' + '.join(
+        [reactant.molecule[0].to_smiles() for reactant in rxn.reactants]))]
+        html += ['</tr><tr>']
+        html += ['<th colspan="{0}">Product SMILES</th>'.format(half)]
+        html += ['<td colspan="{0}">{1}</td>'.format(half, ' + '.join(
+        [product.molecule[0].to_smiles() for product in rxn.products]))]
+        html += ['</tr>']
+
+    #display the html showing the unmatched reactions
+    display(HTML(''.join(html)))
+                
+    #write to an external html file
+    with open("unmatched_rxns.html", "w") as outfile:
+        outfile.writelines(html)
+    return
+
+
 def analyze_per_family(family_name, lib_fam_rxn_dict, reaction_dict, database, compare_kinetics=True):
     """
     Main function to recreate library reactions from families and display the results.

@@ -11,6 +11,7 @@ rms/
 *.png
 *.dot
 *.html
+*.inp
 
 
 # Mac stuff

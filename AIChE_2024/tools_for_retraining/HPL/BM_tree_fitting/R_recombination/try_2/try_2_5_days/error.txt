@@ -1,0 +1,200 @@
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:C2H4F2
+ERROR:root:C2H4F2
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 C u0 p0 c0 {2,S} {3,S} {7,S} {8,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+8 H u0 p0 c0 {4,S}
+
+ERROR:root:Clearing Regularization Dimensions and Reattempting
+slurmstepd: error: *** JOB 42355594 ON c3040 CANCELLED AT 2024-05-14T11:15:23 DUE TO TIME LIMIT ***
+ERROR:root:split violation
+ERROR:root:parent
+ERROR:root:1 * [C,N,O,Br] u1 r0 {3,[S,D,T,B,Q]}
+2 * C          u1 {4,S}
+3   F          ux {1,[S,D,T,B,Q]}
+4   F          ux {2,S}
+
+ERROR:root:0
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:1
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:2
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:3
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:bonds:
+ERROR:root:((2, 0), [1, 2, 3, 1.5, 4], [[], []])
+ERROR:root:((3, 1), [1.0], [[], []])
+ERROR:root:CF + CF <=> C2F2
+ERROR:root:CF
+ERROR:root:CF
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p1 c0 {1,S}
+
+ERROR:root:CF
+ERROR:root:CF
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p1 c0 {1,S}
+
+ERROR:root:C2F2
+ERROR:root:C2F2
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p1 c0 {1,S} {4,S}
+4 C u0 p1 c0 {2,S} {3,S}
+
+ERROR:root:CH2F + CH2F <=> C2H4F2
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:C2H4F2
+ERROR:root:C2H4F2
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 C u0 p0 c0 {2,S} {3,S} {7,S} {8,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+8 H u0 p0 c0 {4,S}
+
+ERROR:root:Clearing Regularization Dimensions and Reattempting
+ERROR:root:split violation
+ERROR:root:parent
+ERROR:root:1 * [C,N,O,Br] u1 r0 {3,[S,D,T,B,Q]}
+2 * C          u1 {4,S}
+3   F          ux {1,[S,D,T,B,Q]}
+4   F          ux {2,S}
+
+ERROR:root:0
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:1
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:2
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:3
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:bonds:
+ERROR:root:((2, 0), [1, 2, 3, 1.5, 4], [[], []])
+ERROR:root:((3, 1), [1.0], [[], []])
+ERROR:root:CF + CF <=> C2F2
+ERROR:root:CF
+ERROR:root:CF
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p1 c0 {1,S}
+
+ERROR:root:CF
+ERROR:root:CF
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p1 c0 {1,S}
+
+ERROR:root:C2F2
+ERROR:root:C2F2
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p1 c0 {1,S} {4,S}
+4 C u0 p1 c0 {2,S} {3,S}
+
+ERROR:root:CH2F + CH2F <=> C2H4F2
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:CH2F
+ERROR:root:CH2F
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p0 c0 {1,S} {3,S} {4,S}
+3   H u0 p0 c0 {2,S}
+4   H u0 p0 c0 {2,S}
+
+ERROR:root:C2H4F2
+ERROR:root:C2H4F2
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 C u0 p0 c0 {2,S} {3,S} {7,S} {8,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+8 H u0 p0 c0 {4,S}
+
+ERROR:root:Clearing Regularization Dimensions and Reattempting
+ERROR:root:split violation
+ERROR:root:parent
+ERROR:root:1 * [C,N,O,Br] u1 r0 {3,[S,D,T,B,Q]}
+2 * C          u1 {4,S}
+3   F          ux {1,[S,D,T,B,Q]}
+4   F          ux {2,S}
+
+ERROR:root:0
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:1
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:2
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:3
+ERROR:root:[[], []]
+ERROR:root:[[], []]
+ERROR:root:bonds:
+ERROR:root:((2, 0), [1, 2, 3, 1.5, 4], [[], []])
+ERROR:root:((3, 1), [1.0], [[], []])
+ERROR:root:CF + CF <=> C2F2
+ERROR:root:CF
+ERROR:root:CF
+multiplicity 2
+1   F u0 p3 c0 {2,S}
+2 * C u1 p1 c0 {1,S}
+

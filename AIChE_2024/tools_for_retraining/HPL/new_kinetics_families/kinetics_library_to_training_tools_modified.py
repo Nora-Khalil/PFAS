@@ -170,6 +170,7 @@ def process_reactions(database, libraries, families, compare_kinetics=True, show
                 forward = fam_rxn.is_forward
 
                 # Find the labeled atoms using family and reactants & products from fam_rxn
+                print(fam_rxn, fam_rxn.family)
                 database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn)
 
                 # Replace lib_rxn spcs with fam_rxn spcs to transfer atom labels
@@ -355,8 +356,10 @@ def pick_out_unmatched_rxns(database, libraries, families):
     html+='<th colspan="{1}">{0} unmatched reactions</th>'.format(len(unmatched_rxns), full)
 
     for rxn in unmatched_rxns:
-        html += ['<td colspan="{0}"><img src="data:image/png;base64,{1}">'
-                 '</td>'.format(full, b64encode(rxn._repr_png_()).decode())]
+        html += ['<tr><td>index: {2}</td><td colspan="{0}"><img src="data:image/png;base64,{1}" />'
+             '</td></tr>'.format(full, b64encode(matched_rxn._repr_png_()).decode(), matched_rxn.index)]
+        # html += ['<td colspan="{0}"><img src="data:image/png;base64,{1}">'
+        #          '</td>'.format(full, b64encode(rxn._repr_png_()).decode())]
         html += ['</tr><tr>']
         html += ['<th colspan="{0}">Reactant SMILES</th>'.format(half)]
         html += ['<td colspan="{0}">{1}</td>'.format(half, ' + '.join(
@@ -371,8 +374,8 @@ def pick_out_unmatched_rxns(database, libraries, families):
     display(HTML(''.join(html)))
                 
     #write to an external html file
-    #with open("unmatched_rxns.html", "w") as outfile:
-        #outfile.writelines(html)
+    # with open("unmatched_rxns.html", "w") as outfile:
+    #     outfile.writelines(html)
     return unmatched_rxns, matched_rxns
 
 
@@ -551,6 +554,7 @@ def manual_selection(master_dict, multiple_dict, database):
             forward = fam_rxn.is_forward
 
             # Find the labeled atoms using family and reactants & products from fam_rxn
+            print(fam_rxn)
             database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn)
 
             # Replace lib_rxn spcs with fam_rxn spcs to transfer atom labels

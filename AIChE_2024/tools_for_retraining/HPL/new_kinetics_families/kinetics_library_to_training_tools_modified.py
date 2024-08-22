@@ -131,21 +131,48 @@ def process_reactions(database, libraries, families, compare_kinetics=True, show
     for library_name in libraries:
         library = database.kinetics.libraries[library_name]
         reaction_dict = {}
-        for index, entry in library.entries.items(): #goes through each rxn in the new library that we specified
+        # lib_list = [(index, entry) for index, entry in library.entries.items()]
+        # for index, entry in [lib_list[0]]:#library.entries.items(): #goes through each rxn in the new library that we specified
+        for index, entry in library.entries.items(): 
             lib_rxn = entry.item
             lib_rxn.kinetics = entry.data
             lib_rxn.index = index
 
             # Let's make RMG try to generate this reaction from the families!
             print(lib_rxn.reactants, lib_rxn.products)
+            
+            # CO_flag = False
+            # for spec in lib_rxn.reactants + lib_rxn.products: 
+            #     if spec.smiles == '[C-]#[O+]' or spec.smiles=='O=C=O' or '[C-]=[O+]' in spec.smiles: 
+            #         CO_flag=True
+            # if CO_flag==True: 
+            #     fam_rxn_list = database.kinetics.generate_reactions_from_families(
+            #     reactants=lib_rxn.reactants,
+            #     products=lib_rxn.products,
+            #     only_families=None if families == 'all' else families,
+            #     #resonance=True,
+            #     resonance=False,
+            # )
+            # else: 
             fam_rxn_list = database.kinetics.generate_reactions_from_families(
-                reactants=lib_rxn.reactants,
-                products=lib_rxn.products,
-                only_families=None if families == 'all' else families,
-                resonance=True,
+            reactants=lib_rxn.reactants,
+            products=lib_rxn.products,
+            only_families=None if families == 'all' else families,
+            resonance=True,
+            #resonance=False,
             )
 
-            # Filter by aromatic resonance structures if requested
+
+            # fam_rxn_list = database.kinetics.generate_reactions_from_families(
+            #     reactants=lib_rxn.reactants,
+            #     products=lib_rxn.products,
+            #     only_families=None if families == 'all' else families,
+            #     #resonance=True,
+            #     resonance=False,
+            # )
+            # Filter by aromatic resonance structures if requested            
+            print(f'This is the family reaction list before filtering aromatics: {[x.family for x in fam_rxn_list]}')
+
             if filter_aromatic and len(fam_rxn_list) > 1:
                 selected_rxns = []
                 max_num_aromatic_reactants = 0
@@ -163,15 +190,25 @@ def process_reactions(database, libraries, families, compare_kinetics=True, show
                         continue
                 if selected_rxns:
                     fam_rxn_list = selected_rxns
+           
 
             if len(fam_rxn_list) == 1:
+                print('found a family')
                 fam_rxn = fam_rxn_list[0]
 
                 forward = fam_rxn.is_forward
 
                 # Find the labeled atoms using family and reactants & products from fam_rxn
                 print(fam_rxn, fam_rxn.family)
-                database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn)
+                
+                CO_flag = False
+                for spec in fam_rxn.reactants + fam_rxn.products: 
+                    if spec.smiles == '[C-]#[O+]' or spec.smiles=='O=C=O': 
+                        CO_flag=True
+                if CO_flag==True: 
+                    database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn, output_with_resonance=False) #added by NK
+                else: 
+                    database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn) #added by NK
 
                 # Replace lib_rxn spcs with fam_rxn spcs to transfer atom labels
                 if forward:
@@ -357,7 +394,7 @@ def pick_out_unmatched_rxns(database, libraries, families):
 
     for rxn in unmatched_rxns:
         html += ['<tr><td>index: {2}</td><td colspan="{0}"><img src="data:image/png;base64,{1}" />'
-             '</td></tr>'.format(full, b64encode(matched_rxn._repr_png_()).decode(), matched_rxn.index)]
+             '</td></tr>'.format(full, b64encode(rxn._repr_png_()).decode(), rxn.index)]
         # html += ['<td colspan="{0}"><img src="data:image/png;base64,{1}">'
         #          '</td>'.format(full, b64encode(rxn._repr_png_()).decode())]
         html += ['</tr><tr>']

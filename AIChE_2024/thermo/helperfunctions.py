@@ -118,61 +118,144 @@ def get_neighbors(atom, parent_node, group_atoms, n_degree_neighbor=1):
                             GroupAtom object as value
     """
     #let's look at the specifics of the atoms on the parent node
+    on_carbon_lp = False
+    on_carbon_c = False
+    on_fluorine_lp = False
+    on_fluorine_c = False
+    on_oxygen_lp = False
+    on_oxygen_c = False
+    on_sulfur_lp = False
+    on_sulfur_c = False
+
+
     for atm in parent_node.item.atoms:
-        print(atm.atomtype.label)
-        if atm.atomtype.label not in ["O2s", "S2s", "O4tc", "Cs"]:
-            if atm.lone_pairs==[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
-                lone_pair_flag = False #this flag will tell us NOT to make the child group more specific
-            else: 
-                lone_pair_flag = True #but if the parent group is specific, make the child group specific 
-            #let's check for charge 
-            if atm.charge==[]:  # if the parent node does not specify charge, then the child shouldn't have to
-                charge_flag = False #this flag will tell us NOT to make the child group more specific
-            else: 
-                charge_flag = True #but if the parent group is specific, make the child group specific
-    print(lone_pair_flag, charge_flag)
+        if atm.atomtype[0].label not in ["O2s", "S2s", "O4tc", "Cs"]:
+            if atm.is_carbon(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_carbon_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                   on_carbon_c = True
+            if atm.is_fluorine(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_fluorine_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_fluorine_c = True #but if the parent group is specific, make the child group specific
+            if atm.is_oxygen(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_oxygen_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_oxygen_c = True #but if the parent group is specific, make the child group specific
+            if atm.is_sulfur(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_sulfur_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_sulfur_c = True #but if the parent group is specific, make the child group specific
+
+    #save the flag values and pass them on
+    flags = [on_carbon_lp, 
+            on_carbon_c,
+            on_fluorine_lp,
+            on_fluorine_c,
+            on_oxygen_lp,
+            on_oxygen_c,
+            on_sulfur_lp,
+            on_sulfur_c]
     
+    print(f'In get_neighbers, flags based on parent node are: {flags}')
     if n_degree_neighbor == 1:
     
         for atm in atom.edges:
             if atm not in group_atoms:
+                print(atm.atomtype)
+                if atm.is_carbon(): 
+                    #let's only worry about the first two flags
+                    flags_to_look_at = [flags[0], flags[1]]
 
-                if lone_pair_flag==True and charge_flag == True: 
+                if atm.is_fluorine(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[2], flags[3]]
+
+                if atm.is_oxygen(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[4], flags[5]]
+
+                #hydrogens should never have lone pairs or charge in a molecule
+                if not atm.is_non_hydrogen():
+                    flags_to_look_at = [False, False]
+
+                if atm.is_sulfur(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[6], flags[7]]
+
+
+                if flags_to_look_at == [True, True]: #lp, charge both True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                                 radical_electrons=[atm.radical_electrons],
-                                                 lone_pairs=[atm.lone_pairs],
-                                                 charge=[atm.charge],
-                                                 label='*')
-                if lone_pair_flag==True and charge_flag==False: 
+                                                radical_electrons=[atm.radical_electrons],
+                                                lone_pairs=[atm.lone_pairs],
+                                                charge=[atm.charge],
+                                                label='*')
+                if flags_to_look_at == [True, False]: #only lp True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                                 radical_electrons=[atm.radical_electrons],
-                                                 lone_pairs=[atm.lone_pairs],
-                                                 label='*')
-                if lone_pair_flag==False and charge_flag==True: 
+                                                radical_electrons=[atm.radical_electrons],
+                                                lone_pairs=[atm.lone_pairs],
+                                                label='*')
+                if flags_to_look_at == [False, True]: #only charge on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                                 radical_electrons=[atm.radical_electrons],
-                                                 charge=[atm.charge],
-                                                 label='*')
-                if lone_pair_flag==False and charge_flag==False: 
+                                                radical_electrons=[atm.radical_electrons],
+                                                charge=[atm.charge],
+                                                label='*')
+                if flags_to_look_at == [False, False]: #lp, charge both False
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                                 radical_electrons=[atm.radical_electrons],
-                                                 label='*')                    
-                    
+                                                radical_electrons=[atm.radical_electrons],
+                                                label='*')                    
+
                 
     else:
         
         for atm in atom.edges:
             if atm not in group_atoms:
-                if lone_pair_flag: 
+                if atm.is_carbon(): 
+                    #let's only worry about the first two flags
+                    flags_to_look_at = [flags[0], flags[1]]
+
+                if atm.is_fluorine(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[2], flags[3]]
+
+                if atm.is_oxygen(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[4], flags[5]]
+
+                #hydrogens should never have lone pairs or charge in a molecule
+                if not atm.is_non_hydrogen():
+                    flags_to_look_at = [False, False]
+
+                if atm.is_sulfur(): 
+                    #let's only worry about the last two flags
+                    flags_to_look_at = [flags[6], flags[7]]
+
+
+                if flags_to_look_at == [True, True]: #lp, charge both True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                             radical_electrons=[atm.radical_electrons],
-                                             lone_pairs=[atm.lone_pairs],
-                                             label='')
-                else: 
+                                                radical_electrons=[atm.radical_electrons],
+                                                lone_pairs=[atm.lone_pairs],
+                                                charge=[atm.charge],
+                                                label='*')
+                if flags_to_look_at == [True, False]: #only lp True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
-                                             radical_electrons=[atm.radical_electrons],
-                                             label='')
-            get_neighbors(atm, group_atoms, n_degree_neighbor-1)
+                                                radical_electrons=[atm.radical_electrons],
+                                                lone_pairs=[atm.lone_pairs],
+                                                label='*')
+                if flags_to_look_at == [False, True]: #only charge on carbon
+                    group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
+                                                radical_electrons=[atm.radical_electrons],
+                                                charge=[atm.charge],
+                                                label='*')
+                if flags_to_look_at == [False, False]: #lp, charge both False
+                    group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
+                                                radical_electrons=[atm.radical_electrons],
+                                                label='*')      
+            get_neighbors(atm, parent_node, group_atoms, n_degree_neighbor-1)
                 
     return group_atoms
         
@@ -224,38 +307,111 @@ def make_group(atom, parent_node, n_degree_neighbor=1):
 
     group_atoms = {}
     bonds = []
-        
+    
+    print(f'This is the parent node\n{parent_node.item.to_adjacency_list()}')
     group_atoms = get_neighbors(atom, parent_node, group_atoms, n_degree_neighbor=n_degree_neighbor) #this is a dictionary
-    # print(group_atoms)
     
     #now let's look at each of the group atoms 
-    
+
+    #let's look at the specifics of the atoms on the parent node
+    on_carbon_lp = False
+    on_carbon_c = False
+    on_fluorine_lp = False
+    on_fluorine_c = False
+    on_oxygen_lp = False
+    on_oxygen_c = False 
+    on_sulfur_lp = False
+    on_sulfur_c = False 
+
+    for atm in parent_node.item.atoms:
+        if atm.atomtype[0].label not in ["O2s", "S2s", "O4tc", "Cs"]:
+            if atm.is_carbon(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_carbon_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                   on_carbon_c = True
+            if atm.is_fluorine(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_fluorine_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_fluorine_c = True #but if the parent group is specific, make the child group specific
+            if atm.is_oxygen(): 
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_oxygen_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_oxygen_c = True 
+            if atm.is_sulfur():
+                if atm.lone_pairs!=[]:  # if the parent node does not specify lone pairs, then the child shouldn't have to
+                    on_sulfur_lp = True
+                if atm.charge!=[]:  # if the parent node does not specify charge, then the child shouldn't have to
+                    on_sulfur_c = True                 
+
+    #save the flag values and pass them on
+    flags = [on_carbon_lp, 
+            on_carbon_c,
+            on_fluorine_lp,
+            on_fluorine_c,
+            on_oxygen_lp,
+            on_oxygen_c,
+            on_sulfur_lp,
+            on_sulfur_c] 
+
+    print(f'In make_groups, flags based on parent node are: {flags}')
 
     if atom.atomtype.label in ["O2s", "S2s", "O4tc", "Cs"]:
         group_atoms[atom] = GroupAtom(atomtype=[atom.atomtype],
                                      radical_electrons=[atom.radical_electrons],
                                      label='*')
     else:
-        if lone_pair_flag==True and charge_flag == True: 
+        print(atom.atomtype)
+        if atom.is_carbon(): 
+            print('1.')
+            #let's only worry about the first two flags
+            flags_to_look_at = [flags[0], flags[1]]
+
+        if atom.is_fluorine(): 
+            print('2.')
+            #let's only worry about the last two flags
+            flags_to_look_at = [flags[2], flags[3]]
+        
+        if atom.is_oxygen():
+            print('3.') 
+            #let's only worry about the last two flags
+            flags_to_look_at = [flags[4], flags[5]]
+
+        #hydrogens should never have lone pairs or charge in a molecule
+        if not atom.is_non_hydrogen():
+            print('4.')
+            flags_to_look_at = [False, False]
+
+        if atom.is_sulfur():
+            print('5.')
+            flags_to_look_at = [flags[6], flags[7]]
+
+        if flags_to_look_at == [True, True]: #lp, charge both True
+            print('1')
             group_atoms[atom] = GroupAtom(atomtype=[atom.atomtype],
-                                         radical_electrons=[atom.radical_electrons],
-                                         lone_pairs=[atom.lone_pairs],
-                                         charge=[atom.charge],
-                                         label='*')
-        if lone_pair_flag==True and charge_flag==False: 
+                                        radical_electrons=[atom.radical_electrons],
+                                        lone_pairs=[atom.lone_pairs],
+                                        charge=[atom.charge],
+                                        label='*')
+        if flags_to_look_at == [True, False]: #only lp True
+            print('2')
             group_atoms[atom] = GroupAtom(atomtype=[atom.atomtype],
-                                         radical_electrons=[atom.radical_electrons],
-                                         lone_pairs=[atom.lone_pairs],
-                                         label='*')
-        if lone_pair_flag==False and charge_flag==True: 
+                                        radical_electrons=[atom.radical_electrons],
+                                        lone_pairs=[atom.lone_pairs],
+                                        label='*')
+        if flags_to_look_at == [False, True]: #only charge
+            print('3')
             group_atoms[atom] = GroupAtom(atomtype=[atom.atomtype],
-                                         radical_electrons=[atom.radical_electrons],
-                                         charge=[atom.charge],
-                                         label='*')
-        if lone_pair_flag==False and charge_flag==False: 
+                                        radical_electrons=[atom.radical_electrons],
+                                        charge=[atom.charge],
+                                        label='*')
+        if flags_to_look_at == [False, False]: #lp, charge both False
+            print('4')
             group_atoms[atom] = GroupAtom(atomtype=[atom.atomtype],
-                                         radical_electrons=[atom.radical_electrons],
-                                         label='*')
+                                        radical_electrons=[atom.radical_electrons],
+                                        label='*')
 
     group = Group(atoms=list(group_atoms.values()))
     

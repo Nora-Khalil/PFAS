@@ -217,21 +217,21 @@ def get_neighbors(atom, parent_node, group_atoms, n_degree_neighbor=1):
                                                 radical_electrons=[atm.radical_electrons],
                                                 lone_pairs=[atm.lone_pairs],
                                                 charge=[atm.charge],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [True, False]: #only lp True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
                                                 lone_pairs=[atm.lone_pairs],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [False, True]: #only charge on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
                                                 charge=[atm.charge],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [False, False]: #lp, charge both False
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
-                                                label='*')                    
+                                                label='')                    
 
                 
     else:
@@ -268,21 +268,21 @@ def get_neighbors(atom, parent_node, group_atoms, n_degree_neighbor=1):
                                                 radical_electrons=[atm.radical_electrons],
                                                 lone_pairs=[atm.lone_pairs],
                                                 charge=[atm.charge],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [True, False]: #only lp True on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
                                                 lone_pairs=[atm.lone_pairs],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [False, True]: #only charge on carbon
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
                                                 charge=[atm.charge],
-                                                label='*')
+                                                label='')
                 if flags_to_look_at == [False, False]: #lp, charge both False
                     group_atoms[atm] = GroupAtom(atomtype=[atm.atomtype],
                                                 radical_electrons=[atm.radical_electrons],
-                                                label='*')   
+                                                label='')   
             assert  n_degree_neighbor<10
             get_neighbors(atm, parent_node, group_atoms, n_degree_neighbor-1)
                 

@@ -91,6 +91,31 @@ entry(
 
 entry(
     index = 5,
+    label = "C2s-F1sF1s",
+    group = 
+"""
+1 * C2s u0 p1 {2,S} {3,S}
+2   F1s u0 p3 {1,S}
+3   F1s u0 p3 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([38.8421,42.7102,46.1452,48.8863,52.1602,54.1136,56.2067],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-193.465,'kJ/mol','+|-',13.3847),
+        S298 = (240.709,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+F[C]F (CF2) from C1_C2_Fluorine
+F[C]F (CF2(s)) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 6,
     label = "CJ2_singlet-FC",
     group = 
 """
@@ -114,7 +139,7 @@ CHOF_G4 |         3
 )
 
 entry(
-    index = 6,
+    index = 7,
     label = "CJ2_singlet-FCs",
     group = 
 """
@@ -138,7 +163,54 @@ CHOF_G4 |         6
 )
 
 entry(
-    index = 7,
+    index = 8,
+    label = "C2s-CsF1s",
+    group = 
+"""
+1 * C2s u0 p1 {2,S} {3,S}
+2   Cs  u0 p0 {1,S}
+3   F1s u0 p3 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([49.3413,56.6756,62.5984,67.2584,73.7722,78.1618,84.0516],'J/(mol*K)','+|-',[1.06874,1.11719,1.04745,0.972593,0.843243,0.748798,1.4473]),
+        H298 = (-150.27,'kJ/mol','+|-',5.15896),
+        S298 = (199.329,'J/(mol*K)','+|-',2.93698),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C[C]F (CH3CF) from C1_C2_Fluorine
+F[C]CF (CH2FCF) from C1_C2_Fluorine
+F[C]C(F)F (CHF2CF) from C1_C2_Fluorine
+F[C]C(F)(F)F (CF3CF) from C1_C2_Fluorine
+F[C]C(F)(F)F (PF2alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)F (PF3alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)F (PF4alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkyl(s)) from NCSU_C2_C8_PFAS
+CC[C]F (CC[C]F) from CHOF_G4
+F[C]CF (F[C]CF) from CHOF_G4
+CC(F)(F)[C]F (CC(F)(F)[C]F) from CHOF_G4
+F[C]C(F)F (F[C]C(F)F) from CHOF_G4
+F[C]C(F)(F)F (F[C]C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 9,
     label = "CJ2_singlet-FCO",
     group = 
 """
@@ -163,7 +235,7 @@ CHOF_G4 |         3
 )
 
 entry(
-    index = 8,
+    index = 10,
     label = "CJ2_singlet-FO",
     group = 
 """
@@ -187,7 +259,31 @@ CHOF_G4 |         5
 )
 
 entry(
-    index = 9,
+    index = 11,
+    label = "C2s-F1sH",
+    group = 
+"""
+1 * C2s u0 p1 {2,S} {3,S}
+2   F1s u0 p3 {1,S}
+3   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([34.4541,36.5126,38.9404,41.3326,45.2054,48.153,52.543],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (148.298,'kJ/mol','+|-',18.9287),
+        S298 = (223.109,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[CH]F (CHF) from C1_C2_Fluorine
+""",
+)
+
+entry(
+    index = 12,
     label = "CJ2_singlet-Cl",
     group = 
 """
@@ -203,7 +299,7 @@ entry(
 )
 
 entry(
-    index = 10,
+    index = 13,
     label = "CJ2_singlet-ClCl",
     group = 
 """
@@ -227,7 +323,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 11,
+    index = 14,
     label = "CJ2_singlet-ClC",
     group = 
 """
@@ -251,7 +347,7 @@ CHOCl_G4 |         2
 )
 
 entry(
-    index = 12,
+    index = 15,
     label = "CJ2_singlet-ClCs",
     group = 
 """
@@ -275,7 +371,7 @@ CHOCl_G4 |         6
 )
 
 entry(
-    index = 13,
+    index = 16,
     label = "CJ2_singlet-ClCO",
     group = 
 """
@@ -293,7 +389,7 @@ entry(
 )
 
 entry(
-    index = 14,
+    index = 17,
     label = "CJ2_singlet-ClO",
     group = 
 """
@@ -317,7 +413,7 @@ CHOCl_G4 |         5
 )
 
 entry(
-    index = 15,
+    index = 18,
     label = "CJ2_singlet-Br",
     group = 
 """
@@ -333,7 +429,7 @@ entry(
 )
 
 entry(
-    index = 16,
+    index = 19,
     label = "CJ2_singlet-BrBr",
     group = 
 """
@@ -357,7 +453,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 17,
+    index = 20,
     label = "CJ2_singlet-BrC",
     group = 
 """
@@ -381,7 +477,7 @@ CHOBr_G4 |         2
 )
 
 entry(
-    index = 18,
+    index = 21,
     label = "CJ2_singlet-BrCs",
     group = 
 """
@@ -405,7 +501,7 @@ CHOBr_G4 |         4
 )
 
 entry(
-    index = 19,
+    index = 22,
     label = "CJ2_singlet-BrCO",
     group = 
 """
@@ -423,7 +519,7 @@ entry(
 )
 
 entry(
-    index = 20,
+    index = 23,
     label = "CJ2_singlet-BrO",
     group = 
 """
@@ -447,7 +543,7 @@ CHOBr_G4 |         5
 )
 
 entry(
-    index = 21,
+    index = 24,
     label = "CsJ2_singlet-HH",
     group = 
 """
@@ -457,22 +553,21 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([33.7962,34.8454,36.2424,37.8282,41.1232,44.2324,49.7829],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (429.885,'kJ/mol','+|-',18.9287),
+        S298 = (189.203,'J/(mol*K)','+|-',10.7761),
     ),
-    shortDesc = """Fitted to DFT_QCI_thermo library""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Fitted to RQCISD(T)/cc-PV(infinity)(Q)Z calculations of:
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
-Goldsmith, C. F.; Magoon, G. R.; Green, W. H., Database of Small Molecule Thermochemistry for Combustion.
-J. Phys. Chem. A 2012, 116, 9033-9057.
+[CH2] (CH2(S)) from C1_C3_hydrofluorocarbons_NIST
 """,
 )
 
 entry(
-    index = 22,
+    index = 25,
     label = "CsJ2_singlet-OsH",
     group = 
 """
@@ -497,7 +592,7 @@ J. Phys. Chem. A 2012, 116, 9033-9057.
 )
 
 entry(
-    index = 23,
+    index = 26,
     label = "CdJ2_singlet-Od",
     group = 
 """
@@ -518,7 +613,7 @@ entry(
 )
 
 entry(
-    index = 24,
+    index = 27,
     label = "CdJ2_singlet-Sd",
     group = 
 """
@@ -539,7 +634,7 @@ entry(
 )
 
 entry(
-    index = 25,
+    index = 28,
     label = "CdJ2_singlet-(Cdd-Od)",
     group = 
 """
@@ -564,7 +659,7 @@ J. Phys. Chem. A 2012, 116, 9033-9057.
 )
 
 entry(
-    index = 26,
+    index = 29,
     label = "CsJ2_singlet-CH",
     group = 
 """
@@ -581,7 +676,7 @@ entry(
 )
 
 entry(
-    index = 27,
+    index = 30,
     label = "CsJ2_singlet-CsH",
     group = 
 """
@@ -591,22 +686,23 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([42.5516,49.0934,54.73,59.3009,65.7671,70.8092,78.9203],'J/(mol*K)','+|-',[2.23302,2.33426,2.18854,2.03213,1.76187,1.56454,3.02398]),
+        H298 = (120.111,'kJ/mol','+|-',10.7791),
+        S298 = (180.542,'J/(mol*K)','+|-',6.13651),
     ),
-    shortDesc = """Fitted to DFT_QCI_thermo library""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Fitted to RQCISD(T)/cc-PV(infinity)(Q)Z calculations of:
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
-Goldsmith, C. F.; Magoon, G. R.; Green, W. H., Database of Small Molecule Thermochemistry for Combustion.
-J. Phys. Chem. A 2012, 116, 9033-9057.
+[CH]CF (CH2FCH) from C1_C2_Fluorine
+[CH]C(F)F (CHF2CH(S)) from C1_C2_Fluorine
+[CH]C(F)(F)F (CF3CH(S)) from C1_C2_Fluorine
 """,
 )
 
 entry(
-    index = 28,
+    index = 31,
     label = "CsJ2_singlet-CtH",
     group = 
 """
@@ -631,7 +727,7 @@ J. Phys. Chem. A 2012, 116, 9033-9057.
 )
 
 entry(
-    index = 29,
+    index = 32,
     label = "CdJ2_singlet-Cd",
     group = 
 """
@@ -647,7 +743,7 @@ entry(
 )
 
 entry(
-    index = 30,
+    index = 33,
     label = "CdJ2_singlet-Cds",
     group = 
 """
@@ -671,7 +767,7 @@ J. Phys. Chem. A 2012, 116, 9033-9057.
 )
 
 entry(
-    index = 31,
+    index = 34,
     label = "CdJ2_singlet-(Cdd-Cds)",
     group = 
 """
@@ -696,7 +792,7 @@ J. Phys. Chem. A 2012, 116, 9033-9057.
 )
 
 entry(
-    index = 32,
+    index = 35,
     label = "CsJ2_singlet-(Cds-Cds-Cds-C)C",
     group = 
 """
@@ -716,7 +812,7 @@ entry(
 )
 
 entry(
-    index = 33,
+    index = 36,
     label = "CsJ2_singlet-(Cds-Cds-Cds-Cds)Cs_5_ring",
     group = 
 """
@@ -744,7 +840,7 @@ Fitted to RQCISD(T)/cc-PV(infinity)(Q)Z calculations of:
 )
 
 entry(
-    index = 34,
+    index = 37,
     label = "CsJ2_singlet-(Cds-Cds-Cds-Cds)Cs_6_ring",
     group = 
 """
@@ -772,7 +868,7 @@ Fitted to RQCISD(T)/cc-PV(infinity)(Q)Z calculations of:
 )
 
 entry(
-    index = 35,
+    index = 38,
     label = "CtJ2_singlet-N5tc",
     group = 
 """
@@ -795,7 +891,7 @@ thermo_DFT_CCSDTF12_BAC |         2
 )
 
 entry(
-    index = 36,
+    index = 39,
     label = "CsJ2_singlet-N5tc",
     group = 
 """
@@ -818,7 +914,31 @@ primaryNS |         1
 )
 
 entry(
-    index = 37,
+    index = 40,
+    label = "C2tc-O4tc",
+    group = 
+"""
+1   O4tc u0 {2,T}
+2 * C2tc u0 p1 {1,T}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.5715,14.6874,14.9054,15.2075,15.9469,16.5814,17.5858],'J/(mol*K)','+|-',[1.3864,1.44925,1.35878,1.26167,1.09387,0.971358,1.87747]),
+        H298 = (-55.267,'kJ/mol','+|-',6.69233),
+        S298 = (98.8209,'J/(mol*K)','+|-',3.80991),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[C-]#[O+] (CO) from C1_C3_hydrofluorocarbons_NIST
+[C-]#[O+] (CO) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 41,
     label = "Cbf",
     group = 
 """
@@ -833,7 +953,7 @@ entry(
 )
 
 entry(
-    index = 38,
+    index = 42,
     label = "Cbf-CbCbCbf",
     group = 
 """
@@ -856,7 +976,7 @@ entry(
 )
 
 entry(
-    index = 39,
+    index = 43,
     label = "Cbf-CbCbfCbf",
     group = 
 """
@@ -879,7 +999,7 @@ entry(
 )
 
 entry(
-    index = 40,
+    index = 44,
     label = "Cbf-CbfCbfCbf",
     group = 
 """
@@ -917,7 +1037,7 @@ Examples from the original source do not include Benzo[c]phenanthrene.
 )
 
 entry(
-    index = 41,
+    index = 45,
     label = "Cb",
     group = 
 """
@@ -932,7 +1052,7 @@ entry(
 )
 
 entry(
-    index = 42,
+    index = 46,
     label = "Cb-H",
     group = 
 """
@@ -953,7 +1073,7 @@ entry(
 )
 
 entry(
-    index = 43,
+    index = 47,
     label = "Cb-O2s",
     group = 
 """
@@ -974,7 +1094,7 @@ entry(
 )
 
 entry(
-    index = 44,
+    index = 48,
     label = "Cb-S",
     group = 
 """
@@ -995,7 +1115,7 @@ entry(
 )
 
 entry(
-    index = 45,
+    index = 49,
     label = "Cb-C",
     group = 
 """
@@ -1011,7 +1131,7 @@ entry(
 )
 
 entry(
-    index = 46,
+    index = 50,
     label = "Cb-Cs",
     group = 
 """
@@ -1032,7 +1152,7 @@ entry(
 )
 
 entry(
-    index = 47,
+    index = 51,
     label = "Cb-Cds",
     group = 
 """
@@ -1048,7 +1168,7 @@ entry(
 )
 
 entry(
-    index = 48,
+    index = 52,
     label = "Cb-(Cds-O2d)",
     group = 
 """
@@ -1070,7 +1190,7 @@ entry(
 )
 
 entry(
-    index = 49,
+    index = 53,
     label = "Cb-(Cds-Cd)",
     group = 
 """
@@ -1087,7 +1207,7 @@ entry(
 )
 
 entry(
-    index = 50,
+    index = 54,
     label = "Cb-(Cds-Cds)",
     group = 
 """
@@ -1109,7 +1229,7 @@ entry(
 )
 
 entry(
-    index = 51,
+    index = 55,
     label = "Cb-(Cds-Cdd)",
     group = 
 """
@@ -1126,7 +1246,7 @@ entry(
 )
 
 entry(
-    index = 52,
+    index = 56,
     label = "Cb-(Cds-Cdd-O2d)",
     group = 
 """
@@ -1144,7 +1264,7 @@ entry(
 )
 
 entry(
-    index = 53,
+    index = 57,
     label = "Cb-(Cds-Cdd-S2d)",
     group = 
 """
@@ -1162,7 +1282,7 @@ entry(
 )
 
 entry(
-    index = 54,
+    index = 58,
     label = "Cb-(Cds-Cdd-Cd)",
     group = 
 """
@@ -1180,7 +1300,7 @@ entry(
 )
 
 entry(
-    index = 55,
+    index = 59,
     label = "Cb-Ct",
     group = 
 """
@@ -1201,7 +1321,7 @@ entry(
 )
 
 entry(
-    index = 56,
+    index = 60,
     label = "Cb-(CtN3t)",
     group = 
 """
@@ -1223,7 +1343,7 @@ entry(
 )
 
 entry(
-    index = 57,
+    index = 61,
     label = "Cb-Cb",
     group = 
 """
@@ -1244,7 +1364,7 @@ entry(
 )
 
 entry(
-    index = 58,
+    index = 62,
     label = "Cb-F",
     group = 
 """
@@ -1265,7 +1385,7 @@ Derived from C6H5F in halogens thermo library
 )
 
 entry(
-    index = 59,
+    index = 63,
     label = "Cb-Cl",
     group = 
 """
@@ -1286,7 +1406,7 @@ Derived from C6H5Cl in halogens thermo library
 )
 
 entry(
-    index = 60,
+    index = 64,
     label = "Cb-Br",
     group = 
 """
@@ -1307,7 +1427,7 @@ Derived from C6H5Br in halogens thermo library
 )
 
 entry(
-    index = 61,
+    index = 65,
     label = "Cb-I",
     group = 
 """
@@ -1329,7 +1449,7 @@ Cpdata at 1500K was not in the book, Cpdata at 1500K = Cpdata at 1000K + 0.2
 )
 
 entry(
-    index = 62,
+    index = 66,
     label = "Cb-N3s",
     group = 
 """
@@ -1350,7 +1470,7 @@ entry(
 )
 
 entry(
-    index = 63,
+    index = 67,
     label = "Ct",
     group = 
 """
@@ -1365,7 +1485,7 @@ entry(
 )
 
 entry(
-    index = 64,
+    index = 68,
     label = "CtBrC",
     group = 
 """
@@ -1391,7 +1511,7 @@ CHOClBr_G4 |         2
 )
 
 entry(
-    index = 65,
+    index = 69,
     label = "CtCCl",
     group = 
 """
@@ -1417,7 +1537,7 @@ CHOClBr_G4 |         32
 )
 
 entry(
-    index = 66,
+    index = 70,
     label = "CtCF",
     group = 
 """
@@ -1444,7 +1564,73 @@ CHOFBr_G4   |         51
 )
 
 entry(
-    index = 67,
+    index = 71,
+    label = "Ct-CtF1s",
+    group = 
+"""
+1 * Ct  u0 {2,T} {3,S}
+2   Ct  u0 {1,T}
+3   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([29.7797,32.1125,33.8183,34.781,36.7782,38.2343,40.2409],'J/(mol*K)','+|-',[0.649326,0.678764,0.636391,0.59091,0.512322,0.454941,0.879323]),
+        H298 = (-0.658462,'kJ/mol','+|-',3.13439),
+        S298 = (126.487,'J/(mol*K)','+|-',1.78439),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C#CF (HCCF) from C1_C2_Fluorine
+FC#CF (FCCF) from C1_C2_Fluorine
+FC#CC(F)(F)F (CFCCF3) from C1_C3_hydrofluorocarbons_NIST
+C#CF (C2HF) from C1_C3_hydrofluorocarbons_NIST
+FC#CF (C2F2) from C1_C3_hydrofluorocarbons_NIST
+OC#CF (OC#CF) from CHOF_G4
+FC#CC(F)=CF (FC#CC(F)DCF) from CHOF_G4
+FC#CF (FC#CF) from CHOF_G4
+FC#COC(F)(F)F (FC#COC(F)(F)F) from CHOF_G4
+FC#CC(F)CF (FC#CC(F)CF) from CHOF_G4
+FC#CC(F)(F)OF (FC#CC(F)(F)OF) from CHOF_G4
+C#CF (C#CF) from CHOF_G4
+FC#CCC(F)(F)F (FC#CCC(F)(F)F) from CHOF_G4
+FC#CCF (FC#CCF) from CHOF_G4
+FC#CC(F)(F)CF (FC#CC(F)(F)CF) from CHOF_G4
+FC#COCF (FC#COCF) from CHOF_G4
+FC#CC(F)(F)C(F)F (FC#CC(F)(F)C(F)F) from CHOF_G4
+FC#CC(F)(F)F (FC#CC(F)(F)F) from CHOF_G4
+FC#CC(F)C(F)(F)F (FC#CC(F)C(F)(F)F) from CHOF_G4
+FC#CCCF (FC#CCCF) from CHOF_G4
+FC#CC(F)C(F)F (FC#CC(F)C(F)F) from CHOF_G4
+OCC#CF (OCC#CF) from CHOF_G4
+CC(F)(F)C#CF (CC(F)(F)C#CF) from CHOF_G4
+FC#CC(F)=C(F)F (FC#CC(F)DC(F)F) from CHOF_G4
+FC#CCC(F)F (FC#CCC(F)F) from CHOF_G4
+FC#CC(F)(F)C(F)(F)F (FC#CC(F)(F)C(F)(F)F) from CHOF_G4
+FC#COC(F)F (FC#COC(F)F) from CHOF_G4
+FC#CC(F)F (FC#CC(F)F) from CHOF_G4
+OC(F)C#CF (OC(F)C#CF) from CHOF_G4
+FC#CC=C(F)F (FC#CCDC(F)F) from CHOF_G4
+OC(F)(F)C#CF (OC(F)(F)C#CF) from CHOF_G4
+FC#CC=CF (FC#CCDCF) from CHOF_G4
+OC(Cl)(Cl)C#CF (OC(Cl)(Cl)C#CF) from CHOFCl_G4
+FC#CCl (FC#CCl) from CHOFCl_G4
+OC(F)(Cl)C#CF (OC(F)(Cl)C#CF) from CHOFCl_G4
+OC(Cl)C#CF (OC(Cl)C#CF) from CHOFCl_G4
+OC(Cl)(Br)C#CF (OC(Cl)(Br)C#CF) from CHOFClBr_G4
+FC#CC(F)(F)CBr (FC#CC(F)(F)CBr) from CHOFBr_G4
+FC#CBr (FC#CBr) from CHOFBr_G4
+OC(Br)C#CF (OC(Br)C#CF) from CHOFBr_G4
+OC(F)(Br)C#CF (OC(F)(Br)C#CF) from CHOFBr_G4
+FC#CC(F)(F)OBr (FC#CC(F)(F)OBr) from CHOFBr_G4
+OC(Br)(Br)C#CF (OC(Br)(Br)C#CF) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 72,
     label = "Ct-CtH",
     group = 
 """
@@ -1454,19 +1640,52 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([21.5955,24.8315,27.1266,28.3696,31.2548,33.5375,37.2251],'J/(mol*K)','+|-',[0.797631,0.833793,0.781742,0.725873,0.629336,0.558849,1.08016]),
+        H298 = (111.629,'kJ/mol','+|-',3.85028),
+        S298 = (103.375,'J/(mol*K)','+|-',2.19195),
     ),
-    shortDesc = """Ct-H STEIN and FAHR; J. PHYS. CHEM. 1985, 89, 17, 3714""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C#CF (HCCF) from C1_C2_Fluorine
+C#C (C2H2) from C1_C3_hydrofluorocarbons_NIST
+C#CO (HCCOH) from C1_C3_hydrofluorocarbons_NIST
+C#CC(F)(F)F (CF3CCH) from C1_C3_hydrofluorocarbons_NIST
+C#CF (C2HF) from C1_C3_hydrofluorocarbons_NIST
+C#CC(C)(F)F (C#CC(C)(F)F) from CHOF_G4
+C#COC(F)F (C#COC(F)F) from CHOF_G4
+C#CCC(F)F (C#CCC(F)F) from CHOF_G4
+C#CC(F)(F)CF (C#CC(F)(F)CF) from CHOF_G4
+C#CC(O)(F)F (C#CC(O)(F)F) from CHOF_G4
+C#CCC(F)(F)F (C#CCC(F)(F)F) from CHOF_G4
+C#CC(F)=CF (C#CC(F)DCF) from CHOF_G4
+C#CC(F)(F)OF (C#CC(F)(F)OF) from CHOF_G4
+C#CF (C#CF) from CHOF_G4
+C#COC(F)(F)F (C#COC(F)(F)F) from CHOF_G4
+C#CC(F)F (C#CC(F)F) from CHOF_G4
+C#CC(F)C(F)(F)F (C#CC(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)C(F)F (C#CC(F)(F)C(F)F) from CHOF_G4
+C#CCF (C#CCF) from CHOF_G4
+C#CC(F)C(F)F (C#CC(F)C(F)F) from CHOF_G4
+C#CC=C(F)F (C#CCDC(F)F) from CHOF_G4
+C#CC(F)(F)C(F)(F)F (C#CC(F)(F)C(F)(F)F) from CHOF_G4
+C#CC=CF (C#CCDCF) from CHOF_G4
+C#CC(F)(F)F (C#CC(F)(F)F) from CHOF_G4
+C#CC(F)=C(F)F (C#CC(F)DC(F)F) from CHOF_G4
+C#CC(F)(F)OCl (C#CC(F)(F)OCl) from CHOFCl_G4
+C#CC(F)(F)CCl (C#CC(F)(F)CCl) from CHOFCl_G4
+C#CC(F)(F)C(Cl)Br (C#CC(F)(F)C(Cl)Br) from CHOFClBr_G4
+C#CC(F)(F)C(F)Br (C#CC(F)(F)C(F)Br) from CHOFBr_G4
+C#CC(F)(F)CBr (C#CC(F)(F)CBr) from CHOFBr_G4
+C#CC(F)(F)OBr (C#CC(F)(F)OBr) from CHOFBr_G4
+C#CC(F)(F)C(Br)Br (C#CC(F)(F)C(Br)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 68,
+    index = 73,
     label = "Ct-StH",
     group = 
 """
@@ -1488,7 +1707,7 @@ entry(
 )
 
 entry(
-    index = 69,
+    index = 74,
     label = "Ct-CtOs",
     group = 
 """
@@ -1498,19 +1717,35 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([12.8086,15.0047,17.0352,18.445,20.0993,21.2122,22.5305],'J/(mol*K)','+|-',[1.92069,2.00777,1.88243,1.7479,1.51544,1.3457,2.60102]),
+        H298 = (154.518,'kJ/mol','+|-',9.27145),
+        S298 = (35.1583,'J/(mol*K)','+|-',5.2782),
     ),
-    shortDesc = """Ct-O MELIUS / hc#coh !!!WARNING! Cp1500 value taken as Cp1000""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C#CO (HCCOH) from C1_C3_hydrofluorocarbons_NIST
+OC#CF (OC#CF) from CHOF_G4
+FOC#CC(F)F (FOC#CC(F)F) from CHOF_G4
+C#COC(F)F (C#COC(F)F) from CHOF_G4
+FC#COC(F)(F)F (FC#COC(F)(F)F) from CHOF_G4
+FC#COCF (FC#COCF) from CHOF_G4
+C#COC(F)(F)F (C#COC(F)(F)F) from CHOF_G4
+FOC#CC(F)(F)F (FOC#CC(F)(F)F) from CHOF_G4
+OC#CC(F)(F)F (OC#CC(F)(F)F) from CHOF_G4
+FC#COC(F)F (FC#COC(F)F) from CHOF_G4
+OC#CCF (OC#CCF) from CHOF_G4
+OC#CC(F)F (OC#CC(F)F) from CHOF_G4
+FC(F)C#COCl (FC(F)C#COCl) from CHOFCl_G4
+FC(F)C#COBr (FC(F)C#COBr) from CHOFBr_G4
+FC(F)(F)C#COBr (FC(F)(F)C#COBr) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 70,
+    index = 75,
     label = "Ct-CtS",
     group = 
 """
@@ -1527,7 +1762,7 @@ entry(
 )
 
 entry(
-    index = 71,
+    index = 76,
     label = "Ct-CtS2",
     group = 
 """
@@ -1549,7 +1784,7 @@ entry(
 )
 
 entry(
-    index = 72,
+    index = 77,
     label = "Ct-CtS4",
     group = 
 """
@@ -1571,7 +1806,7 @@ entry(
 )
 
 entry(
-    index = 73,
+    index = 78,
     label = "Ct-CtS6",
     group = 
 """
@@ -1593,7 +1828,7 @@ entry(
 )
 
 entry(
-    index = 74,
+    index = 79,
     label = "Ct-CtC",
     group = 
 """
@@ -1610,7 +1845,7 @@ entry(
 )
 
 entry(
-    index = 75,
+    index = 80,
     label = "Ct-CtCs",
     group = 
 """
@@ -1620,19 +1855,89 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([12.4204,13.6656,14.5933,15.8995,17.9217,19.3904,22.1182],'J/(mol*K)','+|-',[0.910729,0.952018,0.892587,0.828796,0.71857,0.638089,1.23332]),
+        H298 = (125.137,'kJ/mol','+|-',4.39621),
+        S298 = (33.3355,'J/(mol*K)','+|-',2.50275),
     ),
-    shortDesc = """Ct-Cs STEIN and FAHR; J. PHYS. CHEM. 1985, 89, 17, 3714""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C#CC(F)(F)F (CF3CCH) from C1_C3_hydrofluorocarbons_NIST
+FC#CC(F)(F)F (CFCCF3) from C1_C3_hydrofluorocarbons_NIST
+FCC#CC(F)F (FCC#CC(F)F) from CHOF_G4
+FOC#CC(F)F (FOC#CC(F)F) from CHOF_G4
+C#CC(C)(F)F (C#CC(C)(F)F) from CHOF_G4
+FCC#CCF (FCC#CCF) from CHOF_G4
+FC(F)C#CC(F)(F)F (FC(F)C#CC(F)(F)F) from CHOF_G4
+C#CCC(F)F (C#CCC(F)F) from CHOF_G4
+C#CC(F)(F)CF (C#CC(F)(F)CF) from CHOF_G4
+C#CC(O)(F)F (C#CC(O)(F)F) from CHOF_G4
+C#CCC(F)(F)F (C#CCC(F)(F)F) from CHOF_G4
+FC#CC(F)CF (FC#CC(F)CF) from CHOF_G4
+C#CC(F)(F)OF (C#CC(F)(F)OF) from CHOF_G4
+FC#CC(F)(F)OF (FC#CC(F)(F)OF) from CHOF_G4
+FC#CCC(F)(F)F (FC#CCC(F)(F)F) from CHOF_G4
+FC#CCF (FC#CCF) from CHOF_G4
+FC#CC(F)(F)CF (FC#CC(F)(F)CF) from CHOF_G4
+FC#CC(F)(F)C(F)F (FC#CC(F)(F)C(F)F) from CHOF_G4
+C#CC(F)F (C#CC(F)F) from CHOF_G4
+C#CC(F)C(F)(F)F (C#CC(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)C(F)F (C#CC(F)(F)C(F)F) from CHOF_G4
+FC#CC(F)(F)F (FC#CC(F)(F)F) from CHOF_G4
+FOC#CC(F)(F)F (FOC#CC(F)(F)F) from CHOF_G4
+FC#CC(F)C(F)(F)F (FC#CC(F)C(F)(F)F) from CHOF_G4
+FC#CCCF (FC#CCCF) from CHOF_G4
+FC#CC(F)C(F)F (FC#CC(F)C(F)F) from CHOF_G4
+C#CCF (C#CCF) from CHOF_G4
+OCC#CF (OCC#CF) from CHOF_G4
+CC(F)(F)C#CF (CC(F)(F)C#CF) from CHOF_G4
+C#CC(F)C(F)F (C#CC(F)C(F)F) from CHOF_G4
+OC#CC(F)(F)F (OC#CC(F)(F)F) from CHOF_G4
+FC#CCC(F)F (FC#CCC(F)F) from CHOF_G4
+FC#CC(F)(F)C(F)(F)F (FC#CC(F)(F)C(F)(F)F) from CHOF_G4
+FC#CC(F)F (FC#CC(F)F) from CHOF_G4
+OC(F)C#CF (OC(F)C#CF) from CHOF_G4
+OC#CCF (OC#CCF) from CHOF_G4
+OC#CC(F)F (OC#CC(F)F) from CHOF_G4
+FC(F)C#CC(F)F (FC(F)C#CC(F)F) from CHOF_G4
+FCC#CC(F)(F)F (FCC#CC(F)(F)F) from CHOF_G4
+CC#CC(F)(F)F (CC#CC(F)(F)F) from CHOF_G4
+C#CC(F)(F)C(F)(F)F (C#CC(F)(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)F (C#CC(F)(F)F) from CHOF_G4
+OC(F)(F)C#CF (OC(F)(F)C#CF) from CHOF_G4
+CC#CC(F)F (CC#CC(F)F) from CHOF_G4
+FC(F)(F)C#CC(F)(F)F (FC(F)(F)C#CC(F)(F)F) from CHOF_G4
+OC(Cl)(Cl)C#CF (OC(Cl)(Cl)C#CF) from CHOFCl_G4
+C#CC(F)(F)OCl (C#CC(F)(F)OCl) from CHOFCl_G4
+FC(F)C#COCl (FC(F)C#COCl) from CHOFCl_G4
+FC(F)C#CCCl (FC(F)C#CCCl) from CHOFCl_G4
+C#CC(F)(F)CCl (C#CC(F)(F)CCl) from CHOFCl_G4
+OC(F)(Cl)C#CF (OC(F)(Cl)C#CF) from CHOFCl_G4
+OC(Cl)C#CF (OC(Cl)C#CF) from CHOFCl_G4
+OC(Cl)(Br)C#CF (OC(Cl)(Br)C#CF) from CHOFClBr_G4
+C#CC(F)(F)C(Cl)Br (C#CC(F)(F)C(Cl)Br) from CHOFClBr_G4
+FC#CC(F)(F)CBr (FC#CC(F)(F)CBr) from CHOFBr_G4
+FC(F)(F)C#CCBr (FC(F)(F)C#CCBr) from CHOFBr_G4
+C#CC(F)(F)C(F)Br (C#CC(F)(F)C(F)Br) from CHOFBr_G4
+C#CC(F)(F)CBr (C#CC(F)(F)CBr) from CHOFBr_G4
+FC(F)C#CCBr (FC(F)C#CCBr) from CHOFBr_G4
+OC(Br)C#CF (OC(Br)C#CF) from CHOFBr_G4
+FC(F)C#COBr (FC(F)C#COBr) from CHOFBr_G4
+FC(F)C#CC(F)Br (FC(F)C#CC(F)Br) from CHOFBr_G4
+C#CC(F)(F)OBr (C#CC(F)(F)OBr) from CHOFBr_G4
+C#CC(F)(F)C(Br)Br (C#CC(F)(F)C(Br)Br) from CHOFBr_G4
+OC(F)(Br)C#CF (OC(F)(Br)C#CF) from CHOFBr_G4
+FC#CC(F)(F)OBr (FC#CC(F)(F)OBr) from CHOFBr_G4
+FC(F)(F)C#COBr (FC(F)(F)C#COBr) from CHOFBr_G4
+FC(F)C#CC(Br)Br (FC(F)C#CC(Br)Br) from CHOFBr_G4
+OC(Br)(Br)C#CF (OC(Br)(Br)C#CF) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 76,
+    index = 81,
     label = "Ct-CtCds",
     group = 
 """
@@ -1649,7 +1954,7 @@ entry(
 )
 
 entry(
-    index = 77,
+    index = 82,
     label = "Ct-Ct(Cds-O2d)",
     group = 
 """
@@ -1667,7 +1972,7 @@ entry(
 )
 
 entry(
-    index = 78,
+    index = 83,
     label = "Ct-Ct(Cds-Cd)",
     group = 
 """
@@ -1685,7 +1990,7 @@ entry(
 )
 
 entry(
-    index = 79,
+    index = 84,
     label = "Ct-Ct(Cds-Cds)",
     group = 
 """
@@ -1708,7 +2013,7 @@ entry(
 )
 
 entry(
-    index = 80,
+    index = 85,
     label = "Ct-Ct(Cds-Cdd)",
     group = 
 """
@@ -1726,7 +2031,7 @@ entry(
 )
 
 entry(
-    index = 81,
+    index = 86,
     label = "Ct-Ct(Cds-Cdd-O2d)",
     group = 
 """
@@ -1745,7 +2050,7 @@ entry(
 )
 
 entry(
-    index = 82,
+    index = 87,
     label = "Ct-Ct(Cds-Cdd-S2d)",
     group = 
 """
@@ -1764,7 +2069,7 @@ entry(
 )
 
 entry(
-    index = 83,
+    index = 88,
     label = "Ct-Ct(Cds-Cdd-Cd)",
     group = 
 """
@@ -1783,7 +2088,7 @@ entry(
 )
 
 entry(
-    index = 84,
+    index = 89,
     label = "Ct-CtCt",
     group = 
 """
@@ -1805,7 +2110,7 @@ entry(
 )
 
 entry(
-    index = 85,
+    index = 90,
     label = "Ct-Ct(CtN3t)",
     group = 
 """
@@ -1831,7 +2136,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 86,
+    index = 91,
     label = "Ct-CtCb",
     group = 
 """
@@ -1853,7 +2158,7 @@ entry(
 )
 
 entry(
-    index = 87,
+    index = 92,
     label = "Ct-HN",
     group = 
 """
@@ -1870,7 +2175,7 @@ entry(
 )
 
 entry(
-    index = 88,
+    index = 93,
     label = "Ct-HN5tc",
     group = 
 """
@@ -1894,7 +2199,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 89,
+    index = 94,
     label = "Ct-NtN",
     group = 
 """
@@ -1911,7 +2216,7 @@ entry(
 )
 
 entry(
-    index = 90,
+    index = 95,
     label = "Ct-N5tcN",
     group = 
 """
@@ -1935,7 +2240,7 @@ CHON_G4 |         8
 )
 
 entry(
-    index = 91,
+    index = 96,
     label = "Ct-N3tN",
     group = 
 """
@@ -1959,7 +2264,7 @@ CHON_G4 |         14
 )
 
 entry(
-    index = 92,
+    index = 97,
     label = "Ct-N3tN3s",
     group = 
 """
@@ -1984,7 +2289,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 93,
+    index = 98,
     label = "Ct-NtO",
     group = 
 """
@@ -2001,7 +2306,7 @@ entry(
 )
 
 entry(
-    index = 94,
+    index = 99,
     label = "Ct-N3tO",
     group = 
 """
@@ -2018,7 +2323,7 @@ entry(
 )
 
 entry(
-    index = 95,
+    index = 100,
     label = "Ct-N3tOs",
     group = 
 """
@@ -2042,7 +2347,7 @@ CHON_G4 |         18
 )
 
 entry(
-    index = 96,
+    index = 101,
     label = "Ct-N5tcO",
     group = 
 """
@@ -2066,7 +2371,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 97,
+    index = 102,
     label = "Ct-NtC",
     group = 
 """
@@ -2083,7 +2388,7 @@ entry(
 )
 
 entry(
-    index = 98,
+    index = 103,
     label = "Ct-N5tcC",
     group = 
 """
@@ -2100,7 +2405,7 @@ entry(
 )
 
 entry(
-    index = 99,
+    index = 104,
     label = "Ct-(N5tcO)C",
     group = 
 """
@@ -2125,7 +2430,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 100,
+    index = 105,
     label = "Ct-N3tC",
     group = 
 """
@@ -2149,7 +2454,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 101,
+    index = 106,
     label = "Ct-N3tCb",
     group = 
 """
@@ -2171,7 +2476,7 @@ entry(
 )
 
 entry(
-    index = 102,
+    index = 107,
     label = "Ct-N3tCO",
     group = 
 """
@@ -2197,7 +2502,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 103,
+    index = 108,
     label = "Ct-N3tCt",
     group = 
 """
@@ -2221,7 +2526,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 104,
+    index = 109,
     label = "Ct-CtCt(N3t)",
     group = 
 """
@@ -2244,7 +2549,7 @@ entry(
 )
 
 entry(
-    index = 105,
+    index = 110,
     label = "Ct-N3tCd",
     group = 
 """
@@ -2270,7 +2575,7 @@ CHN      |         1
 )
 
 entry(
-    index = 106,
+    index = 111,
     label = "Ct-N3tCs",
     group = 
 """
@@ -2298,7 +2603,7 @@ CHON                    |         6
 )
 
 entry(
-    index = 107,
+    index = 112,
     label = "Ct-N3tCs(HHH)",
     group = 
 """
@@ -2323,7 +2628,7 @@ entry(
 )
 
 entry(
-    index = 108,
+    index = 113,
     label = "Ct-CtN",
     group = 
 """
@@ -2347,7 +2652,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 109,
+    index = 114,
     label = "Ct-CtN3sd",
     group = 
 """
@@ -2371,7 +2676,7 @@ CHON_G4 |         58
 )
 
 entry(
-    index = 110,
+    index = 115,
     label = "Ct-CtN5sdtc",
     group = 
 """
@@ -2395,7 +2700,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 111,
+    index = 116,
     label = "Ct-CtNOO",
     group = 
 """
@@ -2422,7 +2727,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 112,
+    index = 117,
     label = "Cdd",
     group = 
 """
@@ -2437,7 +2742,7 @@ entry(
 )
 
 entry(
-    index = 113,
+    index = 118,
     label = "Cdd-OdOd",
     group = 
 """
@@ -2447,19 +2752,22 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([37.2177,41.2776,44.6204,47.356,51.4301,54.3209,58.3107],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-393.514,'kJ/mol','+|-',13.3847),
+        S298 = (213.768,'J/(mol*K)','+|-',7.61983),
     ),
-    shortDesc = """CHEMKIN DATABASE: S(group) = S(CO2) + Rln(2)""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+O=C=O (CO2) from C1_C3_hydrofluorocarbons_NIST
+O=C=O (CO2) from NCSU_C2_C8_PFAS
 """,
 )
 
 entry(
-    index = 114,
+    index = 119,
     label = "Cdd-OdSd",
     group = 
 """
@@ -2481,7 +2789,7 @@ entry(
 )
 
 entry(
-    index = 115,
+    index = 120,
     label = "Cdd-SdSd",
     group = 
 """
@@ -2498,7 +2806,7 @@ entry(
 )
 
 entry(
-    index = 116,
+    index = 121,
     label = "Cdd-S2dS2d",
     group = 
 """
@@ -2520,7 +2828,7 @@ entry(
 )
 
 entry(
-    index = 117,
+    index = 122,
     label = "Cdd-S4S4",
     group = 
 """
@@ -2542,7 +2850,7 @@ entry(
 )
 
 entry(
-    index = 118,
+    index = 123,
     label = "Cdd-S2S4",
     group = 
 """
@@ -2564,7 +2872,7 @@ entry(
 )
 
 entry(
-    index = 119,
+    index = 124,
     label = "Cdd-CdOd",
     group = 
 """
@@ -2581,7 +2889,7 @@ entry(
 )
 
 entry(
-    index = 120,
+    index = 125,
     label = "Cdd-CdsOd",
     group = 
 """
@@ -2603,7 +2911,7 @@ entry(
 )
 
 entry(
-    index = 121,
+    index = 126,
     label = "Cdd-(CdN)Od",
     group = 
 """
@@ -2628,7 +2936,7 @@ CHON_G4 |         8
 )
 
 entry(
-    index = 122,
+    index = 127,
     label = "Cdd-CddOd",
     group = 
 """
@@ -2645,7 +2953,7 @@ entry(
 )
 
 entry(
-    index = 123,
+    index = 128,
     label = "Cdd-(Cdd-O2d)O2d",
     group = 
 """
@@ -2663,7 +2971,7 @@ entry(
 )
 
 entry(
-    index = 124,
+    index = 129,
     label = "Cdd-(Cdd-Cd)O2d",
     group = 
 """
@@ -2681,7 +2989,33 @@ entry(
 )
 
 entry(
-    index = 125,
+    index = 130,
+    label = "Cdd-(Cd)CddO2d",
+    group = 
+"""
+1 * Cdd u0 {2,D} {3,D}
+2   Cdd u0 {1,D} {4,D}
+3   O2d u0 {1,D}
+4   Cd  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([-0.784947,-0.730269,-0.253546,-0.0623252,0.0275698,0.0601849,0.447086],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-19.4252,'kJ/mol','+|-',13.3847),
+        S298 = (-4.26473,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C=C=CF (ODCDCDCF) from CHOF_G4
+O=C=C=C(F)F (ODCDCDC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 131,
     label = "Cdd-(CddN)Od",
     group = 
 """
@@ -2706,7 +3040,7 @@ CHON_G4 |         5
 )
 
 entry(
-    index = 126,
+    index = 132,
     label = "Cdd-CdSd",
     group = 
 """
@@ -2728,7 +3062,7 @@ entry(
 )
 
 entry(
-    index = 127,
+    index = 133,
     label = "Cdd-CdsSd",
     group = 
 """
@@ -2745,7 +3079,7 @@ entry(
 )
 
 entry(
-    index = 128,
+    index = 134,
     label = "Cdd-CdsS2d",
     group = 
 """
@@ -2767,7 +3101,7 @@ entry(
 )
 
 entry(
-    index = 129,
+    index = 135,
     label = "Cdd-CdsS4d",
     group = 
 """
@@ -2789,7 +3123,7 @@ entry(
 )
 
 entry(
-    index = 130,
+    index = 136,
     label = "Cdd-CdsS6d",
     group = 
 """
@@ -2811,7 +3145,7 @@ entry(
 )
 
 entry(
-    index = 131,
+    index = 137,
     label = "Cdd-CddSd",
     group = 
 """
@@ -2828,7 +3162,7 @@ entry(
 )
 
 entry(
-    index = 132,
+    index = 138,
     label = "Cdd-(Cdd-S2d)S2d",
     group = 
 """
@@ -2846,7 +3180,7 @@ entry(
 )
 
 entry(
-    index = 133,
+    index = 139,
     label = "Cdd-(Cdd-Cd)S2d",
     group = 
 """
@@ -2864,7 +3198,7 @@ entry(
 )
 
 entry(
-    index = 134,
+    index = 140,
     label = "Cdd-CdCd",
     group = 
 """
@@ -2881,7 +3215,7 @@ entry(
 )
 
 entry(
-    index = 135,
+    index = 141,
     label = "Cdd-CddCdd",
     group = 
 """
@@ -2898,7 +3232,7 @@ entry(
 )
 
 entry(
-    index = 136,
+    index = 142,
     label = "Cdd-(Cdd-O2d)(Cdd-O2d)",
     group = 
 """
@@ -2917,7 +3251,7 @@ entry(
 )
 
 entry(
-    index = 137,
+    index = 143,
     label = "Cdd-(Cdd-S2d)(Cdd-S2d)",
     group = 
 """
@@ -2936,7 +3270,7 @@ entry(
 )
 
 entry(
-    index = 138,
+    index = 144,
     label = "Cdd-(Cdd-O2d)(Cdd-Cd)",
     group = 
 """
@@ -2955,7 +3289,7 @@ entry(
 )
 
 entry(
-    index = 139,
+    index = 145,
     label = "Cdd-(Cdd-S2d)(Cdd-Cd)",
     group = 
 """
@@ -2974,7 +3308,7 @@ entry(
 )
 
 entry(
-    index = 140,
+    index = 146,
     label = "Cdd-(Cdd-Cd)(Cdd-Cd)",
     group = 
 """
@@ -2993,7 +3327,7 @@ entry(
 )
 
 entry(
-    index = 141,
+    index = 147,
     label = "Cdd-(Cdd-O2d)(Cdd-N3d)",
     group = 
 """
@@ -3019,7 +3353,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 142,
+    index = 148,
     label = "Cdd-CddCds",
     group = 
 """
@@ -3036,7 +3370,7 @@ entry(
 )
 
 entry(
-    index = 143,
+    index = 149,
     label = "Cdd-(Cdd-O2d)Cds",
     group = 
 """
@@ -3066,7 +3400,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 144,
+    index = 150,
     label = "Cdd-(Cdd-S2d)Cds",
     group = 
 """
@@ -3084,7 +3418,7 @@ entry(
 )
 
 entry(
-    index = 145,
+    index = 151,
     label = "Cdd-(Cdd-Cd)Cds",
     group = 
 """
@@ -3102,7 +3436,180 @@ entry(
 )
 
 entry(
-    index = 146,
+    index = 152,
+    label = "Cdd-(Cd)(F1sH)CdCdd",
+    group = 
+"""
+1   Cd  u0 {2,D} {4,S} {5,S}
+2 * Cdd u0 {1,D} {3,D}
+3   Cdd u0 {2,D} {6,D}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+6   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.3187,17.7401,19.2067,20.4964,21.9966,22.9498,23.8239],'J/(mol*K)','+|-',[1.55004,1.62031,1.51916,1.41059,1.22299,1.08601,2.09908]),
+        H298 = (136.404,'kJ/mol','+|-',7.48225),
+        S298 = (21.5308,'J/(mol*K)','+|-',4.25961),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C=C=C(F)F (FCDCDCDC(F)F) from CHOF_G4
+FC=C=C=CF (FCDCDCDCF) from CHOF_G4
+FC=C=C=CCl (FCDCDCDCCl) from CHOFCl_G4
+FC=C=C=C(Cl)Cl (FCDCDCDC(Cl)Cl) from CHOFCl_G4
+FC=C=C=C(Br)Br (FCDCDCDC(Br)Br) from CHOFBr_G4
+FC=C=C=CBr (FCDCDCDCBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 153,
+    label = "Cdd-(Cd)(F1sF1s)CdCdd",
+    group = 
+"""
+1   Cd  u0 {2,D} {4,S} {5,S}
+2 * Cdd u0 {1,D} {3,D}
+3   Cdd u0 {2,D} {6,D}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([16.0825,18.5057,19.5696,20.6014,21.9388,22.8395,23.6338],'J/(mol*K)','+|-',[2.49936,2.61267,2.44957,2.27451,1.97201,1.75114,3.38466]),
+        H298 = (139.528,'kJ/mol','+|-',12.0648),
+        S298 = (21.0569,'J/(mol*K)','+|-',6.86842),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C=C=C(F)F (FCDCDCDC(F)F) from CHOF_G4
+FC(F)=C=C=CCl (FC(F)DCDCDCCl) from CHOFCl_G4
+FC(F)=C=C=CBr (FC(F)DCDCDCBr) from CHOFBr_G4
+FC(F)=C=C=C(Br)Br (FC(F)DCDCDC(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 154,
+    label = "Cdd-(Cd)(Cl1sH)CdCdd",
+    group = 
+"""
+1   Cd   u0 {2,D} {4,S} {5,S}
+2 * Cdd  u0 {1,D} {3,D}
+3   Cdd  u0 {2,D} {6,D}
+4   Cl1s u0 {1,S}
+5   H    u0 {1,S}
+6   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.3982,17.7215,19.1559,20.5782,22.161,23.1466,24.0764],'J/(mol*K)','+|-',[3.17663,3.32065,3.11335,2.89085,2.50638,2.22566,4.30182]),
+        H298 = (133.461,'kJ/mol','+|-',15.334),
+        S298 = (24.8948,'J/(mol*K)','+|-',8.7296),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C=C=CCl (FCDCDCDCCl) from CHOFCl_G4
+FC(F)=C=C=CCl (FC(F)DCDCDCCl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 155,
+    label = "Cdd-(Cd)(Cl1sCl1s)CdCdd",
+    group = 
+"""
+1   Cd   u0 {2,D} {4,S} {5,S}
+2 * Cdd  u0 {1,D} {3,D}
+3   Cdd  u0 {2,D} {6,D}
+4   Cl1s u0 {1,S}
+5   Cl1s u0 {1,S}
+6   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([16.0772,17.9212,19.2309,20.6095,22.0366,22.8758,23.7031],'J/(mol*K)','+|-',[4.21656,4.40772,4.13256,3.83722,3.32689,2.95427,5.7101]),
+        H298 = (133.699,'kJ/mol','+|-',20.3539),
+        S298 = (25.6059,'J/(mol*K)','+|-',11.5874),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C=C=C(Cl)Cl (FCDCDCDC(Cl)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 156,
+    label = "Cdd-(Br1sH)(Cd)CdCdd",
+    group = 
+"""
+1   Cd   u0 {2,D} {4,S} {5,S}
+2 * Cdd  u0 {1,D} {3,D}
+3   Cdd  u0 {2,D} {6,D}
+4   Br1s u0 {1,S}
+5   H    u0 {1,S}
+6   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.7642,18.0672,19.4295,20.7192,22.1075,23.0476,24.0478],'J/(mol*K)','+|-',[3.17663,3.32065,3.11335,2.89085,2.50638,2.22566,4.30182]),
+        H298 = (133.343,'kJ/mol','+|-',15.334),
+        S298 = (25.6083,'J/(mol*K)','+|-',8.7296),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)=C=C=CBr (FC(F)DCDCDCBr) from CHOFBr_G4
+FC=C=C=CBr (FCDCDCDCBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 157,
+    label = "Cdd-(Br1sBr1s)(Cd)CdCdd",
+    group = 
+"""
+1   Cd   u0 {2,D} {4,S} {5,S}
+2 * Cdd  u0 {1,D} {3,D}
+3   Cdd  u0 {2,D} {6,D}
+4   Br1s u0 {1,S}
+5   Br1s u0 {1,S}
+6   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([16.1797,17.9374,19.2818,20.5581,21.8387,22.6455,23.5285],'J/(mol*K)','+|-',[3.17663,3.32065,3.11335,2.89085,2.50638,2.22566,4.30182]),
+        H298 = (133.484,'kJ/mol','+|-',15.334),
+        S298 = (23.9692,'J/(mol*K)','+|-',8.7296),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C=C=C(Br)Br (FCDCDCDC(Br)Br) from CHOFBr_G4
+FC(F)=C=C=C(Br)Br (FC(F)DCDCDC(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 158,
     label = "Cdd-CdsCds",
     group = 
 """
@@ -3124,7 +3631,7 @@ entry(
 )
 
 entry(
-    index = 147,
+    index = 159,
     label = "Cdd-NC",
     group = 
 """
@@ -3148,7 +3655,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 148,
+    index = 160,
     label = "Cdd-N3dCd",
     group = 
 """
@@ -3172,7 +3679,7 @@ CHON_G4 |         44
 )
 
 entry(
-    index = 149,
+    index = 161,
     label = "Cdd-N3dCdd",
     group = 
 """
@@ -3196,7 +3703,7 @@ CHON_G4 |         8
 )
 
 entry(
-    index = 150,
+    index = 162,
     label = "Cdd-(N3dH)Cdd",
     group = 
 """
@@ -3221,7 +3728,7 @@ CHON_G4 |         12
 )
 
 entry(
-    index = 151,
+    index = 163,
     label = "Cdd-NO",
     group = 
 """
@@ -3245,7 +3752,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 152,
+    index = 164,
     label = "Cdd-N3dOd",
     group = 
 """
@@ -3270,7 +3777,7 @@ CHON    |         3
 )
 
 entry(
-    index = 153,
+    index = 165,
     label = "Cdd-NN",
     group = 
 """
@@ -3294,7 +3801,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 154,
+    index = 166,
     label = "Cdd-N3dN3d",
     group = 
 """
@@ -3318,7 +3825,7 @@ CHON_G4 |         24
 )
 
 entry(
-    index = 155,
+    index = 167,
     label = "Cds",
     group = 
 """
@@ -3333,7 +3840,7 @@ entry(
 )
 
 entry(
-    index = 156,
+    index = 168,
     label = "COBrBrO",
     group = 
 """
@@ -3358,7 +3865,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 157,
+    index = 169,
     label = "CdBrBrC",
     group = 
 """
@@ -3386,7 +3893,7 @@ CHOClBr_G4  |         10
 )
 
 entry(
-    index = 158,
+    index = 170,
     label = "CdBrBrCdd",
     group = 
 """
@@ -3414,7 +3921,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 159,
+    index = 171,
     label = "Cd(Cdd-Od)BrBr",
     group = 
 """
@@ -3440,7 +3947,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 160,
+    index = 172,
     label = "COBrClO",
     group = 
 """
@@ -3465,7 +3972,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 161,
+    index = 173,
     label = "CdBrCCl",
     group = 
 """
@@ -3491,7 +3998,7 @@ CHOClBr_G4  |         67
 )
 
 entry(
-    index = 162,
+    index = 174,
     label = "Cd(Cdd-O2d)ClBr",
     group = 
 """
@@ -3517,7 +4024,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 163,
+    index = 175,
     label = "COClClO",
     group = 
 """
@@ -3542,7 +4049,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 164,
+    index = 176,
     label = "CdCClCl",
     group = 
 """
@@ -3569,7 +4076,7 @@ CHOClBr_G4 |         37
 )
 
 entry(
-    index = 165,
+    index = 177,
     label = "CdCddClCl",
     group = 
 """
@@ -3596,7 +4103,7 @@ CHOClBr_G4 |         8
 )
 
 entry(
-    index = 166,
+    index = 178,
     label = "Cd(Cdd-Od)ClCl",
     group = 
 """
@@ -3622,7 +4129,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 167,
+    index = 179,
     label = "COBrFO",
     group = 
 """
@@ -3647,7 +4154,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 168,
+    index = 180,
     label = "CdBrCF",
     group = 
 """
@@ -3672,7 +4179,7 @@ CHOFBr_G4 |         97
 )
 
 entry(
-    index = 169,
+    index = 181,
     label = "Cd(Cdd-O2d)FBr",
     group = 
 """
@@ -3698,7 +4205,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 170,
+    index = 182,
     label = "COClFO",
     group = 
 """
@@ -3723,7 +4230,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 171,
+    index = 183,
     label = "CdCClF",
     group = 
 """
@@ -3749,7 +4256,7 @@ CHOFClBr_G4 |         45
 )
 
 entry(
-    index = 172,
+    index = 184,
     label = "Cd(Cdd-O2d)FCl",
     group = 
 """
@@ -3775,7 +4282,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 173,
+    index = 185,
     label = "COFFO",
     group = 
 """
@@ -3800,7 +4307,36 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 174,
+    index = 186,
+    label = "CO-F1sF1sO2d",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([47.2141,54.4405,60.2367,64.6692,70.5537,74.2844,78.6295],'J/(mol*K)','+|-',[1.75367,1.83317,1.71873,1.5959,1.38365,1.22868,2.37483]),
+        H298 = (-606.786,'kJ/mol','+|-',8.4652),
+        S298 = (258.759,'J/(mol*K)','+|-',4.8192),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)F (CF2O) from C1_C2_Fluorine
+O=C(F)F (CF2O) from C1_C3_hydrofluorocarbons_NIST
+O=C(F)F (CF2O) from NCSU_C2_C8_PFAS
+O=C(F)F (CF2O) from PFCA_thermo
+O=C(F)F (ODC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 187,
     label = "CdCFF",
     group = 
 """
@@ -3828,7 +4364,7 @@ CHOFBr_G4   |         81
 )
 
 entry(
-    index = 175,
+    index = 188,
     label = "CdCddFF",
     group = 
 """
@@ -3856,7 +4392,7 @@ CHOFBr_G4   |         16
 )
 
 entry(
-    index = 176,
+    index = 189,
     label = "Cd(Cdd-Od)FF",
     group = 
 """
@@ -3882,7 +4418,317 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 177,
+    index = 190,
+    label = "Cd-(O2d)CddF1sF1s",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cdd u0 {1,D} {5,D}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([67.8199,75.4304,81.1243,85.7214,92.5097,96.9504,102.206],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-299.66,'kJ/mol','+|-',13.3847),
+        S298 = (289.092,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C=C(F)F (CF2CO) from C1_C3_hydrofluorocarbons_NIST
+O=C=C(F)F (ODCDC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 191,
+    label = "Cd-CdF1sF1s",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cd  u0 {1,D}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([40.0555,45.0233,49.0944,52.3096,56.9212,59.9727,62.8884],'J/(mol*K)','+|-',[0.245483,0.256613,0.240593,0.223399,0.193688,0.171994,0.332436]),
+        H298 = (-339.954,'kJ/mol','+|-',1.18498),
+        S298 = (154.432,'J/(mol*K)','+|-',0.674606),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C(F)F (CH2CF2) from C1_C2_Fluorine
+FC=C(F)F (CHFCF2) from C1_C2_Fluorine
+FC(F)=C(F)F (CF2CF2) from C1_C2_Fluorine
+FC=C(F)F (CHFCF2) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)F (CF2CF2) from C1_C3_hydrofluorocarbons_NIST
+C=C(F)F (CH2CF2) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)C(F)(F)F (C3F6) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)F (PF2ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)F (PF3ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)F (PF4ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)F (CF2CF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)F (CF3CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)F (C2F5CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFCF2) from PFCA_thermo
+FC(F)=CC=C(F)F (FC(F)DCCDC(F)F) from CHOF_G4
+OC(O)=C(F)F (OC(O)DC(F)F) from CHOF_G4
+FCCC(F)=C(F)F (FCCC(F)DC(F)F) from CHOF_G4
+OC(F)(F)C(F)=C(F)F (OC(F)(F)C(F)DC(F)F) from CHOF_G4
+C=CC=C(F)F (CDCCDC(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)F (FC(F)DCC(F)(F)C(F)F) from CHOF_G4
+FC=C(F)C=C(F)F (FCDC(F)CDC(F)F) from CHOF_G4
+CC(F)C=C(F)F (CC(F)CDC(F)F) from CHOF_G4
+FCOC=C(F)F (FCOCDC(F)F) from CHOF_G4
+CC(C)=C(F)F (CC(C)DC(F)F) from CHOF_G4
+CC(=C(F)F)C(F)(F)F (CC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=COC(F)F (FC(F)DCOC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)C(F)(F)F (FC(F)DC(F)C(F)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)=C(F)F (FOC(F)(F)C(F)DC(F)F) from CHOF_G4
+FCC(F)C=C(F)F (FCC(F)CDC(F)F) from CHOF_G4
+CC(F)=C(F)F (CC(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)F (FC(F)DC(F)C(F)(F)F) from CHOF_G4
+CCC(F)=C(F)F (CCC(F)DC(F)F) from CHOF_G4
+FOOC=C(F)F (FOOCDC(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)(F)F (FCC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC=CC(F)=C(F)F (FCDCC(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)OC(F)F (FC(F)DC(F)OC(F)F) from CHOF_G4
+FC(F)=C(F)OC(F)(F)F (FC(F)DC(F)OC(F)(F)F) from CHOF_G4
+OC(F)C=C(F)F (OC(F)CDC(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)F (FC(F)DC(F)CC(F)F) from CHOF_G4
+C=C(F)C(F)=C(F)F (CDC(F)C(F)DC(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)(F)F (FC(F)DCC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)F (FCC(DC(F)F)C(F)F) from CHOF_G4
+OC(F)(F)C=C(F)F (OC(F)(F)CDC(F)F) from CHOF_G4
+FC=CC=C(F)F (FCDCCDC(F)F) from CHOF_G4
+CCC=C(F)F (CCCDC(F)F) from CHOF_G4
+FOCC(F)=C(F)F (FOCC(F)DC(F)F) from CHOF_G4
+FC(F)=COC(F)(F)F (FC(F)DCOC(F)(F)F) from CHOF_G4
+FCC(F)(F)C=C(F)F (FCC(F)(F)CDC(F)F) from CHOF_G4
+OC(=C(F)F)C(F)F (OC(DC(F)F)C(F)F) from CHOF_G4
+C=C(F)C=C(F)F (CDC(F)CDC(F)F) from CHOF_G4
+FCC(F)=C(F)F (FCC(F)DC(F)F) from CHOF_G4
+O=CC=C(F)F (ODCCDC(F)F) from CHOF_G4
+OC(F)C(F)=C(F)F (OC(F)C(F)DC(F)F) from CHOF_G4
+OC=C(F)F (OCDC(F)F) from CHOF_G4
+FCC=C(F)F (FCCDC(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)(F)F (FC(F)DC(F)CC(F)(F)F) from CHOF_G4
+FC(F)=CCC(F)F (FC(F)DCCC(F)F) from CHOF_G4
+OCC(F)=C(F)F (OCC(F)DC(F)F) from CHOF_G4
+OCC=C(F)F (OCCDC(F)F) from CHOF_G4
+FC(F)=CC(F)(F)F (FC(F)DCC(F)(F)F) from CHOF_G4
+C=CC(F)=C(F)F (CDCC(F)DC(F)F) from CHOF_G4
+FCC(F)C(F)=C(F)F (FCC(F)C(F)DC(F)F) from CHOF_G4
+FOC(F)C=C(F)F (FOC(F)CDC(F)F) from CHOF_G4
+FC(F)=CCC(F)(F)F (FC(F)DCCC(F)(F)F) from CHOF_G4
+FCC(CF)=C(F)F (FCC(CF)DC(F)F) from CHOF_G4
+FC(F)=CC(F)C(F)F (FC(F)DCC(F)C(F)F) from CHOF_G4
+OC(F)=C(F)F (OC(F)DC(F)F) from CHOF_G4
+CC(F)C(F)=C(F)F (CC(F)C(F)DC(F)F) from CHOF_G4
+FC=C(F)C(F)=C(F)F (FCDC(F)C(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)F (FC(F)DC(F)C(F)F) from CHOF_G4
+FOCC=C(F)F (FOCCDC(F)F) from CHOF_G4
+FOC(F)C(F)=C(F)F (FOC(F)C(F)DC(F)F) from CHOF_G4
+COC(F)=C(F)F (COC(F)DC(F)F) from CHOF_G4
+CC(OF)=C(F)F (CC(OF)DC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)C(F)F (FC(F)DC(F)C(F)C(F)F) from CHOF_G4
+FC(F)=C(C(F)(F)F)C(F)(F)F (FC(F)DC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+O=C(F)C(F)=C(F)F (ODC(F)C(F)DC(F)F) from CHOF_G4
+FCC(OF)=C(F)F (FCC(OF)DC(F)F) from CHOF_G4
+FOC(=C(F)F)C(F)F (FOC(DC(F)F)C(F)F) from CHOF_G4
+CC(F)(F)C=C(F)F (CC(F)(F)CDC(F)F) from CHOF_G4
+CC(O)=C(F)F (CC(O)DC(F)F) from CHOF_G4
+FCCC=C(F)F (FCCCDC(F)F) from CHOF_G4
+FCOC(F)=C(F)F (FCOC(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)=C(F)F (FC(F)DC(F)C(F)DC(F)F) from CHOF_G4
+FC#CC(F)=C(F)F (FC#CC(F)DC(F)F) from CHOF_G4
+FOC(F)(F)C=C(F)F (FOC(F)(F)CDC(F)F) from CHOF_G4
+CC(=C(F)F)C(F)F (CC(DC(F)F)C(F)F) from CHOF_G4
+CC(CF)=C(F)F (CC(CF)DC(F)F) from CHOF_G4
+FC(F)=C(C(F)F)C(F)(F)F (FC(F)DC(C(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)(F)F (FC(F)DC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+C#CC=C(F)F (C#CCDC(F)F) from CHOF_G4
+OOC=C(F)F (OOCDC(F)F) from CHOF_G4
+FC(F)=C(C(F)F)C(F)F (FC(F)DC(C(F)F)C(F)F) from CHOF_G4
+O=CC(F)=C(F)F (ODCC(F)DC(F)F) from CHOF_G4
+OOC(F)=C(F)F (OOC(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)F (FC(F)DC(F)F) from CHOF_G4
+FCC(F)(F)C(F)=C(F)F (FCC(F)(F)C(F)DC(F)F) from CHOF_G4
+FOC=C(F)F (FOCDC(F)F) from CHOF_G4
+CC=C(F)F (CCDC(F)F) from CHOF_G4
+FOC(=C(F)F)C(F)(F)F (FOC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)F (FC(F)DC(F)C(F)(F)C(F)F) from CHOF_G4
+FC#CC=C(F)F (FC#CCDC(F)F) from CHOF_G4
+FC=C(F)F (FCDC(F)F) from CHOF_G4
+COC=C(F)F (COCDC(F)F) from CHOF_G4
+FC(F)=CC(F)F (FC(F)DCC(F)F) from CHOF_G4
+O=C(F)C=C(F)F (ODC(F)CDC(F)F) from CHOF_G4
+OC(CF)=C(F)F (OC(CF)DC(F)F) from CHOF_G4
+FC(F)=CC(F)C(F)(F)F (FC(F)DCC(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)=C(F)F (CC(F)(F)C(F)DC(F)F) from CHOF_G4
+FOC(F)=C(F)F (FOC(F)DC(F)F) from CHOF_G4
+FOC(OF)=C(F)F (FOC(OF)DC(F)F) from CHOF_G4
+C=C(F)F (CDC(F)F) from CHOF_G4
+C#CC(F)=C(F)F (C#CC(F)DC(F)F) from CHOF_G4
+FOOC(F)=C(F)F (FOOC(F)DC(F)F) from CHOF_G4
+OC(=C(F)F)C(F)(F)F (OC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=CC(F)=C(F)F (FC(F)DCC(F)DC(F)F) from CHOF_G4
+FC(F)=C1OC1(F)F (FC(F)DC1OC1(F)F) from CHOF_G4
+FC(F)=C1C(F)C1F (FC(F)DC1C(F)C1F) from CHOF_G4
+FC(F)=C1OO1 (FC(F)DC1OO1) from CHOF_G4
+FC(F)=C1CC1F (FC(F)DC1CC1F) from CHOF_G4
+FC(F)=C1CC1(F)F (FC(F)DC1CC1(F)F) from CHOF_G4
+FC(F)=C1OC1F (FC(F)DC1OC1F) from CHOF_G4
+FC(F)=C1C(F)C1(F)F (FC(F)DC1C(F)C1(F)F) from CHOF_G4
+FC1=CC1=C(F)F (FC1DCC1DC(F)F) from CHOF_G4
+FC(F)=C1CC1 (FC(F)DC1CC1) from CHOF_G4
+FC(F)=C1C=C1 (FC(F)DC1CDC1) from CHOF_G4
+FC(F)=C1CO1 (FC(F)DC1CO1) from CHOF_G4
+FC(F)=C1C(F)=C1F (FC(F)DC1C(F)DC1F) from CHOF_G4
+FC(F)=C(F)CCl (FC(F)DC(F)CCl) from CHOFCl_G4
+CCC(Cl)=C(F)F (CCC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=CCl (FC(F)DCCl) from CHOFCl_G4
+CC(OCl)=C(F)F (CC(OCl)DC(F)F) from CHOFCl_G4
+C=C(Cl)C=C(F)F (CDC(Cl)CDC(F)F) from CHOFCl_G4
+COC(Cl)=C(F)F (COC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=CC=CCl (FC(F)DCCDCCl) from CHOFCl_G4
+FC(F)=CC(F)Cl (FC(F)DCC(F)Cl) from CHOFCl_G4
+FC(F)=C(Cl)OCl (FC(F)DC(Cl)OCl) from CHOFCl_G4
+FC(F)=CCCCl (FC(F)DCCCCl) from CHOFCl_G4
+CC(CCl)=C(F)F (CC(CCl)DC(F)F) from CHOFCl_G4
+O=CC(Cl)=C(F)F (ODCC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=COCCl (FC(F)DCOCCl) from CHOFCl_G4
+OC(Cl)C=C(F)F (OC(Cl)CDC(F)F) from CHOFCl_G4
+FC(F)=COCl (FC(F)DCOCl) from CHOFCl_G4
+FC(F)=CCCl (FC(F)DCCCl) from CHOFCl_G4
+OC(Cl)=C(F)F (OC(Cl)DC(F)F) from CHOFCl_G4
+OC(OCl)=C(F)F (OC(OCl)DC(F)F) from CHOFCl_G4
+C=CC(Cl)=C(F)F (CDCC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=COOCl (FC(F)DCOOCl) from CHOFCl_G4
+FC(F)=CCOCl (FC(F)DCCOCl) from CHOFCl_G4
+FC(F)=C(Cl)CCl (FC(F)DC(Cl)CCl) from CHOFCl_G4
+OCC(Cl)=C(F)F (OCC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=C(Cl)Cl (FC(F)DC(Cl)Cl) from CHOFCl_G4
+O=C(Cl)C=C(F)F (ODC(Cl)CDC(F)F) from CHOFCl_G4
+FC(F)=CC(Cl)Cl (FC(F)DCC(Cl)Cl) from CHOFCl_G4
+CC(Cl)C=C(F)F (CC(Cl)CDC(F)F) from CHOFCl_G4
+CC(Cl)=C(F)F (CC(Cl)DC(F)F) from CHOFCl_G4
+FC(F)=C(F)Cl (FC(F)DC(F)Cl) from CHOFCl_G4
+OC(CCl)=C(F)F (OC(CCl)DC(F)F) from CHOFCl_G4
+FC(F)=C(F)OCl (FC(F)DC(F)OCl) from CHOFCl_G4
+FC(F)=CC(Cl)Br (FC(F)DCC(Cl)Br) from CHOFClBr_G4
+FC(F)=C(Cl)Br (FC(F)DC(Cl)Br) from CHOFClBr_G4
+FC(F)=C(Cl)CBr (FC(F)DC(Cl)CBr) from CHOFClBr_G4
+C=C(Br)C(Cl)=C(F)F (CDC(Br)C(Cl)DC(F)F) from CHOFClBr_G4
+FC(F)=C(Cl)OBr (FC(F)DC(Cl)OBr) from CHOFClBr_G4
+CC(=C(F)F)C(Cl)Br (CC(DC(F)F)C(Cl)Br) from CHOFClBr_G4
+FC(F)=C(Br)OCBr (FC(F)DC(Br)OCBr) from CHOFBr_G4
+CC(Br)C(Br)=C(F)F (CC(Br)C(Br)DC(F)F) from CHOFBr_G4
+FC(F)=C(Br)CCBr (FC(F)DC(Br)CCBr) from CHOFBr_G4
+FC(F)=C(F)OBr (FC(F)DC(F)OBr) from CHOFBr_G4
+FC(F)=C(Br)CBr (FC(F)DC(Br)CBr) from CHOFBr_G4
+OCC(Br)=C(F)F (OCC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=CC(Br)=CBr (FC(F)DCC(Br)DCBr) from CHOFBr_G4
+FC(F)=C(CBr)OBr (FC(F)DC(CBr)OBr) from CHOFBr_G4
+FC(F)=C(F)Br (FC(F)DC(F)Br) from CHOFBr_G4
+C=CC(Br)=C(F)F (CDCC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=C(Br)Br (FC(F)DC(Br)Br) from CHOFBr_G4
+O=C(Br)C=C(F)F (ODC(Br)CDC(F)F) from CHOFBr_G4
+OC(Br)=C(F)F (OC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=CC(F)=CBr (FC(F)DCC(F)DCBr) from CHOFBr_G4
+OC(OBr)=C(F)F (OC(OBr)DC(F)F) from CHOFBr_G4
+C=C(Br)C(Br)=C(F)F (CDC(Br)C(Br)DC(F)F) from CHOFBr_G4
+FC(F)=C(Br)C(Br)Br (FC(F)DC(Br)C(Br)Br) from CHOFBr_G4
+OOC(Br)=C(F)F (OOC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=CC(F)(F)Br (FC(F)DCC(F)(F)Br) from CHOFBr_G4
+FC(F)=C(F)COBr (FC(F)DC(F)COBr) from CHOFBr_G4
+OC(=C(F)F)C(F)Br (OC(DC(F)F)C(F)Br) from CHOFBr_G4
+FC(F)=CC(Br)Br (FC(F)DCC(Br)Br) from CHOFBr_G4
+CC(Br)C=C(F)F (CC(Br)CDC(F)F) from CHOFBr_G4
+FC(F)=CC(F)OBr (FC(F)DCC(F)OBr) from CHOFBr_G4
+CC(Br)=C(F)F (CC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=COC(Br)Br (FC(F)DCOC(Br)Br) from CHOFBr_G4
+FC(F)=CC(Br)OBr (FC(F)DCC(Br)OBr) from CHOFBr_G4
+FC(F)=CCOBr (FC(F)DCCOBr) from CHOFBr_G4
+OC(CBr)=C(F)F (OC(CBr)DC(F)F) from CHOFBr_G4
+FC(F)=COOBr (FC(F)DCOOBr) from CHOFBr_G4
+OC(Br)C(F)=C(F)F (OC(Br)C(F)DC(F)F) from CHOFBr_G4
+FOC(OBr)=C(F)F (FOC(OBr)DC(F)F) from CHOFBr_G4
+FC(F)=C(OBr)OBr (FC(F)DC(OBr)OBr) from CHOFBr_G4
+CC(F)(Br)C=C(F)F (CC(F)(Br)CDC(F)F) from CHOFBr_G4
+OC(Br)C(Br)=C(F)F (OC(Br)C(Br)DC(F)F) from CHOFBr_G4
+FC(F)=CCBr (FC(F)DCCBr) from CHOFBr_G4
+FC(F)=COBr (FC(F)DCOBr) from CHOFBr_G4
+FC(F)=C(F)C(F)Br (FC(F)DC(F)C(F)Br) from CHOFBr_G4
+FC(F)=COC(F)Br (FC(F)DCOC(F)Br) from CHOFBr_G4
+FC(F)=C(F)C(Br)Br (FC(F)DC(F)C(Br)Br) from CHOFBr_G4
+OC(Br)(Br)C=C(F)F (OC(Br)(Br)CDC(F)F) from CHOFBr_G4
+CC(OBr)=C(F)F (CC(OBr)DC(F)F) from CHOFBr_G4
+FC(F)=COCBr (FC(F)DCOCBr) from CHOFBr_G4
+OC(F)(Br)C=C(F)F (OC(F)(Br)CDC(F)F) from CHOFBr_G4
+FCC(CBr)=C(F)F (FCC(CBr)DC(F)F) from CHOFBr_G4
+FC(F)=CC(Br)CBr (FC(F)DCC(Br)CBr) from CHOFBr_G4
+FC(F)=CCCBr (FC(F)DCCCBr) from CHOFBr_G4
+CC(Br)C(F)=C(F)F (CC(Br)C(F)DC(F)F) from CHOFBr_G4
+FC(F)=CC(F)CBr (FC(F)DCC(F)CBr) from CHOFBr_G4
+FC(F)=CC(F)Br (FC(F)DCC(F)Br) from CHOFBr_G4
+FC(F)=CC(F)(Br)Br (FC(F)DCC(F)(Br)Br) from CHOFBr_G4
+O=C(Br)C(F)=C(F)F (ODC(Br)C(F)DC(F)F) from CHOFBr_G4
+FC(F)=CC=CBr (FC(F)DCCDCBr) from CHOFBr_G4
+CCC(Br)=C(F)F (CCC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=C(F)OCBr (FC(F)DC(F)OCBr) from CHOFBr_G4
+FC(F)=C(F)CCBr (FC(F)DC(F)CCBr) from CHOFBr_G4
+OC(=C(F)F)C(Br)Br (OC(DC(F)F)C(Br)Br) from CHOFBr_G4
+FC(F)=CC(Br)(Br)Br (FC(F)DCC(Br)(Br)Br) from CHOFBr_G4
+CC(=C(F)F)C(F)Br (CC(DC(F)F)C(F)Br) from CHOFBr_G4
+FCC(OBr)=C(F)F (FCC(OBr)DC(F)F) from CHOFBr_G4
+CC(=C(F)F)C(Br)Br (CC(DC(F)F)C(Br)Br) from CHOFBr_G4
+FC(F)=C(Br)C=CBr (FC(F)DC(Br)CDCBr) from CHOFBr_G4
+FC(F)=C(F)C=CBr (FC(F)DC(F)CDCBr) from CHOFBr_G4
+C=C(Br)C(F)=C(F)F (CDC(Br)C(F)DC(F)F) from CHOFBr_G4
+FC(F)=CBr (FC(F)DCBr) from CHOFBr_G4
+C=C(Br)C=C(F)F (CDC(Br)CDC(F)F) from CHOFBr_G4
+FC(F)=CCC(F)Br (FC(F)DCCC(F)Br) from CHOFBr_G4
+FC(F)=CC=C(Br)Br (FC(F)DCCDC(Br)Br) from CHOFBr_G4
+FC(F)=CC=C(F)Br (FC(F)DCCDC(F)Br) from CHOFBr_G4
+O=CC(Br)=C(F)F (ODCC(Br)DC(F)F) from CHOFBr_G4
+FC(F)=CCC(Br)Br (FC(F)DCCC(Br)Br) from CHOFBr_G4
+CC(CBr)=C(F)F (CC(CBr)DC(F)F) from CHOFBr_G4
+FC(F)=C(CBr)CBr (FC(F)DC(CBr)CBr) from CHOFBr_G4
+O=C(Br)C(Br)=C(F)F (ODC(Br)C(Br)DC(F)F) from CHOFBr_G4
+OC(Br)C=C(F)F (OC(Br)CDC(F)F) from CHOFBr_G4
+FC(F)=C(F)CBr (FC(F)DC(F)CBr) from CHOFBr_G4
+FC(F)=C(Br)OBr (FC(F)DC(Br)OBr) from CHOFBr_G4
+FC(F)=C(Br)COBr (FC(F)DC(Br)COBr) from CHOFBr_G4
+FC(F)=C(Br)OOBr (FC(F)DC(Br)OOBr) from CHOFBr_G4
+COC(Br)=C(F)F (COC(Br)DC(F)F) from CHOFBr_G4
+CC(Br)(Br)C=C(F)F (CC(Br)(Br)CDC(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 192,
     label = "COBrHO",
     group = 
 """
@@ -3905,7 +4751,7 @@ ODCBr in CHOBr_G4 thermo library
 )
 
 entry(
-    index = 178,
+    index = 193,
     label = "CdBrCH",
     group = 
 """
@@ -3933,7 +4779,7 @@ CHOClBr_G4  |         18
 )
 
 entry(
-    index = 179,
+    index = 194,
     label = "CdBrCddH",
     group = 
 """
@@ -3961,7 +4807,7 @@ CHOClBr_G4  |         6
 )
 
 entry(
-    index = 180,
+    index = 195,
     label = "Cd(Cdd-Od)BrH",
     group = 
 """
@@ -3987,7 +4833,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 181,
+    index = 196,
     label = "COClHO",
     group = 
 """
@@ -4012,7 +4858,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 182,
+    index = 197,
     label = "CdCClH",
     group = 
 """
@@ -4039,7 +4885,7 @@ CHOClBr_G4 |         87
 )
 
 entry(
-    index = 183,
+    index = 198,
     label = "CdCddClH",
     group = 
 """
@@ -4066,7 +4912,7 @@ CHOClBr_G4 |         16
 )
 
 entry(
-    index = 184,
+    index = 199,
     label = "Cd(Cdd-Od)ClH",
     group = 
 """
@@ -4092,7 +4938,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 185,
+    index = 200,
     label = "COFHO",
     group = 
 """
@@ -4117,7 +4963,34 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 186,
+    index = 201,
+    label = "CO-F1sO2dH",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([40.1326,45.5548,50.8294,55.4724,62.3195,67.2352,74.1554],'J/(mol*K)','+|-',[2.26398,2.36662,2.21888,2.0603,1.78629,1.58622,3.0659]),
+        H298 = (-383.046,'kJ/mol','+|-',10.9285),
+        S298 = (246.525,'J/(mol*K)','+|-',6.22156),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=CF (CHFO) from C1_C2_Fluorine
+O=CF (CHFO) from C1_C3_hydrofluorocarbons_NIST
+O=CF (ODCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 202,
     label = "CdCFH",
     group = 
 """
@@ -4145,7 +5018,7 @@ CHOFBr_G4   |         141
 )
 
 entry(
-    index = 187,
+    index = 203,
     label = "CdCddFH",
     group = 
 """
@@ -4173,7 +5046,7 @@ CHOFBr_G4   |         22
 )
 
 entry(
-    index = 188,
+    index = 204,
     label = "Cd(Cdd-Od)FH",
     group = 
 """
@@ -4199,7 +5072,438 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 189,
+    index = 205,
+    label = "Cd-(O2d)CddF1sH",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cdd u0 {1,D} {5,D}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+5   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([57.0193,65.2138,71.6112,76.7909,84.7465,90.3089,97.9421],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-153.297,'kJ/mol','+|-',13.3847),
+        S298 = (271.335,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C=CF (CHFCO) from C1_C3_hydrofluorocarbons_NIST
+O=C=CF (ODCDCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 206,
+    label = "Cd-CdF1sH",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cd  u0 {1,D}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([31.0553,35.8554,40.169,43.8696,49.5493,53.6769,59.6208],'J/(mol*K)','+|-',[0.208506,0.217959,0.204352,0.189748,0.164512,0.146087,0.282361]),
+        H298 = (-147.27,'kJ/mol','+|-',1.00649),
+        S298 = (136.616,'J/(mol*K)','+|-',0.572989),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=CF (CH2CHF) from C1_C2_Fluorine
+FC=CF (CHFCHF) from C1_C2_Fluorine
+FC=C(F)F (CHFCF2) from C1_C2_Fluorine
+FC=C(F)F (CHFCF2) from C1_C3_hydrofluorocarbons_NIST
+C=CF (CH2CHF) from C1_C3_hydrofluorocarbons_NIST
+FC=CC(F)(F)F (CHFCHCF3) from C1_C3_hydrofluorocarbons_NIST
+FC=CF (CHFCHF[Z]) from C1_C3_hydrofluorocarbons_NIST
+FC#CC(F)=CF (FC#CC(F)DCF) from CHOF_G4
+FC=C(F)C(F)(F)C(F)(F)F (FCDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+C=CF (CDCF) from CHOF_G4
+COC(F)=CF (COC(F)DCF) from CHOF_G4
+FC=COCF (FCDCOCF) from CHOF_G4
+FC=C(F)OF (FCDC(F)OF) from CHOF_G4
+CC(=CF)C(F)(F)F (CC(DCF)C(F)(F)F) from CHOF_G4
+O=C(F)C(F)=CF (ODC(F)C(F)DCF) from CHOF_G4
+FC=C(F)COF (FCDC(F)COF) from CHOF_G4
+FC=C(F)C=C(F)F (FCDC(F)CDC(F)F) from CHOF_G4
+FC=COOF (FCDCOOF) from CHOF_G4
+FC=C(F)CF (FCDC(F)CF) from CHOF_G4
+FC=C(OF)OF (FCDC(OF)OF) from CHOF_G4
+FC=CC(F)C(F)F (FCDCC(F)C(F)F) from CHOF_G4
+FC=C(F)CCF (FCDC(F)CCF) from CHOF_G4
+OOC=CF (OOCDCF) from CHOF_G4
+OOC(F)=CF (OOC(F)DCF) from CHOF_G4
+CC(O)=CF (CC(O)DCF) from CHOF_G4
+FC=C(C(F)(F)F)C(F)(F)F (FCDC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)OF (FCDC(F)C(F)OF) from CHOF_G4
+FC=CCF (FCDCCF) from CHOF_G4
+FC=CC(F)(F)C(F)F (FCDCC(F)(F)C(F)F) from CHOF_G4
+CC(F)=CF (CC(F)DCF) from CHOF_G4
+FC=C(F)C(F)(F)C(F)F (FCDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC=COF (FCDCOF) from CHOF_G4
+FC=C(F)C(F)CF (FCDC(F)C(F)CF) from CHOF_G4
+FC=CC(F)=C(F)F (FCDCC(F)DC(F)F) from CHOF_G4
+FC=CC(F)OF (FCDCC(F)OF) from CHOF_G4
+FC=C(F)C(F)(F)F (FCDC(F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)(F)CF (FCDC(F)C(F)(F)CF) from CHOF_G4
+FC=C(F)C(F)F (FCDC(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)=CF (CC(F)(F)C(F)DCF) from CHOF_G4
+FC=C(OF)C(F)F (FCDC(OF)C(F)F) from CHOF_G4
+FC=C(CF)C(F)(F)F (FCDC(CF)C(F)(F)F) from CHOF_G4
+FC=CC=C(F)F (FCDCCDC(F)F) from CHOF_G4
+FC=CC(F)CF (FCDCC(F)CF) from CHOF_G4
+COC=CF (COCDCF) from CHOF_G4
+FC=C(F)C(F)(F)OF (FCDC(F)C(F)(F)OF) from CHOF_G4
+FC=C(C(F)F)C(F)(F)F (FCDC(C(F)F)C(F)(F)F) from CHOF_G4
+FC=C(F)CC(F)(F)F (FCDC(F)CC(F)(F)F) from CHOF_G4
+C#CC(F)=CF (C#CC(F)DCF) from CHOF_G4
+OC=CF (OCDCF) from CHOF_G4
+FC=C(F)OC(F)(F)F (FCDC(F)OC(F)(F)F) from CHOF_G4
+O=CC=CF (ODCCDCF) from CHOF_G4
+OC(F)=CF (OC(F)DCF) from CHOF_G4
+CC=CF (CCDCF) from CHOF_G4
+CC(F)C=CF (CC(F)CDCF) from CHOF_G4
+FC=C(F)C(F)=C(F)F (FCDC(F)C(F)DC(F)F) from CHOF_G4
+O=C(F)C=CF (ODC(F)CDCF) from CHOF_G4
+OC(=CF)OF (OC(DCF)OF) from CHOF_G4
+OCC(F)=CF (OCC(F)DCF) from CHOF_G4
+OC(O)=CF (OC(O)DCF) from CHOF_G4
+OC(F)(F)C=CF (OC(F)(F)CDCF) from CHOF_G4
+OC(=CF)C(F)F (OC(DCF)C(F)F) from CHOF_G4
+OC(=CF)CF (OC(DCF)CF) from CHOF_G4
+FC=C(F)OC(F)F (FCDC(F)OC(F)F) from CHOF_G4
+OC(F)C=CF (OC(F)CDCF) from CHOF_G4
+OC(F)C(F)=CF (OC(F)C(F)DCF) from CHOF_G4
+FC=C(F)C(F)C(F)F (FCDC(F)C(F)C(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)(F)F (FCDCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(=CF)OF (CC(DCF)OF) from CHOF_G4
+OC(F)(F)C(F)=CF (OC(F)(F)C(F)DCF) from CHOF_G4
+FC=CCC(F)F (FCDCCC(F)F) from CHOF_G4
+FC=CC(F)=CF (FCDCC(F)DCF) from CHOF_G4
+CCC(F)=CF (CCC(F)DCF) from CHOF_G4
+CC(=CF)CF (CC(DCF)CF) from CHOF_G4
+FC=CC(F)(F)F (FCDCC(F)(F)F) from CHOF_G4
+CCC=CF (CCCDCF) from CHOF_G4
+O=CC(F)=CF (ODCC(F)DCF) from CHOF_G4
+C=C(F)C(F)=CF (CDC(F)C(F)DCF) from CHOF_G4
+FC=CC=CF (FCDCCDCF) from CHOF_G4
+FC=COC(F)F (FCDCOC(F)F) from CHOF_G4
+FC=COC(F)(F)F (FCDCOC(F)(F)F) from CHOF_G4
+CC(F)(F)C=CF (CC(F)(F)CDCF) from CHOF_G4
+CC(C)=CF (CC(C)DCF) from CHOF_G4
+CC(=CF)C(F)F (CC(DCF)C(F)F) from CHOF_G4
+OCC=CF (OCCDCF) from CHOF_G4
+FC=C(F)C(F)C(F)(F)F (FCDC(F)C(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)C(F)(F)F (FCDCC(F)C(F)(F)F) from CHOF_G4
+FC=C(F)CC(F)F (FCDC(F)CC(F)F) from CHOF_G4
+C=CC=CF (CDCCDCF) from CHOF_G4
+C=C(F)C=CF (CDC(F)CDCF) from CHOF_G4
+FC=C(CF)CF (FCDC(CF)CF) from CHOF_G4
+FC=C(F)OCF (FCDC(F)OCF) from CHOF_G4
+FC=CCC(F)(F)F (FCDCCC(F)(F)F) from CHOF_G4
+FC=C(OF)C(F)(F)F (FCDC(OF)C(F)(F)F) from CHOF_G4
+FC=C(F)F (FCDC(F)F) from CHOF_G4
+FC=CCOF (FCDCCOF) from CHOF_G4
+C#CC=CF (C#CCDCF) from CHOF_G4
+C=CC(F)=CF (CDCC(F)DCF) from CHOF_G4
+FC=CC(F)(F)OF (FCDCC(F)(F)OF) from CHOF_G4
+OC(=CF)C(F)(F)F (OC(DCF)C(F)(F)F) from CHOF_G4
+FC=C(F)OOF (FCDC(F)OOF) from CHOF_G4
+FC=C(CF)OF (FCDC(CF)OF) from CHOF_G4
+FC=C(F)C(F)=CF (FCDC(F)C(F)DCF) from CHOF_G4
+CC(F)C(F)=CF (CC(F)C(F)DCF) from CHOF_G4
+FC=C(C(F)F)C(F)F (FCDC(C(F)F)C(F)F) from CHOF_G4
+FC=CC(F)F (FCDCC(F)F) from CHOF_G4
+FC=CCCF (FCDCCCF) from CHOF_G4
+FC#CC=CF (FC#CCDCF) from CHOF_G4
+FC=CC(F)(F)CF (FCDCC(F)(F)CF) from CHOF_G4
+FC=C(CF)C(F)F (FCDC(CF)C(F)F) from CHOF_G4
+FC=C1C=C1F (FCDC1CDC1F) from CHOF_G4
+FC=C1CC1F (FCDC1CC1F) from CHOF_G4
+FC=C1OC1F (FCDC1OC1F) from CHOF_G4
+FC=C1C(F)=C1F (FCDC1C(F)DC1F) from CHOF_G4
+FC=C1C(F)(F)C1(F)F (FCDC1C(F)(F)C1(F)F) from CHOF_G4
+FC=C1OO1 (FCDC1OO1) from CHOF_G4
+FC=C1CC1 (FCDC1CC1) from CHOF_G4
+FC=C1CC1(F)F (FCDC1CC1(F)F) from CHOF_G4
+FC=C1CO1 (FCDC1CO1) from CHOF_G4
+FC=C1C=C1 (FCDC1CDC1) from CHOF_G4
+FC=C1C(F)C1(F)F (FCDC1C(F)C1(F)F) from CHOF_G4
+FC=C1OC1(F)F (FCDC1OC1(F)F) from CHOF_G4
+FC=C1C(F)C1F (FCDC1C(F)C1F) from CHOF_G4
+CC(=CF)C(Cl)Cl (CC(DCF)C(Cl)Cl) from CHOFCl_G4
+OCC(Cl)=CF (OCC(Cl)DCF) from CHOFCl_G4
+FC=CC(Cl)=CCl (FCDCC(Cl)DCCl) from CHOFCl_G4
+FC=C(F)CCCl (FCDC(F)CCCl) from CHOFCl_G4
+FC=C(F)OCCl (FCDC(F)OCCl) from CHOFCl_G4
+FC=CC(F)=CCl (FCDCC(F)DCCl) from CHOFCl_G4
+FC=C(OF)OCl (FCDC(OF)OCl) from CHOFCl_G4
+CC(F)(Cl)C=CF (CC(F)(Cl)CDCF) from CHOFCl_G4
+OC(=CF)CCl (OC(DCF)CCl) from CHOFCl_G4
+O=C(Cl)C=CF (ODC(Cl)CDCF) from CHOFCl_G4
+OOC(Cl)=CF (OOC(Cl)DCF) from CHOFCl_G4
+CC(Cl)C(F)=CF (CC(Cl)C(F)DCF) from CHOFCl_G4
+C=CC(Cl)=CF (CDCC(Cl)DCF) from CHOFCl_G4
+FC=COC(F)Cl (FCDCOC(F)Cl) from CHOFCl_G4
+FC=CC(Cl)OCl (FCDCC(Cl)OCl) from CHOFCl_G4
+OC(Cl)(Cl)C=CF (OC(Cl)(Cl)CDCF) from CHOFCl_G4
+C=C(Cl)C(Cl)=CF (CDC(Cl)C(Cl)DCF) from CHOFCl_G4
+FC=CCCl (FCDCCCl) from CHOFCl_G4
+FC=CC(F)(F)Cl (FCDCC(F)(F)Cl) from CHOFCl_G4
+FC=C(Cl)C(Cl)Cl (FCDC(Cl)C(Cl)Cl) from CHOFCl_G4
+FC=C(Cl)OCl (FCDC(Cl)OCl) from CHOFCl_G4
+FC=C(F)OCl (FCDC(F)OCl) from CHOFCl_G4
+FC=CC(F)CCl (FCDCC(F)CCl) from CHOFCl_G4
+FC=C(OCl)OCl (FCDC(OCl)OCl) from CHOFCl_G4
+FC=COC(Cl)Cl (FCDCOC(Cl)Cl) from CHOFCl_G4
+FC=C(Cl)C=CCl (FCDC(Cl)CDCCl) from CHOFCl_G4
+FC=C(Cl)OCCl (FCDC(Cl)OCCl) from CHOFCl_G4
+FC=COCCl (FCDCOCCl) from CHOFCl_G4
+FC=CCCCl (FCDCCCCl) from CHOFCl_G4
+FC=CC=CCl (FCDCCDCCl) from CHOFCl_G4
+CC(Cl)C(Cl)=CF (CC(Cl)C(Cl)DCF) from CHOFCl_G4
+FC=C(Cl)CCCl (FCDC(Cl)CCCl) from CHOFCl_G4
+CC(Cl)=CF (CC(Cl)DCF) from CHOFCl_G4
+CCC(Cl)=CF (CCC(Cl)DCF) from CHOFCl_G4
+O=C(Cl)C(F)=CF (ODC(Cl)C(F)DCF) from CHOFCl_G4
+OC(=CF)C(F)Cl (OC(DCF)C(F)Cl) from CHOFCl_G4
+CC(=CF)CCl (CC(DCF)CCl) from CHOFCl_G4
+FC=C(CCl)OCl (FCDC(CCl)OCl) from CHOFCl_G4
+OC(Cl)=CF (OC(Cl)DCF) from CHOFCl_G4
+FC=C(Cl)Cl (FCDC(Cl)Cl) from CHOFCl_G4
+FC=C(CF)OCl (FCDC(CF)OCl) from CHOFCl_G4
+COC(Cl)=CF (COC(Cl)DCF) from CHOFCl_G4
+FC=CCC(F)Cl (FCDCCC(F)Cl) from CHOFCl_G4
+FC=CC(F)Cl (FCDCC(F)Cl) from CHOFCl_G4
+O=CC(Cl)=CF (ODCC(Cl)DCF) from CHOFCl_G4
+FC=CCC(Cl)Cl (FCDCCC(Cl)Cl) from CHOFCl_G4
+FC=C(CF)CCl (FCDC(CF)CCl) from CHOFCl_G4
+OC(Cl)C=CF (OC(Cl)CDCF) from CHOFCl_G4
+FC=CC(Cl)Cl (FCDCC(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(F)=CF (OC(Cl)C(F)DCF) from CHOFCl_G4
+FC=C(CCl)CCl (FCDC(CCl)CCl) from CHOFCl_G4
+CC(=CF)OCl (CC(DCF)OCl) from CHOFCl_G4
+C=C(Cl)C(F)=CF (CDC(Cl)C(F)DCF) from CHOFCl_G4
+C=C(Cl)C=CF (CDC(Cl)CDCF) from CHOFCl_G4
+FC=CCOCl (FCDCCOCl) from CHOFCl_G4
+OC(Cl)C(Cl)=CF (OC(Cl)C(Cl)DCF) from CHOFCl_G4
+FC=C(Cl)COCl (FCDC(Cl)COCl) from CHOFCl_G4
+FC=C(Cl)OOCl (FCDC(Cl)OOCl) from CHOFCl_G4
+FC=COOCl (FCDCOOCl) from CHOFCl_G4
+OC(F)(Cl)C=CF (OC(F)(Cl)CDCF) from CHOFCl_G4
+CC(Cl)C=CF (CC(Cl)CDCF) from CHOFCl_G4
+FC=C(F)Cl (FCDC(F)Cl) from CHOFCl_G4
+FC=C(Cl)CCl (FCDC(Cl)CCl) from CHOFCl_G4
+FC=C(F)CCl (FCDC(F)CCl) from CHOFCl_G4
+O=C(Cl)C(Cl)=CF (ODC(Cl)C(Cl)DCF) from CHOFCl_G4
+FC=CC(F)OCl (FCDCC(F)OCl) from CHOFCl_G4
+FC=C(F)C(Cl)Cl (FCDC(F)C(Cl)Cl) from CHOFCl_G4
+FC=CC=C(Cl)Cl (FCDCCDC(Cl)Cl) from CHOFCl_G4
+CC(Cl)(Cl)C=CF (CC(Cl)(Cl)CDCF) from CHOFCl_G4
+FC=CC(Cl)CCl (FCDCC(Cl)CCl) from CHOFCl_G4
+FC=COCl (FCDCOCl) from CHOFCl_G4
+FC=CC=C(F)Cl (FCDCCDC(F)Cl) from CHOFCl_G4
+CC(=CF)C(F)Cl (CC(DCF)C(F)Cl) from CHOFCl_G4
+FC=C(F)C(F)Cl (FCDC(F)C(F)Cl) from CHOFCl_G4
+FC=CC(Cl)(Cl)Cl (FCDCC(Cl)(Cl)Cl) from CHOFCl_G4
+OC(=CF)OCl (OC(DCF)OCl) from CHOFCl_G4
+FC=CCl (FCDCCl) from CHOFCl_G4
+FC=C(F)C=CCl (FCDC(F)CDCCl) from CHOFCl_G4
+OC(=CF)C(Cl)Cl (OC(DCF)C(Cl)Cl) from CHOFCl_G4
+FC=C(F)COCl (FCDC(F)COCl) from CHOFCl_G4
+FC=CC(F)(Cl)Cl (FCDCC(F)(Cl)Cl) from CHOFCl_G4
+FC=CC(F)(Cl)Br (FCDCC(F)(Cl)Br) from CHOFClBr_G4
+OC(=CF)C(Cl)Br (OC(DCF)C(Cl)Br) from CHOFClBr_G4
+CC(Br)(Br)C(Cl)=CF (CC(Br)(Br)C(Cl)DCF) from CHOFClBr_G4
+FC=CC(Cl)(Cl)Br (FCDCC(Cl)(Cl)Br) from CHOFClBr_G4
+O=C(Br)C(Cl)=CF (ODC(Br)C(Cl)DCF) from CHOFClBr_G4
+FC=CC(Cl)CBr (FCDCC(Cl)CBr) from CHOFClBr_G4
+FC=CC=C(Cl)Br (FCDCCDC(Cl)Br) from CHOFClBr_G4
+FC=C(F)C(Cl)Br (FCDC(F)C(Cl)Br) from CHOFClBr_G4
+FC=C(Cl)CBr (FCDC(Cl)CBr) from CHOFClBr_G4
+FC=C(Cl)OOBr (FCDC(Cl)OOBr) from CHOFClBr_G4
+FC=C(Cl)COBr (FCDC(Cl)COBr) from CHOFClBr_G4
+OC(Cl)(Br)C=CF (OC(Cl)(Br)CDCF) from CHOFClBr_G4
+CC(=CF)C(F)(Cl)Br (CC(DCF)C(F)(Cl)Br) from CHOFClBr_G4
+FC=C(CCl)CBr (FCDC(CCl)CBr) from CHOFClBr_G4
+OC(Br)C(Cl)=CF (OC(Br)C(Cl)DCF) from CHOFClBr_G4
+FC=CC(Cl)Br (FCDCC(Cl)Br) from CHOFClBr_G4
+FC=CC(Cl)(Br)Br (FCDCC(Cl)(Br)Br) from CHOFClBr_G4
+FC=CCC(Cl)Br (FCDCCC(Cl)Br) from CHOFClBr_G4
+FC=C(Cl)Br (FCDC(Cl)Br) from CHOFClBr_G4
+CC(Br)C(Cl)=CF (CC(Br)C(Cl)DCF) from CHOFClBr_G4
+CC(=CF)C(Cl)(Br)Br (CC(DCF)C(Cl)(Br)Br) from CHOFClBr_G4
+FC=C(CCl)OBr (FCDC(CCl)OBr) from CHOFClBr_G4
+CC(Cl)(Br)C=CF (CC(Cl)(Br)CDCF) from CHOFClBr_G4
+FC=C(Cl)C(Br)Br (FCDC(Cl)C(Br)Br) from CHOFClBr_G4
+FC=C(Cl)CCBr (FCDC(Cl)CCBr) from CHOFClBr_G4
+FC=C(Cl)OCBr (FCDC(Cl)OCBr) from CHOFClBr_G4
+FC=C(Cl)C=CBr (FCDC(Cl)CDCBr) from CHOFClBr_G4
+FC=COC(Cl)Br (FCDCOC(Cl)Br) from CHOFClBr_G4
+FC=C(OCl)OBr (FCDC(OCl)OBr) from CHOFClBr_G4
+FC=C(Cl)OBr (FCDC(Cl)OBr) from CHOFClBr_G4
+FC=C(Cl)C(Cl)Br (FCDC(Cl)C(Cl)Br) from CHOFClBr_G4
+FC=CC(Cl)OBr (FCDCC(Cl)OBr) from CHOFClBr_G4
+C=C(Br)C(Cl)=CF (CDC(Br)C(Cl)DCF) from CHOFClBr_G4
+FC=CC(Cl)=CBr (FCDCC(Cl)DCBr) from CHOFClBr_G4
+CC(=CF)C(Cl)(Cl)Br (CC(DCF)C(Cl)(Cl)Br) from CHOFClBr_G4
+CC(=CF)C(Cl)Br (CC(DCF)C(Cl)Br) from CHOFClBr_G4
+FC=CC(F)(Br)OBr (FCDCC(F)(Br)OBr) from CHOFBr_G4
+FC=C(F)COBr (FCDC(F)COBr) from CHOFBr_G4
+FC=C(Br)C(Br)CBr (FCDC(Br)C(Br)CBr) from CHOFBr_G4
+COC(Br)=CF (COC(Br)DCF) from CHOFBr_G4
+FC=C(F)C(F)=CBr (FCDC(F)C(F)DCBr) from CHOFBr_G4
+FC=C(F)C=CBr (FCDC(F)CDCBr) from CHOFBr_G4
+FC=COC(Br)(Br)Br (FCDCOC(Br)(Br)Br) from CHOFBr_G4
+FC=C(F)OOBr (FCDC(F)OOBr) from CHOFBr_G4
+FC=CBr (FCDCBr) from CHOFBr_G4
+FC=CC(Br)Br (FCDCC(Br)Br) from CHOFBr_G4
+OC(Br)C(F)=CF (OC(Br)C(F)DCF) from CHOFBr_G4
+OC(=CF)OBr (OC(DCF)OBr) from CHOFBr_G4
+FC=C(F)C(Br)(Br)Br (FCDC(F)C(Br)(Br)Br) from CHOFBr_G4
+FC=CC(Br)(Br)OBr (FCDCC(Br)(Br)OBr) from CHOFBr_G4
+FC=CCC(Br)Br (FCDCCC(Br)Br) from CHOFBr_G4
+FC=C(CBr)CBr (FCDC(CBr)CBr) from CHOFBr_G4
+FC=C(F)C(F)Br (FCDC(F)C(F)Br) from CHOFBr_G4
+OC(Br)=CF (OC(Br)DCF) from CHOFBr_G4
+CC(=CF)C(F)Br (CC(DCF)C(F)Br) from CHOFBr_G4
+OC(Br)C(Br)=CF (OC(Br)C(Br)DCF) from CHOFBr_G4
+FC=CC=C(F)Br (FCDCCDC(F)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)=CF (CC(Br)(Br)C(F)DCF) from CHOFBr_G4
+CCC(Br)=CF (CCC(Br)DCF) from CHOFBr_G4
+FC=CCC(F)(F)Br (FCDCCC(F)(F)Br) from CHOFBr_G4
+FC=COBr (FCDCOBr) from CHOFBr_G4
+CC(=CF)C(Br)(Br)Br (CC(DCF)C(Br)(Br)Br) from CHOFBr_G4
+FC=COC(F)(Br)Br (FCDCOC(F)(Br)Br) from CHOFBr_G4
+C=C(Br)C(F)=CF (CDC(Br)C(F)DCF) from CHOFBr_G4
+FC=CC(F)OBr (FCDCC(F)OBr) from CHOFBr_G4
+FC=C(Br)C(Br)Br (FCDC(Br)C(Br)Br) from CHOFBr_G4
+FC=C(F)CBr (FCDC(F)CBr) from CHOFBr_G4
+CC(=CF)C(F)(Br)Br (CC(DCF)C(F)(Br)Br) from CHOFBr_G4
+FC=C(F)Br (FCDC(F)Br) from CHOFBr_G4
+FC=C(Br)COBr (FCDC(Br)COBr) from CHOFBr_G4
+FC=C(F)C(Br)=CBr (FCDC(F)C(Br)DCBr) from CHOFBr_G4
+FC=C(CBr)C(F)Br (FCDC(CBr)C(F)Br) from CHOFBr_G4
+FC=C(Br)C(Br)=CBr (FCDC(Br)C(Br)DCBr) from CHOFBr_G4
+CC(Br)=CF (CC(Br)DCF) from CHOFBr_G4
+FC=C(CBr)C(Br)Br (FCDC(CBr)C(Br)Br) from CHOFBr_G4
+FC=C(Br)OOBr (FCDC(Br)OOBr) from CHOFBr_G4
+FC=C(Br)C(Br)(Br)Br (FCDC(Br)C(Br)(Br)Br) from CHOFBr_G4
+FC=COOBr (FCDCOOBr) from CHOFBr_G4
+FC=C(OBr)C(F)F (FCDC(OBr)C(F)F) from CHOFBr_G4
+OC(=CF)C(F)(Br)Br (OC(DCF)C(F)(Br)Br) from CHOFBr_G4
+FC=CCOBr (FCDCCOBr) from CHOFBr_G4
+FC=C(Br)CBr (FCDC(Br)CBr) from CHOFBr_G4
+FC=C(F)C(Br)Br (FCDC(F)C(Br)Br) from CHOFBr_G4
+FC=CC=C(Br)Br (FCDCCDC(Br)Br) from CHOFBr_G4
+FC=C(Br)CC(Br)Br (FCDC(Br)CC(Br)Br) from CHOFBr_G4
+OOC(Br)=CF (OOC(Br)DCF) from CHOFBr_G4
+C=CC(Br)=CF (CDCC(Br)DCF) from CHOFBr_G4
+FC=C(Br)C=CBr (FCDC(Br)CDCBr) from CHOFBr_G4
+FC=CCC(Br)(Br)Br (FCDCCC(Br)(Br)Br) from CHOFBr_G4
+FC=C(F)C(Br)OBr (FCDC(F)C(Br)OBr) from CHOFBr_G4
+FC=C(F)OC(Br)Br (FCDC(F)OC(Br)Br) from CHOFBr_G4
+FC=CC(F)(F)OBr (FCDCC(F)(F)OBr) from CHOFBr_G4
+FC=CC(Br)CBr (FCDCC(Br)CBr) from CHOFBr_G4
+CC(=CF)OBr (CC(DCF)OBr) from CHOFBr_G4
+FC=C(CBr)C(F)F (FCDC(CBr)C(F)F) from CHOFBr_G4
+FC=CC(F)(Br)Br (FCDCC(F)(Br)Br) from CHOFBr_G4
+OC(=CF)C(Br)Br (OC(DCF)C(Br)Br) from CHOFBr_G4
+O=C(Br)C=CF (ODC(Br)CDCF) from CHOFBr_G4
+FC=C(CF)C(F)Br (FCDC(CF)C(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(F)=CF (OC(Br)(Br)C(F)DCF) from CHOFBr_G4
+FC=C(OBr)C(F)Br (FCDC(OBr)C(F)Br) from CHOFBr_G4
+O=C(Br)C(Br)=CF (ODC(Br)C(Br)DCF) from CHOFBr_G4
+FC=C(F)C(F)(F)Br (FCDC(F)C(F)(F)Br) from CHOFBr_G4
+FC=C(CF)CBr (FCDC(CF)CBr) from CHOFBr_G4
+FC=C(F)C(F)OBr (FCDC(F)C(F)OBr) from CHOFBr_G4
+OC(F)(Br)C(F)=CF (OC(F)(Br)C(F)DCF) from CHOFBr_G4
+FC=CC(Br)=C(Br)Br (FCDCC(Br)DC(Br)Br) from CHOFBr_G4
+OCC(Br)=CF (OCC(Br)DCF) from CHOFBr_G4
+FC=COC(F)(F)Br (FCDCOC(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)C=CF (CC(F)(Br)CDCF) from CHOFBr_G4
+OC(=CF)C(F)(F)Br (OC(DCF)C(F)(F)Br) from CHOFBr_G4
+CC(Br)(Br)C=CF (CC(Br)(Br)CDCF) from CHOFBr_G4
+FC=CC(F)Br (FCDCC(F)Br) from CHOFBr_G4
+FC=CC(F)=C(Br)Br (FCDCC(F)DC(Br)Br) from CHOFBr_G4
+CC(Br)(Br)C(Br)=CF (CC(Br)(Br)C(Br)DCF) from CHOFBr_G4
+FC=CCC(F)Br (FCDCCC(F)Br) from CHOFBr_G4
+FC=CC(Br)=CBr (FCDCC(Br)DCBr) from CHOFBr_G4
+OC(Br)(Br)C=CF (OC(Br)(Br)CDCF) from CHOFBr_G4
+FC=C(CF)OBr (FCDC(CF)OBr) from CHOFBr_G4
+C=C(Br)C(Br)=CF (CDC(Br)C(Br)DCF) from CHOFBr_G4
+FC=C(F)C(F)CBr (FCDC(F)C(F)CBr) from CHOFBr_G4
+CC(=CF)C(F)(F)Br (CC(DCF)C(F)(F)Br) from CHOFBr_G4
+FC=C(OBr)C(Br)Br (FCDC(OBr)C(Br)Br) from CHOFBr_G4
+FC=C(F)OC(F)Br (FCDC(F)OC(F)Br) from CHOFBr_G4
+CC(F)(Br)C(F)=CF (CC(F)(Br)C(F)DCF) from CHOFBr_G4
+OC(Br)(Br)C(Br)=CF (OC(Br)(Br)C(Br)DCF) from CHOFBr_G4
+CC(=CF)C(Br)Br (CC(DCF)C(Br)Br) from CHOFBr_G4
+FC=CCC(F)(Br)Br (FCDCCC(F)(Br)Br) from CHOFBr_G4
+FC=CC(F)(F)CBr (FCDCC(F)(F)CBr) from CHOFBr_G4
+FC=CC(Br)C(Br)Br (FCDCC(Br)C(Br)Br) from CHOFBr_G4
+FC=COC(Br)Br (FCDCOC(Br)Br) from CHOFBr_G4
+FC=CC(Br)OBr (FCDCC(Br)OBr) from CHOFBr_G4
+CC(=CF)CBr (CC(DCF)CBr) from CHOFBr_G4
+FC=C(F)C(Br)CBr (FCDC(F)C(Br)CBr) from CHOFBr_G4
+OC(=CF)C(F)Br (OC(DCF)C(F)Br) from CHOFBr_G4
+FC=CC(F)C(Br)Br (FCDCC(F)C(Br)Br) from CHOFBr_G4
+FC=CC=CBr (FCDCCDCBr) from CHOFBr_G4
+FC=CCCBr (FCDCCCBr) from CHOFBr_G4
+FC=C(Br)OBr (FCDC(Br)OBr) from CHOFBr_G4
+FC=C(OBr)OBr (FCDC(OBr)OBr) from CHOFBr_G4
+CC(Br)C(F)=CF (CC(Br)C(F)DCF) from CHOFBr_G4
+CC(Br)C=CF (CC(Br)CDCF) from CHOFBr_G4
+FC=COCBr (FCDCOCBr) from CHOFBr_G4
+FC=CC(F)=C(F)Br (FCDCC(F)DC(F)Br) from CHOFBr_G4
+FC=C(F)CC(F)Br (FCDC(F)CC(F)Br) from CHOFBr_G4
+FC=C(Br)OCBr (FCDC(Br)OCBr) from CHOFBr_G4
+OC(F)(Br)C=CF (OC(F)(Br)CDCF) from CHOFBr_G4
+FC=C(Br)CCBr (FCDC(Br)CCBr) from CHOFBr_G4
+FC=C(CF)C(Br)Br (FCDC(CF)C(Br)Br) from CHOFBr_G4
+FC=CC(Br)(Br)Br (FCDCC(Br)(Br)Br) from CHOFBr_G4
+OC(=CF)C(Br)(Br)Br (OC(DCF)C(Br)(Br)Br) from CHOFBr_G4
+C=C(Br)C=CF (CDC(Br)CDCF) from CHOFBr_G4
+FC=CC(F)CBr (FCDCC(F)CBr) from CHOFBr_G4
+O=C(Br)C(F)=CF (ODC(Br)C(F)DCF) from CHOFBr_G4
+FC=C(F)OBr (FCDC(F)OBr) from CHOFBr_G4
+FC=CC(F)(F)Br (FCDCC(F)(F)Br) from CHOFBr_G4
+FC=C(F)C(F)(Br)Br (FCDC(F)C(F)(Br)Br) from CHOFBr_G4
+FC=CCBr (FCDCCBr) from CHOFBr_G4
+FC=COC(F)Br (FCDCOC(F)Br) from CHOFBr_G4
+CC(Br)C(Br)=CF (CC(Br)C(Br)DCF) from CHOFBr_G4
+FC=C(F)C=C(F)Br (FCDC(F)CDC(F)Br) from CHOFBr_G4
+FC=C(CBr)OBr (FCDC(CBr)OBr) from CHOFBr_G4
+FC=C(F)CC(Br)Br (FCDC(F)CC(Br)Br) from CHOFBr_G4
+FC=CC(Br)(Br)CBr (FCDCC(Br)(Br)CBr) from CHOFBr_G4
+FC=CC(F)C(F)Br (FCDCC(F)C(F)Br) from CHOFBr_G4
+OC(Br)C=CF (OC(Br)CDCF) from CHOFBr_G4
+FC=C(Br)C=C(Br)Br (FCDC(Br)CDC(Br)Br) from CHOFBr_G4
+OC(=CF)CBr (OC(DCF)CBr) from CHOFBr_G4
+FC=C(F)C=C(Br)Br (FCDC(F)CDC(Br)Br) from CHOFBr_G4
+FC=C(Br)Br (FCDC(Br)Br) from CHOFBr_G4
+FC=C(OF)OBr (FCDC(OF)OBr) from CHOFBr_G4
+FC=CC(F)=CBr (FCDCC(F)DCBr) from CHOFBr_G4
+FC=C(F)OCBr (FCDC(F)OCBr) from CHOFBr_G4
+O=CC(Br)=CF (ODCC(Br)DCF) from CHOFBr_G4
+FC=CC(F)(Br)CBr (FCDCC(F)(Br)CBr) from CHOFBr_G4
+FC=C(Br)C(Br)OBr (FCDC(Br)C(Br)OBr) from CHOFBr_G4
+FC=C(Br)OC(Br)Br (FCDC(Br)OC(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 207,
     label = "COBrOO",
     group = 
 """
@@ -4227,7 +5531,7 @@ CHOClBr_G4  |         3
 )
 
 entry(
-    index = 190,
+    index = 208,
     label = "CdBrCO",
     group = 
 """
@@ -4255,7 +5559,7 @@ CHOClBr_G4  |         27
 )
 
 entry(
-    index = 191,
+    index = 209,
     label = "CdBrCddO",
     group = 
 """
@@ -4283,7 +5587,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 192,
+    index = 210,
     label = "Cd(Cdd-Od)BrO",
     group = 
 """
@@ -4309,7 +5613,7 @@ CHOBr_G4 |         2
 )
 
 entry(
-    index = 193,
+    index = 211,
     label = "COClOO",
     group = 
 """
@@ -4336,7 +5640,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 194,
+    index = 212,
     label = "CdCClO",
     group = 
 """
@@ -4364,7 +5668,7 @@ CHOClBr_G4  |         20
 )
 
 entry(
-    index = 195,
+    index = 213,
     label = "CdClCddO",
     group = 
 """
@@ -4392,7 +5696,7 @@ CHOClBr_G4  |         2
 )
 
 entry(
-    index = 196,
+    index = 214,
     label = "Cd(Cdd-Od)ClO",
     group = 
 """
@@ -4419,7 +5723,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 197,
+    index = 215,
     label = "COFOO",
     group = 
 """
@@ -4446,7 +5750,41 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 198,
+    index = 216,
+    label = "CO-F1sO2dO2s",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   O2s u0 {1,S}
+4   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([35.895,44.4625,50.6461,54.8117,59.9133,62.7644,64.7771],'J/(mol*K)','+|-',[2.26397,2.36661,2.21887,2.0603,1.78629,1.58622,3.06589]),
+        H298 = (-419.614,'kJ/mol','+|-',10.9285),
+        S298 = (151.772,'J/(mol*K)','+|-',6.22155),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)F (FCOOH) from NCSU_C2_C8_PFAS
+O=C(O)F (FC_O_OH) from PFCA_thermo
+O=C(F)OF (ODC(F)OF) from CHOF_G4
+COC(=O)F (COC(DO)F) from CHOF_G4
+O=C(O)F (ODC(O)F) from CHOF_G4
+O=C(F)OCF (ODC(F)OCF) from CHOF_G4
+O=C(F)OC(F)(F)F (ODC(F)OC(F)(F)F) from CHOF_G4
+O=C(F)OC(F)F (ODC(F)OC(F)F) from CHOF_G4
+O=C(F)OCl (ODC(F)OCl) from CHOFCl_G4
+O=C(F)OBr (ODC(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 217,
     label = "CdCFO",
     group = 
 """
@@ -4474,7 +5812,7 @@ CHOFBr_G4   |         26
 )
 
 entry(
-    index = 199,
+    index = 218,
     label = "CdCddFO",
     group = 
 """
@@ -4501,7 +5839,7 @@ CHOFBr_G4 |         3
 )
 
 entry(
-    index = 200,
+    index = 219,
     label = "Cd(Cdd-Od)FO",
     group = 
 """
@@ -4528,7 +5866,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 201,
+    index = 220,
     label = "COBrCO",
     group = 
 """
@@ -4556,7 +5894,7 @@ CHOClBr_G4  |         8
 )
 
 entry(
-    index = 202,
+    index = 221,
     label = "COBrCsO",
     group = 
 """
@@ -4584,7 +5922,7 @@ CHOClBr_G4  |         14
 )
 
 entry(
-    index = 203,
+    index = 222,
     label = "CdBrCC",
     group = 
 """
@@ -4612,7 +5950,7 @@ CHOClBr_G4  |         20
 )
 
 entry(
-    index = 204,
+    index = 223,
     label = "CdBrCsCd",
     group = 
 """
@@ -4640,7 +5978,7 @@ CHOClBr_G4  |         41
 )
 
 entry(
-    index = 205,
+    index = 224,
     label = "CdBrCtCd",
     group = 
 """
@@ -4667,7 +6005,7 @@ CHOClBr_G4 |         2
 )
 
 entry(
-    index = 206,
+    index = 225,
     label = "CdBrCddC",
     group = 
 """
@@ -4695,7 +6033,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 207,
+    index = 226,
     label = "Cd(Cdd-Od)CBr",
     group = 
 """
@@ -4724,7 +6062,7 @@ CHOClBr_G4  |         3
 )
 
 entry(
-    index = 208,
+    index = 227,
     label = "COCClO",
     group = 
 """
@@ -4751,7 +6089,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 209,
+    index = 228,
     label = "COCsClO",
     group = 
 """
@@ -4778,7 +6116,7 @@ CHOClBr_G4 |         6
 )
 
 entry(
-    index = 210,
+    index = 229,
     label = "CdCCCl",
     group = 
 """
@@ -4806,7 +6144,7 @@ CHOClBr_G4  |         18
 )
 
 entry(
-    index = 211,
+    index = 230,
     label = "CdCsCdCl",
     group = 
 """
@@ -4834,7 +6172,7 @@ CHOClBr_G4  |         60
 )
 
 entry(
-    index = 212,
+    index = 231,
     label = "CdCtCdCl",
     group = 
 """
@@ -4862,7 +6200,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 213,
+    index = 232,
     label = "CdCddCCl",
     group = 
 """
@@ -4890,7 +6228,7 @@ CHOClBr_G4  |         7
 )
 
 entry(
-    index = 214,
+    index = 233,
     label = "Cd(Cdd-Od)CCl",
     group = 
 """
@@ -4917,7 +6255,7 @@ CHOFCl_G4 |         3
 )
 
 entry(
-    index = 215,
+    index = 234,
     label = "COCFO",
     group = 
 """
@@ -4944,7 +6282,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 216,
+    index = 235,
     label = "COCsFO",
     group = 
 """
@@ -4972,7 +6310,93 @@ CHOFBr_G4   |         9
 )
 
 entry(
-    index = 217,
+    index = 236,
+    label = "CO-CsF1sO2d",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   F1s u0 {1,S}
+4   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([38.4713,43.3592,47.2939,50.2174,54.4572,57.3401,61.1028],'J/(mol*K)','+|-',[0.612706,0.640483,0.6005,0.557584,0.483428,0.429283,0.829732]),
+        H298 = (-355.117,'kJ/mol','+|-',2.95762),
+        S298 = (168.164,'J/(mol*K)','+|-',1.68376),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)C(F)(F)F (CF3CFO) from C1_C2_Fluorine
+O=C(F)C(F)(F)F (CF3COF) from C1_C3_hydrofluorocarbons_NIST
+O=C(F)C(F)(F)F (PF2acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)F (PF3acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF4acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)F (CF3CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)F (C2F5CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13CFO) from PFCA_thermo
+O=C(F)C(F)(F)F (ODC(F)C(F)(F)F) from CHOF_G4
+O=C(F)C(O)F (ODC(F)C(O)F) from CHOF_G4
+O=C(F)C(F)C(F)(F)F (ODC(F)C(F)C(F)(F)F) from CHOF_G4
+O=C(F)CF (ODC(F)CF) from CHOF_G4
+O=C(F)C(F)(F)OF (ODC(F)C(F)(F)OF) from CHOF_G4
+O=C(F)C(F)OF (ODC(F)C(F)OF) from CHOF_G4
+O=C(F)CC(F)(F)F (ODC(F)CC(F)(F)F) from CHOF_G4
+CCC(=O)F (CCC(DO)F) from CHOF_G4
+O=C(F)C(F)(F)CF (ODC(F)C(F)(F)CF) from CHOF_G4
+O=C(F)C(F)(F)C(F)(F)F (ODC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+O=C(F)C(F)CF (ODC(F)C(F)CF) from CHOF_G4
+CC(=O)F (CC(DO)F) from CHOF_G4
+CC(F)(F)C(=O)F (CC(F)(F)C(DO)F) from CHOF_G4
+O=C(F)C(F)F (ODC(F)C(F)F) from CHOF_G4
+O=C(F)C(O)(F)F (ODC(F)C(O)(F)F) from CHOF_G4
+CC(F)C(=O)F (CC(F)C(DO)F) from CHOF_G4
+O=C(F)C(F)C(F)F (ODC(F)C(F)C(F)F) from CHOF_G4
+O=C(F)CC(F)F (ODC(F)CC(F)F) from CHOF_G4
+O=C(F)CCF (ODC(F)CCF) from CHOF_G4
+O=C(F)COF (ODC(F)COF) from CHOF_G4
+O=C(F)CO (ODC(F)CO) from CHOF_G4
+O=C(F)C(F)(F)C(F)F (ODC(F)C(F)(F)C(F)F) from CHOF_G4
+O=C(F)C(O)(F)Cl (ODC(F)C(O)(F)Cl) from CHOFCl_G4
+O=C(F)C(F)OCl (ODC(F)C(F)OCl) from CHOFCl_G4
+O=C(F)C(O)Cl (ODC(F)C(O)Cl) from CHOFCl_G4
+O=C(F)C(Cl)OCl (ODC(F)C(Cl)OCl) from CHOFCl_G4
+O=C(F)C(O)(Cl)Cl (ODC(F)C(O)(Cl)Cl) from CHOFCl_G4
+O=C(F)COCl (ODC(F)COCl) from CHOFCl_G4
+O=C(F)C(O)(Cl)Br (ODC(F)C(O)(Cl)Br) from CHOFClBr_G4
+O=C(F)C(Cl)OBr (ODC(F)C(Cl)OBr) from CHOFClBr_G4
+O=C(F)COBr (ODC(F)COBr) from CHOFBr_G4
+O=C(F)C(Br)OBr (ODC(F)C(Br)OBr) from CHOFBr_G4
+O=C(F)C(F)(Br)OBr (ODC(F)C(F)(Br)OBr) from CHOFBr_G4
+O=C(F)C(O)(Br)Br (ODC(F)C(O)(Br)Br) from CHOFBr_G4
+O=C(F)C(O)Br (ODC(F)C(O)Br) from CHOFBr_G4
+O=C(F)C(F)OBr (ODC(F)C(F)OBr) from CHOFBr_G4
+O=C(F)C(F)(F)OBr (ODC(F)C(F)(F)OBr) from CHOFBr_G4
+O=C(F)C(Br)(Br)OBr (ODC(F)C(Br)(Br)OBr) from CHOFBr_G4
+O=C(F)C(O)(F)Br (ODC(F)C(O)(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 237,
     label = "CdCCF",
     group = 
 """
@@ -5000,7 +6424,7 @@ CHOFBr_G4   |         27
 )
 
 entry(
-    index = 218,
+    index = 238,
     label = "CdCsCdF",
     group = 
 """
@@ -5028,7 +6452,383 @@ CHOFBr_G4   |         97
 )
 
 entry(
-    index = 219,
+    index = 239,
+    label = "Cd-CdCsF1s",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   F1s u0 {1,S}
+3   Cs  u0 {1,S}
+4   Cd  u0 {1,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([29.0953,32.9117,35.6114,37.6632,40.8176,42.7236,44.6056],'J/(mol*K)','+|-',[0.244019,0.255082,0.239159,0.222066,0.192533,0.170969,0.330453]),
+        H298 = (-153.615,'kJ/mol','+|-',1.17792),
+        S298 = (52.6467,'J/(mol*K)','+|-',0.670582),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C(F)C(F)(F)F (CH2CFCF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)C(F)(F)F (C3F6) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)C(F)(F)F (PF3ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)F (PF4ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)F (CF3CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)F (C2F5CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFCF2) from PFCA_thermo
+FC=C(F)C(F)(F)C(F)(F)F (FCDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCCC(F)=C(F)F (FCCC(F)DC(F)F) from CHOF_G4
+OC=C(F)CF (OCDC(F)CF) from CHOF_G4
+OC(F)(F)C(F)=C(F)F (OC(F)(F)C(F)DC(F)F) from CHOF_G4
+C=C(F)C(F)CF (CDC(F)C(F)CF) from CHOF_G4
+FC=C(F)COF (FCDC(F)COF) from CHOF_G4
+C=C(F)C(F)(F)C(F)F (CDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)(F)F (FC(DCC(F)F)C(F)(F)F) from CHOF_G4
+FC=C(F)CF (FCDC(F)CF) from CHOF_G4
+C=C(F)C(F)OF (CDC(F)C(F)OF) from CHOF_G4
+FCC(F)=C(F)C(F)(F)F (FCC(F)DC(F)C(F)(F)F) from CHOF_G4
+FC=C(F)CCF (FCDC(F)CCF) from CHOF_G4
+FCC=C(F)C(F)F (FCCDC(F)C(F)F) from CHOF_G4
+CC=C(F)C(F)F (CCDC(F)C(F)F) from CHOF_G4
+FC(=C(F)C(F)(F)F)C(F)(F)F (FC(DC(F)C(F)(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)=COF (FCC(F)DCOF) from CHOF_G4
+FC=C(F)C(F)OF (FCDC(F)C(F)OF) from CHOF_G4
+FC(F)=C(F)C(F)C(F)(F)F (FC(F)DC(F)C(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(C)(F)F (CDC(F)C(C)(F)F) from CHOF_G4
+FOC(F)(F)C(F)=C(F)F (FOC(F)(F)C(F)DC(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)(F)F (CDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)=C(F)F (CC(F)DC(F)F) from CHOF_G4
+CC=C(F)CF (CCDC(F)CF) from CHOF_G4
+CC(F)=CF (CC(F)DCF) from CHOF_G4
+FC=C(F)C(F)(F)C(F)F (FCDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)F (FC(F)DC(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)F (CDC(F)C(F)F) from CHOF_G4
+FC=C(F)C(F)CF (FCDC(F)C(F)CF) from CHOF_G4
+CC(F)=C(F)C(F)(F)F (CC(F)DC(F)C(F)(F)F) from CHOF_G4
+CCC(F)=C(F)F (CCC(F)DC(F)F) from CHOF_G4
+OC(F)=C(F)CF (OC(F)DC(F)CF) from CHOF_G4
+FCC(F)=C(F)OF (FCC(F)DC(F)OF) from CHOF_G4
+CC(F)=C(C)F (CC(F)DC(C)F) from CHOF_G4
+FC=C(F)C(F)(F)F (FCDC(F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)(F)CF (FCDC(F)C(F)(F)CF) from CHOF_G4
+FOC=C(F)C(F)(F)F (FOCDC(F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)F (FCDC(F)C(F)F) from CHOF_G4
+FC(=C(F)C(F)F)C(F)F (FC(DC(F)C(F)F)C(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)F (FC(F)DC(F)CC(F)F) from CHOF_G4
+CC(F)(F)C(F)=CF (CC(F)(F)C(F)DCF) from CHOF_G4
+FOC=C(F)C(F)F (FOCDC(F)C(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)F (FC(DCC(F)F)C(F)F) from CHOF_G4
+CC=C(F)C(F)(F)F (CCDC(F)C(F)(F)F) from CHOF_G4
+FCC(F)=C(F)CF (FCC(F)DC(F)CF) from CHOF_G4
+C=C(F)C(F)C(F)F (CDC(F)C(F)C(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)(F)F (FC(DCC(F)(F)F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)(F)OF (FCDC(F)C(F)(F)OF) from CHOF_G4
+FOCC(F)=C(F)F (FOCC(F)DC(F)F) from CHOF_G4
+FC=C(F)CC(F)(F)F (FCDC(F)CC(F)(F)F) from CHOF_G4
+C=C(F)C(C)F (CDC(F)C(C)F) from CHOF_G4
+C=C(F)C(O)(F)F (CDC(F)C(O)(F)F) from CHOF_G4
+FCC(F)=C(F)F (FCC(F)DC(F)F) from CHOF_G4
+CC(F)=CC(F)(F)F (CC(F)DCC(F)(F)F) from CHOF_G4
+OC(F)C(F)=C(F)F (OC(F)C(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)(F)F (FC(F)DC(F)CC(F)(F)F) from CHOF_G4
+FC(=C(F)C(F)(F)F)C(F)F (FC(DC(F)C(F)(F)F)C(F)F) from CHOF_G4
+C=C(F)CO (CDC(F)CO) from CHOF_G4
+OCC(F)=C(F)F (OCC(F)DC(F)F) from CHOF_G4
+FCC(F)=C(F)C(F)F (FCC(F)DC(F)C(F)F) from CHOF_G4
+CC(F)=C(F)CF (CC(F)DC(F)CF) from CHOF_G4
+OC=C(F)C(F)F (OCDC(F)C(F)F) from CHOF_G4
+FCC(F)C(F)=C(F)F (FCC(F)C(F)DC(F)F) from CHOF_G4
+OC(F)=C(F)C(F)F (OC(F)DC(F)C(F)F) from CHOF_G4
+CC(F)=C(F)OF (CC(F)DC(F)OF) from CHOF_G4
+CC(F)C(F)=C(F)F (CC(F)C(F)DC(F)F) from CHOF_G4
+FOC(F)=C(F)C(F)F (FOC(F)DC(F)C(F)F) from CHOF_G4
+CC(F)=CC(F)F (CC(F)DCC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)F (FC(F)DC(F)C(F)F) from CHOF_G4
+FOC(F)C(F)=C(F)F (FOC(F)C(F)DC(F)F) from CHOF_G4
+FCC(F)=CC(F)(F)F (FCC(F)DCC(F)(F)F) from CHOF_G4
+OCC(F)=CF (OCC(F)DCF) from CHOF_G4
+FC(F)=C(F)C(F)C(F)F (FC(F)DC(F)C(F)C(F)F) from CHOF_G4
+C=C(F)CC (CDC(F)CC) from CHOF_G4
+C=C(C)F (CDC(C)F) from CHOF_G4
+CC(F)=C(F)C(F)F (CC(F)DC(F)C(F)F) from CHOF_G4
+FCC=C(F)C(F)(F)F (FCCDC(F)C(F)(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)F (FC(DCC(F)(F)F)C(F)F) from CHOF_G4
+OC(F)C(F)=CF (OC(F)C(F)DCF) from CHOF_G4
+C=C(F)C(F)(F)OF (CDC(F)C(F)(F)OF) from CHOF_G4
+FC=C(F)C(F)C(F)F (FCDC(F)C(F)C(F)F) from CHOF_G4
+C=C(F)C(O)F (CDC(F)C(O)F) from CHOF_G4
+C=C(F)CF (CDC(F)CF) from CHOF_G4
+C=C(F)CC(F)(F)F (CDC(F)CC(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)=CF (OC(F)(F)C(F)DCF) from CHOF_G4
+FCC(F)=CC(F)F (FCC(F)DCC(F)F) from CHOF_G4
+OC=C(F)C(F)(F)F (OCDC(F)C(F)(F)F) from CHOF_G4
+CCC(F)=CF (CCC(F)DCF) from CHOF_G4
+C=C(F)C(F)(F)CF (CDC(F)C(F)(F)CF) from CHOF_G4
+CC=C(C)F (CCDC(C)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)(F)F (FC(F)DC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)=C(O)F (CC(F)DC(O)F) from CHOF_G4
+CC(F)=CCF (CC(F)DCCF) from CHOF_G4
+FCC(F)(F)C(F)=C(F)F (FCC(F)(F)C(F)DC(F)F) from CHOF_G4
+FC=C(F)C(F)C(F)(F)F (FCDC(F)C(F)C(F)(F)F) from CHOF_G4
+FCC=C(F)CF (FCCDC(F)CF) from CHOF_G4
+FC=C(F)CC(F)F (FCDC(F)CC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)F (FC(F)DC(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)=COF (CC(F)DCOF) from CHOF_G4
+OC(F)=C(F)C(F)(F)F (OC(F)DC(F)C(F)(F)F) from CHOF_G4
+C=C(F)CCF (CDC(F)CCF) from CHOF_G4
+C=C(F)CC(F)F (CDC(F)CC(F)F) from CHOF_G4
+C=C(F)C(F)C(F)(F)F (CDC(F)C(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)=C(F)F (CC(F)(F)C(F)DC(F)F) from CHOF_G4
+CC(F)=CO (CC(F)DCO) from CHOF_G4
+C=C(F)COF (CDC(F)COF) from CHOF_G4
+CC(F)C(F)=CF (CC(F)C(F)DCF) from CHOF_G4
+C=C(F)C(F)(F)F (CDC(F)C(F)(F)F) from CHOF_G4
+FOC(F)=C(F)C(F)(F)F (FOC(F)DC(F)C(F)(F)F) from CHOF_G4
+FC1=CC1 (FC1DCC1) from CHOF_G4
+FC1=CC1(F)F (FC1DCC1(F)F) from CHOF_G4
+OC1C(F)=C1F (OC1C(F)DC1F) from CHOF_G4
+FCC1=C(F)C1(F)F (FCC1DC(F)C1(F)F) from CHOF_G4
+FC1=CCC1(F)F (FC1DCCC1(F)F) from CHOF_G4
+FC1=CC1C(F)F (FC1DCC1C(F)F) from CHOF_G4
+FC1=C(F)OC1 (FC1DC(F)OC1) from CHOF_G4
+FCC1(F)C=C1F (FCC1(F)CDC1F) from CHOF_G4
+FC1=C(F)C1C(F)(F)F (FC1DC(F)C1C(F)(F)F) from CHOF_G4
+OC1=C(F)C1F (OC1DC(F)C1F) from CHOF_G4
+FC1=CC1(F)C(F)F (FC1DCC1(F)C(F)F) from CHOF_G4
+CC1(F)C=C1F (CC1(F)CDC1F) from CHOF_G4
+CC1(F)C(F)=C1F (CC1(F)C(F)DC1F) from CHOF_G4
+FC1=C(F)C(F)(F)O1 (FC1DC(F)C(F)(F)O1) from CHOF_G4
+FC1=C(F)C(F)O1 (FC1DC(F)C(F)O1) from CHOF_G4
+FC1=C(F)C(F)(F)C1 (FC1DC(F)C(F)(F)C1) from CHOF_G4
+FC1=C(F)C(F)C1 (FC1DC(F)C(F)C1) from CHOF_G4
+FC1=CC(F)C1F (FC1DCC(F)C1F) from CHOF_G4
+OC1=C(F)C1(F)F (OC1DC(F)C1(F)F) from CHOF_G4
+FC1=CCC1 (FC1DCCC1) from CHOF_G4
+FC1=C(F)C1 (FC1DC(F)C1) from CHOF_G4
+FC1=C(F)C1F (FC1DC(F)C1F) from CHOF_G4
+FC1=CCC1F (FC1DCCC1F) from CHOF_G4
+FC1=C(C(F)(F)F)C1F (FC1DC(C(F)(F)F)C1F) from CHOF_G4
+FC1=COC1F (FC1DCOC1F) from CHOF_G4
+CC1C=C1F (CC1CDC1F) from CHOF_G4
+FC1=COC1(F)F (FC1DCOC1(F)F) from CHOF_G4
+FC1=C(F)C(F)(F)C1F (FC1DC(F)C(F)(F)C1F) from CHOF_G4
+FC1=CC(F)C1 (FC1DCC(F)C1) from CHOF_G4
+CC1=C(F)C1 (CC1DC(F)C1) from CHOF_G4
+FC1=COC1 (FC1DCOC1) from CHOF_G4
+CC1=C(F)C1F (CC1DC(F)C1F) from CHOF_G4
+FC1=CC(F)(F)C1 (FC1DCC(F)(F)C1) from CHOF_G4
+CC1=C(F)C1(F)F (CC1DC(F)C1(F)F) from CHOF_G4
+FC1=C(C(F)(F)F)C1 (FC1DC(C(F)(F)F)C1) from CHOF_G4
+OC1(F)C(F)=C1F (OC1(F)C(F)DC1F) from CHOF_G4
+CC1C(F)=C1F (CC1C(F)DC1F) from CHOF_G4
+FC1=CC1C(F)(F)F (FC1DCC1C(F)(F)F) from CHOF_G4
+FC1=C(C(F)F)C1 (FC1DC(C(F)F)C1) from CHOF_G4
+FC1=C(F)C1(F)C(F)F (FC1DC(F)C1(F)C(F)F) from CHOF_G4
+FCC1C=C1F (FCC1CDC1F) from CHOF_G4
+OC1C=C1F (OC1CDC1F) from CHOF_G4
+FC1=CC1(F)C(F)(F)F (FC1DCC1(F)C(F)(F)F) from CHOF_G4
+FC1=C(F)CC1 (FC1DC(F)CC1) from CHOF_G4
+FCC1C(F)=C1F (FCC1C(F)DC1F) from CHOF_G4
+FC1=CC(F)(F)C1(F)F (FC1DCC(F)(F)C1(F)F) from CHOF_G4
+FCC1=C(F)C1 (FCC1DC(F)C1) from CHOF_G4
+FC1=C(F)C1(F)F (FC1DC(F)C1(F)F) from CHOF_G4
+FC1=CC1F (FC1DCC1F) from CHOF_G4
+FC1=C(C(F)F)C1(F)F (FC1DC(C(F)F)C1(F)F) from CHOF_G4
+OC1=C(F)C1 (OC1DC(F)C1) from CHOF_G4
+FCC1=C(F)C1F (FCC1DC(F)C1F) from CHOF_G4
+OC1(F)C=C1F (OC1(F)CDC1F) from CHOF_G4
+FC1=CC(F)(F)C1F (FC1DCC(F)(F)C1F) from CHOF_G4
+FCC1(F)C(F)=C1F (FCC1(F)C(F)DC1F) from CHOF_G4
+FC=C(F)CCCl (FCDC(F)CCCl) from CHOFCl_G4
+OC(Cl)=C(F)CF (OC(Cl)DC(F)CF) from CHOFCl_G4
+C=C(F)C(O)(Cl)Cl (CDC(F)C(O)(Cl)Cl) from CHOFCl_G4
+CC=C(F)C(F)Cl (CCDC(F)C(F)Cl) from CHOFCl_G4
+CC(F)=C(Cl)OCl (CC(F)DC(Cl)OCl) from CHOFCl_G4
+FC(F)=C(F)CCl (FC(F)DC(F)CCl) from CHOFCl_G4
+CC(F)=C(F)OCl (CC(F)DC(F)OCl) from CHOFCl_G4
+CC(Cl)C(F)=CF (CC(Cl)C(F)DCF) from CHOFCl_G4
+CC=C(F)CCl (CCDC(F)CCl) from CHOFCl_G4
+C=C(F)C(O)Cl (CDC(F)C(O)Cl) from CHOFCl_G4
+C=C(F)C(C)Cl (CDC(F)C(C)Cl) from CHOFCl_G4
+C=C(F)CCl (CDC(F)CCl) from CHOFCl_G4
+FCC(F)=CCCl (FCC(F)DCCCl) from CHOFCl_G4
+C=C(F)C(F)CCl (CDC(F)C(F)CCl) from CHOFCl_G4
+CC(F)=C(C)Cl (CC(F)DC(C)Cl) from CHOFCl_G4
+CC(F)=C(O)Cl (CC(F)DC(O)Cl) from CHOFCl_G4
+C=C(F)CCCl (CDC(F)CCCl) from CHOFCl_G4
+CC(F)=CCCl (CC(F)DCCCl) from CHOFCl_G4
+C=C(F)C(F)(F)Cl (CDC(F)C(F)(F)Cl) from CHOFCl_G4
+C=C(F)C(Cl)OCl (CDC(F)C(Cl)OCl) from CHOFCl_G4
+C=C(F)CC(F)Cl (CDC(F)CC(F)Cl) from CHOFCl_G4
+FCC=C(F)CCl (FCCDC(F)CCl) from CHOFCl_G4
+C=C(F)C(C)(F)Cl (CDC(F)C(C)(F)Cl) from CHOFCl_G4
+C=C(F)C(F)(Cl)Cl (CDC(F)C(F)(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(F)=CF (OC(Cl)C(F)DCF) from CHOFCl_G4
+C=C(F)C(Cl)CCl (CDC(F)C(Cl)CCl) from CHOFCl_G4
+CC(F)=COCl (CC(F)DCOCl) from CHOFCl_G4
+C=C(F)C(Cl)Cl (CDC(F)C(Cl)Cl) from CHOFCl_G4
+C=C(F)COCl (CDC(F)COCl) from CHOFCl_G4
+CC=C(F)C(Cl)Cl (CCDC(F)C(Cl)Cl) from CHOFCl_G4
+CC(F)=CC(F)Cl (CC(F)DCC(F)Cl) from CHOFCl_G4
+C=C(F)C(Cl)(Cl)Cl (CDC(F)C(Cl)(Cl)Cl) from CHOFCl_G4
+CC(F)=CC(Cl)Cl (CC(F)DCC(Cl)Cl) from CHOFCl_G4
+CC(Cl)=C(F)CF (CC(Cl)DC(F)CF) from CHOFCl_G4
+C=C(F)C(C)(Cl)Cl (CDC(F)C(C)(Cl)Cl) from CHOFCl_G4
+C=C(F)C(F)OCl (CDC(F)C(F)OCl) from CHOFCl_G4
+FCC(F)=COCl (FCC(F)DCOCl) from CHOFCl_G4
+C=C(F)CC(Cl)Cl (CDC(F)CC(Cl)Cl) from CHOFCl_G4
+FC=C(F)CCl (FCDC(F)CCl) from CHOFCl_G4
+FC=C(F)C(Cl)Cl (FCDC(F)C(Cl)Cl) from CHOFCl_G4
+C=C(F)C(O)(F)Cl (CDC(F)C(O)(F)Cl) from CHOFCl_G4
+C=C(F)C(F)Cl (CDC(F)C(F)Cl) from CHOFCl_G4
+CC(F)=C(F)CCl (CC(F)DC(F)CCl) from CHOFCl_G4
+FC=C(F)C(F)Cl (FCDC(F)C(F)Cl) from CHOFCl_G4
+CC(F)=C(Cl)CCl (CC(F)DC(Cl)CCl) from CHOFCl_G4
+FC=C(F)COCl (FCDC(F)COCl) from CHOFCl_G4
+C=C(F)C(Cl)C(Br)Br (CDC(F)C(Cl)C(Br)Br) from CHOFClBr_G4
+CC(F)=C(Cl)CBr (CC(F)DC(Cl)CBr) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)Br (CDC(F)C(Cl)(Br)Br) from CHOFClBr_G4
+C=C(F)C(F)(Cl)OBr (CDC(F)C(F)(Cl)OBr) from CHOFClBr_G4
+FC=C(F)C(Cl)Br (FCDC(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)CC(Cl)Br (CDC(F)CC(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)CBr (CDC(F)C(Cl)(Cl)CBr) from CHOFClBr_G4
+C=C(F)C(C)(Cl)Br (CDC(F)C(C)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)CBr (CDC(F)C(Cl)(Br)CBr) from CHOFClBr_G4
+CC(F)=CC(Cl)Br (CC(F)DCC(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)Br (CDC(F)C(Cl)(Cl)Br) from CHOFClBr_G4
+CC=C(F)C(Cl)Br (CCDC(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)Br (CDC(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)C(Cl)Br (CDC(F)C(Cl)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)CBr (CDC(F)C(Cl)CBr) from CHOFClBr_G4
+C=C(F)C(F)(Cl)Br (CDC(F)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(F)C(Cl)Br (CDC(F)C(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)OBr (CDC(F)C(Cl)OBr) from CHOFClBr_G4
+C=C(F)CC(F)(Cl)Br (CDC(F)CC(F)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)OBr (CDC(F)C(Cl)(Br)OBr) from CHOFClBr_G4
+C=C(F)CC(Cl)(Cl)Br (CDC(F)CC(Cl)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)OBr (CDC(F)C(Cl)(Cl)OBr) from CHOFClBr_G4
+C=C(F)C(F)(Cl)CBr (CDC(F)C(F)(Cl)CBr) from CHOFClBr_G4
+C=C(F)CC(Cl)(Br)Br (CDC(F)CC(Cl)(Br)Br) from CHOFClBr_G4
+CC(F)=C(Cl)OBr (CC(F)DC(Cl)OBr) from CHOFClBr_G4
+C=C(F)C(O)(Cl)Br (CDC(F)C(O)(Cl)Br) from CHOFClBr_G4
+FC=C(F)COBr (FCDC(F)COBr) from CHOFBr_G4
+CC(F)=CC(F)(F)Br (CC(F)DCC(F)(F)Br) from CHOFBr_G4
+C=C(F)C(Br)Br (CDC(F)C(Br)Br) from CHOFBr_G4
+CC=C(F)C(Br)(Br)Br (CCDC(F)C(Br)(Br)Br) from CHOFBr_G4
+OC(Br)C(F)=CF (OC(Br)C(F)DCF) from CHOFBr_G4
+FC=C(F)C(Br)(Br)Br (FCDC(F)C(Br)(Br)Br) from CHOFBr_G4
+C=C(F)C(F)(Br)Br (CDC(F)C(F)(Br)Br) from CHOFBr_G4
+FC=C(F)C(F)Br (FCDC(F)C(F)Br) from CHOFBr_G4
+FCC(F)=CC(F)Br (FCC(F)DCC(F)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)=CF (CC(Br)(Br)C(F)DCF) from CHOFBr_G4
+CC(F)=C(F)CBr (CC(F)DC(F)CBr) from CHOFBr_G4
+C=C(F)C(F)Br (CDC(F)C(F)Br) from CHOFBr_G4
+C=C(F)C(C)(Br)Br (CDC(F)C(C)(Br)Br) from CHOFBr_G4
+CC=C(F)C(F)(F)Br (CCDC(F)C(F)(F)Br) from CHOFBr_G4
+CC(Br)=C(F)CF (CC(Br)DC(F)CF) from CHOFBr_G4
+FCC(F)=C(Br)OBr (FCC(F)DC(Br)OBr) from CHOFBr_G4
+C=C(F)C(F)(F)OBr (CDC(F)C(F)(F)OBr) from CHOFBr_G4
+C=C(F)C(O)(F)Br (CDC(F)C(O)(F)Br) from CHOFBr_G4
+CC(F)=CC(Br)Br (CC(F)DCC(Br)Br) from CHOFBr_G4
+C=C(F)C(Br)(Br)OBr (CDC(F)C(Br)(Br)OBr) from CHOFBr_G4
+FC=C(F)CBr (FCDC(F)CBr) from CHOFBr_G4
+FCC(F)=COBr (FCC(F)DCOBr) from CHOFBr_G4
+C=C(F)C(F)OBr (CDC(F)C(F)OBr) from CHOFBr_G4
+CC=C(F)C(Br)Br (CCDC(F)C(Br)Br) from CHOFBr_G4
+CC(F)=C(Br)C(Br)Br (CC(F)DC(Br)C(Br)Br) from CHOFBr_G4
+FC=C(F)C(Br)Br (FCDC(F)C(Br)Br) from CHOFBr_G4
+CC(F)=CC(F)Br (CC(F)DCC(F)Br) from CHOFBr_G4
+FC(F)=C(F)COBr (FC(F)DC(F)COBr) from CHOFBr_G4
+FCC(F)=C(F)CBr (FCC(F)DC(F)CBr) from CHOFBr_G4
+C=C(F)CC(Br)Br (CDC(F)CC(Br)Br) from CHOFBr_G4
+C=C(F)CC(F)(F)Br (CDC(F)CC(F)(F)Br) from CHOFBr_G4
+FC=C(F)C(Br)OBr (FCDC(F)C(Br)OBr) from CHOFBr_G4
+C=C(F)C(F)(Br)OBr (CDC(F)C(F)(Br)OBr) from CHOFBr_G4
+C=C(F)COBr (CDC(F)COBr) from CHOFBr_G4
+FC(=CC(F)F)CBr (FC(DCC(F)F)CBr) from CHOFBr_G4
+CC(F)=C(Br)CBr (CC(F)DC(Br)CBr) from CHOFBr_G4
+CC(F)=COBr (CC(F)DCOBr) from CHOFBr_G4
+OC(Br)(Br)C(F)=CF (OC(Br)(Br)C(F)DCF) from CHOFBr_G4
+OC(Br)=C(F)C(F)F (OC(Br)DC(F)C(F)F) from CHOFBr_G4
+C=C(F)CC(Br)(Br)Br (CDC(F)CC(Br)(Br)Br) from CHOFBr_G4
+FC=C(F)C(F)(F)Br (FCDC(F)C(F)(F)Br) from CHOFBr_G4
+OC(Br)C(F)=C(F)F (OC(Br)C(F)DC(F)F) from CHOFBr_G4
+FC=C(F)C(F)OBr (FCDC(F)C(F)OBr) from CHOFBr_G4
+OC(F)(Br)C(F)=CF (OC(F)(Br)C(F)DCF) from CHOFBr_G4
+C=C(F)C(C)(F)Br (CDC(F)C(C)(F)Br) from CHOFBr_G4
+CC(F)=CC(F)(Br)Br (CC(F)DCC(F)(Br)Br) from CHOFBr_G4
+CC(Br)=C(F)C(F)F (CC(Br)DC(F)C(F)F) from CHOFBr_G4
+FC(F)=C(F)C(F)Br (FC(F)DC(F)C(F)Br) from CHOFBr_G4
+FCC=C(F)C(Br)Br (FCCDC(F)C(Br)Br) from CHOFBr_G4
+FC(F)=C(F)C(Br)Br (FC(F)DC(F)C(Br)Br) from CHOFBr_G4
+FCC=C(F)CBr (FCCDC(F)CBr) from CHOFBr_G4
+FC=C(F)C(F)CBr (FCDC(F)C(F)CBr) from CHOFBr_G4
+C=C(F)CC(F)Br (CDC(F)CC(F)Br) from CHOFBr_G4
+OC(Br)=C(F)CF (OC(Br)DC(F)CF) from CHOFBr_G4
+FCC(F)=CC(Br)Br (FCC(F)DCC(Br)Br) from CHOFBr_G4
+C=C(F)C(O)(Br)Br (CDC(F)C(O)(Br)Br) from CHOFBr_G4
+C=C(F)C(F)(F)Br (CDC(F)C(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)C(F)=CF (CC(F)(Br)C(F)DCF) from CHOFBr_G4
+CC(F)=CCBr (CC(F)DCCBr) from CHOFBr_G4
+C=C(F)C(F)C(F)Br (CDC(F)C(F)C(F)Br) from CHOFBr_G4
+CC(Br)C(F)=C(F)F (CC(Br)C(F)DC(F)F) from CHOFBr_G4
+C=C(F)C(Br)(Br)Br (CDC(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)=C(Br)OBr (CC(F)DC(Br)OBr) from CHOFBr_G4
+C=C(F)C(Br)C(Br)Br (CDC(F)C(Br)C(Br)Br) from CHOFBr_G4
+FCC=C(F)C(F)Br (FCCDC(F)C(F)Br) from CHOFBr_G4
+C=C(F)CCBr (CDC(F)CCBr) from CHOFBr_G4
+FC=C(F)C(Br)CBr (FCDC(F)C(Br)CBr) from CHOFBr_G4
+C=C(F)C(F)(Br)CBr (CDC(F)C(F)(Br)CBr) from CHOFBr_G4
+FC(F)=C(F)CCBr (FC(F)DC(F)CCBr) from CHOFBr_G4
+FCC(F)=C(F)OBr (FCC(F)DC(F)OBr) from CHOFBr_G4
+CC(F)=C(F)C(Br)Br (CC(F)DC(F)C(Br)Br) from CHOFBr_G4
+CC(F)=C(O)Br (CC(F)DC(O)Br) from CHOFBr_G4
+CC(F)=C(C)Br (CC(F)DC(C)Br) from CHOFBr_G4
+CC(Br)C(F)=CF (CC(Br)C(F)DCF) from CHOFBr_G4
+CC(F)=CC(Br)(Br)Br (CC(F)DCC(Br)(Br)Br) from CHOFBr_G4
+C=C(F)C(F)CBr (CDC(F)C(F)CBr) from CHOFBr_G4
+FC(=CCBr)C(F)F (FC(DCCBr)C(F)F) from CHOFBr_G4
+FC=C(F)CC(F)Br (FCDC(F)CC(F)Br) from CHOFBr_G4
+FCC(F)=CCBr (FCC(F)DCCBr) from CHOFBr_G4
+C=C(F)CC(F)(Br)Br (CDC(F)CC(F)(Br)Br) from CHOFBr_G4
+CC(F)=C(F)C(F)Br (CC(F)DC(F)C(F)Br) from CHOFBr_G4
+C=C(F)CBr (CDC(F)CBr) from CHOFBr_G4
+C=C(F)C(Br)(Br)CBr (CDC(F)C(Br)(Br)CBr) from CHOFBr_G4
+C=C(F)C(C)Br (CDC(F)C(C)Br) from CHOFBr_G4
+FC=C(F)C(F)(Br)Br (FCDC(F)C(F)(Br)Br) from CHOFBr_G4
+C=C(F)C(O)Br (CDC(F)C(O)Br) from CHOFBr_G4
+C=C(F)C(F)(F)CBr (CDC(F)C(F)(F)CBr) from CHOFBr_G4
+CC=C(F)CBr (CCDC(F)CBr) from CHOFBr_G4
+FCC(F)=C(Br)CBr (FCC(F)DC(Br)CBr) from CHOFBr_G4
+C=C(F)C(Br)OBr (CDC(F)C(Br)OBr) from CHOFBr_G4
+CC(F)=C(F)OBr (CC(F)DC(F)OBr) from CHOFBr_G4
+FC(=COBr)C(F)F (FC(DCOBr)C(F)F) from CHOFBr_G4
+C=C(F)C(F)C(Br)Br (CDC(F)C(F)C(Br)Br) from CHOFBr_G4
+FC(F)=C(F)CBr (FC(F)DC(F)CBr) from CHOFBr_G4
+FC=C(F)CC(Br)Br (FCDC(F)CC(Br)Br) from CHOFBr_G4
+CC=C(F)C(F)Br (CCDC(F)C(F)Br) from CHOFBr_G4
+CC=C(F)C(F)(Br)Br (CCDC(F)C(F)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 240,
     label = "CdCtCdF",
     group = 
 """
@@ -5056,7 +6856,7 @@ CHOFBr_G4   |         6
 )
 
 entry(
-    index = 220,
+    index = 241,
     label = "CdCddCF",
     group = 
 """
@@ -5084,7 +6884,7 @@ CHOFBr_G4   |         10
 )
 
 entry(
-    index = 221,
+    index = 242,
     label = "Cd(Cdd-Od)CF",
     group = 
 """
@@ -5110,7 +6910,7 @@ CHOF_G4 |         4
 )
 
 entry(
-    index = 222,
+    index = 243,
     label = "Cds-OdHH",
     group = 
 """
@@ -5121,19 +6921,21 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([35.4435,39.1763,43.6723,48.2228,55.966,61.9942,71.1639],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-108.585,'kJ/mol','+|-',18.9287),
+        S298 = (218.745,'J/(mol*K)','+|-',10.7761),
     ),
-    shortDesc = """CO-HH BENSON !!!WARNING! Cp1500 value taken as Cp1000, S(group) = S(CH2O) + Rln(2)""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C=O (CH2O) from C1_C3_hydrofluorocarbons_NIST
 """,
 )
 
 entry(
-    index = 223,
+    index = 244,
     label = "Cds-OdOsH",
     group = 
 """
@@ -5158,7 +6960,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 224,
+    index = 245,
     label = "CO-SH",
     group = 
 """
@@ -5176,7 +6978,7 @@ entry(
 )
 
 entry(
-    index = 225,
+    index = 246,
     label = "CO-S2H",
     group = 
 """
@@ -5199,7 +7001,7 @@ entry(
 )
 
 entry(
-    index = 226,
+    index = 247,
     label = "CO-S4H",
     group = 
 """
@@ -5222,7 +7024,7 @@ entry(
 )
 
 entry(
-    index = 227,
+    index = 248,
     label = "CO-S6H",
     group = 
 """
@@ -5245,7 +7047,7 @@ entry(
 )
 
 entry(
-    index = 228,
+    index = 249,
     label = "Cds-OdOsOs",
     group = 
 """
@@ -5270,7 +7072,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 229,
+    index = 250,
     label = "CO-CsSs",
     group = 
 """
@@ -5293,7 +7095,7 @@ entry(
 )
 
 entry(
-    index = 230,
+    index = 251,
     label = "CO-OsSs",
     group = 
 """
@@ -5316,7 +7118,7 @@ entry(
 )
 
 entry(
-    index = 231,
+    index = 252,
     label = "Cds-OdCH",
     group = 
 """
@@ -5334,7 +7136,7 @@ entry(
 )
 
 entry(
-    index = 232,
+    index = 253,
     label = "Cds-OdCsH",
     group = 
 """
@@ -5345,21 +7147,85 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([29.8137,34.0506,38.323,41.9647,47.7546,51.9044,58.597],'J/(mol*K)','+|-',[0.517908,0.541388,0.507591,0.471315,0.408632,0.362865,0.701356]),
+        H298 = (-109.087,'kJ/mol','+|-',2.50001),
+        S298 = (146.456,'J/(mol*K)','+|-',1.42325),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+O=CC(F)(F)F (CF3CHO) from C1_C2_Fluorine
+CC=O (CH3CHO) from C1_C3_hydrofluorocarbons_NIST
+O=CC(F)(F)F (CF3CHO) from C1_C3_hydrofluorocarbons_NIST
+CC(F)C=O (CC(F)CDO) from CHOF_G4
+O=CCOF (ODCCOF) from CHOF_G4
+O=CCCF (ODCCCF) from CHOF_G4
+O=CCF (ODCCF) from CHOF_G4
+O=CC(F)(F)C(F)F (ODCC(F)(F)C(F)F) from CHOF_G4
+O=CC(F)(F)C(F)(F)F (ODCC(F)(F)C(F)(F)F) from CHOF_G4
+O=CC(F)(F)F (ODCC(F)(F)F) from CHOF_G4
+O=CC(O)F (ODCC(O)F) from CHOF_G4
+O=CCC(F)F (ODCCC(F)F) from CHOF_G4
+O=CC(F)C(F)F (ODCC(F)C(F)F) from CHOF_G4
+O=CC(F)(F)OF (ODCC(F)(F)OF) from CHOF_G4
+O=CC(F)CF (ODCC(F)CF) from CHOF_G4
+O=CCC(F)(F)F (ODCCC(F)(F)F) from CHOF_G4
+O=CC(F)(F)CF (ODCC(F)(F)CF) from CHOF_G4
+O=CC(F)OF (ODCC(F)OF) from CHOF_G4
+O=CC(O)(F)F (ODCC(O)(F)F) from CHOF_G4
+O=CC(F)C(F)(F)F (ODCC(F)C(F)(F)F) from CHOF_G4
+O=CC(F)F (ODCC(F)F) from CHOF_G4
+CC(F)(F)C=O (CC(F)(F)CDO) from CHOF_G4
+O=CC(F)(Cl)Cl (ODCC(F)(Cl)Cl) from CHOFCl_G4
+O=CCC(F)(F)Cl (ODCCC(F)(F)Cl) from CHOFCl_G4
+CC(F)(Cl)C=O (CC(F)(Cl)CDO) from CHOFCl_G4
+O=CC(Cl)C(F)Cl (ODCC(Cl)C(F)Cl) from CHOFCl_G4
+O=CC(F)(F)Cl (ODCC(F)(F)Cl) from CHOFCl_G4
+O=CCC(F)(Cl)Cl (ODCCC(F)(Cl)Cl) from CHOFCl_G4
+O=CC(Cl)CF (ODCC(Cl)CF) from CHOFCl_G4
+O=CC(F)Cl (ODCC(F)Cl) from CHOFCl_G4
+O=CC(F)(F)OCl (ODCC(F)(F)OCl) from CHOFCl_G4
+O=CCC(F)Cl (ODCCC(F)Cl) from CHOFCl_G4
+O=CC(Cl)(Cl)CF (ODCC(Cl)(Cl)CF) from CHOFCl_G4
+O=CC(Cl)C(F)F (ODCC(Cl)C(F)F) from CHOFCl_G4
+O=CC(F)OCl (ODCC(F)OCl) from CHOFCl_G4
+O=CC(F)(Cl)OCl (ODCC(F)(Cl)OCl) from CHOFCl_G4
+O=CC(F)(Cl)CF (ODCC(F)(Cl)CF) from CHOFCl_G4
+O=CC(O)(F)Cl (ODCC(O)(F)Cl) from CHOFCl_G4
+O=CC(Cl)(Br)CF (ODCC(Cl)(Br)CF) from CHOFClBr_G4
+O=CC(F)(Cl)OBr (ODCC(F)(Cl)OBr) from CHOFClBr_G4
+O=CCC(F)(Cl)Br (ODCCC(F)(Cl)Br) from CHOFClBr_G4
+O=CC(Br)C(F)Cl (ODCC(Br)C(F)Cl) from CHOFClBr_G4
+O=CC(F)(Cl)Br (ODCC(F)(Cl)Br) from CHOFClBr_G4
+O=CC(Br)C(F)Br (ODCC(Br)C(F)Br) from CHOFBr_G4
+O=CC(O)(F)Br (ODCC(O)(F)Br) from CHOFBr_G4
+O=CC(Br)C(F)F (ODCC(Br)C(F)F) from CHOFBr_G4
+O=CC(Br)(Br)C(F)Br (ODCC(Br)(Br)C(F)Br) from CHOFBr_G4
+O=CC(Br)(Br)C(F)F (ODCC(Br)(Br)C(F)F) from CHOFBr_G4
+O=CC(Br)CF (ODCC(Br)CF) from CHOFBr_G4
+O=CC(F)OBr (ODCC(F)OBr) from CHOFBr_G4
+O=CC(F)(Br)OBr (ODCC(F)(Br)OBr) from CHOFBr_G4
+CC(F)(Br)C=O (CC(F)(Br)CDO) from CHOFBr_G4
+O=CCC(F)Br (ODCCC(F)Br) from CHOFBr_G4
+O=CC(F)(Br)Br (ODCC(F)(Br)Br) from CHOFBr_G4
+O=CC(F)(F)OBr (ODCC(F)(F)OBr) from CHOFBr_G4
+O=CC(F)Br (ODCC(F)Br) from CHOFBr_G4
+O=CC(Br)(Br)CF (ODCC(Br)(Br)CF) from CHOFBr_G4
+O=CC(F)(Br)CF (ODCC(F)(Br)CF) from CHOFBr_G4
+O=CC(F)(F)Br (ODCC(F)(F)Br) from CHOFBr_G4
+O=CC(F)(Br)C(F)F (ODCC(F)(Br)C(F)F) from CHOFBr_G4
+O=CCC(F)(Br)Br (ODCCC(F)(Br)Br) from CHOFBr_G4
+O=CCC(F)(F)Br (ODCCC(F)(F)Br) from CHOFBr_G4
+O=CC(Br)C(F)(F)Br (ODCC(Br)C(F)(F)Br) from CHOFBr_G4
+O=CC(Br)C(F)(Br)Br (ODCC(Br)C(F)(Br)Br) from CHOFBr_G4
+O=CC(Br)C(F)(F)F (ODCC(Br)C(F)(F)F) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 233,
+    index = 254,
     label = "Cds-OdCdsH",
     group = 
 """
@@ -5377,7 +7243,7 @@ entry(
 )
 
 entry(
-    index = 234,
+    index = 255,
     label = "Cds-O2d(Cds-O2d)H",
     group = 
 """
@@ -5403,7 +7269,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 235,
+    index = 256,
     label = "Cds-O2d(Cds-Cd)H",
     group = 
 """
@@ -5429,7 +7295,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 236,
+    index = 257,
     label = "Cds-O2d(Cds-Cds)H",
     group = 
 """
@@ -5453,7 +7319,7 @@ entry(
 )
 
 entry(
-    index = 237,
+    index = 258,
     label = "Cds-O2d(Cds-Cdd)H",
     group = 
 """
@@ -5472,7 +7338,7 @@ entry(
 )
 
 entry(
-    index = 238,
+    index = 259,
     label = "Cds-O2d(Cds-Cdd-O2d)H",
     group = 
 """
@@ -5492,7 +7358,7 @@ entry(
 )
 
 entry(
-    index = 239,
+    index = 260,
     label = "Cds-O2d(Cds-Cdd-Cd)H",
     group = 
 """
@@ -5512,7 +7378,7 @@ entry(
 )
 
 entry(
-    index = 240,
+    index = 261,
     label = "Cds-OdCtH",
     group = 
 """
@@ -5530,7 +7396,7 @@ entry(
 )
 
 entry(
-    index = 241,
+    index = 262,
     label = "Cds-OdCbH",
     group = 
 """
@@ -5548,7 +7414,32 @@ entry(
 )
 
 entry(
-    index = 242,
+    index = 263,
+    label = "CO-C2sO2dH",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   C2s u0 {1,S}
+4   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([28.324,32.7211,36.9889,40.9146,46.9526,51.2086,57.1541],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-114.414,'kJ/mol','+|-',18.9287),
+        S298 = (148.334,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C[C]F (ODC[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 264,
     label = "Cds-OdCOs",
     group = 
 """
@@ -5566,7 +7457,7 @@ entry(
 )
 
 entry(
-    index = 243,
+    index = 265,
     label = "Cds-OdCsOs",
     group = 
 """
@@ -5577,21 +7468,92 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([21.755,27.6216,32.934,37.0412,42.7154,46.2682,49.4833],'J/(mol*K)','+|-',[1.22375,1.27923,1.19937,1.11365,0.965542,0.857399,1.65721]),
+        H298 = (-181.994,'kJ/mol','+|-',5.90719),
+        S298 = (51.5648,'J/(mol*K)','+|-',3.36294),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+O=C(O)C(F)(F)F (CF3C(O)OH) from C1_C2_Fluorine
+O=C(O)C(F)(F)F (PF2acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)F (PF3acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (PF4acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acid) from NCSU_C2_C8_PFAS
+O=C1OC1(F)F (PF2lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)F (PF3lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)F (PF4lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (PF5lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8lactone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acid) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16lactone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)F (CF3C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)F (C2F5C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (C3F7C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C7F15C_O_OH) from PFCA_thermo
+O=C1OC1(F)F (c_CF2OC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)F (CF3_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)F (C2F5_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13_c_FCOC_O) from PFCA_thermo
+O=C(O)C(F)F (ODC(O)C(F)F) from CHOF_G4
+O=C(CF)OF (ODC(CF)OF) from CHOF_G4
+O=C(O)C(F)(F)F (ODC(O)C(F)(F)F) from CHOF_G4
+O=C(O)CF (ODC(O)CF) from CHOF_G4
+O=C(OF)C(F)(F)F (ODC(OF)C(F)(F)F) from CHOF_G4
+CC(=O)OF (CC(DO)OF) from CHOF_G4
+O=C1OC1(F)F (ODC1OC1(F)F) from CHOF_G4
+O=C1OC1F (ODC1OC1F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C(F)(F)C1(F)F (ODC1OC(F)(F)C(F)(F)C(F)(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C1(F)C(F)(F)F (ODC1OC(F)(F)C(F)(F)C1(F)C(F)(F)F) from CHOF_G4
+O=C(O)C(F)Cl (ODC(O)C(F)Cl) from CHOFCl_G4
+O=C(OCl)C(F)F (ODC(OCl)C(F)F) from CHOFCl_G4
+O=C(O)C(F)(Cl)Cl (ODC(O)C(F)(Cl)Cl) from CHOFCl_G4
+O=C(OCl)C(F)Cl (ODC(OCl)C(F)Cl) from CHOFCl_G4
+O=C(CF)OCl (ODC(CF)OCl) from CHOFCl_G4
+O=C(O)C(F)(F)Cl (ODC(O)C(F)(F)Cl) from CHOFCl_G4
+O=C(O)C(F)(Cl)Br (ODC(O)C(F)(Cl)Br) from CHOFClBr_G4
+O=C(OBr)C(F)Cl (ODC(OBr)C(F)Cl) from CHOFClBr_G4
+O=C(OBr)C(F)Br (ODC(OBr)C(F)Br) from CHOFBr_G4
+O=C(O)C(F)(F)Br (ODC(O)C(F)(F)Br) from CHOFBr_G4
+O=C(OBr)C(F)(Br)Br (ODC(OBr)C(F)(Br)Br) from CHOFBr_G4
+O=C(OBr)C(F)(F)F (ODC(OBr)C(F)(F)F) from CHOFBr_G4
+O=C(OBr)C(F)(F)Br (ODC(OBr)C(F)(F)Br) from CHOFBr_G4
+O=C(CF)OBr (ODC(CF)OBr) from CHOFBr_G4
+O=C(OBr)C(F)F (ODC(OBr)C(F)F) from CHOFBr_G4
+O=C(O)C(F)(Br)Br (ODC(O)C(F)(Br)Br) from CHOFBr_G4
+O=C(O)C(F)Br (ODC(O)C(F)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 244,
+    index = 266,
     label = "Cds-OdCdsOs",
     group = 
 """
@@ -5609,7 +7571,7 @@ entry(
 )
 
 entry(
-    index = 245,
+    index = 267,
     label = "Cds-O2d(Cds-O2d)O2s",
     group = 
 """
@@ -5635,7 +7597,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 246,
+    index = 268,
     label = "Cds-O2d(Cds-Cd)O2s",
     group = 
 """
@@ -5661,7 +7623,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 247,
+    index = 269,
     label = "Cds-O2d(Cds-Cds)O2s",
     group = 
 """
@@ -5685,7 +7647,7 @@ entry(
 )
 
 entry(
-    index = 248,
+    index = 270,
     label = "Cds-O2d(Cds-Cdd)O2s",
     group = 
 """
@@ -5704,7 +7666,7 @@ entry(
 )
 
 entry(
-    index = 249,
+    index = 271,
     label = "Cds-O2d(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -5724,7 +7686,7 @@ entry(
 )
 
 entry(
-    index = 250,
+    index = 272,
     label = "Cds-O2d(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -5744,7 +7706,7 @@ entry(
 )
 
 entry(
-    index = 251,
+    index = 273,
     label = "Cds-OdCtOs",
     group = 
 """
@@ -5762,7 +7724,7 @@ entry(
 )
 
 entry(
-    index = 252,
+    index = 274,
     label = "Cds-OdCbOs",
     group = 
 """
@@ -5785,7 +7747,7 @@ entry(
 )
 
 entry(
-    index = 253,
+    index = 275,
     label = "Cds-OdCC",
     group = 
 """
@@ -5803,7 +7765,7 @@ entry(
 )
 
 entry(
-    index = 254,
+    index = 276,
     label = "Cds-OdCsCs",
     group = 
 """
@@ -5814,21 +7776,64 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([26.302,29.5783,32.5814,35.0472,38.8479,41.1663,43.9981],'J/(mol*K)','+|-',[0.939344,0.98193,0.920632,0.854836,0.741147,0.658137,1.27207]),
+        H298 = (-113.755,'kJ/mol','+|-',4.53434),
+        S298 = (65.3403,'J/(mol*K)','+|-',2.58138),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+CC(=O)C(F)(F)F (CF3COCH3) from C1_C3_hydrofluorocarbons_NIST
+O=C(C(F)(F)F)C(F)(F)F (C3F6O) from C1_C3_hydrofluorocarbons_NIST
+O=C(CF)CF (ODC(CF)CF) from CHOF_G4
+O=C(CF)C(F)(F)F (ODC(CF)C(F)(F)F) from CHOF_G4
+O=C(C(F)(F)F)C(F)(F)F (ODC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+O=C(C(F)F)C(F)(F)F (ODC(C(F)F)C(F)(F)F) from CHOF_G4
+O=C(CF)C(F)F (ODC(CF)C(F)F) from CHOF_G4
+CC(=O)C(F)(F)F (CC(DO)C(F)(F)F) from CHOF_G4
+CC(=O)C(F)F (CC(DO)C(F)F) from CHOF_G4
+CC(=O)CF (CC(DO)CF) from CHOF_G4
+O=C(C(F)F)C(F)F (ODC(C(F)F)C(F)F) from CHOF_G4
+O=C1C(F)C1F (ODC1C(F)C1F) from CHOF_G4
+O=C1CC1F (ODC1CC1F) from CHOF_G4
+O=C1CC1(F)F (ODC1CC1(F)F) from CHOF_G4
+O=C1C(F)(F)C1(F)F (ODC1C(F)(F)C1(F)F) from CHOF_G4
+O=C1C(F)C1(F)F (ODC1C(F)C1(F)F) from CHOF_G4
+O=C(CCl)C(F)F (ODC(CCl)C(F)F) from CHOFCl_G4
+O=C(CF)C(Cl)Cl (ODC(CF)C(Cl)Cl) from CHOFCl_G4
+O=C(CCl)C(F)Cl (ODC(CCl)C(F)Cl) from CHOFCl_G4
+CC(=O)C(F)(Cl)Cl (CC(DO)C(F)(Cl)Cl) from CHOFCl_G4
+CC(=O)C(F)Cl (CC(DO)C(F)Cl) from CHOFCl_G4
+O=C(CF)C(F)Cl (ODC(CF)C(F)Cl) from CHOFCl_G4
+O=C(CF)CCl (ODC(CF)CCl) from CHOFCl_G4
+CC(=O)C(F)(F)Cl (CC(DO)C(F)(F)Cl) from CHOFCl_G4
+O=C(CBr)C(F)Cl (ODC(CBr)C(F)Cl) from CHOFClBr_G4
+CC(=O)C(F)(Cl)Br (CC(DO)C(F)(Cl)Br) from CHOFClBr_G4
+O=C(CF)C(Cl)Br (ODC(CF)C(Cl)Br) from CHOFClBr_G4
+O=C(CBr)C(F)(F)F (ODC(CBr)C(F)(F)F) from CHOFBr_G4
+CC(=O)C(F)(F)Br (CC(DO)C(F)(F)Br) from CHOFBr_G4
+O=C(CF)C(F)(Br)Br (ODC(CF)C(F)(Br)Br) from CHOFBr_G4
+O=C(CF)CBr (ODC(CF)CBr) from CHOFBr_G4
+O=C(CBr)C(F)Br (ODC(CBr)C(F)Br) from CHOFBr_G4
+O=C(CF)C(Br)Br (ODC(CF)C(Br)Br) from CHOFBr_G4
+O=C(CF)C(F)(F)Br (ODC(CF)C(F)(F)Br) from CHOFBr_G4
+O=C(CF)C(F)Br (ODC(CF)C(F)Br) from CHOFBr_G4
+O=C(CBr)C(F)F (ODC(CBr)C(F)F) from CHOFBr_G4
+O=C(C(F)F)C(Br)Br (ODC(C(F)F)C(Br)Br) from CHOFBr_G4
+O=C(CF)C(Br)(Br)Br (ODC(CF)C(Br)(Br)Br) from CHOFBr_G4
+O=C(C(F)F)C(F)Br (ODC(C(F)F)C(F)Br) from CHOFBr_G4
+CC(=O)C(F)Br (CC(DO)C(F)Br) from CHOFBr_G4
+O=C(CBr)C(F)(Br)Br (ODC(CBr)C(F)(Br)Br) from CHOFBr_G4
+CC(=O)C(F)(Br)Br (CC(DO)C(F)(Br)Br) from CHOFBr_G4
+O=C(CBr)C(F)(F)Br (ODC(CBr)C(F)(F)Br) from CHOFBr_G4
+O=C(C(F)Br)C(Br)Br (ODC(C(F)Br)C(Br)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 255,
+    index = 277,
     label = "Cds-OdCdsCs",
     group = 
 """
@@ -5846,7 +7851,7 @@ entry(
 )
 
 entry(
-    index = 256,
+    index = 278,
     label = "Cds-O2d(Cds-O2d)Cs",
     group = 
 """
@@ -5872,7 +7877,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 257,
+    index = 279,
     label = "Cds-O2d(Cds-Cd)Cs",
     group = 
 """
@@ -5898,7 +7903,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 258,
+    index = 280,
     label = "Cds-O2d(Cds-Cds)Cs",
     group = 
 """
@@ -5922,7 +7927,7 @@ entry(
 )
 
 entry(
-    index = 259,
+    index = 281,
     label = "Cds-O2d(Cds-Cdd)Cs",
     group = 
 """
@@ -5941,7 +7946,7 @@ entry(
 )
 
 entry(
-    index = 260,
+    index = 282,
     label = "Cds-O2d(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -5961,7 +7966,7 @@ entry(
 )
 
 entry(
-    index = 261,
+    index = 283,
     label = "Cds-O2d(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -5981,7 +7986,7 @@ entry(
 )
 
 entry(
-    index = 262,
+    index = 284,
     label = "Cds-OdCdsCds",
     group = 
 """
@@ -5999,7 +8004,7 @@ entry(
 )
 
 entry(
-    index = 263,
+    index = 285,
     label = "Cds-O2d(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -6026,7 +8031,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 264,
+    index = 286,
     label = "Cds-O2d(Cds-Cd)(Cds-O2d)",
     group = 
 """
@@ -6046,7 +8051,7 @@ entry(
 )
 
 entry(
-    index = 265,
+    index = 287,
     label = "Cds-O2d(Cds-Cds)(Cds-O2d)",
     group = 
 """
@@ -6066,7 +8071,7 @@ entry(
 )
 
 entry(
-    index = 266,
+    index = 288,
     label = "Cds-O2d(Cds-Cdd)(Cds-O2d)",
     group = 
 """
@@ -6086,7 +8091,7 @@ entry(
 )
 
 entry(
-    index = 267,
+    index = 289,
     label = "Cds-O2d(Cds-Cdd-O2d)(Cds-O2d)",
     group = 
 """
@@ -6107,7 +8112,7 @@ entry(
 )
 
 entry(
-    index = 268,
+    index = 290,
     label = "Cds-O2d(Cds-Cdd-Cd)(Cds-O2d)",
     group = 
 """
@@ -6128,7 +8133,7 @@ entry(
 )
 
 entry(
-    index = 269,
+    index = 291,
     label = "Cds-O2d(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -6148,7 +8153,7 @@ entry(
 )
 
 entry(
-    index = 270,
+    index = 292,
     label = "Cds-O2d(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -6173,7 +8178,7 @@ entry(
 )
 
 entry(
-    index = 271,
+    index = 293,
     label = "Cds-O2d(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -6193,7 +8198,7 @@ entry(
 )
 
 entry(
-    index = 272,
+    index = 294,
     label = "Cds-O2d(Cds-Cdd-O2d)(Cds-Cds)",
     group = 
 """
@@ -6214,7 +8219,7 @@ entry(
 )
 
 entry(
-    index = 273,
+    index = 295,
     label = "Cds-O2d(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -6235,7 +8240,7 @@ entry(
 )
 
 entry(
-    index = 274,
+    index = 296,
     label = "Cds-O2d(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -6255,7 +8260,7 @@ entry(
 )
 
 entry(
-    index = 275,
+    index = 297,
     label = "Cds-O2d(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -6277,7 +8282,7 @@ entry(
 )
 
 entry(
-    index = 276,
+    index = 298,
     label = "Cds-O2d(Cds-Cdd-Cd)(Cds-Cdd-O2d)",
     group = 
 """
@@ -6299,7 +8304,7 @@ entry(
 )
 
 entry(
-    index = 277,
+    index = 299,
     label = "Cds-O2d(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -6321,7 +8326,7 @@ entry(
 )
 
 entry(
-    index = 278,
+    index = 300,
     label = "Cds-OdCtCs",
     group = 
 """
@@ -6339,7 +8344,7 @@ entry(
 )
 
 entry(
-    index = 279,
+    index = 301,
     label = "Cds-OdCtCds",
     group = 
 """
@@ -6357,7 +8362,7 @@ entry(
 )
 
 entry(
-    index = 280,
+    index = 302,
     label = "Cds-OdCt(Cds-O2d)",
     group = 
 """
@@ -6376,7 +8381,7 @@ entry(
 )
 
 entry(
-    index = 281,
+    index = 303,
     label = "Cds-OdCt(Cds-Cd)",
     group = 
 """
@@ -6395,7 +8400,7 @@ entry(
 )
 
 entry(
-    index = 282,
+    index = 304,
     label = "Cds-OdCt(Cds-Cds)",
     group = 
 """
@@ -6414,7 +8419,7 @@ entry(
 )
 
 entry(
-    index = 283,
+    index = 305,
     label = "Cds-OdCt(Cds-Cdd)",
     group = 
 """
@@ -6433,7 +8438,7 @@ entry(
 )
 
 entry(
-    index = 284,
+    index = 306,
     label = "Cds-OdCt(Cds-Cdd-O2d)",
     group = 
 """
@@ -6453,7 +8458,7 @@ entry(
 )
 
 entry(
-    index = 285,
+    index = 307,
     label = "Cds-OdCt(Cds-Cdd-Cd)",
     group = 
 """
@@ -6473,7 +8478,7 @@ entry(
 )
 
 entry(
-    index = 286,
+    index = 308,
     label = "Cds-OdCtCt",
     group = 
 """
@@ -6491,7 +8496,7 @@ entry(
 )
 
 entry(
-    index = 287,
+    index = 309,
     label = "Cds-OdCbCs",
     group = 
 """
@@ -6509,7 +8514,7 @@ entry(
 )
 
 entry(
-    index = 288,
+    index = 310,
     label = "Cds-OdCbCds",
     group = 
 """
@@ -6527,7 +8532,7 @@ entry(
 )
 
 entry(
-    index = 289,
+    index = 311,
     label = "Cds-OdCb(Cds-O2d)",
     group = 
 """
@@ -6546,7 +8551,7 @@ entry(
 )
 
 entry(
-    index = 290,
+    index = 312,
     label = "Cds-OdCb(Cds-Cd)",
     group = 
 """
@@ -6565,7 +8570,7 @@ entry(
 )
 
 entry(
-    index = 291,
+    index = 313,
     label = "Cds-OdCb(Cds-Cds)",
     group = 
 """
@@ -6584,7 +8589,7 @@ entry(
 )
 
 entry(
-    index = 292,
+    index = 314,
     label = "Cds-OdCb(Cds-Cdd)",
     group = 
 """
@@ -6603,7 +8608,7 @@ entry(
 )
 
 entry(
-    index = 293,
+    index = 315,
     label = "Cds-OdCb(Cds-Cdd-O2d)",
     group = 
 """
@@ -6623,7 +8628,7 @@ entry(
 )
 
 entry(
-    index = 294,
+    index = 316,
     label = "Cds-OdCb(Cds-Cdd-Cd)",
     group = 
 """
@@ -6643,7 +8648,7 @@ entry(
 )
 
 entry(
-    index = 295,
+    index = 317,
     label = "Cds-OdCbCt",
     group = 
 """
@@ -6661,7 +8666,7 @@ entry(
 )
 
 entry(
-    index = 296,
+    index = 318,
     label = "Cds-OdCbCb",
     group = 
 """
@@ -6679,7 +8684,32 @@ entry(
 )
 
 entry(
-    index = 297,
+    index = 319,
+    label = "CO-C2sCsO2d",
+    group = 
+"""
+1 * CO  u0 {2,D} {3,S} {4,S}
+2   O2d u0 {1,D}
+3   Cs  u0 {1,S}
+4   C2s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.7252,30.0355,34.985,39.3589,46.2027,51.0892,57.9962],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65514]),
+        H298 = (-88.5008,'kJ/mol','+|-',9.46438),
+        S298 = (88.4053,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)[C]F (CC(DO)[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 320,
     label = "Cds-CdHH",
     group = 
 """
@@ -6697,7 +8727,7 @@ entry(
 )
 
 entry(
-    index = 298,
+    index = 321,
     label = "Cds-CdsHH",
     group = 
 """
@@ -6708,19 +8738,236 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([21.9756,27.2453,31.816,35.7948,42.2323,47.2377,55.928],'J/(mol*K)','+|-',[0.287807,0.300855,0.282074,0.261915,0.227081,0.201648,0.389751]),
+        H298 = (22.3343,'kJ/mol','+|-',1.38928),
+        S298 = (114.565,'J/(mol*K)','+|-',0.790914),
     ),
-    shortDesc = """Cd-HH BENSON""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C=CF (CH2CHF) from C1_C2_Fluorine
+C=C(F)F (CH2CF2) from C1_C2_Fluorine
+C=C(F)C(F)(F)F (CH2CFCF3) from C1_C3_hydrofluorocarbons_NIST
+C=C (C2H4) from C1_C3_hydrofluorocarbons_NIST
+C=CC(F)(F)F (CF3CHCH2) from C1_C3_hydrofluorocarbons_NIST
+C=CC (C3H6) from C1_C3_hydrofluorocarbons_NIST
+C=C(F)F (CH2CF2) from C1_C3_hydrofluorocarbons_NIST
+C=CF (CH2CHF) from C1_C3_hydrofluorocarbons_NIST
+C=CF (CDCF) from CHOF_G4
+C=C(C(F)F)C(F)F (CDC(C(F)F)C(F)F) from CHOF_G4
+C=C(F)C(F)CF (CDC(F)C(F)CF) from CHOF_G4
+C=CC=C(F)F (CDCCDC(F)F) from CHOF_G4
+C=C(C(F)(F)F)C(F)(F)F (CDC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+C=C(CF)OF (CDC(CF)OF) from CHOF_G4
+C=C(OF)C(F)(F)F (CDC(OF)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)F (CDC(F)C(F)(F)C(F)F) from CHOF_G4
+C=CC(C)(F)F (CDCC(C)(F)F) from CHOF_G4
+C=C(F)C(F)OF (CDC(F)C(F)OF) from CHOF_G4
+C=C(C)C(F)(F)F (CDC(C)C(F)(F)F) from CHOF_G4
+C=C(CF)CF (CDC(CF)CF) from CHOF_G4
+C=C(F)OCF (CDC(F)OCF) from CHOF_G4
+C=CC(F)C(F)(F)F (CDCC(F)C(F)(F)F) from CHOF_G4
+C=CC(F)C(F)F (CDCC(F)C(F)F) from CHOF_G4
+C=C(F)C(C)(F)F (CDC(F)C(C)(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)(F)F (CDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)F (CDC(F)C(F)F) from CHOF_G4
+C=COC(F)F (CDCOC(F)F) from CHOF_G4
+C=C(O)OF (CDC(O)OF) from CHOF_G4
+C=C(F)C(F)=C(F)F (CDC(F)C(F)DC(F)F) from CHOF_G4
+C=CC(F)F (CDCC(F)F) from CHOF_G4
+C=C(O)C(F)(F)F (CDC(O)C(F)(F)F) from CHOF_G4
+C=C(C)OF (CDC(C)OF) from CHOF_G4
+C=CCC(F)F (CDCCC(F)F) from CHOF_G4
+C=C(F)C(F)C(F)F (CDC(F)C(F)C(F)F) from CHOF_G4
+C=C(O)CF (CDC(O)CF) from CHOF_G4
+C=C(F)C(C)F (CDC(F)C(C)F) from CHOF_G4
+C=C(F)C=C(F)F (CDC(F)CDC(F)F) from CHOF_G4
+C=C(F)C(O)(F)F (CDC(F)C(O)(F)F) from CHOF_G4
+C=C(C)CF (CDC(C)CF) from CHOF_G4
+C=C(F)CO (CDC(F)CO) from CHOF_G4
+C=CC(O)(F)F (CDCC(O)(F)F) from CHOF_G4
+C=CCCF (CDCCCF) from CHOF_G4
+C=C(OF)C(F)F (CDC(OF)C(F)F) from CHOF_G4
+C=CC(F)=C(F)F (CDCC(F)DC(F)F) from CHOF_G4
+C=C(C(F)F)C(F)(F)F (CDC(C(F)F)C(F)(F)F) from CHOF_G4
+C=C(F)OO (CDC(F)OO) from CHOF_G4
+C=CC(F)(F)C(F)(F)F (CDCC(F)(F)C(F)(F)F) from CHOF_G4
+C=C(O)C(F)F (CDC(O)C(F)F) from CHOF_G4
+C=C(F)OC (CDC(F)OC) from CHOF_G4
+C=C(F)OC(F)(F)F (CDC(F)OC(F)(F)F) from CHOF_G4
+C=COCF (CDCOCF) from CHOF_G4
+C=C(F)CC (CDC(F)CC) from CHOF_G4
+C=C(C)F (CDC(C)F) from CHOF_G4
+C=C(F)OC(F)F (CDC(F)OC(F)F) from CHOF_G4
+C=C(F)C(F)(F)OF (CDC(F)C(F)(F)OF) from CHOF_G4
+C=C(F)C(O)F (CDC(F)C(O)F) from CHOF_G4
+C=C(F)CF (CDC(F)CF) from CHOF_G4
+C=C(F)CC(F)(F)F (CDC(F)CC(F)(F)F) from CHOF_G4
+C=CC(F)CF (CDCC(F)CF) from CHOF_G4
+C=C(F)C(F)(F)CF (CDC(F)C(F)(F)CF) from CHOF_G4
+C=C(CF)C(F)(F)F (CDC(CF)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)=CF (CDC(F)C(F)DCF) from CHOF_G4
+C=CC(F)(F)CF (CDCC(F)(F)CF) from CHOF_G4
+C=C(CF)C(F)F (CDC(CF)C(F)F) from CHOF_G4
+C=CC(F)(F)F (CDCC(F)(F)F) from CHOF_G4
+C=CCF (CDCCF) from CHOF_G4
+C=C(C)C(F)F (CDC(C)C(F)F) from CHOF_G4
+C=CC(F)(F)OF (CDCC(F)(F)OF) from CHOF_G4
+C=CC=CF (CDCCDCF) from CHOF_G4
+C=CC(O)F (CDCC(O)F) from CHOF_G4
+C=C(F)C=CF (CDC(F)CDCF) from CHOF_G4
+C=CCC(F)(F)F (CDCCC(F)(F)F) from CHOF_G4
+C=CC(F)(F)C(F)F (CDCC(F)(F)C(F)F) from CHOF_G4
+C=C(OF)OF (CDC(OF)OF) from CHOF_G4
+C=C(F)CCF (CDC(F)CCF) from CHOF_G4
+C=C(F)CC(F)F (CDC(F)CC(F)F) from CHOF_G4
+C=C(F)C(F)C(F)(F)F (CDC(F)C(F)C(F)(F)F) from CHOF_G4
+C=CC(F)=CF (CDCC(F)DCF) from CHOF_G4
+C=C(F)COF (CDC(F)COF) from CHOF_G4
+C=C(F)F (CDC(F)F) from CHOF_G4
+C=COC(F)(F)F (CDCOC(F)(F)F) from CHOF_G4
+C=C(F)C(F)(F)F (CDC(F)C(F)(F)F) from CHOF_G4
+C=C1C(F)C1(F)F (CDC1C(F)C1(F)F) from CHOF_G4
+C=C1OC1(F)F (CDC1OC1(F)F) from CHOF_G4
+C=C1CC1(F)F (CDC1CC1(F)F) from CHOF_G4
+C=C1C(F)(F)C1(F)F (CDC1C(F)(F)C1(F)F) from CHOF_G4
+C=C(F)C(O)(Cl)Cl (CDC(F)C(O)(Cl)Cl) from CHOFCl_G4
+C=CC(F)(F)CCl (CDCC(F)(F)CCl) from CHOFCl_G4
+C=CC(Cl)=CF (CDCC(Cl)DCF) from CHOFCl_G4
+C=C(Cl)C(Cl)=CF (CDC(Cl)C(Cl)DCF) from CHOFCl_G4
+C=C(F)C(O)Cl (CDC(F)C(O)Cl) from CHOFCl_G4
+C=C(F)C(C)Cl (CDC(F)C(C)Cl) from CHOFCl_G4
+C=C(CF)OCl (CDC(CF)OCl) from CHOFCl_G4
+C=C(F)CCl (CDC(F)CCl) from CHOFCl_G4
+C=C(F)C(F)CCl (CDC(F)C(F)CCl) from CHOFCl_G4
+C=C(Cl)C=C(F)F (CDC(Cl)CDC(F)F) from CHOFCl_G4
+C=C(OF)OCl (CDC(OF)OCl) from CHOFCl_G4
+C=C(F)CCCl (CDC(F)CCCl) from CHOFCl_G4
+C=C(F)C(F)(F)Cl (CDC(F)C(F)(F)Cl) from CHOFCl_G4
+C=C(F)C(Cl)OCl (CDC(F)C(Cl)OCl) from CHOFCl_G4
+C=C(F)CC(F)Cl (CDC(F)CC(F)Cl) from CHOFCl_G4
+C=C(F)C(C)(F)Cl (CDC(F)C(C)(F)Cl) from CHOFCl_G4
+C=C(C)C(F)(F)Cl (CDC(C)C(F)(F)Cl) from CHOFCl_G4
+C=C(F)C(F)(Cl)Cl (CDC(F)C(F)(Cl)Cl) from CHOFCl_G4
+C=CC(Cl)=C(F)F (CDCC(Cl)DC(F)F) from CHOFCl_G4
+C=C(F)C(Cl)CCl (CDC(F)C(Cl)CCl) from CHOFCl_G4
+C=C(OCl)C(F)F (CDC(OCl)C(F)F) from CHOFCl_G4
+C=C(F)C(Cl)Cl (CDC(F)C(Cl)Cl) from CHOFCl_G4
+C=CC(O)(F)Cl (CDCC(O)(F)Cl) from CHOFCl_G4
+C=C(F)COCl (CDC(F)COCl) from CHOFCl_G4
+C=C(Cl)C(F)=CF (CDC(Cl)C(F)DCF) from CHOFCl_G4
+C=C(F)C(Cl)(Cl)Cl (CDC(F)C(Cl)(Cl)Cl) from CHOFCl_G4
+C=C(Cl)C=CF (CDC(Cl)CDCF) from CHOFCl_G4
+C=C(CCl)C(F)F (CDC(CCl)C(F)F) from CHOFCl_G4
+C=C(F)C(C)(Cl)Cl (CDC(F)C(C)(Cl)Cl) from CHOFCl_G4
+C=C(F)C(F)OCl (CDC(F)C(F)OCl) from CHOFCl_G4
+C=C(F)CC(Cl)Cl (CDC(F)CC(Cl)Cl) from CHOFCl_G4
+C=C(CF)CCl (CDC(CF)CCl) from CHOFCl_G4
+C=C(F)C(O)(F)Cl (CDC(F)C(O)(F)Cl) from CHOFCl_G4
+C=C(CF)C(F)Cl (CDC(CF)C(F)Cl) from CHOFCl_G4
+C=C(F)C(F)Cl (CDC(F)C(F)Cl) from CHOFCl_G4
+C=C(CF)C(Cl)Cl (CDC(CF)C(Cl)Cl) from CHOFCl_G4
+C=CC(F)(F)OCl (CDCC(F)(F)OCl) from CHOFCl_G4
+C=C(C)C(F)(Cl)Cl (CDC(C)C(F)(Cl)Cl) from CHOFCl_G4
+C=C(C)C(F)Cl (CDC(C)C(F)Cl) from CHOFCl_G4
+C=C(F)C(Cl)C(Br)Br (CDC(F)C(Cl)C(Br)Br) from CHOFClBr_G4
+C=C(C)C(F)(Cl)Br (CDC(C)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(CF)C(Cl)Br (CDC(CF)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)Br (CDC(F)C(Cl)(Br)Br) from CHOFClBr_G4
+C=C(F)C(F)(Cl)OBr (CDC(F)C(F)(Cl)OBr) from CHOFClBr_G4
+C=C(F)CC(Cl)Br (CDC(F)CC(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)CBr (CDC(F)C(Cl)(Cl)CBr) from CHOFClBr_G4
+C=C(F)C(C)(Cl)Br (CDC(F)C(C)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)CBr (CDC(F)C(Cl)(Br)CBr) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)Br (CDC(F)C(Cl)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)Br (CDC(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)C(Cl)Br (CDC(F)C(Cl)C(Cl)Br) from CHOFClBr_G4
+C=CC(F)(F)C(Cl)Br (CDCC(F)(F)C(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)CBr (CDC(F)C(Cl)CBr) from CHOFClBr_G4
+C=C(F)C(F)(Cl)Br (CDC(F)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(CF)C(F)(Cl)Br (CDC(CF)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(Br)C(Cl)=C(F)F (CDC(Br)C(Cl)DC(F)F) from CHOFClBr_G4
+C=C(F)C(F)C(Cl)Br (CDC(F)C(F)C(Cl)Br) from CHOFClBr_G4
+C=C(C(F)F)C(Cl)Br (CDC(C(F)F)C(Cl)Br) from CHOFClBr_G4
+C=C(CF)C(Cl)(Cl)Br (CDC(CF)C(Cl)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)OBr (CDC(F)C(Cl)OBr) from CHOFClBr_G4
+C=C(F)CC(F)(Cl)Br (CDC(F)CC(F)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Br)OBr (CDC(F)C(Cl)(Br)OBr) from CHOFClBr_G4
+C=C(F)CC(Cl)(Cl)Br (CDC(F)CC(Cl)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(Cl)(Cl)OBr (CDC(F)C(Cl)(Cl)OBr) from CHOFClBr_G4
+C=C(F)C(F)(Cl)CBr (CDC(F)C(F)(Cl)CBr) from CHOFClBr_G4
+C=C(F)CC(Cl)(Br)Br (CDC(F)CC(Cl)(Br)Br) from CHOFClBr_G4
+C=C(CF)C(Cl)(Br)Br (CDC(CF)C(Cl)(Br)Br) from CHOFClBr_G4
+C=C(F)C(O)(Cl)Br (CDC(F)C(O)(Cl)Br) from CHOFClBr_G4
+C=C(Br)C(Cl)=CF (CDC(Br)C(Cl)DCF) from CHOFClBr_G4
+C=C(F)C(Br)Br (CDC(F)C(Br)Br) from CHOFBr_G4
+C=CC(F)(F)C(Br)Br (CDCC(F)(F)C(Br)Br) from CHOFBr_G4
+C=C(OBr)C(F)F (CDC(OBr)C(F)F) from CHOFBr_G4
+C=C(F)C(F)(Br)Br (CDC(F)C(F)(Br)Br) from CHOFBr_G4
+C=C(C)C(F)Br (CDC(C)C(F)Br) from CHOFBr_G4
+C=CC(F)(F)OBr (CDCC(F)(F)OBr) from CHOFBr_G4
+C=C(CF)C(F)(Br)Br (CDC(CF)C(F)(Br)Br) from CHOFBr_G4
+C=C(F)C(F)Br (CDC(F)C(F)Br) from CHOFBr_G4
+C=C(F)C(C)(Br)Br (CDC(F)C(C)(Br)Br) from CHOFBr_G4
+C=C(CF)C(F)Br (CDC(CF)C(F)Br) from CHOFBr_G4
+C=CC(Br)=C(F)F (CDCC(Br)DC(F)F) from CHOFBr_G4
+C=C(F)C(F)(F)OBr (CDC(F)C(F)(F)OBr) from CHOFBr_G4
+C=C(F)C(O)(F)Br (CDC(F)C(O)(F)Br) from CHOFBr_G4
+C=C(CBr)C(F)F (CDC(CBr)C(F)F) from CHOFBr_G4
+C=C(CF)CBr (CDC(CF)CBr) from CHOFBr_G4
+C=C(F)C(Br)(Br)OBr (CDC(F)C(Br)(Br)OBr) from CHOFBr_G4
+C=C(Br)C(F)=CF (CDC(Br)C(F)DCF) from CHOFBr_G4
+C=C(Br)C(Br)=C(F)F (CDC(Br)C(Br)DC(F)F) from CHOFBr_G4
+C=C(F)C(F)OBr (CDC(F)C(F)OBr) from CHOFBr_G4
+C=C(CF)C(Br)(Br)Br (CDC(CF)C(Br)(Br)Br) from CHOFBr_G4
+C=C(C(F)F)C(F)Br (CDC(C(F)F)C(F)Br) from CHOFBr_G4
+C=CC(Br)=CF (CDCC(Br)DCF) from CHOFBr_G4
+C=C(F)CC(Br)Br (CDC(F)CC(Br)Br) from CHOFBr_G4
+C=C(F)CC(F)(F)Br (CDC(F)CC(F)(F)Br) from CHOFBr_G4
+C=CC(F)(F)C(F)Br (CDCC(F)(F)C(F)Br) from CHOFBr_G4
+C=C(F)C(F)(Br)OBr (CDC(F)C(F)(Br)OBr) from CHOFBr_G4
+C=C(F)COBr (CDC(F)COBr) from CHOFBr_G4
+C=CC(O)(F)Br (CDCC(O)(F)Br) from CHOFBr_G4
+C=C(CF)C(F)(F)Br (CDC(CF)C(F)(F)Br) from CHOFBr_G4
+C=C(F)CC(Br)(Br)Br (CDC(F)CC(Br)(Br)Br) from CHOFBr_G4
+C=C(C)C(F)(Br)Br (CDC(C)C(F)(Br)Br) from CHOFBr_G4
+C=C(CF)C(Br)Br (CDC(CF)C(Br)Br) from CHOFBr_G4
+C=C(C)C(F)(F)Br (CDC(C)C(F)(F)Br) from CHOFBr_G4
+C=C(F)C(C)(F)Br (CDC(F)C(C)(F)Br) from CHOFBr_G4
+C=C(Br)C(Br)=CF (CDC(Br)C(Br)DCF) from CHOFBr_G4
+C=C(F)CC(F)Br (CDC(F)CC(F)Br) from CHOFBr_G4
+C=C(F)C(O)(Br)Br (CDC(F)C(O)(Br)Br) from CHOFBr_G4
+C=C(F)C(F)(F)Br (CDC(F)C(F)(F)Br) from CHOFBr_G4
+C=C(F)C(F)C(F)Br (CDC(F)C(F)C(F)Br) from CHOFBr_G4
+C=C(F)C(Br)(Br)Br (CDC(F)C(Br)(Br)Br) from CHOFBr_G4
+C=C(F)C(Br)C(Br)Br (CDC(F)C(Br)C(Br)Br) from CHOFBr_G4
+C=C(F)CCBr (CDC(F)CCBr) from CHOFBr_G4
+C=C(OF)OBr (CDC(OF)OBr) from CHOFBr_G4
+C=C(F)C(F)(Br)CBr (CDC(F)C(F)(Br)CBr) from CHOFBr_G4
+C=C(OBr)C(F)(F)F (CDC(OBr)C(F)(F)F) from CHOFBr_G4
+C=C(F)C(F)CBr (CDC(F)C(F)CBr) from CHOFBr_G4
+C=C(F)CC(F)(Br)Br (CDC(F)CC(F)(Br)Br) from CHOFBr_G4
+C=C(Br)C=CF (CDC(Br)CDCF) from CHOFBr_G4
+C=C(F)CBr (CDC(F)CBr) from CHOFBr_G4
+C=C(Br)C(F)=C(F)F (CDC(Br)C(F)DC(F)F) from CHOFBr_G4
+C=C(CF)OBr (CDC(CF)OBr) from CHOFBr_G4
+C=C(F)C(Br)(Br)CBr (CDC(F)C(Br)(Br)CBr) from CHOFBr_G4
+C=C(F)C(C)Br (CDC(F)C(C)Br) from CHOFBr_G4
+C=C(Br)C=C(F)F (CDC(Br)CDC(F)F) from CHOFBr_G4
+C=C(F)C(O)Br (CDC(F)C(O)Br) from CHOFBr_G4
+C=C(F)C(F)(F)CBr (CDC(F)C(F)(F)CBr) from CHOFBr_G4
+C=C(F)C(Br)OBr (CDC(F)C(Br)OBr) from CHOFBr_G4
+C=C(F)C(F)C(Br)Br (CDC(F)C(F)C(Br)Br) from CHOFBr_G4
+C=C(C(F)F)C(Br)Br (CDC(C(F)F)C(Br)Br) from CHOFBr_G4
+C=C(CBr)C(F)(F)F (CDC(CBr)C(F)(F)F) from CHOFBr_G4
+C=CC(F)(F)CBr (CDCC(F)(F)CBr) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 299,
+    index = 322,
     label = "Cds-CddHH",
     group = 
 """
@@ -6738,7 +8985,7 @@ entry(
 )
 
 entry(
-    index = 300,
+    index = 323,
     label = "Cds-(Cdd-O2d)HH",
     group = 
 """
@@ -6762,7 +9009,33 @@ entry(
 )
 
 entry(
-    index = 301,
+    index = 324,
+    label = "Cd-(O2d)CddHH",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cdd u0 {1,D} {5,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([51.8985,59.4209,65.5903,70.692,78.6324,84.7197,94.3646],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-47.7075,'kJ/mol','+|-',18.9287),
+        S298 = (241.861,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C=O (CH2CO) from C1_C3_hydrofluorocarbons_NIST
+""",
+)
+
+entry(
+    index = 325,
     label = "Cds-(Cdd-S2d)HH",
     group = 
 """
@@ -6781,7 +9054,7 @@ entry(
 )
 
 entry(
-    index = 302,
+    index = 326,
     label = "Cds-(Cdd-Cd)HH",
     group = 
 """
@@ -6800,7 +9073,39 @@ entry(
 )
 
 entry(
-    index = 303,
+    index = 327,
+    label = "Cd-(Cd)CddHH",
+    group = 
+"""
+1 * Cd  u0 {2,D} {3,S} {4,S}
+2   Cdd u0 {1,D} {5,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   Cd  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.7224,25.5674,30.3301,34.177,40.8335,46.1462,54.7877],'J/(mol*K)','+|-',[1.65172,1.72661,1.61882,1.50313,1.30322,1.15726,2.23678]),
+        H298 = (26.4308,'kJ/mol','+|-',7.97309),
+        S298 = (116.725,'J/(mol*K)','+|-',4.53905),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C=C(C)F (CDCDC(C)F) from CHOF_G4
+C=C=C(F)C(F)F (CDCDC(F)C(F)F) from CHOF_G4
+C=C=C(F)CF (CDCDC(F)CF) from CHOF_G4
+C=C=CC(F)(F)F (CDCDCC(F)(F)F) from CHOF_G4
+C=C=CC(F)F (CDCDCC(F)F) from CHOF_G4
+C=C=CCF (CDCDCCF) from CHOF_G4
+C=C=C(F)C(F)(F)F (CDCDC(F)C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 328,
     label = "Cds-CdOsH",
     group = 
 """
@@ -6825,7 +9130,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 304,
+    index = 329,
     label = "Cds-CdsOsH",
     group = 
 """
@@ -6848,7 +9153,7 @@ entry(
 )
 
 entry(
-    index = 305,
+    index = 330,
     label = "Cds-CddOsH",
     group = 
 """
@@ -6866,7 +9171,7 @@ entry(
 )
 
 entry(
-    index = 306,
+    index = 331,
     label = "Cds-(Cdd-O2d)OsH",
     group = 
 """
@@ -6890,7 +9195,7 @@ entry(
 )
 
 entry(
-    index = 307,
+    index = 332,
     label = "Cds-(Cdd-Cd)OsH",
     group = 
 """
@@ -6909,7 +9214,7 @@ entry(
 )
 
 entry(
-    index = 308,
+    index = 333,
     label = "Cds-CdSH",
     group = 
 """
@@ -6927,7 +9232,7 @@ entry(
 )
 
 entry(
-    index = 309,
+    index = 334,
     label = "Cds-CdsSH",
     group = 
 """
@@ -6945,7 +9250,7 @@ entry(
 )
 
 entry(
-    index = 310,
+    index = 335,
     label = "Cds-CdsS2H",
     group = 
 """
@@ -6968,7 +9273,7 @@ entry(
 )
 
 entry(
-    index = 311,
+    index = 336,
     label = "Cds-CdsS4H",
     group = 
 """
@@ -6991,7 +9296,7 @@ entry(
 )
 
 entry(
-    index = 312,
+    index = 337,
     label = "Cds-CdsS6H",
     group = 
 """
@@ -7014,7 +9319,7 @@ entry(
 )
 
 entry(
-    index = 313,
+    index = 338,
     label = "Cds-CddSsH",
     group = 
 """
@@ -7032,7 +9337,7 @@ entry(
 )
 
 entry(
-    index = 314,
+    index = 339,
     label = "Cds-(Cdd-S2d)SsH",
     group = 
 """
@@ -7051,7 +9356,7 @@ entry(
 )
 
 entry(
-    index = 315,
+    index = 340,
     label = "Cds-(Cdd-Cd)SsH",
     group = 
 """
@@ -7070,7 +9375,7 @@ entry(
 )
 
 entry(
-    index = 316,
+    index = 341,
     label = "Cds-CdOsOs",
     group = 
 """
@@ -7095,7 +9400,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 317,
+    index = 342,
     label = "Cds-CdsOsOs",
     group = 
 """
@@ -7104,16 +9409,48 @@ entry(
 3   O2s u0 {1,S}
 4   O2s u0 {1,S}
 """,
-    thermo = 'Cds-CdsCsCs',
-    shortDesc = """""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.1063,22.4056,24.7053,26.5586,28.804,29.6448,28.8638],'J/(mol*K)','+|-',[0.778885,0.814196,0.763369,0.708813,0.614544,0.545714,1.05477]),
+        H298 = (20.6156,'kJ/mol','+|-',3.75978),
+        S298 = (-53.8019,'J/(mol*K)','+|-',2.14043),
+    ),
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains Cds-CdsCsCs as data. New data fitted from following species using Ridge regression
 
+OC(O)=C(F)F (OC(O)DC(F)F) from CHOF_G4
+FC=C(OF)OF (FCDC(OF)OF) from CHOF_G4
+C=C(O)OF (CDC(O)OF) from CHOF_G4
+OC(=CF)OF (OC(DCF)OF) from CHOF_G4
+OC(O)=CF (OC(O)DCF) from CHOF_G4
+C=C(OF)OF (CDC(OF)OF) from CHOF_G4
+FOC(OF)=C(F)F (FOC(OF)DC(F)F) from CHOF_G4
+FC(F)=C1OO1 (FC(F)DC1OO1) from CHOF_G4
+FC=C1OO1 (FCDC1OO1) from CHOF_G4
+FC=C(OF)OCl (FCDC(OF)OCl) from CHOFCl_G4
+FC=C(OCl)OCl (FCDC(OCl)OCl) from CHOFCl_G4
+C=C(OF)OCl (CDC(OF)OCl) from CHOFCl_G4
+OC(OCl)=C(F)F (OC(OCl)DC(F)F) from CHOFCl_G4
+OC(OCl)=C(F)Cl (OC(OCl)DC(F)Cl) from CHOFCl_G4
+OC(=CF)OCl (OC(DCF)OCl) from CHOFCl_G4
+OC(OBr)=C(F)Cl (OC(OBr)DC(F)Cl) from CHOFClBr_G4
+FC=C(OCl)OBr (FCDC(OCl)OBr) from CHOFClBr_G4
+OC(=CF)OBr (OC(DCF)OBr) from CHOFBr_G4
+FC(Br)=C(OBr)OBr (FC(Br)DC(OBr)OBr) from CHOFBr_G4
+OC(OBr)=C(F)F (OC(OBr)DC(F)F) from CHOFBr_G4
+FOC(OBr)=C(F)F (FOC(OBr)DC(F)F) from CHOFBr_G4
+FC(F)=C(OBr)OBr (FC(F)DC(OBr)OBr) from CHOFBr_G4
+C=C(OF)OBr (CDC(OF)OBr) from CHOFBr_G4
+FC=C(OBr)OBr (FCDC(OBr)OBr) from CHOFBr_G4
+FC=C(OF)OBr (FCDC(OF)OBr) from CHOFBr_G4
+OC(OBr)=C(F)Br (OC(OBr)DC(F)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 318,
+    index = 343,
     label = "Cds-CddOsOs",
     group = 
 """
@@ -7131,7 +9468,7 @@ entry(
 )
 
 entry(
-    index = 319,
+    index = 344,
     label = "Cds-(Cdd-O2d)OsOs",
     group = 
 """
@@ -7155,7 +9492,7 @@ entry(
 )
 
 entry(
-    index = 320,
+    index = 345,
     label = "Cds-(Cdd-Cd)OsOs",
     group = 
 """
@@ -7174,7 +9511,7 @@ entry(
 )
 
 entry(
-    index = 321,
+    index = 346,
     label = "Cds-CdSsSs",
     group = 
 """
@@ -7192,7 +9529,7 @@ entry(
 )
 
 entry(
-    index = 322,
+    index = 347,
     label = "Cds-CdsSsSs",
     group = 
 """
@@ -7210,7 +9547,7 @@ entry(
 )
 
 entry(
-    index = 323,
+    index = 348,
     label = "Cds-CddSsSs",
     group = 
 """
@@ -7228,7 +9565,7 @@ entry(
 )
 
 entry(
-    index = 324,
+    index = 349,
     label = "Cds-(Cdd-S2d)SsSs",
     group = 
 """
@@ -7247,7 +9584,7 @@ entry(
 )
 
 entry(
-    index = 325,
+    index = 350,
     label = "Cds-(Cdd-Cd)SsSs",
     group = 
 """
@@ -7266,7 +9603,7 @@ entry(
 )
 
 entry(
-    index = 326,
+    index = 351,
     label = "Cds-CdCH",
     group = 
 """
@@ -7284,7 +9621,7 @@ entry(
 )
 
 entry(
-    index = 327,
+    index = 352,
     label = "Cds-CdsCsH",
     group = 
 """
@@ -7295,19 +9632,367 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([17.7684,21.397,24.6316,27.3944,32.0473,35.3712,40.95],'J/(mol*K)','+|-',[0.231214,0.241696,0.226608,0.210413,0.182429,0.161997,0.313112]),
+        H298 = (23.434,'kJ/mol','+|-',1.1161),
+        S298 = (34.7725,'J/(mol*K)','+|-',0.635392),
     ),
-    shortDesc = """Cd-CsH BENSON""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C=CC(F)(F)F (CF3CHCH2) from C1_C3_hydrofluorocarbons_NIST
+C=CC (C3H6) from C1_C3_hydrofluorocarbons_NIST
+FC=CC(F)(F)F (CHFCHCF3) from C1_C3_hydrofluorocarbons_NIST
+FC(=CC(F)F)C(F)(F)F (FC(DCC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)F (FC(F)DCC(F)(F)C(F)F) from CHOF_G4
+CC(F)C=C(F)F (CC(F)CDC(F)F) from CHOF_G4
+FOC=CC(F)F (FOCDCC(F)F) from CHOF_G4
+C=CC(C)(F)F (CDCC(C)(F)F) from CHOF_G4
+FC=CC(F)C(F)F (FCDCC(F)C(F)F) from CHOF_G4
+FCC=C(F)C(F)F (FCCDC(F)C(F)F) from CHOF_G4
+C=CC(F)C(F)(F)F (CDCC(F)C(F)(F)F) from CHOF_G4
+C=CC(F)C(F)F (CDCC(F)C(F)F) from CHOF_G4
+CC=C(F)C(F)F (CCDC(F)C(F)F) from CHOF_G4
+FC=CCF (FCDCCF) from CHOF_G4
+FCC(F)C=C(F)F (FCC(F)CDC(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)F (FCDCC(F)(F)C(F)F) from CHOF_G4
+CC=C(F)CF (CCDC(F)CF) from CHOF_G4
+FCC=CC(F)F (FCCDCC(F)F) from CHOF_G4
+CC=C(F)OF (CCDC(F)OF) from CHOF_G4
+FC=CC(F)OF (FCDCC(F)OF) from CHOF_G4
+FC(F)(F)C=CC(F)(F)F (FC(F)(F)CDCC(F)(F)F) from CHOF_G4
+OC(F)C=C(F)F (OC(F)CDC(F)F) from CHOF_G4
+C=CC(F)F (CDCC(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)(F)F (FC(F)DCC(F)(F)C(F)(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)F (FC(DCC(F)F)C(F)F) from CHOF_G4
+C=CCC(F)F (CDCCC(F)F) from CHOF_G4
+OC(F)(F)C=C(F)F (OC(F)(F)CDC(F)F) from CHOF_G4
+CC=C(F)C(F)(F)F (CCDC(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)CF (FCDCC(F)CF) from CHOF_G4
+CCC=C(F)F (CCCDC(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)(F)F (FC(DCC(F)(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C=C(F)F (FCC(F)(F)CDC(F)F) from CHOF_G4
+CC(F)=CC(F)(F)F (CC(F)DCC(F)(F)F) from CHOF_G4
+FCC=CCF (FCCDCCF) from CHOF_G4
+FCC=C(F)F (FCCDC(F)F) from CHOF_G4
+FC(F)=CCC(F)F (FC(F)DCCC(F)F) from CHOF_G4
+C=CC(O)(F)F (CDCC(O)(F)F) from CHOF_G4
+C=CCCF (CDCCCF) from CHOF_G4
+OCC=C(F)F (OCCDC(F)F) from CHOF_G4
+FCC=COF (FCCDCOF) from CHOF_G4
+FC(F)=CC(F)(F)F (FC(F)DCC(F)(F)F) from CHOF_G4
+FOC(F)=CC(F)(F)F (FOC(F)DCC(F)(F)F) from CHOF_G4
+FOC(F)C=C(F)F (FOC(F)CDC(F)F) from CHOF_G4
+FC(F)C=CC(F)(F)F (FC(F)CDCC(F)(F)F) from CHOF_G4
+FC(F)=CCC(F)(F)F (FC(F)DCCC(F)(F)F) from CHOF_G4
+FC(F)=CC(F)C(F)F (FC(F)DCC(F)C(F)F) from CHOF_G4
+OC=CCF (OCDCCF) from CHOF_G4
+CC=CF (CCDCF) from CHOF_G4
+C=CC(F)(F)C(F)(F)F (CDCC(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)=CC(F)(F)F (OC(F)DCC(F)(F)F) from CHOF_G4
+CC(F)C=CF (CC(F)CDCF) from CHOF_G4
+CC(F)=CC(F)F (CC(F)DCC(F)F) from CHOF_G4
+OC=CC(F)(F)F (OCDCC(F)(F)F) from CHOF_G4
+FOCC=C(F)F (FOCCDC(F)F) from CHOF_G4
+FCC(F)=CC(F)(F)F (FCC(F)DCC(F)(F)F) from CHOF_G4
+OC(F)(F)C=CF (OC(F)(F)CDCF) from CHOF_G4
+FCC=C(F)C(F)(F)F (FCCDC(F)C(F)(F)F) from CHOF_G4
+OC(F)C=CF (OC(F)CDCF) from CHOF_G4
+FC(=CC(F)(F)F)C(F)F (FC(DCC(F)(F)F)C(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)(F)F (FCDCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C=C(F)F (CC(F)(F)CDC(F)F) from CHOF_G4
+FCCC=C(F)F (FCCCDC(F)F) from CHOF_G4
+C=CC(F)CF (CDCC(F)CF) from CHOF_G4
+FCC(F)=CC(F)F (FCC(F)DCC(F)F) from CHOF_G4
+FC=CCC(F)F (FCDCCC(F)F) from CHOF_G4
+FOC=CC(F)(F)F (FOCDCC(F)(F)F) from CHOF_G4
+FC=CC(F)(F)F (FCDCC(F)(F)F) from CHOF_G4
+CCC=CF (CCCDCF) from CHOF_G4
+FOC(F)(F)C=C(F)F (FOC(F)(F)CDC(F)F) from CHOF_G4
+CC=C(C)F (CCDC(C)F) from CHOF_G4
+FCC=C(F)OF (FCCDC(F)OF) from CHOF_G4
+C=CC(F)(F)CF (CDCC(F)(F)CF) from CHOF_G4
+CC(F)(F)C=CF (CC(F)(F)CDCF) from CHOF_G4
+C=CC(F)(F)F (CDCC(F)(F)F) from CHOF_G4
+CC(F)=CCF (CC(F)DCCF) from CHOF_G4
+OCC=CF (OCCDCF) from CHOF_G4
+CC=CC(F)F (CCDCC(F)F) from CHOF_G4
+C=CCF (CDCCF) from CHOF_G4
+FCC=C(F)CF (FCCDC(F)CF) from CHOF_G4
+C=CC(F)(F)OF (CDCC(F)(F)OF) from CHOF_G4
+CC=C(F)F (CCDC(F)F) from CHOF_G4
+FC=CC(F)C(F)(F)F (FCDCC(F)C(F)(F)F) from CHOF_G4
+C=CC(O)F (CDCC(O)F) from CHOF_G4
+OC(F)=CC(F)F (OC(F)DCC(F)F) from CHOF_G4
+CC=CC(F)(F)F (CCDCC(F)(F)F) from CHOF_G4
+C=CCC(F)(F)F (CDCCC(F)(F)F) from CHOF_G4
+C=CC(F)(F)C(F)F (CDCC(F)(F)C(F)F) from CHOF_G4
+FOC(F)=CC(F)F (FOC(F)DCC(F)F) from CHOF_G4
+FCC=CC(F)(F)F (FCCDCC(F)(F)F) from CHOF_G4
+FC=CCC(F)(F)F (FCDCCC(F)(F)F) from CHOF_G4
+FC(F)C=CC(F)F (FC(F)CDCC(F)F) from CHOF_G4
+FC(F)=CC(F)F (FC(F)DCC(F)F) from CHOF_G4
+OC=CC(F)F (OCDCC(F)F) from CHOF_G4
+FC=CCOF (FCDCCOF) from CHOF_G4
+FC(F)=CC(F)C(F)(F)F (FC(F)DCC(F)C(F)(F)F) from CHOF_G4
+OC(F)=CCF (OC(F)DCCF) from CHOF_G4
+FC=CC(F)(F)OF (FCDCC(F)(F)OF) from CHOF_G4
+CC=CCF (CCDCCF) from CHOF_G4
+FC=CC(F)F (FCDCC(F)F) from CHOF_G4
+FC=CCCF (FCDCCCF) from CHOF_G4
+FC=CC(F)(F)CF (FCDCC(F)(F)CF) from CHOF_G4
+FC1=CC1 (FC1DCC1) from CHOF_G4
+FC1=CC1(F)F (FC1DCC1(F)F) from CHOF_G4
+FC1(F)C=CO1 (FC1(F)CDCO1) from CHOF_G4
+FC1(F)C=CC1 (FC1(F)CDCC1) from CHOF_G4
+FC(F)C1(F)C=C1 (FC(F)C1(F)CDC1) from CHOF_G4
+FC(F)(F)C1=CC1(F)F (FC(F)(F)C1DCC1(F)F) from CHOF_G4
+FC1=CCC1(F)F (FC1DCCC1(F)F) from CHOF_G4
+FC1=CC1C(F)F (FC1DCC1C(F)F) from CHOF_G4
+FCC1(F)C=C1F (FCC1(F)CDC1F) from CHOF_G4
+FC(F)C1=CC1F (FC(F)C1DCC1F) from CHOF_G4
+FC1=CC1(F)C(F)F (FC1DCC1(F)C(F)F) from CHOF_G4
+CC1(F)C=C1F (CC1(F)CDC1F) from CHOF_G4
+OC1=CC1(F)F (OC1DCC1(F)F) from CHOF_G4
+FCC1=CC1F (FCC1DCC1F) from CHOF_G4
+FC1=CC(F)C1F (FC1DCC(F)C1F) from CHOF_G4
+FC(F)C1=CC1(F)F (FC(F)C1DCC1(F)F) from CHOF_G4
+FC1=CCC1 (FC1DCCC1) from CHOF_G4
+FC1C=CC1(F)F (FC1CDCC1(F)F) from CHOF_G4
+FC1=CCC1F (FC1DCCC1F) from CHOF_G4
+OC1(F)C=C1 (OC1(F)CDC1) from CHOF_G4
+FCC1(F)C=C1 (FCC1(F)CDC1) from CHOF_G4
+CC1C=C1F (CC1CDC1F) from CHOF_G4
+FC1=CC(F)C1 (FC1DCC(F)C1) from CHOF_G4
+FC1=CC(F)(F)O1 (FC1DCC(F)(F)O1) from CHOF_G4
+FC(F)(F)C1=CC1 (FC(F)(F)C1DCC1) from CHOF_G4
+FCC1=CC1(F)F (FCC1DCC1(F)F) from CHOF_G4
+FC(F)C1C=C1 (FC(F)C1CDC1) from CHOF_G4
+FC1=CC(F)(F)C1 (FC1DCC(F)(F)C1) from CHOF_G4
+FC1=CC1C(F)(F)F (FC1DCC1C(F)(F)F) from CHOF_G4
+FCC1C=C1 (FCC1CDC1) from CHOF_G4
+FC1(F)C=C1 (FC1(F)CDC1) from CHOF_G4
+FC(F)(F)C1C=C1 (FC(F)(F)C1CDC1) from CHOF_G4
+FCC1C=C1F (FCC1CDC1F) from CHOF_G4
+OC1C=C1F (OC1CDC1F) from CHOF_G4
+FC1=CC1(F)C(F)(F)F (FC1DCC1(F)C(F)(F)F) from CHOF_G4
+FC1=CC(F)(F)C1(F)F (FC1DCC(F)(F)C1(F)F) from CHOF_G4
+FC1=CC1F (FC1DCC1F) from CHOF_G4
+FC(F)C1=CC1 (FC(F)C1DCC1) from CHOF_G4
+CC1=CC1(F)F (CC1DCC1(F)F) from CHOF_G4
+CC1=CC1F (CC1DCC1F) from CHOF_G4
+FC(F)(F)C1(F)C=C1 (FC(F)(F)C1(F)CDC1) from CHOF_G4
+OC1(F)C=C1F (OC1(F)CDC1F) from CHOF_G4
+FC1C=C1C(F)(F)F (FC1CDC1C(F)(F)F) from CHOF_G4
+FCC1=CC1 (FCC1DCC1) from CHOF_G4
+FC1=CC(F)(F)C1F (FC1DCC(F)(F)C1F) from CHOF_G4
+FC1(F)C=CC1(F)F (FC1(F)CDCC1(F)F) from CHOF_G4
+FCC=CC(Cl)Cl (FCCDCC(Cl)Cl) from CHOFCl_G4
+CC(F)(Cl)C=CF (CC(F)(Cl)CDCF) from CHOFCl_G4
+FC(F)C=COCl (FC(F)CDCOCl) from CHOFCl_G4
+OC(Cl)C=C(F)Cl (OC(Cl)CDC(F)Cl) from CHOFCl_G4
+C=CC(F)(F)CCl (CDCC(F)(F)CCl) from CHOFCl_G4
+CC=C(F)C(F)Cl (CCDC(F)C(F)Cl) from CHOFCl_G4
+FCC=COCl (FCCDCOCl) from CHOFCl_G4
+CC=C(F)CCl (CCDC(F)CCl) from CHOFCl_G4
+FC=CC(Cl)OCl (FCDCC(Cl)OCl) from CHOFCl_G4
+OC(Cl)(Cl)C=CF (OC(Cl)(Cl)CDCF) from CHOFCl_G4
+FC=CCCl (FCDCCCl) from CHOFCl_G4
+FC=CC(F)(F)Cl (FCDCC(F)(F)Cl) from CHOFCl_G4
+FCC(Cl)=CCCl (FCC(Cl)DCCCl) from CHOFCl_G4
+FC=CC(F)CCl (FCDCC(F)CCl) from CHOFCl_G4
+FCC(F)=CCCl (FCC(F)DCCCl) from CHOFCl_G4
+FCC=CC(F)Cl (FCCDCC(F)Cl) from CHOFCl_G4
+FC=CCCCl (FCDCCCCl) from CHOFCl_G4
+CC=C(Cl)CF (CCDC(Cl)CF) from CHOFCl_G4
+FCC=C(Cl)CCl (FCCDC(Cl)CCl) from CHOFCl_G4
+FC(F)=CC(F)Cl (FC(F)DCC(F)Cl) from CHOFCl_G4
+CC(Cl)=CC(F)F (CC(Cl)DCC(F)F) from CHOFCl_G4
+CC(F)=CCCl (CC(F)DCCCl) from CHOFCl_G4
+FC(F)=CCCCl (FC(F)DCCCCl) from CHOFCl_G4
+OC(Cl)C=C(F)F (OC(Cl)CDC(F)F) from CHOFCl_G4
+FCC=C(F)CCl (FCCDC(F)CCl) from CHOFCl_G4
+CC=C(Cl)C(F)F (CCDC(Cl)C(F)F) from CHOFCl_G4
+FC=CCC(F)Cl (FCDCCC(F)Cl) from CHOFCl_G4
+FC(F)=CCCl (FC(F)DCCCl) from CHOFCl_G4
+FC=CC(F)Cl (FCDCC(F)Cl) from CHOFCl_G4
+FCC=C(F)OCl (FCCDC(F)OCl) from CHOFCl_G4
+CC=C(Cl)C(F)Cl (CCDC(Cl)C(F)Cl) from CHOFCl_G4
+FC=CCC(Cl)Cl (FCDCCC(Cl)Cl) from CHOFCl_G4
+CC(Cl)=CCF (CC(Cl)DCCF) from CHOFCl_G4
+OC(Cl)C=CF (OC(Cl)CDCF) from CHOFCl_G4
+FC=CC(Cl)Cl (FCDCC(Cl)Cl) from CHOFCl_G4
+FC(F)=CCOCl (FC(F)DCCOCl) from CHOFCl_G4
+C=CC(O)(F)Cl (CDCC(O)(F)Cl) from CHOFCl_G4
+CC=C(F)C(Cl)Cl (CCDC(F)C(Cl)Cl) from CHOFCl_G4
+FCC=C(Cl)OCl (FCCDC(Cl)OCl) from CHOFCl_G4
+CC(F)=CC(F)Cl (CC(F)DCC(F)Cl) from CHOFCl_G4
+CC(F)=CC(Cl)Cl (CC(F)DCC(Cl)Cl) from CHOFCl_G4
+OCC=C(F)Cl (OCCDC(F)Cl) from CHOFCl_G4
+FC=CCOCl (FCDCCOCl) from CHOFCl_G4
+OC(F)(Cl)C=CF (OC(F)(Cl)CDCF) from CHOFCl_G4
+CC(Cl)C=CF (CC(Cl)CDCF) from CHOFCl_G4
+FC(F)=CC(Cl)Cl (FC(F)DCC(Cl)Cl) from CHOFCl_G4
+CC(Cl)C=C(F)F (CC(Cl)CDC(F)F) from CHOFCl_G4
+FC=CC(F)OCl (FCDCC(F)OCl) from CHOFCl_G4
+CC=C(F)OCl (CCDC(F)OCl) from CHOFCl_G4
+CC(Cl)(Cl)C=CF (CC(Cl)(Cl)CDCF) from CHOFCl_G4
+FC=CC(Cl)CCl (FCDCC(Cl)CCl) from CHOFCl_G4
+FCC=CCCl (FCCDCCCl) from CHOFCl_G4
+OC(Cl)=CCF (OC(Cl)DCCF) from CHOFCl_G4
+CCC=C(F)Cl (CCCDC(F)Cl) from CHOFCl_G4
+OC(Cl)=CC(F)F (OC(Cl)DCC(F)F) from CHOFCl_G4
+FC=CC(Cl)(Cl)Cl (FCDCC(Cl)(Cl)Cl) from CHOFCl_G4
+C=CC(F)(F)OCl (CDCC(F)(F)OCl) from CHOFCl_G4
+CC(Cl)C=C(F)Cl (CC(Cl)CDC(F)Cl) from CHOFCl_G4
+FC(F)C=CCCl (FC(F)CDCCCl) from CHOFCl_G4
+FC=CC(F)(Cl)Cl (FCDCC(F)(Cl)Cl) from CHOFCl_G4
+CC=C(F)Cl (CCDC(F)Cl) from CHOFCl_G4
+FC=CC(F)(Cl)Br (FCDCC(F)(Cl)Br) from CHOFClBr_G4
+FC=CC(Cl)(Cl)Br (FCDCC(Cl)(Cl)Br) from CHOFClBr_G4
+CC(Br)C=C(F)Cl (CC(Br)CDC(F)Cl) from CHOFClBr_G4
+FC=CC(Cl)CBr (FCDCC(Cl)CBr) from CHOFClBr_G4
+FC(F)=CC(Cl)Br (FC(F)DCC(Cl)Br) from CHOFClBr_G4
+CC=C(Br)C(F)Cl (CCDC(Br)C(F)Cl) from CHOFClBr_G4
+CC(F)=CC(Cl)Br (CC(F)DCC(Cl)Br) from CHOFClBr_G4
+OC(Cl)(Br)C=CF (OC(Cl)(Br)CDCF) from CHOFClBr_G4
+FCC=C(Cl)OBr (FCCDC(Cl)OBr) from CHOFClBr_G4
+CC=C(F)C(Cl)Br (CCDC(F)C(Cl)Br) from CHOFClBr_G4
+C=CC(F)(F)C(Cl)Br (CDCC(F)(F)C(Cl)Br) from CHOFClBr_G4
+FC=CC(Cl)Br (FCDCC(Cl)Br) from CHOFClBr_G4
+FC=CC(Cl)(Br)Br (FCDCC(Cl)(Br)Br) from CHOFClBr_G4
+FC=CCC(Cl)Br (FCDCCC(Cl)Br) from CHOFClBr_G4
+FCC=C(Cl)CBr (FCCDC(Cl)CBr) from CHOFClBr_G4
+CC(Cl)(Br)C=CF (CC(Cl)(Br)CDCF) from CHOFClBr_G4
+FCC(Cl)=CCBr (FCC(Cl)DCCBr) from CHOFClBr_G4
+FC=CC(Cl)OBr (FCDCC(Cl)OBr) from CHOFClBr_G4
+OC(Br)C=C(F)Cl (OC(Br)CDC(F)Cl) from CHOFClBr_G4
+FCC=CC(Cl)Br (FCCDCC(Cl)Br) from CHOFClBr_G4
+FC=CC(F)(Br)OBr (FCDCC(F)(Br)OBr) from CHOFBr_G4
+CC=C(F)Br (CCDC(F)Br) from CHOFBr_G4
+CC(F)=CC(F)(F)Br (CC(F)DCC(F)(F)Br) from CHOFBr_G4
+C=CC(F)(F)C(Br)Br (CDCC(F)(F)C(Br)Br) from CHOFBr_G4
+CC=C(F)C(Br)(Br)Br (CCDC(F)C(Br)(Br)Br) from CHOFBr_G4
+FC=CC(Br)Br (FCDCC(Br)Br) from CHOFBr_G4
+FC(F)C=CCBr (FC(F)CDCCBr) from CHOFBr_G4
+FC=CC(Br)(Br)OBr (FCDCC(Br)(Br)OBr) from CHOFBr_G4
+FC=CCC(Br)Br (FCDCCC(Br)Br) from CHOFBr_G4
+C=CC(F)(F)OBr (CDCC(F)(F)OBr) from CHOFBr_G4
+CC=C(Br)C(F)(Br)Br (CCDC(Br)C(F)(Br)Br) from CHOFBr_G4
+FC(F)C=C(Br)CBr (FC(F)CDC(Br)CBr) from CHOFBr_G4
+CCC=C(F)Br (CCCDC(F)Br) from CHOFBr_G4
+FCC(F)=CC(F)Br (FCC(F)DCC(F)Br) from CHOFBr_G4
+OC(Br)C=C(F)Br (OC(Br)CDC(F)Br) from CHOFBr_G4
+FCC=CCBr (FCCDCCBr) from CHOFBr_G4
+CC=C(F)C(F)(F)Br (CCDC(F)C(F)(F)Br) from CHOFBr_G4
+FCC=CC(Br)(Br)Br (FCCDCC(Br)(Br)Br) from CHOFBr_G4
+FC=CCC(F)(F)Br (FCDCCC(F)(F)Br) from CHOFBr_G4
+CC=C(F)OBr (CCDC(F)OBr) from CHOFBr_G4
+CC(F)=CC(Br)Br (CC(F)DCC(Br)Br) from CHOFBr_G4
+FCC=C(Br)OBr (FCCDC(Br)OBr) from CHOFBr_G4
+FC=CC(F)OBr (FCDCC(F)OBr) from CHOFBr_G4
+CC=C(Br)CF (CCDC(Br)CF) from CHOFBr_G4
+CC=C(F)C(Br)Br (CCDC(F)C(Br)Br) from CHOFBr_G4
+FC=CCOBr (FCDCCOBr) from CHOFBr_G4
+CC=C(Br)C(F)(F)Br (CCDC(Br)C(F)(F)Br) from CHOFBr_G4
+OCC=C(F)Br (OCCDC(F)Br) from CHOFBr_G4
+FCC(Br)=CC(Br)Br (FCC(Br)DCC(Br)Br) from CHOFBr_G4
+FC(F)=CC(F)(F)Br (FC(F)DCC(F)(F)Br) from CHOFBr_G4
+CC(F)=CC(F)Br (CC(F)DCC(F)Br) from CHOFBr_G4
+FC=CCC(Br)(Br)Br (FCDCCC(Br)(Br)Br) from CHOFBr_G4
+FC(F)C=CC(Br)Br (FC(F)CDCC(Br)Br) from CHOFBr_G4
+C=CC(F)(F)C(F)Br (CDCC(F)(F)C(F)Br) from CHOFBr_G4
+FC(F)=CC(Br)Br (FC(F)DCC(Br)Br) from CHOFBr_G4
+FCC(Br)=CCBr (FCC(Br)DCCBr) from CHOFBr_G4
+FC=CC(F)(F)OBr (FCDCC(F)(F)OBr) from CHOFBr_G4
+FC(F)(F)C=CCBr (FC(F)(F)CDCCBr) from CHOFBr_G4
+FC=CC(Br)CBr (FCDCC(Br)CBr) from CHOFBr_G4
+FC(=CC(F)F)CBr (FC(DCC(F)F)CBr) from CHOFBr_G4
+CC(Br)C=C(F)F (CC(Br)CDC(F)F) from CHOFBr_G4
+C=CC(O)(F)Br (CDCC(O)(F)Br) from CHOFBr_G4
+FC(F)=CC(F)OBr (FC(F)DCC(F)OBr) from CHOFBr_G4
+FC=CC(F)(Br)Br (FCDCC(F)(Br)Br) from CHOFBr_G4
+FC(F)=CC(Br)OBr (FC(F)DCC(Br)OBr) from CHOFBr_G4
+FCC=CC(F)(F)Br (FCCDCC(F)(F)Br) from CHOFBr_G4
+FC(F)=CCOBr (FC(F)DCCOBr) from CHOFBr_G4
+OC(Br)=CC(F)F (OC(Br)DCC(F)F) from CHOFBr_G4
+CC(F)(Br)C=CF (CC(F)(Br)CDCF) from CHOFBr_G4
+FCC=C(F)OBr (FCCDC(F)OBr) from CHOFBr_G4
+CC(F)(Br)C=C(F)F (CC(F)(Br)CDC(F)F) from CHOFBr_G4
+CC(Br)(Br)C=CF (CC(Br)(Br)CDCF) from CHOFBr_G4
+CC(Br)=CC(F)(F)F (CC(Br)DCC(F)(F)F) from CHOFBr_G4
+FC=CC(F)Br (FCDCC(F)Br) from CHOFBr_G4
+FC(F)=CCBr (FC(F)DCCBr) from CHOFBr_G4
+CC(F)=CC(F)(Br)Br (CC(F)DCC(F)(Br)Br) from CHOFBr_G4
+FC=CCC(F)Br (FCDCCC(F)Br) from CHOFBr_G4
+OC(Br)(Br)C=CF (OC(Br)(Br)CDCF) from CHOFBr_G4
+FCC=C(F)C(Br)Br (FCCDC(F)C(Br)Br) from CHOFBr_G4
+FCC=C(F)CBr (FCCDC(F)CBr) from CHOFBr_G4
+OC(Br)(Br)C=C(F)F (OC(Br)(Br)CDC(F)F) from CHOFBr_G4
+FC(F)C(Br)=CCBr (FC(F)C(Br)DCCBr) from CHOFBr_G4
+OC(F)(Br)C=C(F)F (OC(F)(Br)CDC(F)F) from CHOFBr_G4
+FC(F)=CC(Br)CBr (FC(F)DCC(Br)CBr) from CHOFBr_G4
+FC(F)C=CC(F)Br (FC(F)CDCC(F)Br) from CHOFBr_G4
+FCC(F)=CC(Br)Br (FCC(F)DCC(Br)Br) from CHOFBr_G4
+OC(Br)=CC(F)(F)F (OC(Br)DCC(F)(F)F) from CHOFBr_G4
+FC(F)=CCCBr (FC(F)DCCCBr) from CHOFBr_G4
+CC(F)=CCBr (CC(F)DCCBr) from CHOFBr_G4
+FC(F)=CC(F)CBr (FC(F)DCC(F)CBr) from CHOFBr_G4
+FCC=CC(Br)Br (FCCDCC(Br)Br) from CHOFBr_G4
+FC=CCC(F)(Br)Br (FCDCCC(F)(Br)Br) from CHOFBr_G4
+FCC=C(F)C(F)Br (FCCDC(F)C(F)Br) from CHOFBr_G4
+FC=CC(F)(F)CBr (FCDCC(F)(F)CBr) from CHOFBr_G4
+FC=CC(Br)C(Br)Br (FCDCC(Br)C(Br)Br) from CHOFBr_G4
+OC(Br)=CCF (OC(Br)DCCF) from CHOFBr_G4
+FC(=CC(F)F)OBr (FC(DCC(F)F)OBr) from CHOFBr_G4
+FC=CC(Br)OBr (FCDCC(Br)OBr) from CHOFBr_G4
+FC(F)(F)C=COBr (FC(F)(F)CDCOBr) from CHOFBr_G4
+FC(F)=CC(F)Br (FC(F)DCC(F)Br) from CHOFBr_G4
+OC(Br)(Br)C=C(F)Br (OC(Br)(Br)CDC(F)Br) from CHOFBr_G4
+FC(F)=CC(F)(Br)Br (FC(F)DCC(F)(Br)Br) from CHOFBr_G4
+FCC=CC(F)(Br)Br (FCCDCC(F)(Br)Br) from CHOFBr_G4
+CC=C(Br)C(F)(F)F (CCDC(Br)C(F)(F)F) from CHOFBr_G4
+FC=CC(F)C(Br)Br (FCDCC(F)C(Br)Br) from CHOFBr_G4
+FC(F)=CC(Br)(Br)Br (FC(F)DCC(Br)(Br)Br) from CHOFBr_G4
+FC=CCCBr (FCDCCCBr) from CHOFBr_G4
+CC(F)=CC(Br)(Br)Br (CC(F)DCC(Br)(Br)Br) from CHOFBr_G4
+CC(Br)C=CF (CC(Br)CDCF) from CHOFBr_G4
+FC(=CCBr)C(F)F (FC(DCCBr)C(F)F) from CHOFBr_G4
+CC=C(Br)C(F)Br (CCDC(Br)C(F)Br) from CHOFBr_G4
+OC(F)(Br)C=CF (OC(F)(Br)CDCF) from CHOFBr_G4
+FCC=CC(F)Br (FCCDCC(F)Br) from CHOFBr_G4
+FCC(F)=CCBr (FCC(F)DCCBr) from CHOFBr_G4
+CC(Br)=CC(F)F (CC(Br)DCC(F)F) from CHOFBr_G4
+FC=CC(Br)(Br)Br (FCDCC(Br)(Br)Br) from CHOFBr_G4
+FC=CC(F)CBr (FCDCC(F)CBr) from CHOFBr_G4
+FC=CC(F)(F)Br (FCDCC(F)(F)Br) from CHOFBr_G4
+FCC=C(Br)CBr (FCCDC(Br)CBr) from CHOFBr_G4
+FC(F)=CCC(F)Br (FC(F)DCCC(F)Br) from CHOFBr_G4
+FCC=C(Br)C(Br)Br (FCCDC(Br)C(Br)Br) from CHOFBr_G4
+FC=CCBr (FCDCCBr) from CHOFBr_G4
+CC=C(F)CBr (CCDC(F)CBr) from CHOFBr_G4
+FC(F)=CCC(Br)Br (FC(F)DCCC(Br)Br) from CHOFBr_G4
+CC(Br)C=C(F)Br (CC(Br)CDC(F)Br) from CHOFBr_G4
+FCC=COBr (FCCDCOBr) from CHOFBr_G4
+CC=C(Br)C(F)F (CCDC(Br)C(F)F) from CHOFBr_G4
+FC(F)C=C(Br)OBr (FC(F)CDC(Br)OBr) from CHOFBr_G4
+OC(Br)C=C(F)F (OC(Br)CDC(F)F) from CHOFBr_G4
+FC=CC(Br)(Br)CBr (FCDCC(Br)(Br)CBr) from CHOFBr_G4
+FC=CC(F)C(F)Br (FCDCC(F)C(F)Br) from CHOFBr_G4
+CC=C(F)C(F)Br (CCDC(F)C(F)Br) from CHOFBr_G4
+OC(Br)C=CF (OC(Br)CDCF) from CHOFBr_G4
+C=CC(F)(F)CBr (CDCC(F)(F)CBr) from CHOFBr_G4
+CC(Br)=CCF (CC(Br)DCCF) from CHOFBr_G4
+FC(F)C=COBr (FC(F)CDCOBr) from CHOFBr_G4
+CC=C(F)C(F)(Br)Br (CCDC(F)C(F)(Br)Br) from CHOFBr_G4
+FC=CC(F)(Br)CBr (FCDCC(F)(Br)CBr) from CHOFBr_G4
+CC(Br)(Br)C=C(F)F (CC(Br)(Br)CDC(F)F) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 328,
+    index = 353,
     label = "Cds-CdsCdsH",
     group = 
 """
@@ -7325,7 +10010,7 @@ entry(
 )
 
 entry(
-    index = 329,
+    index = 354,
     label = "Cd-Cd(CO)H",
     group = 
 """
@@ -7351,7 +10036,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 330,
+    index = 355,
     label = "Cd-Cd(CO-O)H",
     group = 
 """
@@ -7376,7 +10061,7 @@ Set to zero to avoid double counting with Cds-O2d(Cds-Cds)O2s
 )
 
 entry(
-    index = 331,
+    index = 356,
     label = "Cds-Cds(Cds-Cd)H",
     group = 
 """
@@ -7395,7 +10080,7 @@ entry(
 )
 
 entry(
-    index = 332,
+    index = 357,
     label = "Cds-Cds(Cds-Cds)H",
     group = 
 """
@@ -7419,7 +10104,7 @@ entry(
 )
 
 entry(
-    index = 333,
+    index = 358,
     label = "Cds-Cds(Cds-Cdd)H",
     group = 
 """
@@ -7438,7 +10123,7 @@ entry(
 )
 
 entry(
-    index = 334,
+    index = 359,
     label = "Cd-Cd(CCO)H",
     group = 
 """
@@ -7465,7 +10150,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 335,
+    index = 360,
     label = "Cds-Cds(Cds-Cdd-S2d)H",
     group = 
 """
@@ -7485,7 +10170,7 @@ entry(
 )
 
 entry(
-    index = 336,
+    index = 361,
     label = "Cds-Cds(Cds-Cdd-Cd)H",
     group = 
 """
@@ -7505,7 +10190,7 @@ entry(
 )
 
 entry(
-    index = 337,
+    index = 362,
     label = "Cds-CdsCtH",
     group = 
 """
@@ -7528,7 +10213,7 @@ entry(
 )
 
 entry(
-    index = 338,
+    index = 363,
     label = "Cds-CdsCbH",
     group = 
 """
@@ -7551,7 +10236,7 @@ entry(
 )
 
 entry(
-    index = 339,
+    index = 364,
     label = "Cds-(Cds-Os)CbH",
     group = 
 """
@@ -7575,7 +10260,7 @@ Fitted to CBS-QB3 calculations for OC=Cc1ccccc1
 )
 
 entry(
-    index = 340,
+    index = 365,
     label = "Cds-CddCsH",
     group = 
 """
@@ -7593,7 +10278,7 @@ entry(
 )
 
 entry(
-    index = 341,
+    index = 366,
     label = "Cds-(Cdd-O2d)CsH",
     group = 
 """
@@ -7619,7 +10304,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 342,
+    index = 367,
     label = "Cds-(Cdd-S2d)CsH",
     group = 
 """
@@ -7638,7 +10323,7 @@ entry(
 )
 
 entry(
-    index = 343,
+    index = 368,
     label = "Cds-(Cdd-Cd)CsH",
     group = 
 """
@@ -7657,7 +10342,100 @@ entry(
 )
 
 entry(
-    index = 344,
+    index = 369,
+    label = "Cd-(Cd)(F1sHH)CddCsH",
+    group = 
+"""
+1   Cs  u0 {2,S} {4,S} {5,S} {6,S}
+2 * Cd  u0 {1,S} {3,D} {7,S}
+3   Cdd u0 {2,D} {8,D}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+6   H   u0 {1,S}
+7   H   u0 {2,S}
+8   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.4319,18.7393,22.2217,25.2595,30.6372,34.3768,39.8949],'J/(mol*K)','+|-',[2.35039,2.45695,2.30357,2.13894,1.85447,1.64677,3.18292]),
+        H298 = (30.3764,'kJ/mol','+|-',11.3457),
+        S298 = (35.4385,'J/(mol*K)','+|-',6.45904),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC=C=C(F)F (FCCDCDC(F)F) from CHOF_G4
+FC=C=CCF (FCDCDCCF) from CHOF_G4
+C=C=CCF (CDCDCCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 370,
+    label = "Cd-(Cd)(F1sF1sF1s)CddCsH",
+    group = 
+"""
+1   Cs  u0 {2,S} {4,S} {5,S} {6,S}
+2 * Cd  u0 {1,S} {3,D} {7,S}
+3   Cdd u0 {2,D} {8,D}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   F1s u0 {1,S}
+7   H   u0 {2,S}
+8   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([18.0453,21.5485,24.9435,27.7397,32.2605,35.2852,40.4669],'J/(mol*K)','+|-',[2.36397,2.47115,2.31688,2.1513,1.86519,1.65628,3.20131]),
+        H298 = (24.7442,'kJ/mol','+|-',11.4112),
+        S298 = (33.8786,'J/(mol*K)','+|-',6.49636),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)=C=CC(F)(F)F (FC(F)DCDCC(F)(F)F) from CHOF_G4
+C=C=CC(F)(F)F (CDCDCC(F)(F)F) from CHOF_G4
+FC=C=CC(F)(F)F (FCDCDCC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 371,
+    label = "Cd-(Cd)(F1sF1sH)CddCsH",
+    group = 
+"""
+1   Cs  u0 {2,S} {4,S} {5,S} {6,S}
+2 * Cd  u0 {1,S} {3,D} {7,S}
+3   Cdd u0 {2,D} {8,D}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   H   u0 {1,S}
+7   H   u0 {2,S}
+8   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([17.7125,20.5105,23.6411,26.3704,31.3587,34.8605,40.0224],'J/(mol*K)','+|-',[2.35768,2.46457,2.31071,2.14557,1.86022,1.65187,3.19279]),
+        H298 = (25.609,'kJ/mol','+|-',11.3808),
+        S298 = (34.0794,'J/(mol*K)','+|-',6.47906),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C=CC(F)F (CDCDCC(F)F) from CHOF_G4
+FC(F)=C=CC(F)F (FC(F)DCDCC(F)F) from CHOF_G4
+FC=C=CC(F)F (FCDCDCC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 372,
     label = "Cds-CddCdsH",
     group = 
 """
@@ -7675,7 +10453,7 @@ entry(
 )
 
 entry(
-    index = 345,
+    index = 373,
     label = "Cds-(Cdd-O2d)(Cds-O2d)H",
     group = 
 """
@@ -7695,7 +10473,7 @@ entry(
 )
 
 entry(
-    index = 346,
+    index = 374,
     label = "Cds-(Cdd-O2d)(Cds-Cd)H",
     group = 
 """
@@ -7722,7 +10500,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 347,
+    index = 375,
     label = "Cds-(Cdd-O2d)(Cds-Cds)H",
     group = 
 """
@@ -7742,7 +10520,7 @@ entry(
 )
 
 entry(
-    index = 348,
+    index = 376,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)H",
     group = 
 """
@@ -7762,7 +10540,7 @@ entry(
 )
 
 entry(
-    index = 349,
+    index = 377,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -7788,7 +10566,7 @@ entry(
 )
 
 entry(
-    index = 350,
+    index = 378,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -7809,7 +10587,7 @@ entry(
 )
 
 entry(
-    index = 351,
+    index = 379,
     label = "Cds-(Cdd-S2d)(Cds-Cd)H",
     group = 
 """
@@ -7829,7 +10607,7 @@ entry(
 )
 
 entry(
-    index = 352,
+    index = 380,
     label = "Cds-(Cdd-S2d)(Cds-Cds)H",
     group = 
 """
@@ -7849,7 +10627,7 @@ entry(
 )
 
 entry(
-    index = 353,
+    index = 381,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)H",
     group = 
 """
@@ -7869,7 +10647,7 @@ entry(
 )
 
 entry(
-    index = 354,
+    index = 382,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -7890,7 +10668,7 @@ entry(
 )
 
 entry(
-    index = 355,
+    index = 383,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -7911,7 +10689,7 @@ entry(
 )
 
 entry(
-    index = 356,
+    index = 384,
     label = "Cds-(Cdd-Cd)(Cds-O2d)H",
     group = 
 """
@@ -7931,7 +10709,7 @@ entry(
 )
 
 entry(
-    index = 357,
+    index = 385,
     label = "Cds-(Cdd-Cd)(Cds-Cd)H",
     group = 
 """
@@ -7951,7 +10729,7 @@ entry(
 )
 
 entry(
-    index = 358,
+    index = 386,
     label = "Cds-(Cdd-Cd)(Cds-Cds)H",
     group = 
 """
@@ -7971,7 +10749,7 @@ entry(
 )
 
 entry(
-    index = 359,
+    index = 387,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)H",
     group = 
 """
@@ -7991,7 +10769,7 @@ entry(
 )
 
 entry(
-    index = 360,
+    index = 388,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -8012,7 +10790,7 @@ entry(
 )
 
 entry(
-    index = 361,
+    index = 389,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -8033,7 +10811,7 @@ entry(
 )
 
 entry(
-    index = 362,
+    index = 390,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -8054,7 +10832,7 @@ entry(
 )
 
 entry(
-    index = 363,
+    index = 391,
     label = "Cds-CddCtH",
     group = 
 """
@@ -8072,7 +10850,7 @@ entry(
 )
 
 entry(
-    index = 364,
+    index = 392,
     label = "Cds-(Cdd-O2d)CtH",
     group = 
 """
@@ -8091,7 +10869,7 @@ entry(
 )
 
 entry(
-    index = 365,
+    index = 393,
     label = "Cds-(Cdd-S2d)CtH",
     group = 
 """
@@ -8110,7 +10888,7 @@ entry(
 )
 
 entry(
-    index = 366,
+    index = 394,
     label = "Cds-(Cdd-Cd)CtH",
     group = 
 """
@@ -8129,7 +10907,7 @@ entry(
 )
 
 entry(
-    index = 367,
+    index = 395,
     label = "Cds-CddCbH",
     group = 
 """
@@ -8147,7 +10925,7 @@ entry(
 )
 
 entry(
-    index = 368,
+    index = 396,
     label = "Cds-(Cdd-O2d)CbH",
     group = 
 """
@@ -8166,7 +10944,7 @@ entry(
 )
 
 entry(
-    index = 369,
+    index = 397,
     label = "Cds-(Cdd-S2d)CbH",
     group = 
 """
@@ -8185,7 +10963,7 @@ entry(
 )
 
 entry(
-    index = 370,
+    index = 398,
     label = "Cds-(Cdd-Cd)CbH",
     group = 
 """
@@ -8204,7 +10982,7 @@ entry(
 )
 
 entry(
-    index = 371,
+    index = 399,
     label = "Cds-(Cdd-Cd)C=SH",
     group = 
 """
@@ -8224,7 +11002,7 @@ entry(
 )
 
 entry(
-    index = 372,
+    index = 400,
     label = "Cds-(Cdd-S2d)C=SH",
     group = 
 """
@@ -8244,7 +11022,7 @@ entry(
 )
 
 entry(
-    index = 373,
+    index = 401,
     label = "Cds-CdsC=SH",
     group = 
 """
@@ -8268,7 +11046,32 @@ entry(
 )
 
 entry(
-    index = 374,
+    index = 402,
+    label = "Cd-C2dCsH",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,D} {4,S}
+2   Cs  u0 {1,S}
+3   C2d u0 {1,D}
+4   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([13.9758,18.1569,22.0487,26.1177,31.8095,34.8146,40.5672],'J/(mol*K)','+|-',[3.94443,4.12326,3.86586,3.58958,3.11218,2.76361,5.34159]),
+        H298 = (47.7054,'kJ/mol','+|-',19.0403),
+        S298 = (38.2284,'J/(mol*K)','+|-',10.8396),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[C]=CC(F)(F)F ([C]DCC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 403,
     label = "Cds-CdCO",
     group = 
 """
@@ -8286,7 +11089,7 @@ entry(
 )
 
 entry(
-    index = 375,
+    index = 404,
     label = "Cds-CdsCdsOs",
     group = 
 """
@@ -8304,7 +11107,7 @@ entry(
 )
 
 entry(
-    index = 376,
+    index = 405,
     label = "Cds-Cds(Cds-O2d)O2s",
     group = 
 """
@@ -8328,7 +11131,7 @@ entry(
 )
 
 entry(
-    index = 377,
+    index = 406,
     label = "Cds-Cds(Cds-Cd)O2s",
     group = 
 """
@@ -8347,7 +11150,7 @@ entry(
 )
 
 entry(
-    index = 378,
+    index = 407,
     label = "Cds-Cds(Cds-Cds)O2s",
     group = 
 """
@@ -8371,7 +11174,7 @@ entry(
 )
 
 entry(
-    index = 379,
+    index = 408,
     label = "Cds-Cds(Cds-Cdd)O2s",
     group = 
 """
@@ -8390,7 +11193,7 @@ entry(
 )
 
 entry(
-    index = 380,
+    index = 409,
     label = "Cds-Cds(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -8410,7 +11213,7 @@ entry(
 )
 
 entry(
-    index = 381,
+    index = 410,
     label = "Cds-Cds(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -8430,7 +11233,7 @@ entry(
 )
 
 entry(
-    index = 382,
+    index = 411,
     label = "Cds-CdsCtOs",
     group = 
 """
@@ -8448,7 +11251,7 @@ entry(
 )
 
 entry(
-    index = 383,
+    index = 412,
     label = "Cds-CdsCbOs",
     group = 
 """
@@ -8471,7 +11274,7 @@ entry(
 )
 
 entry(
-    index = 384,
+    index = 413,
     label = "Cds-CddCdsOs",
     group = 
 """
@@ -8489,7 +11292,7 @@ entry(
 )
 
 entry(
-    index = 385,
+    index = 414,
     label = "Cds-(Cdd-O2d)(Cds-O2d)O2s",
     group = 
 """
@@ -8509,7 +11312,7 @@ entry(
 )
 
 entry(
-    index = 386,
+    index = 415,
     label = "Cds-(Cdd-O2d)(Cds-Cd)O2s",
     group = 
 """
@@ -8529,7 +11332,7 @@ entry(
 )
 
 entry(
-    index = 387,
+    index = 416,
     label = "Cds-(Cdd-O2d)(Cds-Cds)O2s",
     group = 
 """
@@ -8549,7 +11352,7 @@ entry(
 )
 
 entry(
-    index = 388,
+    index = 417,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)O2s",
     group = 
 """
@@ -8569,7 +11372,7 @@ entry(
 )
 
 entry(
-    index = 389,
+    index = 418,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -8595,7 +11398,7 @@ entry(
 )
 
 entry(
-    index = 390,
+    index = 419,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -8616,7 +11419,7 @@ entry(
 )
 
 entry(
-    index = 391,
+    index = 420,
     label = "Cds-(Cdd-Cd)(Cds-Cd)O2s",
     group = 
 """
@@ -8636,7 +11439,7 @@ entry(
 )
 
 entry(
-    index = 392,
+    index = 421,
     label = "Cds-(Cdd-Cd)(Cds-Cds)O2s",
     group = 
 """
@@ -8656,7 +11459,7 @@ entry(
 )
 
 entry(
-    index = 393,
+    index = 422,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)O2s",
     group = 
 """
@@ -8676,7 +11479,7 @@ entry(
 )
 
 entry(
-    index = 394,
+    index = 423,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -8697,7 +11500,7 @@ entry(
 )
 
 entry(
-    index = 395,
+    index = 424,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -8718,7 +11521,7 @@ entry(
 )
 
 entry(
-    index = 396,
+    index = 425,
     label = "Cds-CddCtOs",
     group = 
 """
@@ -8736,7 +11539,7 @@ entry(
 )
 
 entry(
-    index = 397,
+    index = 426,
     label = "Cds-(Cdd-O2d)CtOs",
     group = 
 """
@@ -8755,7 +11558,7 @@ entry(
 )
 
 entry(
-    index = 398,
+    index = 427,
     label = "Cds-(Cdd-Cd)CtOs",
     group = 
 """
@@ -8774,7 +11577,7 @@ entry(
 )
 
 entry(
-    index = 399,
+    index = 428,
     label = "Cds-CddCbOs",
     group = 
 """
@@ -8792,7 +11595,7 @@ entry(
 )
 
 entry(
-    index = 400,
+    index = 429,
     label = "Cds-(Cdd-O2d)CbOs",
     group = 
 """
@@ -8811,7 +11614,7 @@ entry(
 )
 
 entry(
-    index = 401,
+    index = 430,
     label = "Cds-(Cdd-Cd)CbOs",
     group = 
 """
@@ -8830,7 +11633,7 @@ entry(
 )
 
 entry(
-    index = 402,
+    index = 431,
     label = "Cd-CdCsOs",
     group = 
 """
@@ -8855,7 +11658,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 403,
+    index = 432,
     label = "Cds-CdsCsOs",
     group = 
 """
@@ -8878,7 +11681,7 @@ entry(
 )
 
 entry(
-    index = 404,
+    index = 433,
     label = "Cds-CddCsOs",
     group = 
 """
@@ -8896,7 +11699,7 @@ entry(
 )
 
 entry(
-    index = 405,
+    index = 434,
     label = "Cds-(Cdd-O2d)CsOs",
     group = 
 """
@@ -8920,7 +11723,7 @@ entry(
 )
 
 entry(
-    index = 406,
+    index = 435,
     label = "Cds-(Cdd-Cd)CsOs",
     group = 
 """
@@ -8939,7 +11742,7 @@ entry(
 )
 
 entry(
-    index = 407,
+    index = 436,
     label = "Cds-CdCS",
     group = 
 """
@@ -8957,7 +11760,7 @@ entry(
 )
 
 entry(
-    index = 408,
+    index = 437,
     label = "Cds-CdsCsSs",
     group = 
 """
@@ -8975,7 +11778,7 @@ entry(
 )
 
 entry(
-    index = 409,
+    index = 438,
     label = "Cds-CdsCsS2",
     group = 
 """
@@ -8998,7 +11801,7 @@ entry(
 )
 
 entry(
-    index = 410,
+    index = 439,
     label = "Cds-CdsCsS4",
     group = 
 """
@@ -9021,7 +11824,7 @@ entry(
 )
 
 entry(
-    index = 411,
+    index = 440,
     label = "Cds-CdsCsS6",
     group = 
 """
@@ -9044,7 +11847,7 @@ entry(
 )
 
 entry(
-    index = 412,
+    index = 441,
     label = "Cds-CdsCdsSs",
     group = 
 """
@@ -9062,7 +11865,7 @@ entry(
 )
 
 entry(
-    index = 413,
+    index = 442,
     label = "Cds-Cds(Cds-Cd)S2s",
     group = 
 """
@@ -9081,7 +11884,7 @@ entry(
 )
 
 entry(
-    index = 414,
+    index = 443,
     label = "Cds-Cds(Cds-Cds)S2s",
     group = 
 """
@@ -9100,7 +11903,7 @@ entry(
 )
 
 entry(
-    index = 415,
+    index = 444,
     label = "Cds-Cds(Cds-Cdd)S2s",
     group = 
 """
@@ -9119,7 +11922,7 @@ entry(
 )
 
 entry(
-    index = 416,
+    index = 445,
     label = "Cds-Cds(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -9139,7 +11942,7 @@ entry(
 )
 
 entry(
-    index = 417,
+    index = 446,
     label = "Cds-Cds(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -9159,7 +11962,7 @@ entry(
 )
 
 entry(
-    index = 418,
+    index = 447,
     label = "Cds-CdsCtSs",
     group = 
 """
@@ -9177,7 +11980,7 @@ entry(
 )
 
 entry(
-    index = 419,
+    index = 448,
     label = "Cds-CdsCbSs",
     group = 
 """
@@ -9195,7 +11998,7 @@ entry(
 )
 
 entry(
-    index = 420,
+    index = 449,
     label = "Cds-CddCsSs",
     group = 
 """
@@ -9213,7 +12016,7 @@ entry(
 )
 
 entry(
-    index = 421,
+    index = 450,
     label = "Cds-(Cdd-S2d)CsSs",
     group = 
 """
@@ -9232,7 +12035,7 @@ entry(
 )
 
 entry(
-    index = 422,
+    index = 451,
     label = "Cds-(Cdd-Cd)CsSs",
     group = 
 """
@@ -9251,7 +12054,7 @@ entry(
 )
 
 entry(
-    index = 423,
+    index = 452,
     label = "Cds-CddCdsSs",
     group = 
 """
@@ -9269,7 +12072,7 @@ entry(
 )
 
 entry(
-    index = 424,
+    index = 453,
     label = "Cds-(Cdd-S2d)(Cds-Cd)S2s",
     group = 
 """
@@ -9289,7 +12092,7 @@ entry(
 )
 
 entry(
-    index = 425,
+    index = 454,
     label = "Cds-(Cdd-S2d)(Cds-Cds)S2s",
     group = 
 """
@@ -9309,7 +12112,7 @@ entry(
 )
 
 entry(
-    index = 426,
+    index = 455,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)S2s",
     group = 
 """
@@ -9329,7 +12132,7 @@ entry(
 )
 
 entry(
-    index = 427,
+    index = 456,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -9350,7 +12153,7 @@ entry(
 )
 
 entry(
-    index = 428,
+    index = 457,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -9371,7 +12174,7 @@ entry(
 )
 
 entry(
-    index = 429,
+    index = 458,
     label = "Cds-(Cdd-Cd)(Cds-Cd)S2s",
     group = 
 """
@@ -9391,7 +12194,7 @@ entry(
 )
 
 entry(
-    index = 430,
+    index = 459,
     label = "Cds-(Cdd-Cd)(Cds-Cds)S2s",
     group = 
 """
@@ -9411,7 +12214,7 @@ entry(
 )
 
 entry(
-    index = 431,
+    index = 460,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)S2s",
     group = 
 """
@@ -9431,7 +12234,7 @@ entry(
 )
 
 entry(
-    index = 432,
+    index = 461,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -9452,7 +12255,7 @@ entry(
 )
 
 entry(
-    index = 433,
+    index = 462,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -9473,7 +12276,7 @@ entry(
 )
 
 entry(
-    index = 434,
+    index = 463,
     label = "Cds-CddCtSs",
     group = 
 """
@@ -9491,7 +12294,7 @@ entry(
 )
 
 entry(
-    index = 435,
+    index = 464,
     label = "Cds-(Cdd-S2d)CtSs",
     group = 
 """
@@ -9510,7 +12313,7 @@ entry(
 )
 
 entry(
-    index = 436,
+    index = 465,
     label = "Cds-(Cdd-Cd)CtSs",
     group = 
 """
@@ -9529,7 +12332,7 @@ entry(
 )
 
 entry(
-    index = 437,
+    index = 466,
     label = "Cds-CddCbSs",
     group = 
 """
@@ -9547,7 +12350,7 @@ entry(
 )
 
 entry(
-    index = 438,
+    index = 467,
     label = "Cds-(Cdd-S2d)CbSs",
     group = 
 """
@@ -9566,7 +12369,7 @@ entry(
 )
 
 entry(
-    index = 439,
+    index = 468,
     label = "Cds-(Cdd-Cd)CbSs",
     group = 
 """
@@ -9585,7 +12388,7 @@ entry(
 )
 
 entry(
-    index = 440,
+    index = 469,
     label = "Cds-(Cdd-S2d)C=SSs",
     group = 
 """
@@ -9605,7 +12408,7 @@ entry(
 )
 
 entry(
-    index = 441,
+    index = 470,
     label = "Cds-CdsC=SSs",
     group = 
 """
@@ -9624,7 +12427,7 @@ entry(
 )
 
 entry(
-    index = 442,
+    index = 471,
     label = "Cds-CdCC",
     group = 
 """
@@ -9642,7 +12445,7 @@ entry(
 )
 
 entry(
-    index = 443,
+    index = 472,
     label = "Cds-CdsCsCs",
     group = 
 """
@@ -9665,7 +12468,7 @@ entry(
 )
 
 entry(
-    index = 444,
+    index = 473,
     label = "Cds-CdsCdsCs",
     group = 
 """
@@ -9683,7 +12486,7 @@ entry(
 )
 
 entry(
-    index = 445,
+    index = 474,
     label = "Cd-CdCs(CO)",
     group = 
 """
@@ -9709,7 +12512,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 446,
+    index = 475,
     label = "Cds-Cds(Cds-Cd)Cs",
     group = 
 """
@@ -9728,7 +12531,7 @@ entry(
 )
 
 entry(
-    index = 447,
+    index = 476,
     label = "Cds-Cds(Cds-Cds)Cs",
     group = 
 """
@@ -9752,7 +12555,7 @@ entry(
 )
 
 entry(
-    index = 448,
+    index = 477,
     label = "Cds-Cds(Cds-Cdd)Cs",
     group = 
 """
@@ -9771,7 +12574,7 @@ entry(
 )
 
 entry(
-    index = 449,
+    index = 478,
     label = "Cd-CdCs(CCO)",
     group = 
 """
@@ -9798,7 +12601,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 450,
+    index = 479,
     label = "Cds-Cds(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -9818,7 +12621,7 @@ entry(
 )
 
 entry(
-    index = 451,
+    index = 480,
     label = "Cds-Cds(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -9838,7 +12641,7 @@ entry(
 )
 
 entry(
-    index = 452,
+    index = 481,
     label = "Cds-CdsCdsCds",
     group = 
 """
@@ -9856,7 +12659,7 @@ entry(
 )
 
 entry(
-    index = 453,
+    index = 482,
     label = "Cds-Cds(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -9876,7 +12679,7 @@ entry(
 )
 
 entry(
-    index = 454,
+    index = 483,
     label = "Cds-Cds(Cds-O2d)(Cds-Cd)",
     group = 
 """
@@ -9896,7 +12699,7 @@ entry(
 )
 
 entry(
-    index = 455,
+    index = 484,
     label = "Cds-Cds(Cds-O2d)(Cds-Cds)",
     group = 
 """
@@ -9921,7 +12724,7 @@ AG Vandeputte, added 7 kcal/mol to the following value (see phd M Sabbe)
 )
 
 entry(
-    index = 456,
+    index = 485,
     label = "Cds-Cds(Cds-O2d)(Cds-Cdd)",
     group = 
 """
@@ -9941,7 +12744,7 @@ entry(
 )
 
 entry(
-    index = 457,
+    index = 486,
     label = "Cds-Cds(Cds-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -9962,7 +12765,7 @@ entry(
 )
 
 entry(
-    index = 458,
+    index = 487,
     label = "Cds-Cds(Cds-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -9983,7 +12786,7 @@ entry(
 )
 
 entry(
-    index = 459,
+    index = 488,
     label = "Cds-Cds(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -10003,7 +12806,7 @@ entry(
 )
 
 entry(
-    index = 460,
+    index = 489,
     label = "Cds-Cds(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -10028,7 +12831,7 @@ AG Vandeputte, added 7 kcal/mol to the following value (see phd M Sabbe)
 )
 
 entry(
-    index = 461,
+    index = 490,
     label = "Cds-Cds(Cds-Cds)(Cds-Cdd)",
     group = 
 """
@@ -10048,7 +12851,7 @@ entry(
 )
 
 entry(
-    index = 462,
+    index = 491,
     label = "Cds-Cds(Cds-Cds)(Cds-Cdd-O2d)",
     group = 
 """
@@ -10069,7 +12872,7 @@ entry(
 )
 
 entry(
-    index = 463,
+    index = 492,
     label = "Cds-Cds(Cds-Cds)(Cds-Cdd-S2d)",
     group = 
 """
@@ -10090,7 +12893,7 @@ entry(
 )
 
 entry(
-    index = 464,
+    index = 493,
     label = "Cds-Cds(Cds-Cds)(Cds-Cdd-Cd)",
     group = 
 """
@@ -10111,7 +12914,7 @@ entry(
 )
 
 entry(
-    index = 465,
+    index = 494,
     label = "Cds-Cds(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -10131,7 +12934,7 @@ entry(
 )
 
 entry(
-    index = 466,
+    index = 495,
     label = "Cds-Cds(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -10153,7 +12956,7 @@ entry(
 )
 
 entry(
-    index = 467,
+    index = 496,
     label = "Cds-Cds(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -10175,7 +12978,7 @@ entry(
 )
 
 entry(
-    index = 468,
+    index = 497,
     label = "Cds-Cds(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -10197,7 +13000,7 @@ entry(
 )
 
 entry(
-    index = 469,
+    index = 498,
     label = "Cds-Cds(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -10219,7 +13022,7 @@ entry(
 )
 
 entry(
-    index = 470,
+    index = 499,
     label = "Cds-Cds(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -10241,7 +13044,181 @@ entry(
 )
 
 entry(
-    index = 471,
+    index = 500,
+    label = "Cd-(F1s)(F1sH)(H)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   H   u0 {2,S}
+6   F1s u0 {3,S}
+7   F1s u0 {4,S}
+8   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([6.79233,11.1983,14.613,17.9695,23.7496,26.5168,31.026],'J/(mol*K)','+|-',[3.92686,4.10489,3.84863,3.57358,3.09831,2.7513,5.31779]),
+        H298 = (36.9688,'kJ/mol','+|-',18.9555),
+        S298 = (-72.5793,'J/(mol*K)','+|-',10.7913),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C1C=C1F (FCDC1CDC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 501,
+    label = "Cd-(F1s)(F1s)(F1sH)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   F1s u0 {2,S}
+6   F1s u0 {3,S}
+7   F1s u0 {4,S}
+8   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([7.68797,11.1726,14.7782,17.8593,22.931,25.4739,30.8117],'J/(mol*K)','+|-',[3.92686,4.10489,3.84863,3.57358,3.09831,2.7513,5.31779]),
+        H298 = (34.8314,'kJ/mol','+|-',18.9555),
+        S298 = (-69.8469,'J/(mol*K)','+|-',10.7913),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C1C(F)=C1F (FCDC1C(F)DC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 502,
+    label = "Cd-(F1s)(F1sF1s)(H)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   F1s u0 {2,S}
+6   H   u0 {3,S}
+7   F1s u0 {4,S}
+8   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([9.58813,12.9836,15.5988,18.9746,24.7509,27.4357,32.3195],'J/(mol*K)','+|-',[3.929,4.10712,3.85073,3.57553,3.1,2.75279,5.32068]),
+        H298 = (43.0631,'kJ/mol','+|-',18.9658),
+        S298 = (-70.5162,'J/(mol*K)','+|-',10.7972),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=CC1=C(F)F (FC1DCC1DC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 503,
+    label = "Cd-(F1sF1s)(H)(H)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   H   u0 {2,S}
+6   H   u0 {3,S}
+7   F1s u0 {4,S}
+8   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([7.33082,11.1979,14.838,18.141,23.7898,26.5302,32.1122],'J/(mol*K)','+|-',[3.929,4.10712,3.85073,3.57553,3.1,2.75279,5.32068]),
+        H298 = (24.8983,'kJ/mol','+|-',18.9658),
+        S298 = (-77.6643,'J/(mol*K)','+|-',10.7972),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)=C1C=C1 (FC(F)DC1CDC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 504,
+    label = "Cd-(F1sH)(H)(H)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   H   u0 {2,S}
+6   H   u0 {3,S}
+7   F1s u0 {4,S}
+8   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([8.00623,11.7928,15.2823,18.4419,23.682,26.1969,31.0512],'J/(mol*K)','+|-',[3.92686,4.10489,3.84863,3.57358,3.09831,2.7513,5.31779]),
+        H298 = (31.8603,'kJ/mol','+|-',18.9555),
+        S298 = (-72.821,'J/(mol*K)','+|-',10.7913),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC=C1C=C1 (FCDC1CDC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 505,
+    label = "Cd-(F1s)(F1s)(F1sF1s)CdCdCd",
+    group = 
+"""
+1 * Cd  u0 {2,S} {3,S} {4,D}
+2   Cd  u0 {1,S} {3,D} {5,S}
+3   Cd  u0 {1,S} {2,D} {6,S}
+4   Cd  u0 {1,D} {7,S} {8,S}
+5   F1s u0 {2,S}
+6   F1s u0 {3,S}
+7   F1s u0 {4,S}
+8   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.2449,12.7051,16.011,19.011,23.9354,26.322,32.0577],'J/(mol*K)','+|-',[3.929,4.10712,3.85073,3.57553,3.1,2.75279,5.32068]),
+        H298 = (46.2682,'kJ/mol','+|-',18.9658),
+        S298 = (-73.1375,'J/(mol*K)','+|-',10.7972),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)=C1C(F)=C1F (FC(F)DC1C(F)DC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 506,
     label = "Cds-CdsCtCs",
     group = 
 """
@@ -10264,7 +13241,7 @@ entry(
 )
 
 entry(
-    index = 472,
+    index = 507,
     label = "Cds-CdsCtCds",
     group = 
 """
@@ -10282,7 +13259,7 @@ entry(
 )
 
 entry(
-    index = 473,
+    index = 508,
     label = "Cds-CdsCt(Cds-O2d)",
     group = 
 """
@@ -10301,7 +13278,7 @@ entry(
 )
 
 entry(
-    index = 474,
+    index = 509,
     label = "Cds-CdsCt(Cds-Cd)",
     group = 
 """
@@ -10320,7 +13297,7 @@ entry(
 )
 
 entry(
-    index = 475,
+    index = 510,
     label = "Cds-Cds(Cds-Cds)Ct",
     group = 
 """
@@ -10344,7 +13321,7 @@ entry(
 )
 
 entry(
-    index = 476,
+    index = 511,
     label = "Cds-Cds(Cds-Cdd)Ct",
     group = 
 """
@@ -10363,7 +13340,7 @@ entry(
 )
 
 entry(
-    index = 477,
+    index = 512,
     label = "Cds-Cds(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -10383,7 +13360,7 @@ entry(
 )
 
 entry(
-    index = 478,
+    index = 513,
     label = "Cds-Cds(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -10403,7 +13380,7 @@ entry(
 )
 
 entry(
-    index = 479,
+    index = 514,
     label = "Cds-Cds(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -10423,7 +13400,7 @@ entry(
 )
 
 entry(
-    index = 480,
+    index = 515,
     label = "Cds-CdsCtCt",
     group = 
 """
@@ -10446,7 +13423,7 @@ entry(
 )
 
 entry(
-    index = 481,
+    index = 516,
     label = "Cds-CdsCbCs",
     group = 
 """
@@ -10469,7 +13446,7 @@ entry(
 )
 
 entry(
-    index = 482,
+    index = 517,
     label = "Cds-CdsCbCds",
     group = 
 """
@@ -10487,7 +13464,7 @@ entry(
 )
 
 entry(
-    index = 483,
+    index = 518,
     label = "Cds-CdsCb(Cds-O2d)",
     group = 
 """
@@ -10506,7 +13483,7 @@ entry(
 )
 
 entry(
-    index = 484,
+    index = 519,
     label = "Cds-Cds(Cds-Cd)Cb",
     group = 
 """
@@ -10525,7 +13502,7 @@ entry(
 )
 
 entry(
-    index = 485,
+    index = 520,
     label = "Cds-Cds(Cds-Cds)Cb",
     group = 
 """
@@ -10549,7 +13526,7 @@ entry(
 )
 
 entry(
-    index = 486,
+    index = 521,
     label = "Cds-Cds(Cds-Cdd)Cb",
     group = 
 """
@@ -10568,7 +13545,7 @@ entry(
 )
 
 entry(
-    index = 487,
+    index = 522,
     label = "Cds-Cds(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -10588,7 +13565,7 @@ entry(
 )
 
 entry(
-    index = 488,
+    index = 523,
     label = "Cds-Cds(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -10608,7 +13585,7 @@ entry(
 )
 
 entry(
-    index = 489,
+    index = 524,
     label = "Cds-Cds(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -10628,7 +13605,7 @@ entry(
 )
 
 entry(
-    index = 490,
+    index = 525,
     label = "Cds-CdsCbCt",
     group = 
 """
@@ -10651,7 +13628,7 @@ entry(
 )
 
 entry(
-    index = 491,
+    index = 526,
     label = "Cds-CdsCbCb",
     group = 
 """
@@ -10674,7 +13651,7 @@ entry(
 )
 
 entry(
-    index = 492,
+    index = 527,
     label = "Cds-CddCsCs",
     group = 
 """
@@ -10692,7 +13669,7 @@ entry(
 )
 
 entry(
-    index = 493,
+    index = 528,
     label = "Cds-(Cdd-O2d)CsCs",
     group = 
 """
@@ -10718,7 +13695,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 494,
+    index = 529,
     label = "Cds-(Cdd-S2d)CsCs",
     group = 
 """
@@ -10737,7 +13714,7 @@ entry(
 )
 
 entry(
-    index = 495,
+    index = 530,
     label = "Cds-(Cdd-Cd)CsCs",
     group = 
 """
@@ -10756,7 +13733,7 @@ entry(
 )
 
 entry(
-    index = 496,
+    index = 531,
     label = "Cds-CddCdsCs",
     group = 
 """
@@ -10774,7 +13751,7 @@ entry(
 )
 
 entry(
-    index = 497,
+    index = 532,
     label = "Cds-(Cdd-O2d)(Cds-O2d)Cs",
     group = 
 """
@@ -10794,7 +13771,7 @@ entry(
 )
 
 entry(
-    index = 498,
+    index = 533,
     label = "Cds-(Cdd-O2d)(Cds-Cd)Cs",
     group = 
 """
@@ -10814,7 +13791,7 @@ entry(
 )
 
 entry(
-    index = 499,
+    index = 534,
     label = "Cds-(Cdd-O2d)(Cds-Cds)Cs",
     group = 
 """
@@ -10834,7 +13811,7 @@ entry(
 )
 
 entry(
-    index = 500,
+    index = 535,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)Cs",
     group = 
 """
@@ -10854,7 +13831,7 @@ entry(
 )
 
 entry(
-    index = 501,
+    index = 536,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -10880,7 +13857,7 @@ entry(
 )
 
 entry(
-    index = 502,
+    index = 537,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -10901,7 +13878,7 @@ entry(
 )
 
 entry(
-    index = 503,
+    index = 538,
     label = "Cds-(Cdd-S2d)(Cds-Cd)Cs",
     group = 
 """
@@ -10921,7 +13898,7 @@ entry(
 )
 
 entry(
-    index = 504,
+    index = 539,
     label = "Cds-(Cdd-S2d)(Cds-Cds)Cs",
     group = 
 """
@@ -10941,7 +13918,7 @@ entry(
 )
 
 entry(
-    index = 505,
+    index = 540,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)Cs",
     group = 
 """
@@ -10961,7 +13938,7 @@ entry(
 )
 
 entry(
-    index = 506,
+    index = 541,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -10982,7 +13959,7 @@ entry(
 )
 
 entry(
-    index = 507,
+    index = 542,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -11003,7 +13980,7 @@ entry(
 )
 
 entry(
-    index = 508,
+    index = 543,
     label = "Cds-(Cdd-Cd)(Cds-Cd)Cs",
     group = 
 """
@@ -11023,7 +14000,7 @@ entry(
 )
 
 entry(
-    index = 509,
+    index = 544,
     label = "Cds-(Cdd-Cd)(Cds-Cds)Cs",
     group = 
 """
@@ -11043,7 +14020,7 @@ entry(
 )
 
 entry(
-    index = 510,
+    index = 545,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)Cs",
     group = 
 """
@@ -11063,7 +14040,7 @@ entry(
 )
 
 entry(
-    index = 511,
+    index = 546,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -11084,7 +14061,7 @@ entry(
 )
 
 entry(
-    index = 512,
+    index = 547,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -11105,7 +14082,7 @@ entry(
 )
 
 entry(
-    index = 513,
+    index = 548,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -11126,7 +14103,7 @@ entry(
 )
 
 entry(
-    index = 514,
+    index = 549,
     label = "Cds-CddCdsCds",
     group = 
 """
@@ -11144,7 +14121,7 @@ entry(
 )
 
 entry(
-    index = 515,
+    index = 550,
     label = "Cds-(Cdd-O2d)(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -11165,7 +14142,7 @@ entry(
 )
 
 entry(
-    index = 516,
+    index = 551,
     label = "Cds-(Cdd-O2d)(Cds-Cd)(Cds-O2d)",
     group = 
 """
@@ -11186,7 +14163,7 @@ entry(
 )
 
 entry(
-    index = 517,
+    index = 552,
     label = "Cds-(Cdd-O2d)(Cds-Cds)(Cds-O2d)",
     group = 
 """
@@ -11207,7 +14184,7 @@ entry(
 )
 
 entry(
-    index = 518,
+    index = 553,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)(Cds-O2d)",
     group = 
 """
@@ -11228,7 +14205,7 @@ entry(
 )
 
 entry(
-    index = 519,
+    index = 554,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)(Cds-O2d)",
     group = 
 """
@@ -11250,7 +14227,7 @@ entry(
 )
 
 entry(
-    index = 520,
+    index = 555,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)(Cds-O2d)",
     group = 
 """
@@ -11272,7 +14249,7 @@ entry(
 )
 
 entry(
-    index = 521,
+    index = 556,
     label = "Cds-(Cdd-O2d)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -11293,7 +14270,7 @@ entry(
 )
 
 entry(
-    index = 522,
+    index = 557,
     label = "Cds-(Cdd-O2d)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -11314,7 +14291,7 @@ entry(
 )
 
 entry(
-    index = 523,
+    index = 558,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -11335,7 +14312,7 @@ entry(
 )
 
 entry(
-    index = 524,
+    index = 559,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cds)",
     group = 
 """
@@ -11357,7 +14334,7 @@ entry(
 )
 
 entry(
-    index = 525,
+    index = 560,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -11379,7 +14356,7 @@ entry(
 )
 
 entry(
-    index = 526,
+    index = 561,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -11400,7 +14377,7 @@ entry(
 )
 
 entry(
-    index = 527,
+    index = 562,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -11423,7 +14400,7 @@ entry(
 )
 
 entry(
-    index = 528,
+    index = 563,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11446,7 +14423,7 @@ entry(
 )
 
 entry(
-    index = 529,
+    index = 564,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11469,7 +14446,7 @@ entry(
 )
 
 entry(
-    index = 530,
+    index = 565,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -11490,7 +14467,7 @@ entry(
 )
 
 entry(
-    index = 531,
+    index = 566,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-Cd)",
     group = 
 """
@@ -11511,7 +14488,7 @@ entry(
 )
 
 entry(
-    index = 532,
+    index = 567,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-Cds)",
     group = 
 """
@@ -11532,7 +14509,7 @@ entry(
 )
 
 entry(
-    index = 533,
+    index = 568,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-Cdd)",
     group = 
 """
@@ -11553,7 +14530,7 @@ entry(
 )
 
 entry(
-    index = 534,
+    index = 569,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -11575,7 +14552,7 @@ entry(
 )
 
 entry(
-    index = 535,
+    index = 570,
     label = "Cds-(Cdd-Cd)(Cds-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11597,7 +14574,7 @@ entry(
 )
 
 entry(
-    index = 536,
+    index = 571,
     label = "Cds-(Cdd-S2d)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -11618,7 +14595,7 @@ entry(
 )
 
 entry(
-    index = 537,
+    index = 572,
     label = "Cds-(Cdd-S2d)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -11639,7 +14616,7 @@ entry(
 )
 
 entry(
-    index = 538,
+    index = 573,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -11660,7 +14637,7 @@ entry(
 )
 
 entry(
-    index = 539,
+    index = 574,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cds)",
     group = 
 """
@@ -11682,7 +14659,7 @@ entry(
 )
 
 entry(
-    index = 540,
+    index = 575,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -11704,7 +14681,7 @@ entry(
 )
 
 entry(
-    index = 541,
+    index = 576,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -11725,7 +14702,7 @@ entry(
 )
 
 entry(
-    index = 542,
+    index = 577,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -11748,7 +14725,7 @@ entry(
 )
 
 entry(
-    index = 543,
+    index = 578,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11771,7 +14748,7 @@ entry(
 )
 
 entry(
-    index = 544,
+    index = 579,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11794,7 +14771,7 @@ entry(
 )
 
 entry(
-    index = 545,
+    index = 580,
     label = "Cds-(Cdd-Cd)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -11815,7 +14792,7 @@ entry(
 )
 
 entry(
-    index = 546,
+    index = 581,
     label = "Cds-(Cdd-Cd)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -11836,7 +14813,7 @@ entry(
 )
 
 entry(
-    index = 547,
+    index = 582,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -11857,7 +14834,7 @@ entry(
 )
 
 entry(
-    index = 548,
+    index = 583,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)(Cds-Cds)",
     group = 
 """
@@ -11879,7 +14856,7 @@ entry(
 )
 
 entry(
-    index = 549,
+    index = 584,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)(Cds-Cds)",
     group = 
 """
@@ -11901,7 +14878,7 @@ entry(
 )
 
 entry(
-    index = 550,
+    index = 585,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -11923,7 +14900,7 @@ entry(
 )
 
 entry(
-    index = 551,
+    index = 586,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -11944,7 +14921,7 @@ entry(
 )
 
 entry(
-    index = 552,
+    index = 587,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -11967,7 +14944,7 @@ entry(
 )
 
 entry(
-    index = 553,
+    index = 588,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -11990,7 +14967,7 @@ entry(
 )
 
 entry(
-    index = 554,
+    index = 589,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -12013,7 +14990,7 @@ entry(
 )
 
 entry(
-    index = 555,
+    index = 590,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -12036,7 +15013,7 @@ entry(
 )
 
 entry(
-    index = 556,
+    index = 591,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -12059,7 +15036,7 @@ entry(
 )
 
 entry(
-    index = 557,
+    index = 592,
     label = "Cds-CddCtCs",
     group = 
 """
@@ -12077,7 +15054,7 @@ entry(
 )
 
 entry(
-    index = 558,
+    index = 593,
     label = "Cds-(Cdd-O2d)CtCs",
     group = 
 """
@@ -12096,7 +15073,7 @@ entry(
 )
 
 entry(
-    index = 559,
+    index = 594,
     label = "Cds-(Cdd-S2d)CtCs",
     group = 
 """
@@ -12115,7 +15092,7 @@ entry(
 )
 
 entry(
-    index = 560,
+    index = 595,
     label = "Cds-(Cdd-Cd)CtCs",
     group = 
 """
@@ -12134,7 +15111,7 @@ entry(
 )
 
 entry(
-    index = 561,
+    index = 596,
     label = "Cds-CddCtCds",
     group = 
 """
@@ -12152,7 +15129,7 @@ entry(
 )
 
 entry(
-    index = 562,
+    index = 597,
     label = "Cds-(Cdd-O2d)(Cds-O2d)Ct",
     group = 
 """
@@ -12172,7 +15149,7 @@ entry(
 )
 
 entry(
-    index = 563,
+    index = 598,
     label = "Cds-(Cdd-O2d)(Cds-Cd)Ct",
     group = 
 """
@@ -12192,7 +15169,7 @@ entry(
 )
 
 entry(
-    index = 564,
+    index = 599,
     label = "Cds-(Cdd-O2d)(Cds-Cds)Ct",
     group = 
 """
@@ -12212,7 +15189,7 @@ entry(
 )
 
 entry(
-    index = 565,
+    index = 600,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)Ct",
     group = 
 """
@@ -12232,7 +15209,7 @@ entry(
 )
 
 entry(
-    index = 566,
+    index = 601,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -12253,7 +15230,7 @@ entry(
 )
 
 entry(
-    index = 567,
+    index = 602,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -12274,7 +15251,7 @@ entry(
 )
 
 entry(
-    index = 568,
+    index = 603,
     label = "Cds-(Cdd-S2d)(Cds-Cd)Ct",
     group = 
 """
@@ -12294,7 +15271,7 @@ entry(
 )
 
 entry(
-    index = 569,
+    index = 604,
     label = "Cds-(Cdd-S2d)(Cds-Cds)Ct",
     group = 
 """
@@ -12314,7 +15291,7 @@ entry(
 )
 
 entry(
-    index = 570,
+    index = 605,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)Ct",
     group = 
 """
@@ -12334,7 +15311,7 @@ entry(
 )
 
 entry(
-    index = 571,
+    index = 606,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -12355,7 +15332,7 @@ entry(
 )
 
 entry(
-    index = 572,
+    index = 607,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -12376,7 +15353,7 @@ entry(
 )
 
 entry(
-    index = 573,
+    index = 608,
     label = "Cds-(Cdd-Cd)(Cds-Cd)Ct",
     group = 
 """
@@ -12396,7 +15373,7 @@ entry(
 )
 
 entry(
-    index = 574,
+    index = 609,
     label = "Cds-(Cdd-Cd)(Cds-Cds)Ct",
     group = 
 """
@@ -12416,7 +15393,7 @@ entry(
 )
 
 entry(
-    index = 575,
+    index = 610,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)Ct",
     group = 
 """
@@ -12436,7 +15413,7 @@ entry(
 )
 
 entry(
-    index = 576,
+    index = 611,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -12457,7 +15434,7 @@ entry(
 )
 
 entry(
-    index = 577,
+    index = 612,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -12478,7 +15455,7 @@ entry(
 )
 
 entry(
-    index = 578,
+    index = 613,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -12499,7 +15476,7 @@ entry(
 )
 
 entry(
-    index = 579,
+    index = 614,
     label = "Cds-CddCtCt",
     group = 
 """
@@ -12517,7 +15494,7 @@ entry(
 )
 
 entry(
-    index = 580,
+    index = 615,
     label = "Cds-(Cdd-O2d)CtCt",
     group = 
 """
@@ -12536,7 +15513,7 @@ entry(
 )
 
 entry(
-    index = 581,
+    index = 616,
     label = "Cds-(Cdd-S2d)CtCt",
     group = 
 """
@@ -12555,7 +15532,7 @@ entry(
 )
 
 entry(
-    index = 582,
+    index = 617,
     label = "Cds-(Cdd-Cd)CtCt",
     group = 
 """
@@ -12574,7 +15551,7 @@ entry(
 )
 
 entry(
-    index = 583,
+    index = 618,
     label = "Cds-CddCbCs",
     group = 
 """
@@ -12592,7 +15569,7 @@ entry(
 )
 
 entry(
-    index = 584,
+    index = 619,
     label = "Cds-(Cdd-O2d)CbCs",
     group = 
 """
@@ -12611,7 +15588,7 @@ entry(
 )
 
 entry(
-    index = 585,
+    index = 620,
     label = "Cds-(Cdd-S2d)CbCs",
     group = 
 """
@@ -12630,7 +15607,7 @@ entry(
 )
 
 entry(
-    index = 586,
+    index = 621,
     label = "Cds-(Cdd-Cd)CbCs",
     group = 
 """
@@ -12649,7 +15626,7 @@ entry(
 )
 
 entry(
-    index = 587,
+    index = 622,
     label = "Cds-CddCbCds",
     group = 
 """
@@ -12667,7 +15644,7 @@ entry(
 )
 
 entry(
-    index = 588,
+    index = 623,
     label = "Cds-(Cdd-O2d)(Cds-O2d)Cb",
     group = 
 """
@@ -12687,7 +15664,7 @@ entry(
 )
 
 entry(
-    index = 589,
+    index = 624,
     label = "Cds-(Cdd-O2d)(Cds-Cd)Cb",
     group = 
 """
@@ -12707,7 +15684,7 @@ entry(
 )
 
 entry(
-    index = 590,
+    index = 625,
     label = "Cds-(Cdd-O2d)(Cds-Cds)Cb",
     group = 
 """
@@ -12727,7 +15704,7 @@ entry(
 )
 
 entry(
-    index = 591,
+    index = 626,
     label = "Cds-(Cdd-O2d)(Cds-Cdd)Cb",
     group = 
 """
@@ -12747,7 +15724,7 @@ entry(
 )
 
 entry(
-    index = 592,
+    index = 627,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -12768,7 +15745,7 @@ entry(
 )
 
 entry(
-    index = 593,
+    index = 628,
     label = "Cds-(Cdd-O2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -12789,7 +15766,7 @@ entry(
 )
 
 entry(
-    index = 594,
+    index = 629,
     label = "Cds-(Cdd-S2d)(Cds-Cd)Cb",
     group = 
 """
@@ -12809,7 +15786,7 @@ entry(
 )
 
 entry(
-    index = 595,
+    index = 630,
     label = "Cds-(Cdd-S2d)(Cds-Cds)Cb",
     group = 
 """
@@ -12829,7 +15806,7 @@ entry(
 )
 
 entry(
-    index = 596,
+    index = 631,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)Cb",
     group = 
 """
@@ -12849,7 +15826,7 @@ entry(
 )
 
 entry(
-    index = 597,
+    index = 632,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -12870,7 +15847,7 @@ entry(
 )
 
 entry(
-    index = 598,
+    index = 633,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -12891,7 +15868,7 @@ entry(
 )
 
 entry(
-    index = 599,
+    index = 634,
     label = "Cds-(Cdd-Cd)(Cds-Cd)Cb",
     group = 
 """
@@ -12911,7 +15888,7 @@ entry(
 )
 
 entry(
-    index = 600,
+    index = 635,
     label = "Cds-(Cdd-Cd)(Cds-Cds)Cb",
     group = 
 """
@@ -12931,7 +15908,7 @@ entry(
 )
 
 entry(
-    index = 601,
+    index = 636,
     label = "Cds-(Cdd-Cd)(Cds-Cdd)Cb",
     group = 
 """
@@ -12951,7 +15928,7 @@ entry(
 )
 
 entry(
-    index = 602,
+    index = 637,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -12972,7 +15949,7 @@ entry(
 )
 
 entry(
-    index = 603,
+    index = 638,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -12993,7 +15970,7 @@ entry(
 )
 
 entry(
-    index = 604,
+    index = 639,
     label = "Cds-(Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -13014,7 +15991,7 @@ entry(
 )
 
 entry(
-    index = 605,
+    index = 640,
     label = "Cds-CddCbCt",
     group = 
 """
@@ -13032,7 +16009,7 @@ entry(
 )
 
 entry(
-    index = 606,
+    index = 641,
     label = "Cds-(Cdd-O2d)CbCt",
     group = 
 """
@@ -13051,7 +16028,7 @@ entry(
 )
 
 entry(
-    index = 607,
+    index = 642,
     label = "Cds-(Cdd-S2d)CbCt",
     group = 
 """
@@ -13070,7 +16047,7 @@ entry(
 )
 
 entry(
-    index = 608,
+    index = 643,
     label = "Cds-(Cdd-Cd)CbCt",
     group = 
 """
@@ -13089,7 +16066,7 @@ entry(
 )
 
 entry(
-    index = 609,
+    index = 644,
     label = "Cds-CddCbCb",
     group = 
 """
@@ -13107,7 +16084,7 @@ entry(
 )
 
 entry(
-    index = 610,
+    index = 645,
     label = "Cds-(Cdd-O2d)CbCb",
     group = 
 """
@@ -13126,7 +16103,7 @@ entry(
 )
 
 entry(
-    index = 611,
+    index = 646,
     label = "Cds-(Cdd-S2d)CbCb",
     group = 
 """
@@ -13145,7 +16122,7 @@ entry(
 )
 
 entry(
-    index = 612,
+    index = 647,
     label = "Cds-(Cdd-Cd)CbCb",
     group = 
 """
@@ -13164,7 +16141,7 @@ entry(
 )
 
 entry(
-    index = 613,
+    index = 648,
     label = "Cds-CdsC=SC=S",
     group = 
 """
@@ -13184,7 +16161,7 @@ entry(
 )
 
 entry(
-    index = 614,
+    index = 649,
     label = "Cds-(Cdd-Cd)C=S(Cds-Cd)",
     group = 
 """
@@ -13205,7 +16182,7 @@ entry(
 )
 
 entry(
-    index = 615,
+    index = 650,
     label = "Cds-(Cdd-Cd)C=S(Cds-Cds)",
     group = 
 """
@@ -13226,7 +16203,7 @@ entry(
 )
 
 entry(
-    index = 616,
+    index = 651,
     label = "Cds-(Cdd-Cd)C=S(Cds-Cdd)",
     group = 
 """
@@ -13247,7 +16224,7 @@ entry(
 )
 
 entry(
-    index = 617,
+    index = 652,
     label = "Cds-(Cdd-Cd)C=S(Cds-Cdd-Cd)",
     group = 
 """
@@ -13269,7 +16246,7 @@ entry(
 )
 
 entry(
-    index = 618,
+    index = 653,
     label = "Cds-(Cdd-Cd)C=S(Cds-Cdd-S2d)",
     group = 
 """
@@ -13291,7 +16268,7 @@ entry(
 )
 
 entry(
-    index = 619,
+    index = 654,
     label = "Cds-(Cdd-S2d)C=SCs",
     group = 
 """
@@ -13311,7 +16288,7 @@ entry(
 )
 
 entry(
-    index = 620,
+    index = 655,
     label = "Cds-(Cdd-S2d)C=SCt",
     group = 
 """
@@ -13331,7 +16308,7 @@ entry(
 )
 
 entry(
-    index = 621,
+    index = 656,
     label = "Cds-(Cdd-S2d)C=SCb",
     group = 
 """
@@ -13351,7 +16328,7 @@ entry(
 )
 
 entry(
-    index = 622,
+    index = 657,
     label = "Cds-(Cdd-Cd)C=SC=S",
     group = 
 """
@@ -13372,7 +16349,7 @@ entry(
 )
 
 entry(
-    index = 623,
+    index = 658,
     label = "Cds-(Cdd-S2d)(Cds-Cd)C=S",
     group = 
 """
@@ -13393,7 +16370,7 @@ entry(
 )
 
 entry(
-    index = 624,
+    index = 659,
     label = "Cds-(Cdd-S2d)(Cds-Cds)C=S",
     group = 
 """
@@ -13414,7 +16391,7 @@ entry(
 )
 
 entry(
-    index = 625,
+    index = 660,
     label = "Cds-(Cdd-S2d)(Cds-Cdd)C=S",
     group = 
 """
@@ -13435,7 +16412,7 @@ entry(
 )
 
 entry(
-    index = 626,
+    index = 661,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-S2d)C=S",
     group = 
 """
@@ -13457,7 +16434,7 @@ entry(
 )
 
 entry(
-    index = 627,
+    index = 662,
     label = "Cds-(Cdd-S2d)(Cds-Cdd-Cd)C=S",
     group = 
 """
@@ -13479,7 +16456,7 @@ entry(
 )
 
 entry(
-    index = 628,
+    index = 663,
     label = "Cds-CdsCbC=S",
     group = 
 """
@@ -13498,7 +16475,7 @@ entry(
 )
 
 entry(
-    index = 629,
+    index = 664,
     label = "Cds-CdsCtC=S",
     group = 
 """
@@ -13517,7 +16494,7 @@ entry(
 )
 
 entry(
-    index = 630,
+    index = 665,
     label = "Cds-CdsC=SCs",
     group = 
 """
@@ -13541,7 +16518,7 @@ entry(
 )
 
 entry(
-    index = 631,
+    index = 666,
     label = "Cds-CdsC=S(Cds-Cd)",
     group = 
 """
@@ -13561,7 +16538,7 @@ entry(
 )
 
 entry(
-    index = 632,
+    index = 667,
     label = "Cds-CdsC=S(Cds-Cds)",
     group = 
 """
@@ -13581,7 +16558,7 @@ entry(
 )
 
 entry(
-    index = 633,
+    index = 668,
     label = "Cds-CdsC=S(Cds-Cdd)",
     group = 
 """
@@ -13601,7 +16578,7 @@ entry(
 )
 
 entry(
-    index = 634,
+    index = 669,
     label = "Cds-CdsC=S(Cds-Cdd-Cd)",
     group = 
 """
@@ -13622,7 +16599,7 @@ entry(
 )
 
 entry(
-    index = 635,
+    index = 670,
     label = "Cds-CdsC=S(Cds-Cdd-S2d)",
     group = 
 """
@@ -13643,7 +16620,7 @@ entry(
 )
 
 entry(
-    index = 636,
+    index = 671,
     label = "Cds-(Cdd-S2d)C=SC=S",
     group = 
 """
@@ -13664,7 +16641,7 @@ entry(
 )
 
 entry(
-    index = 637,
+    index = 672,
     label = "C=S-SsSs",
     group = 
 """
@@ -13682,7 +16659,7 @@ entry(
 )
 
 entry(
-    index = 638,
+    index = 673,
     label = "C=S-CH",
     group = 
 """
@@ -13700,7 +16677,7 @@ entry(
 )
 
 entry(
-    index = 639,
+    index = 674,
     label = "C=S-CsH",
     group = 
 """
@@ -13718,7 +16695,7 @@ entry(
 )
 
 entry(
-    index = 640,
+    index = 675,
     label = "C=S2-CsH",
     group = 
 """
@@ -13741,7 +16718,7 @@ entry(
 )
 
 entry(
-    index = 641,
+    index = 676,
     label = "C=S4-CsH",
     group = 
 """
@@ -13764,7 +16741,7 @@ entry(
 )
 
 entry(
-    index = 642,
+    index = 677,
     label = "C=S-CdsH",
     group = 
 """
@@ -13787,7 +16764,7 @@ entry(
 )
 
 entry(
-    index = 643,
+    index = 678,
     label = "C=S-(Cds-Cd)H",
     group = 
 """
@@ -13806,7 +16783,7 @@ entry(
 )
 
 entry(
-    index = 644,
+    index = 679,
     label = "C=S-(Cds-Cdd)H",
     group = 
 """
@@ -13825,7 +16802,7 @@ entry(
 )
 
 entry(
-    index = 645,
+    index = 680,
     label = "C=S-(Cds-Cdd-Cd)H",
     group = 
 """
@@ -13845,7 +16822,7 @@ entry(
 )
 
 entry(
-    index = 646,
+    index = 681,
     label = "C=S-(Cds-Cdd-S2d)H",
     group = 
 """
@@ -13865,7 +16842,7 @@ entry(
 )
 
 entry(
-    index = 647,
+    index = 682,
     label = "C=S-(Cds-Cds)H",
     group = 
 """
@@ -13884,7 +16861,7 @@ entry(
 )
 
 entry(
-    index = 648,
+    index = 683,
     label = "C=S-CtH",
     group = 
 """
@@ -13907,7 +16884,7 @@ entry(
 )
 
 entry(
-    index = 649,
+    index = 684,
     label = "C=S-C=SH",
     group = 
 """
@@ -13931,7 +16908,7 @@ entry(
 )
 
 entry(
-    index = 650,
+    index = 685,
     label = "C=S-CC",
     group = 
 """
@@ -13949,7 +16926,7 @@ entry(
 )
 
 entry(
-    index = 651,
+    index = 686,
     label = "C=S-CbCds",
     group = 
 """
@@ -13967,7 +16944,7 @@ entry(
 )
 
 entry(
-    index = 652,
+    index = 687,
     label = "C=S-Cb(Cds-Cd)",
     group = 
 """
@@ -13986,7 +16963,7 @@ entry(
 )
 
 entry(
-    index = 653,
+    index = 688,
     label = "C=S-Cb(Cds-Cds)",
     group = 
 """
@@ -14005,7 +16982,7 @@ entry(
 )
 
 entry(
-    index = 654,
+    index = 689,
     label = "C=S-Cb(Cds-Cdd)",
     group = 
 """
@@ -14024,7 +17001,7 @@ entry(
 )
 
 entry(
-    index = 655,
+    index = 690,
     label = "C=S-Cb(Cds-Cdd-S2d)",
     group = 
 """
@@ -14044,7 +17021,7 @@ entry(
 )
 
 entry(
-    index = 656,
+    index = 691,
     label = "C=S-Cb(Cds-Cdd-Cd)",
     group = 
 """
@@ -14064,7 +17041,7 @@ entry(
 )
 
 entry(
-    index = 657,
+    index = 692,
     label = "C=S-CtCt",
     group = 
 """
@@ -14082,7 +17059,7 @@ entry(
 )
 
 entry(
-    index = 658,
+    index = 693,
     label = "C=S-CbCb",
     group = 
 """
@@ -14100,7 +17077,7 @@ entry(
 )
 
 entry(
-    index = 659,
+    index = 694,
     label = "C=S-CdsCds",
     group = 
 """
@@ -14118,7 +17095,7 @@ entry(
 )
 
 entry(
-    index = 660,
+    index = 695,
     label = "C=S-(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -14138,7 +17115,7 @@ entry(
 )
 
 entry(
-    index = 661,
+    index = 696,
     label = "C=S-(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -14158,7 +17135,7 @@ entry(
 )
 
 entry(
-    index = 662,
+    index = 697,
     label = "C=S-(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -14179,7 +17156,7 @@ entry(
 )
 
 entry(
-    index = 663,
+    index = 698,
     label = "C=S-(Cds-Cdd-S2d)(Cds-Cds)",
     group = 
 """
@@ -14200,7 +17177,7 @@ entry(
 )
 
 entry(
-    index = 664,
+    index = 699,
     label = "C=S-(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -14220,7 +17197,7 @@ entry(
 )
 
 entry(
-    index = 665,
+    index = 700,
     label = "C=S-(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -14240,7 +17217,7 @@ entry(
 )
 
 entry(
-    index = 666,
+    index = 701,
     label = "C=S-(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -14262,7 +17239,7 @@ entry(
 )
 
 entry(
-    index = 667,
+    index = 702,
     label = "C=S-(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -14284,7 +17261,7 @@ entry(
 )
 
 entry(
-    index = 668,
+    index = 703,
     label = "C=S-(Cds-Cdd-Cd)(Cds-Cdd-S2d)",
     group = 
 """
@@ -14306,7 +17283,7 @@ entry(
 )
 
 entry(
-    index = 669,
+    index = 704,
     label = "C=S-CtCds",
     group = 
 """
@@ -14324,7 +17301,7 @@ entry(
 )
 
 entry(
-    index = 670,
+    index = 705,
     label = "C=S-Ct(Cds-Cd)",
     group = 
 """
@@ -14343,7 +17320,7 @@ entry(
 )
 
 entry(
-    index = 671,
+    index = 706,
     label = "C=S-Ct(Cds-Cds)",
     group = 
 """
@@ -14362,7 +17339,7 @@ entry(
 )
 
 entry(
-    index = 672,
+    index = 707,
     label = "C=S-Ct(Cds-Cdd)",
     group = 
 """
@@ -14381,7 +17358,7 @@ entry(
 )
 
 entry(
-    index = 673,
+    index = 708,
     label = "C=S-Ct(Cds-Cdd-Cd)",
     group = 
 """
@@ -14401,7 +17378,7 @@ entry(
 )
 
 entry(
-    index = 674,
+    index = 709,
     label = "C=S-Ct(Cds-Cdd-S2d)",
     group = 
 """
@@ -14421,7 +17398,7 @@ entry(
 )
 
 entry(
-    index = 675,
+    index = 710,
     label = "C=S-CbCt",
     group = 
 """
@@ -14439,7 +17416,7 @@ entry(
 )
 
 entry(
-    index = 676,
+    index = 711,
     label = "C=S-CsCs",
     group = 
 """
@@ -14462,7 +17439,7 @@ entry(
 )
 
 entry(
-    index = 677,
+    index = 712,
     label = "C=S-CdsCs",
     group = 
 """
@@ -14485,7 +17462,7 @@ entry(
 )
 
 entry(
-    index = 678,
+    index = 713,
     label = "C=S-(Cds-Cd)Cs",
     group = 
 """
@@ -14504,7 +17481,7 @@ entry(
 )
 
 entry(
-    index = 679,
+    index = 714,
     label = "C=S-(Cds-Cds)Cs",
     group = 
 """
@@ -14523,7 +17500,7 @@ entry(
 )
 
 entry(
-    index = 680,
+    index = 715,
     label = "C=S-(Cds-Cdd)Cs",
     group = 
 """
@@ -14542,7 +17519,7 @@ entry(
 )
 
 entry(
-    index = 681,
+    index = 716,
     label = "C=S-(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -14562,7 +17539,7 @@ entry(
 )
 
 entry(
-    index = 682,
+    index = 717,
     label = "C=S-(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -14582,7 +17559,7 @@ entry(
 )
 
 entry(
-    index = 683,
+    index = 718,
     label = "C=S-CtCs",
     group = 
 """
@@ -14605,7 +17582,7 @@ entry(
 )
 
 entry(
-    index = 684,
+    index = 719,
     label = "C=S-CbCs",
     group = 
 """
@@ -14628,7 +17605,7 @@ entry(
 )
 
 entry(
-    index = 685,
+    index = 720,
     label = "C=S-C=SCs",
     group = 
 """
@@ -14652,7 +17629,7 @@ entry(
 )
 
 entry(
-    index = 686,
+    index = 721,
     label = "C=S-CtC=S",
     group = 
 """
@@ -14671,7 +17648,7 @@ entry(
 )
 
 entry(
-    index = 687,
+    index = 722,
     label = "C=S-(Cds-Cd)C=S",
     group = 
 """
@@ -14690,7 +17667,7 @@ entry(
 )
 
 entry(
-    index = 688,
+    index = 723,
     label = "C=S-(Cds-Cdd)C=S",
     group = 
 """
@@ -14710,7 +17687,7 @@ entry(
 )
 
 entry(
-    index = 689,
+    index = 724,
     label = "C=S-(Cds-Cdd-Cd)C=S",
     group = 
 """
@@ -14731,7 +17708,7 @@ entry(
 )
 
 entry(
-    index = 690,
+    index = 725,
     label = "C=S-(Cds-Cdd-S2d)C=S",
     group = 
 """
@@ -14752,7 +17729,7 @@ entry(
 )
 
 entry(
-    index = 691,
+    index = 726,
     label = "C=S-(Cds-Cds)C=S",
     group = 
 """
@@ -14772,7 +17749,7 @@ entry(
 )
 
 entry(
-    index = 692,
+    index = 727,
     label = "C=S-C=SC=S",
     group = 
 """
@@ -14792,7 +17769,7 @@ entry(
 )
 
 entry(
-    index = 693,
+    index = 728,
     label = "C=S-CbC=S",
     group = 
 """
@@ -14811,7 +17788,7 @@ entry(
 )
 
 entry(
-    index = 694,
+    index = 729,
     label = "C=S-HH",
     group = 
 """
@@ -14829,7 +17806,7 @@ entry(
 )
 
 entry(
-    index = 695,
+    index = 730,
     label = "C=S2d-HH",
     group = 
 """
@@ -14852,7 +17829,7 @@ entry(
 )
 
 entry(
-    index = 696,
+    index = 731,
     label = "C=S4d-HH",
     group = 
 """
@@ -14875,7 +17852,7 @@ entry(
 )
 
 entry(
-    index = 697,
+    index = 732,
     label = "C=S6dd-HH",
     group = 
 """
@@ -14898,7 +17875,7 @@ entry(
 )
 
 entry(
-    index = 698,
+    index = 733,
     label = "C=S6ddd-HH",
     group = 
 """
@@ -14921,7 +17898,7 @@ entry(
 )
 
 entry(
-    index = 699,
+    index = 734,
     label = "C=S-SH",
     group = 
 """
@@ -14939,7 +17916,7 @@ entry(
 )
 
 entry(
-    index = 700,
+    index = 735,
     label = "C=S-S2H",
     group = 
 """
@@ -14962,7 +17939,7 @@ entry(
 )
 
 entry(
-    index = 701,
+    index = 736,
     label = "C=S-S4H",
     group = 
 """
@@ -14985,7 +17962,7 @@ entry(
 )
 
 entry(
-    index = 702,
+    index = 737,
     label = "C=S-S6H",
     group = 
 """
@@ -15008,7 +17985,7 @@ entry(
 )
 
 entry(
-    index = 703,
+    index = 738,
     label = "C=S6-S2H",
     group = 
 """
@@ -15031,7 +18008,7 @@ entry(
 )
 
 entry(
-    index = 704,
+    index = 739,
     label = "C=S-CSs",
     group = 
 """
@@ -15049,7 +18026,7 @@ entry(
 )
 
 entry(
-    index = 705,
+    index = 740,
     label = "C=S-CbSs",
     group = 
 """
@@ -15067,7 +18044,7 @@ entry(
 )
 
 entry(
-    index = 706,
+    index = 741,
     label = "C=S-CdsSs",
     group = 
 """
@@ -15085,7 +18062,7 @@ entry(
 )
 
 entry(
-    index = 707,
+    index = 742,
     label = "C=S-(Cds-Cd)S2s",
     group = 
 """
@@ -15104,7 +18081,7 @@ entry(
 )
 
 entry(
-    index = 708,
+    index = 743,
     label = "C=S-(Cds-Cds)S2s",
     group = 
 """
@@ -15123,7 +18100,7 @@ entry(
 )
 
 entry(
-    index = 709,
+    index = 744,
     label = "C=S-(Cds-Cdd)S2s",
     group = 
 """
@@ -15142,7 +18119,7 @@ entry(
 )
 
 entry(
-    index = 710,
+    index = 745,
     label = "C=S-(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -15162,7 +18139,7 @@ entry(
 )
 
 entry(
-    index = 711,
+    index = 746,
     label = "C=S-(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -15182,7 +18159,7 @@ entry(
 )
 
 entry(
-    index = 712,
+    index = 747,
     label = "C=S-S(CO)",
     group = 
 """
@@ -15205,7 +18182,7 @@ entry(
 )
 
 entry(
-    index = 713,
+    index = 748,
     label = "C=S-CtSs",
     group = 
 """
@@ -15223,7 +18200,7 @@ entry(
 )
 
 entry(
-    index = 714,
+    index = 749,
     label = "C=S-CsSs",
     group = 
 """
@@ -15246,7 +18223,7 @@ entry(
 )
 
 entry(
-    index = 715,
+    index = 750,
     label = "C=S-C=SSs",
     group = 
 """
@@ -15265,7 +18242,7 @@ entry(
 )
 
 entry(
-    index = 716,
+    index = 751,
     label = "Cds-CdIH",
     group = 
 """
@@ -15289,7 +18266,7 @@ Cpdata at 1500K was not in the book, Cpdata at 1500K = Cpdata at 1000K + 0.7
 )
 
 entry(
-    index = 717,
+    index = 752,
     label = "C=S-OsH",
     group = 
 """
@@ -15307,7 +18284,7 @@ entry(
 )
 
 entry(
-    index = 718,
+    index = 753,
     label = "C=S2-OsH",
     group = 
 """
@@ -15330,7 +18307,7 @@ entry(
 )
 
 entry(
-    index = 719,
+    index = 754,
     label = "C=S4-OsH",
     group = 
 """
@@ -15353,7 +18330,7 @@ entry(
 )
 
 entry(
-    index = 720,
+    index = 755,
     label = "C=S-CsOs",
     group = 
 """
@@ -15376,7 +18353,7 @@ entry(
 )
 
 entry(
-    index = 721,
+    index = 756,
     label = "C=S-OsOs",
     group = 
 """
@@ -15399,7 +18376,7 @@ entry(
 )
 
 entry(
-    index = 722,
+    index = 757,
     label = "C=S-OsS",
     group = 
 """
@@ -15422,7 +18399,7 @@ entry(
 )
 
 entry(
-    index = 723,
+    index = 758,
     label = "Cd-HHN",
     group = 
 """
@@ -15448,7 +18425,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 724,
+    index = 759,
     label = "Cd-N3dHH",
     group = 
 """
@@ -15474,7 +18451,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 725,
+    index = 760,
     label = "CO-HNO",
     group = 
 """
@@ -15499,7 +18476,7 @@ CHON_G4 |         13
 )
 
 entry(
-    index = 726,
+    index = 761,
     label = "Cds-OdN3sH",
     group = 
 """
@@ -15525,7 +18502,7 @@ CHON    |         1
 )
 
 entry(
-    index = 727,
+    index = 762,
     label = "CO-CNO",
     group = 
 """
@@ -15551,7 +18528,7 @@ CHON    |         1
 )
 
 entry(
-    index = 728,
+    index = 763,
     label = "Cds-OdN3sCs",
     group = 
 """
@@ -15578,7 +18555,7 @@ CHON     |         1
 )
 
 entry(
-    index = 729,
+    index = 764,
     label = "Cd-HNN",
     group = 
 """
@@ -15603,7 +18580,7 @@ CHON_G4 |         75
 )
 
 entry(
-    index = 730,
+    index = 765,
     label = "Cd-NNN",
     group = 
 """
@@ -15629,7 +18606,7 @@ BurcatNS |         2
 )
 
 entry(
-    index = 731,
+    index = 766,
     label = "CO-NNOd",
     group = 
 """
@@ -15654,7 +18631,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 732,
+    index = 767,
     label = "CO-N3sN3sOd",
     group = 
 """
@@ -15679,7 +18656,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 733,
+    index = 768,
     label = "CO-NN3dOd",
     group = 
 """
@@ -15704,7 +18681,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 734,
+    index = 769,
     label = "CO-NOO",
     group = 
 """
@@ -15730,7 +18707,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 735,
+    index = 770,
     label = "Cd-HNO",
     group = 
 """
@@ -15755,7 +18732,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 736,
+    index = 771,
     label = "Cd-HN3dO",
     group = 
 """
@@ -15780,7 +18757,7 @@ CHON_G4 |         22
 )
 
 entry(
-    index = 737,
+    index = 772,
     label = "Cd-HNdOH",
     group = 
 """
@@ -15806,7 +18783,7 @@ CHON_G4 |         16
 )
 
 entry(
-    index = 738,
+    index = 773,
     label = "Cd-NNO",
     group = 
 """
@@ -15831,7 +18808,7 @@ CHON_G4 |         12
 )
 
 entry(
-    index = 739,
+    index = 774,
     label = "Cd-OONd",
     group = 
 """
@@ -15856,7 +18833,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 740,
+    index = 775,
     label = "Cd-OON3d",
     group = 
 """
@@ -15881,7 +18858,7 @@ CHON_G4 |         5
 )
 
 entry(
-    index = 741,
+    index = 776,
     label = "Cd-CHN",
     group = 
 """
@@ -15906,7 +18883,7 @@ CHON_G4 |         10
 )
 
 entry(
-    index = 742,
+    index = 777,
     label = "Cd-HN(CO)",
     group = 
 """
@@ -15932,7 +18909,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 743,
+    index = 778,
     label = "Cd-N3dCsH",
     group = 
 """
@@ -15957,7 +18934,7 @@ CHON_G4 |         48
 )
 
 entry(
-    index = 744,
+    index = 779,
     label = "Cd-N3dCdH",
     group = 
 """
@@ -15982,7 +18959,7 @@ CHON_G4 |         15
 )
 
 entry(
-    index = 745,
+    index = 780,
     label = "Cd-N5dcCH",
     group = 
 """
@@ -16007,7 +18984,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 746,
+    index = 781,
     label = "Cd-CNNd",
     group = 
 """
@@ -16032,7 +19009,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 747,
+    index = 782,
     label = "Cd-CsNNd",
     group = 
 """
@@ -16057,7 +19034,7 @@ CHON_G4 |         14
 )
 
 entry(
-    index = 748,
+    index = 783,
     label = "Cd-CdNNd",
     group = 
 """
@@ -16082,7 +19059,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 749,
+    index = 784,
     label = "Cd-NNCd",
     group = 
 """
@@ -16107,7 +19084,7 @@ CHON_G4 |         10
 )
 
 entry(
-    index = 750,
+    index = 785,
     label = "Cd-NNCdd",
     group = 
 """
@@ -16132,7 +19109,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 751,
+    index = 786,
     label = "Cd-NN(CddOd)",
     group = 
 """
@@ -16158,7 +19135,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 752,
+    index = 787,
     label = "Cd-CNO",
     group = 
 """
@@ -16183,7 +19160,7 @@ CHON_G4 |         13
 )
 
 entry(
-    index = 753,
+    index = 788,
     label = "Cd-CCN",
     group = 
 """
@@ -16208,7 +19185,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 754,
+    index = 789,
     label = "Cd-N3dCsCs",
     group = 
 """
@@ -16233,7 +19210,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 755,
+    index = 790,
     label = "Cds-CNH",
     group = 
 """
@@ -16260,7 +19237,7 @@ NitrogenCurran |         1
 )
 
 entry(
-    index = 756,
+    index = 791,
     label = "Cd-CddNH",
     group = 
 """
@@ -16285,7 +19262,7 @@ CHON_G4 |         19
 )
 
 entry(
-    index = 757,
+    index = 792,
     label = "Cd-(CddOd)NH",
     group = 
 """
@@ -16311,7 +19288,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 758,
+    index = 793,
     label = "Cd-CdHN3s",
     group = 
 """
@@ -16338,7 +19315,7 @@ CHON_G4 |         49
 )
 
 entry(
-    index = 759,
+    index = 794,
     label = "Cd-CdHN1s",
     group = 
 """
@@ -16365,7 +19342,7 @@ NOx2018 |         1
 )
 
 entry(
-    index = 760,
+    index = 795,
     label = "Cds-CCN",
     group = 
 """
@@ -16390,7 +19367,7 @@ CHON_G4 |         8
 )
 
 entry(
-    index = 761,
+    index = 796,
     label = "Cd-CdCsN3s",
     group = 
 """
@@ -16417,7 +19394,7 @@ CHON_G4 |         10
 )
 
 entry(
-    index = 762,
+    index = 797,
     label = "Cs",
     group = 
 """
@@ -16432,7 +19409,7 @@ entry(
 )
 
 entry(
-    index = 763,
+    index = 798,
     label = "CsBrBrBrBr",
     group = 
 """
@@ -16458,7 +19435,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 764,
+    index = 799,
     label = "CsBrBrBrCl",
     group = 
 """
@@ -16484,7 +19461,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 765,
+    index = 800,
     label = "CsBrBrClCl",
     group = 
 """
@@ -16510,7 +19487,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 766,
+    index = 801,
     label = "CsBrClClCl",
     group = 
 """
@@ -16536,7 +19513,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 767,
+    index = 802,
     label = "CsClClClCl",
     group = 
 """
@@ -16562,7 +19539,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 768,
+    index = 803,
     label = "CsBrBrBrF",
     group = 
 """
@@ -16588,7 +19565,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 769,
+    index = 804,
     label = "CsBrBrClF",
     group = 
 """
@@ -16614,7 +19591,7 @@ CHOFClBr_G4 |         1
 )
 
 entry(
-    index = 770,
+    index = 805,
     label = "CsBrClClF",
     group = 
 """
@@ -16640,7 +19617,7 @@ CHOFClBr_G4 |         1
 )
 
 entry(
-    index = 771,
+    index = 806,
     label = "CsClClClF",
     group = 
 """
@@ -16666,7 +19643,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 772,
+    index = 807,
     label = "CsBrBrFF",
     group = 
 """
@@ -16692,7 +19669,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 773,
+    index = 808,
     label = "CsBrClFF",
     group = 
 """
@@ -16718,7 +19695,7 @@ CHOFClBr_G4 |         1
 )
 
 entry(
-    index = 774,
+    index = 809,
     label = "CsClClFF",
     group = 
 """
@@ -16744,7 +19721,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 775,
+    index = 810,
     label = "CsBrFFF",
     group = 
 """
@@ -16770,7 +19747,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 776,
+    index = 811,
     label = "CsClFFF",
     group = 
 """
@@ -16796,7 +19773,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 777,
+    index = 812,
     label = "CsFFFF",
     group = 
 """
@@ -16822,7 +19799,36 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 778,
+    index = 813,
+    label = "Cs-F1sF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([61.0296,71.9285,80.3473,86.5516,94.349,98.8591,103.484],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65515]),
+        H298 = (-933.282,'kJ/mol','+|-',9.46438),
+        S298 = (261.319,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)(F)F (CF4) from C1_C2_Fluorine
+FC(F)(F)F (CF4) from C1_C3_hydrofluorocarbons_NIST
+FC(F)(F)F (CF4) from NCSU_C2_C8_PFAS
+FC(F)(F)F (FC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 814,
     label = "CsBrBrBrH",
     group = 
 """
@@ -16848,7 +19854,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 779,
+    index = 815,
     label = "CsBrBrClH",
     group = 
 """
@@ -16874,7 +19880,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 780,
+    index = 816,
     label = "CsBrClClH",
     group = 
 """
@@ -16900,7 +19906,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 781,
+    index = 817,
     label = "CsClClClH",
     group = 
 """
@@ -16926,7 +19932,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 782,
+    index = 818,
     label = "CsBrBrFH",
     group = 
 """
@@ -16952,7 +19958,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 783,
+    index = 819,
     label = "CsBrClFH",
     group = 
 """
@@ -16978,7 +19984,7 @@ CHOFClBr_G4 |         1
 )
 
 entry(
-    index = 784,
+    index = 820,
     label = "CsClClFH",
     group = 
 """
@@ -17004,7 +20010,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 785,
+    index = 821,
     label = "CsBrFFH",
     group = 
 """
@@ -17030,7 +20036,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 786,
+    index = 822,
     label = "CsClFFH",
     group = 
 """
@@ -17056,7 +20062,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 787,
+    index = 823,
     label = "CsFFFH",
     group = 
 """
@@ -17082,7 +20088,36 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 788,
+    index = 824,
+    label = "Cs-F1sF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([50.9972,60.5629,68.8598,75.5421,84.6971,90.7759,98.5375],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65515]),
+        H298 = (-697.011,'kJ/mol','+|-',9.46438),
+        S298 = (259.334,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)F (CHF3) from C1_C2_Fluorine
+FC(F)F (CHF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)F (CHF3) from NCSU_C2_C8_PFAS
+FC(F)F (FC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 825,
     label = "CsBrBrHH",
     group = 
 """
@@ -17108,7 +20143,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 789,
+    index = 826,
     label = "CsBrClHH",
     group = 
 """
@@ -17134,7 +20169,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 790,
+    index = 827,
     label = "CsClClHH",
     group = 
 """
@@ -17160,7 +20195,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 791,
+    index = 828,
     label = "CsBrFHH",
     group = 
 """
@@ -17186,7 +20221,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 792,
+    index = 829,
     label = "CsClFHH",
     group = 
 """
@@ -17212,7 +20247,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 793,
+    index = 830,
     label = "CsFFHH",
     group = 
 """
@@ -17238,7 +20273,36 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 794,
+    index = 831,
+    label = "Cs-F1sF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([42.8593,50.5649,58.3494,65.3562,75.7578,83.2369,93.8458],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65515]),
+        H298 = (-451.648,'kJ/mol','+|-',9.46438),
+        S298 = (246.321,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCF (CH2F2) from C1_C2_Fluorine
+FCF (CH2F2) from C1_C3_hydrofluorocarbons_NIST
+FCF (CH2F2) from NCSU_C2_C8_PFAS
+FCF (FCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 832,
     label = "CsBrHHH",
     group = 
 """
@@ -17264,7 +20328,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 795,
+    index = 833,
     label = "CsClHHH",
     group = 
 """
@@ -17290,7 +20354,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 796,
+    index = 834,
     label = "CsFHHH",
     group = 
 """
@@ -17316,7 +20380,35 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 797,
+    index = 835,
+    label = "Cs-F1sHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([37.4875,43.5685,50.5367,57.2596,68.1132,76.5412,89.573],'J/(mol*K)','+|-',[2.26398,2.36662,2.21888,2.0603,1.78629,1.58622,3.0659]),
+        H298 = (-235.777,'kJ/mol','+|-',10.9285),
+        S298 = (222.548,'J/(mol*K)','+|-',6.22156),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CF (CH3F) from C1_C2_Fluorine
+CF (CH3F) from C1_C3_hydrofluorocarbons_NIST
+CF (CF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 836,
     label = "CsBrBrBrO",
     group = 
 """
@@ -17344,7 +20436,7 @@ CHOClBr_G4 |         2
 )
 
 entry(
-    index = 798,
+    index = 837,
     label = "CsBrBrClO",
     group = 
 """
@@ -17371,7 +20463,7 @@ CHOClBr_G4  |         14
 )
 
 entry(
-    index = 799,
+    index = 838,
     label = "CsBrClClO",
     group = 
 """
@@ -17398,7 +20490,7 @@ CHOClBr_G4  |         14
 )
 
 entry(
-    index = 800,
+    index = 839,
     label = "CsClClClO",
     group = 
 """
@@ -17426,7 +20518,7 @@ CHOClBr_G4 |         3
 )
 
 entry(
-    index = 801,
+    index = 840,
     label = "CsBrBrFO",
     group = 
 """
@@ -17452,7 +20544,7 @@ CHOFBr_G4 |         25
 )
 
 entry(
-    index = 802,
+    index = 841,
     label = "CsBrClFO",
     group = 
 """
@@ -17478,7 +20570,7 @@ CHOFClBr_G4 |         14
 )
 
 entry(
-    index = 803,
+    index = 842,
     label = "CsClClFO",
     group = 
 """
@@ -17505,7 +20597,7 @@ CHOFClBr_G4 |         3
 )
 
 entry(
-    index = 804,
+    index = 843,
     label = "CsBrFFO",
     group = 
 """
@@ -17531,7 +20623,7 @@ CHOFBr_G4 |         24
 )
 
 entry(
-    index = 805,
+    index = 844,
     label = "CsClFFO",
     group = 
 """
@@ -17558,7 +20650,7 @@ CHOFClBr_G4 |         3
 )
 
 entry(
-    index = 806,
+    index = 845,
     label = "CsFFFO",
     group = 
 """
@@ -17586,7 +20678,86 @@ CHOFBr_G4 |         8
 )
 
 entry(
-    index = 807,
+    index = 846,
+    label = "Cs-F1sF1sF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   O2s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([49.9465,59.2437,65.875,70.7317,77.13,80.6958,84.8359],'J/(mol*K)','+|-',[0.525939,0.549783,0.515462,0.478623,0.414969,0.368491,0.712232]),
+        H298 = (-719.475,'kJ/mol','+|-',2.53878),
+        S298 = (172.083,'J/(mol*K)','+|-',1.44532),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC(F)(F)F (CF3OH) from C1_C2_Fluorine
+FC(OS(=O)O)(F)F (PF1Sulfite) from NCSU_C2_C8_PFAS
+FCOOC(F)(F)F (FCOOC(F)(F)F) from CHOF_G4
+OC(F)(F)OC(F)(F)F (OC(F)(F)OC(F)(F)F) from CHOF_G4
+OC(F)OC(F)(F)F (OC(F)OC(F)(F)F) from CHOF_G4
+FC(F)(F)OC(F)(F)C(F)(F)F (FC(F)(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+CCOC(F)(F)F (CCOC(F)(F)F) from CHOF_G4
+FC(F)C(F)OC(F)(F)F (FC(F)C(F)OC(F)(F)F) from CHOF_G4
+FC(F)=C(F)OC(F)(F)F (FC(F)DC(F)OC(F)(F)F) from CHOF_G4
+FC#COC(F)(F)F (FC#COC(F)(F)F) from CHOF_G4
+FCCOC(F)(F)F (FCCOC(F)(F)F) from CHOF_G4
+FC(F)(F)OC(F)(F)F (FC(F)(F)OC(F)(F)F) from CHOF_G4
+FC(F)=COC(F)(F)F (FC(F)DCOC(F)(F)F) from CHOF_G4
+FCC(F)OC(F)(F)F (FCC(F)OC(F)(F)F) from CHOF_G4
+O=C(F)OC(F)(F)F (ODC(F)OC(F)(F)F) from CHOF_G4
+F[C]OC(F)(F)F (F[C]OC(F)(F)F) from CHOF_G4
+COOC(F)(F)F (COOC(F)(F)F) from CHOF_G4
+CC(F)(F)OC(F)(F)F (CC(F)(F)OC(F)(F)F) from CHOF_G4
+C#COC(F)(F)F (C#COC(F)(F)F) from CHOF_G4
+FC=C(F)OC(F)(F)F (FCDC(F)OC(F)(F)F) from CHOF_G4
+FOC(F)(F)F (FOC(F)(F)F) from CHOF_G4
+OC(F)(F)F (OC(F)(F)F) from CHOF_G4
+OCOC(F)(F)F (OCOC(F)(F)F) from CHOF_G4
+C=C(F)OC(F)(F)F (CDC(F)OC(F)(F)F) from CHOF_G4
+FOC(F)(F)OC(F)(F)F (FOC(F)(F)OC(F)(F)F) from CHOF_G4
+FOOC(F)(F)F (FOOC(F)(F)F) from CHOF_G4
+FC(F)OC(F)(F)F (FC(F)OC(F)(F)F) from CHOF_G4
+FC(F)COC(F)(F)F (FC(F)COC(F)(F)F) from CHOF_G4
+COC(F)(F)F (COC(F)(F)F) from CHOF_G4
+FOC(F)OC(F)(F)F (FOC(F)OC(F)(F)F) from CHOF_G4
+O=COC(F)(F)F (ODCOC(F)(F)F) from CHOF_G4
+FC(F)(F)OOC(F)(F)F (FC(F)(F)OOC(F)(F)F) from CHOF_G4
+FC=COC(F)(F)F (FCDCOC(F)(F)F) from CHOF_G4
+FCOC(F)(F)F (FCOC(F)(F)F) from CHOF_G4
+OOC(F)(F)F (OOC(F)(F)F) from CHOF_G4
+FC(F)OOC(F)(F)F (FC(F)OOC(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)OC(F)(F)F (FC(F)C(F)(F)OC(F)(F)F) from CHOF_G4
+CC(F)OC(F)(F)F (CC(F)OC(F)(F)F) from CHOF_G4
+FCC(F)(F)OC(F)(F)F (FCC(F)(F)OC(F)(F)F) from CHOF_G4
+FC(F)(F)COC(F)(F)F (FC(F)(F)COC(F)(F)F) from CHOF_G4
+FC(OC(F)(F)F)C(F)(F)F (FC(OC(F)(F)F)C(F)(F)F) from CHOF_G4
+C=COC(F)(F)F (CDCOC(F)(F)F) from CHOF_G4
+FOCOC(F)(F)F (FOCOC(F)(F)F) from CHOF_G4
+FC(F)(F)OCCl (FC(F)(F)OCCl) from CHOFCl_G4
+FC(F)(F)OCl (FC(F)(F)OCl) from CHOFCl_G4
+FC(F)(F)OOCl (FC(F)(F)OOCl) from CHOFCl_G4
+FC(F)(F)OC(Br)Br (FC(F)(F)OC(Br)Br) from CHOFBr_G4
+FC(F)(F)OOBr (FC(F)(F)OOBr) from CHOFBr_G4
+FC(F)(F)OCOBr (FC(F)(F)OCOBr) from CHOFBr_G4
+O=C(Br)OC(F)(F)F (ODC(Br)OC(F)(F)F) from CHOFBr_G4
+FC(Br)OC(F)(F)F (FC(Br)OC(F)(F)F) from CHOFBr_G4
+OC(Br)OC(F)(F)F (OC(Br)OC(F)(F)F) from CHOFBr_G4
+FC(F)(F)OBr (FC(F)(F)OBr) from CHOFBr_G4
+FC(F)(F)OOCBr (FC(F)(F)OOCBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 847,
     label = "CsBrBrHO",
     group = 
 """
@@ -17615,7 +20786,7 @@ CHOClBr_G4  |         9
 )
 
 entry(
-    index = 808,
+    index = 848,
     label = "CsBrClHO",
     group = 
 """
@@ -17642,7 +20813,7 @@ CHOClBr_G4  |         25
 )
 
 entry(
-    index = 809,
+    index = 849,
     label = "CsClClHO",
     group = 
 """
@@ -17670,7 +20841,7 @@ CHOClBr_G4 |         9
 )
 
 entry(
-    index = 810,
+    index = 850,
     label = "CsBrFHO",
     group = 
 """
@@ -17696,7 +20867,7 @@ CHOFBr_G4 |         36
 )
 
 entry(
-    index = 811,
+    index = 851,
     label = "CsClFHO",
     group = 
 """
@@ -17723,7 +20894,7 @@ CHOFClBr_G4 |         9
 )
 
 entry(
-    index = 812,
+    index = 852,
     label = "CsFFHO",
     group = 
 """
@@ -17752,7 +20923,102 @@ CHOFBr_G4   |         18
 )
 
 entry(
-    index = 813,
+    index = 853,
+    label = "Cs-F1sF1sO2sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   O2s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([44.5378,52.522,58.4965,63.2295,70.1381,74.614,80.5939],'J/(mol*K)','+|-',[0.466734,0.487894,0.457436,0.424744,0.368256,0.32701,0.632055]),
+        H298 = (-487.218,'kJ/mol','+|-',2.25299),
+        S298 = (161.78,'J/(mol*K)','+|-',1.28262),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC(F)F (CHF2OH) from C1_C2_Fluorine
+FCCOC(F)F (FCCOC(F)F) from CHOF_G4
+OCOC(F)F (OCOC(F)F) from CHOF_G4
+FC(F)OC(F)C(F)F (FC(F)OC(F)C(F)F) from CHOF_G4
+FC(F)COC(F)F (FC(F)COC(F)F) from CHOF_G4
+O=COC(F)F (ODCOC(F)F) from CHOF_G4
+FC(F)=COC(F)F (FC(F)DCOC(F)F) from CHOF_G4
+FC(F)OC(F)C(F)(F)F (FC(F)OC(F)C(F)(F)F) from CHOF_G4
+FCC(F)OC(F)F (FCC(F)OC(F)F) from CHOF_G4
+C#COC(F)F (C#COC(F)F) from CHOF_G4
+C=COC(F)F (CDCOC(F)F) from CHOF_G4
+FCC(F)(F)OC(F)F (FCC(F)(F)OC(F)F) from CHOF_G4
+FC(F)=C(F)OC(F)F (FC(F)DC(F)OC(F)F) from CHOF_G4
+CC(F)OC(F)F (CC(F)OC(F)F) from CHOF_G4
+FC(F)OOC(F)F (FC(F)OOC(F)F) from CHOF_G4
+FCOOC(F)F (FCOOC(F)F) from CHOF_G4
+F[C]OC(F)F (F[C]OC(F)F) from CHOF_G4
+OC(F)(F)OC(F)F (OC(F)(F)OC(F)F) from CHOF_G4
+FOC(F)F (FOC(F)F) from CHOF_G4
+CC(F)(F)OC(F)F (CC(F)(F)OC(F)F) from CHOF_G4
+FCOC(F)F (FCOC(F)F) from CHOF_G4
+FC(F)OC(F)(F)F (FC(F)OC(F)(F)F) from CHOF_G4
+FOC(F)OC(F)F (FOC(F)OC(F)F) from CHOF_G4
+C=C(F)OC(F)F (CDC(F)OC(F)F) from CHOF_G4
+COC(F)F (COC(F)F) from CHOF_G4
+FC(F)OC(F)F (FC(F)OC(F)F) from CHOF_G4
+FC=C(F)OC(F)F (FCDC(F)OC(F)F) from CHOF_G4
+CCOC(F)F (CCOC(F)F) from CHOF_G4
+FOCOC(F)F (FOCOC(F)F) from CHOF_G4
+FOC(F)(F)OC(F)F (FOC(F)(F)OC(F)F) from CHOF_G4
+FC=COC(F)F (FCDCOC(F)F) from CHOF_G4
+OOC(F)F (OOC(F)F) from CHOF_G4
+FC#COC(F)F (FC#COC(F)F) from CHOF_G4
+FC(F)OOC(F)(F)F (FC(F)OOC(F)(F)F) from CHOF_G4
+FC(F)OC(F)(F)C(F)F (FC(F)OC(F)(F)C(F)F) from CHOF_G4
+O=C(F)OC(F)F (ODC(F)OC(F)F) from CHOF_G4
+FOOC(F)F (FOOC(F)F) from CHOF_G4
+FC(F)OC(F)(F)C(F)(F)F (FC(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)OC(F)F (OC(F)OC(F)F) from CHOF_G4
+COOC(F)F (COOC(F)F) from CHOF_G4
+OC(F)F (OC(F)F) from CHOF_G4
+FC(F)OCC(F)(F)F (FC(F)OCC(F)(F)F) from CHOF_G4
+FC(F)OC(Cl)Cl (FC(F)OC(Cl)Cl) from CHOFCl_G4
+FC(F)OC(F)Cl (FC(F)OC(F)Cl) from CHOFCl_G4
+FC(F)OCOCl (FC(F)OCOCl) from CHOFCl_G4
+FC(F)OCCl (FC(F)OCCl) from CHOFCl_G4
+O=C(Cl)OC(F)F (ODC(Cl)OC(F)F) from CHOFCl_G4
+FC(F)OCl (FC(F)OCl) from CHOFCl_G4
+FC(F)OOCl (FC(F)OOCl) from CHOFCl_G4
+OC(Cl)OC(F)F (OC(Cl)OC(F)F) from CHOFCl_G4
+FC(F)OOCCl (FC(F)OOCCl) from CHOFCl_G4
+FC(F)OC(Cl)Br (FC(F)OC(Cl)Br) from CHOFClBr_G4
+FC(F)OOCBr (FC(F)OOCBr) from CHOFBr_G4
+FC(F)OC(Br)(Br)Br (FC(F)OC(Br)(Br)Br) from CHOFBr_G4
+FC(F)OOBr (FC(F)OOBr) from CHOFBr_G4
+OC(Br)(Br)OC(F)F (OC(Br)(Br)OC(F)F) from CHOFBr_G4
+FC(F)OOC(F)Br (FC(F)OOC(F)Br) from CHOFBr_G4
+OC(F)(Br)OC(F)F (OC(F)(Br)OC(F)F) from CHOFBr_G4
+OC(Br)OC(F)F (OC(Br)OC(F)F) from CHOFBr_G4
+FC(F)OC(F)(Br)Br (FC(F)OC(F)(Br)Br) from CHOFBr_G4
+FC(F)OBr (FC(F)OBr) from CHOFBr_G4
+FC(F)OOC(Br)Br (FC(F)OOC(Br)Br) from CHOFBr_G4
+FC(F)OC(Br)OBr (FC(F)OC(Br)OBr) from CHOFBr_G4
+FC(F)OC(Br)Br (FC(F)OC(Br)Br) from CHOFBr_G4
+FC(F)OC(F)OBr (FC(F)OC(F)OBr) from CHOFBr_G4
+FC(F)OCBr (FC(F)OCBr) from CHOFBr_G4
+FC(F)OC(F)(F)Br (FC(F)OC(F)(F)Br) from CHOFBr_G4
+FC(F)OCOBr (FC(F)OCOBr) from CHOFBr_G4
+O=C(Br)OC(F)F (ODC(Br)OC(F)F) from CHOFBr_G4
+FC(F)OC(F)Br (FC(F)OC(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 854,
     label = "CsBrHHO",
     group = 
 """
@@ -17781,7 +21047,7 @@ CHOClBr_G4  |         24
 )
 
 entry(
-    index = 814,
+    index = 855,
     label = "CsClHHO",
     group = 
 """
@@ -17809,7 +21075,7 @@ CHOClBr_G4 |         18
 )
 
 entry(
-    index = 815,
+    index = 856,
     label = "CsFHHO",
     group = 
 """
@@ -17838,7 +21104,122 @@ CHOFBr_G4   |         24
 )
 
 entry(
-    index = 816,
+    index = 857,
+    label = "Cs-F1sO2sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   O2s u0 {1,S}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([34.2013,42.0429,48.7435,54.323,62.7257,68.3724,76.732],'J/(mol*K)','+|-',[0.410847,0.429473,0.402663,0.373885,0.32416,0.287854,0.556372]),
+        H298 = (-256.014,'kJ/mol','+|-',1.98321),
+        S298 = (141.113,'J/(mol*K)','+|-',1.12904),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OCF (CH2FOH) from C1_C2_Fluorine
+FCOOC(F)(F)F (FCOOC(F)(F)F) from CHOF_G4
+FC=COCF (FCDCOCF) from CHOF_G4
+FCOC=C(F)F (FCOCDC(F)F) from CHOF_G4
+C=C(F)OCF (CDC(F)OCF) from CHOF_G4
+FCOCC(F)(F)F (FCOCC(F)(F)F) from CHOF_G4
+FCOC(F)(F)OF (FCOC(F)(F)OF) from CHOF_G4
+FCOCC(F)F (FCOCC(F)F) from CHOF_G4
+COOCF (COOCF) from CHOF_G4
+FCOCOF (FCOCOF) from CHOF_G4
+OC(F)OCF (OC(F)OCF) from CHOF_G4
+CCOCF (CCOCF) from CHOF_G4
+FCOC(F)(F)CF (FCOC(F)(F)CF) from CHOF_G4
+O=C(F)OCF (ODC(F)OCF) from CHOF_G4
+FCOC(F)C(F)(F)F (FCOC(F)C(F)(F)F) from CHOF_G4
+OCF (OCF) from CHOF_G4
+FCOOC(F)F (FCOOC(F)F) from CHOF_G4
+CC(F)(F)OCF (CC(F)(F)OCF) from CHOF_G4
+FC#COCF (FC#COCF) from CHOF_G4
+FCOC(F)F (FCOC(F)F) from CHOF_G4
+C=COCF (CDCOCF) from CHOF_G4
+CC(F)OCF (CC(F)OCF) from CHOF_G4
+OOCF (OOCF) from CHOF_G4
+FCOC(F)=C(F)F (FCOC(F)DC(F)F) from CHOF_G4
+COCF (COCF) from CHOF_G4
+FCOF (FCOF) from CHOF_G4
+F[C]OCF (F[C]OCF) from CHOF_G4
+FCOC(F)(F)C(F)F (FCOC(F)(F)C(F)F) from CHOF_G4
+FCOOCF (FCOOCF) from CHOF_G4
+OCOCF (OCOCF) from CHOF_G4
+FCCOCF (FCCOCF) from CHOF_G4
+FCOC(F)(F)F (FCOC(F)(F)F) from CHOF_G4
+FCOOF (FCOOF) from CHOF_G4
+FCOC(F)CF (FCOC(F)CF) from CHOF_G4
+OC(F)(F)OCF (OC(F)(F)OCF) from CHOF_G4
+FCOC(F)(F)C(F)(F)F (FCOC(F)(F)C(F)(F)F) from CHOF_G4
+FCOCF (FCOCF) from CHOF_G4
+FCOC(F)C(F)F (FCOC(F)C(F)F) from CHOF_G4
+FCOC(F)OF (FCOC(F)OF) from CHOF_G4
+FC=C(F)OCF (FCDC(F)OCF) from CHOF_G4
+O=COCF (ODCOCF) from CHOF_G4
+FCOCl (FCOCl) from CHOFCl_G4
+FCOOCl (FCOOCl) from CHOFCl_G4
+FCOC(F)Cl (FCOC(F)Cl) from CHOFCl_G4
+FCOOC(Cl)Cl (FCOOC(Cl)Cl) from CHOFCl_G4
+FCOOCCl (FCOOCCl) from CHOFCl_G4
+FCOC(Cl)OCl (FCOC(Cl)OCl) from CHOFCl_G4
+FCOOC(F)Cl (FCOOC(F)Cl) from CHOFCl_G4
+FCOC(F)(Cl)Cl (FCOC(F)(Cl)Cl) from CHOFCl_G4
+FCOC(F)OCl (FCOC(F)OCl) from CHOFCl_G4
+FCOCOCl (FCOCOCl) from CHOFCl_G4
+FCOC(Cl)(Cl)Cl (FCOC(Cl)(Cl)Cl) from CHOFCl_G4
+OC(Cl)(Cl)OCF (OC(Cl)(Cl)OCF) from CHOFCl_G4
+OC(Cl)OCF (OC(Cl)OCF) from CHOFCl_G4
+FCOC(Cl)Cl (FCOC(Cl)Cl) from CHOFCl_G4
+FCOC(F)(F)Cl (FCOC(F)(F)Cl) from CHOFCl_G4
+FCOCCl (FCOCCl) from CHOFCl_G4
+O=C(Cl)OCF (ODC(Cl)OCF) from CHOFCl_G4
+OC(F)(Cl)OCF (OC(F)(Cl)OCF) from CHOFCl_G4
+FCOC(Cl)Br (FCOC(Cl)Br) from CHOFClBr_G4
+FCOC(Cl)(Cl)Br (FCOC(Cl)(Cl)Br) from CHOFClBr_G4
+FCOC(Cl)(Br)Br (FCOC(Cl)(Br)Br) from CHOFClBr_G4
+FCOC(F)(Cl)Br (FCOC(F)(Cl)Br) from CHOFClBr_G4
+FCOC(Cl)OBr (FCOC(Cl)OBr) from CHOFClBr_G4
+OC(Cl)(Br)OCF (OC(Cl)(Br)OCF) from CHOFClBr_G4
+FCOOC(Cl)Br (FCOOC(Cl)Br) from CHOFClBr_G4
+FCOCBr (FCOCBr) from CHOFBr_G4
+FCOC(F)(F)Br (FCOC(F)(F)Br) from CHOFBr_G4
+FCOOC(F)(Br)Br (FCOOC(F)(Br)Br) from CHOFBr_G4
+FCOC(F)(Br)OBr (FCOC(F)(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)OCF (OC(Br)(Br)OCF) from CHOFBr_G4
+FCOC(Br)Br (FCOC(Br)Br) from CHOFBr_G4
+FCOCOBr (FCOCOBr) from CHOFBr_G4
+FCOC(F)OBr (FCOC(F)OBr) from CHOFBr_G4
+OC(F)(Br)OCF (OC(F)(Br)OCF) from CHOFBr_G4
+FCOC(Br)(Br)OBr (FCOC(Br)(Br)OBr) from CHOFBr_G4
+FCOOC(Br)(Br)Br (FCOOC(Br)(Br)Br) from CHOFBr_G4
+O=C(Br)OCF (ODC(Br)OCF) from CHOFBr_G4
+FCOOC(F)Br (FCOOC(F)Br) from CHOFBr_G4
+OC(Br)OCF (OC(Br)OCF) from CHOFBr_G4
+FCOOCBr (FCOOCBr) from CHOFBr_G4
+FCOC(F)(F)OBr (FCOC(F)(F)OBr) from CHOFBr_G4
+FCOOC(Br)Br (FCOOC(Br)Br) from CHOFBr_G4
+FCOC(Br)OBr (FCOC(Br)OBr) from CHOFBr_G4
+FCOOC(F)(F)Br (FCOOC(F)(F)Br) from CHOFBr_G4
+FCOC(F)Br (FCOC(F)Br) from CHOFBr_G4
+FCOC(Br)(Br)Br (FCOC(Br)(Br)Br) from CHOFBr_G4
+FCOOBr (FCOOBr) from CHOFBr_G4
+FCOC(F)(Br)Br (FCOC(F)(Br)Br) from CHOFBr_G4
+FCOBr (FCOBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 858,
     label = "CsBrBrOO",
     group = 
 """
@@ -17866,7 +21247,7 @@ CHOClBr_G4 |         3
 )
 
 entry(
-    index = 817,
+    index = 859,
     label = "CsBrClOO",
     group = 
 """
@@ -17893,7 +21274,7 @@ CHOClBr_G4  |         7
 )
 
 entry(
-    index = 818,
+    index = 860,
     label = "CsClClOO",
     group = 
 """
@@ -17922,7 +21303,7 @@ CHOClBr_G4  |         3
 )
 
 entry(
-    index = 819,
+    index = 861,
     label = "CsBrFOO",
     group = 
 """
@@ -17948,7 +21329,7 @@ CHOFBr_G4 |         9
 )
 
 entry(
-    index = 820,
+    index = 862,
     label = "CsClFOO",
     group = 
 """
@@ -17975,7 +21356,7 @@ CHOFClBr_G4 |         3
 )
 
 entry(
-    index = 821,
+    index = 863,
     label = "CsFFOO",
     group = 
 """
@@ -18003,7 +21384,7 @@ CHOFBr_G4 |         4
 )
 
 entry(
-    index = 822,
+    index = 864,
     label = "CsBrHOO",
     group = 
 """
@@ -18032,7 +21413,7 @@ CHOClBr_G4  |         6
 )
 
 entry(
-    index = 823,
+    index = 865,
     label = "CsClHOO",
     group = 
 """
@@ -18061,7 +21442,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 824,
+    index = 866,
     label = "CsFHOO",
     group = 
 """
@@ -18089,7 +21470,7 @@ CHOFBr_G4 |         5
 )
 
 entry(
-    index = 825,
+    index = 867,
     label = "CsBrOOO",
     group = 
 """
@@ -18113,7 +21494,7 @@ library:CHOBr_G4 label:OC(O)(O)Br smiles:OC(O)(O)Br H298:-140.04 kcal/mol
 )
 
 entry(
-    index = 826,
+    index = 868,
     label = "CsClOOO",
     group = 
 """
@@ -18137,7 +21518,7 @@ library:CHOCl_G4 label:OC(O)(O)Cl smiles:OC(O)(O)Cl H298:-152.77 kcal/mol
 )
 
 entry(
-    index = 827,
+    index = 869,
     label = "CsFOOO",
     group = 
 """
@@ -18161,7 +21542,7 @@ library:CHOF_G4 label:OC(O)(O)F smiles:OC(O)(O)F H298:-204.86 kcal/mol
 )
 
 entry(
-    index = 828,
+    index = 870,
     label = "CsBrBrBrC",
     group = 
 """
@@ -18180,7 +21561,7 @@ entry(
 )
 
 entry(
-    index = 829,
+    index = 871,
     label = "CsBrBrBrCs",
     group = 
 """
@@ -18209,7 +21590,7 @@ CHOClBr_G4  |         8
 )
 
 entry(
-    index = 830,
+    index = 872,
     label = "CsBrBrBrCd",
     group = 
 """
@@ -18237,7 +21618,7 @@ CHOClBr_G4 |         5
 )
 
 entry(
-    index = 831,
+    index = 873,
     label = "CsBrBrBrCt",
     group = 
 """
@@ -18265,7 +21646,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 832,
+    index = 874,
     label = "CsBrBrBrCO",
     group = 
 """
@@ -18293,7 +21674,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 833,
+    index = 875,
     label = "CsC2sBrBrBr",
     group = 
 """
@@ -18312,7 +21693,7 @@ entry(
 )
 
 entry(
-    index = 834,
+    index = 876,
     label = "CsBrBrCCl",
     group = 
 """
@@ -18339,7 +21720,7 @@ CHOClBr_G4  |         50
 )
 
 entry(
-    index = 835,
+    index = 877,
     label = "CsBrCClCl",
     group = 
 """
@@ -18366,7 +21747,7 @@ CHOClBr_G4  |         50
 )
 
 entry(
-    index = 836,
+    index = 878,
     label = "CsCClClCl",
     group = 
 """
@@ -18385,7 +21766,7 @@ entry(
 )
 
 entry(
-    index = 837,
+    index = 879,
     label = "CsClClClCs",
     group = 
 """
@@ -18414,7 +21795,7 @@ CHOClBr_G4               |         8
 )
 
 entry(
-    index = 838,
+    index = 880,
     label = "CsClClClCd",
     group = 
 """
@@ -18442,7 +21823,7 @@ CHOClBr_G4 |         3
 )
 
 entry(
-    index = 839,
+    index = 881,
     label = "CsClClClCt",
     group = 
 """
@@ -18469,7 +21850,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 840,
+    index = 882,
     label = "CsClClClCO",
     group = 
 """
@@ -18497,7 +21878,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 841,
+    index = 883,
     label = "CsC2sClClCl",
     group = 
 """
@@ -18523,7 +21904,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 842,
+    index = 884,
     label = "CsBrBrCF",
     group = 
 """
@@ -18549,7 +21930,7 @@ CHOFBr_G4 |         105
 )
 
 entry(
-    index = 843,
+    index = 885,
     label = "CsBrCClF",
     group = 
 """
@@ -18575,7 +21956,7 @@ CHOFClBr_G4 |         50
 )
 
 entry(
-    index = 844,
+    index = 886,
     label = "CsCClClF",
     group = 
 """
@@ -18602,7 +21983,7 @@ CHOFClBr_G4 |         12
 )
 
 entry(
-    index = 845,
+    index = 887,
     label = "CsBrCFF",
     group = 
 """
@@ -18628,7 +22009,7 @@ CHOFBr_G4 |         106
 )
 
 entry(
-    index = 846,
+    index = 888,
     label = "CsCClFF",
     group = 
 """
@@ -18655,7 +22036,7 @@ CHOFClBr_G4 |         12
 )
 
 entry(
-    index = 847,
+    index = 889,
     label = "CsCFFF",
     group = 
 """
@@ -18674,7 +22055,7 @@ entry(
 )
 
 entry(
-    index = 848,
+    index = 890,
     label = "CsCsFFF",
     group = 
 """
@@ -18703,7 +22084,465 @@ CHOFBr_G4   |         39
 )
 
 entry(
-    index = 849,
+    index = 891,
+    label = "Cs-CsF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs  u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([53.1563,61.8959,68.1359,72.7441,78.8772,82.6147,86.1612],'J/(mol*K)','+|-',[0.206057,0.215398,0.201952,0.187519,0.16258,0.144371,0.279044]),
+        H298 = (-667.735,'kJ/mol','+|-',0.994664),
+        S298 = (171.173,'J/(mol*K)','+|-',0.566258),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(F)(F)F (CH3CF3) from C1_C2_Fluorine
+FCC(F)(F)F (CH2FCF3) from C1_C2_Fluorine
+FC(F)C(F)(F)F (CHF2CF3) from C1_C2_Fluorine
+FC(F)(F)C(F)(F)F (CF3CF3) from C1_C2_Fluorine
+FCC(F)(F)F (CH2F-CF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)(F)C(F)(F)F (C3F7H) from C1_C3_hydrofluorocarbons_NIST
+FC(F)(F)C(F)(F)F (CF3-CF3) from C1_C3_hydrofluorocarbons_NIST
+CC(F)(F)F (CH3-CF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)(F)F (CHF2-CF3) from C1_C3_hydrofluorocarbons_NIST
+OC(F)(F)C(F)(F)C(F)(F)F (C3F7OH) from C1_C3_hydrofluorocarbons_NIST
+O=C(O)C(F)(F)C(F)(F)F (PF3acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (PF4acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)F (PF3acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF4acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acylF) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)F (PF2alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)F (PF3alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkane) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)F (PF2-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)F (PF3-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (PF4-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7-1H) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)F (PF4ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ene) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)F (PF2ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)F (PF3ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)F (PF2diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)F (PF3diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7diol) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)F (PF3lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)F (PF4lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (PF5lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8lactone) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)F (PF3alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)F (PF4alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkyl(s)) from NCSU_C2_C8_PFAS
+FC(S(=O)(=O)O)(C(F)(F)F)F (PF2Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F (PF3Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(C(F)(F)F)F (PF4Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF7Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF8Sacid) from NCSU_C2_C8_PFAS
+FC(C(F)(F)F)(OS(=O)O)F (PF2Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+FC(C1(F)OS1(=O)=O)(F)F (PF2Sultone) from NCSU_C2_C8_PFAS
+FC(C(C1(F)OS1(=O)=O)(F)F)(F)F (PF3Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F (PF4Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(C(F)(F)F)F (PF5Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF6Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sultone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acylF) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkane) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16-1H) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ene) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16diol) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16lactone) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkyl(s)) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF10Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF11Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF12Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF13Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sacid) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF9Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF10Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF11Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF12Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF13Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sultone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)F (C2F5C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (C3F7C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C7F15C_O_OH) from PFCA_thermo
+O=C1OC1(F)C(F)(F)F (CF3_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)F (C2F5_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13_c_FCOC_O) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)F (C2F5CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13CFO) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)F (C2F5CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFCF2) from PFCA_thermo
+FC=C(F)C(F)(F)C(F)(F)F (FCDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OOC(F)C(F)(F)F (OOC(F)C(F)(F)F) from CHOF_G4
+CCCC(F)(F)F (CCCC(F)(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)(F)F (FC(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+FOCC(F)C(F)(F)F (FOCC(F)C(F)(F)F) from CHOF_G4
+FOC(F)(OF)C(F)(F)F (FOC(F)(OF)C(F)(F)F) from CHOF_G4
+O=C(F)C(F)C(F)(F)F (ODC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)CC(F)(F)F (FC(F)C(F)CC(F)(F)F) from CHOF_G4
+FC(CC(F)(F)F)C(F)(F)F (FC(CC(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(O)(F)C(F)(F)F (CC(O)(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C(F)(F)F (FC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(C(F)(F)F)C(F)(F)F (FCC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)C(F)(F)C(F)(F)F (FC(F)C(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(C(F)F)C(F)(F)F (CC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+C=CC(F)C(F)(F)F (CDCC(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)CC(F)(F)F (OC(F)(F)CC(F)(F)F) from CHOF_G4
+FC(F)(F)OC(F)(F)C(F)(F)F (FC(F)(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+FCOCC(F)(F)F (FCOCC(F)(F)F) from CHOF_G4
+FC(F)=C(F)C(F)C(F)(F)F (FC(F)DC(F)C(F)C(F)(F)F) from CHOF_G4
+FCCC(F)(F)C(F)(F)F (FCCC(F)(F)C(F)(F)F) from CHOF_G4
+OOC(F)(F)C(F)(F)F (OOC(F)(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)(F)F (CDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(CF)C(F)(F)F (OC(CF)C(F)(F)F) from CHOF_G4
+FCC(F)(C(F)F)C(F)(F)F (FCC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+OC(C(F)F)C(F)(F)F (OC(C(F)F)C(F)(F)F) from CHOF_G4
+FC(F)OC(F)C(F)(F)F (FC(F)OC(F)C(F)(F)F) from CHOF_G4
+OC(F)(CF)C(F)(F)F (OC(F)(CF)C(F)(F)F) from CHOF_G4
+FC(F)C(C(F)(F)F)C(F)(F)F (FC(F)C(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)C(F)(F)F (FCC(F)C(F)(F)F) from CHOF_G4
+FOC(OF)C(F)(F)F (FOC(OF)C(F)(F)F) from CHOF_G4
+OC(F)CC(F)(F)F (OC(F)CC(F)(F)F) from CHOF_G4
+OC(F)(C(F)(F)F)C(F)(F)F (OC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FOC(F)C(F)C(F)(F)F (FOC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(C(F)C(F)(F)F)C(F)(F)F (FC(C(F)C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(F)(CF)C(F)(F)F (CC(F)(CF)C(F)(F)F) from CHOF_G4
+FCOC(F)C(F)(F)F (FCOC(F)C(F)(F)F) from CHOF_G4
+CC(C(F)F)C(F)(F)F (CC(C(F)F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)(C(F)F)C(F)(F)F (FOC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+O=C(F)CC(F)(F)F (ODC(F)CC(F)(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)(F)F (FC(F)DCC(F)(F)C(F)(F)F) from CHOF_G4
+CCC(F)C(F)(F)F (CCC(F)C(F)(F)F) from CHOF_G4
+FCC(F)C(F)C(F)(F)F (FCC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(C(F)(F)F)C(F)(F)C(F)(F)F (FC(C(F)(F)F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOCC(F)(F)C(F)(F)F (FOCC(F)(F)C(F)(F)F) from CHOF_G4
+C#CCC(F)(F)F (C#CCC(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)F) from CHOF_G4
+COCC(F)(F)F (COCC(F)(F)F) from CHOF_G4
+CC(F)(F)CC(F)(F)F (CC(F)(F)CC(F)(F)F) from CHOF_G4
+O=C(F)C(F)(F)C(F)(F)F (ODC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC=C(F)CC(F)(F)F (FCDC(F)CC(F)(F)F) from CHOF_G4
+FCC(F)(F)F (FCC(F)(F)F) from CHOF_G4
+COC(F)(F)C(F)(F)F (COC(F)(F)C(F)(F)F) from CHOF_G4
+O=CC(F)(F)C(F)(F)F (ODCC(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)C(F)C(F)(F)F (FC(F)C(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C(F)(C(F)(F)F)C(F)(F)F (FC(F)(F)C(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)(F)F (FC(F)DC(F)CC(F)(F)F) from CHOF_G4
+FCC(CF)C(F)(F)F (FCC(CF)C(F)(F)F) from CHOF_G4
+FC#CCC(F)(F)F (FC#CCC(F)(F)F) from CHOF_G4
+FC(F)(F)CC(F)(F)F (FC(F)(F)CC(F)(F)F) from CHOF_G4
+OC(F)(C(F)F)C(F)(F)F (OC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)F (CC(F)C(F)(F)F) from CHOF_G4
+FCCCC(F)(F)F (FCCCC(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)C(F)(F)F (FC(F)C(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(O)C(F)(F)F (OC(O)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)F (FOC(F)(F)C(F)(F)F) from CHOF_G4
+CC(OF)C(F)(F)F (CC(OF)C(F)(F)F) from CHOF_G4
+FCC(F)(OF)C(F)(F)F (FCC(F)(OF)C(F)(F)F) from CHOF_G4
+FCC(F)CC(F)(F)F (FCC(F)CC(F)(F)F) from CHOF_G4
+FC(F)=CCC(F)(F)F (FC(F)DCCC(F)(F)F) from CHOF_G4
+C#CC(F)C(F)(F)F (C#CC(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)F (FC(F)C(F)(F)F) from CHOF_G4
+OC(OF)C(F)(F)F (OC(OF)C(F)(F)F) from CHOF_G4
+FOC(F)CC(F)(F)F (FOC(F)CC(F)(F)F) from CHOF_G4
+C=CC(F)(F)C(F)(F)F (CDCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)C(F)(F)F (CC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)(F)F (OC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)CC(F)C(F)(F)F (FC(F)CC(F)C(F)(F)F) from CHOF_G4
+FOOCC(F)(F)F (FOOCC(F)(F)F) from CHOF_G4
+FC(F)C(F)(C(F)(F)F)C(F)(F)F (FC(F)C(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC#CC(F)C(F)(F)F (FC#CC(F)C(F)(F)F) from CHOF_G4
+FOC(F)C(F)(F)F (FOC(F)C(F)(F)F) from CHOF_G4
+O=CCC(F)(F)F (ODCCC(F)(F)F) from CHOF_G4
+FC(C(F)(F)F)C(F)(F)F (FC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)F) from CHOF_G4
+FOC(C(F)(F)F)C(F)(F)F (FOC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(C)C(F)(F)F (CC(C)C(F)(F)F) from CHOF_G4
+FOC(F)(C(F)(F)F)C(F)(F)F (FOC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+OC(F)(OF)C(F)(F)F (OC(F)(OF)C(F)(F)F) from CHOF_G4
+FOC(C(F)F)C(F)(F)F (FOC(C(F)F)C(F)(F)F) from CHOF_G4
+OC(C(F)(F)F)C(F)(F)F (OC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(F)(F)F (CC(F)(F)F) from CHOF_G4
+CC(C)(F)C(F)(F)F (CC(C)(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)(F)F (FCDCC(F)(F)C(F)(F)F) from CHOF_G4
+OCCC(F)(F)F (OCCC(F)(F)F) from CHOF_G4
+C=C(F)CC(F)(F)F (CDC(F)CC(F)(F)F) from CHOF_G4
+OC(F)C(F)C(F)(F)F (OC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C(C(F)(F)F)C(F)(F)F (FC(F)(F)C(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FOCC(F)(F)F (FOCC(F)(F)F) from CHOF_G4
+FOC(F)(F)CC(F)(F)F (FOC(F)(F)CC(F)(F)F) from CHOF_G4
+OCC(F)C(F)(F)F (OCC(F)C(F)(F)F) from CHOF_G4
+FC(F)CC(F)(F)F (FC(F)CC(F)(F)F) from CHOF_G4
+CC(F)(C(F)(F)F)C(F)(F)F (CC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)(F)F (FOC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)C(F)(F)F (FCC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+CCC(F)(F)C(F)(F)F (CCC(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)C(F)(F)C(F)(F)F (FOC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)F) from CHOF_G4
+FOOC(F)(F)C(F)(F)F (FOOC(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)CCC(F)(F)F (FC(F)CCC(F)(F)F) from CHOF_G4
+CCC(F)(F)F (CCC(F)(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)(F)F (FC(F)DC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOOC(F)C(F)(F)F (FOOC(F)C(F)(F)F) from CHOF_G4
+OC(F)C(F)(F)F (OC(F)C(F)(F)F) from CHOF_G4
+FC#CC(F)(F)C(F)(F)F (FC#CC(F)(F)C(F)(F)F) from CHOF_G4
+CC(O)C(F)(F)F (CC(O)C(F)(F)F) from CHOF_G4
+OCC(F)(F)C(F)(F)F (OCC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(OF)C(F)(F)F (FCC(OF)C(F)(F)F) from CHOF_G4
+FCC(F)(F)CC(F)(F)F (FCC(F)(F)CC(F)(F)F) from CHOF_G4
+CC(F)CC(F)(F)F (CC(F)CC(F)(F)F) from CHOF_G4
+O=CC(F)C(F)(F)F (ODCC(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)CC(F)(F)C(F)(F)F (FC(F)(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+CC(C(F)(F)F)C(F)(F)F (CC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)(F)CCC(F)(F)F (FC(F)(F)CCC(F)(F)F) from CHOF_G4
+FCOC(F)(F)C(F)(F)F (FCOC(F)(F)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)C(F)(F)F (FCDC(F)C(F)C(F)(F)F) from CHOF_G4
+CC(CF)C(F)(F)F (CC(CF)C(F)(F)F) from CHOF_G4
+FCC(F)(CF)C(F)(F)F (FCC(F)(CF)C(F)(F)F) from CHOF_G4
+FC=CC(F)C(F)(F)F (FCDCC(F)C(F)(F)F) from CHOF_G4
+FCC(C(F)F)C(F)(F)F (FCC(C(F)F)C(F)(F)F) from CHOF_G4
+FOCCC(F)(F)F (FOCCC(F)(F)F) from CHOF_G4
+FCC(F)C(F)(F)C(F)(F)F (FCC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)C(F)(F)F (FOC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)C(F)(F)F (CC(F)C(F)C(F)(F)F) from CHOF_G4
+C=CCC(F)(F)F (CDCCC(F)(F)F) from CHOF_G4
+FCCC(F)(F)F (FCCC(F)(F)F) from CHOF_G4
+FC=CCC(F)(F)F (FCDCCC(F)(F)F) from CHOF_G4
+FC(F)OC(F)(F)C(F)(F)F (FC(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)C(F)(F)F (C#CC(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)COC(F)(F)F (FC(F)(F)COC(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)CC(F)(F)F (FC(F)C(F)(F)CC(F)(F)F) from CHOF_G4
+OCC(F)(F)F (OCC(F)(F)F) from CHOF_G4
+FC(F)C(F)(C(F)F)C(F)(F)F (FC(F)C(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CC(F)(OF)C(F)(F)F (CC(F)(OF)C(F)(F)F) from CHOF_G4
+FC(F)(F)C(F)(F)C(F)(F)F (FC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)=CC(F)C(F)(F)F (FC(F)DCC(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)C(F)(F)F (CDC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)OCC(F)(F)F (FC(F)OCC(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)(F)F (CC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)C(F)(F)F (OC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+FC(OC(F)(F)F)C(F)(F)F (FC(OC(F)(F)F)C(F)(F)F) from CHOF_G4
+FCCC(F)C(F)(F)F (FCCC(F)C(F)(F)F) from CHOF_G4
+OC(O)(F)C(F)(F)F (OC(O)(F)C(F)(F)F) from CHOF_G4
+OOCC(F)(F)F (OOCC(F)(F)F) from CHOF_G4
+FC(F)C(C(F)F)C(F)(F)F (FC(F)C(C(F)F)C(F)(F)F) from CHOF_G4
+FCC(C(F)(F)F)C(F)(F)F (FCC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)C(F)(F)F (FC(F)C(F)C(F)(F)F) from CHOF_G4
+COC(F)C(F)(F)F (COC(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C1CO1 (FC(F)(F)C1CO1) from CHOF_G4
+FC(F)(F)C1OC1(F)F (FC(F)(F)C1OC1(F)F) from CHOF_G4
+FC(F)(F)C1CC1 (FC(F)(F)C1CC1) from CHOF_G4
+FC1CC1C(F)(F)F (FC1CC1C(F)(F)F) from CHOF_G4
+FC1OC1(F)C(F)(F)F (FC1OC1(F)C(F)(F)F) from CHOF_G4
+FC1C(F)C1C(F)(F)F (FC1C(F)C1C(F)(F)F) from CHOF_G4
+FC1=C(F)C1C(F)(F)F (FC1DC(F)C1C(F)(F)F) from CHOF_G4
+FC(F)(F)C1CC1(F)F (FC(F)(F)C1CC1(F)F) from CHOF_G4
+FC(F)(F)C1(F)OO1 (FC(F)(F)C1(F)OO1) from CHOF_G4
+FC(F)(F)C1(F)CC1 (FC(F)(F)C1(F)CC1) from CHOF_G4
+FC1OC1C(F)(F)F (FC1OC1C(F)(F)F) from CHOF_G4
+FC(F)(F)C1(F)CO1 (FC(F)(F)C1(F)CO1) from CHOF_G4
+FC1=CC1C(F)(F)F (FC1DCC1C(F)(F)F) from CHOF_G4
+FC(F)(F)C1C=C1 (FC(F)(F)C1CDC1) from CHOF_G4
+FC1=CC1(F)C(F)(F)F (FC1DCC1(F)C(F)(F)F) from CHOF_G4
+FC1CC1(F)C(F)(F)F (FC1CC1(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C1(F)C=C1 (FC(F)(F)C1(F)CDC1) from CHOF_G4
+FC(F)(F)C1OO1 (FC(F)(F)C1OO1) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C1(F)C(F)(F)F (ODC1OC(F)(F)C(F)(F)C1(F)C(F)(F)F) from CHOF_G4
+FC(F)(F)CCCl (FC(F)(F)CCCl) from CHOFCl_G4
+OC(Cl)C(F)(F)F (OC(Cl)C(F)(F)F) from CHOFCl_G4
+FC(F)(F)C(Cl)Cl (FC(F)(F)C(Cl)Cl) from CHOFCl_G4
+FC(F)(F)CCl (FC(F)(F)CCl) from CHOFCl_G4
+CC(Cl)C(F)(F)F (CC(Cl)C(F)(F)F) from CHOFCl_G4
+FC(Cl)C(F)(F)F (FC(Cl)C(F)(F)F) from CHOFCl_G4
+FC(F)(F)COCl (FC(F)(F)COCl) from CHOFCl_G4
+FC(F)(F)C(Cl)Br (FC(F)(F)C(Cl)Br) from CHOFClBr_G4
+OC(Br)(Br)C(F)(F)F (OC(Br)(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)C(Br)OBr (FC(F)(F)C(Br)OBr) from CHOFBr_G4
+FC(Br)C(F)(F)F (FC(Br)C(F)(F)F) from CHOFBr_G4
+OC(O)(Br)C(F)(F)F (OC(O)(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)COBr (FC(F)(F)COBr) from CHOFBr_G4
+FC(F)(F)CCCBr (FC(F)(F)CCCBr) from CHOFBr_G4
+CC(CBr)C(F)(F)F (CC(CBr)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)COCBr (FC(F)(F)COCBr) from CHOFBr_G4
+COC(Br)C(F)(F)F (COC(Br)C(F)(F)F) from CHOFBr_G4
+FC(CBr)C(F)(F)F (FC(CBr)C(F)(F)F) from CHOFBr_G4
+OCC(Br)C(F)(F)F (OCC(Br)C(F)(F)F) from CHOFBr_G4
+FC(Br)CC(F)(F)F (FC(Br)CC(F)(F)F) from CHOFBr_G4
+FC(F)(F)C(F)(F)Br (FC(F)(F)C(F)(F)Br) from CHOFBr_G4
+CC(Br)CC(F)(F)F (CC(Br)CC(F)(F)F) from CHOFBr_G4
+FC(F)(F)CBr (FC(F)(F)CBr) from CHOFBr_G4
+FC(OBr)C(F)(F)F (FC(OBr)C(F)(F)F) from CHOFBr_G4
+CC(O)(Br)C(F)(F)F (CC(O)(Br)C(F)(F)F) from CHOFBr_G4
+CC(OBr)C(F)(F)F (CC(OBr)C(F)(F)F) from CHOFBr_G4
+O=C(Br)CC(F)(F)F (ODC(Br)CC(F)(F)F) from CHOFBr_G4
+CC(Br)C(F)(F)F (CC(Br)C(F)(F)F) from CHOFBr_G4
+OC(Br)C(F)(F)F (OC(Br)C(F)(F)F) from CHOFBr_G4
+OC(OBr)C(F)(F)F (OC(OBr)C(F)(F)F) from CHOFBr_G4
+CC(C)(Br)C(F)(F)F (CC(C)(Br)C(F)(F)F) from CHOFBr_G4
+OC(F)(Br)C(F)(F)F (OC(F)(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)C(Br)(Br)Br (FC(F)(F)C(Br)(Br)Br) from CHOFBr_G4
+FC(F)(F)CC(Br)Br (FC(F)(F)CC(Br)Br) from CHOFBr_G4
+OC(Br)CC(F)(F)F (OC(Br)CC(F)(F)F) from CHOFBr_G4
+FC(F)(F)C(F)(Br)Br (FC(F)(F)C(F)(Br)Br) from CHOFBr_G4
+OC(CBr)C(F)(F)F (OC(CBr)C(F)(F)F) from CHOFBr_G4
+OOC(Br)C(F)(F)F (OOC(Br)C(F)(F)F) from CHOFBr_G4
+CCC(Br)C(F)(F)F (CCC(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)COOBr (FC(F)(F)COOBr) from CHOFBr_G4
+FC(F)(F)CCBr (FC(F)(F)CCBr) from CHOFBr_G4
+FC(F)(F)CCOBr (FC(F)(F)CCOBr) from CHOFBr_G4
+FC(F)(F)C(Br)Br (FC(F)(F)C(Br)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)(F)F (CC(Br)(Br)C(F)(F)F) from CHOFBr_G4
+CC(F)(Br)C(F)(F)F (CC(F)(Br)C(F)(F)F) from CHOFBr_G4
+O=CC(Br)C(F)(F)F (ODCC(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)C(Br)CBr (FC(F)(F)C(Br)CBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 892,
     label = "CsCdFFF",
     group = 
 """
@@ -18730,7 +22569,109 @@ CHOFBr_G4 |         9
 )
 
 entry(
-    index = 850,
+    index = 893,
+    label = "Cs-CdF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cd  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([51.3032,60.3411,67.001,72.0875,78.679,82.6636,86.3006],'J/(mol*K)','+|-',[0.426408,0.44574,0.417914,0.388047,0.336438,0.298757,0.577446]),
+        H298 = (-667.676,'kJ/mol','+|-',2.05833),
+        S298 = (168.395,'J/(mol*K)','+|-',1.1718),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C(F)C(F)(F)F (CH2CFCF3) from C1_C3_hydrofluorocarbons_NIST
+C=CC(F)(F)F (CF3CHCH2) from C1_C3_hydrofluorocarbons_NIST
+FC=CC(F)(F)F (CHFCHCF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)C(F)(F)F (C3F6) from C1_C3_hydrofluorocarbons_NIST
+FC(F)=C(F)C(F)(F)F (PF3ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)F (CF3CFCF2) from PFCA_thermo
+CC(=CF)C(F)(F)F (CC(DCF)C(F)(F)F) from CHOF_G4
+C=C(C(F)(F)F)C(F)(F)F (CDC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+C=C(OF)C(F)(F)F (CDC(OF)C(F)(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)(F)F (FC(DCC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C=CC(F)(F)F (FC(F)DCDCC(F)(F)F) from CHOF_G4
+FCC(F)=C(F)C(F)(F)F (FCC(F)DC(F)C(F)(F)F) from CHOF_G4
+C=C(C)C(F)(F)F (CDC(C)C(F)(F)F) from CHOF_G4
+CC(=C(F)F)C(F)(F)F (CC(DC(F)F)C(F)(F)F) from CHOF_G4
+O=C=CC(F)(F)F (ODCDCC(F)(F)F) from CHOF_G4
+FC(=C(F)C(F)(F)F)C(F)(F)F (FC(DC(F)C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC=C(C(F)(F)F)C(F)(F)F (FCDC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)F (FC(F)DC(F)C(F)(F)F) from CHOF_G4
+CC(F)=C(F)C(F)(F)F (CC(F)DC(F)C(F)(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)(F)F (FCC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC(F)(F)C=CC(F)(F)F (FC(F)(F)CDCC(F)(F)F) from CHOF_G4
+FC=C(F)C(F)(F)F (FCDC(F)C(F)(F)F) from CHOF_G4
+FOC=C(F)C(F)(F)F (FOCDC(F)C(F)(F)F) from CHOF_G4
+C=C(O)C(F)(F)F (CDC(O)C(F)(F)F) from CHOF_G4
+FC=C(CF)C(F)(F)F (FCDC(CF)C(F)(F)F) from CHOF_G4
+CC=C(F)C(F)(F)F (CCDC(F)C(F)(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)(F)F (FC(DCC(F)(F)F)C(F)(F)F) from CHOF_G4
+FC=C(C(F)F)C(F)(F)F (FCDC(C(F)F)C(F)(F)F) from CHOF_G4
+FC=C=C(F)C(F)(F)F (FCDCDC(F)C(F)(F)F) from CHOF_G4
+CC(F)=CC(F)(F)F (CC(F)DCC(F)(F)F) from CHOF_G4
+FC(=C(F)C(F)(F)F)C(F)F (FC(DC(F)C(F)(F)F)C(F)F) from CHOF_G4
+FC(F)=CC(F)(F)F (FC(F)DCC(F)(F)F) from CHOF_G4
+O=C=C(F)C(F)(F)F (ODCDC(F)C(F)(F)F) from CHOF_G4
+FOC(F)=CC(F)(F)F (FOC(F)DCC(F)(F)F) from CHOF_G4
+C=C(C(F)F)C(F)(F)F (CDC(C(F)F)C(F)(F)F) from CHOF_G4
+FC(F)=C=C(F)C(F)(F)F (FC(F)DCDC(F)C(F)(F)F) from CHOF_G4
+FC(F)C=CC(F)(F)F (FC(F)CDCC(F)(F)F) from CHOF_G4
+OC(F)=CC(F)(F)F (OC(F)DCC(F)(F)F) from CHOF_G4
+OC=CC(F)(F)F (OCDCC(F)(F)F) from CHOF_G4
+FCC(F)=CC(F)(F)F (FCC(F)DCC(F)(F)F) from CHOF_G4
+C=C=CC(F)(F)F (CDCDCC(F)(F)F) from CHOF_G4
+FC(F)=C(C(F)(F)F)C(F)(F)F (FC(F)DC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+C=C=C(F)C(F)(F)F (CDCDC(F)C(F)(F)F) from CHOF_G4
+FCC=C(F)C(F)(F)F (FCCDC(F)C(F)(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)F (FC(DCC(F)(F)F)C(F)F) from CHOF_G4
+FOC=CC(F)(F)F (FOCDCC(F)(F)F) from CHOF_G4
+OC=C(F)C(F)(F)F (OCDC(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)(F)F (FCDCC(F)(F)F) from CHOF_G4
+C=C(CF)C(F)(F)F (CDC(CF)C(F)(F)F) from CHOF_G4
+FC(F)=C(C(F)F)C(F)(F)F (FC(F)DC(C(F)F)C(F)(F)F) from CHOF_G4
+C=CC(F)(F)F (CDCC(F)(F)F) from CHOF_G4
+FOC(=C(F)F)C(F)(F)F (FOC(DC(F)F)C(F)(F)F) from CHOF_G4
+FC=C=CC(F)(F)F (FCDCDCC(F)(F)F) from CHOF_G4
+OC(F)=C(F)C(F)(F)F (OC(F)DC(F)C(F)(F)F) from CHOF_G4
+CC=CC(F)(F)F (CCDCC(F)(F)F) from CHOF_G4
+FCC=CC(F)(F)F (FCCDCC(F)(F)F) from CHOF_G4
+FC=C(OF)C(F)(F)F (FCDC(OF)C(F)(F)F) from CHOF_G4
+OC(=CF)C(F)(F)F (OC(DCF)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)(F)F (CDC(F)C(F)(F)F) from CHOF_G4
+OC(=C(F)F)C(F)(F)F (OC(DC(F)F)C(F)(F)F) from CHOF_G4
+FOC(F)=C(F)C(F)(F)F (FOC(F)DC(F)C(F)(F)F) from CHOF_G4
+[C]=CC(F)(F)F ([C]DCC(F)(F)F) from CHOF_G4
+FC(F)(F)C1=CC1(F)F (FC(F)(F)C1DCC1(F)F) from CHOF_G4
+FC1=C(C(F)(F)F)C1F (FC1DC(C(F)(F)F)C1F) from CHOF_G4
+FC(F)(F)C1=CC1 (FC(F)(F)C1DCC1) from CHOF_G4
+FC(F)(F)C1=CO1 (FC(F)(F)C1DCO1) from CHOF_G4
+FC1=C(C(F)(F)F)C1 (FC1DC(C(F)(F)F)C1) from CHOF_G4
+FC1C=C1C(F)(F)F (FC1CDC1C(F)(F)F) from CHOF_G4
+OC=C(Br)C(F)(F)F (OCDC(Br)C(F)(F)F) from CHOFBr_G4
+FC(F)(F)C=CCBr (FC(F)(F)CDCCBr) from CHOFBr_G4
+CC(Br)=CC(F)(F)F (CC(Br)DCC(F)(F)F) from CHOFBr_G4
+O=C=C(Br)C(F)(F)F (ODCDC(Br)C(F)(F)F) from CHOFBr_G4
+OC(Br)=CC(F)(F)F (OC(Br)DCC(F)(F)F) from CHOFBr_G4
+FC(F)(F)C=COBr (FC(F)(F)CDCOBr) from CHOFBr_G4
+CC=C(Br)C(F)(F)F (CCDC(Br)C(F)(F)F) from CHOFBr_G4
+C=C(OBr)C(F)(F)F (CDC(OBr)C(F)(F)F) from CHOFBr_G4
+C=C(CBr)C(F)(F)F (CDC(CBr)C(F)(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 894,
     label = "CsCtFFF",
     group = 
 """
@@ -18757,7 +22698,44 @@ CHOFBr_G4 |         2
 )
 
 entry(
-    index = 851,
+    index = 895,
+    label = "Cs-CtF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   Ct  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([52.1977,62.4299,69.6611,74.4012,80.4777,83.9128,86.5023],'J/(mol*K)','+|-',[1.45261,1.51847,1.42368,1.32193,1.14612,1.01775,1.96714]),
+        H298 = (-662.025,'kJ/mol','+|-',7.01197),
+        S298 = (163.353,'J/(mol*K)','+|-',3.99188),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C#CC(F)(F)F (CF3CCH) from C1_C3_hydrofluorocarbons_NIST
+FC#CC(F)(F)F (CFCCF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C#CC(F)(F)F (FC(F)C#CC(F)(F)F) from CHOF_G4
+FC#CC(F)(F)F (FC#CC(F)(F)F) from CHOF_G4
+FOC#CC(F)(F)F (FOC#CC(F)(F)F) from CHOF_G4
+OC#CC(F)(F)F (OC#CC(F)(F)F) from CHOF_G4
+FCC#CC(F)(F)F (FCC#CC(F)(F)F) from CHOF_G4
+CC#CC(F)(F)F (CC#CC(F)(F)F) from CHOF_G4
+C#CC(F)(F)F (C#CC(F)(F)F) from CHOF_G4
+FC(F)(F)C#CC(F)(F)F (FC(F)(F)C#CC(F)(F)F) from CHOF_G4
+FC(F)(F)C#CCBr (FC(F)(F)C#CCBr) from CHOFBr_G4
+FC(F)(F)C#COBr (FC(F)(F)C#COBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 896,
     label = "CsCOFFF",
     group = 
 """
@@ -18786,7 +22764,192 @@ CHOFBr_G4 |         3
 )
 
 entry(
-    index = 852,
+    index = 897,
+    label = "Cs-(O2dH)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   O2d u0 {2,D}
+7   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([50.6303,59.3337,65.6264,70.3811,76.5483,80.2791,83.818],'J/(mol*K)','+|-',[2.32246,2.42775,2.27619,2.11352,1.83243,1.6272,3.1451]),
+        H298 = (-665.642,'kJ/mol','+|-',11.2108),
+        S298 = (171.261,'J/(mol*K)','+|-',6.38228),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=CC(F)(F)F (CF3CHO) from C1_C2_Fluorine
+O=CC(F)(F)F (CF3CHO) from C1_C3_hydrofluorocarbons_NIST
+O=CC(F)(F)F (ODCC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 898,
+    label = "Cs-(F1sO2d)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   O2d u0 {2,D}
+7   F1s u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([50.663,59.5693,66.3122,71.4852,77.9482,81.5328,85.5088],'J/(mol*K)','+|-',[1.85762,1.94184,1.82062,1.6905,1.46567,1.30152,2.51561]),
+        H298 = (-663.019,'kJ/mol','+|-',8.967),
+        S298 = (166.865,'J/(mol*K)','+|-',5.10488),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)C(F)(F)F (CF3CFO) from C1_C2_Fluorine
+O=C(F)C(F)(F)F (CF3COF) from C1_C3_hydrofluorocarbons_NIST
+O=C(F)C(F)(F)F (PF2acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)F (CF3CFO) from PFCA_thermo
+O=C(F)C(F)(F)F (ODC(F)C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 899,
+    label = "Cs-(O2dO2s)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   O2d u0 {2,D}
+7   O2s u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([48.5299,58.1713,65.5479,71.4235,79.0653,83.3062,86.3939],'J/(mol*K)','+|-',[1.76745,1.84758,1.73224,1.60844,1.39453,1.23834,2.39349]),
+        H298 = (-662.493,'kJ/mol','+|-',8.53171),
+        S298 = (165.841,'J/(mol*K)','+|-',4.85707),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)C(F)(F)F (CF3C(O)OH) from C1_C2_Fluorine
+O=C(O)C(F)(F)F (PF2acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)F (CF3C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)F (ODC(O)C(F)(F)F) from CHOF_G4
+O=C(OF)C(F)(F)F (ODC(OF)C(F)(F)F) from CHOF_G4
+O=C(OBr)C(F)(F)F (ODC(OBr)C(F)(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 900,
+    label = "Cs-(CsO2d)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   O2d u0 {2,D}
+7   Cs  u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([55.2093,63.6363,69.5913,73.9144,79.4043,82.6843,86.1899],'J/(mol*K)','+|-',[1.19747,1.25176,1.17362,1.08974,0.944814,0.838993,1.62163]),
+        H298 = (-652.572,'kJ/mol','+|-',5.78038),
+        S298 = (166.888,'J/(mol*K)','+|-',3.29074),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)C(F)(F)F (CF3COCH3) from C1_C3_hydrofluorocarbons_NIST
+O=C(C(F)(F)F)C(F)(F)F (C3F6O) from C1_C3_hydrofluorocarbons_NIST
+O=C(CF)C(F)(F)F (ODC(CF)C(F)(F)F) from CHOF_G4
+O=C(C(F)(F)F)C(F)(F)F (ODC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+O=C(C(F)F)C(F)(F)F (ODC(C(F)F)C(F)(F)F) from CHOF_G4
+CC(=O)C(F)(F)F (CC(DO)C(F)(F)F) from CHOF_G4
+O=C(CBr)C(F)(F)F (ODC(CBr)C(F)(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 901,
+    label = "Cs-(Cl1sO2d)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   CO   u0 {1,S} {6,S} {7,D}
+3   F1s  u0 {1,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+6   Cl1s u0 {2,S}
+7   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([54.2095,62.9386,68.4183,72.307,77.8988,81.3566,84.8549],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-643.498,'kJ/mol','+|-',18.9287),
+        S298 = (171.497,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Cl)C(F)(F)F (ODC(Cl)C(F)(F)F) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 902,
+    label = "Cs-(Br1sO2d)COF1sF1sF1s",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   CO   u0 {1,S} {6,S} {7,D}
+3   F1s  u0 {1,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+6   Br1s u0 {2,S}
+7   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([54.7222,63.5307,69.0234,72.709,78.0112,81.3972,84.9116],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-640.966,'kJ/mol','+|-',18.9287),
+        S298 = (169.801,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)C(F)(F)F (ODC(Br)C(F)(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 903,
     label = "CsC2sFFF",
     group = 
 """
@@ -18812,7 +22975,36 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 853,
+    index = 904,
+    label = "Cs-C2sF1sF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   C2s u0 p1 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([28.0031,32.8431,35.8479,37.8477,40.1187,40.7692,40.2571],'J/(mol*K)','+|-',[1.89802,1.98407,1.86021,1.72727,1.49755,1.32982,2.57032]),
+        H298 = (-358.127,'kJ/mol','+|-',9.16202),
+        S298 = (114.261,'J/(mol*K)','+|-',5.2159),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[CH]C(F)(F)F (CF3CH(S)) from C1_C2_Fluorine
+F[C]C(F)(F)F (CF3CF) from C1_C2_Fluorine
+F[C]C(F)(F)F (PF2alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)F (F[C]C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 905,
     label = "CsBrBrCH",
     group = 
 """
@@ -18841,7 +23033,7 @@ CHOClBr_G4  |         21
 )
 
 entry(
-    index = 854,
+    index = 906,
     label = "CsBrBrCsH",
     group = 
 """
@@ -18870,7 +23062,7 @@ CHOClBr_G4  |         33
 )
 
 entry(
-    index = 855,
+    index = 907,
     label = "CsBrCClH",
     group = 
 """
@@ -18897,7 +23089,7 @@ CHOClBr_G4  |         112
 )
 
 entry(
-    index = 856,
+    index = 908,
     label = "CsCClClH",
     group = 
 """
@@ -18925,7 +23117,7 @@ CHOClBr_G4 |         18
 )
 
 entry(
-    index = 857,
+    index = 909,
     label = "CsCsClClH",
     group = 
 """
@@ -18954,7 +23146,7 @@ CHOClBr_G4               |         41
 )
 
 entry(
-    index = 858,
+    index = 910,
     label = "CsBrCFH",
     group = 
 """
@@ -18980,7 +23172,7 @@ CHOFBr_G4 |         183
 )
 
 entry(
-    index = 859,
+    index = 911,
     label = "CsCClFH",
     group = 
 """
@@ -19007,7 +23199,7 @@ CHOFClBr_G4 |         58
 )
 
 entry(
-    index = 860,
+    index = 912,
     label = "CsCFFH",
     group = 
 """
@@ -19036,7 +23228,7 @@ CHOFBr_G4   |         36
 )
 
 entry(
-    index = 861,
+    index = 913,
     label = "CsCsFFH",
     group = 
 """
@@ -19065,7 +23257,622 @@ CHOFBr_G4   |         103
 )
 
 entry(
-    index = 862,
+    index = 914,
+    label = "Cs-CsF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs  u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([46.2548,54.0135,60.0049,64.7964,71.7798,76.4864,82.4859],'J/(mol*K)','+|-',[0.193452,0.202222,0.189598,0.176048,0.152635,0.135539,0.261974]),
+        H298 = (-437.58,'kJ/mol','+|-',0.933819),
+        S298 = (163.699,'J/(mol*K)','+|-',0.531619),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(F)F (CH3CHF2) from C1_C2_Fluorine
+FCC(F)F (CH2FCHF2) from C1_C2_Fluorine
+FC(F)C(F)F (CHF2CHF2) from C1_C2_Fluorine
+FC(F)C(F)(F)F (CHF2CF3) from C1_C2_Fluorine
+CC(F)F (CH3-CHF2) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)(F)C(F)(F)F (C3F7H) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)F (CHF2-CHF2) from C1_C3_hydrofluorocarbons_NIST
+FCC(F)F (CH2F-CHF2) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)(F)F (CHF2-CF3) from C1_C3_hydrofluorocarbons_NIST
+FC(F)C(F)(F)F (PF2-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)F (PF3-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (PF4-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)F (FC(F)C(F)(F)C(F)F) from CHOF_G4
+COC(F)(F)C(F)F (COC(F)(F)C(F)F) from CHOF_G4
+OC(OF)C(F)F (OC(OF)C(F)F) from CHOF_G4
+OOC(F)C(F)F (OOC(F)C(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)(F)F (FC(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+FCCC(F)(F)C(F)F (FCCC(F)(F)C(F)F) from CHOF_G4
+OC(F)(F)CC(F)F (OC(F)(F)CC(F)F) from CHOF_G4
+FC(F)C(F)CC(F)(F)F (FC(F)C(F)CC(F)(F)F) from CHOF_G4
+FCC(F)F (FCC(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)F (OC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)OC(F)C(F)F (FC(F)OC(F)C(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)F (CDC(F)C(F)(F)C(F)F) from CHOF_G4
+FOC(F)(C(F)F)C(F)F (FOC(F)(C(F)F)C(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)F (FC(F)DCC(F)(F)C(F)F) from CHOF_G4
+OC(F)C(F)F (OC(F)C(F)F) from CHOF_G4
+CC(CF)C(F)F (CC(CF)C(F)F) from CHOF_G4
+FC(F)COC(F)F (FC(F)COC(F)F) from CHOF_G4
+FC=CC(F)C(F)F (FCDCC(F)C(F)F) from CHOF_G4
+FCC(F)C(F)F (FCC(F)C(F)F) from CHOF_G4
+FC(F)C(F)C(F)(F)C(F)(F)F (FC(F)C(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(C(F)F)C(F)(F)F (CC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+FOC(C(F)F)C(F)F (FOC(C(F)F)C(F)F) from CHOF_G4
+C=CC(F)C(F)F (CDCC(F)C(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)F (CC(F)C(F)(F)C(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)F (FOC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+FOCC(F)C(F)F (FOCC(F)C(F)F) from CHOF_G4
+OC(F)(CF)C(F)F (OC(F)(CF)C(F)F) from CHOF_G4
+FCOCC(F)F (FCOCC(F)F) from CHOF_G4
+FC(F)C(F)OC(F)(F)F (FC(F)C(F)OC(F)(F)F) from CHOF_G4
+OOCC(F)F (OOCC(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)F (FCDCC(F)(F)C(F)F) from CHOF_G4
+FOC(F)(OF)C(F)F (FOC(F)(OF)C(F)F) from CHOF_G4
+FCC(F)(C(F)F)C(F)(F)F (FCC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+OC(C(F)F)C(F)(F)F (OC(C(F)F)C(F)(F)F) from CHOF_G4
+CC(F)CC(F)F (CC(F)CC(F)F) from CHOF_G4
+FC=C(F)C(F)(F)C(F)F (FCDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)C(C(F)(F)F)C(F)(F)F (FC(F)C(C(F)(F)F)C(F)(F)F) from CHOF_G4
+O=CC(F)(F)C(F)F (ODCC(F)(F)C(F)F) from CHOF_G4
+CC(F)C(F)C(F)F (CC(F)C(F)C(F)F) from CHOF_G4
+FCC(F)(F)C(F)C(F)F (FCC(F)(F)C(F)C(F)F) from CHOF_G4
+CC(O)(F)C(F)F (CC(O)(F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)F (OC(F)(F)C(F)F) from CHOF_G4
+FOOC(F)(F)C(F)F (FOOC(F)(F)C(F)F) from CHOF_G4
+CC(F)C(F)F (CC(F)C(F)F) from CHOF_G4
+FCC(F)CC(F)F (FCC(F)CC(F)F) from CHOF_G4
+C#CCC(F)F (C#CCC(F)F) from CHOF_G4
+FC(F)CC(F)C(F)F (FC(F)CC(F)C(F)F) from CHOF_G4
+CC(C(F)F)C(F)(F)F (CC(C(F)F)C(F)(F)F) from CHOF_G4
+FOC(F)(C(F)F)C(F)(F)F (FOC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)CC(F)F (FCC(F)(F)CC(F)F) from CHOF_G4
+FC(F)=C(F)CC(F)F (FC(F)DC(F)CC(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)F (FCC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(C(F)F)C(F)F (FC(F)C(F)(C(F)F)C(F)F) from CHOF_G4
+FC(F)C(F)C(F)F (FC(F)C(F)C(F)F) from CHOF_G4
+OCC(F)(F)C(F)F (OCC(F)(F)C(F)F) from CHOF_G4
+FOC(F)(F)C(F)C(F)F (FOC(F)(F)C(F)C(F)F) from CHOF_G4
+C=CCC(F)F (CDCCC(F)F) from CHOF_G4
+FOC(F)C(F)F (FOC(F)C(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)F (OC(F)C(F)(F)C(F)F) from CHOF_G4
+C=C(F)C(F)C(F)F (CDC(F)C(F)C(F)F) from CHOF_G4
+OCC(F)C(F)F (OCC(F)C(F)F) from CHOF_G4
+FC(F)C(F)C(F)C(F)(F)F (FC(F)C(F)C(F)C(F)(F)F) from CHOF_G4
+FCC(F)(CF)C(F)F (FCC(F)(CF)C(F)F) from CHOF_G4
+CC(C(F)F)C(F)F (CC(C(F)F)C(F)F) from CHOF_G4
+FCC(F)(C(F)F)C(F)F (FCC(F)(C(F)F)C(F)F) from CHOF_G4
+CC(F)(OF)C(F)F (CC(F)(OF)C(F)F) from CHOF_G4
+FC(F)=CCC(F)F (FC(F)DCCC(F)F) from CHOF_G4
+FCC(CF)C(F)F (FCC(CF)C(F)F) from CHOF_G4
+O=CCC(F)F (ODCCC(F)F) from CHOF_G4
+CC(C)(F)C(F)F (CC(C)(F)C(F)F) from CHOF_G4
+FC(F)CCC(F)F (FC(F)CCC(F)F) from CHOF_G4
+O=CC(F)C(F)F (ODCC(F)C(F)F) from CHOF_G4
+FOC(F)(F)C(F)F (FOC(F)(F)C(F)F) from CHOF_G4
+FC#CC(F)(F)C(F)F (FC#CC(F)(F)C(F)F) from CHOF_G4
+OC(F)(C(F)F)C(F)(F)F (OC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+FOC(OF)C(F)F (FOC(OF)C(F)F) from CHOF_G4
+FOOC(F)C(F)F (FOOC(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)C(F)(F)F (FC(F)C(F)(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)F (FC(F)CC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)F (CC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+FCCCC(F)F (FCCCC(F)F) from CHOF_G4
+FOC(F)C(F)C(F)F (FOC(F)C(F)C(F)F) from CHOF_G4
+OCCC(F)F (OCCC(F)F) from CHOF_G4
+C#CC(F)(F)C(F)F (C#CC(F)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)F (FC(F)C(F)(F)F) from CHOF_G4
+FC(F)=CC(F)C(F)F (FC(F)DCC(F)C(F)F) from CHOF_G4
+FCC(F)C(F)C(F)F (FCC(F)C(F)C(F)F) from CHOF_G4
+OC(F)(C(F)F)C(F)F (OC(F)(C(F)F)C(F)F) from CHOF_G4
+FC(F)CC(F)C(F)(F)F (FC(F)CC(F)C(F)(F)F) from CHOF_G4
+OC(O)(F)C(F)F (OC(O)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)C(F)F (FC(F)C(F)(F)C(F)(F)C(F)F) from CHOF_G4
+FCCC(F)C(F)F (FCCC(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)F (CC(F)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(C(F)(F)F)C(F)(F)F (FC(F)C(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FC#CC(F)C(F)F (FC#CC(F)C(F)F) from CHOF_G4
+OC(F)(OF)C(F)F (OC(F)(OF)C(F)F) from CHOF_G4
+OC(C(F)F)C(F)F (OC(C(F)F)C(F)F) from CHOF_G4
+FC(F)COC(F)(F)F (FC(F)COC(F)(F)F) from CHOF_G4
+COCC(F)F (COCC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)C(F)F (FC(F)DC(F)C(F)C(F)F) from CHOF_G4
+FOOCC(F)F (FOOCC(F)F) from CHOF_G4
+CC(F)F (CC(F)F) from CHOF_G4
+OC(F)CC(F)F (OC(F)CC(F)F) from CHOF_G4
+FC(F)C(F)C(F)(F)C(F)F (FC(F)C(F)C(F)(F)C(F)F) from CHOF_G4
+FOC(C(F)F)C(F)(F)F (FOC(C(F)F)C(F)(F)F) from CHOF_G4
+OC(O)C(F)F (OC(O)C(F)F) from CHOF_G4
+FC(F)C(F)F (FC(F)C(F)F) from CHOF_G4
+CC(C)C(F)F (CC(C)C(F)F) from CHOF_G4
+FC=C(F)C(F)C(F)F (FCDC(F)C(F)C(F)F) from CHOF_G4
+CC(OF)C(F)F (CC(OF)C(F)F) from CHOF_G4
+CC(F)(F)C(F)C(F)F (CC(F)(F)C(F)C(F)F) from CHOF_G4
+COC(F)C(F)F (COC(F)C(F)F) from CHOF_G4
+FC(F)C(C(F)F)C(F)F (FC(F)C(C(F)F)C(F)F) from CHOF_G4
+FOCC(F)F (FOCC(F)F) from CHOF_G4
+C#CC(F)C(F)F (C#CC(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC=CCC(F)F (FCDCCC(F)F) from CHOF_G4
+FCC(F)C(F)(F)C(F)F (FCC(F)C(F)(F)C(F)F) from CHOF_G4
+CCC(F)(F)C(F)F (CCC(F)(F)C(F)F) from CHOF_G4
+FC(F)CC(F)(F)F (FC(F)CC(F)(F)F) from CHOF_G4
+O=C(F)C(F)C(F)F (ODC(F)C(F)C(F)F) from CHOF_G4
+FOC(F)(F)CC(F)F (FOC(F)(F)CC(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(CF)C(F)F (OC(CF)C(F)F) from CHOF_G4
+O=C(F)CC(F)F (ODC(F)CC(F)F) from CHOF_G4
+FC(F)CCC(F)(F)F (FC(F)CCC(F)(F)F) from CHOF_G4
+FCOC(F)(F)C(F)F (FCOC(F)(F)C(F)F) from CHOF_G4
+OCC(F)F (OCC(F)F) from CHOF_G4
+FC#CCC(F)F (FC#CCC(F)F) from CHOF_G4
+FOC(F)C(F)(F)C(F)F (FOC(F)C(F)(F)C(F)F) from CHOF_G4
+OC(F)C(F)C(F)F (OC(F)C(F)C(F)F) from CHOF_G4
+FCC(F)(F)C(F)F (FCC(F)(F)C(F)F) from CHOF_G4
+CCCC(F)F (CCCC(F)F) from CHOF_G4
+FC(F)OC(F)(F)C(F)F (FC(F)OC(F)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)OC(F)(F)F (FC(F)C(F)(F)OC(F)(F)F) from CHOF_G4
+FOCCC(F)F (FOCCC(F)F) from CHOF_G4
+FCC(F)(OF)C(F)F (FCC(F)(OF)C(F)F) from CHOF_G4
+FC=C(F)CC(F)F (FCDC(F)CC(F)F) from CHOF_G4
+FC(F)CC(F)F (FC(F)CC(F)F) from CHOF_G4
+FCC(C(F)F)C(F)(F)F (FCC(C(F)F)C(F)(F)F) from CHOF_G4
+FCC(OF)C(F)F (FCC(OF)C(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)F (FC(F)DC(F)C(F)(F)C(F)F) from CHOF_G4
+FCOC(F)C(F)F (FCOC(F)C(F)F) from CHOF_G4
+CC(F)(CF)C(F)F (CC(F)(CF)C(F)F) from CHOF_G4
+FCC(C(F)F)C(F)F (FCC(C(F)F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)C(F)F (OC(F)(F)C(F)C(F)F) from CHOF_G4
+C=CC(F)(F)C(F)F (CDCC(F)(F)C(F)F) from CHOF_G4
+C=C(F)CC(F)F (CDC(F)CC(F)F) from CHOF_G4
+CCC(F)F (CCC(F)F) from CHOF_G4
+FC(F)C(F)(F)CC(F)(F)F (FC(F)C(F)(F)CC(F)(F)F) from CHOF_G4
+FOC(F)CC(F)F (FOC(F)CC(F)F) from CHOF_G4
+FC(F)C(F)(C(F)F)C(F)(F)F (FC(F)C(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CC(F)(F)CC(F)F (CC(F)(F)CC(F)F) from CHOF_G4
+FC(F)C(F)C(F)C(F)F (FC(F)C(F)C(F)C(F)F) from CHOF_G4
+CC(O)C(F)F (CC(O)C(F)F) from CHOF_G4
+CC(F)(C(F)F)C(F)F (CC(F)(C(F)F)C(F)F) from CHOF_G4
+O=C(F)C(F)(F)C(F)F (ODC(F)C(F)(F)C(F)F) from CHOF_G4
+FOCC(F)(F)C(F)F (FOCC(F)(F)C(F)F) from CHOF_G4
+CCC(F)C(F)F (CCC(F)C(F)F) from CHOF_G4
+OOC(F)(F)C(F)F (OOC(F)(F)C(F)F) from CHOF_G4
+FC(F)C(C(F)F)C(F)(F)F (FC(F)C(C(F)F)C(F)(F)F) from CHOF_G4
+FCCC(F)F (FCCC(F)F) from CHOF_G4
+FC(F)C(F)C(F)(F)F (FC(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)C1(F)CO1 (FC(F)C1(F)CO1) from CHOF_G4
+FC(F)C1(F)OC1(F)F (FC(F)C1(F)OC1(F)F) from CHOF_G4
+FC(F)C1(F)CC1 (FC(F)C1(F)CC1) from CHOF_G4
+FC(F)C1(F)C=C1 (FC(F)C1(F)CDC1) from CHOF_G4
+FC1=CC1C(F)F (FC1DCC1C(F)F) from CHOF_G4
+FC(F)C1OO1 (FC(F)C1OO1) from CHOF_G4
+FC(F)C1(F)C(F)C1F (FC(F)C1(F)C(F)C1F) from CHOF_G4
+FC1=CC1(F)C(F)F (FC1DCC1(F)C(F)F) from CHOF_G4
+FC(F)C1(F)CC1(F)F (FC(F)C1(F)CC1(F)F) from CHOF_G4
+FC(F)C1C(F)C1(F)F (FC(F)C1C(F)C1(F)F) from CHOF_G4
+FC(F)C1OC1F (FC(F)C1OC1F) from CHOF_G4
+FC(F)C1CC1F (FC(F)C1CC1F) from CHOF_G4
+FC(F)C1CC1(F)F (FC(F)C1CC1(F)F) from CHOF_G4
+FC(F)C1C=C1 (FC(F)C1CDC1) from CHOF_G4
+FC(F)C1(F)OC1F (FC(F)C1(F)OC1F) from CHOF_G4
+FC(F)C1CC1 (FC(F)C1CC1) from CHOF_G4
+FC(F)C1(F)CC1F (FC(F)C1(F)CC1F) from CHOF_G4
+FC1=C(F)C1(F)C(F)F (FC1DC(F)C1(F)C(F)F) from CHOF_G4
+FC(F)C1CO1 (FC(F)C1CO1) from CHOF_G4
+FC(F)C1OC1(F)F (FC(F)C1OC1(F)F) from CHOF_G4
+FC(F)C1(F)OO1 (FC(F)C1(F)OO1) from CHOF_G4
+FC(F)C1C(F)C1F (FC(F)C1C(F)C1F) from CHOF_G4
+FC(F)COCCl (FC(F)COCCl) from CHOFCl_G4
+FC(F)CCCCl (FC(F)CCCCl) from CHOFCl_G4
+OC(O)(Cl)C(F)F (OC(O)(Cl)C(F)F) from CHOFCl_G4
+FC(F)C(Cl)OCl (FC(F)C(Cl)OCl) from CHOFCl_G4
+FC(F)C(F)CCl (FC(F)C(F)CCl) from CHOFCl_G4
+OCC(Cl)C(F)F (OCC(Cl)C(F)F) from CHOFCl_G4
+FC(F)CCCl (FC(F)CCCl) from CHOFCl_G4
+O=C(Cl)CC(F)F (ODC(Cl)CC(F)F) from CHOFCl_G4
+CC(C)(Cl)C(F)F (CC(C)(Cl)C(F)F) from CHOFCl_G4
+FC(F)C(F)(Cl)Cl (FC(F)C(F)(Cl)Cl) from CHOFCl_G4
+OC(F)(Cl)C(F)F (OC(F)(Cl)C(F)F) from CHOFCl_G4
+FC(F)CC(F)Cl (FC(F)CC(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)C(F)F (OC(Cl)(Cl)C(F)F) from CHOFCl_G4
+CC(Cl)C(F)F (CC(Cl)C(F)F) from CHOFCl_G4
+CCC(Cl)C(F)F (CCC(Cl)C(F)F) from CHOFCl_G4
+FC(F)C(F)(F)Cl (FC(F)C(F)(F)Cl) from CHOFCl_G4
+OC(OCl)C(F)F (OC(OCl)C(F)F) from CHOFCl_G4
+CC(Cl)(Cl)C(F)F (CC(Cl)(Cl)C(F)F) from CHOFCl_G4
+FC(F)CCl (FC(F)CCl) from CHOFCl_G4
+O=CC(Cl)C(F)F (ODCC(Cl)C(F)F) from CHOFCl_G4
+OC(Cl)CC(F)F (OC(Cl)CC(F)F) from CHOFCl_G4
+CC(F)(Cl)C(F)F (CC(F)(Cl)C(F)F) from CHOFCl_G4
+OC(CCl)C(F)F (OC(CCl)C(F)F) from CHOFCl_G4
+FC(F)CC(Cl)Cl (FC(F)CC(Cl)Cl) from CHOFCl_G4
+FC(F)C(Cl)Cl (FC(F)C(Cl)Cl) from CHOFCl_G4
+FC(F)C(Cl)(Cl)Cl (FC(F)C(Cl)(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(F)F (OC(Cl)C(F)F) from CHOFCl_G4
+CC(Cl)CC(F)F (CC(Cl)CC(F)F) from CHOFCl_G4
+FC(F)COCl (FC(F)COCl) from CHOFCl_G4
+CC(OCl)C(F)F (CC(OCl)C(F)F) from CHOFCl_G4
+COC(Cl)C(F)F (COC(Cl)C(F)F) from CHOFCl_G4
+FC(F)C(F)Cl (FC(F)C(F)Cl) from CHOFCl_G4
+FC(F)C(Cl)CCl (FC(F)C(Cl)CCl) from CHOFCl_G4
+CC(O)(Cl)C(F)F (CC(O)(Cl)C(F)F) from CHOFCl_G4
+FC(F)C(F)OCl (FC(F)C(F)OCl) from CHOFCl_G4
+CC(CCl)C(F)F (CC(CCl)C(F)F) from CHOFCl_G4
+FC(F)CCOCl (FC(F)CCOCl) from CHOFCl_G4
+FC(F)COOCl (FC(F)COOCl) from CHOFCl_G4
+CC(Cl)(Br)C(F)F (CC(Cl)(Br)C(F)F) from CHOFClBr_G4
+FC(F)C(Cl)CBr (FC(F)C(Cl)CBr) from CHOFClBr_G4
+FC(F)C(Cl)(Br)Br (FC(F)C(Cl)(Br)Br) from CHOFClBr_G4
+FC(F)C(Cl)(Cl)Br (FC(F)C(Cl)(Cl)Br) from CHOFClBr_G4
+FC(F)C(Cl)Br (FC(F)C(Cl)Br) from CHOFClBr_G4
+FC(F)CC(Cl)Br (FC(F)CC(Cl)Br) from CHOFClBr_G4
+FC(F)C(F)(Cl)Br (FC(F)C(F)(Cl)Br) from CHOFClBr_G4
+FC(F)C(Cl)OBr (FC(F)C(Cl)OBr) from CHOFClBr_G4
+OC(Cl)(Br)C(F)F (OC(Cl)(Br)C(F)F) from CHOFClBr_G4
+FC(F)COOBr (FC(F)COOBr) from CHOFBr_G4
+FC(F)CCOBr (FC(F)CCOBr) from CHOFBr_G4
+FC(F)C(F)(F)CBr (FC(F)C(F)(F)CBr) from CHOFBr_G4
+OC(Br)(OBr)C(F)F (OC(Br)(OBr)C(F)F) from CHOFBr_G4
+FC(F)C(F)OBr (FC(F)C(F)OBr) from CHOFBr_G4
+FC(F)CC(F)OBr (FC(F)CC(F)OBr) from CHOFBr_G4
+OC(OBr)C(F)F (OC(OBr)C(F)F) from CHOFBr_G4
+OOC(Br)(Br)C(F)F (OOC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)C(F)Br (FC(F)C(F)Br) from CHOFBr_G4
+OOC(Br)C(F)F (OOC(Br)C(F)F) from CHOFBr_G4
+CCC(Br)(Br)C(F)F (CCC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)CCC(Br)Br (FC(F)CCC(Br)Br) from CHOFBr_G4
+O=CC(Br)C(F)F (ODCC(Br)C(F)F) from CHOFBr_G4
+OC(F)(OBr)C(F)F (OC(F)(OBr)C(F)F) from CHOFBr_G4
+FC(F)C(CBr)CBr (FC(F)C(CBr)CBr) from CHOFBr_G4
+FC(F)C(F)COBr (FC(F)C(F)COBr) from CHOFBr_G4
+OC(F)(Br)CC(F)F (OC(F)(Br)CC(F)F) from CHOFBr_G4
+O=CC(Br)(Br)C(F)F (ODCC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)C(F)OOBr (FC(F)C(F)OOBr) from CHOFBr_G4
+OC(Br)(CBr)C(F)F (OC(Br)(CBr)C(F)F) from CHOFBr_G4
+FC(F)CC(Br)Br (FC(F)CC(Br)Br) from CHOFBr_G4
+FC(F)C(Br)Br (FC(F)C(Br)Br) from CHOFBr_G4
+FOC(OBr)C(F)F (FOC(OBr)C(F)F) from CHOFBr_G4
+OC(Br)CC(F)F (OC(Br)CC(F)F) from CHOFBr_G4
+CC(F)(Br)C(F)F (CC(F)(Br)C(F)F) from CHOFBr_G4
+OC(CBr)C(F)F (OC(CBr)C(F)F) from CHOFBr_G4
+FC(F)C(Br)COBr (FC(F)C(Br)COBr) from CHOFBr_G4
+FC(F)COBr (FC(F)COBr) from CHOFBr_G4
+OC(Br)(Br)CC(F)F (OC(Br)(Br)CC(F)F) from CHOFBr_G4
+FC(F)C(Br)OOBr (FC(F)C(Br)OOBr) from CHOFBr_G4
+FC(F)C(Br)(Br)OBr (FC(F)C(Br)(Br)OBr) from CHOFBr_G4
+OC(F)(CBr)C(F)F (OC(F)(CBr)C(F)F) from CHOFBr_G4
+OC(Br)(Br)C(F)F (OC(Br)(Br)C(F)F) from CHOFBr_G4
+CC(Br)C(Br)C(F)F (CC(Br)C(Br)C(F)F) from CHOFBr_G4
+FC(F)C(F)C(F)Br (FC(F)C(F)C(F)Br) from CHOFBr_G4
+CC(OBr)C(F)F (CC(OBr)C(F)F) from CHOFBr_G4
+OC(Br)C(F)C(F)F (OC(Br)C(F)C(F)F) from CHOFBr_G4
+COC(Br)C(F)F (COC(Br)C(F)F) from CHOFBr_G4
+OC(C(F)F)C(Br)Br (OC(C(F)F)C(Br)Br) from CHOFBr_G4
+FC(F)CC(Br)CBr (FC(F)CC(Br)CBr) from CHOFBr_G4
+OC(Br)C(F)F (OC(Br)C(F)F) from CHOFBr_G4
+FCC(CBr)C(F)F (FCC(CBr)C(F)F) from CHOFBr_G4
+FC(F)C(F)(Br)OBr (FC(F)C(F)(Br)OBr) from CHOFBr_G4
+CC(CBr)C(F)F (CC(CBr)C(F)F) from CHOFBr_G4
+FC(F)C(Br)CBr (FC(F)C(Br)CBr) from CHOFBr_G4
+COC(F)(Br)C(F)F (COC(F)(Br)C(F)F) from CHOFBr_G4
+OC(C(F)F)C(F)Br (OC(C(F)F)C(F)Br) from CHOFBr_G4
+O=C(Br)C(Br)C(F)F (ODC(Br)C(Br)C(F)F) from CHOFBr_G4
+CC(O)(Br)C(F)F (CC(O)(Br)C(F)F) from CHOFBr_G4
+FCC(OBr)C(F)F (FCC(OBr)C(F)F) from CHOFBr_G4
+FC(F)CBr (FC(F)CBr) from CHOFBr_G4
+OCC(F)(Br)C(F)F (OCC(F)(Br)C(F)F) from CHOFBr_G4
+CC(Br)CC(F)F (CC(Br)CC(F)F) from CHOFBr_G4
+FC(F)CC(Br)(Br)Br (FC(F)CC(Br)(Br)Br) from CHOFBr_G4
+OOC(F)(Br)C(F)F (OOC(F)(Br)C(F)F) from CHOFBr_G4
+CC(C(F)F)C(F)Br (CC(C(F)F)C(F)Br) from CHOFBr_G4
+O=C(Br)CC(F)F (ODC(Br)CC(F)F) from CHOFBr_G4
+FC(F)C(F)(F)Br (FC(F)C(F)(F)Br) from CHOFBr_G4
+OC(O)(Br)C(F)F (OC(O)(Br)C(F)F) from CHOFBr_G4
+FC(F)C(Br)C(Br)Br (FC(F)C(Br)C(Br)Br) from CHOFBr_G4
+O=C(Br)C(F)C(F)F (ODC(Br)C(F)C(F)F) from CHOFBr_G4
+FC(F)CC(F)(F)Br (FC(F)CC(F)(F)Br) from CHOFBr_G4
+FC(F)C(Br)(Br)Br (FC(F)C(Br)(Br)Br) from CHOFBr_G4
+CCC(F)(Br)C(F)F (CCC(F)(Br)C(F)F) from CHOFBr_G4
+FC(F)C(Br)OBr (FC(F)C(Br)OBr) from CHOFBr_G4
+CC(C(F)F)C(Br)Br (CC(C(F)F)C(Br)Br) from CHOFBr_G4
+FC(F)CCC(F)Br (FC(F)CCC(F)Br) from CHOFBr_G4
+FC(F)CC(F)Br (FC(F)CC(F)Br) from CHOFBr_G4
+FC(F)C(F)(Br)CBr (FC(F)C(F)(Br)CBr) from CHOFBr_G4
+CC(Br)(Br)C(F)F (CC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)CC(Br)OBr (FC(F)CC(Br)OBr) from CHOFBr_G4
+FC(F)COC(Br)Br (FC(F)COC(Br)Br) from CHOFBr_G4
+CC(Br)C(F)C(F)F (CC(Br)C(F)C(F)F) from CHOFBr_G4
+OC(Br)C(Br)C(F)F (OC(Br)C(Br)C(F)F) from CHOFBr_G4
+OCC(Br)C(F)F (OCC(Br)C(F)F) from CHOFBr_G4
+FC(F)C(OBr)OBr (FC(F)C(OBr)OBr) from CHOFBr_G4
+O=CC(F)(Br)C(F)F (ODCC(F)(Br)C(F)F) from CHOFBr_G4
+CC(F)(Br)CC(F)F (CC(F)(Br)CC(F)F) from CHOFBr_G4
+CC(Br)(CBr)C(F)F (CC(Br)(CBr)C(F)F) from CHOFBr_G4
+FC(F)CC(F)(Br)Br (FC(F)CC(F)(Br)Br) from CHOFBr_G4
+FC(F)C(Br)(Br)CBr (FC(F)C(Br)(Br)CBr) from CHOFBr_G4
+FC(F)C(Br)OCBr (FC(F)C(Br)OCBr) from CHOFBr_G4
+FC(F)C(F)(Br)Br (FC(F)C(F)(Br)Br) from CHOFBr_G4
+OC(F)(Br)C(F)F (OC(F)(Br)C(F)F) from CHOFBr_G4
+FC(F)CCBr (FC(F)CCBr) from CHOFBr_G4
+FC(F)C(Br)CCBr (FC(F)C(Br)CCBr) from CHOFBr_G4
+FC(F)C(F)CCBr (FC(F)C(F)CCBr) from CHOFBr_G4
+CC(F)(CBr)C(F)F (CC(F)(CBr)C(F)F) from CHOFBr_G4
+CC(Br)(Br)CC(F)F (CC(Br)(Br)CC(F)F) from CHOFBr_G4
+FC(F)C(CBr)OBr (FC(F)C(CBr)OBr) from CHOFBr_G4
+CCC(Br)C(F)F (CCC(Br)C(F)F) from CHOFBr_G4
+CC(Br)(OBr)C(F)F (CC(Br)(OBr)C(F)F) from CHOFBr_G4
+FC(F)C(F)C(Br)Br (FC(F)C(F)C(Br)Br) from CHOFBr_G4
+FC(F)C(F)CBr (FC(F)C(F)CBr) from CHOFBr_G4
+FC(F)CC(F)CBr (FC(F)CC(F)CBr) from CHOFBr_G4
+CC(Br)C(F)F (CC(Br)C(F)F) from CHOFBr_G4
+OCC(Br)(Br)C(F)F (OCC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)C(F)(F)OBr (FC(F)C(F)(F)OBr) from CHOFBr_G4
+FC(F)COC(F)Br (FC(F)COC(F)Br) from CHOFBr_G4
+FC(F)CCCBr (FC(F)CCCBr) from CHOFBr_G4
+CC(F)(OBr)C(F)F (CC(F)(OBr)C(F)F) from CHOFBr_G4
+COC(Br)(Br)C(F)F (COC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)COCBr (FC(F)COCBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 915,
+    label = "Cs-C2sF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   C2s u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.0937,22.2029,25.2042,27.8518,31.4711,33.4452,35.7589],'J/(mol*K)','+|-',[2.15119,2.24871,2.10834,1.95766,1.6973,1.5072,2.91316]),
+        H298 = (-126.117,'kJ/mol','+|-',10.3841),
+        S298 = (111.738,'J/(mol*K)','+|-',5.91161),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[CH]C(F)F (CHF2CH(S)) from C1_C2_Fluorine
+F[C]C(F)F (CHF2CF) from C1_C2_Fluorine
+F[C]C(F)F (F[C]C(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 916,
+    label = "Cs-CtF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   Ct  u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([41.4878,49.8407,57.1545,62.6413,70.9226,76.3117,82.0596],'J/(mol*K)','+|-',[1.5699,1.64107,1.53862,1.42866,1.23866,1.09992,2.12597]),
+        H298 = (-425.779,'kJ/mol','+|-',7.57811),
+        S298 = (160.098,'J/(mol*K)','+|-',4.31418),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC#CC(F)F (FCC#CC(F)F) from CHOF_G4
+FOC#CC(F)F (FOC#CC(F)F) from CHOF_G4
+FC(F)C#CC(F)(F)F (FC(F)C#CC(F)(F)F) from CHOF_G4
+C#CC(F)F (C#CC(F)F) from CHOF_G4
+FC#CC(F)F (FC#CC(F)F) from CHOF_G4
+OC#CC(F)F (OC#CC(F)F) from CHOF_G4
+FC(F)C#CC(F)F (FC(F)C#CC(F)F) from CHOF_G4
+CC#CC(F)F (CC#CC(F)F) from CHOF_G4
+FC(F)C#COCl (FC(F)C#COCl) from CHOFCl_G4
+FC(F)C#CCCl (FC(F)C#CCCl) from CHOFCl_G4
+FC(F)C#CCBr (FC(F)C#CCBr) from CHOFBr_G4
+FC(F)C#COBr (FC(F)C#COBr) from CHOFBr_G4
+FC(F)C#CC(F)Br (FC(F)C#CC(F)Br) from CHOFBr_G4
+FC(F)C#CC(Br)Br (FC(F)C#CC(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 917,
+    label = "Cs-CdF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   Cd  u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([44.2672,51.4255,57.5411,62.8128,70.5309,75.7112,81.767],'J/(mol*K)','+|-',[0.385393,0.402865,0.377716,0.350721,0.304077,0.27002,0.521903]),
+        H298 = (-428.947,'kJ/mol','+|-',1.86034),
+        S298 = (161.483,'J/(mol*K)','+|-',1.05909),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C(C(F)F)C(F)F (CDC(C(F)F)C(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)(F)F (FC(DCC(F)F)C(F)(F)F) from CHOF_G4
+FOC=CC(F)F (FOCDCC(F)F) from CHOF_G4
+FCC=C(F)C(F)F (FCCDC(F)C(F)F) from CHOF_G4
+CC=C(F)C(F)F (CCDC(F)C(F)F) from CHOF_G4
+FC=C=C(F)C(F)F (FCDCDC(F)C(F)F) from CHOF_G4
+FCC=CC(F)F (FCCDCC(F)F) from CHOF_G4
+C=C(F)C(F)F (CDC(F)C(F)F) from CHOF_G4
+FC=C(F)C(F)F (FCDC(F)C(F)F) from CHOF_G4
+FC(=C(F)C(F)F)C(F)F (FC(DC(F)C(F)F)C(F)F) from CHOF_G4
+C=CC(F)F (CDCC(F)F) from CHOF_G4
+FC=C(OF)C(F)F (FCDC(OF)C(F)F) from CHOF_G4
+FOC=C(F)C(F)F (FOCDC(F)C(F)F) from CHOF_G4
+FC(=CC(F)F)C(F)F (FC(DCC(F)F)C(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)F (FCC(DC(F)F)C(F)F) from CHOF_G4
+FC=C(C(F)F)C(F)(F)F (FCDC(C(F)F)C(F)(F)F) from CHOF_G4
+OC(=C(F)F)C(F)F (OC(DC(F)F)C(F)F) from CHOF_G4
+FC(=C(F)C(F)(F)F)C(F)F (FC(DC(F)C(F)(F)F)C(F)F) from CHOF_G4
+C=C=C(F)C(F)F (CDCDC(F)C(F)F) from CHOF_G4
+FCC(F)=C(F)C(F)F (FCC(F)DC(F)C(F)F) from CHOF_G4
+C=C(OF)C(F)F (CDC(OF)C(F)F) from CHOF_G4
+OC=C(F)C(F)F (OCDC(F)C(F)F) from CHOF_G4
+C=C(C(F)F)C(F)(F)F (CDC(C(F)F)C(F)(F)F) from CHOF_G4
+OC(F)=C(F)C(F)F (OC(F)DC(F)C(F)F) from CHOF_G4
+FC(F)C=CC(F)(F)F (FC(F)CDCC(F)(F)F) from CHOF_G4
+C=C(O)C(F)F (CDC(O)C(F)F) from CHOF_G4
+FOC(F)=C(F)C(F)F (FOC(F)DC(F)C(F)F) from CHOF_G4
+CC(F)=CC(F)F (CC(F)DCC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)F (FC(F)DC(F)C(F)F) from CHOF_G4
+C=C=CC(F)F (CDCDCC(F)F) from CHOF_G4
+FC(F)=C=CC(F)F (FC(F)DCDCC(F)F) from CHOF_G4
+OC(=CF)C(F)F (OC(DCF)C(F)F) from CHOF_G4
+CC(F)=C(F)C(F)F (CC(F)DC(F)C(F)F) from CHOF_G4
+FC(=CC(F)(F)F)C(F)F (FC(DCC(F)(F)F)C(F)F) from CHOF_G4
+FOC(=C(F)F)C(F)F (FOC(DC(F)F)C(F)F) from CHOF_G4
+FCC(F)=CC(F)F (FCC(F)DCC(F)F) from CHOF_G4
+CC(=C(F)F)C(F)F (CC(DC(F)F)C(F)F) from CHOF_G4
+FC(F)=C(C(F)F)C(F)(F)F (FC(F)DC(C(F)F)C(F)(F)F) from CHOF_G4
+C=C(CF)C(F)F (CDC(CF)C(F)F) from CHOF_G4
+FC(F)=C(C(F)F)C(F)F (FC(F)DC(C(F)F)C(F)F) from CHOF_G4
+O=C=CC(F)F (ODCDCC(F)F) from CHOF_G4
+FC=C=CC(F)F (FCDCDCC(F)F) from CHOF_G4
+CC(=CF)C(F)F (CC(DCF)C(F)F) from CHOF_G4
+CC=CC(F)F (CCDCC(F)F) from CHOF_G4
+C=C(C)C(F)F (CDC(C)C(F)F) from CHOF_G4
+OC(F)=CC(F)F (OC(F)DCC(F)F) from CHOF_G4
+O=C=C(F)C(F)F (ODCDC(F)C(F)F) from CHOF_G4
+FOC(F)=CC(F)F (FOC(F)DCC(F)F) from CHOF_G4
+FC(F)=C=C(F)C(F)F (FC(F)DCDC(F)C(F)F) from CHOF_G4
+FC(F)C=CC(F)F (FC(F)CDCC(F)F) from CHOF_G4
+FC(F)=CC(F)F (FC(F)DCC(F)F) from CHOF_G4
+OC=CC(F)F (OCDCC(F)F) from CHOF_G4
+FC=C(C(F)F)C(F)F (FCDC(C(F)F)C(F)F) from CHOF_G4
+FC=CC(F)F (FCDCC(F)F) from CHOF_G4
+FC=C(CF)C(F)F (FCDC(CF)C(F)F) from CHOF_G4
+FC(F)C1=CC1F (FC(F)C1DCC1F) from CHOF_G4
+FC(F)C1=CC1(F)F (FC(F)C1DCC1(F)F) from CHOF_G4
+FC1=C(C(F)F)C1 (FC1DC(C(F)F)C1) from CHOF_G4
+FC(F)C1=CO1 (FC(F)C1DCO1) from CHOF_G4
+FC1=C(C(F)F)C1(F)F (FC1DC(C(F)F)C1(F)F) from CHOF_G4
+FC(F)C1=CC1 (FC(F)C1DCC1) from CHOF_G4
+O=C=C(Cl)C(F)F (ODCDC(Cl)C(F)F) from CHOFCl_G4
+FC(F)C=COCl (FC(F)CDCOCl) from CHOFCl_G4
+CC(Cl)=CC(F)F (CC(Cl)DCC(F)F) from CHOFCl_G4
+CC=C(Cl)C(F)F (CCDC(Cl)C(F)F) from CHOFCl_G4
+C=C(OCl)C(F)F (CDC(OCl)C(F)F) from CHOFCl_G4
+C=C(CCl)C(F)F (CDC(CCl)C(F)F) from CHOFCl_G4
+OC=C(Cl)C(F)F (OCDC(Cl)C(F)F) from CHOFCl_G4
+OC(Cl)=CC(F)F (OC(Cl)DCC(F)F) from CHOFCl_G4
+FC(F)C=CCCl (FC(F)CDCCCl) from CHOFCl_G4
+C=C(C(F)F)C(Cl)Br (CDC(C(F)F)C(Cl)Br) from CHOFClBr_G4
+CC(Br)=C(Cl)C(F)F (CC(Br)DC(Cl)C(F)F) from CHOFClBr_G4
+C=C(OBr)C(F)F (CDC(OBr)C(F)F) from CHOFBr_G4
+FC(F)C=CCBr (FC(F)CDCCBr) from CHOFBr_G4
+FC(F)C=C(Br)CBr (FC(F)CDC(Br)CBr) from CHOFBr_G4
+C=C(CBr)C(F)F (CDC(CBr)C(F)F) from CHOFBr_G4
+OC(Br)=C(Br)C(F)F (OC(Br)DC(Br)C(F)F) from CHOFBr_G4
+FC=C(OBr)C(F)F (FCDC(OBr)C(F)F) from CHOFBr_G4
+CC(Br)=C(Br)C(F)F (CC(Br)DC(Br)C(F)F) from CHOFBr_G4
+C=C(C(F)F)C(F)Br (CDC(C(F)F)C(F)Br) from CHOFBr_G4
+OC=C(Br)C(F)F (OCDC(Br)C(F)F) from CHOFBr_G4
+FC(F)C=CC(Br)Br (FC(F)CDCC(Br)Br) from CHOFBr_G4
+FC(=CC(F)F)CBr (FC(DCC(F)F)CBr) from CHOFBr_G4
+FC=C(CBr)C(F)F (FCDC(CBr)C(F)F) from CHOFBr_G4
+OC(Br)=C(F)C(F)F (OC(Br)DC(F)C(F)F) from CHOFBr_G4
+FC(F)C(Br)=COBr (FC(F)C(Br)DCOBr) from CHOFBr_G4
+OC(Br)=CC(F)F (OC(Br)DCC(F)F) from CHOFBr_G4
+CC(Br)=C(F)C(F)F (CC(Br)DC(F)C(F)F) from CHOFBr_G4
+FC(F)C(Br)=CCBr (FC(F)C(Br)DCCBr) from CHOFBr_G4
+O=C=C(Br)C(F)F (ODCDC(Br)C(F)F) from CHOFBr_G4
+FC(F)C=CC(F)Br (FC(F)CDCC(F)Br) from CHOFBr_G4
+FC(=CC(F)F)OBr (FC(DCC(F)F)OBr) from CHOFBr_G4
+FC(=CCBr)C(F)F (FC(DCCBr)C(F)F) from CHOFBr_G4
+CC(Br)=CC(F)F (CC(Br)DCC(F)F) from CHOFBr_G4
+CC=C(Br)C(F)F (CCDC(Br)C(F)F) from CHOFBr_G4
+FC(F)C=C(Br)OBr (FC(F)CDC(Br)OBr) from CHOFBr_G4
+FC(=COBr)C(F)F (FC(DCOBr)C(F)F) from CHOFBr_G4
+C=C(C(F)F)C(Br)Br (CDC(C(F)F)C(Br)Br) from CHOFBr_G4
+FC(F)C=COBr (FC(F)CDCOBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 918,
+    label = "Cs-COF1sF1sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   CO  u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([43.9265,51.0861,57.1049,62.1805,69.8212,74.9296,81.0082],'J/(mol*K)','+|-',[1.02703,1.07359,1.00657,0.934635,0.810333,0.719574,1.39081]),
+        H298 = (-424.459,'kJ/mol','+|-',4.95762),
+        S298 = (161.822,'J/(mol*K)','+|-',2.82235),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)C(F)F (ODC(O)C(F)F) from CHOF_G4
+O=C(C(F)F)C(F)(F)F (ODC(C(F)F)C(F)(F)F) from CHOF_G4
+O=C(CF)C(F)F (ODC(CF)C(F)F) from CHOF_G4
+O=C(F)C(F)F (ODC(F)C(F)F) from CHOF_G4
+CC(=O)C(F)F (CC(DO)C(F)F) from CHOF_G4
+O=C(C(F)F)C(F)F (ODC(C(F)F)C(F)F) from CHOF_G4
+O=CC(F)F (ODCC(F)F) from CHOF_G4
+O=C(CCl)C(F)F (ODC(CCl)C(F)F) from CHOFCl_G4
+O=C(OCl)C(F)F (ODC(OCl)C(F)F) from CHOFCl_G4
+O=C(Cl)C(F)F (ODC(Cl)C(F)F) from CHOFCl_G4
+O=C(Br)C(F)F (ODC(Br)C(F)F) from CHOFBr_G4
+O=C(CBr)C(F)F (ODC(CBr)C(F)F) from CHOFBr_G4
+O=C(C(F)F)C(Br)Br (ODC(C(F)F)C(Br)Br) from CHOFBr_G4
+O=C(C(F)F)C(F)Br (ODC(C(F)F)C(F)Br) from CHOFBr_G4
+O=C(OBr)C(F)F (ODC(OBr)C(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 919,
     label = "CsBrCHH",
     group = 
 """
@@ -19094,7 +23901,7 @@ CHOClBr_G4  |         48
 )
 
 entry(
-    index = 863,
+    index = 920,
     label = "CsBrCsHH",
     group = 
 """
@@ -19123,7 +23930,7 @@ CHOClBr_G4  |         76
 )
 
 entry(
-    index = 864,
+    index = 921,
     label = "CsCClHH",
     group = 
 """
@@ -19152,7 +23959,7 @@ CHOClBr_G4  |         39
 )
 
 entry(
-    index = 865,
+    index = 922,
     label = "CsClCsHH",
     group = 
 """
@@ -19182,7 +23989,7 @@ CHOClBr_G4               |         108
 )
 
 entry(
-    index = 866,
+    index = 923,
     label = "CsCFHH",
     group = 
 """
@@ -19211,7 +24018,7 @@ CHOFBr_G4   |         64
 )
 
 entry(
-    index = 867,
+    index = 924,
     label = "CsCsFHH",
     group = 
 """
@@ -19240,7 +24047,852 @@ CHOFBr_G4   |         195
 )
 
 entry(
-    index = 868,
+    index = 925,
+    label = "Cs-CsF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs  u0 {1,S}
+3   F1s u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([36.4505,43.885,50.2181,55.5152,63.6874,69.6278,78.3034],'J/(mol*K)','+|-',[0.16188,0.169219,0.158656,0.147317,0.127724,0.113419,0.21922]),
+        H298 = (-220.839,'kJ/mol','+|-',0.781418),
+        S298 = (145.108,'J/(mol*K)','+|-',0.444858),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CCF (CH3CH2F) from C1_C2_Fluorine
+FCCF (CH2FCH2F) from C1_C2_Fluorine
+FCC(F)F (CH2FCHF2) from C1_C2_Fluorine
+FCC(F)(F)F (CH2FCF3) from C1_C2_Fluorine
+OCCF (CH2FCH2OH) from C1_C2_Fluorine
+FCC(F)(F)F (CH2F-CF3) from C1_C3_hydrofluorocarbons_NIST
+FCC(F)F (CH2F-CHF2) from C1_C3_hydrofluorocarbons_NIST
+CCF (CH3-CH2F) from C1_C3_hydrofluorocarbons_NIST
+FCCF (CH2F-CH2F) from C1_C3_hydrofluorocarbons_NIST
+FCC(F)(F)OOF (FCC(F)(F)OOF) from CHOF_G4
+FCC(F)(CF)OF (FCC(F)(CF)OF) from CHOF_G4
+FCCC(F)=C(F)F (FCCC(F)DC(F)F) from CHOF_G4
+FCCOC(F)F (FCCOC(F)F) from CHOF_G4
+FCCC(F)(F)C(F)F (FCCC(F)(F)C(F)F) from CHOF_G4
+FCC(F)OF (FCC(F)OF) from CHOF_G4
+CC(F)CF (CC(F)CF) from CHOF_G4
+C=C(F)C(F)CF (CDC(F)C(F)CF) from CHOF_G4
+FCC(F)F (FCC(F)F) from CHOF_G4
+FCC(F)(CF)CF (FCC(F)(CF)CF) from CHOF_G4
+CC(O)(F)CF (CC(O)(F)CF) from CHOF_G4
+CC(F)(F)C(F)CF (CC(F)(F)C(F)CF) from CHOF_G4
+FCC(F)CF (FCC(F)CF) from CHOF_G4
+CC(CF)C(F)F (CC(CF)C(F)F) from CHOF_G4
+O=CCCF (ODCCCF) from CHOF_G4
+CCC(F)(F)CF (CCC(F)(F)CF) from CHOF_G4
+FCC(F)(C(F)(F)F)C(F)(F)F (FCC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)C(F)F (FCC(F)C(F)F) from CHOF_G4
+FC=C(F)CCF (FCDC(F)CCF) from CHOF_G4
+OC(F)C(F)(F)CF (OC(F)C(F)(F)CF) from CHOF_G4
+FCCC(F)(F)C(F)(F)F (FCCC(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(CF)C(F)F (OC(F)(CF)C(F)F) from CHOF_G4
+FCC(F)C=C(F)F (FCC(F)CDC(F)F) from CHOF_G4
+FCCCF (FCCCF) from CHOF_G4
+FCCCOF (FCCCOF) from CHOF_G4
+OC(CF)C(F)(F)F (OC(CF)C(F)(F)F) from CHOF_G4
+FCC(CF)CF (FCC(CF)CF) from CHOF_G4
+FCC(F)(C(F)F)C(F)(F)F (FCC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CCC(F)CF (CCC(F)CF) from CHOF_G4
+OC(CF)CF (OC(CF)CF) from CHOF_G4
+OC(F)(F)CCF (OC(F)(F)CCF) from CHOF_G4
+FCC(F)OC(F)F (FCC(F)OC(F)F) from CHOF_G4
+OC(F)(CF)C(F)(F)F (OC(F)(CF)C(F)(F)F) from CHOF_G4
+FC=C(F)C(F)CF (FCDC(F)C(F)CF) from CHOF_G4
+OOCCF (OOCCF) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)C(F)(F)F (FCC(F)C(F)(F)F) from CHOF_G4
+FCOC(F)(F)CF (FCOC(F)(F)CF) from CHOF_G4
+FCC(F)(F)C(F)C(F)F (FCC(F)(F)C(F)C(F)F) from CHOF_G4
+FCCCCF (FCCCCF) from CHOF_G4
+FCCOF (FCCOF) from CHOF_G4
+OC(F)(F)C(F)(F)CF (OC(F)(F)C(F)(F)CF) from CHOF_G4
+FCC(CF)OF (FCC(CF)OF) from CHOF_G4
+FCC(F)(F)OC(F)F (FCC(F)(F)OC(F)F) from CHOF_G4
+FCC(F)OOF (FCC(F)OOF) from CHOF_G4
+OC(CF)OF (OC(CF)OF) from CHOF_G4
+OCCCF (OCCCF) from CHOF_G4
+CC(F)(CF)C(F)(F)F (CC(F)(CF)C(F)(F)F) from CHOF_G4
+FCC(F)CC(F)F (FCC(F)CC(F)F) from CHOF_G4
+OC(O)(F)CF (OC(O)(F)CF) from CHOF_G4
+FC=C(F)C(F)(F)CF (FCDC(F)C(F)(F)CF) from CHOF_G4
+CC(C)(F)CF (CC(C)(F)CF) from CHOF_G4
+FCC(F)(F)CC(F)F (FCC(F)(F)CC(F)F) from CHOF_G4
+COC(F)(F)CF (COC(F)(F)CF) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)F (FCC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)CF (CC(F)(F)C(F)(F)CF) from CHOF_G4
+FCC(F)C(F)C(F)(F)F (FCC(F)C(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)CF (C#CC(F)(F)CF) from CHOF_G4
+O=C(F)C(F)(F)CF (ODC(F)C(F)(F)CF) from CHOF_G4
+FC=CC(F)CF (FCDCC(F)CF) from CHOF_G4
+CCCF (CCCF) from CHOF_G4
+FCCOC(F)(F)F (FCCOC(F)(F)F) from CHOF_G4
+OCCF (OCCF) from CHOF_G4
+FCC(F)OC(F)(F)F (FCC(F)OC(F)(F)F) from CHOF_G4
+O=C(F)C(F)CF (ODC(F)C(F)CF) from CHOF_G4
+FCC(F)(F)F (FCC(F)(F)F) from CHOF_G4
+FCC(F)(F)C=C(F)F (FCC(F)(F)CDC(F)F) from CHOF_G4
+FC#CC(F)CF (FC#CC(F)CF) from CHOF_G4
+OC(F)CF (OC(F)CF) from CHOF_G4
+CC(F)CCF (CC(F)CCF) from CHOF_G4
+CC(F)(CF)CF (CC(F)(CF)CF) from CHOF_G4
+FCC(F)C(F)(F)CF (FCC(F)C(F)(F)CF) from CHOF_G4
+FCC(F)(CF)C(F)F (FCC(F)(CF)C(F)F) from CHOF_G4
+FCC(F)(C(F)F)C(F)F (FCC(F)(C(F)F)C(F)F) from CHOF_G4
+FCC(CF)C(F)(F)F (FCC(CF)C(F)(F)F) from CHOF_G4
+FCC(CF)C(F)F (FCC(CF)C(F)F) from CHOF_G4
+FCCC(F)(F)CF (FCCC(F)(F)CF) from CHOF_G4
+C=CCCF (CDCCCF) from CHOF_G4
+CC(F)(CF)OF (CC(F)(CF)OF) from CHOF_G4
+FC#CC(F)(F)CF (FC#CC(F)(F)CF) from CHOF_G4
+FCC(F)C(F)(F)OF (FCC(F)C(F)(F)OF) from CHOF_G4
+FCC(F)C(F)=C(F)F (FCC(F)C(F)DC(F)F) from CHOF_G4
+FCCCC(F)(F)F (FCCCC(F)(F)F) from CHOF_G4
+FCCC(F)(F)OF (FCCC(F)(F)OF) from CHOF_G4
+COC(F)CF (COC(F)CF) from CHOF_G4
+FCCCC(F)F (FCCCC(F)F) from CHOF_G4
+FCC(F)(OF)C(F)(F)F (FCC(F)(OF)C(F)(F)F) from CHOF_G4
+FCC(F)CC(F)(F)F (FCC(F)CC(F)(F)F) from CHOF_G4
+OC(F)C(F)CF (OC(F)C(F)CF) from CHOF_G4
+FCC(F)C(F)C(F)F (FCC(F)C(F)C(F)F) from CHOF_G4
+O=CC(F)CF (ODCC(F)CF) from CHOF_G4
+FCCC(F)C(F)F (FCCC(F)C(F)F) from CHOF_G4
+CC(CF)OF (CC(CF)OF) from CHOF_G4
+FCCC(F)OF (FCCC(F)OF) from CHOF_G4
+FC#CCCF (FC#CCCF) from CHOF_G4
+FCC(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)F) from CHOF_G4
+O=CC(F)(F)CF (ODCC(F)(F)CF) from CHOF_G4
+CC(CF)CF (CC(CF)CF) from CHOF_G4
+CC(F)(F)CCF (CC(F)(F)CCF) from CHOF_G4
+OCC(F)CF (OCC(F)CF) from CHOF_G4
+FCCC(F)CF (FCCC(F)CF) from CHOF_G4
+FCC(F)C(F)CF (FCC(F)C(F)CF) from CHOF_G4
+CC(F)(F)CF (CC(F)(F)CF) from CHOF_G4
+FCCF (FCCF) from CHOF_G4
+FCCC=C(F)F (FCCCDC(F)F) from CHOF_G4
+CCF (CCF) from CHOF_G4
+C=CC(F)CF (CDCC(F)CF) from CHOF_G4
+OC(O)CF (OC(O)CF) from CHOF_G4
+FCC(F)C(F)(F)C(F)F (FCC(F)C(F)(F)C(F)F) from CHOF_G4
+FCC(F)C(F)OF (FCC(F)C(F)OF) from CHOF_G4
+FCC(F)(F)C(F)C(F)(F)F (FCC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OCC(F)(F)CF (OCC(F)(F)CF) from CHOF_G4
+OC(CF)C(F)F (OC(CF)C(F)F) from CHOF_G4
+C=C(F)C(F)(F)CF (CDC(F)C(F)(F)CF) from CHOF_G4
+FCC(F)(F)C(F)OF (FCC(F)(F)C(F)OF) from CHOF_G4
+FCC(F)COF (FCC(F)COF) from CHOF_G4
+C=CC(F)(F)CF (CDCC(F)(F)CF) from CHOF_G4
+FCC(OF)C(F)(F)F (FCC(OF)C(F)(F)F) from CHOF_G4
+FCCOCF (FCCOCF) from CHOF_G4
+FCC(F)(F)CC(F)(F)F (FCC(F)(F)CC(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)F (FCC(F)(F)C(F)F) from CHOF_G4
+O=C(F)CCF (ODC(F)CCF) from CHOF_G4
+OOC(F)CF (OOC(F)CF) from CHOF_G4
+FCOC(F)CF (FCOC(F)CF) from CHOF_G4
+FCC(F)(F)C(F)(F)OF (FCC(F)(F)C(F)(F)OF) from CHOF_G4
+FCC(F)(F)C(F)=C(F)F (FCC(F)(F)C(F)DC(F)F) from CHOF_G4
+OC(F)(CF)CF (OC(F)(CF)CF) from CHOF_G4
+CC(CF)C(F)(F)F (CC(CF)C(F)(F)F) from CHOF_G4
+FCC(F)(CF)C(F)(F)F (FCC(F)(CF)C(F)(F)F) from CHOF_G4
+FCC(OF)OF (FCC(OF)OF) from CHOF_G4
+FCC(F)(OF)C(F)F (FCC(F)(OF)C(F)F) from CHOF_G4
+CC(F)C(F)CF (CC(F)C(F)CF) from CHOF_G4
+OC(F)CCF (OC(F)CCF) from CHOF_G4
+CCCCF (CCCCF) from CHOF_G4
+COCCF (COCCF) from CHOF_G4
+FCC(C(F)F)C(F)(F)F (FCC(C(F)F)C(F)(F)F) from CHOF_G4
+FCCOOF (FCCOOF) from CHOF_G4
+FCC(OF)C(F)F (FCC(OF)C(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)CF (FCC(F)(F)C(F)(F)CF) from CHOF_G4
+CC(F)C(F)(F)CF (CC(F)C(F)(F)CF) from CHOF_G4
+CC(F)(CF)C(F)F (CC(F)(CF)C(F)F) from CHOF_G4
+OC(F)(CF)OF (OC(F)(CF)OF) from CHOF_G4
+FCC(C(F)F)C(F)F (FCC(C(F)F)C(F)F) from CHOF_G4
+FCC(F)C(F)(F)C(F)(F)F (FCC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCCC(F)(F)F (FCCC(F)(F)F) from CHOF_G4
+FCC(F)(F)OC(F)(F)F (FCC(F)(F)OC(F)(F)F) from CHOF_G4
+C=C(F)CCF (CDC(F)CCF) from CHOF_G4
+OOC(F)(F)CF (OOC(F)(F)CF) from CHOF_G4
+FCC(F)(OF)OF (FCC(F)(OF)OF) from CHOF_G4
+OC(F)(F)C(F)CF (OC(F)(F)C(F)CF) from CHOF_G4
+FCC(F)(F)OF (FCC(F)(F)OF) from CHOF_G4
+OC(F)(F)CF (OC(F)(F)CF) from CHOF_G4
+FCCC(F)C(F)(F)F (FCCC(F)C(F)(F)F) from CHOF_G4
+FCC(C(F)(F)F)C(F)(F)F (FCC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+FCCC(F)F (FCCC(F)F) from CHOF_G4
+CC(O)CF (CC(O)CF) from CHOF_G4
+FC=CCCF (FCDCCCF) from CHOF_G4
+FCC(F)(F)COF (FCC(F)(F)COF) from CHOF_G4
+CC(C)CF (CC(C)CF) from CHOF_G4
+FCC(F)(F)CF (FCC(F)(F)CF) from CHOF_G4
+FC=CC(F)(F)CF (FCDCC(F)(F)CF) from CHOF_G4
+FCC1(F)OO1 (FCC1(F)OO1) from CHOF_G4
+FCC1(F)C=C1F (FCC1(F)CDC1F) from CHOF_G4
+FCC1CC1F (FCC1CC1F) from CHOF_G4
+FCC1OC1F (FCC1OC1F) from CHOF_G4
+FCC1CC1 (FCC1CC1) from CHOF_G4
+FCC1C(F)(F)C1(F)F (FCC1C(F)(F)C1(F)F) from CHOF_G4
+FCC1CO1 (FCC1CO1) from CHOF_G4
+FCC1(F)C=C1 (FCC1(F)CDC1) from CHOF_G4
+FCC1OC1(F)F (FCC1OC1(F)F) from CHOF_G4
+FCC1OO1 (FCC1OO1) from CHOF_G4
+FCC1(F)CC1(F)F (FCC1(F)CC1(F)F) from CHOF_G4
+FCC1(F)OC1F (FCC1(F)OC1F) from CHOF_G4
+FCC1(F)CC1F (FCC1(F)CC1F) from CHOF_G4
+FCC1C(F)C1F (FCC1C(F)C1F) from CHOF_G4
+FCC1C(F)C1(F)F (FCC1C(F)C1(F)F) from CHOF_G4
+FCC1(F)C(F)C1(F)F (FCC1(F)C(F)C1(F)F) from CHOF_G4
+FCC1C=C1 (FCC1CDC1) from CHOF_G4
+FCC1(F)CC1 (FCC1(F)CC1) from CHOF_G4
+FCC1C=C1F (FCC1CDC1F) from CHOF_G4
+FCC1C(F)=C1F (FCC1C(F)DC1F) from CHOF_G4
+FCC1(F)OC1(F)F (FCC1(F)OC1(F)F) from CHOF_G4
+FCC1CC1(F)F (FCC1CC1(F)F) from CHOF_G4
+FCC1(F)CO1 (FCC1(F)CO1) from CHOF_G4
+FCC1(F)C(F)C1F (FCC1(F)C(F)C1F) from CHOF_G4
+FCC1(F)C(F)=C1F (FCC1(F)C(F)DC1F) from CHOF_G4
+FCC(F)CCl (FCC(F)CCl) from CHOFCl_G4
+FCC(F)OOCl (FCC(F)OOCl) from CHOFCl_G4
+FCC(F)COCl (FCC(F)COCl) from CHOFCl_G4
+OC(F)(Cl)CCF (OC(F)(Cl)CCF) from CHOFCl_G4
+CC(C)(Cl)CF (CC(C)(Cl)CF) from CHOFCl_G4
+CCC(Cl)(Cl)CF (CCC(Cl)(Cl)CF) from CHOFCl_G4
+O=C(Cl)CCF (ODC(Cl)CCF) from CHOFCl_G4
+FCC(Cl)(Cl)CCl (FCC(Cl)(Cl)CCl) from CHOFCl_G4
+FCCOCl (FCCOCl) from CHOFCl_G4
+OC(O)(Cl)CF (OC(O)(Cl)CF) from CHOFCl_G4
+CC(Cl)(CF)CCl (CC(Cl)(CF)CCl) from CHOFCl_G4
+CC(Cl)CCF (CC(Cl)CCF) from CHOFCl_G4
+FCC(Cl)OCCl (FCC(Cl)OCCl) from CHOFCl_G4
+FCC(Cl)CCCl (FCC(Cl)CCCl) from CHOFCl_G4
+FCC(Cl)(Cl)Cl (FCC(Cl)(Cl)Cl) from CHOFCl_G4
+CCC(F)(Cl)CF (CCC(F)(Cl)CF) from CHOFCl_G4
+CC(Cl)C(F)CF (CC(Cl)C(F)CF) from CHOFCl_G4
+FCC(F)(F)Cl (FCC(F)(F)Cl) from CHOFCl_G4
+FCCC(F)OCl (FCCC(F)OCl) from CHOFCl_G4
+CC(F)(CF)OCl (CC(F)(CF)OCl) from CHOFCl_G4
+FCC(Cl)CCl (FCC(Cl)CCl) from CHOFCl_G4
+FCC(CCl)OCl (FCC(CCl)OCl) from CHOFCl_G4
+OC(Cl)CCF (OC(Cl)CCF) from CHOFCl_G4
+CC(F)(Cl)CF (CC(F)(Cl)CF) from CHOFCl_G4
+OC(Cl)(Cl)CCF (OC(Cl)(Cl)CCF) from CHOFCl_G4
+FCC(F)(F)CCl (FCC(F)(F)CCl) from CHOFCl_G4
+CCC(Cl)CF (CCC(Cl)CF) from CHOFCl_G4
+FCC(F)(Cl)OCl (FCC(F)(Cl)OCl) from CHOFCl_G4
+FCC(Cl)C(Cl)Cl (FCC(Cl)C(Cl)Cl) from CHOFCl_G4
+O=CC(Cl)CF (ODCC(Cl)CF) from CHOFCl_G4
+FCCC(F)Cl (FCCC(F)Cl) from CHOFCl_G4
+FCCCOCl (FCCCOCl) from CHOFCl_G4
+OC(CF)OCl (OC(CF)OCl) from CHOFCl_G4
+OC(Cl)(CF)OCl (OC(Cl)(CF)OCl) from CHOFCl_G4
+FCCOOCl (FCCOOCl) from CHOFCl_G4
+CC(F)(Cl)CCF (CC(F)(Cl)CCF) from CHOFCl_G4
+COC(Cl)(Cl)CF (COC(Cl)(Cl)CF) from CHOFCl_G4
+FCCOC(Cl)Cl (FCCOC(Cl)Cl) from CHOFCl_G4
+OCC(Cl)CF (OCC(Cl)CF) from CHOFCl_G4
+OC(Cl)C(Cl)CF (OC(Cl)C(Cl)CF) from CHOFCl_G4
+OC(F)(CF)OCl (OC(F)(CF)OCl) from CHOFCl_G4
+FCCC(Cl)Cl (FCCC(Cl)Cl) from CHOFCl_G4
+CC(CF)C(Cl)Cl (CC(CF)C(Cl)Cl) from CHOFCl_G4
+FCC(OCl)OCl (FCC(OCl)OCl) from CHOFCl_G4
+FCC(F)C(F)Cl (FCC(F)C(F)Cl) from CHOFCl_G4
+FCCC(Cl)OCl (FCCC(Cl)OCl) from CHOFCl_G4
+OC(Cl)CF (OC(Cl)CF) from CHOFCl_G4
+FCC(CF)CCl (FCC(CF)CCl) from CHOFCl_G4
+CC(CF)OCl (CC(CF)OCl) from CHOFCl_G4
+OCC(F)(Cl)CF (OCC(F)(Cl)CF) from CHOFCl_G4
+OC(Cl)C(F)CF (OC(Cl)C(F)CF) from CHOFCl_G4
+O=CC(Cl)(Cl)CF (ODCC(Cl)(Cl)CF) from CHOFCl_G4
+COC(F)(Cl)CF (COC(F)(Cl)CF) from CHOFCl_G4
+FCCCC(F)Cl (FCCCC(F)Cl) from CHOFCl_G4
+FCC(CF)OCl (FCC(CF)OCl) from CHOFCl_G4
+CC(CF)CCl (CC(CF)CCl) from CHOFCl_G4
+CC(Cl)(Cl)CCF (CC(Cl)(Cl)CCF) from CHOFCl_G4
+FCCC(Cl)CCl (FCCC(Cl)CCl) from CHOFCl_G4
+OC(F)(Cl)CF (OC(F)(Cl)CF) from CHOFCl_G4
+FCCC(Cl)(Cl)Cl (FCCC(Cl)(Cl)Cl) from CHOFCl_G4
+CC(CF)C(F)Cl (CC(CF)C(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)CF (OC(Cl)(Cl)CF) from CHOFCl_G4
+OC(F)(CF)CCl (OC(F)(CF)CCl) from CHOFCl_G4
+FCC(F)(Cl)Cl (FCC(F)(Cl)Cl) from CHOFCl_G4
+FCC(Cl)Cl (FCC(Cl)Cl) from CHOFCl_G4
+O=C(Cl)C(Cl)CF (ODC(Cl)C(Cl)CF) from CHOFCl_G4
+FCCOCCl (FCCOCCl) from CHOFCl_G4
+FCCCCCl (FCCCCCl) from CHOFCl_G4
+OC(Cl)(CF)CCl (OC(Cl)(CF)CCl) from CHOFCl_G4
+OC(CF)CCl (OC(CF)CCl) from CHOFCl_G4
+FCC(F)(Cl)CCl (FCC(F)(Cl)CCl) from CHOFCl_G4
+OCC(Cl)(Cl)CF (OCC(Cl)(Cl)CF) from CHOFCl_G4
+CC(O)(Cl)CF (CC(O)(Cl)CF) from CHOFCl_G4
+FCCC(F)(F)Cl (FCCC(F)(F)Cl) from CHOFCl_G4
+OC(CF)C(F)Cl (OC(CF)C(F)Cl) from CHOFCl_G4
+CC(Cl)CF (CC(Cl)CF) from CHOFCl_G4
+FCC(F)(F)OCl (FCC(F)(F)OCl) from CHOFCl_G4
+CC(Cl)(Cl)CF (CC(Cl)(Cl)CF) from CHOFCl_G4
+FCCC(F)(Cl)Cl (FCCC(F)(Cl)Cl) from CHOFCl_G4
+FCC(CCl)CCl (FCC(CCl)CCl) from CHOFCl_G4
+FCCC(F)CCl (FCCC(F)CCl) from CHOFCl_G4
+FCC(F)Cl (FCC(F)Cl) from CHOFCl_G4
+FCC(Cl)OCl (FCC(Cl)OCl) from CHOFCl_G4
+CC(F)(CF)CCl (CC(F)(CF)CCl) from CHOFCl_G4
+FCCCC(Cl)Cl (FCCCC(Cl)Cl) from CHOFCl_G4
+OOC(Cl)CF (OOC(Cl)CF) from CHOFCl_G4
+FCCOC(F)Cl (FCCOC(F)Cl) from CHOFCl_G4
+O=C(Cl)C(F)CF (ODC(Cl)C(F)CF) from CHOFCl_G4
+CC(Cl)C(Cl)CF (CC(Cl)C(Cl)CF) from CHOFCl_G4
+O=CC(F)(Cl)CF (ODCC(F)(Cl)CF) from CHOFCl_G4
+OC(CF)C(Cl)Cl (OC(CF)C(Cl)Cl) from CHOFCl_G4
+FCC(Cl)COCl (FCC(Cl)COCl) from CHOFCl_G4
+CC(Cl)(CF)OCl (CC(Cl)(CF)OCl) from CHOFCl_G4
+FCC(Cl)OOCl (FCC(Cl)OOCl) from CHOFCl_G4
+FCC(Cl)(Cl)OCl (FCC(Cl)(Cl)OCl) from CHOFCl_G4
+FCCCCl (FCCCCl) from CHOFCl_G4
+FCC(F)C(Cl)Cl (FCC(F)C(Cl)Cl) from CHOFCl_G4
+COC(Cl)CF (COC(Cl)CF) from CHOFCl_G4
+FCC(F)CCCl (FCC(F)CCCl) from CHOFCl_G4
+FCCCl (FCCCl) from CHOFCl_G4
+FCC(F)OCl (FCC(F)OCl) from CHOFCl_G4
+FCC(OF)OCl (FCC(OF)OCl) from CHOFCl_G4
+FCC(F)OCCl (FCC(F)OCCl) from CHOFCl_G4
+FCCC(Cl)(Br)Br (FCCC(Cl)(Br)Br) from CHOFClBr_G4
+FCC(F)C(Cl)Br (FCC(F)C(Cl)Br) from CHOFClBr_G4
+FCC(Cl)(Cl)OBr (FCC(Cl)(Cl)OBr) from CHOFClBr_G4
+FCC(Cl)OOBr (FCC(Cl)OOBr) from CHOFClBr_G4
+O=CC(Cl)(Br)CF (ODCC(Cl)(Br)CF) from CHOFClBr_G4
+CC(Cl)(CF)OBr (CC(Cl)(CF)OBr) from CHOFClBr_G4
+FCC(Cl)COBr (FCC(Cl)COBr) from CHOFClBr_G4
+OC(CF)C(Cl)Br (OC(CF)C(Cl)Br) from CHOFClBr_G4
+FCCCC(Cl)Br (FCCCC(Cl)Br) from CHOFClBr_G4
+FCC(Cl)OBr (FCC(Cl)OBr) from CHOFClBr_G4
+FCCC(F)(Cl)Br (FCCC(F)(Cl)Br) from CHOFClBr_G4
+COC(Cl)(Br)CF (COC(Cl)(Br)CF) from CHOFClBr_G4
+FCC(CCl)CBr (FCC(CCl)CBr) from CHOFClBr_G4
+O=C(Br)C(Cl)CF (ODC(Br)C(Cl)CF) from CHOFClBr_G4
+OC(Cl)(Br)CCF (OC(Cl)(Br)CCF) from CHOFClBr_G4
+FCC(F)(Cl)CBr (FCC(F)(Cl)CBr) from CHOFClBr_G4
+CC(Br)C(Cl)CF (CC(Br)C(Cl)CF) from CHOFClBr_G4
+OC(Cl)(CF)CBr (OC(Cl)(CF)CBr) from CHOFClBr_G4
+FCC(Cl)Br (FCC(Cl)Br) from CHOFClBr_G4
+FCC(F)(Cl)Br (FCC(F)(Cl)Br) from CHOFClBr_G4
+FCC(Cl)(Br)OBr (FCC(Cl)(Br)OBr) from CHOFClBr_G4
+CCC(Cl)(Br)CF (CCC(Cl)(Br)CF) from CHOFClBr_G4
+FCCC(Cl)(Cl)Br (FCCC(Cl)(Cl)Br) from CHOFClBr_G4
+FCCC(Cl)CBr (FCCC(Cl)CBr) from CHOFClBr_G4
+OOC(Cl)(Br)CF (OOC(Cl)(Br)CF) from CHOFClBr_G4
+FCCC(Cl)OBr (FCCC(Cl)OBr) from CHOFClBr_G4
+FCC(OCl)OBr (FCC(OCl)OBr) from CHOFClBr_G4
+CC(CF)C(Cl)Br (CC(CF)C(Cl)Br) from CHOFClBr_G4
+FCCC(Cl)Br (FCCC(Cl)Br) from CHOFClBr_G4
+FCCOC(Cl)Br (FCCOC(Cl)Br) from CHOFClBr_G4
+FCC(Cl)(Br)CBr (FCC(Cl)(Br)CBr) from CHOFClBr_G4
+CC(Cl)(Br)CF (CC(Cl)(Br)CF) from CHOFClBr_G4
+OC(Cl)(CF)OBr (OC(Cl)(CF)OBr) from CHOFClBr_G4
+FCC(Cl)(Br)Br (FCC(Cl)(Br)Br) from CHOFClBr_G4
+FCC(Cl)C(Cl)Br (FCC(Cl)C(Cl)Br) from CHOFClBr_G4
+FCC(F)(Cl)OBr (FCC(F)(Cl)OBr) from CHOFClBr_G4
+FCC(CCl)OBr (FCC(CCl)OBr) from CHOFClBr_G4
+FCC(Cl)CBr (FCC(Cl)CBr) from CHOFClBr_G4
+FCC(Cl)C(Br)Br (FCC(Cl)C(Br)Br) from CHOFClBr_G4
+FCC(Cl)(Cl)Br (FCC(Cl)(Cl)Br) from CHOFClBr_G4
+OCC(Cl)(Br)CF (OCC(Cl)(Br)CF) from CHOFClBr_G4
+FCC(Cl)CCBr (FCC(Cl)CCBr) from CHOFClBr_G4
+FCC(Cl)OCBr (FCC(Cl)OCBr) from CHOFClBr_G4
+CC(Cl)(CF)CBr (CC(Cl)(CF)CBr) from CHOFClBr_G4
+FCC(Cl)(Cl)CBr (FCC(Cl)(Cl)CBr) from CHOFClBr_G4
+CC(Br)(Br)C(Cl)CF (CC(Br)(Br)C(Cl)CF) from CHOFClBr_G4
+OC(Cl)(Br)CF (OC(Cl)(Br)CF) from CHOFClBr_G4
+OC(Br)C(Cl)CF (OC(Br)C(Cl)CF) from CHOFClBr_G4
+CC(Cl)(Br)CCF (CC(Cl)(Br)CCF) from CHOFClBr_G4
+FCC(F)OCBr (FCC(F)OCBr) from CHOFBr_G4
+FCC(OF)OBr (FCC(OF)OBr) from CHOFBr_G4
+OC(CF)C(Br)(Br)Br (OC(CF)C(Br)(Br)Br) from CHOFBr_G4
+FCC(F)OBr (FCC(F)OBr) from CHOFBr_G4
+FCC(F)(F)C(Br)Br (FCC(F)(F)C(Br)Br) from CHOFBr_G4
+FCC(Br)(Br)Br (FCC(Br)(Br)Br) from CHOFBr_G4
+FCCBr (FCCBr) from CHOFBr_G4
+FCCC(Br)CBr (FCCC(Br)CBr) from CHOFBr_G4
+OC(Br)C(F)(Br)CF (OC(Br)C(F)(Br)CF) from CHOFBr_G4
+FCC(F)CCBr (FCC(F)CCBr) from CHOFBr_G4
+FCC(F)(Br)Br (FCC(F)(Br)Br) from CHOFBr_G4
+FCC(Br)(Br)CBr (FCC(Br)(Br)CBr) from CHOFBr_G4
+OCC(Br)CF (OCC(Br)CF) from CHOFBr_G4
+FCC(F)(CF)CBr (FCC(F)(CF)CBr) from CHOFBr_G4
+OC(Br)C(Br)(Br)CF (OC(Br)C(Br)(Br)CF) from CHOFBr_G4
+FCC(OBr)C(F)Br (FCC(OBr)C(F)Br) from CHOFBr_G4
+FCCCBr (FCCCBr) from CHOFBr_G4
+FCC(F)C(Br)(Br)Br (FCC(F)C(Br)(Br)Br) from CHOFBr_G4
+OC(Br)CF (OC(Br)CF) from CHOFBr_G4
+CC(Br)(Br)CF (CC(Br)(Br)CF) from CHOFBr_G4
+FCC(CBr)C(Br)Br (FCC(CBr)C(Br)Br) from CHOFBr_G4
+FCCCC(F)(F)Br (FCCCC(F)(F)Br) from CHOFBr_G4
+OCC(F)(Br)CF (OCC(F)(Br)CF) from CHOFBr_G4
+FCCOC(Br)(Br)Br (FCCOC(Br)(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(F)CF (CC(F)(Br)C(F)CF) from CHOFBr_G4
+CCC(Br)CF (CCC(Br)CF) from CHOFBr_G4
+FCC(F)C(Br)OBr (FCC(F)C(Br)OBr) from CHOFBr_G4
+FCC(F)OC(Br)Br (FCC(F)OC(Br)Br) from CHOFBr_G4
+OC(Br)(CF)C(Br)Br (OC(Br)(CF)C(Br)Br) from CHOFBr_G4
+FCC(Br)C(Br)CBr (FCC(Br)C(Br)CBr) from CHOFBr_G4
+O=CC(Br)CF (ODCC(Br)CF) from CHOFBr_G4
+CC(Br)C(Br)CF (CC(Br)C(Br)CF) from CHOFBr_G4
+CC(F)(Br)CCF (CC(F)(Br)CCF) from CHOFBr_G4
+FCC(F)C(F)(Br)Br (FCC(F)C(F)(Br)Br) from CHOFBr_G4
+FCCOC(F)Br (FCCOC(F)Br) from CHOFBr_G4
+OC(Br)(CF)OBr (OC(Br)(CF)OBr) from CHOFBr_G4
+CC(F)(CF)CBr (CC(F)(CF)CBr) from CHOFBr_G4
+OC(F)(CF)C(F)Br (OC(F)(CF)C(F)Br) from CHOFBr_G4
+FCC(F)Br (FCC(F)Br) from CHOFBr_G4
+FCC(Br)(Br)C(Br)Br (FCC(Br)(Br)C(Br)Br) from CHOFBr_G4
+FCCC(Br)(Br)OBr (FCCC(Br)(Br)OBr) from CHOFBr_G4
+FCCC(F)CBr (FCCC(F)CBr) from CHOFBr_G4
+OOC(Br)(Br)CF (OOC(Br)(Br)CF) from CHOFBr_G4
+FCC(Br)Br (FCC(Br)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)CF (CC(Br)(Br)C(F)CF) from CHOFBr_G4
+FCC(F)(OBr)OBr (FCC(F)(OBr)OBr) from CHOFBr_G4
+OC(F)(CF)C(Br)Br (OC(F)(CF)C(Br)Br) from CHOFBr_G4
+FCC(F)(F)OBr (FCC(F)(F)OBr) from CHOFBr_G4
+OC(CF)C(F)Br (OC(CF)C(F)Br) from CHOFBr_G4
+FCC(F)(Br)CBr (FCC(F)(Br)CBr) from CHOFBr_G4
+FCC(Br)OBr (FCC(Br)OBr) from CHOFBr_G4
+FCC(CBr)C(F)Br (FCC(CBr)C(F)Br) from CHOFBr_G4
+FCC(F)(Br)OCBr (FCC(F)(Br)OCBr) from CHOFBr_G4
+FCC(F)(Br)CCBr (FCC(F)(Br)CCBr) from CHOFBr_G4
+FCCC(F)(F)Br (FCCC(F)(F)Br) from CHOFBr_G4
+OC(CF)C(Br)Br (OC(CF)C(Br)Br) from CHOFBr_G4
+FCC(Br)(Br)OOBr (FCC(Br)(Br)OOBr) from CHOFBr_G4
+OC(Br)(Br)CF (OC(Br)(Br)CF) from CHOFBr_G4
+FCC(F)C(F)OBr (FCC(F)C(F)OBr) from CHOFBr_G4
+OC(CF)C(F)(F)Br (OC(CF)C(F)(F)Br) from CHOFBr_G4
+FCC(Br)C(Br)Br (FCC(Br)C(Br)Br) from CHOFBr_G4
+OC(Br)CCF (OC(Br)CCF) from CHOFBr_G4
+FCCCC(Br)Br (FCCCC(Br)Br) from CHOFBr_G4
+FCCOC(F)(Br)Br (FCCOC(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(F)(F)CF (CC(Br)C(F)(F)CF) from CHOFBr_G4
+CCC(F)(Br)CF (CCC(F)(Br)CF) from CHOFBr_G4
+FCC(F)C(F)(F)Br (FCC(F)C(F)(F)Br) from CHOFBr_G4
+FCCOC(F)(F)Br (FCCOC(F)(F)Br) from CHOFBr_G4
+FCC(CBr)CBr (FCC(CBr)CBr) from CHOFBr_G4
+OC(CF)CBr (OC(CF)CBr) from CHOFBr_G4
+FCCCCBr (FCCCCBr) from CHOFBr_G4
+CC(Br)(CF)C(Br)Br (CC(Br)(CF)C(Br)Br) from CHOFBr_G4
+FCC(CF)C(F)Br (FCC(CF)C(F)Br) from CHOFBr_G4
+FCCOCBr (FCCOCBr) from CHOFBr_G4
+CC(CF)C(F)(Br)Br (CC(CF)C(F)(Br)Br) from CHOFBr_G4
+O=C(Br)C(Br)CF (ODC(Br)C(Br)CF) from CHOFBr_G4
+CC(F)(Br)CF (CC(F)(Br)CF) from CHOFBr_G4
+FCC(CBr)C(F)F (FCC(CBr)C(F)F) from CHOFBr_G4
+FCCC(F)(Br)Br (FCCC(F)(Br)Br) from CHOFBr_G4
+FCC(Br)COBr (FCC(Br)COBr) from CHOFBr_G4
+O=C(Br)C(F)CF (ODC(Br)C(F)CF) from CHOFBr_G4
+FCC(Br)OOBr (FCC(Br)OOBr) from CHOFBr_G4
+OC(F)(CF)CBr (OC(F)(CF)CBr) from CHOFBr_G4
+FCCC(F)(F)OBr (FCCC(F)(F)OBr) from CHOFBr_G4
+CC(Br)(Br)CCF (CC(Br)(Br)CCF) from CHOFBr_G4
+O=C(Br)CCF (ODC(Br)CCF) from CHOFBr_G4
+FCC(F)(CBr)OBr (FCC(F)(CBr)OBr) from CHOFBr_G4
+O=C(Br)C(F)(F)CF (ODC(Br)C(F)(F)CF) from CHOFBr_G4
+FCC(Br)CC(Br)Br (FCC(Br)CC(Br)Br) from CHOFBr_G4
+OCC(Br)(Br)CF (OCC(Br)(Br)CF) from CHOFBr_G4
+CC(C)(Br)CF (CC(C)(Br)CF) from CHOFBr_G4
+FCC(Br)(CBr)CBr (FCC(Br)(CBr)CBr) from CHOFBr_G4
+CC(Br)CCF (CC(Br)CCF) from CHOFBr_G4
+CC(CF)C(F)Br (CC(CF)C(F)Br) from CHOFBr_G4
+FCCCC(Br)(Br)Br (FCCCC(Br)(Br)Br) from CHOFBr_G4
+FCC(F)C(Br)Br (FCC(F)C(Br)Br) from CHOFBr_G4
+OC(O)(Br)CF (OC(O)(Br)CF) from CHOFBr_G4
+CC(CF)C(Br)(Br)Br (CC(CF)C(Br)(Br)Br) from CHOFBr_G4
+CC(CF)CBr (CC(CF)CBr) from CHOFBr_G4
+FCC(CF)OBr (FCC(CF)OBr) from CHOFBr_G4
+FCCCC(F)Br (FCCCC(F)Br) from CHOFBr_G4
+FCC(F)(F)COBr (FCC(F)(F)COBr) from CHOFBr_G4
+FCC(OBr)C(F)F (FCC(OBr)C(F)F) from CHOFBr_G4
+FCCC(F)(Br)OBr (FCCC(F)(Br)OBr) from CHOFBr_G4
+OC(F)(Br)CCF (OC(F)(Br)CCF) from CHOFBr_G4
+CC(Br)(CF)CBr (CC(Br)(CF)CBr) from CHOFBr_G4
+CC(Br)C(Br)(Br)CF (CC(Br)C(Br)(Br)CF) from CHOFBr_G4
+FCC(F)(F)OOBr (FCC(F)(F)OOBr) from CHOFBr_G4
+FCC(F)(OF)OBr (FCC(F)(OF)OBr) from CHOFBr_G4
+CC(Br)(CF)OBr (CC(Br)(CF)OBr) from CHOFBr_G4
+FCC(F)(F)OCBr (FCC(F)(F)OCBr) from CHOFBr_G4
+FCCC(Br)C(Br)Br (FCCC(Br)C(Br)Br) from CHOFBr_G4
+FCC(F)(F)C(F)Br (FCC(F)(F)C(F)Br) from CHOFBr_G4
+FCC(F)(F)CCBr (FCC(F)(F)CCBr) from CHOFBr_G4
+FCCC(F)(Br)CBr (FCCC(F)(Br)CBr) from CHOFBr_G4
+CC(CF)OBr (CC(CF)OBr) from CHOFBr_G4
+CC(Br)(Br)C(Br)CF (CC(Br)(Br)C(Br)CF) from CHOFBr_G4
+FCC(CF)CBr (FCC(CF)CBr) from CHOFBr_G4
+FCC(F)C(F)Br (FCC(F)C(F)Br) from CHOFBr_G4
+COC(Br)(Br)CF (COC(Br)(Br)CF) from CHOFBr_G4
+FCC(Br)(CBr)OBr (FCC(Br)(CBr)OBr) from CHOFBr_G4
+FCC(F)CC(Br)Br (FCC(F)CC(Br)Br) from CHOFBr_G4
+COC(Br)CF (COC(Br)CF) from CHOFBr_G4
+FCC(F)(CBr)CBr (FCC(F)(CBr)CBr) from CHOFBr_G4
+OC(F)(CF)OBr (OC(F)(CF)OBr) from CHOFBr_G4
+FCC(Br)OCBr (FCC(Br)OCBr) from CHOFBr_G4
+FCCC(F)(F)CBr (FCCC(F)(F)CBr) from CHOFBr_G4
+CC(Br)C(F)CF (CC(Br)C(F)CF) from CHOFBr_G4
+FCC(Br)CCBr (FCC(Br)CCBr) from CHOFBr_G4
+OC(Br)C(Br)CF (OC(Br)C(Br)CF) from CHOFBr_G4
+CC(Br)CF (CC(Br)CF) from CHOFBr_G4
+FCCOOBr (FCCOOBr) from CHOFBr_G4
+O=C(Br)C(Br)(Br)CF (ODC(Br)C(Br)(Br)CF) from CHOFBr_G4
+OC(Br)C(F)(F)CF (OC(Br)C(F)(F)CF) from CHOFBr_G4
+O=CC(Br)(Br)CF (ODCC(Br)(Br)CF) from CHOFBr_G4
+OC(CF)OBr (OC(CF)OBr) from CHOFBr_G4
+CC(CF)C(F)(F)Br (CC(CF)C(F)(F)Br) from CHOFBr_G4
+FCCCOBr (FCCCOBr) from CHOFBr_G4
+FCC(F)OC(F)Br (FCC(F)OC(F)Br) from CHOFBr_G4
+FCCC(F)Br (FCCC(F)Br) from CHOFBr_G4
+OOC(F)(Br)CF (OOC(F)(Br)CF) from CHOFBr_G4
+FCC(CBr)OBr (FCC(CBr)OBr) from CHOFBr_G4
+O=CC(F)(Br)CF (ODCC(F)(Br)CF) from CHOFBr_G4
+FCC(OBr)C(Br)Br (FCC(OBr)C(Br)Br) from CHOFBr_G4
+OOC(Br)CF (OOC(Br)CF) from CHOFBr_G4
+FCC(F)C(F)CBr (FCC(F)C(F)CBr) from CHOFBr_G4
+FCC(F)(Br)COBr (FCC(F)(Br)COBr) from CHOFBr_G4
+FCC(Br)(Br)OCBr (FCC(Br)(Br)OCBr) from CHOFBr_G4
+FCC(Br)CBr (FCC(Br)CBr) from CHOFBr_G4
+FCCC(Br)(Br)Br (FCCC(Br)(Br)Br) from CHOFBr_G4
+FCC(Br)(Br)CCBr (FCC(Br)(Br)CCBr) from CHOFBr_G4
+OC(CF)C(F)(Br)Br (OC(CF)C(F)(Br)Br) from CHOFBr_G4
+FCC(F)(Br)OOBr (FCC(F)(Br)OOBr) from CHOFBr_G4
+FCC(CF)C(Br)Br (FCC(CF)C(Br)Br) from CHOFBr_G4
+FCC(Br)C(Br)(Br)Br (FCC(Br)C(Br)(Br)Br) from CHOFBr_G4
+FCC(F)(F)CBr (FCC(F)(F)CBr) from CHOFBr_G4
+FCC(F)(Br)OBr (FCC(F)(Br)OBr) from CHOFBr_G4
+FCC(Br)(OBr)OBr (FCC(Br)(OBr)OBr) from CHOFBr_G4
+OC(F)(Br)C(F)CF (OC(F)(Br)C(F)CF) from CHOFBr_G4
+CC(F)(CF)OBr (CC(F)(CF)OBr) from CHOFBr_G4
+OC(Br)(CF)CBr (OC(Br)(CF)CBr) from CHOFBr_G4
+FCCC(F)C(Br)Br (FCCC(F)C(Br)Br) from CHOFBr_G4
+FCCC(Br)(Br)CBr (FCCC(Br)(Br)CBr) from CHOFBr_G4
+FCCC(F)OBr (FCCC(F)OBr) from CHOFBr_G4
+OC(Br)C(F)CF (OC(Br)C(F)CF) from CHOFBr_G4
+OC(Br)(Br)CCF (OC(Br)(Br)CCF) from CHOFBr_G4
+O=C(Br)C(F)(Br)CF (ODC(Br)C(F)(Br)CF) from CHOFBr_G4
+FCC(F)(F)Br (FCC(F)(F)Br) from CHOFBr_G4
+CC(F)(CF)C(F)Br (CC(F)(CF)C(F)Br) from CHOFBr_G4
+CC(F)(CF)C(Br)Br (CC(F)(CF)C(Br)Br) from CHOFBr_G4
+FCCC(F)C(F)Br (FCCC(F)C(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(F)CF (OC(Br)(Br)C(F)CF) from CHOFBr_G4
+FCC(Br)OC(Br)Br (FCC(Br)OC(Br)Br) from CHOFBr_G4
+FCC(Br)C(Br)OBr (FCC(Br)C(Br)OBr) from CHOFBr_G4
+CCC(Br)(Br)CF (CCC(Br)(Br)CF) from CHOFBr_G4
+CC(O)(Br)CF (CC(O)(Br)CF) from CHOFBr_G4
+FCC(F)C(Br)CBr (FCC(F)C(Br)CBr) from CHOFBr_G4
+FCC(F)(Br)C(Br)Br (FCC(F)(Br)C(Br)Br) from CHOFBr_G4
+COC(F)(Br)CF (COC(F)(Br)CF) from CHOFBr_G4
+FCCCC(F)(Br)Br (FCCCC(F)(Br)Br) from CHOFBr_G4
+FCC(OBr)OBr (FCC(OBr)OBr) from CHOFBr_G4
+FCCOBr (FCCOBr) from CHOFBr_G4
+CC(Br)C(F)(Br)CF (CC(Br)C(F)(Br)CF) from CHOFBr_G4
+CC(CF)C(Br)Br (CC(CF)C(Br)Br) from CHOFBr_G4
+FCCC(Br)Br (FCCC(Br)Br) from CHOFBr_G4
+FCC(F)(CF)OBr (FCC(F)(CF)OBr) from CHOFBr_G4
+OC(F)(Br)CF (OC(F)(Br)CF) from CHOFBr_G4
+FCCC(Br)OBr (FCCC(Br)OBr) from CHOFBr_G4
+FCCOC(Br)Br (FCCOC(Br)Br) from CHOFBr_G4
+FCC(F)COBr (FCC(F)COBr) from CHOFBr_G4
+FCC(F)CC(F)Br (FCC(F)CC(F)Br) from CHOFBr_G4
+FCC(Br)(Br)OBr (FCC(Br)(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)C(Br)CF (OC(Br)(Br)C(Br)CF) from CHOFBr_G4
+FCC(F)OOBr (FCC(F)OOBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 926,
+    label = "Cs-C2sF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   C2s u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([13.6965,16.7385,19.9601,22.9511,27.5498,30.7104,34.6278],'J/(mol*K)','+|-',[2.15119,2.24871,2.10834,1.95766,1.6973,1.5072,2.91316]),
+        H298 = (55.6991,'kJ/mol','+|-',10.3841),
+        S298 = (84.1673,'J/(mol*K)','+|-',5.91161),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[CH]CF (CH2FCH) from C1_C2_Fluorine
+F[C]CF (CH2FCF) from C1_C2_Fluorine
+F[C]CF (F[C]CF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 927,
+    label = "Cs-CtF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   Ct  u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([33.1757,40.6721,47.7278,53.4362,62.3568,68.7465,77.2948],'J/(mol*K)','+|-',[1.5714,1.64264,1.5401,1.43003,1.23984,1.10098,2.128]),
+        H298 = (-217.298,'kJ/mol','+|-',7.58536),
+        S298 = (141.643,'J/(mol*K)','+|-',4.31831),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC#CC(F)F (FCC#CC(F)F) from CHOF_G4
+FCC#CCF (FCC#CCF) from CHOF_G4
+FC#CCF (FC#CCF) from CHOF_G4
+C#CCF (C#CCF) from CHOF_G4
+OC#CCF (OC#CCF) from CHOF_G4
+FCC#CC(F)(F)F (FCC#CC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 928,
+    label = "Cs-CdF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   Cd  u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([34.9576,41.7078,48.0544,53.755,62.5279,68.8624,77.5329],'J/(mol*K)','+|-',[0.331913,0.34696,0.325301,0.302052,0.261881,0.23255,0.449479]),
+        H298 = (-211.513,'kJ/mol','+|-',1.60219),
+        S298 = (142.617,'J/(mol*K)','+|-',0.912119),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC=C(F)CF (OCDC(F)CF) from CHOF_G4
+C=C(CF)OF (CDC(CF)OF) from CHOF_G4
+FCC=C=C(F)F (FCCDCDC(F)F) from CHOF_G4
+FC=C(F)CF (FCDC(F)CF) from CHOF_G4
+FCC(F)=C(F)C(F)(F)F (FCC(F)DC(F)C(F)(F)F) from CHOF_G4
+C=C(CF)CF (CDC(CF)CF) from CHOF_G4
+FCC=C(F)C(F)F (FCCDC(F)C(F)F) from CHOF_G4
+FCC(F)=COF (FCC(F)DCOF) from CHOF_G4
+O=C=C(F)CF (ODCDC(F)CF) from CHOF_G4
+FC=CCF (FCDCCF) from CHOF_G4
+FC=C=C(F)CF (FCDCDC(F)CF) from CHOF_G4
+CC=C(F)CF (CCDC(F)CF) from CHOF_G4
+FCC=CC(F)F (FCCDCC(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)(F)F (FCC(DC(F)F)C(F)(F)F) from CHOF_G4
+OC(F)=C(F)CF (OC(F)DC(F)CF) from CHOF_G4
+FCC(F)=C(F)OF (FCC(F)DC(F)OF) from CHOF_G4
+FC=C(CF)C(F)(F)F (FCDC(CF)C(F)(F)F) from CHOF_G4
+FCC(=C(F)F)C(F)F (FCC(DC(F)F)C(F)F) from CHOF_G4
+FCC(F)=C(F)CF (FCC(F)DC(F)CF) from CHOF_G4
+C=C(O)CF (CDC(O)CF) from CHOF_G4
+FCC(F)=C(F)F (FCC(F)DC(F)F) from CHOF_G4
+C=C(C)CF (CDC(C)CF) from CHOF_G4
+FCC=CCF (FCCDCCF) from CHOF_G4
+FCC=C(F)F (FCCDC(F)F) from CHOF_G4
+FCC(F)=C(F)C(F)F (FCC(F)DC(F)C(F)F) from CHOF_G4
+CC(F)=C(F)CF (CC(F)DC(F)CF) from CHOF_G4
+FCC=COF (FCCDCOF) from CHOF_G4
+C=C=C(F)CF (CDCDC(F)CF) from CHOF_G4
+FCC(CF)=C(F)F (FCC(CF)DC(F)F) from CHOF_G4
+OC=CCF (OCDCCF) from CHOF_G4
+FC=C=CCF (FCDCDCCF) from CHOF_G4
+FCC(F)=CC(F)(F)F (FCC(F)DCC(F)(F)F) from CHOF_G4
+C=C=CCF (CDCDCCF) from CHOF_G4
+OC(=CF)CF (OC(DCF)CF) from CHOF_G4
+FCC=C(F)C(F)(F)F (FCCDC(F)C(F)(F)F) from CHOF_G4
+FCC(OF)=C(F)F (FCC(OF)DC(F)F) from CHOF_G4
+C=C(F)CF (CDC(F)CF) from CHOF_G4
+FCC(F)=CC(F)F (FCC(F)DCC(F)F) from CHOF_G4
+CC(=CF)CF (CC(DCF)CF) from CHOF_G4
+CC(CF)=C(F)F (CC(CF)DC(F)F) from CHOF_G4
+C=C(CF)C(F)(F)F (CDC(CF)C(F)(F)F) from CHOF_G4
+FCC=C(F)OF (FCCDC(F)OF) from CHOF_G4
+C=C(CF)C(F)F (CDC(CF)C(F)F) from CHOF_G4
+CC(F)=CCF (CC(F)DCCF) from CHOF_G4
+O=C=CCF (ODCDCCF) from CHOF_G4
+FCC(F)=C=C(F)F (FCC(F)DCDC(F)F) from CHOF_G4
+C=CCF (CDCCF) from CHOF_G4
+FCC=C(F)CF (FCCDC(F)CF) from CHOF_G4
+FC=C(CF)CF (FCDC(CF)CF) from CHOF_G4
+FCC=CC(F)(F)F (FCCDCC(F)(F)F) from CHOF_G4
+OC(CF)=C(F)F (OC(CF)DC(F)F) from CHOF_G4
+OC(F)=CCF (OC(F)DCCF) from CHOF_G4
+FC=C(CF)OF (FCDC(CF)OF) from CHOF_G4
+CC=CCF (CCDCCF) from CHOF_G4
+FC=C(CF)C(F)F (FCDC(CF)C(F)F) from CHOF_G4
+FCC1=C(F)C1(F)F (FCC1DC(F)C1(F)F) from CHOF_G4
+FCC1=CC1F (FCC1DCC1F) from CHOF_G4
+FCC1=CC1(F)F (FCC1DCC1(F)F) from CHOF_G4
+FCC1=C(F)C1 (FCC1DC(F)C1) from CHOF_G4
+FCC1=C(F)C1F (FCC1DC(F)C1F) from CHOF_G4
+FCC1=CC1 (FCC1DCC1) from CHOF_G4
+FCC=CC(Cl)Cl (FCCDCC(Cl)Cl) from CHOFCl_G4
+OC=C(Cl)CF (OCDC(Cl)CF) from CHOFCl_G4
+OC(Cl)=C(F)CF (OC(Cl)DC(F)CF) from CHOFCl_G4
+FCC=COCl (FCCDCOCl) from CHOFCl_G4
+C=C(CF)OCl (CDC(CF)OCl) from CHOFCl_G4
+FCC(Cl)=CCCl (FCC(Cl)DCCCl) from CHOFCl_G4
+FCC(F)=CCCl (FCC(F)DCCCl) from CHOFCl_G4
+FCC=CC(F)Cl (FCCDCC(F)Cl) from CHOFCl_G4
+CC(Cl)=C(Cl)CF (CC(Cl)DC(Cl)CF) from CHOFCl_G4
+CC=C(Cl)CF (CCDC(Cl)CF) from CHOFCl_G4
+FCC=C(Cl)CCl (FCCDC(Cl)CCl) from CHOFCl_G4
+FC=C(CF)OCl (FCDC(CF)OCl) from CHOFCl_G4
+FCC=C(F)CCl (FCCDC(F)CCl) from CHOFCl_G4
+O=C=C(Cl)CF (ODCDC(Cl)CF) from CHOFCl_G4
+FCC=C(F)OCl (FCCDC(F)OCl) from CHOFCl_G4
+CC(Cl)=CCF (CC(Cl)DCCF) from CHOFCl_G4
+FC=C(CF)CCl (FCDC(CF)CCl) from CHOFCl_G4
+FCC=C(Cl)OCl (FCCDC(Cl)OCl) from CHOFCl_G4
+OC(Cl)=C(Cl)CF (OC(Cl)DC(Cl)CF) from CHOFCl_G4
+CC(Cl)=C(F)CF (CC(Cl)DC(F)CF) from CHOFCl_G4
+FCC(F)=COCl (FCC(F)DCOCl) from CHOFCl_G4
+FCC(Cl)=COCl (FCC(Cl)DCOCl) from CHOFCl_G4
+C=C(CF)CCl (CDC(CF)CCl) from CHOFCl_G4
+C=C(CF)C(F)Cl (CDC(CF)C(F)Cl) from CHOFCl_G4
+FCC=CCCl (FCCDCCCl) from CHOFCl_G4
+OC(Cl)=CCF (OC(Cl)DCCF) from CHOFCl_G4
+C=C(CF)C(Cl)Cl (CDC(CF)C(Cl)Cl) from CHOFCl_G4
+C=C(CF)C(Cl)Br (CDC(CF)C(Cl)Br) from CHOFClBr_G4
+FCC(Cl)=COBr (FCC(Cl)DCOBr) from CHOFClBr_G4
+FCC=C(Cl)OBr (FCCDC(Cl)OBr) from CHOFClBr_G4
+OC(Br)=C(Cl)CF (OC(Br)DC(Cl)CF) from CHOFClBr_G4
+C=C(CF)C(F)(Cl)Br (CDC(CF)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(CF)C(Cl)(Cl)Br (CDC(CF)C(Cl)(Cl)Br) from CHOFClBr_G4
+CC(Br)=C(Cl)CF (CC(Br)DC(Cl)CF) from CHOFClBr_G4
+FCC=C(Cl)CBr (FCCDC(Cl)CBr) from CHOFClBr_G4
+FCC(Cl)=CCBr (FCC(Cl)DCCBr) from CHOFClBr_G4
+C=C(CF)C(Cl)(Br)Br (CDC(CF)C(Cl)(Br)Br) from CHOFClBr_G4
+FCC=CC(Cl)Br (FCCDCC(Cl)Br) from CHOFClBr_G4
+OC(Br)=C(Br)CF (OC(Br)DC(Br)CF) from CHOFBr_G4
+FCC(Br)=C(Br)CBr (FCC(Br)DC(Br)CBr) from CHOFBr_G4
+C=C(CF)C(F)(Br)Br (CDC(CF)C(F)(Br)Br) from CHOFBr_G4
+FCC(F)=CC(F)Br (FCC(F)DCC(F)Br) from CHOFBr_G4
+FCC=CCBr (FCCDCCBr) from CHOFBr_G4
+CC(Br)=C(F)CF (CC(Br)DC(F)CF) from CHOFBr_G4
+C=C(CF)C(F)Br (CDC(CF)C(F)Br) from CHOFBr_G4
+FCC=CC(Br)(Br)Br (FCCDCC(Br)(Br)Br) from CHOFBr_G4
+FCC(F)=C(Br)OBr (FCC(F)DC(Br)OBr) from CHOFBr_G4
+C=C(CF)CBr (CDC(CF)CBr) from CHOFBr_G4
+FCC=C(Br)OBr (FCCDC(Br)OBr) from CHOFBr_G4
+FCC(F)=COBr (FCC(F)DCOBr) from CHOFBr_G4
+CC=C(Br)CF (CCDC(Br)CF) from CHOFBr_G4
+C=C(CF)C(Br)(Br)Br (CDC(CF)C(Br)(Br)Br) from CHOFBr_G4
+FCC(Br)=CC(Br)Br (FCC(Br)DCC(Br)Br) from CHOFBr_G4
+FCC(F)=C(F)CBr (FCC(F)DC(F)CBr) from CHOFBr_G4
+FCC(Br)=CCBr (FCC(Br)DCCBr) from CHOFBr_G4
+C=C(CF)C(F)(F)Br (CDC(CF)C(F)(F)Br) from CHOFBr_G4
+FC=C(CF)C(F)Br (FCDC(CF)C(F)Br) from CHOFBr_G4
+FCC=CC(F)(F)Br (FCCDCC(F)(F)Br) from CHOFBr_G4
+OC=C(Br)CF (OCDC(Br)CF) from CHOFBr_G4
+FC=C(CF)CBr (FCDC(CF)CBr) from CHOFBr_G4
+FCC=C(F)OBr (FCCDC(F)OBr) from CHOFBr_G4
+C=C(CF)C(Br)Br (CDC(CF)C(Br)Br) from CHOFBr_G4
+FCC=C(F)C(Br)Br (FCCDC(F)C(Br)Br) from CHOFBr_G4
+FCC=C(F)CBr (FCCDC(F)CBr) from CHOFBr_G4
+FC=C(CF)OBr (FCDC(CF)OBr) from CHOFBr_G4
+FCC(CBr)=C(F)F (FCC(CBr)DC(F)F) from CHOFBr_G4
+OC(Br)=C(F)CF (OC(Br)DC(F)CF) from CHOFBr_G4
+FCC(F)=CC(Br)Br (FCC(F)DCC(Br)Br) from CHOFBr_G4
+FCC=CC(Br)Br (FCCDCC(Br)Br) from CHOFBr_G4
+FCC=C(F)C(F)Br (FCCDC(F)C(F)Br) from CHOFBr_G4
+OC(Br)=CCF (OC(Br)DCCF) from CHOFBr_G4
+FCC(Br)=COBr (FCC(Br)DCOBr) from CHOFBr_G4
+FCC=CC(F)(Br)Br (FCCDCC(F)(Br)Br) from CHOFBr_G4
+FCC(F)=C(F)OBr (FCC(F)DC(F)OBr) from CHOFBr_G4
+FCC(OBr)=C(F)F (FCC(OBr)DC(F)F) from CHOFBr_G4
+FCC=CC(F)Br (FCCDCC(F)Br) from CHOFBr_G4
+FC=C(CF)C(Br)Br (FCDC(CF)C(Br)Br) from CHOFBr_G4
+FCC(F)=CCBr (FCC(F)DCCBr) from CHOFBr_G4
+C=C(CF)OBr (CDC(CF)OBr) from CHOFBr_G4
+FCC=C(Br)CBr (FCCDC(Br)CBr) from CHOFBr_G4
+FCC=C(Br)C(Br)Br (FCCDC(Br)C(Br)Br) from CHOFBr_G4
+FCC(F)=C(Br)CBr (FCC(F)DC(Br)CBr) from CHOFBr_G4
+FCC=COBr (FCCDCOBr) from CHOFBr_G4
+O=C=C(Br)CF (ODCDC(Br)CF) from CHOFBr_G4
+CC(Br)=CCF (CC(Br)DCCF) from CHOFBr_G4
+CC(Br)=C(Br)CF (CC(Br)DC(Br)CF) from CHOFBr_G4
+FCC(Br)=C(Br)OBr (FCC(Br)DC(Br)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 929,
+    label = "Cs-COF1sHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   CO  u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([38.3991,45.5273,51.529,56.6722,64.5838,70.1157,77.9055],'J/(mol*K)','+|-',[0.964518,1.00825,0.945305,0.877746,0.76101,0.675775,1.30616]),
+        H298 = (-217.759,'kJ/mol','+|-',4.65586),
+        S298 = (138.41,'J/(mol*K)','+|-',2.65056),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)CF (ODC(F)CF) from CHOF_G4
+O=CCF (ODCCF) from CHOF_G4
+O=C(CF)OF (ODC(CF)OF) from CHOF_G4
+O=C(CF)CF (ODC(CF)CF) from CHOF_G4
+O=C(CF)C(F)(F)F (ODC(CF)C(F)(F)F) from CHOF_G4
+O=C(CF)C(F)F (ODC(CF)C(F)F) from CHOF_G4
+CC(=O)CF (CC(DO)CF) from CHOF_G4
+O=C(O)CF (ODC(O)CF) from CHOF_G4
+O=C(CF)C(Cl)Cl (ODC(CF)C(Cl)Cl) from CHOFCl_G4
+O=C(Cl)CF (ODC(Cl)CF) from CHOFCl_G4
+O=C(CF)C(F)Cl (ODC(CF)C(F)Cl) from CHOFCl_G4
+O=C(CF)OCl (ODC(CF)OCl) from CHOFCl_G4
+O=C(CF)CCl (ODC(CF)CCl) from CHOFCl_G4
+O=C(CF)C(Cl)Br (ODC(CF)C(Cl)Br) from CHOFClBr_G4
+O=C(Br)CF (ODC(Br)CF) from CHOFBr_G4
+O=C(CF)C(F)(Br)Br (ODC(CF)C(F)(Br)Br) from CHOFBr_G4
+O=C(CF)CBr (ODC(CF)CBr) from CHOFBr_G4
+O=C(CF)C(Br)Br (ODC(CF)C(Br)Br) from CHOFBr_G4
+O=C(CF)OBr (ODC(CF)OBr) from CHOFBr_G4
+O=C(CF)C(F)(F)Br (ODC(CF)C(F)(F)Br) from CHOFBr_G4
+O=C(CF)C(F)Br (ODC(CF)C(F)Br) from CHOFBr_G4
+O=C(CF)C(Br)(Br)Br (ODC(CF)C(Br)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 930,
     label = "CsBrBrCO",
     group = 
 """
@@ -19269,7 +24921,7 @@ CHOClBr_G4  |         16
 )
 
 entry(
-    index = 869,
+    index = 931,
     label = "CsBrCClO",
     group = 
 """
@@ -19296,7 +24948,7 @@ CHOClBr_G4  |         33
 )
 
 entry(
-    index = 870,
+    index = 932,
     label = "CsCClClO",
     group = 
 """
@@ -19325,7 +24977,7 @@ CHOClBr_G4  |         12
 )
 
 entry(
-    index = 871,
+    index = 933,
     label = "CsBrCFO",
     group = 
 """
@@ -19351,7 +25003,7 @@ CHOFBr_G4 |         58
 )
 
 entry(
-    index = 872,
+    index = 934,
     label = "CsCClFO",
     group = 
 """
@@ -19378,7 +25030,7 @@ CHOFClBr_G4 |         12
 )
 
 entry(
-    index = 873,
+    index = 935,
     label = "CsCFFO",
     group = 
 """
@@ -19406,7 +25058,301 @@ CHOFBr_G4 |         30
 )
 
 entry(
-    index = 874,
+    index = 936,
+    label = "Cs-CsF1sF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs  u0 {1,S}
+3   O2s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([44.4384,53.4493,59.0747,62.8735,67.3952,69.4508,69.6902],'J/(mol*K)','+|-',[0.321227,0.33579,0.314828,0.292328,0.25345,0.225063,0.435009]),
+        H298 = (-485.955,'kJ/mol','+|-',1.55061),
+        S298 = (63.0397,'J/(mol*K)','+|-',0.882754),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(O)(F)F (CH3CF2OH) from C1_C2_Fluorine
+OC(F)(F)C(F)(F)C(F)(F)F (C3F7OH) from C1_C3_hydrofluorocarbons_NIST
+OC(F)(F)C(F)(F)F (PF2ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)F (PF3ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ol) from NCSU_C2_C8_PFAS
+FC(C(F)(F)F)(OS(=O)O)F (PF2Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ol) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+FCC(F)(F)OOF (FCC(F)(F)OOF) from CHOF_G4
+CC(O)(F)F (CC(O)(F)F) from CHOF_G4
+COC(F)(F)C(F)F (COC(F)(F)C(F)F) from CHOF_G4
+CCC(F)(F)OF (CCC(F)(F)OF) from CHOF_G4
+OC(F)(F)CC(F)F (OC(F)(F)CC(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)F (OC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CCC(O)(F)F (CCC(O)(F)F) from CHOF_G4
+OC(F)(F)C(O)(F)F (OC(F)(F)C(O)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)CC(F)(F)F (OC(F)(F)CC(F)(F)F) from CHOF_G4
+OC(F)(F)COF (OC(F)(F)COF) from CHOF_G4
+FC(F)(F)OC(F)(F)C(F)(F)F (FC(F)(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)F (FOC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+OOC(F)(F)C(F)(F)F (OOC(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)OF (OC(F)(F)C(F)(F)OF) from CHOF_G4
+OC(F)(F)CCF (OC(F)(F)CCF) from CHOF_G4
+OC(F)C(F)(F)OF (OC(F)C(F)(F)OF) from CHOF_G4
+FCOC(F)(F)CF (FCOC(F)(F)CF) from CHOF_G4
+OC(F)(F)C(F)(F)CF (OC(F)(F)C(F)(F)CF) from CHOF_G4
+FCC(F)(F)OC(F)F (FCC(F)(F)OC(F)F) from CHOF_G4
+OC(F)(F)C(F)F (OC(F)(F)C(F)F) from CHOF_G4
+FOOC(F)(F)C(F)F (FOOC(F)(F)C(F)F) from CHOF_G4
+COC(C)(F)F (COC(C)(F)F) from CHOF_G4
+COC(F)(F)CF (COC(F)(F)CF) from CHOF_G4
+OCC(O)(F)F (OCC(O)(F)F) from CHOF_G4
+FOC(F)(F)C(F)C(F)F (FOC(F)(F)C(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)OF (CC(F)(F)C(F)(F)OF) from CHOF_G4
+COC(F)(F)C(F)(F)F (COC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)OCF (CC(F)(F)OCF) from CHOF_G4
+OC(F)C(O)(F)F (OC(F)C(O)(F)F) from CHOF_G4
+CC(F)(F)OOF (CC(F)(F)OOF) from CHOF_G4
+FOC(F)(F)C(F)F (FOC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)OC(F)(F)F (CC(F)(F)OC(F)(F)F) from CHOF_G4
+CC(F)(F)OO (CC(F)(F)OO) from CHOF_G4
+FCC(F)C(F)(F)OF (FCC(F)C(F)(F)OF) from CHOF_G4
+FCCC(F)(F)OF (FCCC(F)(F)OF) from CHOF_G4
+FOC(F)(F)C(F)(F)F (FOC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)OC(F)F (CC(F)(F)OC(F)F) from CHOF_G4
+FOC(F)C(F)(F)OF (FOC(F)C(F)(F)OF) from CHOF_G4
+OCC(F)(F)OF (OCC(F)(F)OF) from CHOF_G4
+FOC(F)(F)CC(F)(F)F (FOC(F)(F)CC(F)(F)F) from CHOF_G4
+CC(F)(F)OF (CC(F)(F)OF) from CHOF_G4
+FOC(F)(F)CC(F)F (FOC(F)(F)CC(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)(F)F (FOC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)F) from CHOF_G4
+FOOC(F)(F)C(F)(F)F (FOOC(F)(F)C(F)(F)F) from CHOF_G4
+FCOC(F)(F)C(F)F (FCOC(F)(F)C(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)OF (FOC(F)(F)C(F)(F)OF) from CHOF_G4
+FCC(F)(F)C(F)(F)OF (FCC(F)(F)C(F)(F)OF) from CHOF_G4
+CC(F)C(F)(F)OF (CC(F)C(F)(F)OF) from CHOF_G4
+FC(F)OC(F)(F)C(F)F (FC(F)OC(F)(F)C(F)F) from CHOF_G4
+FCOC(F)(F)C(F)(F)F (FCOC(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)OC(F)(F)F (FC(F)C(F)(F)OC(F)(F)F) from CHOF_G4
+CC(F)C(O)(F)F (CC(F)C(O)(F)F) from CHOF_G4
+FOCC(F)(F)OF (FOCC(F)(F)OF) from CHOF_G4
+FOC(F)(F)C(F)C(F)(F)F (FOC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)C(F)F (OC(F)(F)C(F)C(F)F) from CHOF_G4
+FCC(F)(F)OC(F)(F)F (FCC(F)(F)OC(F)(F)F) from CHOF_G4
+FC(F)OC(F)(F)C(F)(F)F (FC(F)OC(F)(F)C(F)(F)F) from CHOF_G4
+OOC(F)(F)CF (OOC(F)(F)CF) from CHOF_G4
+OC(F)(F)C(F)C(F)(F)F (OC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)CF (OC(F)(F)C(F)CF) from CHOF_G4
+FCC(F)(F)OF (FCC(F)(F)OF) from CHOF_G4
+OC(F)(F)CF (OC(F)(F)CF) from CHOF_G4
+CC(F)(F)C(O)(F)F (CC(F)(F)C(O)(F)F) from CHOF_G4
+OOC(F)(F)C(F)F (OOC(F)(F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)OF (OC(F)(F)C(F)OF) from CHOF_G4
+FC(F)C1(F)OC1(F)F (FC(F)C1(F)OC1(F)F) from CHOF_G4
+FC(F)(F)C1OC1(F)F (FC(F)(F)C1OC1(F)F) from CHOF_G4
+FC1(F)CO1 (FC1(F)CO1) from CHOF_G4
+FC1OC(F)(F)C1(F)F (FC1OC(F)(F)C1(F)F) from CHOF_G4
+OC1(F)OC1(F)F (OC1(F)OC1(F)F) from CHOF_G4
+FC1OC1(F)F (FC1OC1(F)F) from CHOF_G4
+FC1CC(F)(F)O1 (FC1CC(F)(F)O1) from CHOF_G4
+FC1COC1(F)F (FC1COC1(F)F) from CHOF_G4
+FC1C(F)(F)OC1(F)F (FC1C(F)(F)OC1(F)F) from CHOF_G4
+FC1(F)CC(F)(F)O1 (FC1(F)CC(F)(F)O1) from CHOF_G4
+FC1(F)OC1(F)F (FC1(F)OC1(F)F) from CHOF_G4
+FC1(F)COO1 (FC1(F)COO1) from CHOF_G4
+FC1(F)CCO1 (FC1(F)CCO1) from CHOF_G4
+FCC1OC1(F)F (FCC1OC1(F)F) from CHOF_G4
+FC1(F)OOC1(F)F (FC1(F)OOC1(F)F) from CHOF_G4
+OC1OC1(F)F (OC1OC1(F)F) from CHOF_G4
+CC1(F)OC1(F)F (CC1(F)OC1(F)F) from CHOF_G4
+FC1OC(F)(F)C1F (FC1OC(F)(F)C1F) from CHOF_G4
+FCC1(F)OC1(F)F (FCC1(F)OC1(F)F) from CHOF_G4
+FC(F)C1OC1(F)F (FC(F)C1OC1(F)F) from CHOF_G4
+CC1OC1(F)F (CC1OC1(F)F) from CHOF_G4
+FC1OOC1(F)F (FC1OOC1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C(F)(F)C1(F)F (ODC1OC(F)(F)C(F)(F)C(F)(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C1(F)C(F)(F)F (ODC1OC(F)(F)C(F)(F)C1(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)OCCl (CC(F)(F)OCCl) from CHOFCl_G4
+CCC(F)(F)OCl (CCC(F)(F)OCl) from CHOFCl_G4
+CC(F)(F)OCl (CC(F)(F)OCl) from CHOFCl_G4
+CC(F)(F)OOCl (CC(F)(F)OOCl) from CHOFCl_G4
+FCC(F)(F)OCl (FCC(F)(F)OCl) from CHOFCl_G4
+OC(F)(F)COCl (OC(F)(F)COCl) from CHOFCl_G4
+OC(Cl)C(O)(F)F (OC(Cl)C(O)(F)F) from CHOFCl_G4
+OCC(F)(F)OCl (OCC(F)(F)OCl) from CHOFCl_G4
+OC(F)C(F)(F)OBr (OC(F)C(F)(F)OBr) from CHOFBr_G4
+OCC(F)(F)OBr (OCC(F)(F)OBr) from CHOFBr_G4
+OC(F)(F)COBr (OC(F)(F)COBr) from CHOFBr_G4
+OC(Br)C(O)(F)F (OC(Br)C(O)(F)F) from CHOFBr_G4
+FOC(F)(F)COBr (FOC(F)(F)COBr) from CHOFBr_G4
+CC(F)(F)OC(F)Br (CC(F)(F)OC(F)Br) from CHOFBr_G4
+OC(F)(F)C(F)OBr (OC(F)(F)C(F)OBr) from CHOFBr_G4
+FOCC(F)(F)OBr (FOCC(F)(F)OBr) from CHOFBr_G4
+FCC(F)(F)OBr (FCC(F)(F)OBr) from CHOFBr_G4
+CC(F)(F)OOBr (CC(F)(F)OOBr) from CHOFBr_G4
+CC(F)(F)OC(Br)Br (CC(F)(F)OC(Br)Br) from CHOFBr_G4
+CC(F)(F)OBr (CC(F)(F)OBr) from CHOFBr_G4
+CCC(F)(F)OBr (CCC(F)(F)OBr) from CHOFBr_G4
+FCCC(F)(F)OBr (FCCC(F)(F)OBr) from CHOFBr_G4
+FCC(F)(F)OOBr (FCC(F)(F)OOBr) from CHOFBr_G4
+FCC(F)(F)OCBr (FCC(F)(F)OCBr) from CHOFBr_G4
+OC(F)(F)C(O)(F)Br (OC(F)(F)C(O)(F)Br) from CHOFBr_G4
+OC(F)(F)C(Br)OBr (OC(F)(F)C(Br)OBr) from CHOFBr_G4
+OC(Br)C(F)(F)OF (OC(Br)C(F)(F)OF) from CHOFBr_G4
+CC(F)(F)OCBr (CC(F)(F)OCBr) from CHOFBr_G4
+OC(F)(F)C(O)(Br)Br (OC(F)(F)C(O)(Br)Br) from CHOFBr_G4
+CC(F)C(F)(F)OBr (CC(F)C(F)(F)OBr) from CHOFBr_G4
+FC(F)C(F)(F)OBr (FC(F)C(F)(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 937,
+    label = "Cs-COF1sF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S}
+3   O2s u0 {1,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([45.431,55.6228,61.4972,65.0849,69.162,70.9253,69.8589],'J/(mol*K)','+|-',[1.53864,1.6084,1.50799,1.40022,1.214,1.07803,2.08365]),
+        H298 = (-472.162,'kJ/mol','+|-',7.42725),
+        S298 = (61.3577,'J/(mol*K)','+|-',4.2283),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC1(F)F (PF2lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)F (c_CF2OC_O) from PFCA_thermo
+O=C(F)C(F)(F)OF (ODC(F)C(F)(F)OF) from CHOF_G4
+O=CC(F)(F)OF (ODCC(F)(F)OF) from CHOF_G4
+O=C(F)C(O)(F)F (ODC(F)C(O)(F)F) from CHOF_G4
+O=CC(O)(F)F (ODCC(O)(F)F) from CHOF_G4
+O=C1OC1(F)F (ODC1OC1(F)F) from CHOF_G4
+O=CC(F)(F)OCl (ODCC(F)(F)OCl) from CHOFCl_G4
+O=CC(F)(F)OBr (ODCC(F)(F)OBr) from CHOFBr_G4
+O=C(F)C(F)(F)OBr (ODC(F)C(F)(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 938,
+    label = "Cs-CdF1sF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   O2s u0 {1,S}
+5   Cd  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([44.7169,54.854,60.3741,64.1509,68.5209,70.3829,69.3482],'J/(mol*K)','+|-',[0.835681,0.873568,0.819034,0.7605,0.659357,0.585508,1.13169]),
+        H298 = (-484.693,'kJ/mol','+|-',4.03395),
+        S298 = (60.4097,'J/(mol*K)','+|-',2.29651),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC(F)(F)C(F)=C(F)F (OC(F)(F)C(F)DC(F)F) from CHOF_G4
+FOC(F)(F)C(F)=C(F)F (FOC(F)(F)C(F)DC(F)F) from CHOF_G4
+OC(F)(F)C=C(F)F (OC(F)(F)CDC(F)F) from CHOF_G4
+FC=C(F)C(F)(F)OF (FCDC(F)C(F)(F)OF) from CHOF_G4
+C=C(F)C(O)(F)F (CDC(F)C(O)(F)F) from CHOF_G4
+C=CC(O)(F)F (CDCC(O)(F)F) from CHOF_G4
+OC(F)(F)C=CF (OC(F)(F)CDCF) from CHOF_G4
+C=C(F)C(F)(F)OF (CDC(F)C(F)(F)OF) from CHOF_G4
+OC(F)(F)C(F)=CF (OC(F)(F)C(F)DCF) from CHOF_G4
+FOC(F)(F)C=C(F)F (FOC(F)(F)CDC(F)F) from CHOF_G4
+C=CC(F)(F)OF (CDCC(F)(F)OF) from CHOF_G4
+FC=CC(F)(F)OF (FCDCC(F)(F)OF) from CHOF_G4
+FC1(F)C=CO1 (FC1(F)CDCO1) from CHOF_G4
+FC(F)=C1OC1(F)F (FC(F)DC1OC1(F)F) from CHOF_G4
+FC1=C(F)C(F)(F)O1 (FC1DC(F)C(F)(F)O1) from CHOF_G4
+FC1=COC1(F)F (FC1DCOC1(F)F) from CHOF_G4
+FC1=CC(F)(F)O1 (FC1DCC(F)(F)O1) from CHOF_G4
+C=C1OC1(F)F (CDC1OC1(F)F) from CHOF_G4
+FC=C1OC1(F)F (FCDC1OC1(F)F) from CHOF_G4
+C=CC(F)(F)OCl (CDCC(F)(F)OCl) from CHOFCl_G4
+C=CC(F)(F)OBr (CDCC(F)(F)OBr) from CHOFBr_G4
+C=C(F)C(F)(F)OBr (CDC(F)C(F)(F)OBr) from CHOFBr_G4
+FC=CC(F)(F)OBr (FCDCC(F)(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 939,
+    label = "Cs-CtF1sF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   O2s u0 {1,S}
+5   Ct  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([45.5647,55.5204,60.8332,64.6285,68.649,70.4151,69.7707],'J/(mol*K)','+|-',[1.71882,1.79675,1.68458,1.56419,1.35616,1.20427,2.32765]),
+        H298 = (-464.909,'kJ/mol','+|-',8.29699),
+        S298 = (60.8286,'J/(mol*K)','+|-',4.72344),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C#CC(O)(F)F (C#CC(O)(F)F) from CHOF_G4
+C#CC(F)(F)OF (C#CC(F)(F)OF) from CHOF_G4
+FC#CC(F)(F)OF (FC#CC(F)(F)OF) from CHOF_G4
+OC(F)(F)C#CF (OC(F)(F)C#CF) from CHOF_G4
+C#CC(F)(F)OCl (C#CC(F)(F)OCl) from CHOFCl_G4
+C#CC(F)(F)OBr (C#CC(F)(F)OBr) from CHOFBr_G4
+FC#CC(F)(F)OBr (FC#CC(F)(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 940,
     label = "CsBrCHO",
     group = 
 """
@@ -19435,7 +25381,7 @@ CHOClBr_G4  |         49
 )
 
 entry(
-    index = 875,
+    index = 941,
     label = "CsCClHO",
     group = 
 """
@@ -19464,7 +25410,7 @@ CHOClBr_G4  |         29
 )
 
 entry(
-    index = 876,
+    index = 942,
     label = "CsCFHO",
     group = 
 """
@@ -19493,7 +25439,7 @@ CHOFBr_G4   |         49
 )
 
 entry(
-    index = 877,
+    index = 943,
     label = "CsBrCOO",
     group = 
 """
@@ -19522,7 +25468,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 878,
+    index = 944,
     label = "CsCClOO",
     group = 
 """
@@ -19551,7 +25497,7 @@ CHOClBr_G4  |         4
 )
 
 entry(
-    index = 879,
+    index = 945,
     label = "CsCFOO",
     group = 
 """
@@ -19580,7 +25526,78 @@ CHOFBr_G4   |         7
 )
 
 entry(
-    index = 880,
+    index = 946,
+    label = "Cs-CsF1sO2sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   O2s u0 {1,S}
+3   O2s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([31.6425,41.0144,46.8703,50.5956,54.4758,55.6445,53.7647],'J/(mol*K)','+|-',[0.610749,0.638438,0.598583,0.555804,0.481884,0.427912,0.827082]),
+        H298 = (-299.082,'kJ/mol','+|-',2.94817),
+        S298 = (-60.1762,'J/(mol*K)','+|-',1.67838),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC(O)(F)C(F)(F)F (PF2diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)F (PF3diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16diol) from NCSU_C2_C8_PFAS
+CC(O)(F)OF (CC(O)(F)OF) from CHOF_G4
+FOC(F)(OF)C(F)(F)F (FOC(F)(OF)C(F)(F)F) from CHOF_G4
+FOC(F)(OF)C(F)F (FOC(F)(OF)C(F)F) from CHOF_G4
+OC(O)(F)CF (OC(O)(F)CF) from CHOF_G4
+OC(O)(F)C(F)F (OC(O)(F)C(F)F) from CHOF_G4
+CC(O)(O)F (CC(O)(O)F) from CHOF_G4
+OC(F)(OF)C(F)F (OC(F)(OF)C(F)F) from CHOF_G4
+OC(F)(OF)C(F)(F)F (OC(F)(OF)C(F)(F)F) from CHOF_G4
+CC(F)(OF)OF (CC(F)(OF)OF) from CHOF_G4
+OC(F)(CF)OF (OC(F)(CF)OF) from CHOF_G4
+FCC(F)(OF)OF (FCC(F)(OF)OF) from CHOF_G4
+OC(O)(F)C(F)(F)F (OC(O)(F)C(F)(F)F) from CHOF_G4
+OC1(F)CO1 (OC1(F)CO1) from CHOF_G4
+FCC1(F)OO1 (FCC1(F)OO1) from CHOF_G4
+OC1(F)OC1(F)F (OC1(F)OC1(F)F) from CHOF_G4
+FC(F)(F)C1(F)OO1 (FC(F)(F)C1(F)OO1) from CHOF_G4
+OC1(F)OC1F (OC1(F)OC1F) from CHOF_G4
+CC1(F)OO1 (CC1(F)OO1) from CHOF_G4
+FC(F)C1(F)OO1 (FC(F)C1(F)OO1) from CHOF_G4
+CC(O)(F)OCl (CC(O)(F)OCl) from CHOFCl_G4
+CC(F)(OF)OCl (CC(F)(OF)OCl) from CHOFCl_G4
+OC(F)(CF)OCl (OC(F)(CF)OCl) from CHOFCl_G4
+CC(F)(OCl)OCl (CC(F)(OCl)OCl) from CHOFCl_G4
+CC(F)(OCl)OBr (CC(F)(OCl)OBr) from CHOFClBr_G4
+OC(F)(OBr)C(F)F (OC(F)(OBr)C(F)F) from CHOFBr_G4
+FCC(F)(OBr)OBr (FCC(F)(OBr)OBr) from CHOFBr_G4
+CC(F)(OBr)OBr (CC(F)(OBr)OBr) from CHOFBr_G4
+FCC(F)(OF)OBr (FCC(F)(OF)OBr) from CHOFBr_G4
+OC(F)(CF)OBr (OC(F)(CF)OBr) from CHOFBr_G4
+CC(F)(OF)OBr (CC(F)(OF)OBr) from CHOFBr_G4
+CC(O)(F)OBr (CC(O)(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 947,
     label = "CsBrBrCC",
     group = 
 """
@@ -19609,7 +25626,7 @@ CHOClBr_G4  |         9
 )
 
 entry(
-    index = 881,
+    index = 948,
     label = "CsBrBrCsCs",
     group = 
 """
@@ -19638,7 +25655,7 @@ CHOClBr_G4  |         15
 )
 
 entry(
-    index = 882,
+    index = 949,
     label = "CsBrCCCl",
     group = 
 """
@@ -19665,7 +25682,7 @@ CHOClBr_G4  |         30
 )
 
 entry(
-    index = 883,
+    index = 950,
     label = "CsCCClCl",
     group = 
 """
@@ -19694,7 +25711,7 @@ CHOClBr_G4  |         8
 )
 
 entry(
-    index = 884,
+    index = 951,
     label = "CsClClCsCs",
     group = 
 """
@@ -19723,7 +25740,7 @@ CHOClBr_G4  |         9
 )
 
 entry(
-    index = 885,
+    index = 952,
     label = "CsBrCCF",
     group = 
 """
@@ -19749,7 +25766,7 @@ CHOFBr_G4 |         57
 )
 
 entry(
-    index = 886,
+    index = 953,
     label = "CsCCClF",
     group = 
 """
@@ -19776,7 +25793,7 @@ CHOFClBr_G4 |         17
 )
 
 entry(
-    index = 887,
+    index = 954,
     label = "CsCCFF",
     group = 
 """
@@ -19805,7 +25822,7 @@ CHOFBr_G4   |         11
 )
 
 entry(
-    index = 888,
+    index = 955,
     label = "CsCsCsFF",
     group = 
 """
@@ -19834,7 +25851,658 @@ CHOFBr_G4   |         33
 )
 
 entry(
-    index = 889,
+    index = 956,
+    label = "Cs-CsCsF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   Cs  u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([41.8728,49.8276,55.9675,60.5523,66.2355,69.0137,71.5606],'J/(mol*K)','+|-',[0.0508414,0.0531464,0.0498286,0.0462675,0.0401142,0.0356213,0.0688499]),
+        H298 = (-403.184,'kJ/mol','+|-',0.245418),
+        S298 = (47.3751,'J/(mol*K)','+|-',0.139716),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)C(F)(F)C(F)(F)F (C3F7H) from C1_C3_hydrofluorocarbons_NIST
+OC(F)(F)C(F)(F)C(F)(F)F (C3F7OH) from C1_C3_hydrofluorocarbons_NIST
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (PF4acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF4acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acylF) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)F (PF3alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkane) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)F (PF3-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (PF4-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7-1H) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ene) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)F (PF3ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)F (PF3diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7diol) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)F (PF4lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (PF5lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8lactone) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)F (PF4alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkyl(s)) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F (PF3Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(C(F)(F)F)F (PF4Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF7Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF8Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C1(F)OS1(=O)=O)(F)F)(F)F (PF3Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F (PF4Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(C(F)(F)F)F (PF5Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF6Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sultone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acylF) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkane) from NCSU_C2_C8_PFAS
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkane) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15-1H) from NCSU_C2_C8_PFAS
+FC(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16-1H) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ene) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16diol) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16lactone) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkyl(s)) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF10Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF11Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF12Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF13Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sacid) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF9Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF10Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF11Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF12Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF13Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sultone) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (C3F7C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C7F15C_O_OH) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)F (C2F5_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13_c_FCOC_O) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13CFO) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFCF2) from PFCA_thermo
+CC(F)(F)C(F)OF (CC(F)(F)C(F)OF) from CHOF_G4
+FC(F)C(F)(F)C(F)F (FC(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)(F)F (FC(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+FCCC(F)(F)C(F)F (FCCC(F)(F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)F (OC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)CF (CC(F)(F)C(F)CF) from CHOF_G4
+CC(F)(F)C(O)F (CC(F)(F)C(O)F) from CHOF_G4
+CCC(F)(F)CF (CCC(F)(F)CF) from CHOF_G4
+FC(F)C(F)C(F)(F)C(F)(F)F (FC(F)C(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)F (CC(F)C(F)(F)C(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)F (FOC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+OC(F)C(F)(F)CF (OC(F)C(F)(F)CF) from CHOF_G4
+FCCC(F)(F)C(F)(F)F (FCCC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)C(F)F (FCC(F)(F)C(F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)CF (OC(F)(F)C(F)(F)CF) from CHOF_G4
+FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (FC(F)(F)C(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)CC(F)F (FCC(F)(F)CC(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)C(F)F (FCC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)CF (CC(F)(F)C(F)(F)CF) from CHOF_G4
+OCC(F)(F)C(F)F (OCC(F)(F)C(F)F) from CHOF_G4
+FC(C(F)(F)F)C(F)(F)C(F)(F)F (FC(C(F)(F)F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOCC(F)(F)C(F)(F)F (FOCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)F (OC(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)CC(F)(F)F (CC(F)(F)CC(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)OF (CC(F)(F)C(F)(F)OF) from CHOF_G4
+FCC(F)C(F)(F)CF (FCC(F)C(F)(F)CF) from CHOF_G4
+CC(F)(F)CO (CC(F)(F)CO) from CHOF_G4
+FCCC(F)(F)CF (FCCC(F)(F)CF) from CHOF_G4
+CCC(C)(F)F (CCC(C)(F)F) from CHOF_G4
+CC(C)(F)F (CC(C)(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)C(F)(F)F (FC(F)C(F)(F)C(F)C(F)(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)F (FC(F)CC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)F (CC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(C)(F)F (CC(F)(F)C(C)(F)F) from CHOF_G4
+CC(F)(F)C(F)C(F)(F)F (CC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)(F)F (OC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)C(F)F (FC(F)C(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)F (CC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)COF (CC(F)(F)COF) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)F (FCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)CCF (CC(F)(F)CCF) from CHOF_G4
+FC(F)C(F)C(F)(F)C(F)F (FC(F)C(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)CF (CC(F)(F)CF) from CHOF_G4
+CC(F)C(C)(F)F (CC(F)C(C)(F)F) from CHOF_G4
+CC(F)(F)C(F)C(F)F (CC(F)(F)C(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)C(F)(F)C(F)F (FCC(F)C(F)(F)C(F)F) from CHOF_G4
+CCC(F)(F)C(F)F (CCC(F)(F)C(F)F) from CHOF_G4
+FC(F)C(F)(F)C(F)(F)F (FC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)(F)C(F)(F)C(F)(F)F (FOC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)C(F)(F)F (FCC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OCC(F)(F)CF (OCC(F)(F)CF) from CHOF_G4
+CCC(F)(F)C(F)(F)F (CCC(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)C(F)(F)C(F)(F)F (FOC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)OF (FCC(F)(F)C(F)OF) from CHOF_G4
+OCC(F)(F)C(F)(F)F (OCC(F)(F)C(F)(F)F) from CHOF_G4
+FOC(F)C(F)(F)C(F)F (FOC(F)C(F)(F)C(F)F) from CHOF_G4
+FCC(F)(F)CC(F)(F)F (FCC(F)(F)CC(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)F (FCC(F)(F)C(F)F) from CHOF_G4
+FC(F)(F)CC(F)(F)C(F)(F)F (FC(F)(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C(F)(F)OF (FCC(F)(F)C(F)(F)OF) from CHOF_G4
+FCC(F)(F)C(F)(F)CF (FCC(F)(F)C(F)(F)CF) from CHOF_G4
+CC(F)C(F)(F)CF (CC(F)C(F)(F)CF) from CHOF_G4
+FCC(F)C(F)(F)C(F)(F)F (FCC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)C(F)(F)CC(F)(F)F (FC(F)C(F)(F)CC(F)(F)F) from CHOF_G4
+FC(F)(F)C(F)(F)C(F)(F)F (FC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)(F)F (CC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)CC(F)F (CC(F)(F)CC(F)F) from CHOF_G4
+CC(F)(F)C(O)(F)F (CC(F)(F)C(O)(F)F) from CHOF_G4
+FOCC(F)(F)C(F)F (FOCC(F)(F)C(F)F) from CHOF_G4
+FCC(F)(F)COF (FCC(F)(F)COF) from CHOF_G4
+FCC(F)(F)CF (FCC(F)(F)CF) from CHOF_G4
+FC1CCC1(F)F (FC1CCC1(F)F) from CHOF_G4
+FC1(F)CC1 (FC1(F)CC1) from CHOF_G4
+FC1C(F)C1(F)F (FC1C(F)C1(F)F) from CHOF_G4
+FC1CC(F)C1(F)F (FC1CC(F)C1(F)F) from CHOF_G4
+OC1(F)C(F)(F)C1(F)F (OC1(F)C(F)(F)C1(F)F) from CHOF_G4
+FC1OC(F)(F)C1(F)F (FC1OC(F)(F)C1(F)F) from CHOF_G4
+FC1C(F)(F)CC1(F)F (FC1C(F)(F)CC1(F)F) from CHOF_G4
+FC1(F)CC1(F)F (FC1(F)CC1(F)F) from CHOF_G4
+FC(F)(F)C1CC1(F)F (FC(F)(F)C1CC1(F)F) from CHOF_G4
+FC(F)C1(F)CC1(F)F (FC(F)C1(F)CC1(F)F) from CHOF_G4
+OC1C(F)C1(F)F (OC1C(F)C1(F)F) from CHOF_G4
+FC1CC(F)(F)C1 (FC1CC(F)(F)C1) from CHOF_G4
+OC1C(F)(F)C1(F)F (OC1C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)C(F)(F)C1(F)F (CC1(F)C(F)(F)C1(F)F) from CHOF_G4
+FC1CC1(F)F (FC1CC1(F)F) from CHOF_G4
+FC(F)C1C(F)C1(F)F (FC(F)C1C(F)C1(F)F) from CHOF_G4
+FC1(F)COC1 (FC1(F)COC1) from CHOF_G4
+FC1CC(F)(F)C1F (FC1CC(F)(F)C1F) from CHOF_G4
+FC1(F)CCC1(F)F (FC1(F)CCC1(F)F) from CHOF_G4
+FC1C(F)C(F)(F)C1F (FC1C(F)C(F)(F)C1F) from CHOF_G4
+FCC1C(F)(F)C1(F)F (FCC1C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)C(F)C1(F)F (CC1(F)C(F)C1(F)F) from CHOF_G4
+FC1(F)CC(F)(F)C1 (FC1(F)CC(F)(F)C1) from CHOF_G4
+OC1(F)CC1(F)F (OC1(F)CC1(F)F) from CHOF_G4
+FC(F)C1CC1(F)F (FC(F)C1CC1(F)F) from CHOF_G4
+FCC1(F)CC1(F)F (FCC1(F)CC1(F)F) from CHOF_G4
+CC1CC1(F)F (CC1CC1(F)F) from CHOF_G4
+FC1(F)CCC1 (FC1(F)CCC1) from CHOF_G4
+OC1(F)C(F)C1(F)F (OC1(F)C(F)C1(F)F) from CHOF_G4
+FC1(F)C(F)(F)C1(F)F (FC1(F)C(F)(F)C1(F)F) from CHOF_G4
+FCC1C(F)C1(F)F (FCC1C(F)C1(F)F) from CHOF_G4
+FC1OCC1(F)F (FC1OCC1(F)F) from CHOF_G4
+FC1OC(F)C1(F)F (FC1OC(F)C1(F)F) from CHOF_G4
+FCC1(F)C(F)C1(F)F (FCC1(F)C(F)C1(F)F) from CHOF_G4
+CC1C(F)(F)C1(F)F (CC1C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)CC1(F)F (CC1(F)CC1(F)F) from CHOF_G4
+FCC1CC1(F)F (FCC1CC1(F)F) from CHOF_G4
+FC1CC(F)(F)C1(F)F (FC1CC(F)(F)C1(F)F) from CHOF_G4
+OC1CC1(F)F (OC1CC1(F)F) from CHOF_G4
+CC1C(F)C1(F)F (CC1C(F)C1(F)F) from CHOF_G4
+FC1C(F)(F)C1(F)F (FC1C(F)(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C(F)(F)C1(F)F (ODC1OC(F)(F)C(F)(F)C(F)(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C1(F)C(F)(F)F (ODC1OC(F)(F)C(F)(F)C1(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(O)Cl (CC(F)(F)C(O)Cl) from CHOFCl_G4
+FCC(F)(F)CCl (FCC(F)(F)CCl) from CHOFCl_G4
+CC(F)(F)CCCl (CC(F)(F)CCCl) from CHOFCl_G4
+CC(F)(F)CCl (CC(F)(F)CCl) from CHOFCl_G4
+CCC(F)(F)CCl (CCC(F)(F)CCl) from CHOFCl_G4
+CC(F)(F)C(Cl)Cl (CC(F)(F)C(Cl)Cl) from CHOFCl_G4
+CC(Cl)C(C)(F)F (CC(Cl)C(C)(F)F) from CHOFCl_G4
+CC(F)(F)COCl (CC(F)(F)COCl) from CHOFCl_G4
+CC(F)(F)C(F)Cl (CC(F)(F)C(F)Cl) from CHOFCl_G4
+CC(F)(F)C(Cl)Br (CC(F)(F)C(Cl)Br) from CHOFClBr_G4
+FCC(F)(F)C(Br)Br (FCC(F)(F)C(Br)Br) from CHOFBr_G4
+FC(F)C(F)(F)CBr (FC(F)C(F)(F)CBr) from CHOFBr_G4
+CC(F)C(F)(F)CBr (CC(F)C(F)(F)CBr) from CHOFBr_G4
+CC(F)(F)C(O)(Br)Br (CC(F)(F)C(O)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(F)CBr (CC(F)(F)C(F)CBr) from CHOFBr_G4
+CC(F)(F)C(F)Br (CC(F)(F)C(F)Br) from CHOFBr_G4
+CC(F)(F)COBr (CC(F)(F)COBr) from CHOFBr_G4
+CC(F)(F)C(Br)OBr (CC(F)(F)C(Br)OBr) from CHOFBr_G4
+CCC(F)(F)C(Br)Br (CCC(F)(F)C(Br)Br) from CHOFBr_G4
+CC(Br)C(F)(F)CF (CC(Br)C(F)(F)CF) from CHOFBr_G4
+CC(F)(F)C(Br)(Br)Br (CC(F)(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(F)(F)Br (CC(F)(F)C(F)(F)Br) from CHOFBr_G4
+FCC(F)(F)COBr (FCC(F)(F)COBr) from CHOFBr_G4
+CC(F)(F)CC(F)Br (CC(F)(F)CC(F)Br) from CHOFBr_G4
+CC(F)(F)C(C)(F)Br (CC(F)(F)C(C)(F)Br) from CHOFBr_G4
+CC(F)(F)C(C)(Br)Br (CC(F)(F)C(C)(Br)Br) from CHOFBr_G4
+FCC(F)(F)C(F)Br (FCC(F)(F)C(F)Br) from CHOFBr_G4
+FCC(F)(F)CCBr (FCC(F)(F)CCBr) from CHOFBr_G4
+CCC(F)(F)C(F)Br (CCC(F)(F)C(F)Br) from CHOFBr_G4
+FCCC(F)(F)CBr (FCCC(F)(F)CBr) from CHOFBr_G4
+CCC(F)(F)CBr (CCC(F)(F)CBr) from CHOFBr_G4
+OC(Br)C(F)(F)CF (OC(Br)C(F)(F)CF) from CHOFBr_G4
+CC(Br)C(C)(F)F (CC(Br)C(C)(F)F) from CHOFBr_G4
+CC(F)(F)CBr (CC(F)(F)CBr) from CHOFBr_G4
+CC(F)(F)C(Br)CBr (CC(F)(F)C(Br)CBr) from CHOFBr_G4
+CC(F)(F)C(F)(Br)Br (CC(F)(F)C(F)(Br)Br) from CHOFBr_G4
+CC(F)(F)CCBr (CC(F)(F)CCBr) from CHOFBr_G4
+FCC(F)(F)CBr (FCC(F)(F)CBr) from CHOFBr_G4
+CC(F)(F)C(F)OBr (CC(F)(F)C(F)OBr) from CHOFBr_G4
+CC(F)(F)C(O)Br (CC(F)(F)C(O)Br) from CHOFBr_G4
+CC(F)(F)C(O)(F)Br (CC(F)(F)C(O)(F)Br) from CHOFBr_G4
+CC(F)(F)C(Br)Br (CC(F)(F)C(Br)Br) from CHOFBr_G4
+CC(F)(F)CC(Br)Br (CC(F)(F)CC(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 957,
+    label = "Cs-COCsF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([47.4583,53.7622,57.2259,59.3423,61.5157,62.889,64.3342],'J/(mol*K)','+|-',[0.716115,0.748581,0.70185,0.65169,0.565019,0.501735,0.96977]),
+        H298 = (-414.03,'kJ/mol','+|-',3.45679),
+        S298 = (70.4595,'J/(mol*K)','+|-',1.96793),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)C(F)(F)C(F)(F)F (PF3acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (PF4acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)F (PF3acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF4acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acylF) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acid) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acylF) from NCSU_C2_C8_PFAS
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acylF) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)F (C2F5C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (C3F7C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C7F15C_O_OH) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)F (C2F5CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11CFO) from PFCA_thermo
+O=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13CFO) from PFCA_thermo
+O=CC(F)(F)C(F)F (ODCC(F)(F)C(F)F) from CHOF_G4
+O=C(F)C(F)(F)CF (ODC(F)C(F)(F)CF) from CHOF_G4
+O=C(F)C(F)(F)C(F)(F)F (ODC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+O=CC(F)(F)C(F)(F)F (ODCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(=O)F (CC(F)(F)C(DO)F) from CHOF_G4
+O=CC(F)(F)CF (ODCC(F)(F)CF) from CHOF_G4
+O=C(F)C(F)(F)C(F)F (ODC(F)C(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C=O (CC(F)(F)CDO) from CHOF_G4
+O=C1CC1(F)F (ODC1CC1(F)F) from CHOF_G4
+O=C1C(F)(F)C1(F)F (ODC1C(F)(F)C1(F)F) from CHOF_G4
+O=C1C(F)C1(F)F (ODC1C(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C(F)(F)C1(F)F (ODC1OC(F)(F)C(F)(F)C(F)(F)C1(F)F) from CHOF_G4
+CC(F)(F)C(=O)Cl (CC(F)(F)C(DO)Cl) from CHOFCl_G4
+O=C(Br)C(F)(F)CF (ODC(Br)C(F)(F)CF) from CHOFBr_G4
+CC(F)(F)C(=O)Br (CC(F)(F)C(DO)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 958,
+    label = "Cs-CdCsF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([44.8333,51.9388,56.3222,59.5009,63.3625,65.3957,62.8076],'J/(mol*K)','+|-',[0.484927,0.506912,0.475267,0.441301,0.38261,0.339757,0.656693]),
+        H298 = (-430.684,'kJ/mol','+|-',2.34081),
+        S298 = (67.2991,'J/(mol*K)','+|-',1.33261),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)=C(F)C(F)(F)C(F)(F)F (PF4ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ene) from NCSU_C2_C8_PFAS
+FC(F)=C(F)C(F)(F)C(F)(F)F (C2F5CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7CFCF2) from PFCA_thermo
+FC(F)=C(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9CFCF2) from PFCA_thermo
+FC=C(F)C(F)(F)C(F)(F)F (FCDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)F (CDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC(F)=CC(F)(F)C(F)F (FC(F)DCC(F)(F)C(F)F) from CHOF_G4
+C=CC(C)(F)F (CDCC(C)(F)F) from CHOF_G4
+C=C(F)C(C)(F)F (CDC(F)C(C)(F)F) from CHOF_G4
+C=C(F)C(F)(F)C(F)(F)F (CDC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)F (FCDCC(F)(F)C(F)F) from CHOF_G4
+FC=C(F)C(F)(F)C(F)F (FCDC(F)C(F)(F)C(F)F) from CHOF_G4
+FC=C(F)C(F)(F)CF (FCDC(F)C(F)(F)CF) from CHOF_G4
+CC(F)(F)C(F)=CF (CC(F)(F)C(F)DCF) from CHOF_G4
+FC(F)=CC(F)(F)C(F)(F)F (FC(F)DCC(F)(F)C(F)(F)F) from CHOF_G4
+FCC(F)(F)C=C(F)F (FCC(F)(F)CDC(F)F) from CHOF_G4
+C=CC(F)(F)C(F)(F)F (CDCC(F)(F)C(F)(F)F) from CHOF_G4
+FC=CC(F)(F)C(F)(F)F (FCDCC(F)(F)C(F)(F)F) from CHOF_G4
+CC(F)(F)C=C(F)F (CC(F)(F)CDC(F)F) from CHOF_G4
+C=C(F)C(F)(F)CF (CDC(F)C(F)(F)CF) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)(F)F (FC(F)DC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+C=CC(F)(F)CF (CDCC(F)(F)CF) from CHOF_G4
+CC(F)(F)C=CF (CC(F)(F)CDCF) from CHOF_G4
+FCC(F)(F)C(F)=C(F)F (FCC(F)(F)C(F)DC(F)F) from CHOF_G4
+FC(F)=C(F)C(F)(F)C(F)F (FC(F)DC(F)C(F)(F)C(F)F) from CHOF_G4
+C=CC(F)(F)C(F)F (CDCC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C(F)=C(F)F (CC(F)(F)C(F)DC(F)F) from CHOF_G4
+FC=CC(F)(F)CF (FCDCC(F)(F)CF) from CHOF_G4
+FC1(F)C=CC1 (FC1(F)CDCC1) from CHOF_G4
+FC1=CCC1(F)F (FC1DCCC1(F)F) from CHOF_G4
+FC(F)=C1CC1(F)F (FC(F)DC1CC1(F)F) from CHOF_G4
+FC1=C(F)C(F)(F)C1 (FC1DC(F)C(F)(F)C1) from CHOF_G4
+C=C1C(F)C1(F)F (CDC1C(F)C1(F)F) from CHOF_G4
+FC1C=CC1(F)F (FC1CDCC1(F)F) from CHOF_G4
+FC=C1C(F)(F)C1(F)F (FCDC1C(F)(F)C1(F)F) from CHOF_G4
+FC1=C(F)C(F)(F)C1F (FC1DC(F)C(F)(F)C1F) from CHOF_G4
+FC=C1CC1(F)F (FCDC1CC1(F)F) from CHOF_G4
+FC1=CC(F)(F)C1 (FC1DCC(F)(F)C1) from CHOF_G4
+FC(F)=C1C(F)C1(F)F (FC(F)DC1C(F)C1(F)F) from CHOF_G4
+FC1=CC(F)(F)C1(F)F (FC1DCC(F)(F)C1(F)F) from CHOF_G4
+FC=C1C(F)C1(F)F (FCDC1C(F)C1(F)F) from CHOF_G4
+FC1=CC(F)(F)C1F (FC1DCC(F)(F)C1F) from CHOF_G4
+C=C1CC1(F)F (CDC1CC1(F)F) from CHOF_G4
+C=C1C(F)(F)C1(F)F (CDC1C(F)(F)C1(F)F) from CHOF_G4
+FC1(F)C=CC1(F)F (FC1(F)CDCC1(F)F) from CHOF_G4
+C=CC(F)(F)CCl (CDCC(F)(F)CCl) from CHOFCl_G4
+C=CC(F)(F)C(Cl)Br (CDCC(F)(F)C(Cl)Br) from CHOFClBr_G4
+C=CC(F)(F)C(Br)Br (CDCC(F)(F)C(Br)Br) from CHOFBr_G4
+C=CC(F)(F)C(F)Br (CDCC(F)(F)C(F)Br) from CHOFBr_G4
+FC=CC(F)(F)CBr (FCDCC(F)(F)CBr) from CHOFBr_G4
+C=C(F)C(F)(F)CBr (CDC(F)C(F)(F)CBr) from CHOFBr_G4
+C=CC(F)(F)CBr (CDCC(F)(F)CBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 959,
+    label = "Cs-C2sCsF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   C2s u0 {1,S}
+3   F1s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([28.9215,29.8026,27.9027,24.8732,19.0633,15.8806,13.3593],'J/(mol*K)','+|-',[1.40661,1.47038,1.37859,1.28006,1.10982,0.985518,1.90484]),
+        H298 = (-83.1743,'kJ/mol','+|-',6.78989),
+        S298 = (9.30968,'J/(mol*K)','+|-',3.86545),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+F[C]C(F)(F)C(F)(F)F (PF3alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)F (PF4alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15alkyl(s)) from NCSU_C2_C8_PFAS
+F[C]C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16alkyl(s)) from NCSU_C2_C8_PFAS
+CC(F)(F)[C]F (CC(F)(F)[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 960,
+    label = "Cs-CsCtF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   Cs  u0 {1,S}
+5   Ct  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([41.5677,49.4436,54.8259,59.0127,64.3178,67.2844,69.0189],'J/(mol*K)','+|-',[1.37912,1.44164,1.35164,1.25505,1.08813,0.966258,1.86761]),
+        H298 = (-418.895,'kJ/mol','+|-',6.65719),
+        S298 = (70.4583,'J/(mol*K)','+|-',3.78991),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C#CC(C)(F)F (C#CC(C)(F)F) from CHOF_G4
+C#CC(F)(F)CF (C#CC(F)(F)CF) from CHOF_G4
+FC#CC(F)(F)CF (FC#CC(F)(F)CF) from CHOF_G4
+FC#CC(F)(F)C(F)F (FC#CC(F)(F)C(F)F) from CHOF_G4
+C#CC(F)(F)C(F)F (C#CC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)C#CF (CC(F)(F)C#CF) from CHOF_G4
+FC#CC(F)(F)C(F)(F)F (FC#CC(F)(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)C(F)(F)F (C#CC(F)(F)C(F)(F)F) from CHOF_G4
+C#CC(F)(F)CCl (C#CC(F)(F)CCl) from CHOFCl_G4
+C#CC(F)(F)C(Cl)Br (C#CC(F)(F)C(Cl)Br) from CHOFClBr_G4
+FC#CC(F)(F)CBr (FC#CC(F)(F)CBr) from CHOFBr_G4
+C#CC(F)(F)C(F)Br (C#CC(F)(F)C(F)Br) from CHOFBr_G4
+C#CC(F)(F)CBr (C#CC(F)(F)CBr) from CHOFBr_G4
+C#CC(F)(F)C(Br)Br (C#CC(F)(F)C(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 961,
+    label = "Cs-CdCdF1sF1s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+4   Cd  u0 {1,S}
+5   Cd  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([43.519,50.5281,55.2045,59.0579,64.0268,66.8167,67.6056],'J/(mol*K)','+|-',[1.15428,1.20661,1.13128,1.05043,0.910732,0.808728,1.56313]),
+        H298 = (-446.478,'kJ/mol','+|-',5.57186),
+        S298 = (71.5865,'J/(mol*K)','+|-',3.17204),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=CC1(F)F (FC1DCC1(F)F) from CHOF_G4
+FCC1=C(F)C1(F)F (FCC1DC(F)C1(F)F) from CHOF_G4
+FC(F)(F)C1=CC1(F)F (FC(F)(F)C1DCC1(F)F) from CHOF_G4
+OC1=CC1(F)F (OC1DCC1(F)F) from CHOF_G4
+FC(F)C1=CC1(F)F (FC(F)C1DCC1(F)F) from CHOF_G4
+OC1=C(F)C1(F)F (OC1DC(F)C1(F)F) from CHOF_G4
+FCC1=CC1(F)F (FCC1DCC1(F)F) from CHOF_G4
+CC1=C(F)C1(F)F (CC1DC(F)C1(F)F) from CHOF_G4
+FC1(F)C=C1 (FC1(F)CDC1) from CHOF_G4
+FC1=C(F)C1(F)F (FC1DC(F)C1(F)F) from CHOF_G4
+FC1=C(C(F)F)C1(F)F (FC1DC(C(F)F)C1(F)F) from CHOF_G4
+CC1=CC1(F)F (CC1DCC1(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 962,
     label = "CsBrCCH",
     group = 
 """
@@ -19863,7 +26531,7 @@ CHOClBr_G4  |         14
 )
 
 entry(
-    index = 890,
+    index = 963,
     label = "CsBrCsCsH",
     group = 
 """
@@ -19892,7 +26560,7 @@ CHOClBr_G4  |         29
 )
 
 entry(
-    index = 891,
+    index = 964,
     label = "CsCCClH",
     group = 
 """
@@ -19921,7 +26589,7 @@ CHOClBr_G4  |         19
 )
 
 entry(
-    index = 892,
+    index = 965,
     label = "CsCsCsClH",
     group = 
 """
@@ -19951,7 +26619,7 @@ CHOClBr_G4               |         33
 )
 
 entry(
-    index = 893,
+    index = 966,
     label = "CsCCFH",
     group = 
 """
@@ -19980,7 +26648,7 @@ CHOFBr_G4   |         26
 )
 
 entry(
-    index = 894,
+    index = 967,
     label = "CsCsCsFH",
     group = 
 """
@@ -20009,7 +26677,7 @@ CHOFBr_G4   |         71
 )
 
 entry(
-    index = 895,
+    index = 968,
     label = "CsBrCCO",
     group = 
 """
@@ -20038,7 +26706,7 @@ CHOClBr_G4  |         6
 )
 
 entry(
-    index = 896,
+    index = 969,
     label = "CsCCClO",
     group = 
 """
@@ -20067,7 +26735,7 @@ CHOClBr_G4  |         7
 )
 
 entry(
-    index = 897,
+    index = 970,
     label = "CsCCFO",
     group = 
 """
@@ -20096,7 +26764,169 @@ CHOFBr_G4   |         18
 )
 
 entry(
-    index = 898,
+    index = 971,
+    label = "Cs-COCsF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S}
+3   O2s u0 {1,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.0913,28.9645,31.3741,33.2321,35.2618,36.034,36.467],'J/(mol*K)','+|-',[0.764663,0.799329,0.74943,0.695871,0.603323,0.53575,1.03551]),
+        H298 = (-193.326,'kJ/mol','+|-',3.69113),
+        S298 = (3.96019,'J/(mol*K)','+|-',2.10135),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC1(F)C(F)(F)F (PF3lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)F (PF4lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (PF5lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)F (CF3_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)F (C2F5_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13_c_FCOC_O) from PFCA_thermo
+""",
+)
+
+entry(
+    index = 972,
+    label = "Cs-CsCsF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   O2s u0 {1,S}
+4   Cs  u0 {1,S}
+5   Cs  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([35.2192,44.1899,48.9973,51.8747,55.0011,55.7126,52.9468],'J/(mol*K)','+|-',[0.504651,0.52753,0.494598,0.45925,0.398172,0.353576,0.683403]),
+        H298 = (-261.078,'kJ/mol','+|-',2.43602),
+        S298 = (-47.7829,'J/(mol*K)','+|-',1.38682),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC(F)(CF)OF (FCC(F)(CF)OF) from CHOF_G4
+CC(O)(F)CF (CC(O)(F)CF) from CHOF_G4
+FOC(F)(C(F)F)C(F)F (FOC(F)(C(F)F)C(F)F) from CHOF_G4
+CC(O)(F)C(F)(F)F (CC(O)(F)C(F)(F)F) from CHOF_G4
+OC(F)(CF)C(F)F (OC(F)(CF)C(F)F) from CHOF_G4
+OC(F)(CF)C(F)(F)F (OC(F)(CF)C(F)(F)F) from CHOF_G4
+OC(F)(C(F)(F)F)C(F)(F)F (OC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(O)(F)C(F)F (CC(O)(F)C(F)F) from CHOF_G4
+FOC(F)(C(F)F)C(F)(F)F (FOC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CC(C)(F)OF (CC(C)(F)OF) from CHOF_G4
+CC(F)(OF)C(F)F (CC(F)(OF)C(F)F) from CHOF_G4
+CC(F)(CF)OF (CC(F)(CF)OF) from CHOF_G4
+OC(F)(C(F)F)C(F)(F)F (OC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+FCC(F)(OF)C(F)(F)F (FCC(F)(OF)C(F)(F)F) from CHOF_G4
+OC(F)(C(F)F)C(F)F (OC(F)(C(F)F)C(F)F) from CHOF_G4
+FOC(F)(C(F)(F)F)C(F)(F)F (FOC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+OC(F)(CF)CF (OC(F)(CF)CF) from CHOF_G4
+FCC(F)(OF)C(F)F (FCC(F)(OF)C(F)F) from CHOF_G4
+CC(C)(O)F (CC(C)(O)F) from CHOF_G4
+CC(F)(OF)C(F)(F)F (CC(F)(OF)C(F)(F)F) from CHOF_G4
+OC1(F)C(F)C1F (OC1(F)C(F)C1F) from CHOF_G4
+FC(F)C1(F)CO1 (FC(F)C1(F)CO1) from CHOF_G4
+FC(F)C1(F)OC1(F)F (FC(F)C1(F)OC1(F)F) from CHOF_G4
+OC1(F)CC1 (OC1(F)CC1) from CHOF_G4
+FC1OC1(F)C(F)(F)F (FC1OC1(F)C(F)(F)F) from CHOF_G4
+OC1(F)C(F)(F)C1(F)F (OC1(F)C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)CO1 (CC1(F)CO1) from CHOF_G4
+OC1(F)CC1(F)F (OC1(F)CC1(F)F) from CHOF_G4
+FCC1(F)OC1F (FCC1(F)OC1F) from CHOF_G4
+FC(F)(F)C1(F)CO1 (FC(F)(F)C1(F)CO1) from CHOF_G4
+OC1(F)CC1F (OC1(F)CC1F) from CHOF_G4
+CC1(F)OC1(F)F (CC1(F)OC1(F)F) from CHOF_G4
+OC1(F)C(F)C1(F)F (OC1(F)C(F)C1(F)F) from CHOF_G4
+FC(F)C1(F)OC1F (FC(F)C1(F)OC1F) from CHOF_G4
+CC1(F)OC1F (CC1(F)OC1F) from CHOF_G4
+FCC1(F)OC1(F)F (FCC1(F)OC1(F)F) from CHOF_G4
+FCC1(F)CO1 (FCC1(F)CO1) from CHOF_G4
+CC(F)(CF)OCl (CC(F)(CF)OCl) from CHOFCl_G4
+CC(O)(F)C(Cl)Cl (CC(O)(F)C(Cl)Cl) from CHOFCl_G4
+CC(C)(F)OCl (CC(C)(F)OCl) from CHOFCl_G4
+CC(O)(F)C(F)Cl (CC(O)(F)C(F)Cl) from CHOFCl_G4
+OC(F)(CF)CCl (OC(F)(CF)CCl) from CHOFCl_G4
+CC(F)(CCl)OCl (CC(F)(CCl)OCl) from CHOFCl_G4
+CC(O)(F)CCl (CC(O)(F)CCl) from CHOFCl_G4
+CC(F)(CCl)OBr (CC(F)(CCl)OBr) from CHOFClBr_G4
+CC(O)(F)C(Cl)Br (CC(O)(F)C(Cl)Br) from CHOFClBr_G4
+CC(F)(CBr)OBr (CC(F)(CBr)OBr) from CHOFBr_G4
+OC(F)(CF)C(F)Br (OC(F)(CF)C(F)Br) from CHOFBr_G4
+CC(O)(F)CBr (CC(O)(F)CBr) from CHOFBr_G4
+OC(F)(CBr)C(F)F (OC(F)(CBr)C(F)F) from CHOFBr_G4
+OC(F)(CF)C(Br)Br (OC(F)(CF)C(Br)Br) from CHOFBr_G4
+CC(O)(F)C(F)(Br)Br (CC(O)(F)C(F)(Br)Br) from CHOFBr_G4
+OC(F)(CF)CBr (OC(F)(CF)CBr) from CHOFBr_G4
+FCC(F)(CBr)OBr (FCC(F)(CBr)OBr) from CHOFBr_G4
+CC(O)(F)C(F)Br (CC(O)(F)C(F)Br) from CHOFBr_G4
+CC(F)(OBr)C(F)Br (CC(F)(OBr)C(F)Br) from CHOFBr_G4
+CC(C)(F)OBr (CC(C)(F)OBr) from CHOFBr_G4
+CC(F)(OBr)C(Br)Br (CC(F)(OBr)C(Br)Br) from CHOFBr_G4
+CC(O)(F)C(Br)Br (CC(O)(F)C(Br)Br) from CHOFBr_G4
+CC(O)(F)C(Br)(Br)Br (CC(O)(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)(CF)OBr (CC(F)(CF)OBr) from CHOFBr_G4
+CC(O)(F)C(F)(F)Br (CC(O)(F)C(F)(F)Br) from CHOFBr_G4
+FCC(F)(CF)OBr (FCC(F)(CF)OBr) from CHOFBr_G4
+CC(F)(OBr)C(F)F (CC(F)(OBr)C(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 973,
+    label = "Cs-CdCdF1sO2s",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s u0 {1,S}
+3   O2s u0 {1,S}
+4   Cd  u0 {1,S}
+5   Cd  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([33.7232,41.8546,46.5371,49.147,52.3144,53.0857,49.6709],'J/(mol*K)','+|-',[2.29611,2.40021,2.25037,2.08955,1.81165,1.60874,3.10942]),
+        H298 = (-274.469,'kJ/mol','+|-',11.0837),
+        S298 = (-46.2559,'J/(mol*K)','+|-',6.30988),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC1(F)C=C1 (OC1(F)CDC1) from CHOF_G4
+OC1(F)C(F)=C1F (OC1(F)C(F)DC1F) from CHOF_G4
+OC1(F)C=C1F (OC1(F)CDC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 974,
     label = "CsBrCCC",
     group = 
 """
@@ -20125,7 +26955,7 @@ CHOClBr_G4  |         7
 )
 
 entry(
-    index = 899,
+    index = 975,
     label = "CsCCCCl",
     group = 
 """
@@ -20155,7 +26985,7 @@ CHOClBr_G4               |         5
 )
 
 entry(
-    index = 900,
+    index = 976,
     label = "CsCCCF",
     group = 
 """
@@ -20184,7 +27014,7 @@ CHOFBr_G4   |         15
 )
 
 entry(
-    index = 901,
+    index = 977,
     label = "Cs-HHHH",
     group = 
 """
@@ -20196,19 +27026,22 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([35.7606,40.531,46.4966,52.737,64.0228,73.6747,90.4443],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-74.6048,'kJ/mol','+|-',13.3847),
+        S298 = (186.352,'J/(mol*K)','+|-',7.61983),
     ),
-    shortDesc = """CHEMKIN DATABASE S(group) = S(CH4) + Rln(12)""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C (CH4) from C1_C3_hydrofluorocarbons_NIST
+C (CH4) from NCSU_C2_C8_PFAS
 """,
 )
 
 entry(
-    index = 902,
+    index = 978,
     label = "Cs-CHHH",
     group = 
 """
@@ -20227,7 +27060,7 @@ entry(
 )
 
 entry(
-    index = 903,
+    index = 979,
     label = "Cs-CsHHH",
     group = 
 """
@@ -20239,19 +27072,675 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([25.8979,32.3774,38.5901,44.1634,53.3986,60.7482,72.8949],'J/(mol*K)','+|-',[0.140316,0.146677,0.137521,0.127693,0.11071,0.0983103,0.190017]),
+        H298 = (-47.7743,'kJ/mol','+|-',0.677325),
+        S298 = (125.02,'J/(mol*K)','+|-',0.385598),
     ),
-    shortDesc = """Cs-CsHHH BENSON""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+CCF (CH3CH2F) from C1_C2_Fluorine
+CC(F)F (CH3CHF2) from C1_C2_Fluorine
+CC(F)(F)F (CH3CF3) from C1_C2_Fluorine
+CC(O)(F)F (CH3CF2OH) from C1_C2_Fluorine
+CC(F)F (CH3-CHF2) from C1_C3_hydrofluorocarbons_NIST
+CC (C2H6) from C1_C3_hydrofluorocarbons_NIST
+CCC (C3H8) from C1_C3_hydrofluorocarbons_NIST
+CC(F)(F)F (CH3-CF3) from C1_C3_hydrofluorocarbons_NIST
+CCF (CH3-CH2F) from C1_C3_hydrofluorocarbons_NIST
+CC(F)C=O (CC(F)CDO) from CHOF_G4
+CC(O)(F)OF (CC(O)(F)OF) from CHOF_G4
+CC[C]F (CC[C]F) from CHOF_G4
+CC(F)(F)C(F)OF (CC(F)(F)C(F)OF) from CHOF_G4
+CC(O)(F)F (CC(O)(F)F) from CHOF_G4
+CCCC(F)(F)F (CCCC(F)(F)F) from CHOF_G4
+CC(O)F (CC(O)F) from CHOF_G4
+CCC(F)(F)OF (CCC(F)(F)OF) from CHOF_G4
+CC(F)CF (CC(F)CF) from CHOF_G4
+CC(O)(F)CF (CC(O)(F)CF) from CHOF_G4
+CC(F)(F)C(F)CF (CC(F)(F)C(F)CF) from CHOF_G4
+CC(O)(F)C(F)(F)F (CC(O)(F)C(F)(F)F) from CHOF_G4
+CC(F)C=C(F)F (CC(F)CDC(F)F) from CHOF_G4
+CC(F)(F)C(O)F (CC(F)(F)C(O)F) from CHOF_G4
+CCC(O)(F)F (CCC(O)(F)F) from CHOF_G4
+CC(CF)C(F)F (CC(CF)C(F)F) from CHOF_G4
+C=CC(C)(F)F (CDCC(C)(F)F) from CHOF_G4
+CC(F)OF (CC(F)OF) from CHOF_G4
+CC(C)(C)F (CC(C)(C)F) from CHOF_G4
+CCC(F)(F)CF (CCC(F)(F)CF) from CHOF_G4
+CC(F)(C(F)F)C(F)(F)F (CC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)F (CC(F)C(F)(F)C(F)F) from CHOF_G4
+CCOC(F)(F)F (CCOC(F)(F)F) from CHOF_G4
+C#CC(C)(F)F (C#CC(C)(F)F) from CHOF_G4
+C=C(F)C(C)(F)F (CDC(F)C(C)(F)F) from CHOF_G4
+CC(F)C(C)F (CC(F)C(C)F) from CHOF_G4
+CCOCF (CCOCF) from CHOF_G4
+CCC(F)CF (CCC(F)CF) from CHOF_G4
+CC(F)CC(F)F (CC(F)CC(F)F) from CHOF_G4
+CC(F)C(F)C(F)F (CC(F)C(F)C(F)F) from CHOF_G4
+CCC(F)=C(F)F (CCC(F)DC(F)F) from CHOF_G4
+CCOOF (CCOOF) from CHOF_G4
+CCC(F)OF (CCC(F)OF) from CHOF_G4
+CC(O)(F)C(F)F (CC(O)(F)C(F)F) from CHOF_G4
+CC(F)(CF)C(F)(F)F (CC(F)(CF)C(F)(F)F) from CHOF_G4
+CC(F)C(F)F (CC(F)C(F)F) from CHOF_G4
+CCOF (CCOF) from CHOF_G4
+CC(F)OC(F)F (CC(F)OC(F)F) from CHOF_G4
+CC(C)(F)CF (CC(C)(F)CF) from CHOF_G4
+CC(C(F)F)C(F)(F)F (CC(C(F)F)C(F)(F)F) from CHOF_G4
+COC(C)(F)F (COC(C)(F)F) from CHOF_G4
+CC(F)(F)C(F)(F)CF (CC(F)(F)C(F)(F)CF) from CHOF_G4
+CC(F)(F)C(F)=CF (CC(F)(F)C(F)DCF) from CHOF_G4
+CCC(F)C(F)(F)F (CCC(F)C(F)(F)F) from CHOF_G4
+CCC(=O)F (CCC(DO)F) from CHOF_G4
+CC(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)F) from CHOF_G4
+CCCF (CCCF) from CHOF_G4
+CCC=C(F)F (CCCDC(F)F) from CHOF_G4
+CC(C)(F)OF (CC(C)(F)OF) from CHOF_G4
+CC(F)(F)CC(F)(F)F (CC(F)(F)CC(F)(F)F) from CHOF_G4
+C=C(F)C(C)F (CDC(F)C(C)F) from CHOF_G4
+CC(F)(F)C(F)(F)OF (CC(F)(F)C(F)(F)OF) from CHOF_G4
+CC(F)CCF (CC(F)CCF) from CHOF_G4
+CC(F)(CF)CF (CC(F)(CF)CF) from CHOF_G4
+CC(F)(F)OCF (CC(F)(F)OCF) from CHOF_G4
+CC(OF)OF (CC(OF)OF) from CHOF_G4
+CC(F)(F)CO (CC(F)(F)CO) from CHOF_G4
+CC(C(F)F)C(F)F (CC(C(F)F)C(F)F) from CHOF_G4
+CC(F)(OF)C(F)F (CC(F)(OF)C(F)F) from CHOF_G4
+CC(C)(F)C(F)F (CC(C)(F)C(F)F) from CHOF_G4
+CCC(C)(F)F (CCC(C)(F)F) from CHOF_G4
+CC(F)(F)OOF (CC(F)(F)OOF) from CHOF_G4
+CC(F)(CF)OF (CC(F)(CF)OF) from CHOF_G4
+CC(F)COF (CC(F)COF) from CHOF_G4
+CC(F)(F)OC(F)(F)F (CC(F)(F)OC(F)(F)F) from CHOF_G4
+CC(F)(F)C(=O)F (CC(F)(F)C(DO)F) from CHOF_G4
+CC(F)(F)OO (CC(F)(F)OO) from CHOF_G4
+CC(C)(F)F (CC(C)(F)F) from CHOF_G4
+CC(F)C(F)(F)F (CC(F)C(F)(F)F) from CHOF_G4
+CCC(O)F (CCC(O)F) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)F (CC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(OF)C(F)(F)F (CC(OF)C(F)(F)F) from CHOF_G4
+CC(F)(F)[C]F (CC(F)(F)[C]F) from CHOF_G4
+CC(F)(F)C(C)(F)F (CC(F)(F)C(C)(F)F) from CHOF_G4
+CC(F)(F)C(F)C(F)(F)F (CC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+CCC(C)F (CCC(C)F) from CHOF_G4
+CC(F)(F)OC(F)F (CC(F)(F)OC(F)F) from CHOF_G4
+CC(F)C(F)=C(F)F (CC(F)C(F)DC(F)F) from CHOF_G4
+CC(F)C=CF (CC(F)CDCF) from CHOF_G4
+CC(F)(F)C(F)F (CC(F)(F)C(F)F) from CHOF_G4
+CC(F)(F)COF (CC(F)(F)COF) from CHOF_G4
+CC(CF)OF (CC(CF)OF) from CHOF_G4
+CC(F)OOF (CC(F)OOF) from CHOF_G4
+CC(F)(F)C(F)(F)C(F)(F)F (CC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+CC(O)(O)F (CC(O)(O)F) from CHOF_G4
+CC(C)C(F)(F)F (CC(C)C(F)(F)F) from CHOF_G4
+C=C(F)CC (CDC(F)CC) from CHOF_G4
+CC(F)F (CC(F)F) from CHOF_G4
+CC(F)(OF)OF (CC(F)(OF)OF) from CHOF_G4
+CC(F)OCF (CC(F)OCF) from CHOF_G4
+CC(CF)CF (CC(CF)CF) from CHOF_G4
+CC(F)(F)CCF (CC(F)(F)CCF) from CHOF_G4
+CC(F)(F)CF (CC(F)(F)CF) from CHOF_G4
+CC(F)(F)F (CC(F)(F)F) from CHOF_G4
+CC(C)(F)C(F)(F)F (CC(C)(F)C(F)(F)F) from CHOF_G4
+CC(F)C(C)(F)F (CC(F)C(C)(F)F) from CHOF_G4
+CC(C)C(F)F (CC(C)C(F)F) from CHOF_G4
+CC(F)(F)C=C(F)F (CC(F)(F)CDC(F)F) from CHOF_G4
+CC(OF)C(F)F (CC(OF)C(F)F) from CHOF_G4
+CC(F)(F)C#CF (CC(F)(F)C#CF) from CHOF_G4
+CC(F)(F)C(F)C(F)F (CC(F)(F)C(F)C(F)F) from CHOF_G4
+CCF (CCF) from CHOF_G4
+CCC(F)(F)C(F)F (CCC(F)(F)C(F)F) from CHOF_G4
+CC(F)C(=O)F (CC(F)C(DO)F) from CHOF_G4
+CC(F)(F)OF (CC(F)(F)OF) from CHOF_G4
+CC(F)(C(F)(F)F)C(F)(F)F (CC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CCC(F)(F)C(F)(F)F (CCC(F)(F)C(F)(F)F) from CHOF_G4
+CCC(F)=CF (CCC(F)DCF) from CHOF_G4
+CCOC(F)F (CCOC(F)F) from CHOF_G4
+CCC=CF (CCCDCF) from CHOF_G4
+CCC(F)(F)F (CCC(F)(F)F) from CHOF_G4
+CC(O)C(F)(F)F (CC(O)C(F)(F)F) from CHOF_G4
+CCCOF (CCCOF) from CHOF_G4
+CC(F)C(F)OF (CC(F)C(F)OF) from CHOF_G4
+CC(F)(F)C=CF (CC(F)(F)CDCF) from CHOF_G4
+CC(F)CC(F)(F)F (CC(F)CC(F)(F)F) from CHOF_G4
+CC(F)CO (CC(F)CO) from CHOF_G4
+CC(C(F)(F)F)C(F)(F)F (CC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+CC(F)C(F)(F)OF (CC(F)C(F)(F)OF) from CHOF_G4
+CCCC(F)F (CCCC(F)F) from CHOF_G4
+CC(CF)C(F)(F)F (CC(CF)C(F)(F)F) from CHOF_G4
+CC(F)C(O)F (CC(F)C(O)F) from CHOF_G4
+CC(F)C(O)(F)F (CC(F)C(O)(F)F) from CHOF_G4
+CC(F)C(F)CF (CC(F)C(F)CF) from CHOF_G4
+CCCCF (CCCCF) from CHOF_G4
+CC(F)OO (CC(F)OO) from CHOF_G4
+CC(F)C(F)(F)CF (CC(F)C(F)(F)CF) from CHOF_G4
+CC(F)(CF)C(F)F (CC(F)(CF)C(F)F) from CHOF_G4
+CC(F)C(F)C(F)(F)F (CC(F)C(F)C(F)(F)F) from CHOF_G4
+CC(F)OC(F)(F)F (CC(F)OC(F)(F)F) from CHOF_G4
+CC(C)(O)F (CC(C)(O)F) from CHOF_G4
+CCC(F)F (CCC(F)F) from CHOF_G4
+CC(O)OF (CC(O)OF) from CHOF_G4
+CC(C)OF (CC(C)OF) from CHOF_G4
+CC(F)(OF)C(F)(F)F (CC(F)(OF)C(F)(F)F) from CHOF_G4
+CC(F)(F)C(F)=C(F)F (CC(F)(F)C(F)DC(F)F) from CHOF_G4
+CC(F)C(F)(F)C(F)(F)F (CC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+COC(C)F (COC(C)F) from CHOF_G4
+CC(F)(F)CC(F)F (CC(F)(F)CC(F)F) from CHOF_G4
+CC(O)C(F)F (CC(O)C(F)F) from CHOF_G4
+CC(F)(C(F)F)C(F)F (CC(F)(C(F)F)C(F)F) from CHOF_G4
+CC(F)(F)C(O)(F)F (CC(F)(F)C(O)(F)F) from CHOF_G4
+CC(C)F (CC(C)F) from CHOF_G4
+CC(F)C(F)=CF (CC(F)C(F)DCF) from CHOF_G4
+CCC(F)C(F)F (CCC(F)C(F)F) from CHOF_G4
+CC(O)CF (CC(O)CF) from CHOF_G4
+CC(F)(F)C=O (CC(F)(F)CDO) from CHOF_G4
+CC(C)CF (CC(C)CF) from CHOF_G4
+CC1(F)CO1 (CC1(F)CO1) from CHOF_G4
+CC1(F)CC1 (CC1(F)CC1) from CHOF_G4
+CC1(F)C=C1F (CC1(F)CDC1F) from CHOF_G4
+CC1CC1F (CC1CC1F) from CHOF_G4
+CC1(F)C(F)=C1F (CC1(F)C(F)DC1F) from CHOF_G4
+CC1OC1F (CC1OC1F) from CHOF_G4
+CC1(F)C(F)(F)C1(F)F (CC1(F)C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)C(F)C1(F)F (CC1(F)C(F)C1(F)F) from CHOF_G4
+CC1C=C1F (CC1CDC1F) from CHOF_G4
+CC1CC1(F)F (CC1CC1(F)F) from CHOF_G4
+CC1(F)OC1(F)F (CC1(F)OC1(F)F) from CHOF_G4
+CC1C(F)(F)C1(F)F (CC1C(F)(F)C1(F)F) from CHOF_G4
+CC1(F)C(F)C1F (CC1(F)C(F)C1F) from CHOF_G4
+CC1C(F)=C1F (CC1C(F)DC1F) from CHOF_G4
+CC1(F)CC1F (CC1(F)CC1F) from CHOF_G4
+CC1(F)CC1(F)F (CC1(F)CC1(F)F) from CHOF_G4
+CC1(F)OC1F (CC1(F)OC1F) from CHOF_G4
+CC1(F)OO1 (CC1(F)OO1) from CHOF_G4
+CC1OC1(F)F (CC1OC1(F)F) from CHOF_G4
+CC1C(F)C1(F)F (CC1C(F)C1(F)F) from CHOF_G4
+CC1C(F)C1F (CC1C(F)C1F) from CHOF_G4
+CC(F)OCCl (CC(F)OCCl) from CHOFCl_G4
+CC(F)C(F)Cl (CC(F)C(F)Cl) from CHOFCl_G4
+CC(OF)OCl (CC(OF)OCl) from CHOFCl_G4
+CC(F)CCCl (CC(F)CCCl) from CHOFCl_G4
+CC(F)(Cl)C=CF (CC(F)(Cl)CDCF) from CHOFCl_G4
+CC(C)(Cl)CF (CC(C)(Cl)CF) from CHOFCl_G4
+CC(F)C(F)(F)Cl (CC(F)C(F)(F)Cl) from CHOFCl_G4
+CC(F)(Cl)C(=O)Cl (CC(F)(Cl)C(DO)Cl) from CHOFCl_G4
+CCC(Cl)(Cl)CF (CCC(Cl)(Cl)CF) from CHOFCl_G4
+CC(C)(F)C(Cl)Cl (CC(C)(F)C(Cl)Cl) from CHOFCl_G4
+CC(OCl)C(F)Cl (CC(OCl)C(F)Cl) from CHOFCl_G4
+CCC(F)C(F)Cl (CCC(F)C(F)Cl) from CHOFCl_G4
+CC(Cl)(CF)CCl (CC(Cl)(CF)CCl) from CHOFCl_G4
+CC(Cl)CCF (CC(Cl)CCF) from CHOFCl_G4
+CC(F)C(Cl)CCl (CC(F)C(Cl)CCl) from CHOFCl_G4
+CCC(F)C(Cl)Cl (CCC(F)C(Cl)Cl) from CHOFCl_G4
+CCC(Cl)=C(F)F (CCC(Cl)DC(F)F) from CHOFCl_G4
+CC(C)C(F)(Cl)Cl (CC(C)C(F)(Cl)Cl) from CHOFCl_G4
+CC(F)(Cl)C(Cl)Cl (CC(F)(Cl)C(Cl)Cl) from CHOFCl_G4
+CC(C)(Cl)C(F)Cl (CC(C)(Cl)C(F)Cl) from CHOFCl_G4
+CC(Cl)C(F)=CF (CC(Cl)C(F)DCF) from CHOFCl_G4
+CC(C)(F)C(F)Cl (CC(C)(F)C(F)Cl) from CHOFCl_G4
+CCC(F)(Cl)CF (CCC(F)(Cl)CF) from CHOFCl_G4
+CC(Cl)C(F)(F)Cl (CC(Cl)C(F)(F)Cl) from CHOFCl_G4
+CC(Cl)C(F)CF (CC(Cl)C(F)CF) from CHOFCl_G4
+CCC(C)(F)Cl (CCC(C)(F)Cl) from CHOFCl_G4
+C=C(F)C(C)Cl (CDC(F)C(C)Cl) from CHOFCl_G4
+CCOC(F)Cl (CCOC(F)Cl) from CHOFCl_G4
+CCC(Cl)C(F)Cl (CCC(Cl)C(F)Cl) from CHOFCl_G4
+CC(F)(F)C(O)Cl (CC(F)(F)C(O)Cl) from CHOFCl_G4
+CCCC(F)(Cl)Cl (CCCC(F)(Cl)Cl) from CHOFCl_G4
+CC(O)(F)OCl (CC(O)(F)OCl) from CHOFCl_G4
+CC(C)C(F)Cl (CC(C)C(F)Cl) from CHOFCl_G4
+CC(F)(CF)OCl (CC(F)(CF)OCl) from CHOFCl_G4
+CCC(F)CCl (CCC(F)CCl) from CHOFCl_G4
+CC(F)CC(F)Cl (CC(F)CC(F)Cl) from CHOFCl_G4
+CC(F)(Cl)C=O (CC(F)(Cl)CDO) from CHOFCl_G4
+CC(F)(Cl)CF (CC(F)(Cl)CF) from CHOFCl_G4
+CC(F)(F)C(=O)Cl (CC(F)(F)C(DO)Cl) from CHOFCl_G4
+CC(F)(F)OCCl (CC(F)(F)OCCl) from CHOFCl_G4
+CC(C)(Cl)C(F)F (CC(C)(Cl)C(F)F) from CHOFCl_G4
+CC(F)(OF)OCl (CC(F)(OF)OCl) from CHOFCl_G4
+CC(O)C(F)(F)Cl (CC(O)C(F)(F)Cl) from CHOFCl_G4
+CCC(F)(Cl)CCl (CCC(F)(Cl)CCl) from CHOFCl_G4
+CC(F)CC(Cl)Cl (CC(F)CC(Cl)Cl) from CHOFCl_G4
+CC(F)C(F)(Cl)Cl (CC(F)C(F)(Cl)Cl) from CHOFCl_G4
+CC(CCl)C(F)Cl (CC(CCl)C(F)Cl) from CHOFCl_G4
+CC(F)(F)CCCl (CC(F)(F)CCCl) from CHOFCl_G4
+CC(Cl)C(Cl)=CF (CC(Cl)C(Cl)DCF) from CHOFCl_G4
+CCC(Cl)CF (CCC(Cl)CF) from CHOFCl_G4
+CC(F)OCl (CC(F)OCl) from CHOFCl_G4
+CC(F)(F)CCl (CC(F)(F)CCl) from CHOFCl_G4
+CC(F)(CCl)CCl (CC(F)(CCl)CCl) from CHOFCl_G4
+CCC(Cl)=CF (CCC(Cl)DCF) from CHOFCl_G4
+CCC(Cl)=C(F)Cl (CCC(Cl)DC(F)Cl) from CHOFCl_G4
+CC(F)(Cl)CCF (CC(F)(Cl)CCF) from CHOFCl_G4
+CCC(F)(F)CCl (CCC(F)(F)CCl) from CHOFCl_G4
+CC(O)(F)C(Cl)Cl (CC(O)(F)C(Cl)Cl) from CHOFCl_G4
+CC(Cl)C(F)F (CC(Cl)C(F)F) from CHOFCl_G4
+CC(CF)C(Cl)Cl (CC(CF)C(Cl)Cl) from CHOFCl_G4
+CC(F)(F)C(Cl)Cl (CC(F)(F)C(Cl)Cl) from CHOFCl_G4
+CC(F)OC(F)Cl (CC(F)OC(F)Cl) from CHOFCl_G4
+CC(O)C(F)(Cl)Cl (CC(O)C(F)(Cl)Cl) from CHOFCl_G4
+CC(F)C(C)(Cl)Cl (CC(F)C(C)(Cl)Cl) from CHOFCl_G4
+CCC(Cl)C(F)F (CCC(Cl)C(F)F) from CHOFCl_G4
+CC(F)(F)Cl (CC(F)(F)Cl) from CHOFCl_G4
+CC(F)(Cl)OOCl (CC(F)(Cl)OOCl) from CHOFCl_G4
+CC(O)(Cl)C(F)Cl (CC(O)(Cl)C(F)Cl) from CHOFCl_G4
+CC(F)(Cl)COCl (CC(F)(Cl)COCl) from CHOFCl_G4
+CC(F)(Cl)OCl (CC(F)(Cl)OCl) from CHOFCl_G4
+CC(F)C(F)CCl (CC(F)C(F)CCl) from CHOFCl_G4
+CC(CF)OCl (CC(CF)OCl) from CHOFCl_G4
+CCCC(F)Cl (CCCC(F)Cl) from CHOFCl_G4
+CC(C)(F)CCl (CC(C)(F)CCl) from CHOFCl_G4
+CC(Cl)C(C)(F)F (CC(Cl)C(C)(F)F) from CHOFCl_G4
+CCC(O)(F)Cl (CCC(O)(F)Cl) from CHOFCl_G4
+COC(C)(F)Cl (COC(C)(F)Cl) from CHOFCl_G4
+C=C(F)C(C)(F)Cl (CDC(F)C(C)(F)Cl) from CHOFCl_G4
+CC(C)(F)OCl (CC(C)(F)OCl) from CHOFCl_G4
+CC(Cl)(Cl)C(F)F (CC(Cl)(Cl)C(F)F) from CHOFCl_G4
+CC(O)C(F)Cl (CC(O)C(F)Cl) from CHOFCl_G4
+CC(F)(Cl)CCCl (CC(F)(Cl)CCCl) from CHOFCl_G4
+CC(F)(Cl)CCl (CC(F)(Cl)CCl) from CHOFCl_G4
+CC(CF)CCl (CC(CF)CCl) from CHOFCl_G4
+CC(F)C(F)OCl (CC(F)C(F)OCl) from CHOFCl_G4
+CC(O)(F)C(F)Cl (CC(O)(F)C(F)Cl) from CHOFCl_G4
+CC(Cl)(Cl)CCF (CC(Cl)(Cl)CCF) from CHOFCl_G4
+CCOC(F)(F)Cl (CCOC(F)(F)Cl) from CHOFCl_G4
+CC(F)(Cl)OCCl (CC(F)(Cl)OCCl) from CHOFCl_G4
+CC(CF)C(F)Cl (CC(CF)C(F)Cl) from CHOFCl_G4
+CC(C)(F)Cl (CC(C)(F)Cl) from CHOFCl_G4
+CCOC(F)(Cl)Cl (CCOC(F)(Cl)Cl) from CHOFCl_G4
+CC(F)(Cl)C(F)F (CC(F)(Cl)C(F)F) from CHOFCl_G4
+CCC(F)(F)OCl (CCC(F)(F)OCl) from CHOFCl_G4
+CC(Cl)C(F)(F)F (CC(Cl)C(F)(F)F) from CHOFCl_G4
+CC(F)(CCl)OCl (CC(F)(CCl)OCl) from CHOFCl_G4
+CC(F)CCl (CC(F)CCl) from CHOFCl_G4
+CC(F)(F)OCl (CC(F)(F)OCl) from CHOFCl_G4
+CC(Cl)C(F)(Cl)Cl (CC(Cl)C(F)(Cl)Cl) from CHOFCl_G4
+CC(F)(Cl)C(O)Cl (CC(F)(Cl)C(O)Cl) from CHOFCl_G4
+CC(Cl)(Cl)C(F)Cl (CC(Cl)(Cl)C(F)Cl) from CHOFCl_G4
+CC(F)C(O)(F)Cl (CC(F)C(O)(F)Cl) from CHOFCl_G4
+CC(F)(F)COCl (CC(F)(F)COCl) from CHOFCl_G4
+CC(O)(Cl)CF (CC(O)(Cl)CF) from CHOFCl_G4
+CC(F)(F)OOCl (CC(F)(F)OOCl) from CHOFCl_G4
+CCC(F)(Cl)OCl (CCC(F)(Cl)OCl) from CHOFCl_G4
+C=C(F)C(C)(Cl)Cl (CDC(F)C(C)(Cl)Cl) from CHOFCl_G4
+CC(Cl)C=CF (CC(Cl)CDCF) from CHOFCl_G4
+CC(O)(F)Cl (CC(O)(F)Cl) from CHOFCl_G4
+CC(Cl)CF (CC(Cl)CF) from CHOFCl_G4
+CC(F)C(O)(Cl)Cl (CC(F)C(O)(Cl)Cl) from CHOFCl_G4
+CC(F)(F)C(F)Cl (CC(F)(F)C(F)Cl) from CHOFCl_G4
+CC(Cl)(Cl)CF (CC(Cl)(Cl)CF) from CHOFCl_G4
+CC(Cl)C=C(F)F (CC(Cl)CDC(F)F) from CHOFCl_G4
+CC(Cl)CC(F)F (CC(Cl)CC(F)F) from CHOFCl_G4
+CC(O)(F)CCl (CC(O)(F)CCl) from CHOFCl_G4
+CCC(F)(F)Cl (CCC(F)(F)Cl) from CHOFCl_G4
+CCC(F)OCl (CCC(F)OCl) from CHOFCl_G4
+CC(F)(CF)CCl (CC(F)(CF)CCl) from CHOFCl_G4
+CC(Cl)C(C)(F)Cl (CC(Cl)C(C)(F)Cl) from CHOFCl_G4
+CC(OCl)C(F)F (CC(OCl)C(F)F) from CHOFCl_G4
+CC(Cl)(Cl)C=CF (CC(Cl)(Cl)CDCF) from CHOFCl_G4
+CC(Cl)C(Cl)CF (CC(Cl)C(Cl)CF) from CHOFCl_G4
+CC(F)C(Cl)Cl (CC(F)C(Cl)Cl) from CHOFCl_G4
+CC(F)Cl (CC(F)Cl) from CHOFCl_G4
+CCCC(F)(F)Cl (CCCC(F)(F)Cl) from CHOFCl_G4
+CC(Cl)(CF)OCl (CC(Cl)(CF)OCl) from CHOFCl_G4
+CCC=C(F)Cl (CCCDC(F)Cl) from CHOFCl_G4
+CC(F)C(Cl)OCl (CC(F)C(Cl)OCl) from CHOFCl_G4
+CC(Cl)CC(F)Cl (CC(Cl)CC(F)Cl) from CHOFCl_G4
+CC(O)(Cl)C(F)F (CC(O)(Cl)C(F)F) from CHOFCl_G4
+CC(F)(Cl)OO (CC(F)(Cl)OO) from CHOFCl_G4
+CC(F)C(C)(F)Cl (CC(F)C(C)(F)Cl) from CHOFCl_G4
+CC(F)(Cl)Cl (CC(F)(Cl)Cl) from CHOFCl_G4
+CC(C)C(F)(F)Cl (CC(C)C(F)(F)Cl) from CHOFCl_G4
+CC(Cl)C=C(F)Cl (CC(Cl)CDC(F)Cl) from CHOFCl_G4
+CC(F)C(O)Cl (CC(F)C(O)Cl) from CHOFCl_G4
+CC(F)C(C)Cl (CC(F)C(C)Cl) from CHOFCl_G4
+CC(F)OC(Cl)Cl (CC(F)OC(Cl)Cl) from CHOFCl_G4
+CC(CCl)C(F)F (CC(CCl)C(F)F) from CHOFCl_G4
+CC(F)(OCl)OCl (CC(F)(OCl)OCl) from CHOFCl_G4
+CCC(F)(Cl)Cl (CCC(F)(Cl)Cl) from CHOFCl_G4
+CC(F)C(Cl)(Cl)Cl (CC(F)C(Cl)(Cl)Cl) from CHOFCl_G4
+CC(Cl)C(F)Cl (CC(Cl)C(F)Cl) from CHOFCl_G4
+CC(F)COCl (CC(F)COCl) from CHOFCl_G4
+CC(F)OOCl (CC(F)OOCl) from CHOFCl_G4
+CC(F)C(=O)Cl (CC(F)C(DO)Cl) from CHOFCl_G4
+CC(F)(Cl)CO (CC(F)(Cl)CO) from CHOFCl_G4
+CCC(F)Cl (CCC(F)Cl) from CHOFCl_G4
+CC(Cl)(Br)C(F)Cl (CC(Cl)(Br)C(F)Cl) from CHOFClBr_G4
+CC(F)C(Cl)(Cl)Br (CC(F)C(Cl)(Cl)Br) from CHOFClBr_G4
+CCC(F)(Cl)Br (CCC(F)(Cl)Br) from CHOFClBr_G4
+CC(F)(OCl)OBr (CC(F)(OCl)OBr) from CHOFClBr_G4
+CC(F)OC(Cl)Br (CC(F)OC(Cl)Br) from CHOFClBr_G4
+CC(Br)(Br)C(Cl)=CF (CC(Br)(Br)C(Cl)DCF) from CHOFClBr_G4
+CC(Cl)(Br)C(F)F (CC(Cl)(Br)C(F)F) from CHOFClBr_G4
+CC(F)(Cl)Br (CC(F)(Cl)Br) from CHOFClBr_G4
+CC(F)C(Cl)OBr (CC(F)C(Cl)OBr) from CHOFClBr_G4
+CC(Cl)(CF)OBr (CC(Cl)(CF)OBr) from CHOFClBr_G4
+CC(Br)C=C(F)Cl (CC(Br)CDC(F)Cl) from CHOFClBr_G4
+CC(F)C(Cl)Br (CC(F)C(Cl)Br) from CHOFClBr_G4
+CC(F)C(O)(Cl)Br (CC(F)C(O)(Cl)Br) from CHOFClBr_G4
+CC(Br)(Br)C(F)(Cl)Br (CC(Br)(Br)C(F)(Cl)Br) from CHOFClBr_G4
+C=C(F)C(C)(Cl)Br (CDC(F)C(C)(Cl)Br) from CHOFClBr_G4
+CCC(F)(Cl)OBr (CCC(F)(Cl)OBr) from CHOFClBr_G4
+CC(F)(Cl)C(O)Br (CC(F)(Cl)C(O)Br) from CHOFClBr_G4
+CC(Br)C(Cl)CF (CC(Br)C(Cl)CF) from CHOFClBr_G4
+CC(Br)C(F)Cl (CC(Br)C(F)Cl) from CHOFClBr_G4
+CC(F)(CCl)OBr (CC(F)(CCl)OBr) from CHOFClBr_G4
+CC(Br)C(F)(Cl)Cl (CC(Br)C(F)(Cl)Cl) from CHOFClBr_G4
+CC(F)C(Cl)(Br)Br (CC(F)C(Cl)(Br)Br) from CHOFClBr_G4
+CCOC(F)(Cl)Br (CCOC(F)(Cl)Br) from CHOFClBr_G4
+CCC(Cl)(Br)CF (CCC(Cl)(Br)CF) from CHOFClBr_G4
+CC(F)(Cl)OCBr (CC(F)(Cl)OCBr) from CHOFClBr_G4
+CC(Br)CC(F)Cl (CC(Br)CC(F)Cl) from CHOFClBr_G4
+CC(F)(Cl)CBr (CC(F)(Cl)CBr) from CHOFClBr_G4
+CC(F)(Cl)CCBr (CC(F)(Cl)CCBr) from CHOFClBr_G4
+CC(Br)C(C)(F)Cl (CC(Br)C(C)(F)Cl) from CHOFClBr_G4
+CCC(Br)C(F)Cl (CCC(Br)C(F)Cl) from CHOFClBr_G4
+CC(F)(Cl)OBr (CC(F)(Cl)OBr) from CHOFClBr_G4
+CC(F)(Cl)COBr (CC(F)(Cl)COBr) from CHOFClBr_G4
+CC(F)(Cl)OOBr (CC(F)(Cl)OOBr) from CHOFClBr_G4
+CC(F)C(C)(Cl)Br (CC(F)C(C)(Cl)Br) from CHOFClBr_G4
+CC(O)C(F)(Cl)Br (CC(O)C(F)(Cl)Br) from CHOFClBr_G4
+CC(Br)(Br)C(F)(F)Cl (CC(Br)(Br)C(F)(F)Cl) from CHOFClBr_G4
+CC(CF)C(Cl)Br (CC(CF)C(Cl)Br) from CHOFClBr_G4
+CC(Br)C(Cl)=CF (CC(Br)C(Cl)DCF) from CHOFClBr_G4
+CC(F)(F)C(Cl)Br (CC(F)(F)C(Cl)Br) from CHOFClBr_G4
+CC(C)(Br)C(F)Cl (CC(C)(Br)C(F)Cl) from CHOFClBr_G4
+CC(Br)C(F)(F)Cl (CC(Br)C(F)(F)Cl) from CHOFClBr_G4
+CC(Cl)(Br)CF (CC(Cl)(Br)CF) from CHOFClBr_G4
+CC(O)(F)C(Cl)Br (CC(O)(F)C(Cl)Br) from CHOFClBr_G4
+CC(OBr)C(F)Cl (CC(OBr)C(F)Cl) from CHOFClBr_G4
+CC(Br)C(F)(Cl)Br (CC(Br)C(F)(Cl)Br) from CHOFClBr_G4
+CC(Cl)(Br)C=CF (CC(Cl)(Br)CDCF) from CHOFClBr_G4
+CC(F)(CCl)CBr (CC(F)(CCl)CBr) from CHOFClBr_G4
+CC(F)(Cl)C(Br)Br (CC(F)(Cl)C(Br)Br) from CHOFClBr_G4
+CC(F)C(F)(Cl)Br (CC(F)C(F)(Cl)Br) from CHOFClBr_G4
+CC(F)CC(Cl)Br (CC(F)CC(Cl)Br) from CHOFClBr_G4
+CCC(F)(Cl)CBr (CCC(F)(Cl)CBr) from CHOFClBr_G4
+CC(Br)(Br)C(F)(Cl)Cl (CC(Br)(Br)C(F)(Cl)Cl) from CHOFClBr_G4
+CC(O)(Br)C(F)Cl (CC(O)(Br)C(F)Cl) from CHOFClBr_G4
+CCCC(F)(Cl)Br (CCCC(F)(Cl)Br) from CHOFClBr_G4
+CCC(Br)=C(F)Cl (CCC(Br)DC(F)Cl) from CHOFClBr_G4
+CC(Br)(Br)CC(F)Cl (CC(Br)(Br)CC(F)Cl) from CHOFClBr_G4
+CC(C)C(F)(Cl)Br (CC(C)C(F)(Cl)Br) from CHOFClBr_G4
+CC(F)(Cl)C(Cl)Br (CC(F)(Cl)C(Cl)Br) from CHOFClBr_G4
+CCC(F)C(Cl)Br (CCC(F)C(Cl)Br) from CHOFClBr_G4
+CC(F)C(Cl)CBr (CC(F)C(Cl)CBr) from CHOFClBr_G4
+CC(Cl)(CF)CBr (CC(Cl)(CF)CBr) from CHOFClBr_G4
+CC(Br)(Br)C(F)Cl (CC(Br)(Br)C(F)Cl) from CHOFClBr_G4
+CC(Br)(Br)C(Cl)CF (CC(Br)(Br)C(Cl)CF) from CHOFClBr_G4
+CC(C)(F)C(Cl)Br (CC(C)(F)C(Cl)Br) from CHOFClBr_G4
+CC(CBr)C(F)Cl (CC(CBr)C(F)Cl) from CHOFClBr_G4
+CC(F)(Cl)C(=O)Br (CC(F)(Cl)C(DO)Br) from CHOFClBr_G4
+CC(Cl)(Br)CCF (CC(Cl)(Br)CCF) from CHOFClBr_G4
+CCC(F)Br (CCC(F)Br) from CHOFBr_G4
+CC(F)C(=O)Br (CC(F)C(DO)Br) from CHOFBr_G4
+CC(F)OOBr (CC(F)OOBr) from CHOFBr_G4
+CC(F)(Br)CBr (CC(F)(Br)CBr) from CHOFBr_G4
+CC(F)COBr (CC(F)COBr) from CHOFBr_G4
+CCOC(F)(Br)Br (CCOC(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(Br)=C(F)F (CC(Br)C(Br)DC(F)F) from CHOFBr_G4
+CC(F)(Br)C(Br)(Br)Br (CC(F)(Br)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)OC(Br)(Br)Br (CC(F)OC(Br)(Br)Br) from CHOFBr_G4
+CC(Br)CC(F)(Br)Br (CC(Br)CC(F)(Br)Br) from CHOFBr_G4
+CC(F)(Br)CCBr (CC(F)(Br)CCBr) from CHOFBr_G4
+CC(F)C(C)Br (CC(F)C(C)Br) from CHOFBr_G4
+CC(F)(Br)OCBr (CC(F)(Br)OCBr) from CHOFBr_G4
+CC(F)C(O)Br (CC(F)C(O)Br) from CHOFBr_G4
+CC(CBr)C(F)Br (CC(CBr)C(F)Br) from CHOFBr_G4
+CC(F)(Br)C(Br)CBr (CC(F)(Br)C(Br)CBr) from CHOFBr_G4
+CC(C)C(F)(F)Br (CC(C)C(F)(F)Br) from CHOFBr_G4
+CC(F)C(F)(Br)OBr (CC(F)C(F)(Br)OBr) from CHOFBr_G4
+CC(C)(F)C(F)(F)Br (CC(C)(F)C(F)(F)Br) from CHOFBr_G4
+CC(F)C(C)(F)Br (CC(F)C(C)(F)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)Br (CC(Br)(Br)C(F)Br) from CHOFBr_G4
+CC(Br)(Br)CF (CC(Br)(Br)CF) from CHOFBr_G4
+CC(C)(Br)C(F)(F)Br (CC(C)(Br)C(F)(F)Br) from CHOFBr_G4
+CCC=C(F)Br (CCCDC(F)Br) from CHOFBr_G4
+CCC(Br)(Br)C(F)F (CCC(Br)(Br)C(F)F) from CHOFBr_G4
+CC(F)C(F)(F)CBr (CC(F)C(F)(F)CBr) from CHOFBr_G4
+CC(Br)(Br)C(F)=CF (CC(Br)(Br)C(F)DCF) from CHOFBr_G4
+CC(F)C(Br)(Br)OBr (CC(F)C(Br)(Br)OBr) from CHOFBr_G4
+CCCC(F)(F)Br (CCCC(F)(F)Br) from CHOFBr_G4
+CC(F)OC(F)(Br)Br (CC(F)OC(F)(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(F)CF (CC(F)(Br)C(F)CF) from CHOFBr_G4
+CC(F)(Br)C(Br)Br (CC(F)(Br)C(Br)Br) from CHOFBr_G4
+CC(CBr)C(F)(F)F (CC(CBr)C(F)(F)F) from CHOFBr_G4
+CCC(Br)CF (CCC(Br)CF) from CHOFBr_G4
+C=C(F)C(C)(Br)Br (CDC(F)C(C)(Br)Br) from CHOFBr_G4
+CC(F)Br (CC(F)Br) from CHOFBr_G4
+CC(F)(CBr)OBr (CC(F)(CBr)OBr) from CHOFBr_G4
+CCC(Br)=CF (CCC(Br)DCF) from CHOFBr_G4
+CCC(Br)C(F)(Br)Br (CCC(Br)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(Br)CF (CC(Br)C(Br)CF) from CHOFBr_G4
+CC(F)(CBr)C(F)Br (CC(F)(CBr)C(F)Br) from CHOFBr_G4
+CC(F)(Br)CCF (CC(F)(Br)CCF) from CHOFBr_G4
+CC(Br)(Br)CC(F)Br (CC(Br)(Br)CC(F)Br) from CHOFBr_G4
+CC(F)(F)OC(F)Br (CC(F)(F)OC(F)Br) from CHOFBr_G4
+CC(C)(F)C(Br)(Br)Br (CC(C)(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(O)(Br)Br (CC(F)(F)C(O)(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(F)F (CC(F)(Br)C(F)F) from CHOFBr_G4
+CCC(Br)=C(F)Br (CCC(Br)DC(F)Br) from CHOFBr_G4
+CC(F)(CBr)C(Br)Br (CC(F)(CBr)C(Br)Br) from CHOFBr_G4
+CCC(F)C(Br)(Br)Br (CCC(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(F)CBr (CC(F)(F)C(F)CBr) from CHOFBr_G4
+CCC(F)OBr (CCC(F)OBr) from CHOFBr_G4
+CCC(F)(F)Br (CCC(F)(F)Br) from CHOFBr_G4
+CC(F)(CF)CBr (CC(F)(CF)CBr) from CHOFBr_G4
+CCC(F)(Br)OBr (CCC(F)(Br)OBr) from CHOFBr_G4
+CC(O)(F)CBr (CC(O)(F)CBr) from CHOFBr_G4
+CC(C(F)Br)C(Br)Br (CC(C(F)Br)C(Br)Br) from CHOFBr_G4
+CC(O)(Br)C(F)Br (CC(O)(Br)C(F)Br) from CHOFBr_G4
+CC(C)(Br)C(F)(Br)Br (CC(C)(Br)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)CF (CC(Br)(Br)C(F)CF) from CHOFBr_G4
+CC(F)(F)C(F)Br (CC(F)(F)C(F)Br) from CHOFBr_G4
+CC(O)(F)Br (CC(O)(F)Br) from CHOFBr_G4
+CC(F)(Br)CC(Br)Br (CC(F)(Br)CC(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(C)(Br)Br (CC(F)(Br)C(C)(Br)Br) from CHOFBr_G4
+CC(O)(F)C(F)(Br)Br (CC(O)(F)C(F)(Br)Br) from CHOFBr_G4
+CC(F)(F)OOBr (CC(F)(F)OOBr) from CHOFBr_G4
+CC(Br)C(Br)C(F)F (CC(Br)C(Br)C(F)F) from CHOFBr_G4
+CC(F)(F)COBr (CC(F)(F)COBr) from CHOFBr_G4
+CC(OBr)C(F)F (CC(OBr)C(F)F) from CHOFBr_G4
+CC(F)C(O)(F)Br (CC(F)C(O)(F)Br) from CHOFBr_G4
+CC(F)(F)OC(Br)Br (CC(F)(F)OC(Br)Br) from CHOFBr_G4
+CC(F)(F)C(Br)OBr (CC(F)(F)C(Br)OBr) from CHOFBr_G4
+CCC(F)(F)C(Br)Br (CCC(F)(F)C(Br)Br) from CHOFBr_G4
+CC(F)C(Br)Br (CC(F)C(Br)Br) from CHOFBr_G4
+CC(Br)C(F)(F)CF (CC(Br)C(F)(F)CF) from CHOFBr_G4
+CCC(F)(Br)CF (CCC(F)(Br)CF) from CHOFBr_G4
+CC(F)(Br)C=O (CC(F)(Br)CDO) from CHOFBr_G4
+CC(F)(F)OBr (CC(F)(F)OBr) from CHOFBr_G4
+CC(F)CBr (CC(F)CBr) from CHOFBr_G4
+CC(Br)CC(F)(F)F (CC(Br)CC(F)(F)F) from CHOFBr_G4
+CC(Br)(CF)C(Br)Br (CC(Br)(CF)C(Br)Br) from CHOFBr_G4
+CC(F)C(F)C(F)Br (CC(F)C(F)C(F)Br) from CHOFBr_G4
+CC(CF)C(F)(Br)Br (CC(CF)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)(Br)C(F)(Br)Br (CC(Br)(Br)C(F)(Br)Br) from CHOFBr_G4
+CC(F)C(O)(Br)Br (CC(F)C(O)(Br)Br) from CHOFBr_G4
+CC(F)CC(Br)(Br)Br (CC(F)CC(Br)(Br)Br) from CHOFBr_G4
+CC(F)(Br)CF (CC(F)(Br)CF) from CHOFBr_G4
+CCC(F)(F)OBr (CCC(F)(F)OBr) from CHOFBr_G4
+CC(OBr)C(F)Br (CC(OBr)C(F)Br) from CHOFBr_G4
+CC(OBr)C(F)(F)Br (CC(OBr)C(F)(F)Br) from CHOFBr_G4
+CCC(F)C(F)(F)Br (CCC(F)C(F)(F)Br) from CHOFBr_G4
+CC(Br)C=C(F)F (CC(Br)CDC(F)F) from CHOFBr_G4
+CC(CBr)C(F)(Br)Br (CC(CBr)C(F)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(Br)(Br)Br (CC(F)(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(O)(Br)C(F)(F)F (CC(O)(Br)C(F)(F)F) from CHOFBr_G4
+CC(CBr)C(F)F (CC(CBr)C(F)F) from CHOFBr_G4
+CCC(F)(Br)Br (CCC(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(F)(F)Br (CC(Br)C(F)(F)Br) from CHOFBr_G4
+CCC(F)C(F)(Br)Br (CCC(F)C(F)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(F)(F)Br (CC(F)(F)C(F)(F)Br) from CHOFBr_G4
+CC(Br)(Br)CCF (CC(Br)(Br)CCF) from CHOFBr_G4
+CC(C)(F)Br (CC(C)(F)Br) from CHOFBr_G4
+CC(C)(Br)C(F)Br (CC(C)(Br)C(F)Br) from CHOFBr_G4
+CC(C)(Br)CF (CC(C)(Br)CF) from CHOFBr_G4
+CC(Br)(Br)C(F)(F)Br (CC(Br)(Br)C(F)(F)Br) from CHOFBr_G4
+CC(F)C(Br)OBr (CC(F)C(Br)OBr) from CHOFBr_G4
+CC(F)OC(Br)Br (CC(F)OC(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(=O)Br (CC(F)(Br)C(DO)Br) from CHOFBr_G4
+CC(Br)CCF (CC(Br)CCF) from CHOFBr_G4
+CC(CF)C(F)Br (CC(CF)C(F)Br) from CHOFBr_G4
+CCOC(F)(F)Br (CCOC(F)(F)Br) from CHOFBr_G4
+CC(F)(OBr)OBr (CC(F)(OBr)OBr) from CHOFBr_G4
+CC(OBr)C(F)(F)F (CC(OBr)C(F)(F)F) from CHOFBr_G4
+CC(CF)C(Br)(Br)Br (CC(CF)C(Br)(Br)Br) from CHOFBr_G4
+CC(O)(F)C(F)Br (CC(O)(F)C(F)Br) from CHOFBr_G4
+CC(CF)CBr (CC(CF)CBr) from CHOFBr_G4
+CC(F)C(F)OBr (CC(F)C(F)OBr) from CHOFBr_G4
+CC(F)(Br)C=CF (CC(F)(Br)CDCF) from CHOFBr_G4
+CC(F)(Br)Br (CC(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(F)(F)F (CC(Br)C(F)(F)F) from CHOFBr_G4
+CC(O)(Br)C(F)F (CC(O)(Br)C(F)F) from CHOFBr_G4
+CCC(Br)C(F)Br (CCC(Br)C(F)Br) from CHOFBr_G4
+CC(F)(OBr)C(F)Br (CC(F)(OBr)C(F)Br) from CHOFBr_G4
+CC(O)C(F)Br (CC(O)C(F)Br) from CHOFBr_G4
+CC(F)(Br)C=C(F)F (CC(F)(Br)CDC(F)F) from CHOFBr_G4
+CC(C)(F)OBr (CC(C)(F)OBr) from CHOFBr_G4
+CC(Br)(Br)C=CF (CC(Br)(Br)CDCF) from CHOFBr_G4
+CC(F)(F)CC(F)Br (CC(F)(F)CC(F)Br) from CHOFBr_G4
+CC(Br)(CF)CBr (CC(Br)(CF)CBr) from CHOFBr_G4
+CC(Br)C(Br)(Br)CF (CC(Br)C(Br)(Br)CF) from CHOFBr_G4
+CC(Br)CC(F)F (CC(Br)CC(F)F) from CHOFBr_G4
+C=C(F)C(C)(F)Br (CDC(F)C(C)(F)Br) from CHOFBr_G4
+CC(Br)(Br)C(Br)=CF (CC(Br)(Br)C(Br)DCF) from CHOFBr_G4
+CC(C(F)F)C(F)Br (CC(C(F)F)C(F)Br) from CHOFBr_G4
+CC(Br)CC(F)(F)Br (CC(Br)CC(F)(F)Br) from CHOFBr_G4
+COC(C)(F)Br (COC(C)(F)Br) from CHOFBr_G4
+CC(F)(F)C(C)(F)Br (CC(F)(F)C(C)(F)Br) from CHOFBr_G4
+CC(Br)(CF)OBr (CC(Br)(CF)OBr) from CHOFBr_G4
+CC(F)(F)C(C)(Br)Br (CC(F)(F)C(C)(Br)Br) from CHOFBr_G4
+CC(Br)C(C)(F)Br (CC(Br)C(C)(F)Br) from CHOFBr_G4
+CCC(O)(F)Br (CCC(O)(F)Br) from CHOFBr_G4
+CCC(F)C(Br)Br (CCC(F)C(Br)Br) from CHOFBr_G4
+CCCC(F)Br (CCCC(F)Br) from CHOFBr_G4
+CC(C)(F)CBr (CC(C)(F)CBr) from CHOFBr_G4
+CC(F)(Br)OO (CC(F)(Br)OO) from CHOFBr_G4
+CC(F)C(F)CBr (CC(F)C(F)CBr) from CHOFBr_G4
+CC(CF)OBr (CC(CF)OBr) from CHOFBr_G4
+CC(Br)(Br)C(Br)CF (CC(Br)(Br)C(Br)CF) from CHOFBr_G4
+CC(Br)CC(F)Br (CC(Br)CC(F)Br) from CHOFBr_G4
+CC(F)(F)Br (CC(F)(F)Br) from CHOFBr_G4
+CC(F)CC(F)(Br)Br (CC(F)CC(F)(Br)Br) from CHOFBr_G4
+CC(F)C(Br)CBr (CC(F)C(Br)CBr) from CHOFBr_G4
+CC(F)OC(F)Br (CC(F)OC(F)Br) from CHOFBr_G4
+CC(C)(F)C(Br)Br (CC(C)(F)C(Br)Br) from CHOFBr_G4
+CCC(F)(F)C(F)Br (CCC(F)(F)C(F)Br) from CHOFBr_G4
+CC(F)(Br)CO (CC(F)(Br)CO) from CHOFBr_G4
+CC(F)(Br)C(F)=CF (CC(F)(Br)C(F)DCF) from CHOFBr_G4
+CC(Br)C(F)=C(F)F (CC(Br)C(F)DC(F)F) from CHOFBr_G4
+CCC(F)(Br)C(F)F (CCC(F)(Br)C(F)F) from CHOFBr_G4
+CC(Br)C(F)CF (CC(Br)C(F)CF) from CHOFBr_G4
+CC(F)(OBr)C(Br)Br (CC(F)(OBr)C(Br)Br) from CHOFBr_G4
+CC(F)CC(F)(F)Br (CC(F)CC(F)(F)Br) from CHOFBr_G4
+CC(C)(Br)C(F)(F)F (CC(C)(Br)C(F)(F)F) from CHOFBr_G4
+CC(OBr)C(F)(Br)Br (CC(OBr)C(F)(Br)Br) from CHOFBr_G4
+CC(C(F)F)C(Br)Br (CC(C(F)F)C(Br)Br) from CHOFBr_G4
+CC(F)C(F)C(Br)Br (CC(F)C(F)C(Br)Br) from CHOFBr_G4
+CC(C)(F)C(F)(Br)Br (CC(C)(F)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)CF (CC(Br)CF) from CHOFBr_G4
+CCC(F)(F)CBr (CCC(F)(F)CBr) from CHOFBr_G4
+CC(Br)(Br)C(F)F (CC(Br)(Br)C(F)F) from CHOFBr_G4
+CCCC(F)(Br)Br (CCCC(F)(Br)Br) from CHOFBr_G4
+CCC(Br)=C(F)F (CCC(Br)DC(F)F) from CHOFBr_G4
+CC(Br)C(C)(F)F (CC(Br)C(C)(F)F) from CHOFBr_G4
+CC(Br)(CBr)C(F)Br (CC(Br)(CBr)C(F)Br) from CHOFBr_G4
+CC(F)C(Br)C(Br)Br (CC(F)C(Br)C(Br)Br) from CHOFBr_G4
+CC(Br)C(Br)=C(F)Br (CC(Br)C(Br)DC(F)Br) from CHOFBr_G4
+CC(Br)C(F)C(F)F (CC(Br)C(F)C(F)F) from CHOFBr_G4
+CC(CF)C(F)(F)Br (CC(CF)C(F)(F)Br) from CHOFBr_G4
+CC(F)(F)CBr (CC(F)(F)CBr) from CHOFBr_G4
+CC(F)OBr (CC(F)OBr) from CHOFBr_G4
+CC(Br)C(F)Br (CC(Br)C(F)Br) from CHOFBr_G4
+CC(F)(F)C(Br)CBr (CC(F)(F)C(Br)CBr) from CHOFBr_G4
+CC(F)(F)C(F)(Br)Br (CC(F)(F)C(F)(Br)Br) from CHOFBr_G4
+CC(F)(F)CCBr (CC(F)(F)CCBr) from CHOFBr_G4
+CC(C)C(F)(Br)Br (CC(C)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)C(F)=CF (CC(Br)C(F)DCF) from CHOFBr_G4
+CC(F)(OF)OBr (CC(F)(OF)OBr) from CHOFBr_G4
+CC(O)C(F)(F)Br (CC(O)C(F)(F)Br) from CHOFBr_G4
+CC(Br)C=CF (CC(Br)CDCF) from CHOFBr_G4
+CC(F)(F)OCBr (CC(F)(F)OCBr) from CHOFBr_G4
+CC(F)(F)C(=O)Br (CC(F)(F)C(DO)Br) from CHOFBr_G4
+CC(F)(Br)CC(F)F (CC(F)(Br)CC(F)F) from CHOFBr_G4
+CC(Br)(CBr)C(F)F (CC(Br)(CBr)C(F)F) from CHOFBr_G4
+CC(Br)C(F)(Br)Br (CC(Br)C(F)(Br)Br) from CHOFBr_G4
+CC(O)(F)C(Br)Br (CC(O)(F)C(Br)Br) from CHOFBr_G4
+CC(O)(F)C(Br)(Br)Br (CC(O)(F)C(Br)(Br)Br) from CHOFBr_G4
+CCC(F)(Br)C(Br)Br (CCC(F)(Br)C(Br)Br) from CHOFBr_G4
+CC(F)CC(F)Br (CC(F)CC(F)Br) from CHOFBr_G4
+CC(F)(CF)OBr (CC(F)(CF)OBr) from CHOFBr_G4
+CC(C)C(F)Br (CC(C)C(F)Br) from CHOFBr_G4
+CCC(F)CBr (CCC(F)CBr) from CHOFBr_G4
+CC(F)(F)C(F)OBr (CC(F)(F)C(F)OBr) from CHOFBr_G4
+CC(O)(F)OBr (CC(O)(F)OBr) from CHOFBr_G4
+CCC(F)(Br)CBr (CCC(F)(Br)CBr) from CHOFBr_G4
+CC(F)(F)C(O)Br (CC(F)(F)C(O)Br) from CHOFBr_G4
+CC(F)OC(F)(F)Br (CC(F)OC(F)(F)Br) from CHOFBr_G4
+CC(O)(Br)C(F)(Br)Br (CC(O)(Br)C(F)(Br)Br) from CHOFBr_G4
+CCOC(F)Br (CCOC(F)Br) from CHOFBr_G4
+C=C(F)C(C)Br (CDC(F)C(C)Br) from CHOFBr_G4
+CCC(Br)C(F)(F)F (CCC(Br)C(F)(F)F) from CHOFBr_G4
+CC(F)(CF)C(F)Br (CC(F)(CF)C(F)Br) from CHOFBr_G4
+CCC(C)(F)Br (CCC(C)(F)Br) from CHOFBr_G4
+CC(F)(CF)C(Br)Br (CC(F)(CF)C(Br)Br) from CHOFBr_G4
+CC(F)C(Br)(Br)Br (CC(F)C(Br)(Br)Br) from CHOFBr_G4
+CC(F)(F)C(O)(F)Br (CC(F)(F)C(O)(F)Br) from CHOFBr_G4
+CC(C)(F)C(F)Br (CC(C)(F)C(F)Br) from CHOFBr_G4
+CC(F)(CBr)CBr (CC(F)(CBr)CBr) from CHOFBr_G4
+CC(Br)C(Br)C(F)Br (CC(Br)C(Br)C(F)Br) from CHOFBr_G4
+CC(Br)C=C(F)Br (CC(Br)CDC(F)Br) from CHOFBr_G4
+CCC(Br)(Br)CF (CCC(Br)(Br)CF) from CHOFBr_G4
+CCC(Br)C(F)(F)Br (CCC(Br)C(F)(F)Br) from CHOFBr_G4
+CC(O)(Br)CF (CC(O)(Br)CF) from CHOFBr_G4
+CC(F)CC(Br)Br (CC(F)CC(Br)Br) from CHOFBr_G4
+CC(F)(CBr)C(F)F (CC(F)(CBr)C(F)F) from CHOFBr_G4
+CC(F)C(F)(Br)Br (CC(F)C(F)(Br)Br) from CHOFBr_G4
+CC(Br)(Br)CC(F)F (CC(Br)(Br)CC(F)F) from CHOFBr_G4
+CC(Br)C(Br)=CF (CC(Br)C(Br)DCF) from CHOFBr_G4
+CC(F)C(Br)(Br)CBr (CC(F)C(Br)(Br)CBr) from CHOFBr_G4
+CCC(Br)C(F)F (CCC(Br)C(F)F) from CHOFBr_G4
+CC(Br)(OBr)C(F)F (CC(Br)(OBr)C(F)F) from CHOFBr_G4
+CC(Br)(Br)C(F)(F)F (CC(Br)(Br)C(F)(F)F) from CHOFBr_G4
+CC(F)C(F)(F)OBr (CC(F)C(F)(F)OBr) from CHOFBr_G4
+CC(F)(Br)C(F)(F)F (CC(F)(Br)C(F)(F)F) from CHOFBr_G4
+CCC(F)C(F)Br (CCC(F)C(F)Br) from CHOFBr_G4
+CC(CBr)C(F)(F)Br (CC(CBr)C(F)(F)Br) from CHOFBr_G4
+CC(F)C(C)(Br)Br (CC(F)C(C)(Br)Br) from CHOFBr_G4
+CC(O)C(F)(Br)Br (CC(O)C(F)(Br)Br) from CHOFBr_G4
+CC(F)C(F)(Br)CBr (CC(F)C(F)(Br)CBr) from CHOFBr_G4
+CC(O)(F)C(F)(F)Br (CC(O)(F)C(F)(F)Br) from CHOFBr_G4
+CC(Br)C(F)(Br)CF (CC(Br)C(F)(Br)CF) from CHOFBr_G4
+CC(Br)C(F)F (CC(Br)C(F)F) from CHOFBr_G4
+CC(F)(Br)OOBr (CC(F)(Br)OOBr) from CHOFBr_G4
+CC(F)(F)C(Br)Br (CC(F)(F)C(Br)Br) from CHOFBr_G4
+CC(CF)C(Br)Br (CC(CF)C(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(Br)OBr (CC(F)(Br)C(Br)OBr) from CHOFBr_G4
+CC(F)(Br)OC(Br)Br (CC(F)(Br)OC(Br)Br) from CHOFBr_G4
+CC(F)(Br)C(O)(Br)Br (CC(F)(Br)C(O)(Br)Br) from CHOFBr_G4
+CC(F)C(F)(F)Br (CC(F)C(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)COBr (CC(F)(Br)COBr) from CHOFBr_G4
+CCC(Br)(Br)C(F)Br (CCC(Br)(Br)C(F)Br) from CHOFBr_G4
+CC(F)CCBr (CC(F)CCBr) from CHOFBr_G4
+CC(F)(F)CC(Br)Br (CC(F)(F)CC(Br)Br) from CHOFBr_G4
+CC(F)(OBr)C(F)F (CC(F)(OBr)C(F)F) from CHOFBr_G4
+CC(OF)OBr (CC(OF)OBr) from CHOFBr_G4
+CC(Br)(Br)C=C(F)F (CC(Br)(Br)CDC(F)F) from CHOFBr_G4
+CC(F)C(F)Br (CC(F)C(F)Br) from CHOFBr_G4
+CC(Br)(OBr)C(F)Br (CC(Br)(OBr)C(F)Br) from CHOFBr_G4
+CC(O)(Br)C(F)(F)Br (CC(O)(Br)C(F)(F)Br) from CHOFBr_G4
+CC(F)OCBr (CC(F)OCBr) from CHOFBr_G4
+CC(F)(Br)C(O)Br (CC(F)(Br)C(O)Br) from CHOFBr_G4
+CC(F)(Br)OBr (CC(F)(Br)OBr) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 904,
+    index = 980,
     label = "Cs-CdsHHH",
     group = 
 """
@@ -20270,7 +27759,7 @@ entry(
 )
 
 entry(
-    index = 905,
+    index = 981,
     label = "Cs-(Cds-O2d)HHH",
     group = 
 """
@@ -20297,7 +27786,157 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 906,
+    index = 982,
+    label = "Cs-(O2dH)COHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2d u0 {2,D}
+7   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.6926,31.9814,38.2109,44.1504,53.3604,60.7031,70.9395],'J/(mol*K)','+|-',[3.95537,4.13469,3.87658,3.59953,3.12081,2.77127,5.3564]),
+        H298 = (-57.1103,'kJ/mol','+|-',19.0931),
+        S298 = (117.467,'J/(mol*K)','+|-',10.8696),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC=O (CH3CHO) from C1_C3_hydrofluorocarbons_NIST
+""",
+)
+
+entry(
+    index = 983,
+    label = "Cs-(CsO2d)COHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2d u0 {2,D}
+7   Cs  u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.1138,31.7216,37.9582,43.5759,52.7766,60.008,72.1407],'J/(mol*K)','+|-',[1.42836,1.49311,1.3999,1.29985,1.12698,1.00076,1.93429]),
+        H298 = (-50.7308,'kJ/mol','+|-',6.89487),
+        S298 = (122.051,'J/(mol*K)','+|-',3.92522),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)C(F)(F)F (CF3COCH3) from C1_C3_hydrofluorocarbons_NIST
+CC(=O)C(F)(F)F (CC(DO)C(F)(F)F) from CHOF_G4
+CC(=O)C(F)F (CC(DO)C(F)F) from CHOF_G4
+CC(=O)CF (CC(DO)CF) from CHOF_G4
+CC(=O)C(F)(Cl)Cl (CC(DO)C(F)(Cl)Cl) from CHOFCl_G4
+CC(=O)C(F)Cl (CC(DO)C(F)Cl) from CHOFCl_G4
+CC(=O)C(F)(F)Cl (CC(DO)C(F)(F)Cl) from CHOFCl_G4
+CC(=O)C(F)(Cl)Br (CC(DO)C(F)(Cl)Br) from CHOFClBr_G4
+CC(=O)C(F)(F)Br (CC(DO)C(F)(F)Br) from CHOFBr_G4
+CC(=O)C(F)Br (CC(DO)C(F)Br) from CHOFBr_G4
+CC(=O)C(F)(Br)Br (CC(DO)C(F)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 984,
+    label = "Cs-(C2sO2d)COHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,D} {7,S}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2d u0 {2,D}
+7   C2s u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.7252,30.0355,34.985,39.3589,46.2027,51.0892,57.9962],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65514]),
+        H298 = (-88.5008,'kJ/mol','+|-',9.46438),
+        S298 = (88.4053,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)[C]F (CC(DO)[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 985,
+    label = "Cs-(F1sO2d)COHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,S} {7,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   F1s u0 {2,S}
+7   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([23.6413,29.554,35.8337,42.1293,52.5792,59.8603,71.5401],'J/(mol*K)','+|-',[3.9689,4.14883,3.88984,3.61184,3.13148,2.78075,5.37472]),
+        H298 = (-84.6997,'kJ/mol','+|-',19.1584),
+        S298 = (115.023,'J/(mol*K)','+|-',10.9068),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)F (CC(DO)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 986,
+    label = "Cs-(O2dO2s)COHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {6,S} {7,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2s u0 {2,S}
+7   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([28.3048,34.3482,39.6738,44.4896,52.2784,58.3327,68.5527],'J/(mol*K)','+|-',[4.10783,4.29406,4.026,3.73827,3.2411,2.87809,5.56286]),
+        H298 = (-64.4226,'kJ/mol','+|-',19.8291),
+        S298 = (118.57,'J/(mol*K)','+|-',11.2886),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=O)OF (CC(DO)OF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 987,
     label = "Cs-(Cds-Cd)HHH",
     group = 
 """
@@ -20317,7 +27956,7 @@ entry(
 )
 
 entry(
-    index = 907,
+    index = 988,
     label = "Cs-(Cds-Cds)HHH",
     group = 
 """
@@ -20342,7 +27981,336 @@ entry(
 )
 
 entry(
-    index = 908,
+    index = 989,
+    label = "Cs-(CdH)CdHHH",
+    group = 
+"""
+1 * Cs u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd u0 {1,S} {6,D} {7,S}
+3   H  u0 {1,S}
+4   H  u0 {1,S}
+5   H  u0 {1,S}
+6   Cd u0 {2,D}
+7   H  u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.5214,31.311,37.9533,43.9272,53.3717,60.8066,72.44],'J/(mol*K)','+|-',[0.709256,0.74141,0.695127,0.645448,0.559607,0.496929,0.96048]),
+        H298 = (-34.4889,'kJ/mol','+|-',3.42367),
+        S298 = (117.883,'J/(mol*K)','+|-',1.94908),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=CC (C3H6) from C1_C3_hydrofluorocarbons_NIST
+CC=C(F)C(F)F (CCDC(F)C(F)F) from CHOF_G4
+CC=C(F)CF (CCDC(F)CF) from CHOF_G4
+CC=C(F)OF (CCDC(F)OF) from CHOF_G4
+CC=C(F)C(F)(F)F (CCDC(F)C(F)(F)F) from CHOF_G4
+CC=CF (CCDCF) from CHOF_G4
+CC=C(C)F (CCDC(C)F) from CHOF_G4
+CC=CC(F)F (CCDCC(F)F) from CHOF_G4
+CC=C(F)F (CCDC(F)F) from CHOF_G4
+CC=CC(F)(F)F (CCDCC(F)(F)F) from CHOF_G4
+CC=CCF (CCDCCF) from CHOF_G4
+CC=C(F)C(F)Cl (CCDC(F)C(F)Cl) from CHOFCl_G4
+CC=C(F)CCl (CCDC(F)CCl) from CHOFCl_G4
+CC=C(Cl)CF (CCDC(Cl)CF) from CHOFCl_G4
+CC=C(Cl)C(F)F (CCDC(Cl)C(F)F) from CHOFCl_G4
+CC=C(Cl)C(F)Cl (CCDC(Cl)C(F)Cl) from CHOFCl_G4
+CC=C(F)C(Cl)Cl (CCDC(F)C(Cl)Cl) from CHOFCl_G4
+CC=C(F)OCl (CCDC(F)OCl) from CHOFCl_G4
+CC=C(F)Cl (CCDC(F)Cl) from CHOFCl_G4
+CC=C(Br)C(F)Cl (CCDC(Br)C(F)Cl) from CHOFClBr_G4
+CC=C(F)C(Cl)Br (CCDC(F)C(Cl)Br) from CHOFClBr_G4
+CC=C(F)Br (CCDC(F)Br) from CHOFBr_G4
+CC=C(F)C(Br)(Br)Br (CCDC(F)C(Br)(Br)Br) from CHOFBr_G4
+CC=C(Br)C(F)(Br)Br (CCDC(Br)C(F)(Br)Br) from CHOFBr_G4
+CC=C(F)C(F)(F)Br (CCDC(F)C(F)(F)Br) from CHOFBr_G4
+CC=C(F)OBr (CCDC(F)OBr) from CHOFBr_G4
+CC=C(Br)CF (CCDC(Br)CF) from CHOFBr_G4
+CC=C(F)C(Br)Br (CCDC(F)C(Br)Br) from CHOFBr_G4
+CC=C(Br)C(F)(F)Br (CCDC(Br)C(F)(F)Br) from CHOFBr_G4
+CC=C(Br)C(F)(F)F (CCDC(Br)C(F)(F)F) from CHOFBr_G4
+CC=C(Br)C(F)Br (CCDC(Br)C(F)Br) from CHOFBr_G4
+CC=C(F)CBr (CCDC(F)CBr) from CHOFBr_G4
+CC=C(Br)C(F)F (CCDC(Br)C(F)F) from CHOFBr_G4
+CC=C(F)C(F)Br (CCDC(F)C(F)Br) from CHOFBr_G4
+CC=C(F)C(F)(Br)Br (CCDC(F)C(F)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 990,
+    label = "Cs-(CdCs)CdHHH",
+    group = 
+"""
+1 * Cs u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd u0 {1,S} {6,S} {7,D}
+3   H  u0 {1,S}
+4   H  u0 {1,S}
+5   H  u0 {1,S}
+6   Cs u0 {2,S}
+7   Cd u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([23.8933,31.0445,37.7755,43.9061,53.5364,61.0735,73.3377],'J/(mol*K)','+|-',[0.512923,0.536177,0.502705,0.466778,0.404699,0.359372,0.694605]),
+        H298 = (-57.7332,'kJ/mol','+|-',2.47595),
+        S298 = (117.783,'J/(mol*K)','+|-',1.40955),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(=CF)C(F)(F)F (CC(DCF)C(F)(F)F) from CHOF_G4
+CC(C)=C(F)F (CC(C)DC(F)F) from CHOF_G4
+C=C(C)C(F)(F)F (CDC(C)C(F)(F)F) from CHOF_G4
+CC(=C(F)F)C(F)(F)F (CC(DC(F)F)C(F)(F)F) from CHOF_G4
+C=C(C)CF (CDC(C)CF) from CHOF_G4
+CC(=CF)CF (CC(DCF)CF) from CHOF_G4
+CC(=C(F)F)C(F)F (CC(DC(F)F)C(F)F) from CHOF_G4
+CC(CF)=C(F)F (CC(CF)DC(F)F) from CHOF_G4
+CC(C)=CF (CC(C)DCF) from CHOF_G4
+CC(=CF)C(F)F (CC(DCF)C(F)F) from CHOF_G4
+C=C(C)C(F)F (CDC(C)C(F)F) from CHOF_G4
+CC1=C(F)C1 (CC1DC(F)C1) from CHOF_G4
+CC1=C(F)C1F (CC1DC(F)C1F) from CHOF_G4
+CC1=C(F)C1(F)F (CC1DC(F)C1(F)F) from CHOF_G4
+CC1=CC1(F)F (CC1DCC1(F)F) from CHOF_G4
+CC1=CC1F (CC1DCC1F) from CHOF_G4
+CC(=CF)C(Cl)Cl (CC(DCF)C(Cl)Cl) from CHOFCl_G4
+CC(=CF)CCl (CC(DCF)CCl) from CHOFCl_G4
+CC(CCl)=C(F)F (CC(CCl)DC(F)F) from CHOFCl_G4
+C=C(C)C(F)(F)Cl (CDC(C)C(F)(F)Cl) from CHOFCl_G4
+CC(C)=C(F)Cl (CC(C)DC(F)Cl) from CHOFCl_G4
+CC(CCl)=C(F)Cl (CC(CCl)DC(F)Cl) from CHOFCl_G4
+CC(=CF)C(F)Cl (CC(DCF)C(F)Cl) from CHOFCl_G4
+C=C(C)C(F)(Cl)Cl (CDC(C)C(F)(Cl)Cl) from CHOFCl_G4
+C=C(C)C(F)Cl (CDC(C)C(F)Cl) from CHOFCl_G4
+C=C(C)C(F)(Cl)Br (CDC(C)C(F)(Cl)Br) from CHOFClBr_G4
+CC(CBr)=C(F)Cl (CC(CBr)DC(F)Cl) from CHOFClBr_G4
+CC(=CF)C(F)(Cl)Br (CC(DCF)C(F)(Cl)Br) from CHOFClBr_G4
+CC(=C(F)Cl)C(Cl)Br (CC(DC(F)Cl)C(Cl)Br) from CHOFClBr_G4
+CC(=CF)C(Cl)(Br)Br (CC(DCF)C(Cl)(Br)Br) from CHOFClBr_G4
+CC(=C(F)F)C(Cl)Br (CC(DC(F)F)C(Cl)Br) from CHOFClBr_G4
+CC(=C(F)Cl)C(Br)Br (CC(DC(F)Cl)C(Br)Br) from CHOFClBr_G4
+CC(=CF)C(Cl)(Cl)Br (CC(DCF)C(Cl)(Cl)Br) from CHOFClBr_G4
+CC(=CF)C(Cl)Br (CC(DCF)C(Cl)Br) from CHOFClBr_G4
+C=C(C)C(F)Br (CDC(C)C(F)Br) from CHOFBr_G4
+CC(=CF)C(F)Br (CC(DCF)C(F)Br) from CHOFBr_G4
+CC(=CF)C(Br)(Br)Br (CC(DCF)C(Br)(Br)Br) from CHOFBr_G4
+CC(=CF)C(F)(Br)Br (CC(DCF)C(F)(Br)Br) from CHOFBr_G4
+CC(=C(F)Br)C(Br)Br (CC(DC(F)Br)C(Br)Br) from CHOFBr_G4
+C=C(C)C(F)(Br)Br (CDC(C)C(F)(Br)Br) from CHOFBr_G4
+CC(C)=C(F)Br (CC(C)DC(F)Br) from CHOFBr_G4
+C=C(C)C(F)(F)Br (CDC(C)C(F)(F)Br) from CHOFBr_G4
+CC(=CF)C(F)(F)Br (CC(DCF)C(F)(F)Br) from CHOFBr_G4
+CC(=CF)C(Br)Br (CC(DCF)C(Br)Br) from CHOFBr_G4
+CC(=CF)CBr (CC(DCF)CBr) from CHOFBr_G4
+CC(CBr)=C(F)Br (CC(CBr)DC(F)Br) from CHOFBr_G4
+CC(=C(F)F)C(F)Br (CC(DC(F)F)C(F)Br) from CHOFBr_G4
+CC(=C(F)F)C(Br)Br (CC(DC(F)F)C(Br)Br) from CHOFBr_G4
+CC(CBr)=C(F)F (CC(CBr)DC(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 991,
+    label = "Cs-(CdO2s)CdHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {6,S} {7,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2s u0 {2,S}
+7   Cd  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([26.2486,31.9555,38.6457,45.2678,55.0208,62.595,74.2399],'J/(mol*K)','+|-',[1.05257,1.10029,1.03161,0.95788,0.830487,0.73747,1.42541]),
+        H298 = (-30.824,'kJ/mol','+|-',5.08092),
+        S298 = (118.421,'J/(mol*K)','+|-',2.89255),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(O)=CF (CC(O)DCF) from CHOF_G4
+C=C(C)OF (CDC(C)OF) from CHOF_G4
+CC(OF)=C(F)F (CC(OF)DC(F)F) from CHOF_G4
+CC(=CF)OF (CC(DCF)OF) from CHOF_G4
+CC(O)=C(F)F (CC(O)DC(F)F) from CHOF_G4
+CC(OCl)=C(F)F (CC(OCl)DC(F)F) from CHOFCl_G4
+CC(OCl)=C(F)Cl (CC(OCl)DC(F)Cl) from CHOFCl_G4
+CC(=CF)OCl (CC(DCF)OCl) from CHOFCl_G4
+CC(O)=C(F)Cl (CC(O)DC(F)Cl) from CHOFCl_G4
+CC(OBr)=C(F)Cl (CC(OBr)DC(F)Cl) from CHOFClBr_G4
+CC(OBr)=C(F)Br (CC(OBr)DC(F)Br) from CHOFBr_G4
+CC(O)=C(F)Br (CC(O)DC(F)Br) from CHOFBr_G4
+CC(=CF)OBr (CC(DCF)OBr) from CHOFBr_G4
+CC(OBr)=C(F)F (CC(OBr)DC(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 992,
+    label = "Cs-(CdF1s)CdHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {6,S} {7,D}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   F1s u0 {2,S}
+7   Cd  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.119,30.8549,37.6607,43.8486,53.7358,61.3211,73.52],'J/(mol*K)','+|-',[0.639511,0.668504,0.626772,0.581978,0.504578,0.448064,0.866032]),
+        H298 = (-44.4314,'kJ/mol','+|-',3.08701),
+        S298 = (118.007,'J/(mol*K)','+|-',1.75742),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(F)=C(F)F (CC(F)DC(F)F) from CHOF_G4
+CC(F)=CF (CC(F)DCF) from CHOF_G4
+CC(F)=C(F)C(F)(F)F (CC(F)DC(F)C(F)(F)F) from CHOF_G4
+CC(F)=C(C)F (CC(F)DC(C)F) from CHOF_G4
+CC(F)=CC(F)(F)F (CC(F)DCC(F)(F)F) from CHOF_G4
+CC(F)=C(F)CF (CC(F)DC(F)CF) from CHOF_G4
+CC(F)=C(F)OF (CC(F)DC(F)OF) from CHOF_G4
+CC(F)=CC(F)F (CC(F)DCC(F)F) from CHOF_G4
+C=C(C)F (CDC(C)F) from CHOF_G4
+CC(F)=C(F)C(F)F (CC(F)DC(F)C(F)F) from CHOF_G4
+CC=C(C)F (CCDC(C)F) from CHOF_G4
+CC(F)=C(O)F (CC(F)DC(O)F) from CHOF_G4
+CC(F)=CCF (CC(F)DCCF) from CHOF_G4
+CC(F)=COF (CC(F)DCOF) from CHOF_G4
+CC(F)=CO (CC(F)DCO) from CHOF_G4
+CC(F)=C(Cl)OCl (CC(F)DC(Cl)OCl) from CHOFCl_G4
+CC(F)=C(F)OCl (CC(F)DC(F)OCl) from CHOFCl_G4
+CC(F)=C(C)Cl (CC(F)DC(C)Cl) from CHOFCl_G4
+CC(F)=C(O)Cl (CC(F)DC(O)Cl) from CHOFCl_G4
+CC(F)=CCCl (CC(F)DCCCl) from CHOFCl_G4
+CC(F)=COCl (CC(F)DCOCl) from CHOFCl_G4
+CC(F)=CC(F)Cl (CC(F)DCC(F)Cl) from CHOFCl_G4
+CC(F)=CC(Cl)Cl (CC(F)DCC(Cl)Cl) from CHOFCl_G4
+CC(F)=C(F)CCl (CC(F)DC(F)CCl) from CHOFCl_G4
+CC(F)=C(Cl)CCl (CC(F)DC(Cl)CCl) from CHOFCl_G4
+CC(F)=C(Cl)CBr (CC(F)DC(Cl)CBr) from CHOFClBr_G4
+CC(F)=CC(Cl)Br (CC(F)DCC(Cl)Br) from CHOFClBr_G4
+CC(F)=C(Cl)OBr (CC(F)DC(Cl)OBr) from CHOFClBr_G4
+CC(F)=CC(F)(F)Br (CC(F)DCC(F)(F)Br) from CHOFBr_G4
+CC(F)=C(F)CBr (CC(F)DC(F)CBr) from CHOFBr_G4
+CC(F)=CC(Br)Br (CC(F)DCC(Br)Br) from CHOFBr_G4
+CC(F)=C(Br)C(Br)Br (CC(F)DC(Br)C(Br)Br) from CHOFBr_G4
+CC(F)=CC(F)Br (CC(F)DCC(F)Br) from CHOFBr_G4
+CC(F)=C(Br)CBr (CC(F)DC(Br)CBr) from CHOFBr_G4
+CC(F)=COBr (CC(F)DCOBr) from CHOFBr_G4
+CC(F)=CC(F)(Br)Br (CC(F)DCC(F)(Br)Br) from CHOFBr_G4
+CC(F)=CCBr (CC(F)DCCBr) from CHOFBr_G4
+CC(F)=C(Br)OBr (CC(F)DC(Br)OBr) from CHOFBr_G4
+CC(F)=C(F)C(Br)Br (CC(F)DC(F)C(Br)Br) from CHOFBr_G4
+CC(F)=C(O)Br (CC(F)DC(O)Br) from CHOFBr_G4
+CC(F)=C(C)Br (CC(F)DC(C)Br) from CHOFBr_G4
+CC(F)=CC(Br)(Br)Br (CC(F)DCC(Br)(Br)Br) from CHOFBr_G4
+CC(F)=C(F)C(F)Br (CC(F)DC(F)C(F)Br) from CHOFBr_G4
+CC(F)=C(F)OBr (CC(F)DC(F)OBr) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 993,
+    label = "Cs-(CdCl1s)CdHHH",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd   u0 {1,S} {6,S} {7,D}
+3   H    u0 {1,S}
+4   H    u0 {1,S}
+5   H    u0 {1,S}
+6   Cl1s u0 {2,S}
+7   Cd   u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.4847,31.7782,38.3891,44.2145,53.29,60.5024,72.473],'J/(mol*K)','+|-',[1.39413,1.45733,1.36635,1.2687,1.09997,0.976774,1.88794]),
+        H298 = (-37.4527,'kJ/mol','+|-',6.72964),
+        S298 = (119.664,'J/(mol*K)','+|-',3.83115),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(F)=C(C)Cl (CC(F)DC(C)Cl) from CHOFCl_G4
+CC(Cl)=CF (CC(Cl)DCF) from CHOFCl_G4
+CC(Cl)=C(Cl)CF (CC(Cl)DC(Cl)CF) from CHOFCl_G4
+CC(Cl)=CC(F)F (CC(Cl)DCC(F)F) from CHOFCl_G4
+CC(Cl)=C(F)Cl (CC(Cl)DC(F)Cl) from CHOFCl_G4
+CC(Cl)=CCF (CC(Cl)DCCF) from CHOFCl_G4
+CC(Cl)=C(F)CF (CC(Cl)DC(F)CF) from CHOFCl_G4
+CC(Cl)=C(F)F (CC(Cl)DC(F)F) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 994,
+    label = "Cs-(Br1sCd)CdHHH",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd   u0 {1,S} {6,S} {7,D}
+3   H    u0 {1,S}
+4   H    u0 {1,S}
+5   H    u0 {1,S}
+6   Br1s u0 {2,S}
+7   Cd   u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.5937,31.8218,38.3896,44.2854,53.6013,61.1368,73.519],'J/(mol*K)','+|-',[0.958563,1.00202,0.939468,0.872327,0.756312,0.671603,1.2981]),
+        H298 = (-29.095,'kJ/mol','+|-',4.62712),
+        S298 = (121.258,'J/(mol*K)','+|-',2.6342),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(Br)=C(Cl)C(F)Cl (CC(Br)DC(Cl)C(F)Cl) from CHOFClBr_G4
+CC(Br)=C(Cl)CF (CC(Br)DC(Cl)CF) from CHOFClBr_G4
+CC(Br)=C(Br)C(F)Cl (CC(Br)DC(Br)C(F)Cl) from CHOFClBr_G4
+CC(Br)=C(Cl)C(F)F (CC(Br)DC(Cl)C(F)F) from CHOFClBr_G4
+CC(Br)=C(F)Cl (CC(Br)DC(F)Cl) from CHOFClBr_G4
+CC(Br)=C(F)Br (CC(Br)DC(F)Br) from CHOFBr_G4
+CC(Br)=C(F)CF (CC(Br)DC(F)CF) from CHOFBr_G4
+CC(Br)=CF (CC(Br)DCF) from CHOFBr_G4
+CC(Br)=C(Br)C(F)F (CC(Br)DC(Br)C(F)F) from CHOFBr_G4
+CC(Br)=C(Br)C(F)Br (CC(Br)DC(Br)C(F)Br) from CHOFBr_G4
+CC(Br)=C(F)F (CC(Br)DC(F)F) from CHOFBr_G4
+CC(Br)=CC(F)(F)F (CC(Br)DCC(F)(F)F) from CHOFBr_G4
+CC(Br)=C(F)C(F)F (CC(Br)DC(F)C(F)F) from CHOFBr_G4
+CC(F)=C(C)Br (CC(F)DC(C)Br) from CHOFBr_G4
+CC(Br)=CC(F)F (CC(Br)DCC(F)F) from CHOFBr_G4
+CC(Br)=CCF (CC(Br)DCCF) from CHOFBr_G4
+CC(Br)=C(Br)CF (CC(Br)DC(Br)CF) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 995,
     label = "Cs-(Cds-Cdd)HHH",
     group = 
 """
@@ -20362,7 +28330,7 @@ entry(
 )
 
 entry(
-    index = 909,
+    index = 996,
     label = "Cs-(Cds-Cdd-O2d)HHH",
     group = 
 """
@@ -20390,7 +28358,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 910,
+    index = 997,
     label = "Cs-(Cds-Cdd-S2d)HHH",
     group = 
 """
@@ -20411,7 +28379,7 @@ entry(
 )
 
 entry(
-    index = 911,
+    index = 998,
     label = "Cs-(Cds-Cdd-Cd)HHH",
     group = 
 """
@@ -20432,7 +28400,101 @@ entry(
 )
 
 entry(
-    index = 912,
+    index = 999,
+    label = "Cs-((Cd)(HHH)CddF1s)((H))((HH))Cd",
+    group = 
+"""
+1 * Cs  u0 {2,S} {4,S} {5,S} {6,S}
+2   Cd  u0 {1,S} {3,D} {7,S}
+3   Cdd u0 {2,D} {8,D}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   H   u0 {1,S}
+7   F1s u0 {2,S}
+8   Cd  u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.788,31.8876,38.5701,44.6635,54.2859,61.6718,73.4512],'J/(mol*K)','+|-',[2.32996,2.43559,2.28355,2.12035,1.83835,1.63245,3.15525]),
+        H298 = (-44.5342,'kJ/mol','+|-',11.247),
+        S298 = (117.614,'J/(mol*K)','+|-',6.40289),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C=C=C(C)F (CDCDC(C)F) from CHOF_G4
+CC(F)=C=C(F)F (CC(F)DCDC(F)F) from CHOF_G4
+CC(F)=C=CF (CC(F)DCDCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1000,
+    label = "Cs-((Cd)(HHH)CddCl1s)((H))((HH))Cd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {4,S} {5,S} {6,S}
+2   Cd   u0 {1,S} {3,D} {7,S}
+3   Cdd  u0 {2,D} {8,D}
+4   H    u0 {1,S}
+5   H    u0 {1,S}
+6   H    u0 {1,S}
+7   Cl1s u0 {2,S}
+8   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.5,32.474,39.0633,45.1215,54.6313,61.9177,73.2408],'J/(mol*K)','+|-',[2.26398,2.36662,2.21888,2.0603,1.78629,1.58622,3.0659]),
+        H298 = (-34.5315,'kJ/mol','+|-',10.9285),
+        S298 = (118.563,'J/(mol*K)','+|-',6.22156),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(Cl)=C=C(F)F (CC(Cl)DCDC(F)F) from CHOFCl_G4
+CC(Cl)=C=CF (CC(Cl)DCDCF) from CHOFCl_G4
+CC(Cl)=C=C(F)Cl (CC(Cl)DCDC(F)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 1001,
+    label = "Cs-((Cd)(HHH)Br1sCdd)((H))((HH))Cd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {4,S} {5,S} {6,S}
+2   Cd   u0 {1,S} {3,D} {7,S}
+3   Cdd  u0 {2,D} {8,D}
+4   H    u0 {1,S}
+5   H    u0 {1,S}
+6   H    u0 {1,S}
+7   Br1s u0 {2,S}
+8   Cd   u0 {3,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([26.016,33.083,39.4722,45.1626,54.2669,61.5019,73.2384],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65515]),
+        H298 = (-37.459,'kJ/mol','+|-',9.46438),
+        S298 = (120.974,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC(Br)=C=C(F)Cl (CC(Br)DCDC(F)Cl) from CHOFClBr_G4
+CC(Br)=C=CF (CC(Br)DCDCF) from CHOFBr_G4
+CC(Br)=C=C(F)F (CC(Br)DCDC(F)F) from CHOFBr_G4
+CC(Br)=C=C(F)Br (CC(Br)DCDC(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 1002,
     label = "Cs-CtHHH",
     group = 
 """
@@ -20456,7 +28518,7 @@ entry(
 )
 
 entry(
-    index = 913,
+    index = 1003,
     label = "Cs-(CtN3t)HHH",
     group = 
 """
@@ -20483,7 +28545,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 914,
+    index = 1004,
     label = "Cs-CbHHH",
     group = 
 """
@@ -20507,7 +28569,7 @@ entry(
 )
 
 entry(
-    index = 915,
+    index = 1005,
     label = "Cs-C=SHHH",
     group = 
 """
@@ -20532,7 +28594,33 @@ entry(
 )
 
 entry(
-    index = 916,
+    index = 1006,
+    label = "Cs-C2sHHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   C2s u0 {1,S}
+3   H   u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([1.93768,3.92943,6.91094,10.037,14.9556,19.168,26.3929],'J/(mol*K)','+|-',[3.56016,3.72157,3.48924,3.23988,2.80899,2.49438,4.82121]),
+        H298 = (225.463,'kJ/mol','+|-',17.1854),
+        S298 = (75.2277,'J/(mol*K)','+|-',9.78358),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+C[C]F (CH3CF) from C1_C2_Fluorine
+""",
+)
+
+entry(
+    index = 1007,
     label = "Cs-OsHHH",
     group = 
 """
@@ -20544,21 +28632,111 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([23.8251,29.9552,36.1913,41.7904,51.078,58.3149,70.9116],'J/(mol*K)','+|-',[0.415972,0.43483,0.407686,0.378549,0.328204,0.291445,0.563313]),
+        H298 = (-45.6787,'kJ/mol','+|-',2.00795),
+        S298 = (121.759,'J/(mol*K)','+|-',1.14312),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+CO (CH3OH) from C1_C3_hydrofluorocarbons_NIST
+COC(F)(F)C(F)F (COC(F)(F)C(F)F) from CHOF_G4
+COC(F)=CF (COC(F)DCF) from CHOF_G4
+COC(O)F (COC(O)F) from CHOF_G4
+COC(=O)F (COC(DO)F) from CHOF_G4
+COOCF (COOCF) from CHOF_G4
+COC(O)(F)F (COC(O)(F)F) from CHOF_G4
+COC(C)(F)F (COC(C)(F)F) from CHOF_G4
+COC(F)(F)CF (COC(F)(F)CF) from CHOF_G4
+COC=CF (COCDCF) from CHOF_G4
+COCC(F)(F)F (COCC(F)(F)F) from CHOF_G4
+COC(F)(F)OF (COC(F)(F)OF) from CHOF_G4
+COC(F)(F)C(F)(F)F (COC(F)(F)C(F)(F)F) from CHOF_G4
+COC(F)OF (COC(F)OF) from CHOF_G4
+COOC(F)(F)F (COOC(F)(F)F) from CHOF_G4
+COC(F)CF (COC(F)CF) from CHOF_G4
+C=C(F)OC (CDC(F)OC) from CHOF_G4
+COC(F)=C(F)F (COC(F)DC(F)F) from CHOF_G4
+COCC(F)F (COCC(F)F) from CHOF_G4
+COC(F)(F)F (COC(F)(F)F) from CHOF_G4
+COC(F)F (COC(F)F) from CHOF_G4
+COC(F)C(F)F (COC(F)C(F)F) from CHOF_G4
+COCF (COCF) from CHOF_G4
+COF (COF) from CHOF_G4
+COOF (COOF) from CHOF_G4
+COCOF (COCOF) from CHOF_G4
+COCCF (COCCF) from CHOF_G4
+COC=C(F)F (COCDC(F)F) from CHOF_G4
+COOC(F)F (COOC(F)F) from CHOF_G4
+CO[C]F (CO[C]F) from CHOF_G4
+COC(C)F (COC(C)F) from CHOF_G4
+COC(F)C(F)(F)F (COC(F)C(F)(F)F) from CHOF_G4
+COC(F)(F)OCl (COC(F)(F)OCl) from CHOFCl_G4
+COOC(F)(F)Cl (COOC(F)(F)Cl) from CHOFCl_G4
+COC(O)(F)Cl (COC(O)(F)Cl) from CHOFCl_G4
+COC(Cl)=C(F)F (COC(Cl)DC(F)F) from CHOFCl_G4
+COC(F)(Cl)Cl (COC(F)(Cl)Cl) from CHOFCl_G4
+COC(Cl)(Cl)CF (COC(Cl)(Cl)CF) from CHOFCl_G4
+COC(Cl)C(F)Cl (COC(Cl)C(F)Cl) from CHOFCl_G4
+COCC(F)(Cl)Cl (COCC(F)(Cl)Cl) from CHOFCl_G4
+COCC(F)(F)Cl (COCC(F)(F)Cl) from CHOFCl_G4
+COC(Cl)=CF (COC(Cl)DCF) from CHOFCl_G4
+COC(F)OCl (COC(F)OCl) from CHOFCl_G4
+COC(C)(F)Cl (COC(C)(F)Cl) from CHOFCl_G4
+COC(F)(Cl)CF (COC(F)(Cl)CF) from CHOFCl_G4
+COC(F)(F)Cl (COC(F)(F)Cl) from CHOFCl_G4
+COOC(F)Cl (COOC(F)Cl) from CHOFCl_G4
+COC(F)Cl (COC(F)Cl) from CHOFCl_G4
+COC=C(F)Cl (COCDC(F)Cl) from CHOFCl_G4
+COCC(F)Cl (COCC(F)Cl) from CHOFCl_G4
+COOC(F)(Cl)Cl (COOC(F)(Cl)Cl) from CHOFCl_G4
+COC(Cl)C(F)F (COC(Cl)C(F)F) from CHOFCl_G4
+COC(Cl)=C(F)Cl (COC(Cl)DC(F)Cl) from CHOFCl_G4
+COC(F)(Cl)OCl (COC(F)(Cl)OCl) from CHOFCl_G4
+COC(Cl)CF (COC(Cl)CF) from CHOFCl_G4
+COC(F)(Cl)OBr (COC(F)(Cl)OBr) from CHOFClBr_G4
+COOC(F)(Cl)Br (COOC(F)(Cl)Br) from CHOFClBr_G4
+COC(Cl)(Br)CF (COC(Cl)(Br)CF) from CHOFClBr_G4
+COC(Br)=C(F)Cl (COC(Br)DC(F)Cl) from CHOFClBr_G4
+COCC(F)(Cl)Br (COCC(F)(Cl)Br) from CHOFClBr_G4
+COC(F)(Cl)Br (COC(F)(Cl)Br) from CHOFClBr_G4
+COC(Br)C(F)Cl (COC(Br)C(F)Cl) from CHOFClBr_G4
+COC(Br)=CF (COC(Br)DCF) from CHOFBr_G4
+COC(Br)(Br)C(F)Br (COC(Br)(Br)C(F)Br) from CHOFBr_G4
+COC(Br)C(F)Br (COC(Br)C(F)Br) from CHOFBr_G4
+COC(Br)C(F)(F)F (COC(Br)C(F)(F)F) from CHOFBr_G4
+COCC(F)Br (COCC(F)Br) from CHOFBr_G4
+COC(Br)C(F)(F)Br (COC(Br)C(F)(F)Br) from CHOFBr_G4
+COC=C(F)Br (COCDC(F)Br) from CHOFBr_G4
+COC(Br)C(F)F (COC(Br)C(F)F) from CHOFBr_G4
+COC(F)Br (COC(F)Br) from CHOFBr_G4
+COOC(F)(Br)Br (COOC(F)(Br)Br) from CHOFBr_G4
+COOC(F)Br (COOC(F)Br) from CHOFBr_G4
+COC(F)(Br)OBr (COC(F)(Br)OBr) from CHOFBr_G4
+COC(F)(F)Br (COC(F)(F)Br) from CHOFBr_G4
+COC(F)(Br)C(F)F (COC(F)(Br)C(F)F) from CHOFBr_G4
+COC(C)(F)Br (COC(C)(F)Br) from CHOFBr_G4
+COC(F)OBr (COC(F)OBr) from CHOFBr_G4
+COC(Br)=C(F)Br (COC(Br)DC(F)Br) from CHOFBr_G4
+COCC(F)(F)Br (COCC(F)(F)Br) from CHOFBr_G4
+COC(Br)(Br)CF (COC(Br)(Br)CF) from CHOFBr_G4
+COC(Br)CF (COC(Br)CF) from CHOFBr_G4
+COC(Br)C(F)(Br)Br (COC(Br)C(F)(Br)Br) from CHOFBr_G4
+COC(F)(Br)Br (COC(F)(Br)Br) from CHOFBr_G4
+COC(O)(F)Br (COC(O)(F)Br) from CHOFBr_G4
+COOC(F)(F)Br (COOC(F)(F)Br) from CHOFBr_G4
+COC(F)(Br)CF (COC(F)(Br)CF) from CHOFBr_G4
+COC(F)(F)OBr (COC(F)(F)OBr) from CHOFBr_G4
+COCC(F)(Br)Br (COCC(F)(Br)Br) from CHOFBr_G4
+COC(Br)=C(F)F (COC(Br)DC(F)F) from CHOFBr_G4
+COC(Br)(Br)C(F)F (COC(Br)(Br)C(F)F) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 917,
+    index = 1008,
     label = "Cs-OsOsHH",
     group = 
 """
@@ -20584,7 +28762,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 918,
+    index = 1009,
     label = "Cs-OsOsOsH",
     group = 
 """
@@ -20608,7 +28786,7 @@ entry(
 )
 
 entry(
-    index = 919,
+    index = 1010,
     label = "Cs-OsSHH",
     group = 
 """
@@ -20627,7 +28805,7 @@ entry(
 )
 
 entry(
-    index = 920,
+    index = 1011,
     label = "Cs-OsS2HH",
     group = 
 """
@@ -20651,7 +28829,7 @@ entry(
 )
 
 entry(
-    index = 921,
+    index = 1012,
     label = "Cs-OsS4HH",
     group = 
 """
@@ -20675,7 +28853,7 @@ entry(
 )
 
 entry(
-    index = 922,
+    index = 1013,
     label = "Cs-OsSSH",
     group = 
 """
@@ -20694,7 +28872,7 @@ entry(
 )
 
 entry(
-    index = 923,
+    index = 1014,
     label = "Cs-OsS2S2H",
     group = 
 """
@@ -20718,7 +28896,7 @@ entry(
 )
 
 entry(
-    index = 924,
+    index = 1015,
     label = "Cs-OsS4S2H",
     group = 
 """
@@ -20742,7 +28920,7 @@ entry(
 )
 
 entry(
-    index = 925,
+    index = 1016,
     label = "Cs-OsOsSH",
     group = 
 """
@@ -20761,7 +28939,7 @@ entry(
 )
 
 entry(
-    index = 926,
+    index = 1017,
     label = "Cs-OsOsS2H",
     group = 
 """
@@ -20785,7 +28963,7 @@ entry(
 )
 
 entry(
-    index = 927,
+    index = 1018,
     label = "Cs-OsOsS4H",
     group = 
 """
@@ -20809,7 +28987,7 @@ entry(
 )
 
 entry(
-    index = 928,
+    index = 1019,
     label = "Cs-SsHHH",
     group = 
 """
@@ -20828,7 +29006,7 @@ entry(
 )
 
 entry(
-    index = 929,
+    index = 1020,
     label = "Cs-S2sHHH",
     group = 
 """
@@ -20852,7 +29030,7 @@ entry(
 )
 
 entry(
-    index = 930,
+    index = 1021,
     label = "Cs-S4HHH",
     group = 
 """
@@ -20876,7 +29054,7 @@ entry(
 )
 
 entry(
-    index = 931,
+    index = 1022,
     label = "Cs-S6HHH",
     group = 
 """
@@ -20900,7 +29078,7 @@ entry(
 )
 
 entry(
-    index = 932,
+    index = 1023,
     label = "Cs-SsSsHH",
     group = 
 """
@@ -20924,7 +29102,7 @@ entry(
 )
 
 entry(
-    index = 933,
+    index = 1024,
     label = "Cs-SsSsSsH",
     group = 
 """
@@ -20948,7 +29126,7 @@ entry(
 )
 
 entry(
-    index = 934,
+    index = 1025,
     label = "Cs-CCHH",
     group = 
 """
@@ -20967,7 +29145,7 @@ entry(
 )
 
 entry(
-    index = 935,
+    index = 1026,
     label = "Cs-CsCsHH",
     group = 
 """
@@ -20979,19 +29157,384 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([23.9069,29.5964,34.6233,38.9683,46.0144,51.1929,58.9739],'J/(mol*K)','+|-',[0.179915,0.188072,0.176331,0.163729,0.141954,0.126055,0.243643]),
+        H298 = (-34.4039,'kJ/mol','+|-',0.868477),
+        S298 = (40.5524,'J/(mol*K)','+|-',0.49442),
     ),
-    shortDesc = """Cs-CsCsHH BENSON""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+CCC (C3H8) from C1_C3_hydrofluorocarbons_NIST
+CCCC(F)(F)F (CCCC(F)(F)F) from CHOF_G4
+FC(F)CC(F)(F)C(F)(F)F (FC(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+FCCC(F)(F)C(F)F (FCCC(F)(F)C(F)F) from CHOF_G4
+CCC(F)(F)OF (CCC(F)(F)OF) from CHOF_G4
+OC(F)(F)CC(F)F (OC(F)(F)CC(F)F) from CHOF_G4
+FC(F)C(F)CC(F)(F)F (FC(F)C(F)CC(F)(F)F) from CHOF_G4
+FC(CC(F)(F)F)C(F)(F)F (FC(CC(F)(F)F)C(F)(F)F) from CHOF_G4
+CCC(O)(F)F (CCC(O)(F)F) from CHOF_G4
+CCC(F)(F)CF (CCC(F)(F)CF) from CHOF_G4
+OC(F)(F)CC(F)(F)F (OC(F)(F)CC(F)(F)F) from CHOF_G4
+FCCC(F)(F)C(F)(F)F (FCCC(F)(F)C(F)(F)F) from CHOF_G4
+FCCCF (FCCCF) from CHOF_G4
+FCCCOF (FCCCOF) from CHOF_G4
+CCC(F)CF (CCC(F)CF) from CHOF_G4
+OC(F)(F)CCF (OC(F)(F)CCF) from CHOF_G4
+CC(F)CC(F)F (CC(F)CC(F)F) from CHOF_G4
+OC(F)CC(F)(F)F (OC(F)CC(F)(F)F) from CHOF_G4
+FCCCCF (FCCCCF) from CHOF_G4
+OCCCF (OCCCF) from CHOF_G4
+CCC(F)OF (CCC(F)OF) from CHOF_G4
+FCC(F)CC(F)F (FCC(F)CC(F)F) from CHOF_G4
+FC(F)CC(F)C(F)F (FC(F)CC(F)C(F)F) from CHOF_G4
+FCC(F)(F)CC(F)F (FCC(F)(F)CC(F)F) from CHOF_G4
+CCC(F)C(F)(F)F (CCC(F)C(F)(F)F) from CHOF_G4
+CCCF (CCCF) from CHOF_G4
+CC(F)(F)CC(F)(F)F (CC(F)(F)CC(F)(F)F) from CHOF_G4
+CC(F)CCF (CC(F)CCF) from CHOF_G4
+FCCC(F)(F)CF (FCCC(F)(F)CF) from CHOF_G4
+CCC(C)(F)F (CCC(C)(F)F) from CHOF_G4
+FC(F)CCC(F)F (FC(F)CCC(F)F) from CHOF_G4
+FC(F)(F)CC(F)(F)F (FC(F)(F)CC(F)(F)F) from CHOF_G4
+FCCCC(F)(F)F (FCCCC(F)(F)F) from CHOF_G4
+CCC(O)F (CCC(O)F) from CHOF_G4
+FCCC(F)(F)OF (FCCC(F)(F)OF) from CHOF_G4
+FC(F)CC(F)(F)C(F)F (FC(F)CC(F)(F)C(F)F) from CHOF_G4
+FCCCC(F)F (FCCCC(F)F) from CHOF_G4
+OCCC(F)F (OCCC(F)F) from CHOF_G4
+FCC(F)CC(F)(F)F (FCC(F)CC(F)(F)F) from CHOF_G4
+FOC(F)CC(F)(F)F (FOC(F)CC(F)(F)F) from CHOF_G4
+CCC(C)F (CCC(C)F) from CHOF_G4
+FC(F)CC(F)C(F)(F)F (FC(F)CC(F)C(F)(F)F) from CHOF_G4
+FCCC(F)C(F)F (FCCC(F)C(F)F) from CHOF_G4
+FCCC(F)OF (FCCC(F)OF) from CHOF_G4
+OC(F)CC(F)F (OC(F)CC(F)F) from CHOF_G4
+CC(F)(F)CCF (CC(F)(F)CCF) from CHOF_G4
+FCCC(F)CF (FCCC(F)CF) from CHOF_G4
+OCCC(F)(F)F (OCCC(F)(F)F) from CHOF_G4
+FOC(F)(F)CC(F)(F)F (FOC(F)(F)CC(F)(F)F) from CHOF_G4
+CCC(F)(F)C(F)F (CCC(F)(F)C(F)F) from CHOF_G4
+FC(F)CC(F)(F)F (FC(F)CC(F)(F)F) from CHOF_G4
+FOC(F)(F)CC(F)F (FOC(F)(F)CC(F)F) from CHOF_G4
+CCC(F)(F)C(F)(F)F (CCC(F)(F)C(F)(F)F) from CHOF_G4
+FC(F)CCC(F)(F)F (FC(F)CCC(F)(F)F) from CHOF_G4
+CCC(F)(F)F (CCC(F)(F)F) from CHOF_G4
+CCCOF (CCCOF) from CHOF_G4
+FCC(F)(F)CC(F)(F)F (FCC(F)(F)CC(F)(F)F) from CHOF_G4
+CC(F)CC(F)(F)F (CC(F)CC(F)(F)F) from CHOF_G4
+FC(F)(F)CC(F)(F)C(F)(F)F (FC(F)(F)CC(F)(F)C(F)(F)F) from CHOF_G4
+CCCC(F)F (CCCC(F)F) from CHOF_G4
+FC(F)(F)CCC(F)(F)F (FC(F)(F)CCC(F)(F)F) from CHOF_G4
+FOCCC(F)F (FOCCC(F)F) from CHOF_G4
+OC(F)CCF (OC(F)CCF) from CHOF_G4
+CCCCF (CCCCF) from CHOF_G4
+FC(F)CC(F)F (FC(F)CC(F)F) from CHOF_G4
+FOCCC(F)(F)F (FOCCC(F)(F)F) from CHOF_G4
+FCCC(F)(F)F (FCCC(F)(F)F) from CHOF_G4
+CCC(F)F (CCC(F)F) from CHOF_G4
+FC(F)C(F)(F)CC(F)(F)F (FC(F)C(F)(F)CC(F)(F)F) from CHOF_G4
+FOC(F)CC(F)F (FOC(F)CC(F)F) from CHOF_G4
+CC(F)(F)CC(F)F (CC(F)(F)CC(F)F) from CHOF_G4
+FCCC(F)C(F)(F)F (FCCC(F)C(F)(F)F) from CHOF_G4
+CCC(F)C(F)F (CCC(F)C(F)F) from CHOF_G4
+FCCC(F)F (FCCC(F)F) from CHOF_G4
+FC1CCC1(F)F (FC1CCC1(F)F) from CHOF_G4
+FC1CCO1 (FC1CCO1) from CHOF_G4
+FC1(F)CC1 (FC1(F)CC1) from CHOF_G4
+OC1CC1F (OC1CC1F) from CHOF_G4
+FC1CC(F)C1(F)F (FC1CC(F)C1(F)F) from CHOF_G4
+FC1CCC1 (FC1CCC1) from CHOF_G4
+FC(F)(F)C1CC1 (FC(F)(F)C1CC1) from CHOF_G4
+FC(F)C1(F)CC1 (FC(F)C1(F)CC1) from CHOF_G4
+OC1(F)CC1 (OC1(F)CC1) from CHOF_G4
+FC1CC1C(F)(F)F (FC1CC1C(F)(F)F) from CHOF_G4
+FC1CC1 (FC1CC1) from CHOF_G4
+FC1C(F)(F)CC1(F)F (FC1C(F)(F)CC1(F)F) from CHOF_G4
+CC1(F)CC1 (CC1(F)CC1) from CHOF_G4
+FC1(F)CC1(F)F (FC1(F)CC1(F)F) from CHOF_G4
+CC1CC1F (CC1CC1F) from CHOF_G4
+FC(F)(F)C1CC1(F)F (FC(F)(F)C1CC1(F)F) from CHOF_G4
+FC(F)C1(F)CC1(F)F (FC(F)C1(F)CC1(F)F) from CHOF_G4
+FC1CC(F)(F)O1 (FC1CC(F)(F)O1) from CHOF_G4
+FCC1CC1F (FCC1CC1F) from CHOF_G4
+FC1CCC1F (FC1CCC1F) from CHOF_G4
+FC1CC(F)(F)C1 (FC1CC(F)(F)C1) from CHOF_G4
+FC1(F)CC(F)(F)O1 (FC1(F)CC(F)(F)O1) from CHOF_G4
+FC1CC1(F)F (FC1CC1(F)F) from CHOF_G4
+FCC1CC1 (FCC1CC1) from CHOF_G4
+FC1CC(F)(F)C1F (FC1CC(F)(F)C1F) from CHOF_G4
+FC1(F)CCC1(F)F (FC1(F)CCC1(F)F) from CHOF_G4
+FC1(F)CC(F)(F)C1 (FC1(F)CC(F)(F)C1) from CHOF_G4
+FC1CC(F)C1F (FC1CC(F)C1F) from CHOF_G4
+FC(F)C1CC1F (FC(F)C1CC1F) from CHOF_G4
+OC1(F)CC1(F)F (OC1(F)CC1(F)F) from CHOF_G4
+FC(F)C1CC1(F)F (FC(F)C1CC1(F)F) from CHOF_G4
+FC1(F)CCO1 (FC1(F)CCO1) from CHOF_G4
+FC(F)(F)C1(F)CC1 (FC(F)(F)C1(F)CC1) from CHOF_G4
+FCC1(F)CC1(F)F (FCC1(F)CC1(F)F) from CHOF_G4
+CC1CC1(F)F (CC1CC1(F)F) from CHOF_G4
+FC1(F)CCC1 (FC1(F)CCC1) from CHOF_G4
+FCC1(F)CC1F (FCC1(F)CC1F) from CHOF_G4
+OC1(F)CC1F (OC1(F)CC1F) from CHOF_G4
+FC1CC1F (FC1CC1F) from CHOF_G4
+FC(F)C1CC1 (FC(F)C1CC1) from CHOF_G4
+FCC1(F)CC1 (FCC1(F)CC1) from CHOF_G4
+FC(F)C1(F)CC1F (FC(F)C1(F)CC1F) from CHOF_G4
+CC1(F)CC1F (CC1(F)CC1F) from CHOF_G4
+CC1(F)CC1(F)F (CC1(F)CC1(F)F) from CHOF_G4
+FCC1CC1(F)F (FCC1CC1(F)F) from CHOF_G4
+FC1CC(F)(F)C1(F)F (FC1CC(F)(F)C1(F)F) from CHOF_G4
+OC1CC1(F)F (OC1CC1(F)F) from CHOF_G4
+FC1CC1(F)C(F)(F)F (FC1CC1(F)C(F)(F)F) from CHOF_G4
+FC1CC(F)C1 (FC1CC(F)C1) from CHOF_G4
+FC1CC(F)O1 (FC1CC(F)O1) from CHOF_G4
+FC(F)CCCCl (FC(F)CCCCl) from CHOFCl_G4
+CC(F)CCCl (CC(F)CCCl) from CHOFCl_G4
+OC(F)(Cl)CCF (OC(F)(Cl)CCF) from CHOFCl_G4
+CCC(Cl)(Cl)CF (CCC(Cl)(Cl)CF) from CHOFCl_G4
+CCC(F)C(F)Cl (CCC(F)C(F)Cl) from CHOFCl_G4
+CC(Cl)CCF (CC(Cl)CCF) from CHOFCl_G4
+CCC(F)C(Cl)Cl (CCC(F)C(Cl)Cl) from CHOFCl_G4
+FCC(Cl)CCCl (FCC(Cl)CCCl) from CHOFCl_G4
+FC(Cl)(Cl)CCCl (FC(Cl)(Cl)CCCl) from CHOFCl_G4
+FC(F)(F)CCCl (FC(F)(F)CCCl) from CHOFCl_G4
+FC(Cl)CCCCl (FC(Cl)CCCCl) from CHOFCl_G4
+CCC(F)(Cl)CF (CCC(F)(Cl)CF) from CHOFCl_G4
+CCC(C)(F)Cl (CCC(C)(F)Cl) from CHOFCl_G4
+FC(F)CCCl (FC(F)CCCl) from CHOFCl_G4
+CCC(Cl)C(F)Cl (CCC(Cl)C(F)Cl) from CHOFCl_G4
+CCCC(F)(Cl)Cl (CCCC(F)(Cl)Cl) from CHOFCl_G4
+FCCC(F)OCl (FCCC(F)OCl) from CHOFCl_G4
+CCC(F)CCl (CCC(F)CCl) from CHOFCl_G4
+CC(F)CC(F)Cl (CC(F)CC(F)Cl) from CHOFCl_G4
+OC(Cl)CCF (OC(Cl)CCF) from CHOFCl_G4
+OC(Cl)(Cl)CCF (OC(Cl)(Cl)CCF) from CHOFCl_G4
+CCC(F)(Cl)CCl (CCC(F)(Cl)CCl) from CHOFCl_G4
+CC(F)CC(Cl)Cl (CC(F)CC(Cl)Cl) from CHOFCl_G4
+CC(F)(F)CCCl (CC(F)(F)CCCl) from CHOFCl_G4
+CCC(Cl)CF (CCC(Cl)CF) from CHOFCl_G4
+FCCC(F)Cl (FCCC(F)Cl) from CHOFCl_G4
+FCCCOCl (FCCCOCl) from CHOFCl_G4
+CC(F)(Cl)CCF (CC(F)(Cl)CCF) from CHOFCl_G4
+CCC(F)(F)CCl (CCC(F)(F)CCl) from CHOFCl_G4
+OC(Cl)CC(F)Cl (OC(Cl)CC(F)Cl) from CHOFCl_G4
+OCCC(F)Cl (OCCC(F)Cl) from CHOFCl_G4
+FC(F)CC(F)Cl (FC(F)CC(F)Cl) from CHOFCl_G4
+FCCC(Cl)Cl (FCCC(Cl)Cl) from CHOFCl_G4
+CCC(Cl)C(F)F (CCC(Cl)C(F)F) from CHOFCl_G4
+FCCC(Cl)OCl (FCCC(Cl)OCl) from CHOFCl_G4
+CCCC(F)Cl (CCCC(F)Cl) from CHOFCl_G4
+CCC(O)(F)Cl (CCC(O)(F)Cl) from CHOFCl_G4
+FC(F)(Cl)CCCl (FC(F)(Cl)CCCl) from CHOFCl_G4
+OCCC(F)(Cl)Cl (OCCC(F)(Cl)Cl) from CHOFCl_G4
+FCCCC(F)Cl (FCCCC(F)Cl) from CHOFCl_G4
+CC(F)(Cl)CCCl (CC(F)(Cl)CCCl) from CHOFCl_G4
+CC(Cl)(Cl)CCF (CC(Cl)(Cl)CCF) from CHOFCl_G4
+FCCC(Cl)CCl (FCCC(Cl)CCl) from CHOFCl_G4
+OCCC(F)(F)Cl (OCCC(F)(F)Cl) from CHOFCl_G4
+FCCC(Cl)(Cl)Cl (FCCC(Cl)(Cl)Cl) from CHOFCl_G4
+OC(Cl)CC(F)F (OC(Cl)CC(F)F) from CHOFCl_G4
+FC(Cl)CCCl (FC(Cl)CCCl) from CHOFCl_G4
+CCC(F)(F)OCl (CCC(F)(F)OCl) from CHOFCl_G4
+FCCCCCl (FCCCCCl) from CHOFCl_G4
+FC(F)CC(Cl)Cl (FC(F)CC(Cl)Cl) from CHOFCl_G4
+FCCC(F)(F)Cl (FCCC(F)(F)Cl) from CHOFCl_G4
+CCC(F)(Cl)OCl (CCC(F)(Cl)OCl) from CHOFCl_G4
+FCCC(F)(Cl)Cl (FCCC(F)(Cl)Cl) from CHOFCl_G4
+CC(Cl)CC(F)F (CC(Cl)CC(F)F) from CHOFCl_G4
+FCCC(F)CCl (FCCC(F)CCl) from CHOFCl_G4
+CCC(F)(F)Cl (CCC(F)(F)Cl) from CHOFCl_G4
+CCC(F)OCl (CCC(F)OCl) from CHOFCl_G4
+FCCCC(Cl)Cl (FCCCC(Cl)Cl) from CHOFCl_G4
+FC(Cl)CCOCl (FC(Cl)CCOCl) from CHOFCl_G4
+CCCC(F)(F)Cl (CCCC(F)(F)Cl) from CHOFCl_G4
+CC(Cl)CC(F)Cl (CC(Cl)CC(F)Cl) from CHOFCl_G4
+FCCCCl (FCCCCl) from CHOFCl_G4
+FC(Cl)CC(Cl)Cl (FC(Cl)CC(Cl)Cl) from CHOFCl_G4
+CCC(F)(Cl)Cl (CCC(F)(Cl)Cl) from CHOFCl_G4
+FCC(F)CCCl (FCC(F)CCCl) from CHOFCl_G4
+FC(F)CCOCl (FC(F)CCOCl) from CHOFCl_G4
+CCC(F)Cl (CCC(F)Cl) from CHOFCl_G4
+CCC(F)(Cl)Br (CCC(F)(Cl)Br) from CHOFClBr_G4
+FCCC(Cl)(Br)Br (FCCC(Cl)(Br)Br) from CHOFClBr_G4
+FC(Cl)CC(Cl)Br (FC(Cl)CC(Cl)Br) from CHOFClBr_G4
+FC(Cl)CCOBr (FC(Cl)CCOBr) from CHOFClBr_G4
+FCCCC(Cl)Br (FCCCC(Cl)Br) from CHOFClBr_G4
+FCCC(F)(Cl)Br (FCCC(F)(Cl)Br) from CHOFClBr_G4
+CCC(F)(Cl)OBr (CCC(F)(Cl)OBr) from CHOFClBr_G4
+OC(Cl)(Br)CCF (OC(Cl)(Br)CCF) from CHOFClBr_G4
+FC(F)CC(Cl)Br (FC(F)CC(Cl)Br) from CHOFClBr_G4
+FC(Cl)CCBr (FC(Cl)CCBr) from CHOFClBr_G4
+CCC(Cl)(Br)CF (CCC(Cl)(Br)CF) from CHOFClBr_G4
+FCCC(Cl)(Cl)Br (FCCC(Cl)(Cl)Br) from CHOFClBr_G4
+FCCC(Cl)CBr (FCCC(Cl)CBr) from CHOFClBr_G4
+CC(Br)CC(F)Cl (CC(Br)CC(F)Cl) from CHOFClBr_G4
+FC(Cl)CC(Br)Br (FC(Cl)CC(Br)Br) from CHOFClBr_G4
+CC(F)(Cl)CCBr (CC(F)(Cl)CCBr) from CHOFClBr_G4
+OCCC(F)(Cl)Br (OCCC(F)(Cl)Br) from CHOFClBr_G4
+FC(F)(Cl)CCBr (FC(F)(Cl)CCBr) from CHOFClBr_G4
+CCC(Br)C(F)Cl (CCC(Br)C(F)Cl) from CHOFClBr_G4
+FCCC(Cl)OBr (FCCC(Cl)OBr) from CHOFClBr_G4
+FCCC(Cl)Br (FCCC(Cl)Br) from CHOFClBr_G4
+FC(Cl)(Br)CCBr (FC(Cl)(Br)CCBr) from CHOFClBr_G4
+CC(F)CC(Cl)Br (CC(F)CC(Cl)Br) from CHOFClBr_G4
+CCC(F)(Cl)CBr (CCC(F)(Cl)CBr) from CHOFClBr_G4
+OC(Br)CC(F)Cl (OC(Br)CC(F)Cl) from CHOFClBr_G4
+CCCC(F)(Cl)Br (CCCC(F)(Cl)Br) from CHOFClBr_G4
+CC(Br)(Br)CC(F)Cl (CC(Br)(Br)CC(F)Cl) from CHOFClBr_G4
+FC(Cl)CCCBr (FC(Cl)CCCBr) from CHOFClBr_G4
+FC(Cl)(Cl)CCBr (FC(Cl)(Cl)CCBr) from CHOFClBr_G4
+FCC(Cl)CCBr (FCC(Cl)CCBr) from CHOFClBr_G4
+CCC(F)C(Cl)Br (CCC(F)C(Cl)Br) from CHOFClBr_G4
+CC(Cl)(Br)CCF (CC(Cl)(Br)CCF) from CHOFClBr_G4
+CCC(F)Br (CCC(F)Br) from CHOFBr_G4
+FC(F)CCOBr (FC(F)CCOBr) from CHOFBr_G4
+FCCC(Br)CBr (FCCC(Br)CBr) from CHOFBr_G4
+FCC(F)CCBr (FCC(F)CCBr) from CHOFBr_G4
+CC(Br)CC(F)(Br)Br (CC(Br)CC(F)(Br)Br) from CHOFBr_G4
+CC(F)(Br)CCBr (CC(F)(Br)CCBr) from CHOFBr_G4
+FC(F)CC(F)OBr (FC(F)CC(F)OBr) from CHOFBr_G4
+FCCCBr (FCCCBr) from CHOFBr_G4
+FC(Br)(Br)CCOBr (FC(Br)(Br)CCOBr) from CHOFBr_G4
+FC(F)(Br)CCCBr (FC(F)(Br)CCCBr) from CHOFBr_G4
+CCC(Br)(Br)C(F)F (CCC(Br)(Br)C(F)F) from CHOFBr_G4
+FC(F)CCC(Br)Br (FC(F)CCC(Br)Br) from CHOFBr_G4
+FCCCC(F)(F)Br (FCCCC(F)(F)Br) from CHOFBr_G4
+OCCC(F)(Br)Br (OCCC(F)(Br)Br) from CHOFBr_G4
+CCCC(F)(F)Br (CCCC(F)(F)Br) from CHOFBr_G4
+FC(F)(F)CCCBr (FC(F)(F)CCCBr) from CHOFBr_G4
+CCC(Br)CF (CCC(Br)CF) from CHOFBr_G4
+OC(F)(Br)CC(F)F (OC(F)(Br)CC(F)F) from CHOFBr_G4
+CCC(Br)C(F)(Br)Br (CCC(Br)C(F)(Br)Br) from CHOFBr_G4
+FC(Br)CCBr (FC(Br)CCBr) from CHOFBr_G4
+FC(F)CC(Br)Br (FC(F)CC(Br)Br) from CHOFBr_G4
+CC(F)(Br)CCF (CC(F)(Br)CCF) from CHOFBr_G4
+CC(Br)(Br)CC(F)Br (CC(Br)(Br)CC(F)Br) from CHOFBr_G4
+OC(Br)CC(F)F (OC(Br)CC(F)F) from CHOFBr_G4
+CCC(F)C(Br)(Br)Br (CCC(F)C(Br)(Br)Br) from CHOFBr_G4
+CCC(F)OBr (CCC(F)OBr) from CHOFBr_G4
+CCC(F)(F)Br (CCC(F)(F)Br) from CHOFBr_G4
+OC(Br)(Br)CC(F)F (OC(Br)(Br)CC(F)F) from CHOFBr_G4
+CCC(F)(Br)OBr (CCC(F)(Br)OBr) from CHOFBr_G4
+FCCC(Br)(Br)OBr (FCCC(Br)(Br)OBr) from CHOFBr_G4
+FCCC(F)CBr (FCCC(F)CBr) from CHOFBr_G4
+OC(Br)CC(F)Br (OC(Br)CC(F)Br) from CHOFBr_G4
+FC(Br)C(Br)CCBr (FC(Br)C(Br)CCBr) from CHOFBr_G4
+CC(F)(Br)CC(Br)Br (CC(F)(Br)CC(Br)Br) from CHOFBr_G4
+FC(Br)CC(F)(F)F (FC(Br)CC(F)(F)F) from CHOFBr_G4
+FCC(F)(Br)CCBr (FCC(F)(Br)CCBr) from CHOFBr_G4
+FCCC(F)(F)Br (FCCC(F)(F)Br) from CHOFBr_G4
+FC(Br)(Br)CC(Br)Br (FC(Br)(Br)CC(Br)Br) from CHOFBr_G4
+FC(Br)CCCBr (FC(Br)CCCBr) from CHOFBr_G4
+OC(Br)CCF (OC(Br)CCF) from CHOFBr_G4
+FCCCC(Br)Br (FCCCC(Br)Br) from CHOFBr_G4
+CCC(F)(F)C(Br)Br (CCC(F)(F)C(Br)Br) from CHOFBr_G4
+CCC(F)(Br)CF (CCC(F)(Br)CF) from CHOFBr_G4
+CC(Br)CC(F)(F)F (CC(Br)CC(F)(F)F) from CHOFBr_G4
+FCCCCBr (FCCCCBr) from CHOFBr_G4
+FC(F)CC(Br)CBr (FC(F)CC(Br)CBr) from CHOFBr_G4
+FC(Br)CC(Br)OBr (FC(Br)CC(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)CC(F)Br (OC(Br)(Br)CC(F)Br) from CHOFBr_G4
+CC(F)CC(Br)(Br)Br (CC(F)CC(Br)(Br)Br) from CHOFBr_G4
+CCC(F)(F)OBr (CCC(F)(F)OBr) from CHOFBr_G4
+FC(Br)CC(Br)(Br)Br (FC(Br)CC(Br)(Br)Br) from CHOFBr_G4
+FCCC(F)(Br)Br (FCCC(F)(Br)Br) from CHOFBr_G4
+CCC(F)C(F)(F)Br (CCC(F)C(F)(F)Br) from CHOFBr_G4
+CCC(F)(Br)Br (CCC(F)(Br)Br) from CHOFBr_G4
+CCC(F)C(F)(Br)Br (CCC(F)C(F)(Br)Br) from CHOFBr_G4
+FCCC(F)(F)OBr (FCCC(F)(F)OBr) from CHOFBr_G4
+CC(Br)(Br)CCF (CC(Br)(Br)CCF) from CHOFBr_G4
+FC(F)(Br)CC(Br)Br (FC(F)(Br)CC(Br)Br) from CHOFBr_G4
+FCC(Br)CC(Br)Br (FCC(Br)CC(Br)Br) from CHOFBr_G4
+OC(Br)CC(F)(F)Br (OC(Br)CC(F)(F)Br) from CHOFBr_G4
+CC(Br)CCF (CC(Br)CCF) from CHOFBr_G4
+OCCC(F)(F)Br (OCCC(F)(F)Br) from CHOFBr_G4
+FCCCC(Br)(Br)Br (FCCCC(Br)(Br)Br) from CHOFBr_G4
+FC(Br)(Br)CCBr (FC(Br)(Br)CCBr) from CHOFBr_G4
+CCC(Br)C(F)Br (CCC(Br)C(F)Br) from CHOFBr_G4
+FCCCC(F)Br (FCCCC(F)Br) from CHOFBr_G4
+FCCC(F)(Br)OBr (FCCC(F)(Br)OBr) from CHOFBr_G4
+CC(F)(F)CC(F)Br (CC(F)(F)CC(F)Br) from CHOFBr_G4
+OC(F)(Br)CCF (OC(F)(Br)CCF) from CHOFBr_G4
+OC(Br)CC(F)(Br)Br (OC(Br)CC(F)(Br)Br) from CHOFBr_G4
+CC(Br)CC(F)F (CC(Br)CC(F)F) from CHOFBr_G4
+FC(F)CC(Br)(Br)Br (FC(F)CC(Br)(Br)Br) from CHOFBr_G4
+CC(Br)CC(F)(F)Br (CC(Br)CC(F)(F)Br) from CHOFBr_G4
+FCCC(Br)C(Br)Br (FCCC(Br)C(Br)Br) from CHOFBr_G4
+FCC(F)(F)CCBr (FCC(F)(F)CCBr) from CHOFBr_G4
+CCC(O)(F)Br (CCC(O)(F)Br) from CHOFBr_G4
+CCC(F)C(Br)Br (CCC(F)C(Br)Br) from CHOFBr_G4
+CCCC(F)Br (CCCC(F)Br) from CHOFBr_G4
+FCCC(F)(Br)CBr (FCCC(F)(Br)CBr) from CHOFBr_G4
+CC(Br)CC(F)Br (CC(Br)CC(F)Br) from CHOFBr_G4
+CC(F)CC(F)(Br)Br (CC(F)CC(F)(Br)Br) from CHOFBr_G4
+FC(F)CC(F)(F)Br (FC(F)CC(F)(F)Br) from CHOFBr_G4
+FCC(F)CC(Br)Br (FCC(F)CC(Br)Br) from CHOFBr_G4
+CCC(F)(F)C(F)Br (CCC(F)(F)C(F)Br) from CHOFBr_G4
+FCCC(F)(F)CBr (FCCC(F)(F)CBr) from CHOFBr_G4
+CCC(F)(Br)C(F)F (CCC(F)(Br)C(F)F) from CHOFBr_G4
+CC(F)CC(F)(F)Br (CC(F)CC(F)(F)Br) from CHOFBr_G4
+FCC(Br)CCBr (FCC(Br)CCBr) from CHOFBr_G4
+FC(F)CCC(F)Br (FC(F)CCC(F)Br) from CHOFBr_G4
+FC(F)CC(F)Br (FC(F)CC(F)Br) from CHOFBr_G4
+OCCC(F)Br (OCCC(F)Br) from CHOFBr_G4
+FC(Br)CC(Br)Br (FC(Br)CC(Br)Br) from CHOFBr_G4
+FC(Br)CC(Br)CBr (FC(Br)CC(Br)CBr) from CHOFBr_G4
+CCC(F)(F)CBr (CCC(F)(F)CBr) from CHOFBr_G4
+CCCC(F)(Br)Br (CCCC(F)(Br)Br) from CHOFBr_G4
+FC(F)CC(Br)OBr (FC(F)CC(Br)OBr) from CHOFBr_G4
+FCCCOBr (FCCCOBr) from CHOFBr_G4
+FCCC(F)Br (FCCC(F)Br) from CHOFBr_G4
+FC(Br)CCOBr (FC(Br)CCOBr) from CHOFBr_G4
+FC(F)(F)CC(Br)Br (FC(F)(F)CC(Br)Br) from CHOFBr_G4
+OC(Br)CC(F)(F)F (OC(Br)CC(F)(F)F) from CHOFBr_G4
+CC(F)(F)CCBr (CC(F)(F)CCBr) from CHOFBr_G4
+FCCC(Br)(Br)Br (FCCC(Br)(Br)Br) from CHOFBr_G4
+FCC(Br)(Br)CCBr (FCC(Br)(Br)CCBr) from CHOFBr_G4
+CC(F)(Br)CC(F)F (CC(F)(Br)CC(F)F) from CHOFBr_G4
+FC(F)CC(F)(Br)Br (FC(F)CC(F)(Br)Br) from CHOFBr_G4
+CCC(F)(Br)C(Br)Br (CCC(F)(Br)C(Br)Br) from CHOFBr_G4
+CC(F)CC(F)Br (CC(F)CC(F)Br) from CHOFBr_G4
+CCC(F)CBr (CCC(F)CBr) from CHOFBr_G4
+FCCC(F)C(Br)Br (FCCC(F)C(Br)Br) from CHOFBr_G4
+CCC(F)(Br)CBr (CCC(F)(Br)CBr) from CHOFBr_G4
+FCCC(Br)(Br)CBr (FCCC(Br)(Br)CBr) from CHOFBr_G4
+FCCC(F)OBr (FCCC(F)OBr) from CHOFBr_G4
+FC(F)CCBr (FC(F)CCBr) from CHOFBr_G4
+FC(F)C(Br)CCBr (FC(F)C(Br)CCBr) from CHOFBr_G4
+OC(Br)(Br)CCF (OC(Br)(Br)CCF) from CHOFBr_G4
+CCC(Br)C(F)(F)F (CCC(Br)C(F)(F)F) from CHOFBr_G4
+CCC(C)(F)Br (CCC(C)(F)Br) from CHOFBr_G4
+FCCC(F)C(F)Br (FCCC(F)C(F)Br) from CHOFBr_G4
+CCC(Br)(Br)CF (CCC(Br)(Br)CF) from CHOFBr_G4
+FC(F)C(F)CCBr (FC(F)C(F)CCBr) from CHOFBr_G4
+FC(F)(F)CCBr (FC(F)(F)CCBr) from CHOFBr_G4
+CCC(Br)C(F)(F)Br (CCC(Br)C(F)(F)Br) from CHOFBr_G4
+FC(F)(F)CCOBr (FC(F)(F)CCOBr) from CHOFBr_G4
+CC(F)CC(Br)Br (CC(F)CC(Br)Br) from CHOFBr_G4
+CC(Br)(Br)CC(F)F (CC(Br)(Br)CC(F)F) from CHOFBr_G4
+CCC(Br)C(F)F (CCC(Br)C(F)F) from CHOFBr_G4
+FC(F)(Br)CCOBr (FC(F)(Br)CCOBr) from CHOFBr_G4
+FCCCC(F)(Br)Br (FCCCC(F)(Br)Br) from CHOFBr_G4
+FC(Br)(Br)CCCBr (FC(Br)(Br)CCCBr) from CHOFBr_G4
+CCC(F)C(F)Br (CCC(F)C(F)Br) from CHOFBr_G4
+FC(Br)CCC(Br)Br (FC(Br)CCC(Br)Br) from CHOFBr_G4
+FC(F)CC(F)CBr (FC(F)CC(F)CBr) from CHOFBr_G4
+FCCC(Br)Br (FCCC(Br)Br) from CHOFBr_G4
+CCC(Br)(Br)C(F)Br (CCC(Br)(Br)C(F)Br) from CHOFBr_G4
+CC(F)CCBr (CC(F)CCBr) from CHOFBr_G4
+FCCC(Br)OBr (FCCC(Br)OBr) from CHOFBr_G4
+FC(F)CCCBr (FC(F)CCCBr) from CHOFBr_G4
+FCC(F)CC(F)Br (FCC(F)CC(F)Br) from CHOFBr_G4
+CC(F)(F)CC(Br)Br (CC(F)(F)CC(Br)Br) from CHOFBr_G4
+FC(F)(Br)CCBr (FC(F)(Br)CCBr) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 936,
+    index = 1027,
     label = "Cs-CdsCsHH",
     group = 
 """
@@ -21010,7 +29553,7 @@ entry(
 )
 
 entry(
-    index = 937,
+    index = 1028,
     label = "Cs-(Cds-O2d)CsHH",
     group = 
 """
@@ -21037,7 +29580,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 938,
+    index = 1029,
     label = "Cs-(Cds-Cd)CsHH",
     group = 
 """
@@ -21057,7 +29600,7 @@ entry(
 )
 
 entry(
-    index = 939,
+    index = 1030,
     label = "Cs-(Cds-Cds)CsHH",
     group = 
 """
@@ -21082,7 +29625,7 @@ entry(
 )
 
 entry(
-    index = 940,
+    index = 1031,
     label = "Cs-(Cds-Cdd)CsHH",
     group = 
 """
@@ -21102,7 +29645,7 @@ entry(
 )
 
 entry(
-    index = 941,
+    index = 1032,
     label = "Cs-(Cds-Cdd-O2d)CsHH",
     group = 
 """
@@ -21128,7 +29671,7 @@ entry(
 )
 
 entry(
-    index = 942,
+    index = 1033,
     label = "Cs-(Cds-Cdd-S2d)CsHH",
     group = 
 """
@@ -21149,7 +29692,7 @@ entry(
 )
 
 entry(
-    index = 943,
+    index = 1034,
     label = "Cs-(Cds-Cdd-Cd)CsHH",
     group = 
 """
@@ -21170,7 +29713,7 @@ entry(
 )
 
 entry(
-    index = 944,
+    index = 1035,
     label = "Cs-CdsCdsHH",
     group = 
 """
@@ -21189,7 +29732,7 @@ entry(
 )
 
 entry(
-    index = 945,
+    index = 1036,
     label = "Cs-(Cds-O2d)(Cds-O2d)HH",
     group = 
 """
@@ -21217,7 +29760,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 946,
+    index = 1037,
     label = "Cs-(Cds-O2d)(Cds-Cd)HH",
     group = 
 """
@@ -21245,7 +29788,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 947,
+    index = 1038,
     label = "Cs-(Cds-O2d)(Cds-Cds)HH",
     group = 
 """
@@ -21271,7 +29814,7 @@ entry(
 )
 
 entry(
-    index = 948,
+    index = 1039,
     label = "Cs-(Cds-O2d)(Cds-Cdd)HH",
     group = 
 """
@@ -21292,7 +29835,7 @@ entry(
 )
 
 entry(
-    index = 949,
+    index = 1040,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)HH",
     group = 
 """
@@ -21314,7 +29857,7 @@ entry(
 )
 
 entry(
-    index = 950,
+    index = 1041,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)HH",
     group = 
 """
@@ -21336,7 +29879,7 @@ entry(
 )
 
 entry(
-    index = 951,
+    index = 1042,
     label = "Cs-(Cds-Cd)(Cds-Cd)HH",
     group = 
 """
@@ -21357,7 +29900,7 @@ entry(
 )
 
 entry(
-    index = 952,
+    index = 1043,
     label = "Cs-(Cds-Cds)(Cds-Cds)HH",
     group = 
 """
@@ -21383,7 +29926,7 @@ entry(
 )
 
 entry(
-    index = 953,
+    index = 1044,
     label = "Cs-(Cds-Cdd)(Cds-Cds)HH",
     group = 
 """
@@ -21404,7 +29947,7 @@ entry(
 )
 
 entry(
-    index = 954,
+    index = 1045,
     label = "Cs-Cd(CCO)HH",
     group = 
 """
@@ -21433,7 +29976,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 955,
+    index = 1046,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)HH",
     group = 
 """
@@ -21455,7 +29998,7 @@ entry(
 )
 
 entry(
-    index = 956,
+    index = 1047,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)HH",
     group = 
 """
@@ -21477,7 +30020,7 @@ entry(
 )
 
 entry(
-    index = 957,
+    index = 1048,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)HH",
     group = 
 """
@@ -21498,7 +30041,7 @@ entry(
 )
 
 entry(
-    index = 958,
+    index = 1049,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)HH",
     group = 
 """
@@ -21526,7 +30069,7 @@ entry(
 )
 
 entry(
-    index = 959,
+    index = 1050,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)HH",
     group = 
 """
@@ -21549,7 +30092,7 @@ entry(
 )
 
 entry(
-    index = 960,
+    index = 1051,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)HH",
     group = 
 """
@@ -21572,7 +30115,7 @@ entry(
 )
 
 entry(
-    index = 961,
+    index = 1052,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)HH",
     group = 
 """
@@ -21595,7 +30138,7 @@ entry(
 )
 
 entry(
-    index = 962,
+    index = 1053,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)HH",
     group = 
 """
@@ -21618,7 +30161,152 @@ entry(
 )
 
 entry(
-    index = 963,
+    index = 1054,
+    label = "Cs-(F1s)(H)CdCdHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   F1s u0 {2,S}
+7   H   u0 {3,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.1154,29.2948,35.5963,40.5149,47.3978,52.5012,59.357],'J/(mol*K)','+|-',[3.93761,4.11612,3.85917,3.58336,3.10679,2.75882,5.33234]),
+        H298 = (-27.1235,'kJ/mol','+|-',19.0074),
+        S298 = (36.2918,'J/(mol*K)','+|-',10.8208),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=CC1 (FC1DCC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1055,
+    label = "Cs-(F1s)(F1s)CdCdHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   F1s u0 {2,S}
+7   F1s u0 {3,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.1172,27.419,33.9051,38.9946,46.5844,52.1775,59.8374],'J/(mol*K)','+|-',[3.95157,4.13072,3.87286,3.59607,3.11781,2.76861,5.35126]),
+        H298 = (-46.837,'kJ/mol','+|-',19.0748),
+        S298 = (34.099,'J/(mol*K)','+|-',10.8592),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=C(F)C1 (FC1DC(F)C1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1056,
+    label = "Cs-(Cs)(F1s)CdCdHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   Cs  u0 {2,S}
+7   F1s u0 {3,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.393,28.7579,34.6406,39.3392,46.564,51.9119,58.6855],'J/(mol*K)','+|-',[1.98281,2.07271,1.94332,1.80443,1.56445,1.38923,2.68514]),
+        H298 = (-24.6,'kJ/mol','+|-',9.57131),
+        S298 = (36.7178,'J/(mol*K)','+|-',5.44891),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC1=C(F)C1 (CC1DC(F)C1) from CHOF_G4
+FC1=C(C(F)(F)F)C1 (FC1DC(C(F)(F)F)C1) from CHOF_G4
+FC1=C(C(F)F)C1 (FC1DC(C(F)F)C1) from CHOF_G4
+FCC1=C(F)C1 (FCC1DC(F)C1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1057,
+    label = "Cs-(Cs)(H)CdCdHH",
+    group = 
+"""
+1 * Cs u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd u0 {1,S} {3,D} {6,S}
+3   Cd u0 {1,S} {2,D} {7,S}
+4   H  u0 {1,S}
+5   H  u0 {1,S}
+6   Cs u0 {2,S}
+7   H  u0 {3,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.5252,28.3717,34.9905,39.9468,47.0404,52.4298,58.8595],'J/(mol*K)','+|-',[2.27883,2.38215,2.23344,2.07382,1.79801,1.59663,3.08602]),
+        H298 = (-13.1749,'kJ/mol','+|-',11.0002),
+        S298 = (42.4634,'J/(mol*K)','+|-',6.26239),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)(F)C1=CC1 (FC(F)(F)C1DCC1) from CHOF_G4
+FC(F)C1=CC1 (FC(F)C1DCC1) from CHOF_G4
+FCC1=CC1 (FCC1DCC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1058,
+    label = "Cs-(F1s)(O2s)CdCdHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   O2s u0 {2,S}
+7   F1s u0 {3,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.1341,24.4573,31.0102,37.4069,46.3448,53.0731,63.6203],'J/(mol*K)','+|-',[3.9289,4.10702,3.85064,3.57544,3.09993,2.75273,5.32056]),
+        H298 = (-19.0418,'kJ/mol','+|-',18.9654),
+        S298 = (42.6893,'J/(mol*K)','+|-',10.7969),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC1=C(F)C1 (OC1DC(F)C1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1059,
     label = "Cs-CtCsHH",
     group = 
 """
@@ -21642,7 +30330,7 @@ entry(
 )
 
 entry(
-    index = 964,
+    index = 1060,
     label = "Cs-CtCdsHH",
     group = 
 """
@@ -21661,7 +30349,7 @@ entry(
 )
 
 entry(
-    index = 965,
+    index = 1061,
     label = "Cs-(Cds-O2d)CtHH",
     group = 
 """
@@ -21686,7 +30374,7 @@ entry(
 )
 
 entry(
-    index = 966,
+    index = 1062,
     label = "Cs-(Cds-Cd)CtHH",
     group = 
 """
@@ -21706,7 +30394,7 @@ entry(
 )
 
 entry(
-    index = 967,
+    index = 1063,
     label = "Cs-(Cds-Cds)CtHH",
     group = 
 """
@@ -21731,7 +30419,7 @@ entry(
 )
 
 entry(
-    index = 968,
+    index = 1064,
     label = "Cs-(Cds-Cdd)CtHH",
     group = 
 """
@@ -21751,7 +30439,7 @@ entry(
 )
 
 entry(
-    index = 969,
+    index = 1065,
     label = "Cs-(Cds-Cdd-O2d)CtHH",
     group = 
 """
@@ -21772,7 +30460,7 @@ entry(
 )
 
 entry(
-    index = 970,
+    index = 1066,
     label = "Cs-(Cds-Cdd-S2d)CtHH",
     group = 
 """
@@ -21793,7 +30481,7 @@ entry(
 )
 
 entry(
-    index = 971,
+    index = 1067,
     label = "Cs-(Cds-Cdd-Cd)CtHH",
     group = 
 """
@@ -21814,7 +30502,7 @@ entry(
 )
 
 entry(
-    index = 972,
+    index = 1068,
     label = "Cs-CtCtHH",
     group = 
 """
@@ -21838,7 +30526,7 @@ entry(
 )
 
 entry(
-    index = 973,
+    index = 1069,
     label = "Cs-CbCsHH",
     group = 
 """
@@ -21862,7 +30550,7 @@ entry(
 )
 
 entry(
-    index = 974,
+    index = 1070,
     label = "Cs-CbCdsHH",
     group = 
 """
@@ -21881,7 +30569,7 @@ entry(
 )
 
 entry(
-    index = 975,
+    index = 1071,
     label = "Cs-(Cds-O2d)CbHH",
     group = 
 """
@@ -21906,7 +30594,7 @@ entry(
 )
 
 entry(
-    index = 976,
+    index = 1072,
     label = "Cs-(Cds-Cd)CbHH",
     group = 
 """
@@ -21926,7 +30614,7 @@ entry(
 )
 
 entry(
-    index = 977,
+    index = 1073,
     label = "Cs-(Cds-Cds)CbHH",
     group = 
 """
@@ -21951,7 +30639,7 @@ entry(
 )
 
 entry(
-    index = 978,
+    index = 1074,
     label = "Cs-(Cds-Cdd)CbHH",
     group = 
 """
@@ -21971,7 +30659,7 @@ entry(
 )
 
 entry(
-    index = 979,
+    index = 1075,
     label = "Cs-(Cds-Cdd-O2d)CbHH",
     group = 
 """
@@ -21992,7 +30680,7 @@ entry(
 )
 
 entry(
-    index = 980,
+    index = 1076,
     label = "Cs-(Cds-Cdd-S2d)CbHH",
     group = 
 """
@@ -22013,7 +30701,7 @@ entry(
 )
 
 entry(
-    index = 981,
+    index = 1077,
     label = "Cs-(Cds-Cdd-Cd)CbHH",
     group = 
 """
@@ -22034,7 +30722,7 @@ entry(
 )
 
 entry(
-    index = 982,
+    index = 1078,
     label = "Cs-CbCtHH",
     group = 
 """
@@ -22058,7 +30746,7 @@ entry(
 )
 
 entry(
-    index = 983,
+    index = 1079,
     label = "Cs-CbCbHH",
     group = 
 """
@@ -22082,7 +30770,7 @@ entry(
 )
 
 entry(
-    index = 984,
+    index = 1080,
     label = "Cs-C=SCtHH",
     group = 
 """
@@ -22102,7 +30790,7 @@ entry(
 )
 
 entry(
-    index = 985,
+    index = 1081,
     label = "Cs-C=SCsHH",
     group = 
 """
@@ -22127,7 +30815,7 @@ entry(
 )
 
 entry(
-    index = 986,
+    index = 1082,
     label = "Cs-C=S(Cds-Cd)HH",
     group = 
 """
@@ -22148,7 +30836,7 @@ entry(
 )
 
 entry(
-    index = 987,
+    index = 1083,
     label = "Cs-C=S(Cds-Cdd)HH",
     group = 
 """
@@ -22169,7 +30857,7 @@ entry(
 )
 
 entry(
-    index = 988,
+    index = 1084,
     label = "Cs-C=S(Cds-Cdd-Cd)HH",
     group = 
 """
@@ -22191,7 +30879,7 @@ entry(
 )
 
 entry(
-    index = 989,
+    index = 1085,
     label = "Cs-C=S(Cds-Cdd-S2d)HH",
     group = 
 """
@@ -22213,7 +30901,7 @@ entry(
 )
 
 entry(
-    index = 990,
+    index = 1086,
     label = "Cs-C=S(Cds-Cds)HH",
     group = 
 """
@@ -22234,7 +30922,7 @@ entry(
 )
 
 entry(
-    index = 991,
+    index = 1087,
     label = "Cs-C=SC=SHH",
     group = 
 """
@@ -22255,7 +30943,7 @@ entry(
 )
 
 entry(
-    index = 992,
+    index = 1088,
     label = "Cs-C=SCbHH",
     group = 
 """
@@ -22275,7 +30963,33 @@ entry(
 )
 
 entry(
-    index = 993,
+    index = 1089,
+    label = "Cs-C2sCsHH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs  u0 {1,S}
+3   C2s u0 {1,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([0.240504,0.2526,1.50248,2.99837,6.38083,8.99762,12.5758],'J/(mol*K)','+|-',[3.56219,3.72368,3.49123,3.24172,2.81058,2.49579,4.82395]),
+        H298 = (256.096,'kJ/mol','+|-',17.1952),
+        S298 = (-14.8326,'J/(mol*K)','+|-',9.78913),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC[C]F (CC[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1090,
     label = "Cs-CCCH",
     group = 
 """
@@ -22294,7 +31008,7 @@ entry(
 )
 
 entry(
-    index = 994,
+    index = 1091,
     label = "Cs-CsCsCsH",
     group = 
 """
@@ -22318,7 +31032,7 @@ entry(
 )
 
 entry(
-    index = 995,
+    index = 1092,
     label = "Cs-CdsCsCsH",
     group = 
 """
@@ -22337,7 +31051,7 @@ entry(
 )
 
 entry(
-    index = 996,
+    index = 1093,
     label = "Cs-(Cds-O2d)CsCsH",
     group = 
 """
@@ -22364,7 +31078,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 997,
+    index = 1094,
     label = "Cs-(Cds-Cd)CsCsH",
     group = 
 """
@@ -22384,7 +31098,7 @@ entry(
 )
 
 entry(
-    index = 998,
+    index = 1095,
     label = "Cs-(Cds-Cds)CsCsH",
     group = 
 """
@@ -22409,7 +31123,7 @@ entry(
 )
 
 entry(
-    index = 999,
+    index = 1096,
     label = "Cs-(Cds-Cdd)CsCsH",
     group = 
 """
@@ -22429,7 +31143,7 @@ entry(
 )
 
 entry(
-    index = 1000,
+    index = 1097,
     label = "Cs-(Cds-Cdd-O2d)CsCsH",
     group = 
 """
@@ -22457,7 +31171,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1001,
+    index = 1098,
     label = "Cs-(Cds-Cdd-S2d)CsCsH",
     group = 
 """
@@ -22478,7 +31192,7 @@ entry(
 )
 
 entry(
-    index = 1002,
+    index = 1099,
     label = "Cs-(Cds-Cdd-Cd)CsCsH",
     group = 
 """
@@ -22504,7 +31218,7 @@ entry(
 )
 
 entry(
-    index = 1003,
+    index = 1100,
     label = "Cs-CtCsCsH",
     group = 
 """
@@ -22528,7 +31242,7 @@ entry(
 )
 
 entry(
-    index = 1004,
+    index = 1101,
     label = "Cs-CbCsCsH",
     group = 
 """
@@ -22552,7 +31266,7 @@ entry(
 )
 
 entry(
-    index = 1005,
+    index = 1102,
     label = "Cs-CdsCdsCsH",
     group = 
 """
@@ -22571,7 +31285,7 @@ entry(
 )
 
 entry(
-    index = 1006,
+    index = 1103,
     label = "Cs-(Cds-O2d)(Cds-O2d)CsH",
     group = 
 """
@@ -22592,7 +31306,7 @@ entry(
 )
 
 entry(
-    index = 1007,
+    index = 1104,
     label = "Cs-(Cds-O2d)(Cds-Cd)CsH",
     group = 
 """
@@ -22620,7 +31334,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1008,
+    index = 1105,
     label = "Cs-(Cds-O2d)(Cds-Cds)CsH",
     group = 
 """
@@ -22641,7 +31355,7 @@ entry(
 )
 
 entry(
-    index = 1009,
+    index = 1106,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CsH",
     group = 
 """
@@ -22662,7 +31376,7 @@ entry(
 )
 
 entry(
-    index = 1010,
+    index = 1107,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CsH",
     group = 
 """
@@ -22684,7 +31398,7 @@ entry(
 )
 
 entry(
-    index = 1011,
+    index = 1108,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CsH",
     group = 
 """
@@ -22706,7 +31420,7 @@ entry(
 )
 
 entry(
-    index = 1012,
+    index = 1109,
     label = "Cs-(Cds-Cd)(Cds-Cd)CsH",
     group = 
 """
@@ -22727,7 +31441,7 @@ entry(
 )
 
 entry(
-    index = 1013,
+    index = 1110,
     label = "Cs-(Cds-Cds)(Cds-Cds)CsH",
     group = 
 """
@@ -22753,7 +31467,7 @@ entry(
 )
 
 entry(
-    index = 1014,
+    index = 1111,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CsH",
     group = 
 """
@@ -22774,7 +31488,7 @@ entry(
 )
 
 entry(
-    index = 1015,
+    index = 1112,
     label = "Cs-CsCd(CCO)H",
     group = 
 """
@@ -22803,7 +31517,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1016,
+    index = 1113,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CsH",
     group = 
 """
@@ -22825,7 +31539,7 @@ entry(
 )
 
 entry(
-    index = 1017,
+    index = 1114,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CsH",
     group = 
 """
@@ -22847,7 +31561,7 @@ entry(
 )
 
 entry(
-    index = 1018,
+    index = 1115,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CsH",
     group = 
 """
@@ -22868,7 +31582,7 @@ entry(
 )
 
 entry(
-    index = 1019,
+    index = 1116,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CsH",
     group = 
 """
@@ -22898,7 +31612,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1020,
+    index = 1117,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CsH",
     group = 
 """
@@ -22921,7 +31635,7 @@ entry(
 )
 
 entry(
-    index = 1021,
+    index = 1118,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CsH",
     group = 
 """
@@ -22944,7 +31658,7 @@ entry(
 )
 
 entry(
-    index = 1022,
+    index = 1119,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CsH",
     group = 
 """
@@ -22967,7 +31681,7 @@ entry(
 )
 
 entry(
-    index = 1023,
+    index = 1120,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CsH",
     group = 
 """
@@ -22990,7 +31704,317 @@ entry(
 )
 
 entry(
-    index = 1024,
+    index = 1121,
+    label = "Cs-(F1s)(F1sF1sH)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    F1s u0 {2,S}
+8    H   u0 {2,S}
+9    F1s u0 {3,S}
+10   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.5281,26.3426,31.1809,34.9198,39.1094,42.0783,45.7568],'J/(mol*K)','+|-',[3.94185,4.12055,3.86332,3.58722,3.11014,2.7618,5.33809]),
+        H298 = (0.255347,'kJ/mol','+|-',19.0278),
+        S298 = (-57.8168,'J/(mol*K)','+|-',10.8325),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=CC1C(F)F (FC1DCC1C(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1122,
+    label = "Cs-(F1s)(F1s)(F1sF1sF1s)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    F1s u0 {2,S}
+8    F1s u0 {2,S}
+9    F1s u0 {3,S}
+10   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([20.4901,24.8318,29.5764,33.1373,37.3206,40.6108,45.7644],'J/(mol*K)','+|-',[3.95616,4.13552,3.87735,3.60025,3.12143,2.77182,5.35747]),
+        H298 = (-40.913,'kJ/mol','+|-',19.0969),
+        S298 = (-56.8488,'J/(mol*K)','+|-',10.8718),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=C(F)C1C(F)(F)F (FC1DC(F)C1C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1123,
+    label = "Cs-(F1s)(H)(HHH)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    H   u0 {2,S}
+7    H   u0 {2,S}
+8    H   u0 {2,S}
+9    H   u0 {3,S}
+10   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([23.3249,28.6866,33.2535,36.7761,40.7076,43.3894,46.771],'J/(mol*K)','+|-',[3.9395,4.11811,3.86103,3.58509,3.10829,2.76016,5.33491]),
+        H298 = (-8.03043,'kJ/mol','+|-',19.0165),
+        S298 = (-64.9271,'J/(mol*K)','+|-',10.826),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC1C=C1F (CC1CDC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1124,
+    label = "Cs-(F1sF1sH)(H)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    F1s u0 {2,S}
+8    H   u0 {2,S}
+9    H   u0 {3,S}
+10   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.2854,29.4705,33.192,36.2799,40.6462,43.3307,44.8349],'J/(mol*K)','+|-',[3.95266,4.13186,3.87392,3.59706,3.11867,2.76937,5.35273]),
+        H298 = (-12.4522,'kJ/mol','+|-',19.08),
+        S298 = (-66.5166,'J/(mol*K)','+|-',10.8622),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)C1C=C1 (FC(F)C1CDC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1125,
+    label = "Cs-(F1s)(F1s)(HHH)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    H   u0 {2,S}
+7    H   u0 {2,S}
+8    H   u0 {2,S}
+9    F1s u0 {3,S}
+10   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.7631,26.7015,31.6181,35.3249,39.9478,43.1375,47.2997],'J/(mol*K)','+|-',[3.95346,4.13269,3.87471,3.59779,3.1193,2.76993,5.35381]),
+        H298 = (-29.0402,'kJ/mol','+|-',19.0839),
+        S298 = (-67.147,'J/(mol*K)','+|-',10.8644),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+CC1C(F)=C1F (CC1C(F)DC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1126,
+    label = "Cs-(F1s)(F1sF1sF1s)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    F1s u0 {2,S}
+8    F1s u0 {2,S}
+9    F1s u0 {3,S}
+10   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.331,26.6094,30.5544,33.6576,38.1441,41.3333,45.2851],'J/(mol*K)','+|-',[3.94242,4.12115,3.86388,3.58774,3.11059,2.7622,5.33886]),
+        H298 = (-26.9968,'kJ/mol','+|-',19.0306),
+        S298 = (-54.7086,'J/(mol*K)','+|-',10.834),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1=CC1C(F)(F)F (FC1DCC1C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1127,
+    label = "Cs-(F1sHH)(H)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    H   u0 {2,S}
+8    H   u0 {2,S}
+9    H   u0 {3,S}
+10   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.2944,30.0621,33.634,36.5225,40.5791,43.3603,44.8069],'J/(mol*K)','+|-',[3.95147,4.13061,3.87275,3.59598,3.11773,2.76854,5.35111]),
+        H298 = (-18.9051,'kJ/mol','+|-',19.0743),
+        S298 = (-66.5033,'J/(mol*K)','+|-',10.8589),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC1C=C1 (FCC1CDC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1128,
+    label = "Cs-(F1sF1sF1s)(H)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    F1s u0 {2,S}
+8    F1s u0 {2,S}
+9    H   u0 {3,S}
+10   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.8582,29.4923,32.759,35.6524,39.781,42.3998,44.2781],'J/(mol*K)','+|-',[3.9535,4.13273,3.87474,3.59783,3.11933,2.76996,5.35386]),
+        H298 = (-41.9068,'kJ/mol','+|-',19.0841),
+        S298 = (-62.8484,'J/(mol*K)','+|-',10.8645),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(F)(F)C1C=C1 (FC(F)(F)C1CDC1) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1129,
+    label = "Cs-(F1s)(F1sHH)(H)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    H   u0 {2,S}
+8    H   u0 {2,S}
+9    H   u0 {3,S}
+10   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.5425,27.1876,31.692,35.1765,39.0164,41.9849,45.6884],'J/(mol*K)','+|-',[3.94059,4.11924,3.86209,3.58608,3.10915,2.76092,5.33639]),
+        H298 = (-8.04399,'kJ/mol','+|-',19.0218),
+        S298 = (-63.0824,'J/(mol*K)','+|-',10.829),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC1C=C1F (FCC1CDC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1130,
+    label = "Cs-(F1s)(F1s)(F1sHH)CdCdCsH",
+    group = 
+"""
+1  * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2    Cs  u0 {1,S} {6,S} {7,S} {8,S}
+3    Cd  u0 {1,S} {4,D} {9,S}
+4    Cd  u0 {1,S} {3,D} {10,S}
+5    H   u0 {1,S}
+6    F1s u0 {2,S}
+7    H   u0 {2,S}
+8    H   u0 {2,S}
+9    F1s u0 {3,S}
+10   F1s u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.2269,25.7402,30.2659,33.9101,38.7034,41.4707,46.0283],'J/(mol*K)','+|-',[3.95455,4.13384,3.87578,3.59878,3.12016,2.7707,5.35529]),
+        H298 = (-26.117,'kJ/mol','+|-',19.0892),
+        S298 = (-59.8334,'J/(mol*K)','+|-',10.8674),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FCC1C(F)=C1F (FCC1C(F)DC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 1131,
     label = "Cs-CtCdsCsH",
     group = 
 """
@@ -23009,7 +32033,7 @@ entry(
 )
 
 entry(
-    index = 1025,
+    index = 1132,
     label = "Cs-(Cds-O2d)CtCsH",
     group = 
 """
@@ -23029,7 +32053,7 @@ entry(
 )
 
 entry(
-    index = 1026,
+    index = 1133,
     label = "Cs-(Cds-Cd)CtCsH",
     group = 
 """
@@ -23049,7 +32073,7 @@ entry(
 )
 
 entry(
-    index = 1027,
+    index = 1134,
     label = "Cs-(Cds-Cds)CtCsH",
     group = 
 """
@@ -23074,7 +32098,7 @@ entry(
 )
 
 entry(
-    index = 1028,
+    index = 1135,
     label = "Cs-(Cds-Cdd)CtCsH",
     group = 
 """
@@ -23094,7 +32118,7 @@ entry(
 )
 
 entry(
-    index = 1029,
+    index = 1136,
     label = "Cs-(Cds-Cdd-O2d)CtCsH",
     group = 
 """
@@ -23115,7 +32139,7 @@ entry(
 )
 
 entry(
-    index = 1030,
+    index = 1137,
     label = "Cs-(Cds-Cdd-S2d)CtCsH",
     group = 
 """
@@ -23136,7 +32160,7 @@ entry(
 )
 
 entry(
-    index = 1031,
+    index = 1138,
     label = "Cs-(Cds-Cdd-Cd)CtCsH",
     group = 
 """
@@ -23157,7 +32181,7 @@ entry(
 )
 
 entry(
-    index = 1032,
+    index = 1139,
     label = "Cs-CbCdsCsH",
     group = 
 """
@@ -23176,7 +32200,7 @@ entry(
 )
 
 entry(
-    index = 1033,
+    index = 1140,
     label = "Cs-(Cds-O2d)CbCsH",
     group = 
 """
@@ -23196,7 +32220,7 @@ entry(
 )
 
 entry(
-    index = 1034,
+    index = 1141,
     label = "Cs-(Cds-Cd)CbCsH",
     group = 
 """
@@ -23216,7 +32240,7 @@ entry(
 )
 
 entry(
-    index = 1035,
+    index = 1142,
     label = "Cs-(Cds-Cds)CbCsH",
     group = 
 """
@@ -23241,7 +32265,7 @@ entry(
 )
 
 entry(
-    index = 1036,
+    index = 1143,
     label = "Cs-(Cds-Cdd)CbCsH",
     group = 
 """
@@ -23261,7 +32285,7 @@ entry(
 )
 
 entry(
-    index = 1037,
+    index = 1144,
     label = "Cs-(Cds-Cdd-O2d)CbCsH",
     group = 
 """
@@ -23282,7 +32306,7 @@ entry(
 )
 
 entry(
-    index = 1038,
+    index = 1145,
     label = "Cs-(Cds-Cdd-Cd)CbCsH",
     group = 
 """
@@ -23303,7 +32327,7 @@ entry(
 )
 
 entry(
-    index = 1039,
+    index = 1146,
     label = "Cs-CtCtCsH",
     group = 
 """
@@ -23327,7 +32351,7 @@ entry(
 )
 
 entry(
-    index = 1040,
+    index = 1147,
     label = "Cs-CbCtCsH",
     group = 
 """
@@ -23351,7 +32375,7 @@ entry(
 )
 
 entry(
-    index = 1041,
+    index = 1148,
     label = "Cs-CbCbCsH",
     group = 
 """
@@ -23375,7 +32399,7 @@ entry(
 )
 
 entry(
-    index = 1042,
+    index = 1149,
     label = "Cs-CdsCdsCdsH",
     group = 
 """
@@ -23394,7 +32418,7 @@ entry(
 )
 
 entry(
-    index = 1043,
+    index = 1150,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)H",
     group = 
 """
@@ -23416,7 +32440,7 @@ entry(
 )
 
 entry(
-    index = 1044,
+    index = 1151,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)H",
     group = 
 """
@@ -23438,7 +32462,7 @@ entry(
 )
 
 entry(
-    index = 1045,
+    index = 1152,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)H",
     group = 
 """
@@ -23460,7 +32484,7 @@ entry(
 )
 
 entry(
-    index = 1046,
+    index = 1153,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)H",
     group = 
 """
@@ -23482,7 +32506,7 @@ entry(
 )
 
 entry(
-    index = 1047,
+    index = 1154,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -23505,7 +32529,7 @@ entry(
 )
 
 entry(
-    index = 1048,
+    index = 1155,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -23528,7 +32552,7 @@ entry(
 )
 
 entry(
-    index = 1049,
+    index = 1156,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)H",
     group = 
 """
@@ -23557,7 +32581,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1050,
+    index = 1157,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)H",
     group = 
 """
@@ -23579,7 +32603,7 @@ entry(
 )
 
 entry(
-    index = 1051,
+    index = 1158,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cds)H",
     group = 
 """
@@ -23601,7 +32625,7 @@ entry(
 )
 
 entry(
-    index = 1052,
+    index = 1159,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)H",
     group = 
 """
@@ -23624,7 +32648,7 @@ entry(
 )
 
 entry(
-    index = 1053,
+    index = 1160,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)H",
     group = 
 """
@@ -23647,7 +32671,7 @@ entry(
 )
 
 entry(
-    index = 1054,
+    index = 1161,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)H",
     group = 
 """
@@ -23669,7 +32693,7 @@ entry(
 )
 
 entry(
-    index = 1055,
+    index = 1162,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -23693,7 +32717,7 @@ entry(
 )
 
 entry(
-    index = 1056,
+    index = 1163,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -23717,7 +32741,7 @@ entry(
 )
 
 entry(
-    index = 1057,
+    index = 1164,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -23741,7 +32765,7 @@ entry(
 )
 
 entry(
-    index = 1058,
+    index = 1165,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)H",
     group = 
 """
@@ -23763,7 +32787,7 @@ entry(
 )
 
 entry(
-    index = 1059,
+    index = 1166,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)H",
     group = 
 """
@@ -23790,7 +32814,7 @@ entry(
 )
 
 entry(
-    index = 1060,
+    index = 1167,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)H",
     group = 
 """
@@ -23812,7 +32836,7 @@ entry(
 )
 
 entry(
-    index = 1061,
+    index = 1168,
     label = "Cs-CdCd(CCO)H",
     group = 
 """
@@ -23842,7 +32866,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1062,
+    index = 1169,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -23865,7 +32889,7 @@ entry(
 )
 
 entry(
-    index = 1063,
+    index = 1170,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -23888,7 +32912,7 @@ entry(
 )
 
 entry(
-    index = 1064,
+    index = 1171,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)H",
     group = 
 """
@@ -23910,7 +32934,7 @@ entry(
 )
 
 entry(
-    index = 1065,
+    index = 1172,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -23934,7 +32958,7 @@ entry(
 )
 
 entry(
-    index = 1066,
+    index = 1173,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -23958,7 +32982,7 @@ entry(
 )
 
 entry(
-    index = 1067,
+    index = 1174,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -23982,7 +33006,7 @@ entry(
 )
 
 entry(
-    index = 1068,
+    index = 1175,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24006,7 +33030,7 @@ entry(
 )
 
 entry(
-    index = 1069,
+    index = 1176,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24030,7 +33054,7 @@ entry(
 )
 
 entry(
-    index = 1070,
+    index = 1177,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)H",
     group = 
 """
@@ -24052,7 +33076,7 @@ entry(
 )
 
 entry(
-    index = 1071,
+    index = 1178,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)H",
     group = 
 """
@@ -24077,7 +33101,7 @@ entry(
 )
 
 entry(
-    index = 1072,
+    index = 1179,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24102,7 +33126,7 @@ entry(
 )
 
 entry(
-    index = 1073,
+    index = 1180,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24127,7 +33151,7 @@ entry(
 )
 
 entry(
-    index = 1074,
+    index = 1181,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -24152,7 +33176,7 @@ entry(
 )
 
 entry(
-    index = 1075,
+    index = 1182,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24177,7 +33201,7 @@ entry(
 )
 
 entry(
-    index = 1076,
+    index = 1183,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24202,7 +33226,7 @@ entry(
 )
 
 entry(
-    index = 1077,
+    index = 1184,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -24227,7 +33251,7 @@ entry(
 )
 
 entry(
-    index = 1078,
+    index = 1185,
     label = "Cs-CtCdsCdsH",
     group = 
 """
@@ -24246,7 +33270,7 @@ entry(
 )
 
 entry(
-    index = 1079,
+    index = 1186,
     label = "Cs-(Cds-O2d)(Cds-O2d)CtH",
     group = 
 """
@@ -24267,7 +33291,7 @@ entry(
 )
 
 entry(
-    index = 1080,
+    index = 1187,
     label = "Cs-(Cds-O2d)(Cds-Cd)CtH",
     group = 
 """
@@ -24288,7 +33312,7 @@ entry(
 )
 
 entry(
-    index = 1081,
+    index = 1188,
     label = "Cs-(Cds-O2d)(Cds-Cds)CtH",
     group = 
 """
@@ -24309,7 +33333,7 @@ entry(
 )
 
 entry(
-    index = 1082,
+    index = 1189,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CtH",
     group = 
 """
@@ -24330,7 +33354,7 @@ entry(
 )
 
 entry(
-    index = 1083,
+    index = 1190,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CtH",
     group = 
 """
@@ -24352,7 +33376,7 @@ entry(
 )
 
 entry(
-    index = 1084,
+    index = 1191,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CtH",
     group = 
 """
@@ -24374,7 +33398,7 @@ entry(
 )
 
 entry(
-    index = 1085,
+    index = 1192,
     label = "Cs-(Cds-Cd)(Cds-Cd)CtH",
     group = 
 """
@@ -24395,7 +33419,7 @@ entry(
 )
 
 entry(
-    index = 1086,
+    index = 1193,
     label = "Cs-(Cds-Cds)(Cds-Cds)CtH",
     group = 
 """
@@ -24421,7 +33445,7 @@ entry(
 )
 
 entry(
-    index = 1087,
+    index = 1194,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CtH",
     group = 
 """
@@ -24442,7 +33466,7 @@ entry(
 )
 
 entry(
-    index = 1088,
+    index = 1195,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CtH",
     group = 
 """
@@ -24464,7 +33488,7 @@ entry(
 )
 
 entry(
-    index = 1089,
+    index = 1196,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CtH",
     group = 
 """
@@ -24486,7 +33510,7 @@ entry(
 )
 
 entry(
-    index = 1090,
+    index = 1197,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CtH",
     group = 
 """
@@ -24508,7 +33532,7 @@ entry(
 )
 
 entry(
-    index = 1091,
+    index = 1198,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CtH",
     group = 
 """
@@ -24529,7 +33553,7 @@ entry(
 )
 
 entry(
-    index = 1092,
+    index = 1199,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CtH",
     group = 
 """
@@ -24552,7 +33576,7 @@ entry(
 )
 
 entry(
-    index = 1093,
+    index = 1200,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CtH",
     group = 
 """
@@ -24575,7 +33599,7 @@ entry(
 )
 
 entry(
-    index = 1094,
+    index = 1201,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CtH",
     group = 
 """
@@ -24598,7 +33622,7 @@ entry(
 )
 
 entry(
-    index = 1095,
+    index = 1202,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CtH",
     group = 
 """
@@ -24621,7 +33645,7 @@ entry(
 )
 
 entry(
-    index = 1096,
+    index = 1203,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CtH",
     group = 
 """
@@ -24644,7 +33668,7 @@ entry(
 )
 
 entry(
-    index = 1097,
+    index = 1204,
     label = "Cs-CbCdsCdsH",
     group = 
 """
@@ -24663,7 +33687,7 @@ entry(
 )
 
 entry(
-    index = 1098,
+    index = 1205,
     label = "Cs-(Cds-O2d)(Cds-O2d)CbH",
     group = 
 """
@@ -24684,7 +33708,7 @@ entry(
 )
 
 entry(
-    index = 1099,
+    index = 1206,
     label = "Cs-(Cds-O2d)(Cds-Cd)CbH",
     group = 
 """
@@ -24705,7 +33729,7 @@ entry(
 )
 
 entry(
-    index = 1100,
+    index = 1207,
     label = "Cs-(Cds-O2d)(Cds-Cds)CbH",
     group = 
 """
@@ -24726,7 +33750,7 @@ entry(
 )
 
 entry(
-    index = 1101,
+    index = 1208,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CbH",
     group = 
 """
@@ -24747,7 +33771,7 @@ entry(
 )
 
 entry(
-    index = 1102,
+    index = 1209,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CbH",
     group = 
 """
@@ -24769,7 +33793,7 @@ entry(
 )
 
 entry(
-    index = 1103,
+    index = 1210,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CbH",
     group = 
 """
@@ -24791,7 +33815,7 @@ entry(
 )
 
 entry(
-    index = 1104,
+    index = 1211,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbH",
     group = 
 """
@@ -24812,7 +33836,7 @@ entry(
 )
 
 entry(
-    index = 1105,
+    index = 1212,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbH",
     group = 
 """
@@ -24838,7 +33862,7 @@ entry(
 )
 
 entry(
-    index = 1106,
+    index = 1213,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbH",
     group = 
 """
@@ -24859,7 +33883,7 @@ entry(
 )
 
 entry(
-    index = 1107,
+    index = 1214,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CbH",
     group = 
 """
@@ -24881,7 +33905,7 @@ entry(
 )
 
 entry(
-    index = 1108,
+    index = 1215,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CbH",
     group = 
 """
@@ -24903,7 +33927,7 @@ entry(
 )
 
 entry(
-    index = 1109,
+    index = 1216,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbH",
     group = 
 """
@@ -24925,7 +33949,7 @@ entry(
 )
 
 entry(
-    index = 1110,
+    index = 1217,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbH",
     group = 
 """
@@ -24946,7 +33970,7 @@ entry(
 )
 
 entry(
-    index = 1111,
+    index = 1218,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CbH",
     group = 
 """
@@ -24969,7 +33993,7 @@ entry(
 )
 
 entry(
-    index = 1112,
+    index = 1219,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CbH",
     group = 
 """
@@ -24992,7 +34016,7 @@ entry(
 )
 
 entry(
-    index = 1113,
+    index = 1220,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CbH",
     group = 
 """
@@ -25015,7 +34039,7 @@ entry(
 )
 
 entry(
-    index = 1114,
+    index = 1221,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CbH",
     group = 
 """
@@ -25038,7 +34062,7 @@ entry(
 )
 
 entry(
-    index = 1115,
+    index = 1222,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbH",
     group = 
 """
@@ -25061,7 +34085,7 @@ entry(
 )
 
 entry(
-    index = 1116,
+    index = 1223,
     label = "Cs-CtCtCdsH",
     group = 
 """
@@ -25080,7 +34104,7 @@ entry(
 )
 
 entry(
-    index = 1117,
+    index = 1224,
     label = "Cs-CtCt(Cds-O2d)H",
     group = 
 """
@@ -25100,7 +34124,7 @@ entry(
 )
 
 entry(
-    index = 1118,
+    index = 1225,
     label = "Cs-CtCt(Cds-Cd)H",
     group = 
 """
@@ -25120,7 +34144,7 @@ entry(
 )
 
 entry(
-    index = 1119,
+    index = 1226,
     label = "Cs-CtCt(Cds-Cds)H",
     group = 
 """
@@ -25145,7 +34169,7 @@ entry(
 )
 
 entry(
-    index = 1120,
+    index = 1227,
     label = "Cs-CtCt(Cds-Cdd)H",
     group = 
 """
@@ -25165,7 +34189,7 @@ entry(
 )
 
 entry(
-    index = 1121,
+    index = 1228,
     label = "Cs-CtCt(Cds-Cdd-O2d)H",
     group = 
 """
@@ -25186,7 +34210,7 @@ entry(
 )
 
 entry(
-    index = 1122,
+    index = 1229,
     label = "Cs-CtCt(Cds-Cdd-S2d)H",
     group = 
 """
@@ -25207,7 +34231,7 @@ entry(
 )
 
 entry(
-    index = 1123,
+    index = 1230,
     label = "Cs-CtCt(Cds-Cdd-Cd)H",
     group = 
 """
@@ -25228,7 +34252,7 @@ entry(
 )
 
 entry(
-    index = 1124,
+    index = 1231,
     label = "Cs-CbCtCdsH",
     group = 
 """
@@ -25247,7 +34271,7 @@ entry(
 )
 
 entry(
-    index = 1125,
+    index = 1232,
     label = "Cs-CbCt(Cds-O2d)H",
     group = 
 """
@@ -25267,7 +34291,7 @@ entry(
 )
 
 entry(
-    index = 1126,
+    index = 1233,
     label = "Cs-CbCt(Cds-Cd)H",
     group = 
 """
@@ -25287,7 +34311,7 @@ entry(
 )
 
 entry(
-    index = 1127,
+    index = 1234,
     label = "Cs-CbCt(Cds-Cds)H",
     group = 
 """
@@ -25307,7 +34331,7 @@ entry(
 )
 
 entry(
-    index = 1128,
+    index = 1235,
     label = "Cs-CbCt(Cds-Cdd)H",
     group = 
 """
@@ -25327,7 +34351,7 @@ entry(
 )
 
 entry(
-    index = 1129,
+    index = 1236,
     label = "Cs-CbCt(Cds-Cdd-O2d)H",
     group = 
 """
@@ -25348,7 +34372,7 @@ entry(
 )
 
 entry(
-    index = 1130,
+    index = 1237,
     label = "Cs-CbCt(Cds-Cdd-S2d)H",
     group = 
 """
@@ -25369,7 +34393,7 @@ entry(
 )
 
 entry(
-    index = 1131,
+    index = 1238,
     label = "Cs-CbCt(Cds-Cdd-Cd)H",
     group = 
 """
@@ -25390,7 +34414,7 @@ entry(
 )
 
 entry(
-    index = 1132,
+    index = 1239,
     label = "Cs-CbCbCdsH",
     group = 
 """
@@ -25409,7 +34433,7 @@ entry(
 )
 
 entry(
-    index = 1133,
+    index = 1240,
     label = "Cs-CbCb(Cds-O2d)H",
     group = 
 """
@@ -25429,7 +34453,7 @@ entry(
 )
 
 entry(
-    index = 1134,
+    index = 1241,
     label = "Cs-CbCb(Cds-Cd)H",
     group = 
 """
@@ -25449,7 +34473,7 @@ entry(
 )
 
 entry(
-    index = 1135,
+    index = 1242,
     label = "Cs-CbCb(Cds-Cds)H",
     group = 
 """
@@ -25469,7 +34493,7 @@ entry(
 )
 
 entry(
-    index = 1136,
+    index = 1243,
     label = "Cs-CbCb(Cds-Cdd)H",
     group = 
 """
@@ -25489,7 +34513,7 @@ entry(
 )
 
 entry(
-    index = 1137,
+    index = 1244,
     label = "Cs-CbCb(Cds-Cdd-O2d)H",
     group = 
 """
@@ -25510,7 +34534,7 @@ entry(
 )
 
 entry(
-    index = 1138,
+    index = 1245,
     label = "Cs-CbCb(Cds-Cdd-S2d)H",
     group = 
 """
@@ -25531,7 +34555,7 @@ entry(
 )
 
 entry(
-    index = 1139,
+    index = 1246,
     label = "Cs-CbCb(Cds-Cdd-Cd)H",
     group = 
 """
@@ -25552,7 +34576,7 @@ entry(
 )
 
 entry(
-    index = 1140,
+    index = 1247,
     label = "Cs-CtCtCtH",
     group = 
 """
@@ -25576,7 +34600,7 @@ entry(
 )
 
 entry(
-    index = 1141,
+    index = 1248,
     label = "Cs-CbCtCtH",
     group = 
 """
@@ -25595,7 +34619,7 @@ entry(
 )
 
 entry(
-    index = 1142,
+    index = 1249,
     label = "Cs-CbCbCtH",
     group = 
 """
@@ -25614,7 +34638,7 @@ entry(
 )
 
 entry(
-    index = 1143,
+    index = 1250,
     label = "Cs-CbCbCbH",
     group = 
 """
@@ -25638,7 +34662,7 @@ entry(
 )
 
 entry(
-    index = 1144,
+    index = 1251,
     label = "Cs-C=SC=SCbH",
     group = 
 """
@@ -25659,7 +34683,7 @@ entry(
 )
 
 entry(
-    index = 1145,
+    index = 1252,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)H",
     group = 
 """
@@ -25681,7 +34705,7 @@ entry(
 )
 
 entry(
-    index = 1146,
+    index = 1253,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cds)H",
     group = 
 """
@@ -25703,7 +34727,7 @@ entry(
 )
 
 entry(
-    index = 1147,
+    index = 1254,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cds)H",
     group = 
 """
@@ -25726,7 +34750,7 @@ entry(
 )
 
 entry(
-    index = 1148,
+    index = 1255,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cds)H",
     group = 
 """
@@ -25749,7 +34773,7 @@ entry(
 )
 
 entry(
-    index = 1149,
+    index = 1256,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)H",
     group = 
 """
@@ -25771,7 +34795,7 @@ entry(
 )
 
 entry(
-    index = 1150,
+    index = 1257,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)H",
     group = 
 """
@@ -25793,7 +34817,7 @@ entry(
 )
 
 entry(
-    index = 1151,
+    index = 1258,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -25817,7 +34841,7 @@ entry(
 )
 
 entry(
-    index = 1152,
+    index = 1259,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)H",
     group = 
 """
@@ -25841,7 +34865,7 @@ entry(
 )
 
 entry(
-    index = 1153,
+    index = 1260,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)H",
     group = 
 """
@@ -25865,7 +34889,7 @@ entry(
 )
 
 entry(
-    index = 1154,
+    index = 1261,
     label = "Cs-C=S(Cds-Cd)CtH",
     group = 
 """
@@ -25886,7 +34910,7 @@ entry(
 )
 
 entry(
-    index = 1155,
+    index = 1262,
     label = "Cs-C=S(Cds-Cdd)CtH",
     group = 
 """
@@ -25907,7 +34931,7 @@ entry(
 )
 
 entry(
-    index = 1156,
+    index = 1263,
     label = "Cs-C=S(Cds-Cdd-S2d)CtH",
     group = 
 """
@@ -25929,7 +34953,7 @@ entry(
 )
 
 entry(
-    index = 1157,
+    index = 1264,
     label = "Cs-C=S(Cds-Cdd-Cd)CtH",
     group = 
 """
@@ -25951,7 +34975,7 @@ entry(
 )
 
 entry(
-    index = 1158,
+    index = 1265,
     label = "Cs-C=S(Cds-Cds)CtH",
     group = 
 """
@@ -25972,7 +34996,7 @@ entry(
 )
 
 entry(
-    index = 1159,
+    index = 1266,
     label = "Cs-C=SC=SCtH",
     group = 
 """
@@ -25993,7 +35017,7 @@ entry(
 )
 
 entry(
-    index = 1160,
+    index = 1267,
     label = "Cs-C=SCtCsH",
     group = 
 """
@@ -26013,7 +35037,7 @@ entry(
 )
 
 entry(
-    index = 1161,
+    index = 1268,
     label = "Cs-C=SC=SCsH",
     group = 
 """
@@ -26034,7 +35058,7 @@ entry(
 )
 
 entry(
-    index = 1162,
+    index = 1269,
     label = "Cs-C=S(Cds-Cd)CbH",
     group = 
 """
@@ -26055,7 +35079,7 @@ entry(
 )
 
 entry(
-    index = 1163,
+    index = 1270,
     label = "Cs-C=S(Cds-Cds)CbH",
     group = 
 """
@@ -26076,7 +35100,7 @@ entry(
 )
 
 entry(
-    index = 1164,
+    index = 1271,
     label = "Cs-C=S(Cds-Cdd)CbH",
     group = 
 """
@@ -26097,7 +35121,7 @@ entry(
 )
 
 entry(
-    index = 1165,
+    index = 1272,
     label = "Cs-C=S(Cds-Cdd-S2d)CbH",
     group = 
 """
@@ -26119,7 +35143,7 @@ entry(
 )
 
 entry(
-    index = 1166,
+    index = 1273,
     label = "Cs-C=S(Cds-Cdd-Cd)CbH",
     group = 
 """
@@ -26141,7 +35165,7 @@ entry(
 )
 
 entry(
-    index = 1167,
+    index = 1274,
     label = "Cs-C=S(Cds-Cd)CsH",
     group = 
 """
@@ -26162,7 +35186,7 @@ entry(
 )
 
 entry(
-    index = 1168,
+    index = 1275,
     label = "Cs-C=S(Cds-Cds)CsH",
     group = 
 """
@@ -26183,7 +35207,7 @@ entry(
 )
 
 entry(
-    index = 1169,
+    index = 1276,
     label = "Cs-C=S(Cds-Cdd)CsH",
     group = 
 """
@@ -26204,7 +35228,7 @@ entry(
 )
 
 entry(
-    index = 1170,
+    index = 1277,
     label = "Cs-C=S(Cds-Cdd-Cd)CsH",
     group = 
 """
@@ -26226,7 +35250,7 @@ entry(
 )
 
 entry(
-    index = 1171,
+    index = 1278,
     label = "Cs-C=S(Cds-Cdd-S2d)CsH",
     group = 
 """
@@ -26248,7 +35272,7 @@ entry(
 )
 
 entry(
-    index = 1172,
+    index = 1279,
     label = "Cs-CbCtC=SH",
     group = 
 """
@@ -26268,7 +35292,7 @@ entry(
 )
 
 entry(
-    index = 1173,
+    index = 1280,
     label = "Cs-C=SC=SC=SH",
     group = 
 """
@@ -26290,7 +35314,7 @@ entry(
 )
 
 entry(
-    index = 1174,
+    index = 1281,
     label = "Cs-C=SCsCsH",
     group = 
 """
@@ -26315,7 +35339,7 @@ entry(
 )
 
 entry(
-    index = 1175,
+    index = 1282,
     label = "Cs-CtCtC=SH",
     group = 
 """
@@ -26335,7 +35359,7 @@ entry(
 )
 
 entry(
-    index = 1176,
+    index = 1283,
     label = "Cs-CbCbC=SH",
     group = 
 """
@@ -26355,7 +35379,7 @@ entry(
 )
 
 entry(
-    index = 1177,
+    index = 1284,
     label = "Cs-C=SC=S(Cds-Cd)H",
     group = 
 """
@@ -26377,7 +35401,7 @@ entry(
 )
 
 entry(
-    index = 1178,
+    index = 1285,
     label = "Cs-C=SC=S(Cds-Cds)H",
     group = 
 """
@@ -26399,7 +35423,7 @@ entry(
 )
 
 entry(
-    index = 1179,
+    index = 1286,
     label = "Cs-C=SC=S(Cds-Cdd)H",
     group = 
 """
@@ -26421,7 +35445,7 @@ entry(
 )
 
 entry(
-    index = 1180,
+    index = 1287,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)H",
     group = 
 """
@@ -26444,7 +35468,7 @@ entry(
 )
 
 entry(
-    index = 1181,
+    index = 1288,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)H",
     group = 
 """
@@ -26467,7 +35491,7 @@ entry(
 )
 
 entry(
-    index = 1182,
+    index = 1289,
     label = "Cs-CCCC",
     group = 
 """
@@ -26486,7 +35510,7 @@ entry(
 )
 
 entry(
-    index = 1183,
+    index = 1290,
     label = "Cs-CsCsCsCs",
     group = 
 """
@@ -26510,7 +35534,7 @@ entry(
 )
 
 entry(
-    index = 1184,
+    index = 1291,
     label = "Cs-CdsCsCsCs",
     group = 
 """
@@ -26529,7 +35553,7 @@ entry(
 )
 
 entry(
-    index = 1185,
+    index = 1292,
     label = "Cs-(Cds-O2d)CsCsCs",
     group = 
 """
@@ -26556,7 +35580,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1186,
+    index = 1293,
     label = "Cs-(Cds-Cd)CsCsCs",
     group = 
 """
@@ -26576,7 +35600,7 @@ entry(
 )
 
 entry(
-    index = 1187,
+    index = 1294,
     label = "Cs-(Cds-Cds)CsCsCs",
     group = 
 """
@@ -26601,7 +35625,7 @@ entry(
 )
 
 entry(
-    index = 1188,
+    index = 1295,
     label = "Cs-(Cds-Cdd)CsCsCs",
     group = 
 """
@@ -26621,7 +35645,7 @@ entry(
 )
 
 entry(
-    index = 1189,
+    index = 1296,
     label = "Cs-(Cds-Cdd-O2d)CsCsCs",
     group = 
 """
@@ -26649,7 +35673,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1190,
+    index = 1297,
     label = "Cs-(Cds-Cdd-S2d)CsCsCs",
     group = 
 """
@@ -26670,7 +35694,7 @@ entry(
 )
 
 entry(
-    index = 1191,
+    index = 1298,
     label = "Cs-(Cds-Cdd-Cd)CsCsCs",
     group = 
 """
@@ -26691,7 +35715,7 @@ entry(
 )
 
 entry(
-    index = 1192,
+    index = 1299,
     label = "Cs-CtCsCsCs",
     group = 
 """
@@ -26715,7 +35739,7 @@ entry(
 )
 
 entry(
-    index = 1193,
+    index = 1300,
     label = "Cs-CbCsCsCs",
     group = 
 """
@@ -26739,7 +35763,7 @@ entry(
 )
 
 entry(
-    index = 1194,
+    index = 1301,
     label = "Cs-CdsCdsCsCs",
     group = 
 """
@@ -26758,7 +35782,7 @@ entry(
 )
 
 entry(
-    index = 1195,
+    index = 1302,
     label = "Cs-(Cds-O2d)(Cds-O2d)CsCs",
     group = 
 """
@@ -26786,7 +35810,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1196,
+    index = 1303,
     label = "Cs-(Cds-O2d)(Cds-Cd)CsCs",
     group = 
 """
@@ -26814,7 +35838,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1197,
+    index = 1304,
     label = "Cs-(Cds-O2d)(Cds-Cds)CsCs",
     group = 
 """
@@ -26835,7 +35859,7 @@ entry(
 )
 
 entry(
-    index = 1198,
+    index = 1305,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CsCs",
     group = 
 """
@@ -26856,7 +35880,7 @@ entry(
 )
 
 entry(
-    index = 1199,
+    index = 1306,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CsCs",
     group = 
 """
@@ -26878,7 +35902,7 @@ entry(
 )
 
 entry(
-    index = 1200,
+    index = 1307,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CsCs",
     group = 
 """
@@ -26900,7 +35924,7 @@ entry(
 )
 
 entry(
-    index = 1201,
+    index = 1308,
     label = "Cs-(Cds-Cd)(Cds-Cd)CsCs",
     group = 
 """
@@ -26921,7 +35945,7 @@ entry(
 )
 
 entry(
-    index = 1202,
+    index = 1309,
     label = "Cs-(Cds-Cds)(Cds-Cds)CsCs",
     group = 
 """
@@ -26947,7 +35971,7 @@ entry(
 )
 
 entry(
-    index = 1203,
+    index = 1310,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CsCs",
     group = 
 """
@@ -26968,7 +35992,7 @@ entry(
 )
 
 entry(
-    index = 1204,
+    index = 1311,
     label = "Cs-CsCsCd(CCO)",
     group = 
 """
@@ -26997,7 +36021,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1205,
+    index = 1312,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CsCs",
     group = 
 """
@@ -27019,7 +36043,7 @@ entry(
 )
 
 entry(
-    index = 1206,
+    index = 1313,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CsCs",
     group = 
 """
@@ -27041,7 +36065,7 @@ entry(
 )
 
 entry(
-    index = 1207,
+    index = 1314,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CsCs",
     group = 
 """
@@ -27062,7 +36086,7 @@ entry(
 )
 
 entry(
-    index = 1208,
+    index = 1315,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CsCs",
     group = 
 """
@@ -27090,7 +36114,7 @@ entry(
 )
 
 entry(
-    index = 1209,
+    index = 1316,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CsCs",
     group = 
 """
@@ -27113,7 +36137,7 @@ entry(
 )
 
 entry(
-    index = 1210,
+    index = 1317,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CsCs",
     group = 
 """
@@ -27136,7 +36160,7 @@ entry(
 )
 
 entry(
-    index = 1211,
+    index = 1318,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CsCs",
     group = 
 """
@@ -27159,7 +36183,7 @@ entry(
 )
 
 entry(
-    index = 1212,
+    index = 1319,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CsCs",
     group = 
 """
@@ -27182,7 +36206,7 @@ entry(
 )
 
 entry(
-    index = 1213,
+    index = 1320,
     label = "Cs-CtCdsCsCs",
     group = 
 """
@@ -27201,7 +36225,7 @@ entry(
 )
 
 entry(
-    index = 1214,
+    index = 1321,
     label = "Cs-(Cds-O2d)CtCsCs",
     group = 
 """
@@ -27221,7 +36245,7 @@ entry(
 )
 
 entry(
-    index = 1215,
+    index = 1322,
     label = "Cs-(Cds-Cd)CtCsCs",
     group = 
 """
@@ -27241,7 +36265,7 @@ entry(
 )
 
 entry(
-    index = 1216,
+    index = 1323,
     label = "Cs-(Cds-Cds)CtCsCs",
     group = 
 """
@@ -27266,7 +36290,7 @@ entry(
 )
 
 entry(
-    index = 1217,
+    index = 1324,
     label = "Cs-(Cds-Cdd)CtCsCs",
     group = 
 """
@@ -27286,7 +36310,7 @@ entry(
 )
 
 entry(
-    index = 1218,
+    index = 1325,
     label = "Cs-(Cds-Cdd-O2d)CtCsCs",
     group = 
 """
@@ -27307,7 +36331,7 @@ entry(
 )
 
 entry(
-    index = 1219,
+    index = 1326,
     label = "Cs-(Cds-Cdd-S2d)CtCsCs",
     group = 
 """
@@ -27328,7 +36352,7 @@ entry(
 )
 
 entry(
-    index = 1220,
+    index = 1327,
     label = "Cs-(Cds-Cdd-Cd)CtCsCs",
     group = 
 """
@@ -27349,7 +36373,7 @@ entry(
 )
 
 entry(
-    index = 1221,
+    index = 1328,
     label = "Cs-CbCdsCsCs",
     group = 
 """
@@ -27368,7 +36392,7 @@ entry(
 )
 
 entry(
-    index = 1222,
+    index = 1329,
     label = "Cs-(Cds-O2d)CbCsCs",
     group = 
 """
@@ -27388,7 +36412,7 @@ entry(
 )
 
 entry(
-    index = 1223,
+    index = 1330,
     label = "Cs-(Cds-Cd)CbCsCs",
     group = 
 """
@@ -27408,7 +36432,7 @@ entry(
 )
 
 entry(
-    index = 1224,
+    index = 1331,
     label = "Cs-(Cds-Cds)CbCsCs",
     group = 
 """
@@ -27433,7 +36457,7 @@ entry(
 )
 
 entry(
-    index = 1225,
+    index = 1332,
     label = "Cs-(Cds-Cdd)CbCsCs",
     group = 
 """
@@ -27453,7 +36477,7 @@ entry(
 )
 
 entry(
-    index = 1226,
+    index = 1333,
     label = "Cs-(Cds-Cdd-O2d)CbCsCs",
     group = 
 """
@@ -27474,7 +36498,7 @@ entry(
 )
 
 entry(
-    index = 1227,
+    index = 1334,
     label = "Cs-(Cds-Cdd-S2d)CbCsCs",
     group = 
 """
@@ -27495,7 +36519,7 @@ entry(
 )
 
 entry(
-    index = 1228,
+    index = 1335,
     label = "Cs-(Cds-Cdd-Cd)CbCsCs",
     group = 
 """
@@ -27516,7 +36540,7 @@ entry(
 )
 
 entry(
-    index = 1229,
+    index = 1336,
     label = "Cs-CtCtCsCs",
     group = 
 """
@@ -27540,7 +36564,7 @@ entry(
 )
 
 entry(
-    index = 1230,
+    index = 1337,
     label = "Cs-CbCtCsCs",
     group = 
 """
@@ -27564,7 +36588,7 @@ entry(
 )
 
 entry(
-    index = 1231,
+    index = 1338,
     label = "Cs-CbCbCsCs",
     group = 
 """
@@ -27588,7 +36612,7 @@ entry(
 )
 
 entry(
-    index = 1232,
+    index = 1339,
     label = "Cs-CdsCdsCdsCs",
     group = 
 """
@@ -27607,7 +36631,7 @@ entry(
 )
 
 entry(
-    index = 1233,
+    index = 1340,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)Cs",
     group = 
 """
@@ -27629,7 +36653,7 @@ entry(
 )
 
 entry(
-    index = 1234,
+    index = 1341,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)Cs",
     group = 
 """
@@ -27658,7 +36682,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1235,
+    index = 1342,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)Cs",
     group = 
 """
@@ -27680,7 +36704,7 @@ entry(
 )
 
 entry(
-    index = 1236,
+    index = 1343,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)Cs",
     group = 
 """
@@ -27702,7 +36726,7 @@ entry(
 )
 
 entry(
-    index = 1237,
+    index = 1344,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -27725,7 +36749,7 @@ entry(
 )
 
 entry(
-    index = 1238,
+    index = 1345,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -27748,7 +36772,7 @@ entry(
 )
 
 entry(
-    index = 1239,
+    index = 1346,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)Cs",
     group = 
 """
@@ -27770,7 +36794,7 @@ entry(
 )
 
 entry(
-    index = 1240,
+    index = 1347,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)Cs",
     group = 
 """
@@ -27792,7 +36816,7 @@ entry(
 )
 
 entry(
-    index = 1241,
+    index = 1348,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cds)Cs",
     group = 
 """
@@ -27814,7 +36838,7 @@ entry(
 )
 
 entry(
-    index = 1242,
+    index = 1349,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)Cs",
     group = 
 """
@@ -27837,7 +36861,7 @@ entry(
 )
 
 entry(
-    index = 1243,
+    index = 1350,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)Cs",
     group = 
 """
@@ -27860,7 +36884,7 @@ entry(
 )
 
 entry(
-    index = 1244,
+    index = 1351,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)Cs",
     group = 
 """
@@ -27882,7 +36906,7 @@ entry(
 )
 
 entry(
-    index = 1245,
+    index = 1352,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -27906,7 +36930,7 @@ entry(
 )
 
 entry(
-    index = 1246,
+    index = 1353,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -27930,7 +36954,7 @@ entry(
 )
 
 entry(
-    index = 1247,
+    index = 1354,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -27954,7 +36978,7 @@ entry(
 )
 
 entry(
-    index = 1248,
+    index = 1355,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)Cs",
     group = 
 """
@@ -27976,7 +37000,7 @@ entry(
 )
 
 entry(
-    index = 1249,
+    index = 1356,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)Cs",
     group = 
 """
@@ -28003,7 +37027,7 @@ entry(
 )
 
 entry(
-    index = 1250,
+    index = 1357,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)Cs",
     group = 
 """
@@ -28025,7 +37049,7 @@ entry(
 )
 
 entry(
-    index = 1251,
+    index = 1358,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -28048,7 +37072,7 @@ entry(
 )
 
 entry(
-    index = 1252,
+    index = 1359,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -28071,7 +37095,7 @@ entry(
 )
 
 entry(
-    index = 1253,
+    index = 1360,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28094,7 +37118,7 @@ entry(
 )
 
 entry(
-    index = 1254,
+    index = 1361,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)Cs",
     group = 
 """
@@ -28116,7 +37140,7 @@ entry(
 )
 
 entry(
-    index = 1255,
+    index = 1362,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -28140,7 +37164,7 @@ entry(
 )
 
 entry(
-    index = 1256,
+    index = 1363,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28164,7 +37188,7 @@ entry(
 )
 
 entry(
-    index = 1257,
+    index = 1364,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -28188,7 +37212,7 @@ entry(
 )
 
 entry(
-    index = 1258,
+    index = 1365,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28212,7 +37236,7 @@ entry(
 )
 
 entry(
-    index = 1259,
+    index = 1366,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28236,7 +37260,7 @@ entry(
 )
 
 entry(
-    index = 1260,
+    index = 1367,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)Cs",
     group = 
 """
@@ -28258,7 +37282,7 @@ entry(
 )
 
 entry(
-    index = 1261,
+    index = 1368,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cs",
     group = 
 """
@@ -28283,7 +37307,7 @@ entry(
 )
 
 entry(
-    index = 1262,
+    index = 1369,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28308,7 +37332,7 @@ entry(
 )
 
 entry(
-    index = 1263,
+    index = 1370,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28333,7 +37357,7 @@ entry(
 )
 
 entry(
-    index = 1264,
+    index = 1371,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -28358,7 +37382,7 @@ entry(
 )
 
 entry(
-    index = 1265,
+    index = 1372,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28383,7 +37407,7 @@ entry(
 )
 
 entry(
-    index = 1266,
+    index = 1373,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28408,7 +37432,7 @@ entry(
 )
 
 entry(
-    index = 1267,
+    index = 1374,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -28433,7 +37457,7 @@ entry(
 )
 
 entry(
-    index = 1268,
+    index = 1375,
     label = "Cs-CtCdsCdsCs",
     group = 
 """
@@ -28452,7 +37476,7 @@ entry(
 )
 
 entry(
-    index = 1269,
+    index = 1376,
     label = "Cs-(Cds-O2d)(Cds-O2d)CtCs",
     group = 
 """
@@ -28473,7 +37497,7 @@ entry(
 )
 
 entry(
-    index = 1270,
+    index = 1377,
     label = "Cs-(Cds-O2d)(Cds-Cd)CtCs",
     group = 
 """
@@ -28494,7 +37518,7 @@ entry(
 )
 
 entry(
-    index = 1271,
+    index = 1378,
     label = "Cs-(Cds-O2d)(Cds-Cds)CtCs",
     group = 
 """
@@ -28515,7 +37539,7 @@ entry(
 )
 
 entry(
-    index = 1272,
+    index = 1379,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CtCs",
     group = 
 """
@@ -28536,7 +37560,7 @@ entry(
 )
 
 entry(
-    index = 1273,
+    index = 1380,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CtCs",
     group = 
 """
@@ -28558,7 +37582,7 @@ entry(
 )
 
 entry(
-    index = 1274,
+    index = 1381,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CtCs",
     group = 
 """
@@ -28580,7 +37604,7 @@ entry(
 )
 
 entry(
-    index = 1275,
+    index = 1382,
     label = "Cs-(Cds-Cd)(Cds-Cd)CtCs",
     group = 
 """
@@ -28601,7 +37625,7 @@ entry(
 )
 
 entry(
-    index = 1276,
+    index = 1383,
     label = "Cs-(Cds-Cds)(Cds-Cds)CtCs",
     group = 
 """
@@ -28622,7 +37646,7 @@ entry(
 )
 
 entry(
-    index = 1277,
+    index = 1384,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CtCs",
     group = 
 """
@@ -28643,7 +37667,7 @@ entry(
 )
 
 entry(
-    index = 1278,
+    index = 1385,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CtCs",
     group = 
 """
@@ -28665,7 +37689,7 @@ entry(
 )
 
 entry(
-    index = 1279,
+    index = 1386,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CtCs",
     group = 
 """
@@ -28687,7 +37711,7 @@ entry(
 )
 
 entry(
-    index = 1280,
+    index = 1387,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CtCs",
     group = 
 """
@@ -28709,7 +37733,7 @@ entry(
 )
 
 entry(
-    index = 1281,
+    index = 1388,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CtCs",
     group = 
 """
@@ -28730,7 +37754,7 @@ entry(
 )
 
 entry(
-    index = 1282,
+    index = 1389,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CtCs",
     group = 
 """
@@ -28753,7 +37777,7 @@ entry(
 )
 
 entry(
-    index = 1283,
+    index = 1390,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CtCs",
     group = 
 """
@@ -28776,7 +37800,7 @@ entry(
 )
 
 entry(
-    index = 1284,
+    index = 1391,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CtCs",
     group = 
 """
@@ -28799,7 +37823,7 @@ entry(
 )
 
 entry(
-    index = 1285,
+    index = 1392,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CtCs",
     group = 
 """
@@ -28822,7 +37846,7 @@ entry(
 )
 
 entry(
-    index = 1286,
+    index = 1393,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CtCs",
     group = 
 """
@@ -28845,7 +37869,7 @@ entry(
 )
 
 entry(
-    index = 1287,
+    index = 1394,
     label = "Cs-CbCdsCdsCs",
     group = 
 """
@@ -28864,7 +37888,7 @@ entry(
 )
 
 entry(
-    index = 1288,
+    index = 1395,
     label = "Cs-(Cds-O2d)(Cds-O2d)CbCs",
     group = 
 """
@@ -28885,7 +37909,7 @@ entry(
 )
 
 entry(
-    index = 1289,
+    index = 1396,
     label = "Cs-(Cds-O2d)(Cds-Cd)CbCs",
     group = 
 """
@@ -28906,7 +37930,7 @@ entry(
 )
 
 entry(
-    index = 1290,
+    index = 1397,
     label = "Cs-(Cds-O2d)(Cds-Cds)CbCs",
     group = 
 """
@@ -28927,7 +37951,7 @@ entry(
 )
 
 entry(
-    index = 1291,
+    index = 1398,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CbCs",
     group = 
 """
@@ -28948,7 +37972,7 @@ entry(
 )
 
 entry(
-    index = 1292,
+    index = 1399,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CbCs",
     group = 
 """
@@ -28970,7 +37994,7 @@ entry(
 )
 
 entry(
-    index = 1293,
+    index = 1400,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CbCs",
     group = 
 """
@@ -28992,7 +38016,7 @@ entry(
 )
 
 entry(
-    index = 1294,
+    index = 1401,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbCs",
     group = 
 """
@@ -29013,7 +38037,7 @@ entry(
 )
 
 entry(
-    index = 1295,
+    index = 1402,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbCs",
     group = 
 """
@@ -29034,7 +38058,7 @@ entry(
 )
 
 entry(
-    index = 1296,
+    index = 1403,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbCs",
     group = 
 """
@@ -29055,7 +38079,7 @@ entry(
 )
 
 entry(
-    index = 1297,
+    index = 1404,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CbCs",
     group = 
 """
@@ -29077,7 +38101,7 @@ entry(
 )
 
 entry(
-    index = 1298,
+    index = 1405,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CbCs",
     group = 
 """
@@ -29099,7 +38123,7 @@ entry(
 )
 
 entry(
-    index = 1299,
+    index = 1406,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbCs",
     group = 
 """
@@ -29121,7 +38145,7 @@ entry(
 )
 
 entry(
-    index = 1300,
+    index = 1407,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbCs",
     group = 
 """
@@ -29142,7 +38166,7 @@ entry(
 )
 
 entry(
-    index = 1301,
+    index = 1408,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CbCs",
     group = 
 """
@@ -29165,7 +38189,7 @@ entry(
 )
 
 entry(
-    index = 1302,
+    index = 1409,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CbCs",
     group = 
 """
@@ -29188,7 +38212,7 @@ entry(
 )
 
 entry(
-    index = 1303,
+    index = 1410,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CbCs",
     group = 
 """
@@ -29211,7 +38235,7 @@ entry(
 )
 
 entry(
-    index = 1304,
+    index = 1411,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CbCs",
     group = 
 """
@@ -29234,7 +38258,7 @@ entry(
 )
 
 entry(
-    index = 1305,
+    index = 1412,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbCs",
     group = 
 """
@@ -29257,7 +38281,7 @@ entry(
 )
 
 entry(
-    index = 1306,
+    index = 1413,
     label = "Cs-CtCtCdsCs",
     group = 
 """
@@ -29276,7 +38300,7 @@ entry(
 )
 
 entry(
-    index = 1307,
+    index = 1414,
     label = "Cs-(Cds-O2d)CtCtCs",
     group = 
 """
@@ -29296,7 +38320,7 @@ entry(
 )
 
 entry(
-    index = 1308,
+    index = 1415,
     label = "Cs-(Cds-Cd)CtCtCs",
     group = 
 """
@@ -29316,7 +38340,7 @@ entry(
 )
 
 entry(
-    index = 1309,
+    index = 1416,
     label = "Cs-(Cds-Cds)CtCtCs",
     group = 
 """
@@ -29341,7 +38365,7 @@ entry(
 )
 
 entry(
-    index = 1310,
+    index = 1417,
     label = "Cs-(Cds-Cdd)CtCtCs",
     group = 
 """
@@ -29361,7 +38385,7 @@ entry(
 )
 
 entry(
-    index = 1311,
+    index = 1418,
     label = "Cs-(Cds-Cdd-O2d)CtCtCs",
     group = 
 """
@@ -29382,7 +38406,7 @@ entry(
 )
 
 entry(
-    index = 1312,
+    index = 1419,
     label = "Cs-(Cds-Cdd-S2d)CtCtCs",
     group = 
 """
@@ -29403,7 +38427,7 @@ entry(
 )
 
 entry(
-    index = 1313,
+    index = 1420,
     label = "Cs-(Cds-Cdd-Cd)CtCtCs",
     group = 
 """
@@ -29424,7 +38448,7 @@ entry(
 )
 
 entry(
-    index = 1314,
+    index = 1421,
     label = "Cs-CbCtCdsCs",
     group = 
 """
@@ -29443,7 +38467,7 @@ entry(
 )
 
 entry(
-    index = 1315,
+    index = 1422,
     label = "Cs-(Cds-O2d)CbCtCs",
     group = 
 """
@@ -29463,7 +38487,7 @@ entry(
 )
 
 entry(
-    index = 1316,
+    index = 1423,
     label = "Cs-(Cds-Cd)CbCtCs",
     group = 
 """
@@ -29483,7 +38507,7 @@ entry(
 )
 
 entry(
-    index = 1317,
+    index = 1424,
     label = "Cs-(Cds-Cds)CbCtCs",
     group = 
 """
@@ -29508,7 +38532,7 @@ entry(
 )
 
 entry(
-    index = 1318,
+    index = 1425,
     label = "Cs-(Cds-Cdd)CbCtCs",
     group = 
 """
@@ -29528,7 +38552,7 @@ entry(
 )
 
 entry(
-    index = 1319,
+    index = 1426,
     label = "Cs-(Cds-Cdd-O2d)CbCtCs",
     group = 
 """
@@ -29549,7 +38573,7 @@ entry(
 )
 
 entry(
-    index = 1320,
+    index = 1427,
     label = "Cs-(Cds-Cdd-S2d)CbCtCs",
     group = 
 """
@@ -29570,7 +38594,7 @@ entry(
 )
 
 entry(
-    index = 1321,
+    index = 1428,
     label = "Cs-(Cds-Cdd-Cd)CbCtCs",
     group = 
 """
@@ -29596,7 +38620,7 @@ entry(
 )
 
 entry(
-    index = 1322,
+    index = 1429,
     label = "Cs-CbCbCdsCs",
     group = 
 """
@@ -29615,7 +38639,7 @@ entry(
 )
 
 entry(
-    index = 1323,
+    index = 1430,
     label = "Cs-(Cds-O2d)CbCbCs",
     group = 
 """
@@ -29635,7 +38659,7 @@ entry(
 )
 
 entry(
-    index = 1324,
+    index = 1431,
     label = "Cs-(Cds-Cd)CbCbCs",
     group = 
 """
@@ -29655,7 +38679,7 @@ entry(
 )
 
 entry(
-    index = 1325,
+    index = 1432,
     label = "Cs-(Cds-Cds)CbCbCs",
     group = 
 """
@@ -29680,7 +38704,7 @@ entry(
 )
 
 entry(
-    index = 1326,
+    index = 1433,
     label = "Cs-(Cds-Cdd)CbCbCs",
     group = 
 """
@@ -29700,7 +38724,7 @@ entry(
 )
 
 entry(
-    index = 1327,
+    index = 1434,
     label = "Cs-(Cds-Cdd-O2d)CbCbCs",
     group = 
 """
@@ -29721,7 +38745,7 @@ entry(
 )
 
 entry(
-    index = 1328,
+    index = 1435,
     label = "Cs-(Cds-Cdd-S2d)CbCbCs",
     group = 
 """
@@ -29742,7 +38766,7 @@ entry(
 )
 
 entry(
-    index = 1329,
+    index = 1436,
     label = "Cs-(Cds-Cdd-Cd)CbCbCs",
     group = 
 """
@@ -29763,7 +38787,7 @@ entry(
 )
 
 entry(
-    index = 1330,
+    index = 1437,
     label = "Cs-CtCtCtCs",
     group = 
 """
@@ -29787,7 +38811,7 @@ entry(
 )
 
 entry(
-    index = 1331,
+    index = 1438,
     label = "Cs-CbCtCtCs",
     group = 
 """
@@ -29811,7 +38835,7 @@ entry(
 )
 
 entry(
-    index = 1332,
+    index = 1439,
     label = "Cs-CbCbCtCs",
     group = 
 """
@@ -29835,7 +38859,7 @@ entry(
 )
 
 entry(
-    index = 1333,
+    index = 1440,
     label = "Cs-CbCbCbCs",
     group = 
 """
@@ -29859,7 +38883,7 @@ entry(
 )
 
 entry(
-    index = 1334,
+    index = 1441,
     label = "Cs-CdsCdsCdsCds",
     group = 
 """
@@ -29878,7 +38902,7 @@ entry(
 )
 
 entry(
-    index = 1335,
+    index = 1442,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -29901,7 +38925,7 @@ entry(
 )
 
 entry(
-    index = 1336,
+    index = 1443,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-Cd)",
     group = 
 """
@@ -29924,7 +38948,7 @@ entry(
 )
 
 entry(
-    index = 1337,
+    index = 1444,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-Cds)",
     group = 
 """
@@ -29947,7 +38971,7 @@ entry(
 )
 
 entry(
-    index = 1338,
+    index = 1445,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-Cdd)",
     group = 
 """
@@ -29970,7 +38994,7 @@ entry(
 )
 
 entry(
-    index = 1339,
+    index = 1446,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -29994,7 +39018,7 @@ entry(
 )
 
 entry(
-    index = 1340,
+    index = 1447,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30018,7 +39042,7 @@ entry(
 )
 
 entry(
-    index = 1341,
+    index = 1448,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -30048,7 +39072,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1342,
+    index = 1449,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -30071,7 +39095,7 @@ entry(
 )
 
 entry(
-    index = 1343,
+    index = 1450,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -30094,7 +39118,7 @@ entry(
 )
 
 entry(
-    index = 1344,
+    index = 1451,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)",
     group = 
 """
@@ -30118,7 +39142,7 @@ entry(
 )
 
 entry(
-    index = 1345,
+    index = 1452,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -30142,7 +39166,7 @@ entry(
 )
 
 entry(
-    index = 1346,
+    index = 1453,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -30165,7 +39189,7 @@ entry(
 )
 
 entry(
-    index = 1347,
+    index = 1454,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30190,7 +39214,7 @@ entry(
 )
 
 entry(
-    index = 1348,
+    index = 1455,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30215,7 +39239,7 @@ entry(
 )
 
 entry(
-    index = 1349,
+    index = 1456,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30240,7 +39264,7 @@ entry(
 )
 
 entry(
-    index = 1350,
+    index = 1457,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -30263,7 +39287,7 @@ entry(
 )
 
 entry(
-    index = 1351,
+    index = 1458,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -30286,7 +39310,7 @@ entry(
 )
 
 entry(
-    index = 1352,
+    index = 1459,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)(Cds-Cdd)",
     group = 
 """
@@ -30309,7 +39333,7 @@ entry(
 )
 
 entry(
-    index = 1353,
+    index = 1460,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30333,7 +39357,7 @@ entry(
 )
 
 entry(
-    index = 1354,
+    index = 1461,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30357,7 +39381,7 @@ entry(
 )
 
 entry(
-    index = 1355,
+    index = 1462,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -30380,7 +39404,7 @@ entry(
 )
 
 entry(
-    index = 1356,
+    index = 1463,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30405,7 +39429,7 @@ entry(
 )
 
 entry(
-    index = 1357,
+    index = 1464,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30430,7 +39454,7 @@ entry(
 )
 
 entry(
-    index = 1358,
+    index = 1465,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30455,7 +39479,7 @@ entry(
 )
 
 entry(
-    index = 1359,
+    index = 1466,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -30478,7 +39502,7 @@ entry(
 )
 
 entry(
-    index = 1360,
+    index = 1467,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30504,7 +39528,7 @@ entry(
 )
 
 entry(
-    index = 1361,
+    index = 1468,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30530,7 +39554,7 @@ entry(
 )
 
 entry(
-    index = 1362,
+    index = 1469,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30556,7 +39580,7 @@ entry(
 )
 
 entry(
-    index = 1363,
+    index = 1470,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30582,7 +39606,7 @@ entry(
 )
 
 entry(
-    index = 1364,
+    index = 1471,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -30605,7 +39629,7 @@ entry(
 )
 
 entry(
-    index = 1365,
+    index = 1472,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -30628,7 +39652,7 @@ entry(
 )
 
 entry(
-    index = 1366,
+    index = 1473,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)(Cds-Cdd)",
     group = 
 """
@@ -30651,7 +39675,7 @@ entry(
 )
 
 entry(
-    index = 1367,
+    index = 1474,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30675,7 +39699,7 @@ entry(
 )
 
 entry(
-    index = 1368,
+    index = 1475,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)",
     group = 
 """
@@ -30699,7 +39723,7 @@ entry(
 )
 
 entry(
-    index = 1369,
+    index = 1476,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30723,7 +39747,7 @@ entry(
 )
 
 entry(
-    index = 1370,
+    index = 1477,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -30746,7 +39770,7 @@ entry(
 )
 
 entry(
-    index = 1371,
+    index = 1478,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30771,7 +39795,7 @@ entry(
 )
 
 entry(
-    index = 1372,
+    index = 1479,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30796,7 +39820,7 @@ entry(
 )
 
 entry(
-    index = 1373,
+    index = 1480,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -30821,7 +39845,7 @@ entry(
 )
 
 entry(
-    index = 1374,
+    index = 1481,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30846,7 +39870,7 @@ entry(
 )
 
 entry(
-    index = 1375,
+    index = 1482,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30871,7 +39895,7 @@ entry(
 )
 
 entry(
-    index = 1376,
+    index = 1483,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -30894,7 +39918,7 @@ entry(
 )
 
 entry(
-    index = 1377,
+    index = 1484,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -30920,7 +39944,7 @@ entry(
 )
 
 entry(
-    index = 1378,
+    index = 1485,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30946,7 +39970,7 @@ entry(
 )
 
 entry(
-    index = 1379,
+    index = 1486,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -30972,7 +39996,7 @@ entry(
 )
 
 entry(
-    index = 1380,
+    index = 1487,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -30998,7 +40022,7 @@ entry(
 )
 
 entry(
-    index = 1381,
+    index = 1488,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31024,7 +40048,7 @@ entry(
 )
 
 entry(
-    index = 1382,
+    index = 1489,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31050,7 +40074,7 @@ entry(
 )
 
 entry(
-    index = 1383,
+    index = 1490,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31076,7 +40100,7 @@ entry(
 )
 
 entry(
-    index = 1384,
+    index = 1491,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -31099,7 +40123,7 @@ entry(
 )
 
 entry(
-    index = 1385,
+    index = 1492,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)",
     group = 
 """
@@ -31126,7 +40150,7 @@ entry(
 )
 
 entry(
-    index = 1386,
+    index = 1493,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31153,7 +40177,7 @@ entry(
 )
 
 entry(
-    index = 1387,
+    index = 1494,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31180,7 +40204,7 @@ entry(
 )
 
 entry(
-    index = 1388,
+    index = 1495,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31207,7 +40231,7 @@ entry(
 )
 
 entry(
-    index = 1389,
+    index = 1496,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -31234,7 +40258,7 @@ entry(
 )
 
 entry(
-    index = 1390,
+    index = 1497,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31261,7 +40285,7 @@ entry(
 )
 
 entry(
-    index = 1391,
+    index = 1498,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31288,7 +40312,7 @@ entry(
 )
 
 entry(
-    index = 1392,
+    index = 1499,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31315,7 +40339,7 @@ entry(
 )
 
 entry(
-    index = 1393,
+    index = 1500,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -31342,7 +40366,7 @@ entry(
 )
 
 entry(
-    index = 1394,
+    index = 1501,
     label = "Cs-CtCdsCdsCds",
     group = 
 """
@@ -31361,7 +40385,7 @@ entry(
 )
 
 entry(
-    index = 1395,
+    index = 1502,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)Ct",
     group = 
 """
@@ -31383,7 +40407,7 @@ entry(
 )
 
 entry(
-    index = 1396,
+    index = 1503,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)Ct",
     group = 
 """
@@ -31405,7 +40429,7 @@ entry(
 )
 
 entry(
-    index = 1397,
+    index = 1504,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)Ct",
     group = 
 """
@@ -31427,7 +40451,7 @@ entry(
 )
 
 entry(
-    index = 1398,
+    index = 1505,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)Ct",
     group = 
 """
@@ -31449,7 +40473,7 @@ entry(
 )
 
 entry(
-    index = 1399,
+    index = 1506,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -31472,7 +40496,7 @@ entry(
 )
 
 entry(
-    index = 1400,
+    index = 1507,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31495,7 +40519,7 @@ entry(
 )
 
 entry(
-    index = 1401,
+    index = 1508,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)Ct",
     group = 
 """
@@ -31517,7 +40541,7 @@ entry(
 )
 
 entry(
-    index = 1402,
+    index = 1509,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)Ct",
     group = 
 """
@@ -31539,7 +40563,7 @@ entry(
 )
 
 entry(
-    index = 1403,
+    index = 1510,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cds)Ct",
     group = 
 """
@@ -31561,7 +40585,7 @@ entry(
 )
 
 entry(
-    index = 1404,
+    index = 1511,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)Ct",
     group = 
 """
@@ -31584,7 +40608,7 @@ entry(
 )
 
 entry(
-    index = 1405,
+    index = 1512,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)Ct",
     group = 
 """
@@ -31607,7 +40631,7 @@ entry(
 )
 
 entry(
-    index = 1406,
+    index = 1513,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)Ct",
     group = 
 """
@@ -31629,7 +40653,7 @@ entry(
 )
 
 entry(
-    index = 1407,
+    index = 1514,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -31653,7 +40677,7 @@ entry(
 )
 
 entry(
-    index = 1408,
+    index = 1515,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31677,7 +40701,7 @@ entry(
 )
 
 entry(
-    index = 1409,
+    index = 1516,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31701,7 +40725,7 @@ entry(
 )
 
 entry(
-    index = 1410,
+    index = 1517,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)Ct",
     group = 
 """
@@ -31723,7 +40747,7 @@ entry(
 )
 
 entry(
-    index = 1411,
+    index = 1518,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)Ct",
     group = 
 """
@@ -31745,7 +40769,7 @@ entry(
 )
 
 entry(
-    index = 1412,
+    index = 1519,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)Ct",
     group = 
 """
@@ -31767,7 +40791,7 @@ entry(
 )
 
 entry(
-    index = 1413,
+    index = 1520,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -31790,7 +40814,7 @@ entry(
 )
 
 entry(
-    index = 1414,
+    index = 1521,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -31813,7 +40837,7 @@ entry(
 )
 
 entry(
-    index = 1415,
+    index = 1522,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31836,7 +40860,7 @@ entry(
 )
 
 entry(
-    index = 1416,
+    index = 1523,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)Ct",
     group = 
 """
@@ -31858,7 +40882,7 @@ entry(
 )
 
 entry(
-    index = 1417,
+    index = 1524,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -31882,7 +40906,7 @@ entry(
 )
 
 entry(
-    index = 1418,
+    index = 1525,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31906,7 +40930,7 @@ entry(
 )
 
 entry(
-    index = 1419,
+    index = 1526,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -31930,7 +40954,7 @@ entry(
 )
 
 entry(
-    index = 1420,
+    index = 1527,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31954,7 +40978,7 @@ entry(
 )
 
 entry(
-    index = 1421,
+    index = 1528,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -31978,7 +41002,7 @@ entry(
 )
 
 entry(
-    index = 1422,
+    index = 1529,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)Ct",
     group = 
 """
@@ -32000,7 +41024,7 @@ entry(
 )
 
 entry(
-    index = 1423,
+    index = 1530,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Ct",
     group = 
 """
@@ -32025,7 +41049,7 @@ entry(
 )
 
 entry(
-    index = 1424,
+    index = 1531,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -32050,7 +41074,7 @@ entry(
 )
 
 entry(
-    index = 1425,
+    index = 1532,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -32075,7 +41099,7 @@ entry(
 )
 
 entry(
-    index = 1426,
+    index = 1533,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -32100,7 +41124,7 @@ entry(
 )
 
 entry(
-    index = 1427,
+    index = 1534,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -32125,7 +41149,7 @@ entry(
 )
 
 entry(
-    index = 1428,
+    index = 1535,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -32150,7 +41174,7 @@ entry(
 )
 
 entry(
-    index = 1429,
+    index = 1536,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -32175,7 +41199,7 @@ entry(
 )
 
 entry(
-    index = 1430,
+    index = 1537,
     label = "Cs-CbCdsCdsCds",
     group = 
 """
@@ -32194,7 +41218,7 @@ entry(
 )
 
 entry(
-    index = 1431,
+    index = 1538,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)Cb",
     group = 
 """
@@ -32216,7 +41240,7 @@ entry(
 )
 
 entry(
-    index = 1432,
+    index = 1539,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)Cb",
     group = 
 """
@@ -32238,7 +41262,7 @@ entry(
 )
 
 entry(
-    index = 1433,
+    index = 1540,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)Cb",
     group = 
 """
@@ -32260,7 +41284,7 @@ entry(
 )
 
 entry(
-    index = 1434,
+    index = 1541,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)Cb",
     group = 
 """
@@ -32282,7 +41306,7 @@ entry(
 )
 
 entry(
-    index = 1435,
+    index = 1542,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -32305,7 +41329,7 @@ entry(
 )
 
 entry(
-    index = 1436,
+    index = 1543,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32328,7 +41352,7 @@ entry(
 )
 
 entry(
-    index = 1437,
+    index = 1544,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)Cb",
     group = 
 """
@@ -32350,7 +41374,7 @@ entry(
 )
 
 entry(
-    index = 1438,
+    index = 1545,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)Cb",
     group = 
 """
@@ -32372,7 +41396,7 @@ entry(
 )
 
 entry(
-    index = 1439,
+    index = 1546,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cds)Cb",
     group = 
 """
@@ -32394,7 +41418,7 @@ entry(
 )
 
 entry(
-    index = 1440,
+    index = 1547,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)Cb",
     group = 
 """
@@ -32417,7 +41441,7 @@ entry(
 )
 
 entry(
-    index = 1441,
+    index = 1548,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)Cb",
     group = 
 """
@@ -32440,7 +41464,7 @@ entry(
 )
 
 entry(
-    index = 1442,
+    index = 1549,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)Cb",
     group = 
 """
@@ -32462,7 +41486,7 @@ entry(
 )
 
 entry(
-    index = 1443,
+    index = 1550,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -32486,7 +41510,7 @@ entry(
 )
 
 entry(
-    index = 1444,
+    index = 1551,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32510,7 +41534,7 @@ entry(
 )
 
 entry(
-    index = 1445,
+    index = 1552,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32534,7 +41558,7 @@ entry(
 )
 
 entry(
-    index = 1446,
+    index = 1553,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)Cb",
     group = 
 """
@@ -32556,7 +41580,7 @@ entry(
 )
 
 entry(
-    index = 1447,
+    index = 1554,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)Cb",
     group = 
 """
@@ -32578,7 +41602,7 @@ entry(
 )
 
 entry(
-    index = 1448,
+    index = 1555,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)Cb",
     group = 
 """
@@ -32600,7 +41624,7 @@ entry(
 )
 
 entry(
-    index = 1449,
+    index = 1556,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -32623,7 +41647,7 @@ entry(
 )
 
 entry(
-    index = 1450,
+    index = 1557,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -32646,7 +41670,7 @@ entry(
 )
 
 entry(
-    index = 1451,
+    index = 1558,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32669,7 +41693,7 @@ entry(
 )
 
 entry(
-    index = 1452,
+    index = 1559,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)Cb",
     group = 
 """
@@ -32691,7 +41715,7 @@ entry(
 )
 
 entry(
-    index = 1453,
+    index = 1560,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -32715,7 +41739,7 @@ entry(
 )
 
 entry(
-    index = 1454,
+    index = 1561,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32739,7 +41763,7 @@ entry(
 )
 
 entry(
-    index = 1455,
+    index = 1562,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -32763,7 +41787,7 @@ entry(
 )
 
 entry(
-    index = 1456,
+    index = 1563,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32787,7 +41811,7 @@ entry(
 )
 
 entry(
-    index = 1457,
+    index = 1564,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32811,7 +41835,7 @@ entry(
 )
 
 entry(
-    index = 1458,
+    index = 1565,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)Cb",
     group = 
 """
@@ -32833,7 +41857,7 @@ entry(
 )
 
 entry(
-    index = 1459,
+    index = 1566,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)Cb",
     group = 
 """
@@ -32858,7 +41882,7 @@ entry(
 )
 
 entry(
-    index = 1460,
+    index = 1567,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32883,7 +41907,7 @@ entry(
 )
 
 entry(
-    index = 1461,
+    index = 1568,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32908,7 +41932,7 @@ entry(
 )
 
 entry(
-    index = 1462,
+    index = 1569,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -32933,7 +41957,7 @@ entry(
 )
 
 entry(
-    index = 1463,
+    index = 1570,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32958,7 +41982,7 @@ entry(
 )
 
 entry(
-    index = 1464,
+    index = 1571,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -32983,7 +42007,7 @@ entry(
 )
 
 entry(
-    index = 1465,
+    index = 1572,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -33008,7 +42032,7 @@ entry(
 )
 
 entry(
-    index = 1466,
+    index = 1573,
     label = "Cs-CtCtCdsCds",
     group = 
 """
@@ -33027,7 +42051,7 @@ entry(
 )
 
 entry(
-    index = 1467,
+    index = 1574,
     label = "Cs-(Cds-O2d)(Cds-O2d)CtCt",
     group = 
 """
@@ -33048,7 +42072,7 @@ entry(
 )
 
 entry(
-    index = 1468,
+    index = 1575,
     label = "Cs-(Cds-O2d)(Cds-Cd)CtCt",
     group = 
 """
@@ -33069,7 +42093,7 @@ entry(
 )
 
 entry(
-    index = 1469,
+    index = 1576,
     label = "Cs-(Cds-O2d)(Cds-Cds)CtCt",
     group = 
 """
@@ -33090,7 +42114,7 @@ entry(
 )
 
 entry(
-    index = 1470,
+    index = 1577,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CtCt",
     group = 
 """
@@ -33111,7 +42135,7 @@ entry(
 )
 
 entry(
-    index = 1471,
+    index = 1578,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CtCt",
     group = 
 """
@@ -33133,7 +42157,7 @@ entry(
 )
 
 entry(
-    index = 1472,
+    index = 1579,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CtCt",
     group = 
 """
@@ -33155,7 +42179,7 @@ entry(
 )
 
 entry(
-    index = 1473,
+    index = 1580,
     label = "Cs-(Cds-Cd)(Cds-Cd)CtCt",
     group = 
 """
@@ -33176,7 +42200,7 @@ entry(
 )
 
 entry(
-    index = 1474,
+    index = 1581,
     label = "Cs-(Cds-Cds)(Cds-Cds)CtCt",
     group = 
 """
@@ -33202,7 +42226,7 @@ entry(
 )
 
 entry(
-    index = 1475,
+    index = 1582,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CtCt",
     group = 
 """
@@ -33223,7 +42247,7 @@ entry(
 )
 
 entry(
-    index = 1476,
+    index = 1583,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CtCt",
     group = 
 """
@@ -33245,7 +42269,7 @@ entry(
 )
 
 entry(
-    index = 1477,
+    index = 1584,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CtCt",
     group = 
 """
@@ -33267,7 +42291,7 @@ entry(
 )
 
 entry(
-    index = 1478,
+    index = 1585,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CtCt",
     group = 
 """
@@ -33289,7 +42313,7 @@ entry(
 )
 
 entry(
-    index = 1479,
+    index = 1586,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CtCt",
     group = 
 """
@@ -33310,7 +42334,7 @@ entry(
 )
 
 entry(
-    index = 1480,
+    index = 1587,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CtCt",
     group = 
 """
@@ -33333,7 +42357,7 @@ entry(
 )
 
 entry(
-    index = 1481,
+    index = 1588,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CtCt",
     group = 
 """
@@ -33356,7 +42380,7 @@ entry(
 )
 
 entry(
-    index = 1482,
+    index = 1589,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CtCt",
     group = 
 """
@@ -33379,7 +42403,7 @@ entry(
 )
 
 entry(
-    index = 1483,
+    index = 1590,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CtCt",
     group = 
 """
@@ -33402,7 +42426,7 @@ entry(
 )
 
 entry(
-    index = 1484,
+    index = 1591,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CtCt",
     group = 
 """
@@ -33425,7 +42449,7 @@ entry(
 )
 
 entry(
-    index = 1485,
+    index = 1592,
     label = "Cs-CbCtCdsCds",
     group = 
 """
@@ -33444,7 +42468,7 @@ entry(
 )
 
 entry(
-    index = 1486,
+    index = 1593,
     label = "Cs-(Cds-O2d)(Cds-O2d)CbCt",
     group = 
 """
@@ -33465,7 +42489,7 @@ entry(
 )
 
 entry(
-    index = 1487,
+    index = 1594,
     label = "Cs-(Cds-O2d)(Cds-Cd)CbCt",
     group = 
 """
@@ -33486,7 +42510,7 @@ entry(
 )
 
 entry(
-    index = 1488,
+    index = 1595,
     label = "Cs-(Cds-O2d)(Cds-Cds)CbCt",
     group = 
 """
@@ -33507,7 +42531,7 @@ entry(
 )
 
 entry(
-    index = 1489,
+    index = 1596,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CbCt",
     group = 
 """
@@ -33528,7 +42552,7 @@ entry(
 )
 
 entry(
-    index = 1490,
+    index = 1597,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CbCt",
     group = 
 """
@@ -33550,7 +42574,7 @@ entry(
 )
 
 entry(
-    index = 1491,
+    index = 1598,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CbCt",
     group = 
 """
@@ -33572,7 +42596,7 @@ entry(
 )
 
 entry(
-    index = 1492,
+    index = 1599,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbCt",
     group = 
 """
@@ -33593,7 +42617,7 @@ entry(
 )
 
 entry(
-    index = 1493,
+    index = 1600,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbCt",
     group = 
 """
@@ -33619,7 +42643,7 @@ entry(
 )
 
 entry(
-    index = 1494,
+    index = 1601,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbCt",
     group = 
 """
@@ -33640,7 +42664,7 @@ entry(
 )
 
 entry(
-    index = 1495,
+    index = 1602,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CbCt",
     group = 
 """
@@ -33662,7 +42686,7 @@ entry(
 )
 
 entry(
-    index = 1496,
+    index = 1603,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CbCt",
     group = 
 """
@@ -33684,7 +42708,7 @@ entry(
 )
 
 entry(
-    index = 1497,
+    index = 1604,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbCt",
     group = 
 """
@@ -33706,7 +42730,7 @@ entry(
 )
 
 entry(
-    index = 1498,
+    index = 1605,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbCt",
     group = 
 """
@@ -33727,7 +42751,7 @@ entry(
 )
 
 entry(
-    index = 1499,
+    index = 1606,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CbCt",
     group = 
 """
@@ -33750,7 +42774,7 @@ entry(
 )
 
 entry(
-    index = 1500,
+    index = 1607,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CbCt",
     group = 
 """
@@ -33773,7 +42797,7 @@ entry(
 )
 
 entry(
-    index = 1501,
+    index = 1608,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CbCt",
     group = 
 """
@@ -33796,7 +42820,7 @@ entry(
 )
 
 entry(
-    index = 1502,
+    index = 1609,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CbCt",
     group = 
 """
@@ -33819,7 +42843,7 @@ entry(
 )
 
 entry(
-    index = 1503,
+    index = 1610,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbCt",
     group = 
 """
@@ -33842,7 +42866,7 @@ entry(
 )
 
 entry(
-    index = 1504,
+    index = 1611,
     label = "Cs-CbCbCdsCds",
     group = 
 """
@@ -33861,7 +42885,7 @@ entry(
 )
 
 entry(
-    index = 1505,
+    index = 1612,
     label = "Cs-(Cds-O2d)(Cds-O2d)CbCb",
     group = 
 """
@@ -33882,7 +42906,7 @@ entry(
 )
 
 entry(
-    index = 1506,
+    index = 1613,
     label = "Cs-(Cds-O2d)(Cds-Cd)CbCb",
     group = 
 """
@@ -33903,7 +42927,7 @@ entry(
 )
 
 entry(
-    index = 1507,
+    index = 1614,
     label = "Cs-(Cds-O2d)(Cds-Cds)CbCb",
     group = 
 """
@@ -33924,7 +42948,7 @@ entry(
 )
 
 entry(
-    index = 1508,
+    index = 1615,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CbCb",
     group = 
 """
@@ -33945,7 +42969,7 @@ entry(
 )
 
 entry(
-    index = 1509,
+    index = 1616,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CbCb",
     group = 
 """
@@ -33967,7 +42991,7 @@ entry(
 )
 
 entry(
-    index = 1510,
+    index = 1617,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CbCb",
     group = 
 """
@@ -33989,7 +43013,7 @@ entry(
 )
 
 entry(
-    index = 1511,
+    index = 1618,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbCb",
     group = 
 """
@@ -34010,7 +43034,7 @@ entry(
 )
 
 entry(
-    index = 1512,
+    index = 1619,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbCb",
     group = 
 """
@@ -34036,7 +43060,7 @@ entry(
 )
 
 entry(
-    index = 1513,
+    index = 1620,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbCb",
     group = 
 """
@@ -34057,7 +43081,7 @@ entry(
 )
 
 entry(
-    index = 1514,
+    index = 1621,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CbCb",
     group = 
 """
@@ -34079,7 +43103,7 @@ entry(
 )
 
 entry(
-    index = 1515,
+    index = 1622,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CbCb",
     group = 
 """
@@ -34101,7 +43125,7 @@ entry(
 )
 
 entry(
-    index = 1516,
+    index = 1623,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbCb",
     group = 
 """
@@ -34123,7 +43147,7 @@ entry(
 )
 
 entry(
-    index = 1517,
+    index = 1624,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbCb",
     group = 
 """
@@ -34144,7 +43168,7 @@ entry(
 )
 
 entry(
-    index = 1518,
+    index = 1625,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CbCb",
     group = 
 """
@@ -34167,7 +43191,7 @@ entry(
 )
 
 entry(
-    index = 1519,
+    index = 1626,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CbCb",
     group = 
 """
@@ -34190,7 +43214,7 @@ entry(
 )
 
 entry(
-    index = 1520,
+    index = 1627,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CbCb",
     group = 
 """
@@ -34213,7 +43237,7 @@ entry(
 )
 
 entry(
-    index = 1521,
+    index = 1628,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CbCb",
     group = 
 """
@@ -34236,7 +43260,7 @@ entry(
 )
 
 entry(
-    index = 1522,
+    index = 1629,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbCb",
     group = 
 """
@@ -34259,7 +43283,7 @@ entry(
 )
 
 entry(
-    index = 1523,
+    index = 1630,
     label = "Cs-CtCtCtCds",
     group = 
 """
@@ -34278,7 +43302,7 @@ entry(
 )
 
 entry(
-    index = 1524,
+    index = 1631,
     label = "Cs-(Cds-O2d)CtCtCt",
     group = 
 """
@@ -34298,7 +43322,7 @@ entry(
 )
 
 entry(
-    index = 1525,
+    index = 1632,
     label = "Cs-(Cds-Cd)CtCtCt",
     group = 
 """
@@ -34318,7 +43342,7 @@ entry(
 )
 
 entry(
-    index = 1526,
+    index = 1633,
     label = "Cs-(Cds-Cds)CtCtCt",
     group = 
 """
@@ -34338,7 +43362,7 @@ entry(
 )
 
 entry(
-    index = 1527,
+    index = 1634,
     label = "Cs-(Cds-Cdd)CtCtCt",
     group = 
 """
@@ -34358,7 +43382,7 @@ entry(
 )
 
 entry(
-    index = 1528,
+    index = 1635,
     label = "Cs-(Cds-Cdd-O2d)CtCtCt",
     group = 
 """
@@ -34379,7 +43403,7 @@ entry(
 )
 
 entry(
-    index = 1529,
+    index = 1636,
     label = "Cs-(Cds-Cdd-S2d)CtCtCt",
     group = 
 """
@@ -34400,7 +43424,7 @@ entry(
 )
 
 entry(
-    index = 1530,
+    index = 1637,
     label = "Cs-(Cds-Cdd-Cd)CtCtCt",
     group = 
 """
@@ -34421,7 +43445,7 @@ entry(
 )
 
 entry(
-    index = 1531,
+    index = 1638,
     label = "Cs-CbCtCtCds",
     group = 
 """
@@ -34440,7 +43464,7 @@ entry(
 )
 
 entry(
-    index = 1532,
+    index = 1639,
     label = "Cs-(Cds-O2d)CbCtCt",
     group = 
 """
@@ -34460,7 +43484,7 @@ entry(
 )
 
 entry(
-    index = 1533,
+    index = 1640,
     label = "Cs-(Cds-Cd)CbCtCt",
     group = 
 """
@@ -34480,7 +43504,7 @@ entry(
 )
 
 entry(
-    index = 1534,
+    index = 1641,
     label = "Cs-(Cds-Cds)CbCtCt",
     group = 
 """
@@ -34500,7 +43524,7 @@ entry(
 )
 
 entry(
-    index = 1535,
+    index = 1642,
     label = "Cs-(Cds-Cdd)CbCtCt",
     group = 
 """
@@ -34520,7 +43544,7 @@ entry(
 )
 
 entry(
-    index = 1536,
+    index = 1643,
     label = "Cs-(Cds-Cdd-O2d)CbCtCt",
     group = 
 """
@@ -34541,7 +43565,7 @@ entry(
 )
 
 entry(
-    index = 1537,
+    index = 1644,
     label = "Cs-(Cds-Cdd-S2d)CbCtCt",
     group = 
 """
@@ -34562,7 +43586,7 @@ entry(
 )
 
 entry(
-    index = 1538,
+    index = 1645,
     label = "Cs-(Cds-Cdd-Cd)CbCtCt",
     group = 
 """
@@ -34583,7 +43607,7 @@ entry(
 )
 
 entry(
-    index = 1539,
+    index = 1646,
     label = "Cs-CbCbCtCds",
     group = 
 """
@@ -34602,7 +43626,7 @@ entry(
 )
 
 entry(
-    index = 1540,
+    index = 1647,
     label = "Cs-(Cds-O2d)CbCbCt",
     group = 
 """
@@ -34622,7 +43646,7 @@ entry(
 )
 
 entry(
-    index = 1541,
+    index = 1648,
     label = "Cs-(Cds-Cd)CbCbCt",
     group = 
 """
@@ -34642,7 +43666,7 @@ entry(
 )
 
 entry(
-    index = 1542,
+    index = 1649,
     label = "Cs-(Cds-Cds)CbCbCt",
     group = 
 """
@@ -34662,7 +43686,7 @@ entry(
 )
 
 entry(
-    index = 1543,
+    index = 1650,
     label = "Cs-(Cds-Cdd)CbCbCt",
     group = 
 """
@@ -34682,7 +43706,7 @@ entry(
 )
 
 entry(
-    index = 1544,
+    index = 1651,
     label = "Cs-(Cds-Cdd-O2d)CbCbCt",
     group = 
 """
@@ -34703,7 +43727,7 @@ entry(
 )
 
 entry(
-    index = 1545,
+    index = 1652,
     label = "Cs-(Cds-Cdd-S2d)CbCbCt",
     group = 
 """
@@ -34724,7 +43748,7 @@ entry(
 )
 
 entry(
-    index = 1546,
+    index = 1653,
     label = "Cs-(Cds-Cdd-Cd)CbCbCt",
     group = 
 """
@@ -34745,7 +43769,7 @@ entry(
 )
 
 entry(
-    index = 1547,
+    index = 1654,
     label = "Cs-CbCbCbCds",
     group = 
 """
@@ -34764,7 +43788,7 @@ entry(
 )
 
 entry(
-    index = 1548,
+    index = 1655,
     label = "Cs-(Cds-O2d)CbCbCb",
     group = 
 """
@@ -34784,7 +43808,7 @@ entry(
 )
 
 entry(
-    index = 1549,
+    index = 1656,
     label = "Cs-(Cds-Cd)CbCbCb",
     group = 
 """
@@ -34804,7 +43828,7 @@ entry(
 )
 
 entry(
-    index = 1550,
+    index = 1657,
     label = "Cs-(Cds-Cds)CbCbCb",
     group = 
 """
@@ -34824,7 +43848,7 @@ entry(
 )
 
 entry(
-    index = 1551,
+    index = 1658,
     label = "Cs-(Cds-Cdd)CbCbCb",
     group = 
 """
@@ -34844,7 +43868,7 @@ entry(
 )
 
 entry(
-    index = 1552,
+    index = 1659,
     label = "Cs-(Cds-Cdd-O2d)CbCbCb",
     group = 
 """
@@ -34865,7 +43889,7 @@ entry(
 )
 
 entry(
-    index = 1553,
+    index = 1660,
     label = "Cs-(Cds-Cdd-S2d)CbCbCb",
     group = 
 """
@@ -34886,7 +43910,7 @@ entry(
 )
 
 entry(
-    index = 1554,
+    index = 1661,
     label = "Cs-(Cds-Cdd-Cd)CbCbCb",
     group = 
 """
@@ -34907,7 +43931,7 @@ entry(
 )
 
 entry(
-    index = 1555,
+    index = 1662,
     label = "Cs-CtCtCtCt",
     group = 
 """
@@ -34926,7 +43950,7 @@ entry(
 )
 
 entry(
-    index = 1556,
+    index = 1663,
     label = "Cs-CbCtCtCt",
     group = 
 """
@@ -34945,7 +43969,7 @@ entry(
 )
 
 entry(
-    index = 1557,
+    index = 1664,
     label = "Cs-CbCbCtCt",
     group = 
 """
@@ -34964,7 +43988,7 @@ entry(
 )
 
 entry(
-    index = 1558,
+    index = 1665,
     label = "Cs-CbCbCbCt",
     group = 
 """
@@ -34983,7 +44007,7 @@ entry(
 )
 
 entry(
-    index = 1559,
+    index = 1666,
     label = "Cs-CbCbCbCb",
     group = 
 """
@@ -35002,7 +44026,7 @@ entry(
 )
 
 entry(
-    index = 1560,
+    index = 1667,
     label = "Cs-C=SCbCtCt",
     group = 
 """
@@ -35022,7 +44046,7 @@ entry(
 )
 
 entry(
-    index = 1561,
+    index = 1668,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -35045,7 +44069,7 @@ entry(
 )
 
 entry(
-    index = 1562,
+    index = 1669,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)(Cds-Cdd)",
     group = 
 """
@@ -35068,7 +44092,7 @@ entry(
 )
 
 entry(
-    index = 1563,
+    index = 1670,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35092,7 +44116,7 @@ entry(
 )
 
 entry(
-    index = 1564,
+    index = 1671,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)",
     group = 
 """
@@ -35116,7 +44140,7 @@ entry(
 )
 
 entry(
-    index = 1565,
+    index = 1672,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -35139,7 +44163,7 @@ entry(
 )
 
 entry(
-    index = 1566,
+    index = 1673,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35165,7 +44189,7 @@ entry(
 )
 
 entry(
-    index = 1567,
+    index = 1674,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35191,7 +44215,7 @@ entry(
 )
 
 entry(
-    index = 1568,
+    index = 1675,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -35217,7 +44241,7 @@ entry(
 )
 
 entry(
-    index = 1569,
+    index = 1676,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35243,7 +44267,7 @@ entry(
 )
 
 entry(
-    index = 1570,
+    index = 1677,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -35266,7 +44290,7 @@ entry(
 )
 
 entry(
-    index = 1571,
+    index = 1678,
     label = "Cs-C=S(Cds-Cds)(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -35289,7 +44313,7 @@ entry(
 )
 
 entry(
-    index = 1572,
+    index = 1679,
     label = "Cs-C=S(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -35314,7 +44338,7 @@ entry(
 )
 
 entry(
-    index = 1573,
+    index = 1680,
     label = "Cs-C=S(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35339,7 +44363,7 @@ entry(
 )
 
 entry(
-    index = 1574,
+    index = 1681,
     label = "Cs-C=S(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -35364,7 +44388,7 @@ entry(
 )
 
 entry(
-    index = 1575,
+    index = 1682,
     label = "Cs-C=S(Cds-Cd)CtCt",
     group = 
 """
@@ -35385,7 +44409,7 @@ entry(
 )
 
 entry(
-    index = 1576,
+    index = 1683,
     label = "Cs-C=S(Cds-Cds)CtCt",
     group = 
 """
@@ -35406,7 +44430,7 @@ entry(
 )
 
 entry(
-    index = 1577,
+    index = 1684,
     label = "Cs-C=S(Cds-Cdd)CtCt",
     group = 
 """
@@ -35427,7 +44451,7 @@ entry(
 )
 
 entry(
-    index = 1578,
+    index = 1685,
     label = "Cs-C=S(Cds-Cdd-S2d)CtCt",
     group = 
 """
@@ -35449,7 +44473,7 @@ entry(
 )
 
 entry(
-    index = 1579,
+    index = 1686,
     label = "Cs-C=S(Cds-Cdd-Cd)CtCt",
     group = 
 """
@@ -35471,7 +44495,7 @@ entry(
 )
 
 entry(
-    index = 1580,
+    index = 1687,
     label = "Cs-C=S(Cds-Cd)CtCs",
     group = 
 """
@@ -35492,7 +44516,7 @@ entry(
 )
 
 entry(
-    index = 1581,
+    index = 1688,
     label = "Cs-C=S(Cds-Cds)CtCs",
     group = 
 """
@@ -35513,7 +44537,7 @@ entry(
 )
 
 entry(
-    index = 1582,
+    index = 1689,
     label = "Cs-C=S(Cds-Cdd)CtCs",
     group = 
 """
@@ -35534,7 +44558,7 @@ entry(
 )
 
 entry(
-    index = 1583,
+    index = 1690,
     label = "Cs-C=S(Cds-Cdd-S2d)CtCs",
     group = 
 """
@@ -35556,7 +44580,7 @@ entry(
 )
 
 entry(
-    index = 1584,
+    index = 1691,
     label = "Cs-C=S(Cds-Cdd-Cd)CtCs",
     group = 
 """
@@ -35578,7 +44602,7 @@ entry(
 )
 
 entry(
-    index = 1585,
+    index = 1692,
     label = "Cs-C=SCbCbCt",
     group = 
 """
@@ -35598,7 +44622,7 @@ entry(
 )
 
 entry(
-    index = 1586,
+    index = 1693,
     label = "Cs-C=SCbCsCs",
     group = 
 """
@@ -35618,7 +44642,7 @@ entry(
 )
 
 entry(
-    index = 1587,
+    index = 1694,
     label = "Cs-C=SCbCbCs",
     group = 
 """
@@ -35638,7 +44662,7 @@ entry(
 )
 
 entry(
-    index = 1588,
+    index = 1695,
     label = "Cs-C=SCtCtCt",
     group = 
 """
@@ -35658,7 +44682,7 @@ entry(
 )
 
 entry(
-    index = 1589,
+    index = 1696,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)Cs",
     group = 
 """
@@ -35680,7 +44704,7 @@ entry(
 )
 
 entry(
-    index = 1590,
+    index = 1697,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)Cs",
     group = 
 """
@@ -35702,7 +44726,7 @@ entry(
 )
 
 entry(
-    index = 1591,
+    index = 1698,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -35726,7 +44750,7 @@ entry(
 )
 
 entry(
-    index = 1592,
+    index = 1699,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -35750,7 +44774,7 @@ entry(
 )
 
 entry(
-    index = 1593,
+    index = 1700,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -35774,7 +44798,7 @@ entry(
 )
 
 entry(
-    index = 1594,
+    index = 1701,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)Cs",
     group = 
 """
@@ -35796,7 +44820,7 @@ entry(
 )
 
 entry(
-    index = 1595,
+    index = 1702,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cds)Cs",
     group = 
 """
@@ -35818,7 +44842,7 @@ entry(
 )
 
 entry(
-    index = 1596,
+    index = 1703,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cds)Cs",
     group = 
 """
@@ -35841,7 +44865,7 @@ entry(
 )
 
 entry(
-    index = 1597,
+    index = 1704,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cds)Cs",
     group = 
 """
@@ -35864,7 +44888,7 @@ entry(
 )
 
 entry(
-    index = 1598,
+    index = 1705,
     label = "Cs-C=SC=SCtCt",
     group = 
 """
@@ -35885,7 +44909,7 @@ entry(
 )
 
 entry(
-    index = 1599,
+    index = 1706,
     label = "Cs-C=SCsCsCs",
     group = 
 """
@@ -35910,7 +44934,7 @@ entry(
 )
 
 entry(
-    index = 1600,
+    index = 1707,
     label = "Cs-C=SCtCtCs",
     group = 
 """
@@ -35930,7 +44954,7 @@ entry(
 )
 
 entry(
-    index = 1601,
+    index = 1708,
     label = "Cs-C=SC=SC=SCt",
     group = 
 """
@@ -35952,7 +44976,7 @@ entry(
 )
 
 entry(
-    index = 1602,
+    index = 1709,
     label = "Cs-C=SC=SC=SCs",
     group = 
 """
@@ -35974,7 +44998,7 @@ entry(
 )
 
 entry(
-    index = 1603,
+    index = 1710,
     label = "Cs-C=SC=SC=SC=S",
     group = 
 """
@@ -35997,7 +45021,7 @@ entry(
 )
 
 entry(
-    index = 1604,
+    index = 1711,
     label = "Cs-C=SCtCsCs",
     group = 
 """
@@ -36017,7 +45041,7 @@ entry(
 )
 
 entry(
-    index = 1605,
+    index = 1712,
     label = "Cs-C=SC=SC=SCb",
     group = 
 """
@@ -36039,7 +45063,7 @@ entry(
 )
 
 entry(
-    index = 1606,
+    index = 1713,
     label = "Cs-C=SC=SC=S(Cds-Cd)",
     group = 
 """
@@ -36062,7 +45086,7 @@ entry(
 )
 
 entry(
-    index = 1607,
+    index = 1714,
     label = "Cs-C=SC=SC=S(Cds-Cdd)",
     group = 
 """
@@ -36085,7 +45109,7 @@ entry(
 )
 
 entry(
-    index = 1608,
+    index = 1715,
     label = "Cs-C=SC=SC=S(Cds-Cdd-Cd)",
     group = 
 """
@@ -36109,7 +45133,7 @@ entry(
 )
 
 entry(
-    index = 1609,
+    index = 1716,
     label = "Cs-C=SC=SC=S(Cds-Cdd-S2d)",
     group = 
 """
@@ -36133,7 +45157,7 @@ entry(
 )
 
 entry(
-    index = 1610,
+    index = 1717,
     label = "Cs-C=SC=SC=S(Cds-Cds)",
     group = 
 """
@@ -36156,7 +45180,7 @@ entry(
 )
 
 entry(
-    index = 1611,
+    index = 1718,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)Ct",
     group = 
 """
@@ -36178,7 +45202,7 @@ entry(
 )
 
 entry(
-    index = 1612,
+    index = 1719,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)Ct",
     group = 
 """
@@ -36200,7 +45224,7 @@ entry(
 )
 
 entry(
-    index = 1613,
+    index = 1720,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -36224,7 +45248,7 @@ entry(
 )
 
 entry(
-    index = 1614,
+    index = 1721,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -36248,7 +45272,7 @@ entry(
 )
 
 entry(
-    index = 1615,
+    index = 1722,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -36272,7 +45296,7 @@ entry(
 )
 
 entry(
-    index = 1616,
+    index = 1723,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)Ct",
     group = 
 """
@@ -36294,7 +45318,7 @@ entry(
 )
 
 entry(
-    index = 1617,
+    index = 1724,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cds)Ct",
     group = 
 """
@@ -36316,7 +45340,7 @@ entry(
 )
 
 entry(
-    index = 1618,
+    index = 1725,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cds)Ct",
     group = 
 """
@@ -36339,7 +45363,7 @@ entry(
 )
 
 entry(
-    index = 1619,
+    index = 1726,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cds)Ct",
     group = 
 """
@@ -36362,7 +45386,7 @@ entry(
 )
 
 entry(
-    index = 1620,
+    index = 1727,
     label = "Cs-C=SC=SCtCs",
     group = 
 """
@@ -36383,7 +45407,7 @@ entry(
 )
 
 entry(
-    index = 1621,
+    index = 1728,
     label = "Cs-C=SC=SCbCb",
     group = 
 """
@@ -36404,7 +45428,7 @@ entry(
 )
 
 entry(
-    index = 1622,
+    index = 1729,
     label = "Cs-C=S(Cds-Cd)CsCs",
     group = 
 """
@@ -36425,7 +45449,7 @@ entry(
 )
 
 entry(
-    index = 1623,
+    index = 1730,
     label = "Cs-C=S(Cds-Cds)CsCs",
     group = 
 """
@@ -36446,7 +45470,7 @@ entry(
 )
 
 entry(
-    index = 1624,
+    index = 1731,
     label = "Cs-C=S(Cds-Cdd)CsCs",
     group = 
 """
@@ -36467,7 +45491,7 @@ entry(
 )
 
 entry(
-    index = 1625,
+    index = 1732,
     label = "Cs-C=S(Cds-Cdd-Cd)CsCs",
     group = 
 """
@@ -36489,7 +45513,7 @@ entry(
 )
 
 entry(
-    index = 1626,
+    index = 1733,
     label = "Cs-C=S(Cds-Cdd-S2d)CsCs",
     group = 
 """
@@ -36511,7 +45535,7 @@ entry(
 )
 
 entry(
-    index = 1627,
+    index = 1734,
     label = "Cs-C=SC=SCbCt",
     group = 
 """
@@ -36532,7 +45556,7 @@ entry(
 )
 
 entry(
-    index = 1628,
+    index = 1735,
     label = "Cs-C=S(Cds-Cd)CbCt",
     group = 
 """
@@ -36553,7 +45577,7 @@ entry(
 )
 
 entry(
-    index = 1629,
+    index = 1736,
     label = "Cs-C=S(Cds-Cds)CbCt",
     group = 
 """
@@ -36574,7 +45598,7 @@ entry(
 )
 
 entry(
-    index = 1630,
+    index = 1737,
     label = "Cs-C=S(Cds-Cdd)CbCt",
     group = 
 """
@@ -36595,7 +45619,7 @@ entry(
 )
 
 entry(
-    index = 1631,
+    index = 1738,
     label = "Cs-C=S(Cds-Cdd-S2d)CbCt",
     group = 
 """
@@ -36617,7 +45641,7 @@ entry(
 )
 
 entry(
-    index = 1632,
+    index = 1739,
     label = "Cs-C=S(Cds-Cdd-Cd)CbCt",
     group = 
 """
@@ -36639,7 +45663,7 @@ entry(
 )
 
 entry(
-    index = 1633,
+    index = 1740,
     label = "Cs-C=SC=SCsCs",
     group = 
 """
@@ -36660,7 +45684,7 @@ entry(
 )
 
 entry(
-    index = 1634,
+    index = 1741,
     label = "Cs-C=S(Cds-Cd)CbCb",
     group = 
 """
@@ -36681,7 +45705,7 @@ entry(
 )
 
 entry(
-    index = 1635,
+    index = 1742,
     label = "Cs-C=S(Cds-Cds)CbCb",
     group = 
 """
@@ -36702,7 +45726,7 @@ entry(
 )
 
 entry(
-    index = 1636,
+    index = 1743,
     label = "Cs-C=S(Cds-Cdd)CbCb",
     group = 
 """
@@ -36723,7 +45747,7 @@ entry(
 )
 
 entry(
-    index = 1637,
+    index = 1744,
     label = "Cs-C=S(Cds-Cdd-S2d)CbCb",
     group = 
 """
@@ -36745,7 +45769,7 @@ entry(
 )
 
 entry(
-    index = 1638,
+    index = 1745,
     label = "Cs-C=S(Cds-Cdd-Cd)CbCb",
     group = 
 """
@@ -36767,7 +45791,7 @@ entry(
 )
 
 entry(
-    index = 1639,
+    index = 1746,
     label = "Cs-C=SC=S(Cds-Cd)Ct",
     group = 
 """
@@ -36789,7 +45813,7 @@ entry(
 )
 
 entry(
-    index = 1640,
+    index = 1747,
     label = "Cs-C=SC=S(Cds-Cds)Ct",
     group = 
 """
@@ -36811,7 +45835,7 @@ entry(
 )
 
 entry(
-    index = 1641,
+    index = 1748,
     label = "Cs-C=SC=S(Cds-Cdd)Ct",
     group = 
 """
@@ -36833,7 +45857,7 @@ entry(
 )
 
 entry(
-    index = 1642,
+    index = 1749,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)Ct",
     group = 
 """
@@ -36856,7 +45880,7 @@ entry(
 )
 
 entry(
-    index = 1643,
+    index = 1750,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)Ct",
     group = 
 """
@@ -36879,7 +45903,7 @@ entry(
 )
 
 entry(
-    index = 1644,
+    index = 1751,
     label = "Cs-C=SC=S(Cds-Cd)Cs",
     group = 
 """
@@ -36901,7 +45925,7 @@ entry(
 )
 
 entry(
-    index = 1645,
+    index = 1752,
     label = "Cs-C=SC=S(Cds-Cds)Cs",
     group = 
 """
@@ -36923,7 +45947,7 @@ entry(
 )
 
 entry(
-    index = 1646,
+    index = 1753,
     label = "Cs-C=SC=S(Cds-Cdd)Cs",
     group = 
 """
@@ -36945,7 +45969,7 @@ entry(
 )
 
 entry(
-    index = 1647,
+    index = 1754,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)Cs",
     group = 
 """
@@ -36968,7 +45992,7 @@ entry(
 )
 
 entry(
-    index = 1648,
+    index = 1755,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)Cs",
     group = 
 """
@@ -36991,7 +46015,7 @@ entry(
 )
 
 entry(
-    index = 1649,
+    index = 1756,
     label = "Cs-C=SC=S(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -37014,7 +46038,7 @@ entry(
 )
 
 entry(
-    index = 1650,
+    index = 1757,
     label = "Cs-C=SC=S(Cds-Cdd)(Cds-Cds)",
     group = 
 """
@@ -37037,7 +46061,7 @@ entry(
 )
 
 entry(
-    index = 1651,
+    index = 1758,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)(Cds-Cds)",
     group = 
 """
@@ -37061,7 +46085,7 @@ entry(
 )
 
 entry(
-    index = 1652,
+    index = 1759,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)(Cds-Cds)",
     group = 
 """
@@ -37085,7 +46109,7 @@ entry(
 )
 
 entry(
-    index = 1653,
+    index = 1760,
     label = "Cs-C=SC=S(Cds-Cdd)(Cds-Cdd)",
     group = 
 """
@@ -37108,7 +46132,7 @@ entry(
 )
 
 entry(
-    index = 1654,
+    index = 1761,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)",
     group = 
 """
@@ -37133,7 +46157,7 @@ entry(
 )
 
 entry(
-    index = 1655,
+    index = 1762,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)",
     group = 
 """
@@ -37158,7 +46182,7 @@ entry(
 )
 
 entry(
-    index = 1656,
+    index = 1763,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)",
     group = 
 """
@@ -37183,7 +46207,7 @@ entry(
 )
 
 entry(
-    index = 1657,
+    index = 1764,
     label = "Cs-C=SC=S(Cds-Cds)(Cds-Cds)",
     group = 
 """
@@ -37206,7 +46230,7 @@ entry(
 )
 
 entry(
-    index = 1658,
+    index = 1765,
     label = "Cs-C=SC=S(Cds-Cd)Cb",
     group = 
 """
@@ -37228,7 +46252,7 @@ entry(
 )
 
 entry(
-    index = 1659,
+    index = 1766,
     label = "Cs-C=SC=S(Cds-Cdd)Cb",
     group = 
 """
@@ -37250,7 +46274,7 @@ entry(
 )
 
 entry(
-    index = 1660,
+    index = 1767,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -37273,7 +46297,7 @@ entry(
 )
 
 entry(
-    index = 1661,
+    index = 1768,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -37296,7 +46320,7 @@ entry(
 )
 
 entry(
-    index = 1662,
+    index = 1769,
     label = "Cs-C=SC=S(Cds-Cds)Cb",
     group = 
 """
@@ -37318,7 +46342,7 @@ entry(
 )
 
 entry(
-    index = 1663,
+    index = 1770,
     label = "Cs-C=SCbCtCs",
     group = 
 """
@@ -37338,7 +46362,7 @@ entry(
 )
 
 entry(
-    index = 1664,
+    index = 1771,
     label = "Cs-C=S(Cds-Cd)CbCs",
     group = 
 """
@@ -37359,7 +46383,7 @@ entry(
 )
 
 entry(
-    index = 1665,
+    index = 1772,
     label = "Cs-C=S(Cds-Cds)CbCs",
     group = 
 """
@@ -37380,7 +46404,7 @@ entry(
 )
 
 entry(
-    index = 1666,
+    index = 1773,
     label = "Cs-C=S(Cds-Cdd)CbCs",
     group = 
 """
@@ -37401,7 +46425,7 @@ entry(
 )
 
 entry(
-    index = 1667,
+    index = 1774,
     label = "Cs-C=S(Cds-Cdd-S2d)CbCs",
     group = 
 """
@@ -37423,7 +46447,7 @@ entry(
 )
 
 entry(
-    index = 1668,
+    index = 1775,
     label = "Cs-C=S(Cds-Cdd-Cd)CbCs",
     group = 
 """
@@ -37445,7 +46469,7 @@ entry(
 )
 
 entry(
-    index = 1669,
+    index = 1776,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)Cb",
     group = 
 """
@@ -37467,7 +46491,7 @@ entry(
 )
 
 entry(
-    index = 1670,
+    index = 1777,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)Cb",
     group = 
 """
@@ -37489,7 +46513,7 @@ entry(
 )
 
 entry(
-    index = 1671,
+    index = 1778,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -37513,7 +46537,7 @@ entry(
 )
 
 entry(
-    index = 1672,
+    index = 1779,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)Cb",
     group = 
 """
@@ -37537,7 +46561,7 @@ entry(
 )
 
 entry(
-    index = 1673,
+    index = 1780,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)Cb",
     group = 
 """
@@ -37561,7 +46585,7 @@ entry(
 )
 
 entry(
-    index = 1674,
+    index = 1781,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)Cb",
     group = 
 """
@@ -37583,7 +46607,7 @@ entry(
 )
 
 entry(
-    index = 1675,
+    index = 1782,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cds)Cb",
     group = 
 """
@@ -37605,7 +46629,7 @@ entry(
 )
 
 entry(
-    index = 1676,
+    index = 1783,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cds)Cb",
     group = 
 """
@@ -37628,7 +46652,7 @@ entry(
 )
 
 entry(
-    index = 1677,
+    index = 1784,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cds)Cb",
     group = 
 """
@@ -37651,7 +46675,7 @@ entry(
 )
 
 entry(
-    index = 1678,
+    index = 1785,
     label = "Cs-C=SCbCbCb",
     group = 
 """
@@ -37671,7 +46695,7 @@ entry(
 )
 
 entry(
-    index = 1679,
+    index = 1786,
     label = "Cs-C=SC=SCbCs",
     group = 
 """
@@ -37692,7 +46716,7 @@ entry(
 )
 
 entry(
-    index = 1680,
+    index = 1787,
     label = "Cs-CCCOs",
     group = 
 """
@@ -37711,7 +46735,7 @@ entry(
 )
 
 entry(
-    index = 1681,
+    index = 1788,
     label = "Cs-CsCsCsOs",
     group = 
 """
@@ -37737,7 +46761,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1682,
+    index = 1789,
     label = "Cs-CdsCsCsOs",
     group = 
 """
@@ -37756,7 +46780,7 @@ entry(
 )
 
 entry(
-    index = 1683,
+    index = 1790,
     label = "Cs-(Cds-O2d)CsCsOs",
     group = 
 """
@@ -37783,7 +46807,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1684,
+    index = 1791,
     label = "Cs-(Cds-Cd)CsCsOs",
     group = 
 """
@@ -37810,7 +46834,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1685,
+    index = 1792,
     label = "Cs-(Cds-Cds)CsCsOs",
     group = 
 """
@@ -37835,7 +46859,7 @@ entry(
 )
 
 entry(
-    index = 1686,
+    index = 1793,
     label = "Cs-(Cds-Cdd)CsCsOs",
     group = 
 """
@@ -37855,7 +46879,7 @@ entry(
 )
 
 entry(
-    index = 1687,
+    index = 1794,
     label = "Cs-(Cds-Cdd-O2d)CsCsOs",
     group = 
 """
@@ -37881,7 +46905,7 @@ entry(
 )
 
 entry(
-    index = 1688,
+    index = 1795,
     label = "Cs-(Cds-Cdd-Cd)CsCsOs",
     group = 
 """
@@ -37902,7 +46926,7 @@ entry(
 )
 
 entry(
-    index = 1689,
+    index = 1796,
     label = "Cs-OsCtCsCs",
     group = 
 """
@@ -37921,7 +46945,7 @@ entry(
 )
 
 entry(
-    index = 1690,
+    index = 1797,
     label = "Cs-CbCsCsOs",
     group = 
 """
@@ -37945,7 +46969,7 @@ entry(
 )
 
 entry(
-    index = 1691,
+    index = 1798,
     label = "Cs-CdsCdsCsOs",
     group = 
 """
@@ -37964,7 +46988,7 @@ entry(
 )
 
 entry(
-    index = 1692,
+    index = 1799,
     label = "Cs-(Cds-O2d)(Cds-O2d)CsOs",
     group = 
 """
@@ -37985,7 +47009,7 @@ entry(
 )
 
 entry(
-    index = 1693,
+    index = 1800,
     label = "Cs-(Cds-O2d)(Cds-Cd)CsOs",
     group = 
 """
@@ -38013,7 +47037,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1694,
+    index = 1801,
     label = "Cs-(Cds-O2d)(Cds-Cds)CsOs",
     group = 
 """
@@ -38034,7 +47058,7 @@ entry(
 )
 
 entry(
-    index = 1695,
+    index = 1802,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CsOs",
     group = 
 """
@@ -38055,7 +47079,7 @@ entry(
 )
 
 entry(
-    index = 1696,
+    index = 1803,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CsOs",
     group = 
 """
@@ -38077,7 +47101,7 @@ entry(
 )
 
 entry(
-    index = 1697,
+    index = 1804,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CsOs",
     group = 
 """
@@ -38099,7 +47123,7 @@ entry(
 )
 
 entry(
-    index = 1698,
+    index = 1805,
     label = "Cs-(Cds-Cd)(Cds-Cd)CsOs",
     group = 
 """
@@ -38120,7 +47144,7 @@ entry(
 )
 
 entry(
-    index = 1699,
+    index = 1806,
     label = "Cs-(Cds-Cds)(Cds-Cds)CsOs",
     group = 
 """
@@ -38146,7 +47170,7 @@ entry(
 )
 
 entry(
-    index = 1700,
+    index = 1807,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CsOs",
     group = 
 """
@@ -38167,7 +47191,7 @@ entry(
 )
 
 entry(
-    index = 1701,
+    index = 1808,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CsOs",
     group = 
 """
@@ -38189,7 +47213,7 @@ entry(
 )
 
 entry(
-    index = 1702,
+    index = 1809,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CsOs",
     group = 
 """
@@ -38211,7 +47235,7 @@ entry(
 )
 
 entry(
-    index = 1703,
+    index = 1810,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CsOs",
     group = 
 """
@@ -38232,7 +47256,7 @@ entry(
 )
 
 entry(
-    index = 1704,
+    index = 1811,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CsOs",
     group = 
 """
@@ -38255,7 +47279,7 @@ entry(
 )
 
 entry(
-    index = 1705,
+    index = 1812,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CsOs",
     group = 
 """
@@ -38278,7 +47302,7 @@ entry(
 )
 
 entry(
-    index = 1706,
+    index = 1813,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CsOs",
     group = 
 """
@@ -38301,7 +47325,7 @@ entry(
 )
 
 entry(
-    index = 1707,
+    index = 1814,
     label = "Cs-CtCdsCsOs",
     group = 
 """
@@ -38320,7 +47344,7 @@ entry(
 )
 
 entry(
-    index = 1708,
+    index = 1815,
     label = "Cs-(Cds-O2d)CtCsOs",
     group = 
 """
@@ -38340,7 +47364,7 @@ entry(
 )
 
 entry(
-    index = 1709,
+    index = 1816,
     label = "Cs-(Cds-Cd)CtCsOs",
     group = 
 """
@@ -38360,7 +47384,7 @@ entry(
 )
 
 entry(
-    index = 1710,
+    index = 1817,
     label = "Cs-(Cds-Cds)CtCsOs",
     group = 
 """
@@ -38380,7 +47404,7 @@ entry(
 )
 
 entry(
-    index = 1711,
+    index = 1818,
     label = "Cs-(Cds-Cdd)CtCsOs",
     group = 
 """
@@ -38400,7 +47424,7 @@ entry(
 )
 
 entry(
-    index = 1712,
+    index = 1819,
     label = "Cs-(Cds-Cdd-O2d)CtCsOs",
     group = 
 """
@@ -38421,7 +47445,7 @@ entry(
 )
 
 entry(
-    index = 1713,
+    index = 1820,
     label = "Cs-(Cds-Cdd-Cd)CtCsOs",
     group = 
 """
@@ -38442,7 +47466,7 @@ entry(
 )
 
 entry(
-    index = 1714,
+    index = 1821,
     label = "Cs-CbCdsCsOs",
     group = 
 """
@@ -38461,7 +47485,7 @@ entry(
 )
 
 entry(
-    index = 1715,
+    index = 1822,
     label = "Cs-(Cds-O2d)CbCsOs",
     group = 
 """
@@ -38481,7 +47505,7 @@ entry(
 )
 
 entry(
-    index = 1716,
+    index = 1823,
     label = "Cs-(Cds-Cd)CbCsOs",
     group = 
 """
@@ -38501,7 +47525,7 @@ entry(
 )
 
 entry(
-    index = 1717,
+    index = 1824,
     label = "Cs-(Cds-Cds)CbCsOs",
     group = 
 """
@@ -38521,7 +47545,7 @@ entry(
 )
 
 entry(
-    index = 1718,
+    index = 1825,
     label = "Cs-(Cds-Cdd)CbCsOs",
     group = 
 """
@@ -38541,7 +47565,7 @@ entry(
 )
 
 entry(
-    index = 1719,
+    index = 1826,
     label = "Cs-(Cds-Cdd-O2d)CbCsOs",
     group = 
 """
@@ -38562,7 +47586,7 @@ entry(
 )
 
 entry(
-    index = 1720,
+    index = 1827,
     label = "Cs-(Cds-Cdd-Cd)CbCsOs",
     group = 
 """
@@ -38583,7 +47607,7 @@ entry(
 )
 
 entry(
-    index = 1721,
+    index = 1828,
     label = "Cs-CtCtCsOs",
     group = 
 """
@@ -38602,7 +47626,7 @@ entry(
 )
 
 entry(
-    index = 1722,
+    index = 1829,
     label = "Cs-CbCtCsOs",
     group = 
 """
@@ -38621,7 +47645,7 @@ entry(
 )
 
 entry(
-    index = 1723,
+    index = 1830,
     label = "Cs-CbCbCsOs",
     group = 
 """
@@ -38640,7 +47664,7 @@ entry(
 )
 
 entry(
-    index = 1724,
+    index = 1831,
     label = "Cs-CdsCdsCdsOs",
     group = 
 """
@@ -38659,7 +47683,7 @@ entry(
 )
 
 entry(
-    index = 1725,
+    index = 1832,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-O2d)O2s",
     group = 
 """
@@ -38681,7 +47705,7 @@ entry(
 )
 
 entry(
-    index = 1726,
+    index = 1833,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cd)O2s",
     group = 
 """
@@ -38703,7 +47727,7 @@ entry(
 )
 
 entry(
-    index = 1727,
+    index = 1834,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cds)O2s",
     group = 
 """
@@ -38725,7 +47749,7 @@ entry(
 )
 
 entry(
-    index = 1728,
+    index = 1835,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd)O2s",
     group = 
 """
@@ -38747,7 +47771,7 @@ entry(
 )
 
 entry(
-    index = 1729,
+    index = 1836,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -38770,7 +47794,7 @@ entry(
 )
 
 entry(
-    index = 1730,
+    index = 1837,
     label = "Cs-(Cds-O2d)(Cds-O2d)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -38793,7 +47817,7 @@ entry(
 )
 
 entry(
-    index = 1731,
+    index = 1838,
     label = "Cs-(Cds-O2d)(Cds-Cd)(Cds-Cd)O2s",
     group = 
 """
@@ -38822,7 +47846,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1732,
+    index = 1839,
     label = "Cs-(Cds-O2d)(Cds-Cds)(Cds-Cds)O2s",
     group = 
 """
@@ -38844,7 +47868,7 @@ entry(
 )
 
 entry(
-    index = 1733,
+    index = 1840,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cds)O2s",
     group = 
 """
@@ -38866,7 +47890,7 @@ entry(
 )
 
 entry(
-    index = 1734,
+    index = 1841,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cds)O2s",
     group = 
 """
@@ -38889,7 +47913,7 @@ entry(
 )
 
 entry(
-    index = 1735,
+    index = 1842,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cds)O2s",
     group = 
 """
@@ -38912,7 +47936,7 @@ entry(
 )
 
 entry(
-    index = 1736,
+    index = 1843,
     label = "Cs-(Cds-O2d)(Cds-Cdd)(Cds-Cdd)O2s",
     group = 
 """
@@ -38934,7 +47958,7 @@ entry(
 )
 
 entry(
-    index = 1737,
+    index = 1844,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -38958,7 +47982,7 @@ entry(
 )
 
 entry(
-    index = 1738,
+    index = 1845,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -38982,7 +48006,7 @@ entry(
 )
 
 entry(
-    index = 1739,
+    index = 1846,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39006,7 +48030,7 @@ entry(
 )
 
 entry(
-    index = 1740,
+    index = 1847,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)O2s",
     group = 
 """
@@ -39028,7 +48052,7 @@ entry(
 )
 
 entry(
-    index = 1741,
+    index = 1848,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)O2s",
     group = 
 """
@@ -39050,7 +48074,7 @@ entry(
 )
 
 entry(
-    index = 1742,
+    index = 1849,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)O2s",
     group = 
 """
@@ -39072,7 +48096,7 @@ entry(
 )
 
 entry(
-    index = 1743,
+    index = 1850,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -39095,7 +48119,7 @@ entry(
 )
 
 entry(
-    index = 1744,
+    index = 1851,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39118,7 +48142,7 @@ entry(
 )
 
 entry(
-    index = 1745,
+    index = 1852,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)O2s",
     group = 
 """
@@ -39140,7 +48164,7 @@ entry(
 )
 
 entry(
-    index = 1746,
+    index = 1853,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -39164,7 +48188,7 @@ entry(
 )
 
 entry(
-    index = 1747,
+    index = 1854,
     label = "Cs-(Cds-Cds)(Cds-Cdd-O2d)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39188,7 +48212,7 @@ entry(
 )
 
 entry(
-    index = 1748,
+    index = 1855,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39212,7 +48236,7 @@ entry(
 )
 
 entry(
-    index = 1749,
+    index = 1856,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)O2s",
     group = 
 """
@@ -39234,7 +48258,7 @@ entry(
 )
 
 entry(
-    index = 1750,
+    index = 1857,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-O2d)O2s",
     group = 
 """
@@ -39259,7 +48283,7 @@ entry(
 )
 
 entry(
-    index = 1751,
+    index = 1858,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39284,7 +48308,7 @@ entry(
 )
 
 entry(
-    index = 1752,
+    index = 1859,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39309,7 +48333,7 @@ entry(
 )
 
 entry(
-    index = 1753,
+    index = 1860,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)O2s",
     group = 
 """
@@ -39334,7 +48358,7 @@ entry(
 )
 
 entry(
-    index = 1754,
+    index = 1861,
     label = "Cs-CtCdsCdsOs",
     group = 
 """
@@ -39353,7 +48377,7 @@ entry(
 )
 
 entry(
-    index = 1755,
+    index = 1862,
     label = "Cs-(Cds-O2d)(Cds-O2d)CtOs",
     group = 
 """
@@ -39374,7 +48398,7 @@ entry(
 )
 
 entry(
-    index = 1756,
+    index = 1863,
     label = "Cs-(Cds-O2d)(Cds-Cd)CtOs",
     group = 
 """
@@ -39395,7 +48419,7 @@ entry(
 )
 
 entry(
-    index = 1757,
+    index = 1864,
     label = "Cs-(Cds-O2d)(Cds-Cds)CtOs",
     group = 
 """
@@ -39416,7 +48440,7 @@ entry(
 )
 
 entry(
-    index = 1758,
+    index = 1865,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CtOs",
     group = 
 """
@@ -39437,7 +48461,7 @@ entry(
 )
 
 entry(
-    index = 1759,
+    index = 1866,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CtOs",
     group = 
 """
@@ -39459,7 +48483,7 @@ entry(
 )
 
 entry(
-    index = 1760,
+    index = 1867,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CtOs",
     group = 
 """
@@ -39481,7 +48505,7 @@ entry(
 )
 
 entry(
-    index = 1761,
+    index = 1868,
     label = "Cs-(Cds-Cd)(Cds-Cd)CtOs",
     group = 
 """
@@ -39502,7 +48526,7 @@ entry(
 )
 
 entry(
-    index = 1762,
+    index = 1869,
     label = "Cs-(Cds-Cds)(Cds-Cds)CtOs",
     group = 
 """
@@ -39523,7 +48547,7 @@ entry(
 )
 
 entry(
-    index = 1763,
+    index = 1870,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CtOs",
     group = 
 """
@@ -39544,7 +48568,7 @@ entry(
 )
 
 entry(
-    index = 1764,
+    index = 1871,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CtOs",
     group = 
 """
@@ -39566,7 +48590,7 @@ entry(
 )
 
 entry(
-    index = 1765,
+    index = 1872,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CtOs",
     group = 
 """
@@ -39588,7 +48612,7 @@ entry(
 )
 
 entry(
-    index = 1766,
+    index = 1873,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CtOs",
     group = 
 """
@@ -39609,7 +48633,7 @@ entry(
 )
 
 entry(
-    index = 1767,
+    index = 1874,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CtOs",
     group = 
 """
@@ -39632,7 +48656,7 @@ entry(
 )
 
 entry(
-    index = 1768,
+    index = 1875,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CtOs",
     group = 
 """
@@ -39655,7 +48679,7 @@ entry(
 )
 
 entry(
-    index = 1769,
+    index = 1876,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CtOs",
     group = 
 """
@@ -39678,7 +48702,7 @@ entry(
 )
 
 entry(
-    index = 1770,
+    index = 1877,
     label = "Cs-CbCdsCdsOs",
     group = 
 """
@@ -39697,7 +48721,7 @@ entry(
 )
 
 entry(
-    index = 1771,
+    index = 1878,
     label = "Cs-(Cds-O2d)(Cds-O2d)CbOs",
     group = 
 """
@@ -39718,7 +48742,7 @@ entry(
 )
 
 entry(
-    index = 1772,
+    index = 1879,
     label = "Cs-(Cds-O2d)(Cds-Cd)CbOs",
     group = 
 """
@@ -39739,7 +48763,7 @@ entry(
 )
 
 entry(
-    index = 1773,
+    index = 1880,
     label = "Cs-(Cds-O2d)(Cds-Cds)CbOs",
     group = 
 """
@@ -39760,7 +48784,7 @@ entry(
 )
 
 entry(
-    index = 1774,
+    index = 1881,
     label = "Cs-(Cds-O2d)(Cds-Cdd)CbOs",
     group = 
 """
@@ -39781,7 +48805,7 @@ entry(
 )
 
 entry(
-    index = 1775,
+    index = 1882,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)CbOs",
     group = 
 """
@@ -39803,7 +48827,7 @@ entry(
 )
 
 entry(
-    index = 1776,
+    index = 1883,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)CbOs",
     group = 
 """
@@ -39825,7 +48849,7 @@ entry(
 )
 
 entry(
-    index = 1777,
+    index = 1884,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbOs",
     group = 
 """
@@ -39846,7 +48870,7 @@ entry(
 )
 
 entry(
-    index = 1778,
+    index = 1885,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbOs",
     group = 
 """
@@ -39867,7 +48891,7 @@ entry(
 )
 
 entry(
-    index = 1779,
+    index = 1886,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbOs",
     group = 
 """
@@ -39888,7 +48912,7 @@ entry(
 )
 
 entry(
-    index = 1780,
+    index = 1887,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)CbOs",
     group = 
 """
@@ -39910,7 +48934,7 @@ entry(
 )
 
 entry(
-    index = 1781,
+    index = 1888,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbOs",
     group = 
 """
@@ -39932,7 +48956,7 @@ entry(
 )
 
 entry(
-    index = 1782,
+    index = 1889,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbOs",
     group = 
 """
@@ -39953,7 +48977,7 @@ entry(
 )
 
 entry(
-    index = 1783,
+    index = 1890,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)CbOs",
     group = 
 """
@@ -39976,7 +49000,7 @@ entry(
 )
 
 entry(
-    index = 1784,
+    index = 1891,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)CbOs",
     group = 
 """
@@ -39999,7 +49023,7 @@ entry(
 )
 
 entry(
-    index = 1785,
+    index = 1892,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbOs",
     group = 
 """
@@ -40022,7 +49046,7 @@ entry(
 )
 
 entry(
-    index = 1786,
+    index = 1893,
     label = "Cs-CtCtCdsOs",
     group = 
 """
@@ -40041,7 +49065,7 @@ entry(
 )
 
 entry(
-    index = 1787,
+    index = 1894,
     label = "Cs-(Cds-O2d)CtCtOs",
     group = 
 """
@@ -40061,7 +49085,7 @@ entry(
 )
 
 entry(
-    index = 1788,
+    index = 1895,
     label = "Cs-(Cds-Cd)CtCtOs",
     group = 
 """
@@ -40081,7 +49105,7 @@ entry(
 )
 
 entry(
-    index = 1789,
+    index = 1896,
     label = "Cs-(Cds-Cds)CtCtOs",
     group = 
 """
@@ -40101,7 +49125,7 @@ entry(
 )
 
 entry(
-    index = 1790,
+    index = 1897,
     label = "Cs-(Cds-Cdd)CtCtOs",
     group = 
 """
@@ -40121,7 +49145,7 @@ entry(
 )
 
 entry(
-    index = 1791,
+    index = 1898,
     label = "Cs-(Cds-Cdd-O2d)CtCtOs",
     group = 
 """
@@ -40142,7 +49166,7 @@ entry(
 )
 
 entry(
-    index = 1792,
+    index = 1899,
     label = "Cs-(Cds-Cdd-Cd)CtCtOs",
     group = 
 """
@@ -40163,7 +49187,7 @@ entry(
 )
 
 entry(
-    index = 1793,
+    index = 1900,
     label = "Cs-CbCtCdsOs",
     group = 
 """
@@ -40182,7 +49206,7 @@ entry(
 )
 
 entry(
-    index = 1794,
+    index = 1901,
     label = "Cs-(Cds-O2d)CbCtOs",
     group = 
 """
@@ -40202,7 +49226,7 @@ entry(
 )
 
 entry(
-    index = 1795,
+    index = 1902,
     label = "Cs-(Cds-Cd)CbCtOs",
     group = 
 """
@@ -40222,7 +49246,7 @@ entry(
 )
 
 entry(
-    index = 1796,
+    index = 1903,
     label = "Cs-(Cds-Cds)CbCtOs",
     group = 
 """
@@ -40242,7 +49266,7 @@ entry(
 )
 
 entry(
-    index = 1797,
+    index = 1904,
     label = "Cs-(Cds-Cdd)CbCtOs",
     group = 
 """
@@ -40262,7 +49286,7 @@ entry(
 )
 
 entry(
-    index = 1798,
+    index = 1905,
     label = "Cs-(Cds-Cdd-O2d)CbCtOs",
     group = 
 """
@@ -40283,7 +49307,7 @@ entry(
 )
 
 entry(
-    index = 1799,
+    index = 1906,
     label = "Cs-(Cds-Cdd-Cd)CbCtOs",
     group = 
 """
@@ -40304,7 +49328,7 @@ entry(
 )
 
 entry(
-    index = 1800,
+    index = 1907,
     label = "Cs-CbCbCdsOs",
     group = 
 """
@@ -40323,7 +49347,7 @@ entry(
 )
 
 entry(
-    index = 1801,
+    index = 1908,
     label = "Cs-(Cds-O2d)CbCbOs",
     group = 
 """
@@ -40343,7 +49367,7 @@ entry(
 )
 
 entry(
-    index = 1802,
+    index = 1909,
     label = "Cs-(Cds-Cd)CbCbOs",
     group = 
 """
@@ -40363,7 +49387,7 @@ entry(
 )
 
 entry(
-    index = 1803,
+    index = 1910,
     label = "Cs-(Cds-Cds)CbCbOs",
     group = 
 """
@@ -40383,7 +49407,7 @@ entry(
 )
 
 entry(
-    index = 1804,
+    index = 1911,
     label = "Cs-(Cds-Cdd)CbCbOs",
     group = 
 """
@@ -40403,7 +49427,7 @@ entry(
 )
 
 entry(
-    index = 1805,
+    index = 1912,
     label = "Cs-(Cds-Cdd-O2d)CbCbOs",
     group = 
 """
@@ -40424,7 +49448,7 @@ entry(
 )
 
 entry(
-    index = 1806,
+    index = 1913,
     label = "Cs-(Cds-Cdd-Cd)CbCbOs",
     group = 
 """
@@ -40445,7 +49469,7 @@ entry(
 )
 
 entry(
-    index = 1807,
+    index = 1914,
     label = "Cs-CtCtCtOs",
     group = 
 """
@@ -40464,7 +49488,7 @@ entry(
 )
 
 entry(
-    index = 1808,
+    index = 1915,
     label = "Cs-CbCtCtOs",
     group = 
 """
@@ -40483,7 +49507,7 @@ entry(
 )
 
 entry(
-    index = 1809,
+    index = 1916,
     label = "Cs-CbCbCtOs",
     group = 
 """
@@ -40502,7 +49526,7 @@ entry(
 )
 
 entry(
-    index = 1810,
+    index = 1917,
     label = "Cs-CbCbCbOs",
     group = 
 """
@@ -40521,7 +49545,7 @@ entry(
 )
 
 entry(
-    index = 1811,
+    index = 1918,
     label = "Cs-CCOsOs",
     group = 
 """
@@ -40540,7 +49564,7 @@ entry(
 )
 
 entry(
-    index = 1812,
+    index = 1919,
     label = "Cs-CsCsOsOs",
     group = 
 """
@@ -40566,7 +49590,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1813,
+    index = 1920,
     label = "Cs-CdsCsOsOs",
     group = 
 """
@@ -40585,7 +49609,7 @@ entry(
 )
 
 entry(
-    index = 1814,
+    index = 1921,
     label = "Cs-(Cds-O2d)CsOsOs",
     group = 
 """
@@ -40605,7 +49629,7 @@ entry(
 )
 
 entry(
-    index = 1815,
+    index = 1922,
     label = "Cs-(Cds-Cd)CsOsOs",
     group = 
 """
@@ -40632,7 +49656,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1816,
+    index = 1923,
     label = "Cs-(Cds-Cds)CsOsOs",
     group = 
 """
@@ -40652,7 +49676,7 @@ entry(
 )
 
 entry(
-    index = 1817,
+    index = 1924,
     label = "Cs-(Cds-Cdd)CsOsOs",
     group = 
 """
@@ -40672,7 +49696,7 @@ entry(
 )
 
 entry(
-    index = 1818,
+    index = 1925,
     label = "Cs-(Cds-Cdd-O2d)CsOsOs",
     group = 
 """
@@ -40693,7 +49717,7 @@ entry(
 )
 
 entry(
-    index = 1819,
+    index = 1926,
     label = "Cs-(Cds-Cdd-Cd)CsOsOs",
     group = 
 """
@@ -40714,7 +49738,7 @@ entry(
 )
 
 entry(
-    index = 1820,
+    index = 1927,
     label = "Cs-CdsCdsOsOs",
     group = 
 """
@@ -40733,7 +49757,7 @@ entry(
 )
 
 entry(
-    index = 1821,
+    index = 1928,
     label = "Cs-(Cds-O2d)(Cds-O2d)OsOs",
     group = 
 """
@@ -40754,7 +49778,7 @@ entry(
 )
 
 entry(
-    index = 1822,
+    index = 1929,
     label = "Cs-(Cds-O2d)(Cds-Cd)OsOs",
     group = 
 """
@@ -40775,7 +49799,7 @@ entry(
 )
 
 entry(
-    index = 1823,
+    index = 1930,
     label = "Cs-(Cds-O2d)(Cds-Cds)OsOs",
     group = 
 """
@@ -40796,7 +49820,7 @@ entry(
 )
 
 entry(
-    index = 1824,
+    index = 1931,
     label = "Cs-(Cds-O2d)(Cds-Cdd)OsOs",
     group = 
 """
@@ -40817,7 +49841,7 @@ entry(
 )
 
 entry(
-    index = 1825,
+    index = 1932,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)OsOs",
     group = 
 """
@@ -40839,7 +49863,7 @@ entry(
 )
 
 entry(
-    index = 1826,
+    index = 1933,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)OsOs",
     group = 
 """
@@ -40861,7 +49885,7 @@ entry(
 )
 
 entry(
-    index = 1827,
+    index = 1934,
     label = "Cs-(Cds-Cd)(Cds-Cd)OsOs",
     group = 
 """
@@ -40889,7 +49913,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1828,
+    index = 1935,
     label = "Cs-(Cds-Cds)(Cds-Cds)OsOs",
     group = 
 """
@@ -40910,7 +49934,7 @@ entry(
 )
 
 entry(
-    index = 1829,
+    index = 1936,
     label = "Cs-(Cds-Cdd)(Cds-Cds)OsOs",
     group = 
 """
@@ -40931,7 +49955,7 @@ entry(
 )
 
 entry(
-    index = 1830,
+    index = 1937,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)OsOs",
     group = 
 """
@@ -40953,7 +49977,7 @@ entry(
 )
 
 entry(
-    index = 1831,
+    index = 1938,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)OsOs",
     group = 
 """
@@ -40975,7 +49999,7 @@ entry(
 )
 
 entry(
-    index = 1832,
+    index = 1939,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)OsOs",
     group = 
 """
@@ -40996,7 +50020,7 @@ entry(
 )
 
 entry(
-    index = 1833,
+    index = 1940,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)OsOs",
     group = 
 """
@@ -41019,7 +50043,7 @@ entry(
 )
 
 entry(
-    index = 1834,
+    index = 1941,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)OsOs",
     group = 
 """
@@ -41042,7 +50066,7 @@ entry(
 )
 
 entry(
-    index = 1835,
+    index = 1942,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)OsOs",
     group = 
 """
@@ -41065,7 +50089,7 @@ entry(
 )
 
 entry(
-    index = 1836,
+    index = 1943,
     label = "Cs-CtCsOsOs",
     group = 
 """
@@ -41084,7 +50108,7 @@ entry(
 )
 
 entry(
-    index = 1837,
+    index = 1944,
     label = "Cs-CtCdsOsOs",
     group = 
 """
@@ -41103,7 +50127,7 @@ entry(
 )
 
 entry(
-    index = 1838,
+    index = 1945,
     label = "Cs-(Cds-O2d)CtOsOs",
     group = 
 """
@@ -41123,7 +50147,7 @@ entry(
 )
 
 entry(
-    index = 1839,
+    index = 1946,
     label = "Cs-(Cds-Cd)CtOsOs",
     group = 
 """
@@ -41143,7 +50167,7 @@ entry(
 )
 
 entry(
-    index = 1840,
+    index = 1947,
     label = "Cs-(Cds-Cds)CtOsOs",
     group = 
 """
@@ -41163,7 +50187,7 @@ entry(
 )
 
 entry(
-    index = 1841,
+    index = 1948,
     label = "Cs-(Cds-Cdd)CtOsOs",
     group = 
 """
@@ -41183,7 +50207,7 @@ entry(
 )
 
 entry(
-    index = 1842,
+    index = 1949,
     label = "Cs-(Cds-Cdd-O2d)CtOsOs",
     group = 
 """
@@ -41204,7 +50228,7 @@ entry(
 )
 
 entry(
-    index = 1843,
+    index = 1950,
     label = "Cs-(Cds-Cdd-Cd)CtOsOs",
     group = 
 """
@@ -41225,7 +50249,7 @@ entry(
 )
 
 entry(
-    index = 1844,
+    index = 1951,
     label = "Cs-CtCtOsOs",
     group = 
 """
@@ -41244,7 +50268,7 @@ entry(
 )
 
 entry(
-    index = 1845,
+    index = 1952,
     label = "Cs-CbCsOsOs",
     group = 
 """
@@ -41263,7 +50287,7 @@ entry(
 )
 
 entry(
-    index = 1846,
+    index = 1953,
     label = "Cs-CbCdsOsOs",
     group = 
 """
@@ -41282,7 +50306,7 @@ entry(
 )
 
 entry(
-    index = 1847,
+    index = 1954,
     label = "Cs-(Cds-O2d)CbOsOs",
     group = 
 """
@@ -41302,7 +50326,7 @@ entry(
 )
 
 entry(
-    index = 1848,
+    index = 1955,
     label = "Cs-(Cds-Cd)CbOsOs",
     group = 
 """
@@ -41322,7 +50346,7 @@ entry(
 )
 
 entry(
-    index = 1849,
+    index = 1956,
     label = "Cs-(Cds-Cds)CbOsOs",
     group = 
 """
@@ -41342,7 +50366,7 @@ entry(
 )
 
 entry(
-    index = 1850,
+    index = 1957,
     label = "Cs-(Cds-Cdd)CbOsOs",
     group = 
 """
@@ -41362,7 +50386,7 @@ entry(
 )
 
 entry(
-    index = 1851,
+    index = 1958,
     label = "Cs-(Cds-Cdd-O2d)CbOsOs",
     group = 
 """
@@ -41383,7 +50407,7 @@ entry(
 )
 
 entry(
-    index = 1852,
+    index = 1959,
     label = "Cs-(Cds-Cdd-Cd)CbOsOs",
     group = 
 """
@@ -41404,7 +50428,7 @@ entry(
 )
 
 entry(
-    index = 1853,
+    index = 1960,
     label = "Cs-CbCtOsOs",
     group = 
 """
@@ -41423,7 +50447,7 @@ entry(
 )
 
 entry(
-    index = 1854,
+    index = 1961,
     label = "Cs-CbCbOsOs",
     group = 
 """
@@ -41442,7 +50466,7 @@ entry(
 )
 
 entry(
-    index = 1855,
+    index = 1962,
     label = "Cs-COsOsOs",
     group = 
 """
@@ -41461,7 +50485,7 @@ entry(
 )
 
 entry(
-    index = 1856,
+    index = 1963,
     label = "Cs-CsOsOsOs",
     group = 
 """
@@ -41485,7 +50509,7 @@ entry(
 )
 
 entry(
-    index = 1857,
+    index = 1964,
     label = "Cs-CdsOsOsOs",
     group = 
 """
@@ -41504,7 +50528,7 @@ entry(
 )
 
 entry(
-    index = 1858,
+    index = 1965,
     label = "Cs-(Cds-O2d)OsOsOs",
     group = 
 """
@@ -41524,7 +50548,7 @@ entry(
 )
 
 entry(
-    index = 1859,
+    index = 1966,
     label = "Cs-(Cds-Cd)OsOsOs",
     group = 
 """
@@ -41544,7 +50568,7 @@ entry(
 )
 
 entry(
-    index = 1860,
+    index = 1967,
     label = "Cs-(Cds-Cds)OsOsOs",
     group = 
 """
@@ -41564,7 +50588,7 @@ entry(
 )
 
 entry(
-    index = 1861,
+    index = 1968,
     label = "Cs-(Cds-Cdd)OsOsOs",
     group = 
 """
@@ -41584,7 +50608,7 @@ entry(
 )
 
 entry(
-    index = 1862,
+    index = 1969,
     label = "Cs-(Cds-Cdd-O2d)OsOsOs",
     group = 
 """
@@ -41605,7 +50629,7 @@ entry(
 )
 
 entry(
-    index = 1863,
+    index = 1970,
     label = "Cs-(Cds-Cdd-Cd)OsOsOs",
     group = 
 """
@@ -41626,7 +50650,7 @@ entry(
 )
 
 entry(
-    index = 1864,
+    index = 1971,
     label = "Cs-CtOsOsOs",
     group = 
 """
@@ -41645,7 +50669,7 @@ entry(
 )
 
 entry(
-    index = 1865,
+    index = 1972,
     label = "Cs-CbOsOsOs",
     group = 
 """
@@ -41664,7 +50688,7 @@ entry(
 )
 
 entry(
-    index = 1866,
+    index = 1973,
     label = "Cs-OsOsOsOs",
     group = 
 """
@@ -41688,7 +50712,7 @@ entry(
 )
 
 entry(
-    index = 1867,
+    index = 1974,
     label = "Cs-COsOsH",
     group = 
 """
@@ -41707,7 +50731,7 @@ entry(
 )
 
 entry(
-    index = 1868,
+    index = 1975,
     label = "Cs-CsOsOsH",
     group = 
 """
@@ -41731,7 +50755,7 @@ entry(
 )
 
 entry(
-    index = 1869,
+    index = 1976,
     label = "Cs-CdsOsOsH",
     group = 
 """
@@ -41750,7 +50774,7 @@ entry(
 )
 
 entry(
-    index = 1870,
+    index = 1977,
     label = "Cs-(Cds-O2d)OsOsH",
     group = 
 """
@@ -41770,7 +50794,7 @@ entry(
 )
 
 entry(
-    index = 1871,
+    index = 1978,
     label = "Cs-(Cds-Cd)OsOsH",
     group = 
 """
@@ -41790,7 +50814,7 @@ entry(
 )
 
 entry(
-    index = 1872,
+    index = 1979,
     label = "Cs-(Cds-Cds)OsOsH",
     group = 
 """
@@ -41810,7 +50834,7 @@ entry(
 )
 
 entry(
-    index = 1873,
+    index = 1980,
     label = "Cs-(Cds-Cdd)OsOsH",
     group = 
 """
@@ -41830,7 +50854,7 @@ entry(
 )
 
 entry(
-    index = 1874,
+    index = 1981,
     label = "Cs-(Cds-Cdd-O2d)OsOsH",
     group = 
 """
@@ -41851,7 +50875,7 @@ entry(
 )
 
 entry(
-    index = 1875,
+    index = 1982,
     label = "Cs-(Cds-Cdd-Cd)OsOsH",
     group = 
 """
@@ -41872,7 +50896,7 @@ entry(
 )
 
 entry(
-    index = 1876,
+    index = 1983,
     label = "Cs-CtOsOsH",
     group = 
 """
@@ -41891,7 +50915,7 @@ entry(
 )
 
 entry(
-    index = 1877,
+    index = 1984,
     label = "Cs-CbOsOsH",
     group = 
 """
@@ -41910,7 +50934,7 @@ entry(
 )
 
 entry(
-    index = 1878,
+    index = 1985,
     label = "Cs-COsSH",
     group = 
 """
@@ -41929,7 +50953,7 @@ entry(
 )
 
 entry(
-    index = 1879,
+    index = 1986,
     label = "Cs-CsOsSH",
     group = 
 """
@@ -41948,7 +50972,7 @@ entry(
 )
 
 entry(
-    index = 1880,
+    index = 1987,
     label = "Cs-CsOsS2H",
     group = 
 """
@@ -41972,7 +50996,7 @@ entry(
 )
 
 entry(
-    index = 1881,
+    index = 1988,
     label = "Cs-CsOsS4H",
     group = 
 """
@@ -41996,7 +51020,7 @@ entry(
 )
 
 entry(
-    index = 1882,
+    index = 1989,
     label = "Cs-CdsOsSsH",
     group = 
 """
@@ -42020,7 +51044,7 @@ entry(
 )
 
 entry(
-    index = 1883,
+    index = 1990,
     label = "Cs-CtOsSsH",
     group = 
 """
@@ -42039,7 +51063,7 @@ entry(
 )
 
 entry(
-    index = 1884,
+    index = 1991,
     label = "Cs-CbOsSsH",
     group = 
 """
@@ -42063,7 +51087,7 @@ entry(
 )
 
 entry(
-    index = 1885,
+    index = 1992,
     label = "Cs-CCOsSs",
     group = 
 """
@@ -42082,7 +51106,7 @@ entry(
 )
 
 entry(
-    index = 1886,
+    index = 1993,
     label = "Cs-CsCsOsSs",
     group = 
 """
@@ -42106,7 +51130,7 @@ entry(
 )
 
 entry(
-    index = 1887,
+    index = 1994,
     label = "Cs-COsOsSs",
     group = 
 """
@@ -42125,7 +51149,7 @@ entry(
 )
 
 entry(
-    index = 1888,
+    index = 1995,
     label = "Cs-CsOsOsSs",
     group = 
 """
@@ -42149,7 +51173,7 @@ entry(
 )
 
 entry(
-    index = 1889,
+    index = 1996,
     label = "Cs-CCOsH",
     group = 
 """
@@ -42168,7 +51192,7 @@ entry(
 )
 
 entry(
-    index = 1890,
+    index = 1997,
     label = "Cs-CsCsOsH",
     group = 
 """
@@ -42194,7 +51218,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1891,
+    index = 1998,
     label = "Cs-CdsCsOsH",
     group = 
 """
@@ -42213,7 +51237,7 @@ entry(
 )
 
 entry(
-    index = 1892,
+    index = 1999,
     label = "Cs-(Cds-O2d)CsOsH",
     group = 
 """
@@ -42238,7 +51262,7 @@ entry(
 )
 
 entry(
-    index = 1893,
+    index = 2000,
     label = "Cs-(Cds-Cd)CsOsH",
     group = 
 """
@@ -42265,7 +51289,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1894,
+    index = 2001,
     label = "Cs-(Cds-Cds)CsOsH",
     group = 
 """
@@ -42290,7 +51314,7 @@ entry(
 )
 
 entry(
-    index = 1895,
+    index = 2002,
     label = "Cs-(Cds-Cdd)CsOsH",
     group = 
 """
@@ -42310,7 +51334,7 @@ entry(
 )
 
 entry(
-    index = 1896,
+    index = 2003,
     label = "Cs-(Cds-Cdd-O2d)CsOsH",
     group = 
 """
@@ -42336,7 +51360,7 @@ entry(
 )
 
 entry(
-    index = 1897,
+    index = 2004,
     label = "Cs-(Cds-Cdd-Cd)CsOsH",
     group = 
 """
@@ -42357,7 +51381,7 @@ entry(
 )
 
 entry(
-    index = 1898,
+    index = 2005,
     label = "Cs-CdsCdsOsH",
     group = 
 """
@@ -42376,7 +51400,7 @@ entry(
 )
 
 entry(
-    index = 1899,
+    index = 2006,
     label = "Cs-(Cds-O2d)(Cds-O2d)OsH",
     group = 
 """
@@ -42397,7 +51421,7 @@ entry(
 )
 
 entry(
-    index = 1900,
+    index = 2007,
     label = "Cs-(Cds-O2d)(Cds-Cd)OsH",
     group = 
 """
@@ -42418,7 +51442,7 @@ entry(
 )
 
 entry(
-    index = 1901,
+    index = 2008,
     label = "Cs-(Cds-O2d)(Cds-Cds)OsH",
     group = 
 """
@@ -42439,7 +51463,7 @@ entry(
 )
 
 entry(
-    index = 1902,
+    index = 2009,
     label = "Cs-(Cds-O2d)(Cds-Cdd)OsH",
     group = 
 """
@@ -42460,7 +51484,7 @@ entry(
 )
 
 entry(
-    index = 1903,
+    index = 2010,
     label = "Cs-(Cds-O2d)(Cds-Cdd-O2d)OsH",
     group = 
 """
@@ -42482,7 +51506,7 @@ entry(
 )
 
 entry(
-    index = 1904,
+    index = 2011,
     label = "Cs-(Cds-O2d)(Cds-Cdd-Cd)OsH",
     group = 
 """
@@ -42504,7 +51528,7 @@ entry(
 )
 
 entry(
-    index = 1905,
+    index = 2012,
     label = "Cs-(Cds-Cd)(Cds-Cd)OsH",
     group = 
 """
@@ -42532,7 +51556,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1906,
+    index = 2013,
     label = "Cs-(Cds-Cds)(Cds-Cds)OsH",
     group = 
 """
@@ -42558,7 +51582,7 @@ entry(
 )
 
 entry(
-    index = 1907,
+    index = 2014,
     label = "Cs-(Cds-Cdd)(Cds-Cds)OsH",
     group = 
 """
@@ -42579,7 +51603,7 @@ entry(
 )
 
 entry(
-    index = 1908,
+    index = 2015,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cds)OsH",
     group = 
 """
@@ -42601,7 +51625,7 @@ entry(
 )
 
 entry(
-    index = 1909,
+    index = 2016,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)OsH",
     group = 
 """
@@ -42623,7 +51647,7 @@ entry(
 )
 
 entry(
-    index = 1910,
+    index = 2017,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)OsH",
     group = 
 """
@@ -42644,7 +51668,7 @@ entry(
 )
 
 entry(
-    index = 1911,
+    index = 2018,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)OsH",
     group = 
 """
@@ -42667,7 +51691,7 @@ entry(
 )
 
 entry(
-    index = 1912,
+    index = 2019,
     label = "Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)OsH",
     group = 
 """
@@ -42690,7 +51714,7 @@ entry(
 )
 
 entry(
-    index = 1913,
+    index = 2020,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)OsH",
     group = 
 """
@@ -42713,7 +51737,65 @@ entry(
 )
 
 entry(
-    index = 1914,
+    index = 2021,
+    label = "Cs-(F1s)(F1s)(H)CdCdO2sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   O2s u0 {1,S} {8,S}
+5   H   u0 {1,S}
+6   F1s u0 {2,S}
+7   F1s u0 {3,S}
+8   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([18.4102,26.4179,32.3285,35.867,41.141,43.9638,45.3492],'J/(mol*K)','+|-',[3.95407,4.13333,3.87531,3.59835,3.11979,2.77036,5.35464]),
+        H298 = (-55.4268,'kJ/mol','+|-',19.0869),
+        S298 = (-49.3169,'J/(mol*K)','+|-',10.8661),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC1C(F)=C1F (OC1C(F)DC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2022,
+    label = "Cs-(F1s)(H)(H)CdCdO2sH",
+    group = 
+"""
+1 * Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   Cd  u0 {1,S} {3,D} {6,S}
+3   Cd  u0 {1,S} {2,D} {7,S}
+4   O2s u0 {1,S} {8,S}
+5   H   u0 {1,S}
+6   H   u0 {2,S}
+7   F1s u0 {3,S}
+8   H   u0 {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([18.9411,27.6768,34.0471,37.4565,41.9964,44.2145,44.6165],'J/(mol*K)','+|-',[3.93996,4.11858,3.86148,3.58551,3.10865,2.76048,5.33553]),
+        H298 = (-33.2813,'kJ/mol','+|-',19.0187),
+        S298 = (-55.8534,'J/(mol*K)','+|-',10.8273),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OC1C=C1F (OC1CDC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2023,
     label = "Cs-CtCsOsH",
     group = 
 """
@@ -42732,7 +51814,7 @@ entry(
 )
 
 entry(
-    index = 1915,
+    index = 2024,
     label = "Cs-CtCdsOsH",
     group = 
 """
@@ -42751,7 +51833,7 @@ entry(
 )
 
 entry(
-    index = 1916,
+    index = 2025,
     label = "Cs-(Cds-O2d)CtOsH",
     group = 
 """
@@ -42771,7 +51853,7 @@ entry(
 )
 
 entry(
-    index = 1917,
+    index = 2026,
     label = "Cs-(Cds-Cd)CtOsH",
     group = 
 """
@@ -42791,7 +51873,7 @@ entry(
 )
 
 entry(
-    index = 1918,
+    index = 2027,
     label = "Cs-(Cds-Cds)CtOsH",
     group = 
 """
@@ -42811,7 +51893,7 @@ entry(
 )
 
 entry(
-    index = 1919,
+    index = 2028,
     label = "Cs-(Cds-Cdd)CtOsH",
     group = 
 """
@@ -42831,7 +51913,7 @@ entry(
 )
 
 entry(
-    index = 1920,
+    index = 2029,
     label = "Cs-(Cds-Cdd-O2d)CtOsH",
     group = 
 """
@@ -42852,7 +51934,7 @@ entry(
 )
 
 entry(
-    index = 1921,
+    index = 2030,
     label = "Cs-(Cds-Cdd-Cd)CtOsH",
     group = 
 """
@@ -42873,7 +51955,7 @@ entry(
 )
 
 entry(
-    index = 1922,
+    index = 2031,
     label = "Cs-CtCtOsH",
     group = 
 """
@@ -42892,7 +51974,7 @@ entry(
 )
 
 entry(
-    index = 1923,
+    index = 2032,
     label = "Cs-CbCsOsH",
     group = 
 """
@@ -42916,7 +51998,7 @@ entry(
 )
 
 entry(
-    index = 1924,
+    index = 2033,
     label = "Cs-CbCdsOsH",
     group = 
 """
@@ -42935,7 +52017,7 @@ entry(
 )
 
 entry(
-    index = 1925,
+    index = 2034,
     label = "Cs-(Cds-O2d)CbOsH",
     group = 
 """
@@ -42955,7 +52037,7 @@ entry(
 )
 
 entry(
-    index = 1926,
+    index = 2035,
     label = "Cs-(Cds-Cd)CbOsH",
     group = 
 """
@@ -42975,7 +52057,7 @@ entry(
 )
 
 entry(
-    index = 1927,
+    index = 2036,
     label = "Cs-(Cds-Cds)CbOsH",
     group = 
 """
@@ -42995,7 +52077,7 @@ entry(
 )
 
 entry(
-    index = 1928,
+    index = 2037,
     label = "Cs-(Cds-Cdd)CbOsH",
     group = 
 """
@@ -43015,7 +52097,7 @@ entry(
 )
 
 entry(
-    index = 1929,
+    index = 2038,
     label = "Cs-(Cds-Cdd-O2d)CbOsH",
     group = 
 """
@@ -43036,7 +52118,7 @@ entry(
 )
 
 entry(
-    index = 1930,
+    index = 2039,
     label = "Cs-(Cds-Cdd-Cd)CbOsH",
     group = 
 """
@@ -43057,7 +52139,7 @@ entry(
 )
 
 entry(
-    index = 1931,
+    index = 2040,
     label = "Cs-CbCtOsH",
     group = 
 """
@@ -43076,7 +52158,7 @@ entry(
 )
 
 entry(
-    index = 1932,
+    index = 2041,
     label = "Cs-CbCbOsH",
     group = 
 """
@@ -43095,7 +52177,7 @@ entry(
 )
 
 entry(
-    index = 1933,
+    index = 2042,
     label = "Cs-COsHH",
     group = 
 """
@@ -43114,7 +52196,7 @@ entry(
 )
 
 entry(
-    index = 1934,
+    index = 2043,
     label = "Cs-CsOsHH",
     group = 
 """
@@ -43126,21 +52208,275 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([25.0272,31.9718,37.6784,42.2187,48.9034,53.6411,60.3205],'J/(mol*K)','+|-',[0.245496,0.256626,0.240606,0.22341,0.193698,0.172003,0.332453]),
+        H298 = (-39.9764,'kJ/mol','+|-',1.18504),
+        S298 = (37.6298,'J/(mol*K)','+|-',0.67464),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+OCCF (CH2FCH2OH) from C1_C2_Fluorine
+FCCOC(F)F (FCCOC(F)F) from CHOF_G4
+FOCC(F)C(F)(F)F (FOCC(F)C(F)(F)F) from CHOF_G4
+FC(F)COC(F)F (FC(F)COC(F)F) from CHOF_G4
+OC(F)(F)COF (OC(F)(F)COF) from CHOF_G4
+CCOC(F)(F)F (CCOC(F)(F)F) from CHOF_G4
+FCOCC(F)(F)F (FCOCC(F)(F)F) from CHOF_G4
+FOCC(F)C(F)F (FOCC(F)C(F)F) from CHOF_G4
+FCOCC(F)F (FCOCC(F)F) from CHOF_G4
+OOCC(F)F (OOCC(F)F) from CHOF_G4
+FCCCOF (FCCCOF) from CHOF_G4
+OCC(O)F (OCC(O)F) from CHOF_G4
+CCOCF (CCOCF) from CHOF_G4
+OCCOF (OCCOF) from CHOF_G4
+OOCCF (OOCCF) from CHOF_G4
+FCCOF (FCCOF) from CHOF_G4
+FOCC(F)OF (FOCC(F)OF) from CHOF_G4
+CCOOF (CCOOF) from CHOF_G4
+OCCCF (OCCCF) from CHOF_G4
+CCOF (CCOF) from CHOF_G4
+OCC(O)(F)F (OCC(O)(F)F) from CHOF_G4
+OCC(F)(F)C(F)F (OCC(F)(F)C(F)F) from CHOF_G4
+FOCC(F)(F)C(F)(F)F (FOCC(F)(F)C(F)(F)F) from CHOF_G4
+FCCOC(F)(F)F (FCCOC(F)(F)F) from CHOF_G4
+OCC(F)C(F)F (OCC(F)C(F)F) from CHOF_G4
+COCC(F)(F)F (COCC(F)(F)F) from CHOF_G4
+OCCF (OCCF) from CHOF_G4
+CC(F)(F)CO (CC(F)(F)CO) from CHOF_G4
+CC(F)COF (CC(F)COF) from CHOF_G4
+OCCC(F)F (OCCC(F)F) from CHOF_G4
+FOOCC(F)(F)F (FOOCC(F)(F)F) from CHOF_G4
+CC(F)(F)COF (CC(F)(F)COF) from CHOF_G4
+FC(F)COC(F)(F)F (FC(F)COC(F)(F)F) from CHOF_G4
+COCC(F)F (COCC(F)F) from CHOF_G4
+FOOCC(F)F (FOOCC(F)F) from CHOF_G4
+OCC(F)CF (OCC(F)CF) from CHOF_G4
+OCC(F)(F)OF (OCC(F)(F)OF) from CHOF_G4
+OCCC(F)(F)F (OCCC(F)(F)F) from CHOF_G4
+FOCC(F)F (FOCC(F)F) from CHOF_G4
+FOCC(F)(F)F (FOCC(F)(F)F) from CHOF_G4
+OCC(F)C(F)(F)F (OCC(F)C(F)(F)F) from CHOF_G4
+OCC(F)(F)CF (OCC(F)(F)CF) from CHOF_G4
+CCOC(F)F (CCOC(F)F) from CHOF_G4
+OCC(F)F (OCC(F)F) from CHOF_G4
+FCC(F)COF (FCC(F)COF) from CHOF_G4
+OCC(F)(F)C(F)(F)F (OCC(F)(F)C(F)(F)F) from CHOF_G4
+CCCOF (CCCOF) from CHOF_G4
+OC(F)COF (OC(F)COF) from CHOF_G4
+FCCOCF (FCCOCF) from CHOF_G4
+FOCCOF (FOCCOF) from CHOF_G4
+CC(F)CO (CC(F)CO) from CHOF_G4
+FOCCC(F)F (FOCCC(F)F) from CHOF_G4
+COCCF (COCCF) from CHOF_G4
+FOCC(F)(F)OF (FOCC(F)(F)OF) from CHOF_G4
+FCCOOF (FCCOOF) from CHOF_G4
+FOCCC(F)(F)F (FOCCC(F)(F)F) from CHOF_G4
+FC(F)(F)COC(F)(F)F (FC(F)(F)COC(F)(F)F) from CHOF_G4
+OCC(F)(F)F (OCC(F)(F)F) from CHOF_G4
+FC(F)OCC(F)(F)F (FC(F)OCC(F)(F)F) from CHOF_G4
+FOCC(F)(F)C(F)F (FOCC(F)(F)C(F)F) from CHOF_G4
+OOCC(F)(F)F (OOCC(F)(F)F) from CHOF_G4
+FCC(F)(F)COF (FCC(F)(F)COF) from CHOF_G4
+FC(F)(F)C1CO1 (FC(F)(F)C1CO1) from CHOF_G4
+FC1CCO1 (FC1CCO1) from CHOF_G4
+OC1(F)CO1 (OC1(F)CO1) from CHOF_G4
+FC(F)C1(F)CO1 (FC(F)C1(F)CO1) from CHOF_G4
+FC1(F)CO1 (FC1(F)CO1) from CHOF_G4
+CC1(F)CO1 (CC1(F)CO1) from CHOF_G4
+FC1CO1 (FC1CO1) from CHOF_G4
+FC1COC1(F)F (FC1COC1(F)F) from CHOF_G4
+FC1COC1F (FC1COC1F) from CHOF_G4
+FC1(F)COC1 (FC1(F)COC1) from CHOF_G4
+FCC1CO1 (FCC1CO1) from CHOF_G4
+FC1(F)COO1 (FC1(F)COO1) from CHOF_G4
+FC1(F)CCO1 (FC1(F)CCO1) from CHOF_G4
+FC(F)(F)C1(F)CO1 (FC(F)(F)C1(F)CO1) from CHOF_G4
+FC1OCC1(F)F (FC1OCC1(F)F) from CHOF_G4
+FC(F)C1CO1 (FC(F)C1CO1) from CHOF_G4
+FCC1(F)CO1 (FCC1(F)CO1) from CHOF_G4
+FC1COC1 (FC1COC1) from CHOF_G4
+FC1COO1 (FC1COO1) from CHOF_G4
+FC(F)COCCl (FC(F)COCCl) from CHOFCl_G4
+FCC(F)COCl (FCC(F)COCl) from CHOFCl_G4
+OCC(F)(Cl)OCl (OCC(F)(Cl)OCl) from CHOFCl_G4
+FOCC(F)OCl (FOCC(F)OCl) from CHOFCl_G4
+FCCOCl (FCCOCl) from CHOFCl_G4
+OC(F)(Cl)COF (OC(F)(Cl)COF) from CHOFCl_G4
+FOCC(Cl)OCl (FOCC(Cl)OCl) from CHOFCl_G4
+OCC(Cl)C(F)F (OCC(Cl)C(F)F) from CHOFCl_G4
+FOC(F)COCl (FOC(F)COCl) from CHOFCl_G4
+FC(Cl)COCCl (FC(Cl)COCCl) from CHOFCl_G4
+FOCCOCl (FOCCOCl) from CHOFCl_G4
+OC(Cl)(Cl)COF (OC(Cl)(Cl)COF) from CHOFCl_G4
+OC(Cl)COF (OC(Cl)COF) from CHOFCl_G4
+CCOC(F)Cl (CCOC(F)Cl) from CHOFCl_G4
+OCC(F)Cl (OCC(F)Cl) from CHOFCl_G4
+FCCCOCl (FCCCOCl) from CHOFCl_G4
+FCCOOCl (FCCOOCl) from CHOFCl_G4
+FC(Cl)COCl (FC(Cl)COCl) from CHOFCl_G4
+OCCC(F)Cl (OCCC(F)Cl) from CHOFCl_G4
+FCCOC(Cl)Cl (FCCOC(Cl)Cl) from CHOFCl_G4
+COCC(F)(Cl)Cl (COCC(F)(Cl)Cl) from CHOFCl_G4
+OCC(Cl)CF (OCC(Cl)CF) from CHOFCl_G4
+OCC(F)(F)Cl (OCC(F)(F)Cl) from CHOFCl_G4
+OCC(F)(Cl)OF (OCC(F)(Cl)OF) from CHOFCl_G4
+COCC(F)(F)Cl (COCC(F)(F)Cl) from CHOFCl_G4
+OCC(Cl)OF (OCC(Cl)OF) from CHOFCl_G4
+CC(F)(Cl)COCl (CC(F)(Cl)COCl) from CHOFCl_G4
+OCC(F)(Cl)CF (OCC(F)(Cl)CF) from CHOFCl_G4
+FC(F)(Cl)COCl (FC(F)(Cl)COCl) from CHOFCl_G4
+OCCC(F)(Cl)Cl (OCCC(F)(Cl)Cl) from CHOFCl_G4
+OCC(Cl)C(F)Cl (OCC(Cl)C(F)Cl) from CHOFCl_G4
+CCOC(F)(F)Cl (CCOC(F)(F)Cl) from CHOFCl_G4
+OCCC(F)(F)Cl (OCCC(F)(F)Cl) from CHOFCl_G4
+CCOC(F)(Cl)Cl (CCOC(F)(Cl)Cl) from CHOFCl_G4
+OCC(F)(Cl)Cl (OCC(F)(Cl)Cl) from CHOFCl_G4
+OCC(Cl)(Cl)OF (OCC(Cl)(Cl)OF) from CHOFCl_G4
+FCCOCCl (FCCOCCl) from CHOFCl_G4
+FOC(Cl)COCl (FOC(Cl)COCl) from CHOFCl_G4
+OCC(Cl)(Cl)CF (OCC(Cl)(Cl)CF) from CHOFCl_G4
+CC(F)(F)COCl (CC(F)(F)COCl) from CHOFCl_G4
+OC(F)(Cl)COCl (OC(F)(Cl)COCl) from CHOFCl_G4
+COCC(F)Cl (COCC(F)Cl) from CHOFCl_G4
+FC(F)COCl (FC(F)COCl) from CHOFCl_G4
+FCCOC(F)Cl (FCCOC(F)Cl) from CHOFCl_G4
+OCC(O)(F)Cl (OCC(O)(F)Cl) from CHOFCl_G4
+FC(Cl)COOCl (FC(Cl)COOCl) from CHOFCl_G4
+FC(Cl)(Cl)COCl (FC(Cl)(Cl)COCl) from CHOFCl_G4
+FC(Cl)CCOCl (FC(Cl)CCOCl) from CHOFCl_G4
+FC(F)(F)COCl (FC(F)(F)COCl) from CHOFCl_G4
+OC(F)COCl (OC(F)COCl) from CHOFCl_G4
+FCC(Cl)COCl (FCC(Cl)COCl) from CHOFCl_G4
+OC(F)(F)COCl (OC(F)(F)COCl) from CHOFCl_G4
+OOCC(F)Cl (OOCC(F)Cl) from CHOFCl_G4
+OCC(F)OCl (OCC(F)OCl) from CHOFCl_G4
+OCC(F)(F)OCl (OCC(F)(F)OCl) from CHOFCl_G4
+FC(F)CCOCl (FC(F)CCOCl) from CHOFCl_G4
+CC(F)COCl (CC(F)COCl) from CHOFCl_G4
+FC(F)COOCl (FC(F)COOCl) from CHOFCl_G4
+CC(F)(Cl)CO (CC(F)(Cl)CO) from CHOFCl_G4
+FCC(Cl)COBr (FCC(Cl)COBr) from CHOFClBr_G4
+FC(Cl)CCOBr (FC(Cl)CCOBr) from CHOFClBr_G4
+FC(Cl)(Cl)COBr (FC(Cl)(Cl)COBr) from CHOFClBr_G4
+FC(Cl)COOBr (FC(Cl)COOBr) from CHOFClBr_G4
+OOCC(F)(Cl)Br (OOCC(F)(Cl)Br) from CHOFClBr_G4
+OCC(Br)C(F)Cl (OCC(Br)C(F)Cl) from CHOFClBr_G4
+OC(F)(Cl)COBr (OC(F)(Cl)COBr) from CHOFClBr_G4
+FOC(Cl)COBr (FOC(Cl)COBr) from CHOFClBr_G4
+OCC(F)(Cl)Br (OCC(F)(Cl)Br) from CHOFClBr_G4
+OC(Cl)(Br)COF (OC(Cl)(Br)COF) from CHOFClBr_G4
+FC(Cl)(Br)COBr (FC(Cl)(Br)COBr) from CHOFClBr_G4
+CCOC(F)(Cl)Br (CCOC(F)(Cl)Br) from CHOFClBr_G4
+OCCC(F)(Cl)Br (OCCC(F)(Cl)Br) from CHOFClBr_G4
+FC(F)(Cl)COBr (FC(F)(Cl)COBr) from CHOFClBr_G4
+CC(F)(Cl)COBr (CC(F)(Cl)COBr) from CHOFClBr_G4
+COCC(F)(Cl)Br (COCC(F)(Cl)Br) from CHOFClBr_G4
+FCCOC(Cl)Br (FCCOC(Cl)Br) from CHOFClBr_G4
+FC(Cl)COBr (FC(Cl)COBr) from CHOFClBr_G4
+OCC(Cl)(Br)OF (OCC(Cl)(Br)OF) from CHOFClBr_G4
+FC(Cl)COCBr (FC(Cl)COCBr) from CHOFClBr_G4
+OCC(Cl)(Br)CF (OCC(Cl)(Br)CF) from CHOFClBr_G4
+FOCC(Cl)OBr (FOCC(Cl)OBr) from CHOFClBr_G4
+OCC(F)(Cl)OBr (OCC(F)(Cl)OBr) from CHOFClBr_G4
+FC(F)(Br)COBr (FC(F)(Br)COBr) from CHOFBr_G4
+FC(F)COOBr (FC(F)COOBr) from CHOFBr_G4
+CC(F)COBr (CC(F)COBr) from CHOFBr_G4
+CCOC(F)(Br)Br (CCOC(F)(Br)Br) from CHOFBr_G4
+FC(F)CCOBr (FC(F)CCOBr) from CHOFBr_G4
+OCC(Br)CF (OCC(Br)CF) from CHOFBr_G4
+OCC(F)(F)OBr (OCC(F)(F)OBr) from CHOFBr_G4
+OCC(F)(Br)OF (OCC(F)(Br)OF) from CHOFBr_G4
+FOC(F)(Br)COBr (FOC(F)(Br)COBr) from CHOFBr_G4
+OCC(F)OBr (OCC(F)OBr) from CHOFBr_G4
+OOCC(F)Br (OOCC(F)Br) from CHOFBr_G4
+FC(Br)(Br)COOBr (FC(Br)(Br)COOBr) from CHOFBr_G4
+OC(F)(F)COBr (OC(F)(F)COBr) from CHOFBr_G4
+FC(Br)(Br)CCOBr (FC(Br)(Br)CCOBr) from CHOFBr_G4
+OCC(Br)OF (OCC(Br)OF) from CHOFBr_G4
+OCC(F)(Br)CF (OCC(F)(Br)CF) from CHOFBr_G4
+OCCC(F)(Br)Br (OCCC(F)(Br)Br) from CHOFBr_G4
+FC(F)(Br)COCBr (FC(F)(Br)COCBr) from CHOFBr_G4
+OC(F)COBr (OC(F)COBr) from CHOFBr_G4
+FCCOC(Br)(Br)Br (FCCOC(Br)(Br)Br) from CHOFBr_G4
+FC(F)C(F)COBr (FC(F)C(F)COBr) from CHOFBr_G4
+FC(F)(F)COBr (FC(F)(F)COBr) from CHOFBr_G4
+FC(F)(F)COCBr (FC(F)(F)COCBr) from CHOFBr_G4
+FOC(F)(F)COBr (FOC(F)(F)COBr) from CHOFBr_G4
+OCC(O)(F)Br (OCC(O)(F)Br) from CHOFBr_G4
+FCCOC(F)Br (FCCOC(F)Br) from CHOFBr_G4
+FOC(Br)COBr (FOC(Br)COBr) from CHOFBr_G4
+OCC(F)(Br)Br (OCC(F)(Br)Br) from CHOFBr_G4
+FC(F)C(Br)COBr (FC(F)C(Br)COBr) from CHOFBr_G4
+FC(F)COBr (FC(F)COBr) from CHOFBr_G4
+OCC(Br)C(F)(F)F (OCC(Br)C(F)(F)F) from CHOFBr_G4
+OCC(Br)C(F)(F)Br (OCC(Br)C(F)(F)Br) from CHOFBr_G4
+COCC(F)Br (COCC(F)Br) from CHOFBr_G4
+FOCC(F)(F)OBr (FOCC(F)(F)OBr) from CHOFBr_G4
+OC(F)(Br)COBr (OC(F)(Br)COBr) from CHOFBr_G4
+CC(F)(F)COBr (CC(F)(F)COBr) from CHOFBr_G4
+FCCOC(F)(Br)Br (FCCOC(F)(Br)Br) from CHOFBr_G4
+OOCC(F)(Br)Br (OOCC(F)(Br)Br) from CHOFBr_G4
+FCCOC(F)(F)Br (FCCOC(F)(F)Br) from CHOFBr_G4
+FC(Br)COCBr (FC(Br)COCBr) from CHOFBr_G4
+OCC(Br)C(F)(Br)Br (OCC(Br)C(F)(Br)Br) from CHOFBr_G4
+FCCOCBr (FCCOCBr) from CHOFBr_G4
+OC(Br)COF (OC(Br)COF) from CHOFBr_G4
+FC(Br)COC(Br)Br (FC(Br)COC(Br)Br) from CHOFBr_G4
+FCC(Br)COBr (FCC(Br)COBr) from CHOFBr_G4
+OCC(Br)(Br)CF (OCC(Br)(Br)CF) from CHOFBr_G4
+OC(F)(Br)COF (OC(F)(Br)COF) from CHOFBr_G4
+OCCC(F)(F)Br (OCCC(F)(F)Br) from CHOFBr_G4
+CCOC(F)(F)Br (CCOC(F)(F)Br) from CHOFBr_G4
+FCC(F)(F)COBr (FCC(F)(F)COBr) from CHOFBr_G4
+OCC(Br)(Br)OF (OCC(Br)(Br)OF) from CHOFBr_G4
+OCC(F)(Br)C(F)F (OCC(F)(Br)C(F)F) from CHOFBr_G4
+OCC(Br)(Br)C(F)Br (OCC(Br)(Br)C(F)Br) from CHOFBr_G4
+OCC(F)(Br)OBr (OCC(F)(Br)OBr) from CHOFBr_G4
+COCC(F)(F)Br (COCC(F)(F)Br) from CHOFBr_G4
+FC(Br)(Br)COBr (FC(Br)(Br)COBr) from CHOFBr_G4
+OCC(F)(F)Br (OCC(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)CO (CC(F)(Br)CO) from CHOFBr_G4
+OCCC(F)Br (OCCC(F)Br) from CHOFBr_G4
+FCCOOBr (FCCOOBr) from CHOFBr_G4
+FC(F)COC(Br)Br (FC(F)COC(Br)Br) from CHOFBr_G4
+FOCC(Br)OBr (FOCC(Br)OBr) from CHOFBr_G4
+FCCCOBr (FCCCOBr) from CHOFBr_G4
+FC(Br)COOBr (FC(Br)COOBr) from CHOFBr_G4
+OCC(F)Br (OCC(F)Br) from CHOFBr_G4
+OCC(Br)C(F)F (OCC(Br)C(F)F) from CHOFBr_G4
+FC(Br)CCOBr (FC(Br)CCOBr) from CHOFBr_G4
+FCC(F)(Br)COBr (FCC(F)(Br)COBr) from CHOFBr_G4
+FOC(Br)(Br)COBr (FOC(Br)(Br)COBr) from CHOFBr_G4
+OC(Br)(Br)COF (OC(Br)(Br)COF) from CHOFBr_G4
+FC(Br)C(Br)COBr (FC(Br)C(Br)COBr) from CHOFBr_G4
+FOCC(Br)(Br)OBr (FOCC(Br)(Br)OBr) from CHOFBr_G4
+FOCC(F)(Br)OBr (FOCC(F)(Br)OBr) from CHOFBr_G4
+OCC(Br)C(F)Br (OCC(Br)C(F)Br) from CHOFBr_G4
+CCOC(F)Br (CCOC(F)Br) from CHOFBr_G4
+FC(F)(F)COOBr (FC(F)(F)COOBr) from CHOFBr_G4
+FOCCOBr (FOCCOBr) from CHOFBr_G4
+OOCC(F)(F)Br (OOCC(F)(F)Br) from CHOFBr_G4
+FC(F)(F)CCOBr (FC(F)(F)CCOBr) from CHOFBr_G4
+FOC(F)COBr (FOC(F)COBr) from CHOFBr_G4
+FC(F)(Br)COOBr (FC(F)(Br)COOBr) from CHOFBr_G4
+FC(F)(Br)CCOBr (FC(F)(Br)CCOBr) from CHOFBr_G4
+FCCOBr (FCCOBr) from CHOFBr_G4
+FOCC(F)OBr (FOCC(F)OBr) from CHOFBr_G4
+FC(Br)(Br)COCBr (FC(Br)(Br)COCBr) from CHOFBr_G4
+OCC(Br)(Br)C(F)F (OCC(Br)(Br)C(F)F) from CHOFBr_G4
+CC(F)(Br)COBr (CC(F)(Br)COBr) from CHOFBr_G4
+FC(F)COC(F)Br (FC(F)COC(F)Br) from CHOFBr_G4
+COCC(F)(Br)Br (COCC(F)(Br)Br) from CHOFBr_G4
+FCCOC(Br)Br (FCCOC(Br)Br) from CHOFBr_G4
+FCC(F)COBr (FCC(F)COBr) from CHOFBr_G4
+FC(F)COCBr (FC(F)COCBr) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 1935,
+    index = 2044,
     label = "Cs-CdsOsHH",
     group = 
 """
@@ -43159,7 +52495,7 @@ entry(
 )
 
 entry(
-    index = 1936,
+    index = 2045,
     label = "Cs-(Cds-O2d)OsHH",
     group = 
 """
@@ -43186,7 +52522,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1937,
+    index = 2046,
     label = "Cs-(Cds-Cd)OsHH",
     group = 
 """
@@ -43213,7 +52549,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 1938,
+    index = 2047,
     label = "Cs-(Cds-Cds)OsHH",
     group = 
 """
@@ -43238,7 +52574,7 @@ entry(
 )
 
 entry(
-    index = 1939,
+    index = 2048,
     label = "Cs-(Cds-Cdd)OsHH",
     group = 
 """
@@ -43258,7 +52594,7 @@ entry(
 )
 
 entry(
-    index = 1940,
+    index = 2049,
     label = "Cs-(Cds-Cdd-O2d)OsHH",
     group = 
 """
@@ -43284,7 +52620,7 @@ entry(
 )
 
 entry(
-    index = 1941,
+    index = 2050,
     label = "Cs-(Cds-Cdd-Cd)OsHH",
     group = 
 """
@@ -43305,7 +52641,7 @@ entry(
 )
 
 entry(
-    index = 1942,
+    index = 2051,
     label = "Cs-CtOsHH",
     group = 
 """
@@ -43329,7 +52665,7 @@ entry(
 )
 
 entry(
-    index = 1943,
+    index = 2052,
     label = "Cs-CbOsHH",
     group = 
 """
@@ -43348,7 +52684,7 @@ entry(
 )
 
 entry(
-    index = 1944,
+    index = 2053,
     label = "Cs-CCCS",
     group = 
 """
@@ -43367,7 +52703,7 @@ entry(
 )
 
 entry(
-    index = 1945,
+    index = 2054,
     label = "Cs-CsCsCsS",
     group = 
 """
@@ -43386,7 +52722,7 @@ entry(
 )
 
 entry(
-    index = 1946,
+    index = 2055,
     label = "Cs-CsCsCsS2",
     group = 
 """
@@ -43410,7 +52746,7 @@ entry(
 )
 
 entry(
-    index = 1947,
+    index = 2056,
     label = "Cs-CsCsCsS4",
     group = 
 """
@@ -43434,7 +52770,7 @@ entry(
 )
 
 entry(
-    index = 1948,
+    index = 2057,
     label = "Cs-CdsCsCsSs",
     group = 
 """
@@ -43453,7 +52789,7 @@ entry(
 )
 
 entry(
-    index = 1949,
+    index = 2058,
     label = "Cs-(Cds-Cd)CsCsSs",
     group = 
 """
@@ -43473,7 +52809,7 @@ entry(
 )
 
 entry(
-    index = 1950,
+    index = 2059,
     label = "Cs-(Cds-Cds)CsCsSs",
     group = 
 """
@@ -43493,7 +52829,7 @@ entry(
 )
 
 entry(
-    index = 1951,
+    index = 2060,
     label = "Cs-(Cds-Cdd)CsCsSs",
     group = 
 """
@@ -43513,7 +52849,7 @@ entry(
 )
 
 entry(
-    index = 1952,
+    index = 2061,
     label = "Cs-(Cds-Cdd-S2d)CsCsSs",
     group = 
 """
@@ -43534,7 +52870,7 @@ entry(
 )
 
 entry(
-    index = 1953,
+    index = 2062,
     label = "Cs-(Cds-Cdd-Cd)CsCsSs",
     group = 
 """
@@ -43555,7 +52891,7 @@ entry(
 )
 
 entry(
-    index = 1954,
+    index = 2063,
     label = "Cs-SsCtCsCs",
     group = 
 """
@@ -43574,7 +52910,7 @@ entry(
 )
 
 entry(
-    index = 1955,
+    index = 2064,
     label = "Cs-CbCsCsSs",
     group = 
 """
@@ -43593,7 +52929,7 @@ entry(
 )
 
 entry(
-    index = 1956,
+    index = 2065,
     label = "Cs-CdsCdsCsSs",
     group = 
 """
@@ -43612,7 +52948,7 @@ entry(
 )
 
 entry(
-    index = 1957,
+    index = 2066,
     label = "Cs-(Cds-Cd)(Cds-Cd)CsSs",
     group = 
 """
@@ -43633,7 +52969,7 @@ entry(
 )
 
 entry(
-    index = 1958,
+    index = 2067,
     label = "Cs-(Cds-Cds)(Cds-Cds)CsSs",
     group = 
 """
@@ -43654,7 +52990,7 @@ entry(
 )
 
 entry(
-    index = 1959,
+    index = 2068,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CsSs",
     group = 
 """
@@ -43675,7 +53011,7 @@ entry(
 )
 
 entry(
-    index = 1960,
+    index = 2069,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CsSs",
     group = 
 """
@@ -43697,7 +53033,7 @@ entry(
 )
 
 entry(
-    index = 1961,
+    index = 2070,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CsSs",
     group = 
 """
@@ -43719,7 +53055,7 @@ entry(
 )
 
 entry(
-    index = 1962,
+    index = 2071,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CsSs",
     group = 
 """
@@ -43740,7 +53076,7 @@ entry(
 )
 
 entry(
-    index = 1963,
+    index = 2072,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CsSs",
     group = 
 """
@@ -43763,7 +53099,7 @@ entry(
 )
 
 entry(
-    index = 1964,
+    index = 2073,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CsSs",
     group = 
 """
@@ -43786,7 +53122,7 @@ entry(
 )
 
 entry(
-    index = 1965,
+    index = 2074,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CsSs",
     group = 
 """
@@ -43809,7 +53145,7 @@ entry(
 )
 
 entry(
-    index = 1966,
+    index = 2075,
     label = "Cs-CtCdsCsSs",
     group = 
 """
@@ -43828,7 +53164,7 @@ entry(
 )
 
 entry(
-    index = 1967,
+    index = 2076,
     label = "Cs-(Cds-Cd)CtCsSs",
     group = 
 """
@@ -43848,7 +53184,7 @@ entry(
 )
 
 entry(
-    index = 1968,
+    index = 2077,
     label = "Cs-(Cds-Cds)CtCsSs",
     group = 
 """
@@ -43868,7 +53204,7 @@ entry(
 )
 
 entry(
-    index = 1969,
+    index = 2078,
     label = "Cs-(Cds-Cdd)CtCsSs",
     group = 
 """
@@ -43888,7 +53224,7 @@ entry(
 )
 
 entry(
-    index = 1970,
+    index = 2079,
     label = "Cs-(Cds-Cdd-S2d)CtCsSs",
     group = 
 """
@@ -43909,7 +53245,7 @@ entry(
 )
 
 entry(
-    index = 1971,
+    index = 2080,
     label = "Cs-(Cds-Cdd-Cd)CtCsSs",
     group = 
 """
@@ -43930,7 +53266,7 @@ entry(
 )
 
 entry(
-    index = 1972,
+    index = 2081,
     label = "Cs-CbCdsCsSs",
     group = 
 """
@@ -43949,7 +53285,7 @@ entry(
 )
 
 entry(
-    index = 1973,
+    index = 2082,
     label = "Cs-(Cds-Cd)CbCsSs",
     group = 
 """
@@ -43969,7 +53305,7 @@ entry(
 )
 
 entry(
-    index = 1974,
+    index = 2083,
     label = "Cs-(Cds-Cds)CbCsSs",
     group = 
 """
@@ -43989,7 +53325,7 @@ entry(
 )
 
 entry(
-    index = 1975,
+    index = 2084,
     label = "Cs-(Cds-Cdd)CbCsSs",
     group = 
 """
@@ -44009,7 +53345,7 @@ entry(
 )
 
 entry(
-    index = 1976,
+    index = 2085,
     label = "Cs-(Cds-Cdd-S2d)CbCsSs",
     group = 
 """
@@ -44030,7 +53366,7 @@ entry(
 )
 
 entry(
-    index = 1977,
+    index = 2086,
     label = "Cs-(Cds-Cdd-Cd)CbCsSs",
     group = 
 """
@@ -44051,7 +53387,7 @@ entry(
 )
 
 entry(
-    index = 1978,
+    index = 2087,
     label = "Cs-CtCtCsSs",
     group = 
 """
@@ -44070,7 +53406,7 @@ entry(
 )
 
 entry(
-    index = 1979,
+    index = 2088,
     label = "Cs-CbCtCsSs",
     group = 
 """
@@ -44089,7 +53425,7 @@ entry(
 )
 
 entry(
-    index = 1980,
+    index = 2089,
     label = "Cs-CbCbCsSs",
     group = 
 """
@@ -44108,7 +53444,7 @@ entry(
 )
 
 entry(
-    index = 1981,
+    index = 2090,
     label = "Cs-CdsCdsCdsSs",
     group = 
 """
@@ -44127,7 +53463,7 @@ entry(
 )
 
 entry(
-    index = 1982,
+    index = 2091,
     label = "Cs-(Cds-Cd)(Cds-Cd)(Cds-Cd)S2s",
     group = 
 """
@@ -44149,7 +53485,7 @@ entry(
 )
 
 entry(
-    index = 1983,
+    index = 2092,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cds)S2s",
     group = 
 """
@@ -44171,7 +53507,7 @@ entry(
 )
 
 entry(
-    index = 1984,
+    index = 2093,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd)S2s",
     group = 
 """
@@ -44193,7 +53529,7 @@ entry(
 )
 
 entry(
-    index = 1985,
+    index = 2094,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -44216,7 +53552,7 @@ entry(
 )
 
 entry(
-    index = 1986,
+    index = 2095,
     label = "Cs-(Cds-Cds)(Cds-Cds)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44239,7 +53575,7 @@ entry(
 )
 
 entry(
-    index = 1987,
+    index = 2096,
     label = "Cs-(Cds-Cds)(Cds-Cdd)(Cds-Cdd)S2s",
     group = 
 """
@@ -44261,7 +53597,7 @@ entry(
 )
 
 entry(
-    index = 1988,
+    index = 2097,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -44285,7 +53621,7 @@ entry(
 )
 
 entry(
-    index = 1989,
+    index = 2098,
     label = "Cs-(Cds-Cds)(Cds-Cdd-S2d)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44309,7 +53645,7 @@ entry(
 )
 
 entry(
-    index = 1990,
+    index = 2099,
     label = "Cs-(Cds-Cds)(Cds-Cdd-Cd)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44333,7 +53669,7 @@ entry(
 )
 
 entry(
-    index = 1991,
+    index = 2100,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)(Cds-Cdd)S2s",
     group = 
 """
@@ -44355,7 +53691,7 @@ entry(
 )
 
 entry(
-    index = 1992,
+    index = 2101,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -44380,7 +53716,7 @@ entry(
 )
 
 entry(
-    index = 1993,
+    index = 2102,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44405,7 +53741,7 @@ entry(
 )
 
 entry(
-    index = 1994,
+    index = 2103,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44430,7 +53766,7 @@ entry(
 )
 
 entry(
-    index = 1995,
+    index = 2104,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -44455,7 +53791,7 @@ entry(
 )
 
 entry(
-    index = 1996,
+    index = 2105,
     label = "Cs-CtCdsCdsSs",
     group = 
 """
@@ -44474,7 +53810,7 @@ entry(
 )
 
 entry(
-    index = 1997,
+    index = 2106,
     label = "Cs-(Cds-Cd)(Cds-Cd)CtSs",
     group = 
 """
@@ -44495,7 +53831,7 @@ entry(
 )
 
 entry(
-    index = 1998,
+    index = 2107,
     label = "Cs-(Cds-Cds)(Cds-Cds)CtSs",
     group = 
 """
@@ -44516,7 +53852,7 @@ entry(
 )
 
 entry(
-    index = 1999,
+    index = 2108,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CtSs",
     group = 
 """
@@ -44537,7 +53873,7 @@ entry(
 )
 
 entry(
-    index = 2000,
+    index = 2109,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CtSs",
     group = 
 """
@@ -44559,7 +53895,7 @@ entry(
 )
 
 entry(
-    index = 2001,
+    index = 2110,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CtSs",
     group = 
 """
@@ -44581,7 +53917,7 @@ entry(
 )
 
 entry(
-    index = 2002,
+    index = 2111,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CtSs",
     group = 
 """
@@ -44602,7 +53938,7 @@ entry(
 )
 
 entry(
-    index = 2003,
+    index = 2112,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CtSs",
     group = 
 """
@@ -44625,7 +53961,7 @@ entry(
 )
 
 entry(
-    index = 2004,
+    index = 2113,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CtSs",
     group = 
 """
@@ -44648,7 +53984,7 @@ entry(
 )
 
 entry(
-    index = 2005,
+    index = 2114,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CtSs",
     group = 
 """
@@ -44671,7 +54007,7 @@ entry(
 )
 
 entry(
-    index = 2006,
+    index = 2115,
     label = "Cs-CbCdsCdsSs",
     group = 
 """
@@ -44690,7 +54026,7 @@ entry(
 )
 
 entry(
-    index = 2007,
+    index = 2116,
     label = "Cs-(Cds-Cd)(Cds-Cd)CbSs",
     group = 
 """
@@ -44711,7 +54047,7 @@ entry(
 )
 
 entry(
-    index = 2008,
+    index = 2117,
     label = "Cs-(Cds-Cds)(Cds-Cds)CbSs",
     group = 
 """
@@ -44732,7 +54068,7 @@ entry(
 )
 
 entry(
-    index = 2009,
+    index = 2118,
     label = "Cs-(Cds-Cdd)(Cds-Cds)CbSs",
     group = 
 """
@@ -44753,7 +54089,7 @@ entry(
 )
 
 entry(
-    index = 2010,
+    index = 2119,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)CbSs",
     group = 
 """
@@ -44775,7 +54111,7 @@ entry(
 )
 
 entry(
-    index = 2011,
+    index = 2120,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)CbSs",
     group = 
 """
@@ -44797,7 +54133,7 @@ entry(
 )
 
 entry(
-    index = 2012,
+    index = 2121,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)CbSs",
     group = 
 """
@@ -44818,7 +54154,7 @@ entry(
 )
 
 entry(
-    index = 2013,
+    index = 2122,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CbSs",
     group = 
 """
@@ -44841,7 +54177,7 @@ entry(
 )
 
 entry(
-    index = 2014,
+    index = 2123,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CbSs",
     group = 
 """
@@ -44864,7 +54200,7 @@ entry(
 )
 
 entry(
-    index = 2015,
+    index = 2124,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CbSs",
     group = 
 """
@@ -44887,7 +54223,7 @@ entry(
 )
 
 entry(
-    index = 2016,
+    index = 2125,
     label = "Cs-CtCtCdsSs",
     group = 
 """
@@ -44906,7 +54242,7 @@ entry(
 )
 
 entry(
-    index = 2017,
+    index = 2126,
     label = "Cs-(Cds-Cd)CtCtSs",
     group = 
 """
@@ -44926,7 +54262,7 @@ entry(
 )
 
 entry(
-    index = 2018,
+    index = 2127,
     label = "Cs-(Cds-Cds)CtCtSs",
     group = 
 """
@@ -44946,7 +54282,7 @@ entry(
 )
 
 entry(
-    index = 2019,
+    index = 2128,
     label = "Cs-(Cds-Cdd)CtCtSs",
     group = 
 """
@@ -44966,7 +54302,7 @@ entry(
 )
 
 entry(
-    index = 2020,
+    index = 2129,
     label = "Cs-(Cds-Cdd-S2d)CtCtSs",
     group = 
 """
@@ -44987,7 +54323,7 @@ entry(
 )
 
 entry(
-    index = 2021,
+    index = 2130,
     label = "Cs-(Cds-Cdd-Cd)CtCtSs",
     group = 
 """
@@ -45008,7 +54344,7 @@ entry(
 )
 
 entry(
-    index = 2022,
+    index = 2131,
     label = "Cs-CbCtCdsSs",
     group = 
 """
@@ -45027,7 +54363,7 @@ entry(
 )
 
 entry(
-    index = 2023,
+    index = 2132,
     label = "Cs-(Cds-Cd)CbCtSs",
     group = 
 """
@@ -45047,7 +54383,7 @@ entry(
 )
 
 entry(
-    index = 2024,
+    index = 2133,
     label = "Cs-(Cds-Cds)CbCtSs",
     group = 
 """
@@ -45067,7 +54403,7 @@ entry(
 )
 
 entry(
-    index = 2025,
+    index = 2134,
     label = "Cs-(Cds-Cdd)CbCtSs",
     group = 
 """
@@ -45087,7 +54423,7 @@ entry(
 )
 
 entry(
-    index = 2026,
+    index = 2135,
     label = "Cs-(Cds-Cdd-S2d)CbCtSs",
     group = 
 """
@@ -45108,7 +54444,7 @@ entry(
 )
 
 entry(
-    index = 2027,
+    index = 2136,
     label = "Cs-(Cds-Cdd-Cd)CbCtSs",
     group = 
 """
@@ -45129,7 +54465,7 @@ entry(
 )
 
 entry(
-    index = 2028,
+    index = 2137,
     label = "Cs-CbCbCdsSs",
     group = 
 """
@@ -45148,7 +54484,7 @@ entry(
 )
 
 entry(
-    index = 2029,
+    index = 2138,
     label = "Cs-(Cds-Cd)CbCbSs",
     group = 
 """
@@ -45168,7 +54504,7 @@ entry(
 )
 
 entry(
-    index = 2030,
+    index = 2139,
     label = "Cs-(Cds-Cds)CbCbSs",
     group = 
 """
@@ -45188,7 +54524,7 @@ entry(
 )
 
 entry(
-    index = 2031,
+    index = 2140,
     label = "Cs-(Cds-Cdd)CbCbSs",
     group = 
 """
@@ -45208,7 +54544,7 @@ entry(
 )
 
 entry(
-    index = 2032,
+    index = 2141,
     label = "Cs-(Cds-Cdd-S2d)CbCbSs",
     group = 
 """
@@ -45229,7 +54565,7 @@ entry(
 )
 
 entry(
-    index = 2033,
+    index = 2142,
     label = "Cs-(Cds-Cdd-Cd)CbCbSs",
     group = 
 """
@@ -45250,7 +54586,7 @@ entry(
 )
 
 entry(
-    index = 2034,
+    index = 2143,
     label = "Cs-CtCtCtSs",
     group = 
 """
@@ -45269,7 +54605,7 @@ entry(
 )
 
 entry(
-    index = 2035,
+    index = 2144,
     label = "Cs-CbCtCtSs",
     group = 
 """
@@ -45288,7 +54624,7 @@ entry(
 )
 
 entry(
-    index = 2036,
+    index = 2145,
     label = "Cs-CbCbCtSs",
     group = 
 """
@@ -45307,7 +54643,7 @@ entry(
 )
 
 entry(
-    index = 2037,
+    index = 2146,
     label = "Cs-CbCbCbSs",
     group = 
 """
@@ -45326,7 +54662,7 @@ entry(
 )
 
 entry(
-    index = 2038,
+    index = 2147,
     label = "Cs-C=SCbCsSs",
     group = 
 """
@@ -45346,7 +54682,7 @@ entry(
 )
 
 entry(
-    index = 2039,
+    index = 2148,
     label = "Cs-C=SCsCsSs",
     group = 
 """
@@ -45366,7 +54702,7 @@ entry(
 )
 
 entry(
-    index = 2040,
+    index = 2149,
     label = "Cs-C=S(Cds-Cd)(Cds-Cd)S2s",
     group = 
 """
@@ -45388,7 +54724,7 @@ entry(
 )
 
 entry(
-    index = 2041,
+    index = 2150,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cdd)S2s",
     group = 
 """
@@ -45410,7 +54746,7 @@ entry(
 )
 
 entry(
-    index = 2042,
+    index = 2151,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -45434,7 +54770,7 @@ entry(
 )
 
 entry(
-    index = 2043,
+    index = 2152,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -45458,7 +54794,7 @@ entry(
 )
 
 entry(
-    index = 2044,
+    index = 2153,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -45482,7 +54818,7 @@ entry(
 )
 
 entry(
-    index = 2045,
+    index = 2154,
     label = "Cs-C=S(Cds-Cdd)(Cds-Cds)S2s",
     group = 
 """
@@ -45504,7 +54840,7 @@ entry(
 )
 
 entry(
-    index = 2046,
+    index = 2155,
     label = "Cs-C=S(Cds-Cdd-Cd)(Cds-Cds)S2s",
     group = 
 """
@@ -45527,7 +54863,7 @@ entry(
 )
 
 entry(
-    index = 2047,
+    index = 2156,
     label = "Cs-C=S(Cds-Cdd-S2d)(Cds-Cds)S2s",
     group = 
 """
@@ -45550,7 +54886,7 @@ entry(
 )
 
 entry(
-    index = 2048,
+    index = 2157,
     label = "Cs-C=S(Cds-Cds)(Cds-Cds)S2s",
     group = 
 """
@@ -45572,7 +54908,7 @@ entry(
 )
 
 entry(
-    index = 2049,
+    index = 2158,
     label = "Cs-C=S(Cds-Cd)CtSs",
     group = 
 """
@@ -45593,7 +54929,7 @@ entry(
 )
 
 entry(
-    index = 2050,
+    index = 2159,
     label = "Cs-C=S(Cds-Cds)CtSs",
     group = 
 """
@@ -45614,7 +54950,7 @@ entry(
 )
 
 entry(
-    index = 2051,
+    index = 2160,
     label = "Cs-C=S(Cds-Cdd)CtSs",
     group = 
 """
@@ -45635,7 +54971,7 @@ entry(
 )
 
 entry(
-    index = 2052,
+    index = 2161,
     label = "Cs-C=S(Cds-Cdd-S2d)CtSs",
     group = 
 """
@@ -45657,7 +54993,7 @@ entry(
 )
 
 entry(
-    index = 2053,
+    index = 2162,
     label = "Cs-C=S(Cds-Cdd-Cd)CtSs",
     group = 
 """
@@ -45679,7 +55015,7 @@ entry(
 )
 
 entry(
-    index = 2054,
+    index = 2163,
     label = "Cs-C=SCtCsSs",
     group = 
 """
@@ -45699,7 +55035,7 @@ entry(
 )
 
 entry(
-    index = 2055,
+    index = 2164,
     label = "Cs-C=SC=SC=SSs",
     group = 
 """
@@ -45721,7 +55057,7 @@ entry(
 )
 
 entry(
-    index = 2056,
+    index = 2165,
     label = "Cs-C=SC=S(Cds-Cd)S2s",
     group = 
 """
@@ -45743,7 +55079,7 @@ entry(
 )
 
 entry(
-    index = 2057,
+    index = 2166,
     label = "Cs-C=SC=S(Cds-Cds)S2s",
     group = 
 """
@@ -45765,7 +55101,7 @@ entry(
 )
 
 entry(
-    index = 2058,
+    index = 2167,
     label = "Cs-C=SC=S(Cds-Cdd)S2s",
     group = 
 """
@@ -45787,7 +55123,7 @@ entry(
 )
 
 entry(
-    index = 2059,
+    index = 2168,
     label = "Cs-C=SC=S(Cds-Cdd-S2d)S2s",
     group = 
 """
@@ -45810,7 +55146,7 @@ entry(
 )
 
 entry(
-    index = 2060,
+    index = 2169,
     label = "Cs-C=SC=S(Cds-Cdd-Cd)S2s",
     group = 
 """
@@ -45833,7 +55169,7 @@ entry(
 )
 
 entry(
-    index = 2061,
+    index = 2170,
     label = "Cs-C=SCbCbSs",
     group = 
 """
@@ -45853,7 +55189,7 @@ entry(
 )
 
 entry(
-    index = 2062,
+    index = 2171,
     label = "Cs-C=SC=SCbSs",
     group = 
 """
@@ -45874,7 +55210,7 @@ entry(
 )
 
 entry(
-    index = 2063,
+    index = 2172,
     label = "Cs-C=SC=SCsSs",
     group = 
 """
@@ -45895,7 +55231,7 @@ entry(
 )
 
 entry(
-    index = 2064,
+    index = 2173,
     label = "Cs-C=SCtCtSs",
     group = 
 """
@@ -45915,7 +55251,7 @@ entry(
 )
 
 entry(
-    index = 2065,
+    index = 2174,
     label = "Cs-C=S(Cds-Cd)CbSs",
     group = 
 """
@@ -45936,7 +55272,7 @@ entry(
 )
 
 entry(
-    index = 2066,
+    index = 2175,
     label = "Cs-C=S(Cds-Cdd)CbSs",
     group = 
 """
@@ -45957,7 +55293,7 @@ entry(
 )
 
 entry(
-    index = 2067,
+    index = 2176,
     label = "Cs-C=S(Cds-Cdd-Cd)CbSs",
     group = 
 """
@@ -45979,7 +55315,7 @@ entry(
 )
 
 entry(
-    index = 2068,
+    index = 2177,
     label = "Cs-C=S(Cds-Cdd-S2d)CbSs",
     group = 
 """
@@ -46001,7 +55337,7 @@ entry(
 )
 
 entry(
-    index = 2069,
+    index = 2178,
     label = "Cs-C=S(Cds-Cds)CbSs",
     group = 
 """
@@ -46022,7 +55358,7 @@ entry(
 )
 
 entry(
-    index = 2070,
+    index = 2179,
     label = "Cs-C=SCbCtSs",
     group = 
 """
@@ -46042,7 +55378,7 @@ entry(
 )
 
 entry(
-    index = 2071,
+    index = 2180,
     label = "Cs-C=SC=SCtSs",
     group = 
 """
@@ -46063,7 +55399,7 @@ entry(
 )
 
 entry(
-    index = 2072,
+    index = 2181,
     label = "Cs-C=S(Cds-Cd)CsSs",
     group = 
 """
@@ -46084,7 +55420,7 @@ entry(
 )
 
 entry(
-    index = 2073,
+    index = 2182,
     label = "Cs-C=S(Cds-Cds)CsSs",
     group = 
 """
@@ -46105,7 +55441,7 @@ entry(
 )
 
 entry(
-    index = 2074,
+    index = 2183,
     label = "Cs-C=S(Cds-Cdd)CsSs",
     group = 
 """
@@ -46126,7 +55462,7 @@ entry(
 )
 
 entry(
-    index = 2075,
+    index = 2184,
     label = "Cs-C=S(Cds-Cdd-S2d)CsSs",
     group = 
 """
@@ -46148,7 +55484,7 @@ entry(
 )
 
 entry(
-    index = 2076,
+    index = 2185,
     label = "Cs-C=S(Cds-Cdd-Cd)CsSs",
     group = 
 """
@@ -46170,7 +55506,7 @@ entry(
 )
 
 entry(
-    index = 2077,
+    index = 2186,
     label = "Cs-CCSS",
     group = 
 """
@@ -46189,7 +55525,7 @@ entry(
 )
 
 entry(
-    index = 2078,
+    index = 2187,
     label = "Cs-CsCsSS",
     group = 
 """
@@ -46208,7 +55544,7 @@ entry(
 )
 
 entry(
-    index = 2079,
+    index = 2188,
     label = "Cs-CsCsS2S2",
     group = 
 """
@@ -46232,7 +55568,7 @@ entry(
 )
 
 entry(
-    index = 2080,
+    index = 2189,
     label = "Cs-CsCsS6S2",
     group = 
 """
@@ -46256,7 +55592,7 @@ entry(
 )
 
 entry(
-    index = 2081,
+    index = 2190,
     label = "Cs-CdsCsSsSs",
     group = 
 """
@@ -46275,7 +55611,7 @@ entry(
 )
 
 entry(
-    index = 2082,
+    index = 2191,
     label = "Cs-(Cds-Cd)CsSsSs",
     group = 
 """
@@ -46295,7 +55631,7 @@ entry(
 )
 
 entry(
-    index = 2083,
+    index = 2192,
     label = "Cs-(Cds-Cds)CsSsSs",
     group = 
 """
@@ -46315,7 +55651,7 @@ entry(
 )
 
 entry(
-    index = 2084,
+    index = 2193,
     label = "Cs-(Cds-Cdd)CsSsSs",
     group = 
 """
@@ -46335,7 +55671,7 @@ entry(
 )
 
 entry(
-    index = 2085,
+    index = 2194,
     label = "Cs-(Cds-Cdd-S2d)CsSsSs",
     group = 
 """
@@ -46356,7 +55692,7 @@ entry(
 )
 
 entry(
-    index = 2086,
+    index = 2195,
     label = "Cs-(Cds-Cdd-Cd)CsSsSs",
     group = 
 """
@@ -46377,7 +55713,7 @@ entry(
 )
 
 entry(
-    index = 2087,
+    index = 2196,
     label = "Cs-CdsCdsSsSs",
     group = 
 """
@@ -46396,7 +55732,7 @@ entry(
 )
 
 entry(
-    index = 2088,
+    index = 2197,
     label = "Cs-(Cds-Cd)(Cds-Cd)SsSs",
     group = 
 """
@@ -46417,7 +55753,7 @@ entry(
 )
 
 entry(
-    index = 2089,
+    index = 2198,
     label = "Cs-(Cds-Cds)(Cds-Cds)SsSs",
     group = 
 """
@@ -46438,7 +55774,7 @@ entry(
 )
 
 entry(
-    index = 2090,
+    index = 2199,
     label = "Cs-(Cds-Cdd)(Cds-Cds)SsSs",
     group = 
 """
@@ -46459,7 +55795,7 @@ entry(
 )
 
 entry(
-    index = 2091,
+    index = 2200,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)SsSs",
     group = 
 """
@@ -46481,7 +55817,7 @@ entry(
 )
 
 entry(
-    index = 2092,
+    index = 2201,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)SsSs",
     group = 
 """
@@ -46503,7 +55839,7 @@ entry(
 )
 
 entry(
-    index = 2093,
+    index = 2202,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)SsSs",
     group = 
 """
@@ -46524,7 +55860,7 @@ entry(
 )
 
 entry(
-    index = 2094,
+    index = 2203,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)SsSs",
     group = 
 """
@@ -46547,7 +55883,7 @@ entry(
 )
 
 entry(
-    index = 2095,
+    index = 2204,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)SsSs",
     group = 
 """
@@ -46570,7 +55906,7 @@ entry(
 )
 
 entry(
-    index = 2096,
+    index = 2205,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)SsSs",
     group = 
 """
@@ -46593,7 +55929,7 @@ entry(
 )
 
 entry(
-    index = 2097,
+    index = 2206,
     label = "Cs-CtCsSsSs",
     group = 
 """
@@ -46612,7 +55948,7 @@ entry(
 )
 
 entry(
-    index = 2098,
+    index = 2207,
     label = "Cs-CtCdsSsSs",
     group = 
 """
@@ -46631,7 +55967,7 @@ entry(
 )
 
 entry(
-    index = 2099,
+    index = 2208,
     label = "Cs-(Cds-Cd)CtSsSs",
     group = 
 """
@@ -46651,7 +55987,7 @@ entry(
 )
 
 entry(
-    index = 2100,
+    index = 2209,
     label = "Cs-(Cds-Cds)CtSsSs",
     group = 
 """
@@ -46671,7 +56007,7 @@ entry(
 )
 
 entry(
-    index = 2101,
+    index = 2210,
     label = "Cs-(Cds-Cdd)CtSsSs",
     group = 
 """
@@ -46691,7 +56027,7 @@ entry(
 )
 
 entry(
-    index = 2102,
+    index = 2211,
     label = "Cs-(Cds-Cdd-S2d)CtSsSs",
     group = 
 """
@@ -46712,7 +56048,7 @@ entry(
 )
 
 entry(
-    index = 2103,
+    index = 2212,
     label = "Cs-(Cds-Cdd-Cd)CtSsSs",
     group = 
 """
@@ -46733,7 +56069,7 @@ entry(
 )
 
 entry(
-    index = 2104,
+    index = 2213,
     label = "Cs-CtCtSsSs",
     group = 
 """
@@ -46752,7 +56088,7 @@ entry(
 )
 
 entry(
-    index = 2105,
+    index = 2214,
     label = "Cs-CbCsSsSs",
     group = 
 """
@@ -46771,7 +56107,7 @@ entry(
 )
 
 entry(
-    index = 2106,
+    index = 2215,
     label = "Cs-CbCdsSsSs",
     group = 
 """
@@ -46790,7 +56126,7 @@ entry(
 )
 
 entry(
-    index = 2107,
+    index = 2216,
     label = "Cs-(Cds-Cd)CbSsSs",
     group = 
 """
@@ -46810,7 +56146,7 @@ entry(
 )
 
 entry(
-    index = 2108,
+    index = 2217,
     label = "Cs-(Cds-Cds)CbSsSs",
     group = 
 """
@@ -46830,7 +56166,7 @@ entry(
 )
 
 entry(
-    index = 2109,
+    index = 2218,
     label = "Cs-(Cds-Cdd)CbSsSs",
     group = 
 """
@@ -46850,7 +56186,7 @@ entry(
 )
 
 entry(
-    index = 2110,
+    index = 2219,
     label = "Cs-(Cds-Cdd-S2d)CbSsSs",
     group = 
 """
@@ -46871,7 +56207,7 @@ entry(
 )
 
 entry(
-    index = 2111,
+    index = 2220,
     label = "Cs-(Cds-Cdd-Cd)CbSsSs",
     group = 
 """
@@ -46892,7 +56228,7 @@ entry(
 )
 
 entry(
-    index = 2112,
+    index = 2221,
     label = "Cs-CbCtSsSs",
     group = 
 """
@@ -46911,7 +56247,7 @@ entry(
 )
 
 entry(
-    index = 2113,
+    index = 2222,
     label = "Cs-CbCbSsSs",
     group = 
 """
@@ -46930,7 +56266,7 @@ entry(
 )
 
 entry(
-    index = 2114,
+    index = 2223,
     label = "Cs-C=SCsSsSs",
     group = 
 """
@@ -46950,7 +56286,7 @@ entry(
 )
 
 entry(
-    index = 2115,
+    index = 2224,
     label = "Cs-C=S(Cds-Cd)SsSs",
     group = 
 """
@@ -46971,7 +56307,7 @@ entry(
 )
 
 entry(
-    index = 2116,
+    index = 2225,
     label = "Cs-C=S(Cds-Cdd)SsSs",
     group = 
 """
@@ -46992,7 +56328,7 @@ entry(
 )
 
 entry(
-    index = 2117,
+    index = 2226,
     label = "Cs-C=S(Cds-Cdd-Cd)SsSs",
     group = 
 """
@@ -47014,7 +56350,7 @@ entry(
 )
 
 entry(
-    index = 2118,
+    index = 2227,
     label = "Cs-C=S(Cds-Cdd-S2d)SsSs",
     group = 
 """
@@ -47036,7 +56372,7 @@ entry(
 )
 
 entry(
-    index = 2119,
+    index = 2228,
     label = "Cs-C=S(Cds-Cds)SsSs",
     group = 
 """
@@ -47057,7 +56393,7 @@ entry(
 )
 
 entry(
-    index = 2120,
+    index = 2229,
     label = "Cs-C=SC=SSsSs",
     group = 
 """
@@ -47078,7 +56414,7 @@ entry(
 )
 
 entry(
-    index = 2121,
+    index = 2230,
     label = "Cs-C=SCbSsSs",
     group = 
 """
@@ -47098,7 +56434,7 @@ entry(
 )
 
 entry(
-    index = 2122,
+    index = 2231,
     label = "Cs-C=SCtSsSs",
     group = 
 """
@@ -47118,7 +56454,7 @@ entry(
 )
 
 entry(
-    index = 2123,
+    index = 2232,
     label = "Cs-CSsSsSs",
     group = 
 """
@@ -47137,7 +56473,7 @@ entry(
 )
 
 entry(
-    index = 2124,
+    index = 2233,
     label = "Cs-CsSsSsSs",
     group = 
 """
@@ -47161,7 +56497,7 @@ entry(
 )
 
 entry(
-    index = 2125,
+    index = 2234,
     label = "Cs-CdsSsSsSs",
     group = 
 """
@@ -47180,7 +56516,7 @@ entry(
 )
 
 entry(
-    index = 2126,
+    index = 2235,
     label = "Cs-(Cds-Cd)SsSsSs",
     group = 
 """
@@ -47200,7 +56536,7 @@ entry(
 )
 
 entry(
-    index = 2127,
+    index = 2236,
     label = "Cs-(Cds-Cds)SsSsSs",
     group = 
 """
@@ -47220,7 +56556,7 @@ entry(
 )
 
 entry(
-    index = 2128,
+    index = 2237,
     label = "Cs-(Cds-Cdd)SsSsSs",
     group = 
 """
@@ -47240,7 +56576,7 @@ entry(
 )
 
 entry(
-    index = 2129,
+    index = 2238,
     label = "Cs-(Cds-Cdd-S2d)SsSsSs",
     group = 
 """
@@ -47261,7 +56597,7 @@ entry(
 )
 
 entry(
-    index = 2130,
+    index = 2239,
     label = "Cs-(Cds-Cdd-Cd)SsSsSs",
     group = 
 """
@@ -47282,7 +56618,7 @@ entry(
 )
 
 entry(
-    index = 2131,
+    index = 2240,
     label = "Cs-CtSsSsSs",
     group = 
 """
@@ -47301,7 +56637,7 @@ entry(
 )
 
 entry(
-    index = 2132,
+    index = 2241,
     label = "Cs-CbSsSsSs",
     group = 
 """
@@ -47320,7 +56656,7 @@ entry(
 )
 
 entry(
-    index = 2133,
+    index = 2242,
     label = "Cs-C=SSsSsSs",
     group = 
 """
@@ -47340,7 +56676,7 @@ entry(
 )
 
 entry(
-    index = 2134,
+    index = 2243,
     label = "Cs-SsSsSsSs",
     group = 
 """
@@ -47364,7 +56700,7 @@ entry(
 )
 
 entry(
-    index = 2135,
+    index = 2244,
     label = "Cs-CSSH",
     group = 
 """
@@ -47383,7 +56719,7 @@ entry(
 )
 
 entry(
-    index = 2136,
+    index = 2245,
     label = "Cs-CsSSH",
     group = 
 """
@@ -47402,7 +56738,7 @@ entry(
 )
 
 entry(
-    index = 2137,
+    index = 2246,
     label = "Cs-CsS2S2H",
     group = 
 """
@@ -47426,7 +56762,7 @@ entry(
 )
 
 entry(
-    index = 2138,
+    index = 2247,
     label = "Cs-CsS4S2H",
     group = 
 """
@@ -47450,7 +56786,7 @@ entry(
 )
 
 entry(
-    index = 2139,
+    index = 2248,
     label = "Cs-CsS6S2H",
     group = 
 """
@@ -47474,7 +56810,7 @@ entry(
 )
 
 entry(
-    index = 2140,
+    index = 2249,
     label = "Cs-CdsSsSsH",
     group = 
 """
@@ -47493,7 +56829,7 @@ entry(
 )
 
 entry(
-    index = 2141,
+    index = 2250,
     label = "Cs-(Cds-Cd)SsSsH",
     group = 
 """
@@ -47513,7 +56849,7 @@ entry(
 )
 
 entry(
-    index = 2142,
+    index = 2251,
     label = "Cs-(Cds-Cds)SsSsH",
     group = 
 """
@@ -47533,7 +56869,7 @@ entry(
 )
 
 entry(
-    index = 2143,
+    index = 2252,
     label = "Cs-(Cds-Cdd)SsSsH",
     group = 
 """
@@ -47553,7 +56889,7 @@ entry(
 )
 
 entry(
-    index = 2144,
+    index = 2253,
     label = "Cs-(Cds-Cdd-S2d)SsSsH",
     group = 
 """
@@ -47574,7 +56910,7 @@ entry(
 )
 
 entry(
-    index = 2145,
+    index = 2254,
     label = "Cs-(Cds-Cdd-Cd)SsSsH",
     group = 
 """
@@ -47595,7 +56931,7 @@ entry(
 )
 
 entry(
-    index = 2146,
+    index = 2255,
     label = "Cs-CtSsSsH",
     group = 
 """
@@ -47614,7 +56950,7 @@ entry(
 )
 
 entry(
-    index = 2147,
+    index = 2256,
     label = "Cs-CbSsSsH",
     group = 
 """
@@ -47633,7 +56969,7 @@ entry(
 )
 
 entry(
-    index = 2148,
+    index = 2257,
     label = "Cs-C=SSsSsH",
     group = 
 """
@@ -47653,7 +56989,7 @@ entry(
 )
 
 entry(
-    index = 2149,
+    index = 2258,
     label = "Cs-CCSH",
     group = 
 """
@@ -47672,7 +57008,7 @@ entry(
 )
 
 entry(
-    index = 2150,
+    index = 2259,
     label = "Cs-CsCsSH",
     group = 
 """
@@ -47691,7 +57027,7 @@ entry(
 )
 
 entry(
-    index = 2151,
+    index = 2260,
     label = "Cs-CsCsS2H",
     group = 
 """
@@ -47715,7 +57051,7 @@ entry(
 )
 
 entry(
-    index = 2152,
+    index = 2261,
     label = "Cs-CsCsS4H",
     group = 
 """
@@ -47739,7 +57075,7 @@ entry(
 )
 
 entry(
-    index = 2153,
+    index = 2262,
     label = "Cs-CsCsS6H",
     group = 
 """
@@ -47763,7 +57099,7 @@ entry(
 )
 
 entry(
-    index = 2154,
+    index = 2263,
     label = "Cs-CdsCsSH",
     group = 
 """
@@ -47782,7 +57118,7 @@ entry(
 )
 
 entry(
-    index = 2155,
+    index = 2264,
     label = "Cs-CdsCsS4H",
     group = 
 """
@@ -47806,7 +57142,7 @@ entry(
 )
 
 entry(
-    index = 2156,
+    index = 2265,
     label = "Cs-(Cds-Cd)CsSsH",
     group = 
 """
@@ -47826,7 +57162,7 @@ entry(
 )
 
 entry(
-    index = 2157,
+    index = 2266,
     label = "Cs-(Cds-Cds)CsSsH",
     group = 
 """
@@ -47851,7 +57187,7 @@ entry(
 )
 
 entry(
-    index = 2158,
+    index = 2267,
     label = "Cs-(Cds-Cdd)CsSsH",
     group = 
 """
@@ -47871,7 +57207,7 @@ entry(
 )
 
 entry(
-    index = 2159,
+    index = 2268,
     label = "Cs-(Cds-Cdd-S2d)CsSsH",
     group = 
 """
@@ -47892,7 +57228,7 @@ entry(
 )
 
 entry(
-    index = 2160,
+    index = 2269,
     label = "Cs-(Cds-Cdd-Cd)CsSsH",
     group = 
 """
@@ -47913,7 +57249,7 @@ entry(
 )
 
 entry(
-    index = 2161,
+    index = 2270,
     label = "Cs-CdsCdsSsH",
     group = 
 """
@@ -47932,7 +57268,7 @@ entry(
 )
 
 entry(
-    index = 2162,
+    index = 2271,
     label = "Cs-(Cds-Cd)(Cds-Cd)SsH",
     group = 
 """
@@ -47953,7 +57289,7 @@ entry(
 )
 
 entry(
-    index = 2163,
+    index = 2272,
     label = "Cs-(Cds-Cds)(Cds-Cds)SsH",
     group = 
 """
@@ -47974,7 +57310,7 @@ entry(
 )
 
 entry(
-    index = 2164,
+    index = 2273,
     label = "Cs-(Cds-Cdd)(Cds-Cds)SsH",
     group = 
 """
@@ -47995,7 +57331,7 @@ entry(
 )
 
 entry(
-    index = 2165,
+    index = 2274,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cds)SsH",
     group = 
 """
@@ -48017,7 +57353,7 @@ entry(
 )
 
 entry(
-    index = 2166,
+    index = 2275,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cds)SsH",
     group = 
 """
@@ -48039,7 +57375,7 @@ entry(
 )
 
 entry(
-    index = 2167,
+    index = 2276,
     label = "Cs-(Cds-Cdd)(Cds-Cdd)SsH",
     group = 
 """
@@ -48060,7 +57396,7 @@ entry(
 )
 
 entry(
-    index = 2168,
+    index = 2277,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)SsH",
     group = 
 """
@@ -48083,7 +57419,7 @@ entry(
 )
 
 entry(
-    index = 2169,
+    index = 2278,
     label = "Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)SsH",
     group = 
 """
@@ -48106,7 +57442,7 @@ entry(
 )
 
 entry(
-    index = 2170,
+    index = 2279,
     label = "Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)SsH",
     group = 
 """
@@ -48129,7 +57465,7 @@ entry(
 )
 
 entry(
-    index = 2171,
+    index = 2280,
     label = "Cs-CtCsSsH",
     group = 
 """
@@ -48153,7 +57489,7 @@ entry(
 )
 
 entry(
-    index = 2172,
+    index = 2281,
     label = "Cs-CtCdsSsH",
     group = 
 """
@@ -48172,7 +57508,7 @@ entry(
 )
 
 entry(
-    index = 2173,
+    index = 2282,
     label = "Cs-(Cds-Cd)CtSsH",
     group = 
 """
@@ -48192,7 +57528,7 @@ entry(
 )
 
 entry(
-    index = 2174,
+    index = 2283,
     label = "Cs-(Cds-Cds)CtSsH",
     group = 
 """
@@ -48212,7 +57548,7 @@ entry(
 )
 
 entry(
-    index = 2175,
+    index = 2284,
     label = "Cs-(Cds-Cdd)CtSsH",
     group = 
 """
@@ -48232,7 +57568,7 @@ entry(
 )
 
 entry(
-    index = 2176,
+    index = 2285,
     label = "Cs-(Cds-Cdd-S2d)CtSsH",
     group = 
 """
@@ -48253,7 +57589,7 @@ entry(
 )
 
 entry(
-    index = 2177,
+    index = 2286,
     label = "Cs-(Cds-Cdd-Cd)CtSsH",
     group = 
 """
@@ -48274,7 +57610,7 @@ entry(
 )
 
 entry(
-    index = 2178,
+    index = 2287,
     label = "Cs-CtCtSsH",
     group = 
 """
@@ -48293,7 +57629,7 @@ entry(
 )
 
 entry(
-    index = 2179,
+    index = 2288,
     label = "Cs-CbCsSsH",
     group = 
 """
@@ -48317,7 +57653,7 @@ entry(
 )
 
 entry(
-    index = 2180,
+    index = 2289,
     label = "Cs-CbCdsSsH",
     group = 
 """
@@ -48336,7 +57672,7 @@ entry(
 )
 
 entry(
-    index = 2181,
+    index = 2290,
     label = "Cs-(Cds-Cd)CbSsH",
     group = 
 """
@@ -48356,7 +57692,7 @@ entry(
 )
 
 entry(
-    index = 2182,
+    index = 2291,
     label = "Cs-(Cds-Cds)CbSsH",
     group = 
 """
@@ -48376,7 +57712,7 @@ entry(
 )
 
 entry(
-    index = 2183,
+    index = 2292,
     label = "Cs-(Cds-Cdd)CbSsH",
     group = 
 """
@@ -48396,7 +57732,7 @@ entry(
 )
 
 entry(
-    index = 2184,
+    index = 2293,
     label = "Cs-(Cds-Cdd-S2d)CbSsH",
     group = 
 """
@@ -48417,7 +57753,7 @@ entry(
 )
 
 entry(
-    index = 2185,
+    index = 2294,
     label = "Cs-(Cds-Cdd-Cd)CbSsH",
     group = 
 """
@@ -48438,7 +57774,7 @@ entry(
 )
 
 entry(
-    index = 2186,
+    index = 2295,
     label = "Cs-CbCtSsH",
     group = 
 """
@@ -48457,7 +57793,7 @@ entry(
 )
 
 entry(
-    index = 2187,
+    index = 2296,
     label = "Cs-CbCbSsH",
     group = 
 """
@@ -48476,7 +57812,7 @@ entry(
 )
 
 entry(
-    index = 2188,
+    index = 2297,
     label = "Cs-C=SCbSsH",
     group = 
 """
@@ -48496,7 +57832,7 @@ entry(
 )
 
 entry(
-    index = 2189,
+    index = 2298,
     label = "Cs-C=SC=SSsH",
     group = 
 """
@@ -48517,7 +57853,7 @@ entry(
 )
 
 entry(
-    index = 2190,
+    index = 2299,
     label = "Cs-C=SCsSsH",
     group = 
 """
@@ -48542,7 +57878,7 @@ entry(
 )
 
 entry(
-    index = 2191,
+    index = 2300,
     label = "Cs-C=SCtSsH",
     group = 
 """
@@ -48562,7 +57898,7 @@ entry(
 )
 
 entry(
-    index = 2192,
+    index = 2301,
     label = "Cs-C=S(Cds-Cd)SsH",
     group = 
 """
@@ -48583,7 +57919,7 @@ entry(
 )
 
 entry(
-    index = 2193,
+    index = 2302,
     label = "Cs-C=S(Cds-Cdd)SsH",
     group = 
 """
@@ -48604,7 +57940,7 @@ entry(
 )
 
 entry(
-    index = 2194,
+    index = 2303,
     label = "Cs-C=S(Cds-Cdd-Cd)SsH",
     group = 
 """
@@ -48626,7 +57962,7 @@ entry(
 )
 
 entry(
-    index = 2195,
+    index = 2304,
     label = "Cs-C=S(Cds-Cdd-S2d)SsH",
     group = 
 """
@@ -48648,7 +57984,7 @@ entry(
 )
 
 entry(
-    index = 2196,
+    index = 2305,
     label = "Cs-C=S(Cds-Cds)SsH",
     group = 
 """
@@ -48669,7 +58005,7 @@ entry(
 )
 
 entry(
-    index = 2197,
+    index = 2306,
     label = "Cs-CSHH",
     group = 
 """
@@ -48688,7 +58024,7 @@ entry(
 )
 
 entry(
-    index = 2198,
+    index = 2307,
     label = "Cs-CsSHH",
     group = 
 """
@@ -48707,7 +58043,7 @@ entry(
 )
 
 entry(
-    index = 2199,
+    index = 2308,
     label = "Cs-CsS2HH",
     group = 
 """
@@ -48731,7 +58067,7 @@ entry(
 )
 
 entry(
-    index = 2200,
+    index = 2309,
     label = "Cs-CsS4HH",
     group = 
 """
@@ -48755,7 +58091,7 @@ entry(
 )
 
 entry(
-    index = 2201,
+    index = 2310,
     label = "Cs-CsS6HH",
     group = 
 """
@@ -48779,7 +58115,7 @@ entry(
 )
 
 entry(
-    index = 2202,
+    index = 2311,
     label = "Cs-CdsSsHH",
     group = 
 """
@@ -48803,7 +58139,7 @@ entry(
 )
 
 entry(
-    index = 2203,
+    index = 2312,
     label = "Cs-(Cds-Cd)SsHH",
     group = 
 """
@@ -48823,7 +58159,7 @@ entry(
 )
 
 entry(
-    index = 2204,
+    index = 2313,
     label = "Cs-(Cds-Cds)SsHH",
     group = 
 """
@@ -48843,7 +58179,7 @@ entry(
 )
 
 entry(
-    index = 2205,
+    index = 2314,
     label = "Cs-(Cds-Cdd)SsHH",
     group = 
 """
@@ -48863,7 +58199,7 @@ entry(
 )
 
 entry(
-    index = 2206,
+    index = 2315,
     label = "Cs-(Cds-Cdd-S2d)SsHH",
     group = 
 """
@@ -48884,7 +58220,7 @@ entry(
 )
 
 entry(
-    index = 2207,
+    index = 2316,
     label = "Cs-(Cds-Cdd-Cd)SsHH",
     group = 
 """
@@ -48905,7 +58241,7 @@ entry(
 )
 
 entry(
-    index = 2208,
+    index = 2317,
     label = "Cs-CtSsHH",
     group = 
 """
@@ -48929,7 +58265,7 @@ entry(
 )
 
 entry(
-    index = 2209,
+    index = 2318,
     label = "Cs-CbSsHH",
     group = 
 """
@@ -48953,7 +58289,7 @@ entry(
 )
 
 entry(
-    index = 2210,
+    index = 2319,
     label = "Cs-C=SSsHH",
     group = 
 """
@@ -48978,7 +58314,7 @@ entry(
 )
 
 entry(
-    index = 2211,
+    index = 2320,
     label = "Cs-CIHH",
     group = 
 """
@@ -49003,7 +58339,7 @@ Cpdata at 1500K = Cpdata at 1000K + 1.4
 )
 
 entry(
-    index = 2212,
+    index = 2321,
     label = "Cs-CIIH",
     group = 
 """
@@ -49028,7 +58364,7 @@ Cpdata from 600 to 1500K estimated (base on entry 2088)
 )
 
 entry(
-    index = 2213,
+    index = 2322,
     label = "Cs-CCIH",
     group = 
 """
@@ -49053,7 +58389,7 @@ Cpdata at 1500K = Cpdata at 1000K + 0.6
 )
 
 entry(
-    index = 2214,
+    index = 2323,
     label = "Cs-CCCI",
     group = 
 """
@@ -49078,7 +58414,7 @@ Cpdata from 400 to 1500K estimated (base on entry 2092)
 )
 
 entry(
-    index = 2215,
+    index = 2324,
     label = "Cs-HHNN",
     group = 
 """
@@ -49105,7 +58441,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2216,
+    index = 2325,
     label = "Cs-HNNN",
     group = 
 """
@@ -49132,7 +58468,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2217,
+    index = 2326,
     label = "Cs-NNNN",
     group = 
 """
@@ -49158,7 +58494,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2218,
+    index = 2327,
     label = "Cs-N3sdN3sdN3sdN3sd",
     group = 
 """
@@ -49184,7 +58520,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2219,
+    index = 2328,
     label = "Cs-HHNO",
     group = 
 """
@@ -49210,7 +58546,7 @@ CHON_G4 |         64
 )
 
 entry(
-    index = 2220,
+    index = 2329,
     label = "Cs-HHO(NO)",
     group = 
 """
@@ -49237,7 +58573,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2221,
+    index = 2330,
     label = "Cs-HNNO",
     group = 
 """
@@ -49263,7 +58599,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 2222,
+    index = 2331,
     label = "Cs-NNNO",
     group = 
 """
@@ -49289,7 +58625,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2223,
+    index = 2332,
     label = "Cs-HNOO",
     group = 
 """
@@ -49315,7 +58651,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2224,
+    index = 2333,
     label = "Cs-HOO(NO)",
     group = 
 """
@@ -49342,7 +58678,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2225,
+    index = 2334,
     label = "Cs-NNOO",
     group = 
 """
@@ -49368,7 +58704,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2226,
+    index = 2335,
     label = "Cs-CHHN",
     group = 
 """
@@ -49395,7 +58731,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2227,
+    index = 2336,
     label = "Cs-N5dcCsHH",
     group = 
 """
@@ -49419,7 +58755,7 @@ entry(
 )
 
 entry(
-    index = 2228,
+    index = 2337,
     label = "Cs-(N5dcOdO0sc)CsHH",
     group = 
 """
@@ -49449,7 +58785,7 @@ CHON                    |         14
 )
 
 entry(
-    index = 2229,
+    index = 2338,
     label = "Cs-N3dCsHH",
     group = 
 """
@@ -49477,7 +58813,7 @@ CHON     |         2
 )
 
 entry(
-    index = 2230,
+    index = 2339,
     label = "Cs-(N3dCd)CsHH",
     group = 
 """
@@ -49504,7 +58840,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2231,
+    index = 2340,
     label = "Cs-(N3dN3d)CsHH",
     group = 
 """
@@ -49531,7 +58867,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2232,
+    index = 2341,
     label = "Cs-N3dCOHH",
     group = 
 """
@@ -49558,7 +58894,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 2233,
+    index = 2342,
     label = "Cs-N3dCdHH",
     group = 
 """
@@ -49584,7 +58920,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 2234,
+    index = 2343,
     label = "Cs-N3dCtHH",
     group = 
 """
@@ -49610,7 +58946,7 @@ CHON_G4 |         5
 )
 
 entry(
-    index = 2235,
+    index = 2344,
     label = "Cs-NCsHH",
     group = 
 """
@@ -49636,7 +58972,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 2236,
+    index = 2345,
     label = "Cs-N3sCsHH",
     group = 
 """
@@ -49665,7 +59001,7 @@ CHON     |         9
 )
 
 entry(
-    index = 2237,
+    index = 2346,
     label = "Cs-CHNN",
     group = 
 """
@@ -49691,7 +59027,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 2238,
+    index = 2347,
     label = "Cs-NNCsH",
     group = 
 """
@@ -49718,7 +59054,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2239,
+    index = 2348,
     label = "Cs-CNNN",
     group = 
 """
@@ -49745,7 +59081,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2240,
+    index = 2349,
     label = "Cs-CN3dsN3dsN3ds",
     group = 
 """
@@ -49771,7 +59107,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2241,
+    index = 2350,
     label = "Cs-CHNO",
     group = 
 """
@@ -49797,7 +59133,7 @@ CHON_G4 |         16
 )
 
 entry(
-    index = 2242,
+    index = 2351,
     label = "Cs-CNNO",
     group = 
 """
@@ -49823,7 +59159,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2243,
+    index = 2352,
     label = "Cs-CNOO",
     group = 
 """
@@ -49849,7 +59185,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2244,
+    index = 2353,
     label = "Cs-CCHN",
     group = 
 """
@@ -49868,7 +59204,7 @@ entry(
 )
 
 entry(
-    index = 2245,
+    index = 2354,
     label = "Cs-N3dCsCsH",
     group = 
 """
@@ -49894,7 +59230,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 2246,
+    index = 2355,
     label = "Cs-(N3dN3d)CsCsH",
     group = 
 """
@@ -49921,7 +59257,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2247,
+    index = 2356,
     label = "Cs-NCsCsH",
     group = 
 """
@@ -49947,7 +59283,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2248,
+    index = 2357,
     label = "Cs-N5dcCsCsH",
     group = 
 """
@@ -49973,7 +59309,7 @@ CHON |         11
 )
 
 entry(
-    index = 2249,
+    index = 2358,
     label = "Cs-N3sCsCsH",
     group = 
 """
@@ -50001,7 +59337,7 @@ CHON    |         1
 )
 
 entry(
-    index = 2250,
+    index = 2359,
     label = "Cs-NCsCdtH",
     group = 
 """
@@ -50027,7 +59363,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2251,
+    index = 2360,
     label = "Cs-CsN3sH(Cds-O2d)",
     group = 
 """
@@ -50056,7 +59392,7 @@ CHON     |         2
 )
 
 entry(
-    index = 2252,
+    index = 2361,
     label = "Cs-CsN3sH(Cds-N3d)",
     group = 
 """
@@ -50083,7 +59419,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2253,
+    index = 2362,
     label = "Cs-CCNN",
     group = 
 """
@@ -50102,7 +59438,7 @@ entry(
 )
 
 entry(
-    index = 2254,
+    index = 2363,
     label = "Cs-NNCsCs",
     group = 
 """
@@ -50128,7 +59464,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2255,
+    index = 2364,
     label = "Cs-N5dcN5dcCsCs",
     group = 
 """
@@ -50154,7 +59490,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2256,
+    index = 2365,
     label = "Cs-CCNO",
     group = 
 """
@@ -50180,7 +59516,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2257,
+    index = 2366,
     label = "Cs-CCCN",
     group = 
 """
@@ -50206,7 +59542,7 @@ CBS_QB3_1dHR |         1
 )
 
 entry(
-    index = 2258,
+    index = 2367,
     label = "Cs-N5dcCsCsCs",
     group = 
 """
@@ -50232,7 +59568,7 @@ CHON |         5
 )
 
 entry(
-    index = 2259,
+    index = 2368,
     label = "Cs-N3dCsCsCs",
     group = 
 """
@@ -50258,7 +59594,7 @@ CHON |         1
 )
 
 entry(
-    index = 2260,
+    index = 2369,
     label = "Cs-(N3dN3d)CsCsCs",
     group = 
 """
@@ -50283,7 +59619,7 @@ entry(
 )
 
 entry(
-    index = 2261,
+    index = 2370,
     label = "Cs-NCsCsCs",
     group = 
 """
@@ -50302,7 +59638,7 @@ entry(
 )
 
 entry(
-    index = 2262,
+    index = 2371,
     label = "Cs-N3sCsCsCs",
     group = 
 """
@@ -50330,7 +59666,7 @@ CHON    |         3
 )
 
 entry(
-    index = 2263,
+    index = 2372,
     label = "Cs-NCCtCt",
     group = 
 """
@@ -50349,7 +59685,7 @@ entry(
 )
 
 entry(
-    index = 2264,
+    index = 2373,
     label = "Cs-NHHH",
     group = 
 """
@@ -50368,7 +59704,7 @@ entry(
 )
 
 entry(
-    index = 2265,
+    index = 2374,
     label = "Cs-N3dHHH",
     group = 
 """
@@ -50395,7 +59731,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2266,
+    index = 2375,
     label = "Cs-(N3dCd)HHH",
     group = 
 """
@@ -50422,7 +59758,7 @@ CHON_G4 |         33
 )
 
 entry(
-    index = 2267,
+    index = 2376,
     label = "Cs-(N3dN3d)HHH",
     group = 
 """
@@ -50449,7 +59785,7 @@ CHON_G4 |         17
 )
 
 entry(
-    index = 2268,
+    index = 2377,
     label = "Cs-N3sHHH",
     group = 
 """
@@ -50479,7 +59815,7 @@ CHON                    |         3
 )
 
 entry(
-    index = 2269,
+    index = 2378,
     label = "Cs-N5sdtcHHH",
     group = 
 """
@@ -50506,7 +59842,161 @@ thermo_DFT_CCSDTF12_BAC |         2
 )
 
 entry(
-    index = 2270,
+    index = 2379,
+    label = "Cs-F1sF1sF1sS6dd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   S6dd u0 {1,S}
+3   F1s  u0 {1,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([17.8784,20.3373,21.8752,22.6868,23.1346,23.9575,26.168],'J/(mol*K)','+|-',[2.68369,2.80536,2.63023,2.44226,2.11745,1.88029,3.63428]),
+        H298 = (-225.7,'kJ/mol','+|-',12.9546),
+        S298 = (88.8123,'J/(mol*K)','+|-',7.37498),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(S(=O)(=O)O)(F)F (PF1Sacid) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2380,
+    label = "Cs-CsF1sF1sS6dd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   S6dd u0 {1,S}
+3   F1s  u0 {1,S}
+4   F1s  u0 {1,S}
+5   Cs   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([4.58698,7.13009,9.45722,11.385,13.5706,14.5864,14.7034],'J/(mol*K)','+|-',[1.6551,1.73014,1.62213,1.5062,1.30588,1.15962,2.24135]),
+        H298 = (34.1164,'kJ/mol','+|-',7.98941),
+        S298 = (-32.7123,'J/(mol*K)','+|-',4.54834),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(S(=O)(=O)O)(C(F)(F)F)F (PF2Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F (PF3Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(C(F)(F)F)F (PF4Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF7Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF8Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF10Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF11Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF12Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF13Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sacid) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2381,
+    label = "Cs-F1sF1sO2sS6dd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   F1s  u0 {1,S}
+3   F1s  u0 {1,S}
+4   O2s  u0 {1,S}
+5   S6dd u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([20.7982,22.9057,24.1589,25.1046,27.3229,28.6642,29.9068],'J/(mol*K)','+|-',[2.50945,2.62322,2.45946,2.28369,1.97997,1.75821,3.39832]),
+        H298 = (-223.54,'kJ/mol','+|-',12.1134),
+        S298 = (72.636,'J/(mol*K)','+|-',6.89613),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1(F)OS1(=O)=O (PF1Sultone) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2382,
+    label = "Cs-CsF1sO2sS6dd",
+    group = 
+"""
+1 * Cs   u0 {2,S} {3,S} {4,S} {5,S}
+2   Cs   u0 {1,S}
+3   F1s  u0 {1,S}
+4   O2s  u0 {1,S}
+5   S6dd u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([9.91332,11.0058,11.3597,11.5716,12.4588,12.4391,11.2391],'J/(mol*K)','+|-',[1.65049,1.72531,1.61761,1.502,1.30224,1.15639,2.2351]),
+        H298 = (1.1511,'kJ/mol','+|-',7.96713),
+        S298 = (-36.228,'J/(mol*K)','+|-',4.53565),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(C1(F)OS1(=O)=O)(F)F (PF2Sultone) from NCSU_C2_C8_PFAS
+FC(C(C1(F)OS1(=O)=O)(F)F)(F)F (PF3Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F (PF4Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(C(F)(F)F)F (PF5Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF6Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF9Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF10Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF11Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF12Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF13Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sultone) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2383,
+    label = "Ca",
+    group = 
+"""
+1 * Ca u0
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([20.8378,20.811,20.8032,20.8016,20.7936,20.7926,20.8139],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (716.673,'kJ/mol','+|-',18.9287),
+        S298 = (158.09,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Previously contains None as data. New data fitted from following species using Ridge regression
+
+[C] (C) from C1_C3_hydrofluorocarbons_NIST
+""",
+)
+
+entry(
+    index = 2384,
     label = "O",
     group = 
 """
@@ -50521,7 +60011,7 @@ entry(
 )
 
 entry(
-    index = 2271,
+    index = 2385,
     label = "O0sc",
     group = 
 """
@@ -50542,7 +60032,7 @@ neighbor at the center
 )
 
 entry(
-    index = 2272,
+    index = 2386,
     label = "Oa(S)",
     group = 
 """
@@ -50564,7 +60054,7 @@ level of theory frequency: B3LYP/6-311++g(d,p)//B3LYP/6-311++g(d,p)
 )
 
 entry(
-    index = 2273,
+    index = 2387,
     label = "O2d",
     group = 
 """
@@ -50584,7 +60074,7 @@ entry(
 )
 
 entry(
-    index = 2274,
+    index = 2388,
     label = "O2d-Cd",
     group = 
 """
@@ -50605,7 +60095,7 @@ entry(
 )
 
 entry(
-    index = 2275,
+    index = 2389,
     label = "O2d-O2d",
     group = 
 """
@@ -50626,7 +60116,7 @@ entry(
 )
 
 entry(
-    index = 2276,
+    index = 2390,
     label = "O2d-Sd",
     group = 
 """
@@ -50648,7 +60138,53 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2277,
+    index = 2391,
+    label = "O2d-S2d",
+    group = 
+"""
+1   S2d u0 {2,D}
+2 * O2d u0 {1,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.0991,15.7454,16.3945,16.9439,17.6124,18.0487,18.7602],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65514]),
+        H298 = (2.37788,'kJ/mol','+|-',9.46438),
+        S298 = (110.963,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=S (SO) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2392,
+    label = "O2d-S6ddd",
+    group = 
+"""
+1   S6ddd u0 {2,D}
+2 * O2d   u0 {1,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.2283,17.2896,18.9195,20.1771,21.8298,22.7941,23.8467],'J/(mol*K)','+|-',[1.1764,1.22973,1.15296,1.07056,0.928183,0.824225,1.59309]),
+        H298 = (-118.772,'kJ/mol','+|-',5.67863),
+        S298 = (76.9561,'J/(mol*K)','+|-',3.23282),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=S(=O)=O (SO3) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2393,
     label = "O2d-N3d",
     group = 
 """
@@ -50669,7 +60205,7 @@ entry(
 )
 
 entry(
-    index = 2278,
+    index = 2394,
     label = "O2d-N5dc",
     group = 
 """
@@ -50690,7 +60226,7 @@ entry(
 )
 
 entry(
-    index = 2279,
+    index = 2395,
     label = "O2s",
     group = 
 """
@@ -50705,7 +60241,7 @@ entry(
 )
 
 entry(
-    index = 2280,
+    index = 2396,
     label = "O2sBrBr",
     group = 
 """
@@ -50729,7 +60265,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 2281,
+    index = 2397,
     label = "O2sBrCl",
     group = 
 """
@@ -50753,7 +60289,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 2282,
+    index = 2398,
     label = "O2sClCl",
     group = 
 """
@@ -50777,7 +60313,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 2283,
+    index = 2399,
     label = "O2sBrF",
     group = 
 """
@@ -50801,7 +60337,7 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 2284,
+    index = 2400,
     label = "O2sClF",
     group = 
 """
@@ -50825,7 +60361,7 @@ CHOFCl_G4 |         1
 )
 
 entry(
-    index = 2285,
+    index = 2401,
     label = "O2sFF",
     group = 
 """
@@ -50849,7 +60385,32 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 2286,
+    index = 2402,
+    label = "O2s-F1sF1s",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   F1s u0 {1,S}
+3   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([42.5387,46.6995,49.7038,51.7269,54.1943,55.6283,56.9867],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (25.336,'kJ/mol','+|-',13.3847),
+        S298 = (246.675,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FOF (F2O) from C1_C2_Fluorine
+FOF (FOF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2403,
     label = "O2sBrH",
     group = 
 """
@@ -50873,7 +60434,7 @@ CHOBr_G4 |         1
 )
 
 entry(
-    index = 2287,
+    index = 2404,
     label = "O2sClH",
     group = 
 """
@@ -50897,7 +60458,7 @@ CHOCl_G4 |         1
 )
 
 entry(
-    index = 2288,
+    index = 2405,
     label = "O2sFH",
     group = 
 """
@@ -50921,7 +60482,32 @@ CHOF_G4 |         1
 )
 
 entry(
-    index = 2289,
+    index = 2406,
+    label = "O2s-F1sH",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   F1s u0 {1,S}
+3   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([35.6107,37.8918,40.1725,42.2003,45.2011,47.4907,51.2918],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-86.3905,'kJ/mol','+|-',13.3847),
+        S298 = (226.329,'J/(mol*K)','+|-',7.61983),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OF (FOH) from C1_C2_Fluorine
+OF (OF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2407,
     label = "O2sBrO",
     group = 
 """
@@ -50948,7 +60534,7 @@ CHOClBr_G4  |         21
 )
 
 entry(
-    index = 2290,
+    index = 2408,
     label = "O2sClO",
     group = 
 """
@@ -50974,7 +60560,7 @@ CHOClBr_G4 |         1
 )
 
 entry(
-    index = 2291,
+    index = 2409,
     label = "O2sFO",
     group = 
 """
@@ -51000,7 +60586,54 @@ CHOFBr_G4 |         1
 )
 
 entry(
-    index = 2292,
+    index = 2410,
+    label = "O2s-F1sO2s",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   O2s u0 {1,S}
+3   F1s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([30.8267,33.0168,35.0657,36.685,38.5642,39.1329,40.0525],'J/(mol*K)','+|-',[0.719616,0.752241,0.705281,0.654877,0.567781,0.504188,0.974511]),
+        H298 = (30.84,'kJ/mol','+|-',3.47369),
+        S298 = (138.642,'J/(mol*K)','+|-',1.97756),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OOF (FOOH) from C1_C2_Fluorine
+FOOF (FOOF) from C1_C2_Fluorine
+FCC(F)(F)OOF (FCC(F)(F)OOF) from CHOF_G4
+FC=COOF (FCDCOOF) from CHOF_G4
+FOOC=C(F)F (FOOCDC(F)F) from CHOF_G4
+FCC(F)OOF (FCC(F)OOF) from CHOF_G4
+CCOOF (CCOOF) from CHOF_G4
+FOOC(F)(F)C(F)F (FOOC(F)(F)C(F)F) from CHOF_G4
+OOF (OOF) from CHOF_G4
+FOOF (FOOF) from CHOF_G4
+CC(F)(F)OOF (CC(F)(F)OOF) from CHOF_G4
+FOOC(F)C(F)F (FOOC(F)C(F)F) from CHOF_G4
+FOOCC(F)(F)F (FOOCC(F)(F)F) from CHOF_G4
+CC(F)OOF (CC(F)OOF) from CHOF_G4
+FOOC(F)(F)F (FOOC(F)(F)F) from CHOF_G4
+FOOCC(F)F (FOOCC(F)F) from CHOF_G4
+FOOC(F)(F)C(F)(F)F (FOOC(F)(F)C(F)(F)F) from CHOF_G4
+COOF (COOF) from CHOF_G4
+FOOC(F)C(F)(F)F (FOOC(F)C(F)(F)F) from CHOF_G4
+FCOOF (FCOOF) from CHOF_G4
+FCCOOF (FCCOOF) from CHOF_G4
+FOOC(F)F (FOOC(F)F) from CHOF_G4
+FC=C(F)OOF (FCDC(F)OOF) from CHOF_G4
+FOOC(F)=C(F)F (FOOC(F)DC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2411,
     label = "O2sBrC",
     group = 
 """
@@ -51027,7 +60660,7 @@ CHOClBr_G4  |         174
 )
 
 entry(
-    index = 2293,
+    index = 2412,
     label = "O2sCCl",
     group = 
 """
@@ -51054,7 +60687,7 @@ CHOClBr_G4  |         33
 )
 
 entry(
-    index = 2294,
+    index = 2413,
     label = "O2sCF",
     group = 
 """
@@ -51081,7 +60714,7 @@ CHOFBr_G4   |         55
 )
 
 entry(
-    index = 2295,
+    index = 2414,
     label = "O2s-HH",
     group = 
 """
@@ -51091,19 +60724,22 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([33.5965,34.2678,35.2141,36.3207,38.7331,41.2948,47.3125],'J/(mol*K)','+|-',[2.77279,2.8985,2.71756,2.52334,2.18775,1.94272,3.75494]),
+        H298 = (-241.83,'kJ/mol','+|-',13.3847),
+        S298 = (188.811,'J/(mol*K)','+|-',7.61983),
     ),
-    shortDesc = """O-HH WATER. !!!Using NIST value for H2O, S(group) = S(H2O) + Rln(2)""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+O (H2O) from C1_C3_hydrofluorocarbons_NIST
+O (H2O) from NCSU_C2_C8_PFAS
 """,
 )
 
 entry(
-    index = 2296,
+    index = 2415,
     label = "O2s-OsH",
     group = 
 """
@@ -51113,19 +60749,78 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([22.5465,23.9658,25.4834,26.8535,28.591,29.642,33.1924],'J/(mol*K)','+|-',[0.49295,0.515298,0.48313,0.448602,0.38894,0.345378,0.667557]),
+        H298 = (-62.8175,'kJ/mol','+|-',2.37954),
+        S298 = (117.442,'J/(mol*K)','+|-',1.35466),
     ),
-    shortDesc = """O-OH SANDIA 1/2*H2O2""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+OOF (FOOH) from C1_C2_Fluorine
+OO (H2O2) from C1_C3_hydrofluorocarbons_NIST
+OO (H2O2) from NCSU_C2_C8_PFAS
+OOC(F)C(F)(F)F (OOC(F)C(F)(F)F) from CHOF_G4
+OOC(F)C(F)F (OOC(F)C(F)F) from CHOF_G4
+OOC=CF (OOCDCF) from CHOF_G4
+OOC(F)=CF (OOC(F)DCF) from CHOF_G4
+OOC(F)(F)C(F)(F)F (OOC(F)(F)C(F)(F)F) from CHOF_G4
+OOCC(F)F (OOCC(F)F) from CHOF_G4
+OOCCF (OOCCF) from CHOF_G4
+OOF (OOF) from CHOF_G4
+CC(F)(F)OO (CC(F)(F)OO) from CHOF_G4
+C=C(F)OO (CDC(F)OO) from CHOF_G4
+OOCF (OOCF) from CHOF_G4
+OOC=C(F)F (OOCDC(F)F) from CHOF_G4
+OOC(F)=C(F)F (OOC(F)DC(F)F) from CHOF_G4
+OOC(F)F (OOC(F)F) from CHOF_G4
+OOC(F)CF (OOC(F)CF) from CHOF_G4
+OOC(F)(F)F (OOC(F)(F)F) from CHOF_G4
+CC(F)OO (CC(F)OO) from CHOF_G4
+OOC(F)(F)CF (OOC(F)(F)CF) from CHOF_G4
+OOCC(F)(F)F (OOCC(F)(F)F) from CHOF_G4
+OOC(F)(F)C(F)F (OOC(F)(F)C(F)F) from CHOF_G4
+OOC(F)(Cl)Cl (OOC(F)(Cl)Cl) from CHOFCl_G4
+OOC(F)Cl (OOC(F)Cl) from CHOFCl_G4
+OOC(Cl)=CF (OOC(Cl)DCF) from CHOFCl_G4
+OOC(F)(F)Cl (OOC(F)(F)Cl) from CHOFCl_G4
+OOC=C(F)Cl (OOCDC(F)Cl) from CHOFCl_G4
+OOC(Cl)CF (OOC(Cl)CF) from CHOFCl_G4
+CC(F)(Cl)OO (CC(F)(Cl)OO) from CHOFCl_G4
+OOCC(F)Cl (OOCC(F)Cl) from CHOFCl_G4
+OOCC(F)(Cl)Br (OOCC(F)(Cl)Br) from CHOFClBr_G4
+OOC(Br)C(F)Cl (OOC(Br)C(F)Cl) from CHOFClBr_G4
+OOC(Br)=C(F)Cl (OOC(Br)DC(F)Cl) from CHOFClBr_G4
+OOC(Cl)(Br)CF (OOC(Cl)(Br)CF) from CHOFClBr_G4
+OOC(F)(Cl)Br (OOC(F)(Cl)Br) from CHOFClBr_G4
+OOCC(F)Br (OOCC(F)Br) from CHOFBr_G4
+OOC(Br)(Br)C(F)F (OOC(Br)(Br)C(F)F) from CHOFBr_G4
+OOC(Br)C(F)F (OOC(Br)C(F)F) from CHOFBr_G4
+OOC(Br)(Br)CF (OOC(Br)(Br)CF) from CHOFBr_G4
+OOC(Br)=C(F)F (OOC(Br)DC(F)F) from CHOFBr_G4
+OOCC(F)(Br)Br (OOCC(F)(Br)Br) from CHOFBr_G4
+OOC(Br)=CF (OOC(Br)DCF) from CHOFBr_G4
+OOC(Br)(Br)C(F)Br (OOC(Br)(Br)C(F)Br) from CHOFBr_G4
+OOC=C(F)Br (OOCDC(F)Br) from CHOFBr_G4
+OOC(Br)=C(F)Br (OOC(Br)DC(F)Br) from CHOFBr_G4
+OOC(F)(Br)C(F)F (OOC(F)(Br)C(F)F) from CHOFBr_G4
+CC(F)(Br)OO (CC(F)(Br)OO) from CHOFBr_G4
+OOC(Br)C(F)Br (OOC(Br)C(F)Br) from CHOFBr_G4
+OOC(F)(Br)Br (OOC(F)(Br)Br) from CHOFBr_G4
+OOC(F)(Br)CF (OOC(F)(Br)CF) from CHOFBr_G4
+OOC(Br)CF (OOC(Br)CF) from CHOFBr_G4
+OOC(Br)C(F)(Br)Br (OOC(Br)C(F)(Br)Br) from CHOFBr_G4
+OOC(Br)C(F)(F)F (OOC(Br)C(F)(F)F) from CHOFBr_G4
+OOC(F)(F)Br (OOC(F)(F)Br) from CHOFBr_G4
+OOC(Br)C(F)(F)Br (OOC(Br)C(F)(F)Br) from CHOFBr_G4
+OOCC(F)(F)Br (OOCC(F)(F)Br) from CHOFBr_G4
+OOC(F)Br (OOC(F)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 2297,
+    index = 2416,
     label = "O2s-(Os-CdOd)H",
     group = 
 """
@@ -51150,7 +60845,7 @@ S298 taken from O2s-OsH
 )
 
 entry(
-    index = 2298,
+    index = 2417,
     label = "O2s-OsOs",
     group = 
 """
@@ -51172,7 +60867,7 @@ entry(
 )
 
 entry(
-    index = 2299,
+    index = 2418,
     label = "O2s-SsOs",
     group = 
 """
@@ -51194,7 +60889,7 @@ entry(
 )
 
 entry(
-    index = 2300,
+    index = 2419,
     label = "O2s-CH",
     group = 
 """
@@ -51211,7 +60906,7 @@ entry(
 )
 
 entry(
-    index = 2301,
+    index = 2420,
     label = "O2s-CtH",
     group = 
 """
@@ -51221,19 +60916,25 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([23.1229,24.2974,24.9441,26.1342,28.6623,30.8171,34.514],'J/(mol*K)','+|-',[2.55314,2.66889,2.50228,2.32345,2.01444,1.78882,3.45748]),
+        H298 = (-177.731,'kJ/mol','+|-',12.3244),
+        S298 = (110.651,'J/(mol*K)','+|-',7.0162),
     ),
-    shortDesc = """O-CtH BENSON (Assigned O-CsH)""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
 
+C#CO (HCCOH) from C1_C3_hydrofluorocarbons_NIST
+OC#CF (OC#CF) from CHOF_G4
+OC#CC(F)(F)F (OC#CC(F)(F)F) from CHOF_G4
+OC#CCF (OC#CCF) from CHOF_G4
+OC#CC(F)F (OC#CC(F)F) from CHOF_G4
 """,
 )
 
 entry(
-    index = 2302,
+    index = 2421,
     label = "O2s-CdsH",
     group = 
 """
@@ -51250,7 +60951,7 @@ entry(
 )
 
 entry(
-    index = 2303,
+    index = 2422,
     label = "O2s-(Cds-O2d)H",
     group = 
 """
@@ -51275,7 +60976,93 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2304,
+    index = 2423,
+    label = "O2s-(CsO2d)COH",
+    group = 
+"""
+1   CO  u0 {2,S} {3,D} {4,S}
+2 * O2s u0 {1,S} {5,S}
+3   O2d u0 {1,D}
+4   Cs  u0 {1,S}
+5   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.4586,24.2913,24.9362,25.327,25.9307,26.6017,30.1721],'J/(mol*K)','+|-',[1.40115,1.46468,1.37324,1.2751,1.10552,0.981698,1.89746]),
+        H298 = (-172.056,'kJ/mol','+|-',6.76356),
+        S298 = (115.953,'J/(mol*K)','+|-',3.85047),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)C(F)(F)F (CF3C(O)OH) from C1_C2_Fluorine
+O=C(O)C(F)(F)F (PF2acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)F (PF3acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (PF4acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16acid) from NCSU_C2_C8_PFAS
+O=C(O)C(F)(F)F (CF3C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)F (C2F5C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)F (C3F7C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13C_O_OH) from PFCA_thermo
+O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C7F15C_O_OH) from PFCA_thermo
+O=C(O)C(F)F (ODC(O)C(F)F) from CHOF_G4
+O=C(O)C(F)(F)F (ODC(O)C(F)(F)F) from CHOF_G4
+O=C(O)CF (ODC(O)CF) from CHOF_G4
+O=C(O)C(F)Cl (ODC(O)C(F)Cl) from CHOFCl_G4
+O=C(O)C(F)(Cl)Cl (ODC(O)C(F)(Cl)Cl) from CHOFCl_G4
+O=C(O)C(F)(F)Cl (ODC(O)C(F)(F)Cl) from CHOFCl_G4
+O=C(O)C(F)(Cl)Br (ODC(O)C(F)(Cl)Br) from CHOFClBr_G4
+O=C(O)C(F)(F)Br (ODC(O)C(F)(F)Br) from CHOFBr_G4
+O=C(O)C(F)(Br)Br (ODC(O)C(F)(Br)Br) from CHOFBr_G4
+O=C(O)C(F)Br (ODC(O)C(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2424,
+    label = "O2s-(F1sO2d)COH",
+    group = 
+"""
+1   CO  u0 {2,S} {3,D} {4,S}
+2 * O2s u0 {1,S} {5,S}
+3   O2d u0 {1,D}
+4   F1s u0 {1,S}
+5   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([18.2009,19.1659,20.7367,22.6702,26.1628,28.7167,33.3513],'J/(mol*K)','+|-',[3.20174,3.3469,3.13796,2.9137,2.52619,2.24325,4.33583]),
+        H298 = (-188.696,'kJ/mol','+|-',15.4552),
+        S298 = (115.576,'J/(mol*K)','+|-',8.79861),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(O)F (FCOOH) from NCSU_C2_C8_PFAS
+O=C(O)F (FC_O_OH) from PFCA_thermo
+O=C(O)F (ODC(O)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2425,
     label = "O2s-(Cds-Cd)H",
     group = 
 """
@@ -51300,7 +61087,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2305,
+    index = 2426,
     label = "O2s-(Cds-Nd)H",
     group = 
 """
@@ -51325,7 +61112,7 @@ CHON_G4 |         46
 )
 
 entry(
-    index = 2306,
+    index = 2427,
     label = "O2s-CsH",
     group = 
 """
@@ -51335,21 +61122,607 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([20.1058,21.5581,22.665,24.0045,26.7481,29.0483,33.442],'J/(mol*K)','+|-',[0.15506,0.162089,0.151971,0.14111,0.122343,0.10864,0.209983]),
+        H298 = (-164.147,'kJ/mol','+|-',0.748494),
+        S298 = (123.378,'J/(mol*K)','+|-',0.426114),
     ),
-    shortDesc = """\Derived from CBS-QB3 calculation with 1DHR treatment""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-Derived using calculations at B3LYP/6-311G(d,p)/CBS-QB3 level of theory. 1DH-rotors
-optimized at the B3LYP/6-31G(d).Paraskevas et al, Chem. Eur. J. 2013, 19, 16431-16452,
-DOI: 10.1002/chem.201301381
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+OCF (CH2FOH) from C1_C2_Fluorine
+OC(F)(F)F (CF3OH) from C1_C2_Fluorine
+OCCF (CH2FCH2OH) from C1_C2_Fluorine
+CC(O)(F)F (CH3CF2OH) from C1_C2_Fluorine
+OC(F)F (CHF2OH) from C1_C2_Fluorine
+CO (CH3OH) from C1_C3_hydrofluorocarbons_NIST
+OC(F)(F)C(F)(F)C(F)(F)F (C3F7OH) from C1_C3_hydrofluorocarbons_NIST
+OC(F)(F)C(F)(F)F (PF2ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)F (PF3ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)F (PF2diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)F (PF3diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)F (PF4diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF5diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7diol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15ol) from NCSU_C2_C8_PFAS
+OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16ol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15diol) from NCSU_C2_C8_PFAS
+OC(O)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16diol) from NCSU_C2_C8_PFAS
+CC(O)(F)OF (CC(O)(F)OF) from CHOF_G4
+CC(O)(F)F (CC(O)(F)F) from CHOF_G4
+OC(F)(F)OC(F)(F)F (OC(F)(F)OC(F)(F)F) from CHOF_G4
+OC(OF)C(F)F (OC(OF)C(F)F) from CHOF_G4
+O=C(F)C(O)F (ODC(F)C(O)F) from CHOF_G4
+CC(O)F (CC(O)F) from CHOF_G4
+OCOC(F)F (OCOC(F)F) from CHOF_G4
+OC(F)(F)C(F)=C(F)F (OC(F)(F)C(F)DC(F)F) from CHOF_G4
+OC(F)(F)CC(F)F (OC(F)(F)CC(F)F) from CHOF_G4
+COC(O)F (COC(O)F) from CHOF_G4
+CC(O)(F)CF (CC(O)(F)CF) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)F (OC(F)(F)C(F)(F)C(F)F) from CHOF_G4
+CC(O)(F)C(F)(F)F (CC(O)(F)C(F)(F)F) from CHOF_G4
+OC(F)C(F)F (OC(F)C(F)F) from CHOF_G4
+CC(F)(F)C(O)F (CC(F)(F)C(O)F) from CHOF_G4
+CCC(O)(F)F (CCC(O)(F)F) from CHOF_G4
+OC(F)(F)C(O)(F)F (OC(F)(F)C(O)(F)F) from CHOF_G4
+OC(F)OC(F)(F)F (OC(F)OC(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)CC(F)(F)F (OC(F)(F)CC(F)(F)F) from CHOF_G4
+OC(F)(F)COF (OC(F)(F)COF) from CHOF_G4
+OC(F)C(F)(F)CF (OC(F)C(F)(F)CF) from CHOF_G4
+OC(O)(F)F (OC(O)(F)F) from CHOF_G4
+OC(F)(CF)C(F)F (OC(F)(CF)C(F)F) from CHOF_G4
+OC(CF)C(F)(F)F (OC(CF)C(F)(F)F) from CHOF_G4
+OCC(O)F (OCC(O)F) from CHOF_G4
+OC(F)(F)C(F)(F)OF (OC(F)(F)C(F)(F)OF) from CHOF_G4
+OC(F)OCF (OC(F)OCF) from CHOF_G4
+OCCOF (OCCOF) from CHOF_G4
+OC(CF)CF (OC(CF)CF) from CHOF_G4
+OC(F)(F)CCF (OC(F)(F)CCF) from CHOF_G4
+OC(C(F)F)C(F)(F)F (OC(C(F)F)C(F)(F)F) from CHOF_G4
+OC(F)(CF)C(F)(F)F (OC(F)(CF)C(F)(F)F) from CHOF_G4
+OC(F)C(F)(F)OF (OC(F)C(F)(F)OF) from CHOF_G4
+OC(F)CC(F)(F)F (OC(F)CC(F)(F)F) from CHOF_G4
+OC(F)(C(F)(F)F)C(F)(F)F (OC(F)(C(F)(F)F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)CF (OC(F)(F)C(F)(F)CF) from CHOF_G4
+COC(O)(F)F (COC(O)(F)F) from CHOF_G4
+OC(CF)OF (OC(CF)OF) from CHOF_G4
+OCCCF (OCCCF) from CHOF_G4
+CC(O)(F)C(F)F (CC(O)(F)C(F)F) from CHOF_G4
+OC(F)(F)C(F)F (OC(F)(F)C(F)F) from CHOF_G4
+OC(O)(F)CF (OC(O)(F)CF) from CHOF_G4
+OCOF (OCOF) from CHOF_G4
+OC(F)C=C(F)F (OC(F)CDC(F)F) from CHOF_G4
+OCC(O)(F)F (OCC(O)(F)F) from CHOF_G4
+OCC(F)(F)C(F)F (OCC(F)(F)C(F)F) from CHOF_G4
+OC(F)(F)C=C(F)F (OC(F)(F)CDC(F)F) from CHOF_G4
+OC(F)OF (OC(F)OF) from CHOF_G4
+C#CC(O)(F)F (C#CC(O)(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)F (OC(F)C(F)(F)C(F)F) from CHOF_G4
+OCC(F)C(F)F (OCC(F)C(F)F) from CHOF_G4
+OCCF (OCCF) from CHOF_G4
+OCF (OCF) from CHOF_G4
+C=C(F)C(O)(F)F (CDC(F)C(O)(F)F) from CHOF_G4
+OC(F)CF (OC(F)CF) from CHOF_G4
+OC(F)C(F)=C(F)F (OC(F)C(F)DC(F)F) from CHOF_G4
+CC(F)(F)CO (CC(F)(F)CO) from CHOF_G4
+OC(F)C(O)(F)F (OC(F)C(O)(F)F) from CHOF_G4
+O=CC(O)F (ODCC(O)F) from CHOF_G4
+C=C(F)CO (CDC(F)CO) from CHOF_G4
+OCC(F)=C(F)F (OCC(F)DC(F)F) from CHOF_G4
+OC(F)C(F)OF (OC(F)C(F)OF) from CHOF_G4
+C=CC(O)(F)F (CDCC(O)(F)F) from CHOF_G4
+OCC=C(F)F (OCCDC(F)F) from CHOF_G4
+OC(F)(C(F)F)C(F)(F)F (OC(F)(C(F)F)C(F)(F)F) from CHOF_G4
+OC(O)C(F)(F)F (OC(O)C(F)(F)F) from CHOF_G4
+OC(F)(F)OC(F)F (OC(F)(F)OC(F)F) from CHOF_G4
+CCC(O)F (CCC(O)F) from CHOF_G4
+OCCC(F)F (OCCC(F)F) from CHOF_G4
+OC(F)C(F)CF (OC(F)C(F)CF) from CHOF_G4
+OC(O)F (OC(O)F) from CHOF_G4
+OC(F)(F)F (OC(F)(F)F) from CHOF_G4
+OC(OF)C(F)(F)F (OC(OF)C(F)(F)F) from CHOF_G4
+OC(F)C(O)F (OC(F)C(O)F) from CHOF_G4
+OC(F)(C(F)F)C(F)F (OC(F)(C(F)F)C(F)F) from CHOF_G4
+OC(F)C(F)(F)C(F)(F)F (OC(F)C(F)(F)C(F)(F)F) from CHOF_G4
+OC(O)(F)C(F)F (OC(O)(F)C(F)F) from CHOF_G4
+OCOC(F)(F)F (OCOC(F)(F)F) from CHOF_G4
+CC(O)(O)F (CC(O)(O)F) from CHOF_G4
+OCC(F)=CF (OCC(F)DCF) from CHOF_G4
+OC(F)(OF)C(F)F (OC(F)(OF)C(F)F) from CHOF_G4
+OC(F)(F)C=CF (OC(F)(F)CDCF) from CHOF_G4
+OC(C(F)F)C(F)F (OC(C(F)F)C(F)F) from CHOF_G4
+OC(F)(OF)C(F)(F)F (OC(F)(OF)C(F)(F)F) from CHOF_G4
+OC(F)CC(F)F (OC(F)CC(F)F) from CHOF_G4
+OCC(F)CF (OCC(F)CF) from CHOF_G4
+OC(C(F)(F)F)C(F)(F)F (OC(C(F)(F)F)C(F)(F)F) from CHOF_G4
+OC(O)C(F)F (OC(O)C(F)F) from CHOF_G4
+O=C(F)C(O)(F)F (ODC(F)C(O)(F)F) from CHOF_G4
+OCC#CF (OCC#CF) from CHOF_G4
+OC(F)C=CF (OC(F)CDCF) from CHOF_G4
+OC(F)C(F)=CF (OC(F)C(F)DCF) from CHOF_G4
+OCC(F)(F)OF (OCC(F)(F)OF) from CHOF_G4
+C=C(F)C(O)F (CDC(F)C(O)F) from CHOF_G4
+OCCC(F)(F)F (OCCC(F)(F)F) from CHOF_G4
+OC(F)C(F)C(F)(F)F (OC(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)=CF (OC(F)(F)C(F)DCF) from CHOF_G4
+OC(O)CF (OC(O)CF) from CHOF_G4
+OCC(F)C(F)(F)F (OCC(F)C(F)(F)F) from CHOF_G4
+OCC(F)(F)CF (OCC(F)(F)CF) from CHOF_G4
+OC(CF)C(F)F (OC(CF)C(F)F) from CHOF_G4
+OC(F)(F)C(F)(F)F (OC(F)(F)C(F)(F)F) from CHOF_G4
+OCC(F)F (OCC(F)F) from CHOF_G4
+OC(F)C(F)(F)F (OC(F)C(F)(F)F) from CHOF_G4
+CC(O)C(F)(F)F (CC(O)C(F)(F)F) from CHOF_G4
+OCC(F)(F)C(F)(F)F (OCC(F)(F)C(F)(F)F) from CHOF_G4
+OCOCF (OCOCF) from CHOF_G4
+O=CC(O)(F)F (ODCC(O)(F)F) from CHOF_G4
+OC(F)COF (OC(F)COF) from CHOF_G4
+OC(F)C(F)C(F)F (OC(F)C(F)C(F)F) from CHOF_G4
+CC(F)CO (CC(F)CO) from CHOF_G4
+OC(F)(F)OCF (OC(F)(F)OCF) from CHOF_G4
+OCC=CF (OCCDCF) from CHOF_G4
+OC(F)(CF)CF (OC(F)(CF)CF) from CHOF_G4
+OC(F)C#CF (OC(F)C#CF) from CHOF_G4
+CC(F)C(O)F (CC(F)C(O)F) from CHOF_G4
+CC(F)C(O)(F)F (CC(F)C(O)(F)F) from CHOF_G4
+OC(F)CCF (OC(F)CCF) from CHOF_G4
+C=CC(O)F (CDCC(O)F) from CHOF_G4
+O=C(F)CO (ODC(F)CO) from CHOF_G4
+OC(F)(CF)OF (OC(F)(CF)OF) from CHOF_G4
+OC(F)(F)C(F)C(F)F (OC(F)(F)C(F)C(F)F) from CHOF_G4
+OC(F)(F)OF (OC(F)(F)OF) from CHOF_G4
+CC(C)(O)F (CC(C)(O)F) from CHOF_G4
+OC(F)OC(F)F (OC(F)OC(F)F) from CHOF_G4
+CC(O)OF (CC(O)OF) from CHOF_G4
+OCC(F)(F)F (OCC(F)(F)F) from CHOF_G4
+OC(F)F (OC(F)F) from CHOF_G4
+OC(F)(F)C(F)C(F)(F)F (OC(F)(F)C(F)C(F)(F)F) from CHOF_G4
+OC(F)(F)C(F)CF (OC(F)(F)C(F)CF) from CHOF_G4
+OC(F)(F)CF (OC(F)(F)CF) from CHOF_G4
+CC(O)C(F)F (CC(O)C(F)F) from CHOF_G4
+CC(F)(F)C(O)(F)F (CC(F)(F)C(O)(F)F) from CHOF_G4
+OC(F)(F)C#CF (OC(F)(F)C#CF) from CHOF_G4
+OC(O)(F)C(F)(F)F (OC(O)(F)C(F)(F)F) from CHOF_G4
+CC(O)CF (CC(O)CF) from CHOF_G4
+OC(F)(F)C(F)OF (OC(F)(F)C(F)OF) from CHOF_G4
+OC1(F)C(F)C1F (OC1(F)C(F)C1F) from CHOF_G4
+OC1(F)CO1 (OC1(F)CO1) from CHOF_G4
+OC1OC1F (OC1OC1F) from CHOF_G4
+OC1C(F)=C1F (OC1C(F)DC1F) from CHOF_G4
+OC1CC1F (OC1CC1F) from CHOF_G4
+OC1(F)CC1 (OC1(F)CC1) from CHOF_G4
+OC1(F)C(F)(F)C1(F)F (OC1(F)C(F)(F)C1(F)F) from CHOF_G4
+OC1(F)OC1(F)F (OC1(F)OC1(F)F) from CHOF_G4
+OC1C(F)C1(F)F (OC1C(F)C1(F)F) from CHOF_G4
+OC1C(F)(F)C1(F)F (OC1C(F)(F)C1(F)F) from CHOF_G4
+OC1(F)C=C1 (OC1(F)CDC1) from CHOF_G4
+OC1(F)CC1(F)F (OC1(F)CC1(F)F) from CHOF_G4
+OC1OC1(F)F (OC1OC1(F)F) from CHOF_G4
+OC1(F)CC1F (OC1(F)CC1F) from CHOF_G4
+OC1(F)OC1F (OC1(F)OC1F) from CHOF_G4
+OC1(F)C(F)C1(F)F (OC1(F)C(F)C1(F)F) from CHOF_G4
+OC1C(F)C1F (OC1C(F)C1F) from CHOF_G4
+OC1(F)C(F)=C1F (OC1(F)C(F)DC1F) from CHOF_G4
+OC1C=C1F (OC1CDC1F) from CHOF_G4
+OC1CC1(F)F (OC1CC1(F)F) from CHOF_G4
+OC1(F)C=C1F (OC1(F)CDC1F) from CHOF_G4
+OC(O)(O)F (OC(O)(O)F) from CHOF_G4
+OCC(Cl)=CF (OCC(Cl)DCF) from CHOFCl_G4
+OCC(F)(Cl)OCl (OCC(F)(Cl)OCl) from CHOFCl_G4
+OC(F)(Cl)CCF (OC(F)(Cl)CCF) from CHOFCl_G4
+OCOC(F)Cl (OCOC(F)Cl) from CHOFCl_G4
+OC(Cl)OC(F)Cl (OC(Cl)OC(F)Cl) from CHOFCl_G4
+OC(Cl)C=C(F)Cl (OC(Cl)CDC(F)Cl) from CHOFCl_G4
+C=C(F)C(O)(Cl)Cl (CDC(F)C(O)(Cl)Cl) from CHOFCl_G4
+OC(O)(Cl)C(F)F (OC(O)(Cl)C(F)F) from CHOFCl_G4
+OC(O)(Cl)CF (OC(O)(Cl)CF) from CHOFCl_G4
+OC(F)(Cl)COF (OC(F)(Cl)COF) from CHOFCl_G4
+OC(F)(F)OCl (OC(F)(F)OCl) from CHOFCl_G4
+OC(F)(F)Cl (OC(F)(F)Cl) from CHOFCl_G4
+OCC(Cl)C(F)F (OCC(Cl)C(F)F) from CHOFCl_G4
+OC(F)(Cl)OCl (OC(F)(Cl)OCl) from CHOFCl_G4
+OC(F)C(O)(Cl)Cl (OC(F)C(O)(Cl)Cl) from CHOFCl_G4
+OC(O)C(F)Cl (OC(O)C(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)C=CF (OC(Cl)(Cl)CDCF) from CHOFCl_G4
+C=C(F)C(O)Cl (CDC(F)C(O)Cl) from CHOFCl_G4
+COC(O)(F)Cl (COC(O)(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)COF (OC(Cl)(Cl)COF) from CHOFCl_G4
+OC(Cl)COF (OC(Cl)COF) from CHOFCl_G4
+O=C(F)C(O)(F)Cl (ODC(F)C(O)(F)Cl) from CHOFCl_G4
+CC(F)(F)C(O)Cl (CC(F)(F)C(O)Cl) from CHOFCl_G4
+CC(O)(F)OCl (CC(O)(F)OCl) from CHOFCl_G4
+OC(Cl)CCF (OC(Cl)CCF) from CHOFCl_G4
+OC(Cl)(Cl)CCF (OC(Cl)(Cl)CCF) from CHOFCl_G4
+OC(F)(Cl)Cl (OC(F)(Cl)Cl) from CHOFCl_G4
+CC(O)C(F)(F)Cl (CC(O)C(F)(F)Cl) from CHOFCl_G4
+OC(F)C(O)(F)Cl (OC(F)C(O)(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)C#CF (OC(Cl)(Cl)C#CF) from CHOFCl_G4
+OCC(F)Cl (OCC(F)Cl) from CHOFCl_G4
+OC(F)C(Cl)OCl (OC(F)C(Cl)OCl) from CHOFCl_G4
+OC(CF)OCl (OC(CF)OCl) from CHOFCl_G4
+OC(Cl)(CF)OCl (OC(Cl)(CF)OCl) from CHOFCl_G4
+OC(Cl)C(F)(F)F (OC(Cl)C(F)(F)F) from CHOFCl_G4
+OC(F)(Cl)C(F)F (OC(F)(Cl)C(F)F) from CHOFCl_G4
+OC(Cl)CC(F)Cl (OC(Cl)CC(F)Cl) from CHOFCl_G4
+OCCC(F)Cl (OCCC(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)C(F)Cl (OC(Cl)(Cl)C(F)Cl) from CHOFCl_G4
+OC(F)C(O)Cl (OC(F)C(O)Cl) from CHOFCl_G4
+CC(O)(F)C(Cl)Cl (CC(O)(F)C(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(F)(Cl)Cl (OC(Cl)C(F)(Cl)Cl) from CHOFCl_G4
+OCC(Cl)CF (OCC(Cl)CF) from CHOFCl_G4
+OC(Cl)(Cl)C(F)F (OC(Cl)(Cl)C(F)F) from CHOFCl_G4
+OC(Cl)C(Cl)CF (OC(Cl)C(Cl)CF) from CHOFCl_G4
+OC(Cl)OF (OC(Cl)OF) from CHOFCl_G4
+OCC(F)(F)Cl (OCC(F)(F)Cl) from CHOFCl_G4
+OC(F)(CF)OCl (OC(F)(CF)OCl) from CHOFCl_G4
+OCC(F)(Cl)OF (OCC(F)(Cl)OF) from CHOFCl_G4
+OC(Cl)C(F)OF (OC(Cl)C(F)OF) from CHOFCl_G4
+OC(Cl)C=C(F)F (OC(Cl)CDC(F)F) from CHOFCl_G4
+CC(O)C(F)(Cl)Cl (CC(O)C(F)(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(Cl)OF (OC(Cl)C(Cl)OF) from CHOFCl_G4
+OCC(Cl)OF (OCC(Cl)OF) from CHOFCl_G4
+OC(Cl)CF (OC(Cl)CF) from CHOFCl_G4
+CC(O)(Cl)C(F)Cl (CC(O)(Cl)C(F)Cl) from CHOFCl_G4
+CCC(O)(F)Cl (CCC(O)(F)Cl) from CHOFCl_G4
+OCC(F)(Cl)CF (OCC(F)(Cl)CF) from CHOFCl_G4
+O=C(F)C(O)Cl (ODC(F)C(O)Cl) from CHOFCl_G4
+OC(Cl)C(F)CF (OC(Cl)C(F)CF) from CHOFCl_G4
+OC(Cl)C(O)(F)Cl (OC(Cl)C(O)(F)Cl) from CHOFCl_G4
+OC(F)(Cl)OF (OC(F)(Cl)OF) from CHOFCl_G4
+OC(OCl)C(F)F (OC(OCl)C(F)F) from CHOFCl_G4
+OCCC(F)(Cl)Cl (OCCC(F)(Cl)Cl) from CHOFCl_G4
+CC(O)C(F)Cl (CC(O)C(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)OF (OC(Cl)(Cl)OF) from CHOFCl_G4
+OCC(Cl)C(F)Cl (OCC(Cl)C(F)Cl) from CHOFCl_G4
+CC(O)(F)C(F)Cl (CC(O)(F)C(F)Cl) from CHOFCl_G4
+OC(F)Cl (OC(F)Cl) from CHOFCl_G4
+OCCC(F)(F)Cl (OCCC(F)(F)Cl) from CHOFCl_G4
+OC(F)(Cl)CF (OC(F)(Cl)CF) from CHOFCl_G4
+OC(Cl)C=CF (OC(Cl)CDCF) from CHOFCl_G4
+OC(O)(F)Cl (OC(O)(F)Cl) from CHOFCl_G4
+OC(Cl)C(F)=CF (OC(Cl)C(F)DCF) from CHOFCl_G4
+OC(Cl)(Cl)CF (OC(Cl)(Cl)CF) from CHOFCl_G4
+OC(O)(Cl)C(F)Cl (OC(O)(Cl)C(F)Cl) from CHOFCl_G4
+OC(O)C(F)(Cl)Cl (OC(O)C(F)(Cl)Cl) from CHOFCl_G4
+OC(Cl)CC(F)F (OC(Cl)CC(F)F) from CHOFCl_G4
+OC(F)(CF)CCl (OC(F)(CF)CCl) from CHOFCl_G4
+C=CC(O)(F)Cl (CDCC(O)(F)Cl) from CHOFCl_G4
+OC(OCl)C(F)Cl (OC(OCl)C(F)Cl) from CHOFCl_G4
+OC(CCl)C(F)F (OC(CCl)C(F)F) from CHOFCl_G4
+OCC(F)(Cl)Cl (OCC(F)(Cl)Cl) from CHOFCl_G4
+OCC(Cl)(Cl)OF (OCC(Cl)(Cl)OF) from CHOFCl_G4
+OC(Cl)C(F)Cl (OC(Cl)C(F)Cl) from CHOFCl_G4
+OCC(Cl)=C(F)F (OCC(Cl)DC(F)F) from CHOFCl_G4
+OCC(Cl)=C(F)Cl (OCC(Cl)DC(F)Cl) from CHOFCl_G4
+OC(Cl)(CF)CCl (OC(Cl)(CF)CCl) from CHOFCl_G4
+OC(CF)CCl (OC(CF)CCl) from CHOFCl_G4
+CC(F)(Cl)C(O)Cl (CC(F)(Cl)C(O)Cl) from CHOFCl_G4
+OCC=C(F)Cl (OCCDC(F)Cl) from CHOFCl_G4
+CC(F)C(O)(F)Cl (CC(F)C(O)(F)Cl) from CHOFCl_G4
+OCC(Cl)(Cl)CF (OCC(Cl)(Cl)CF) from CHOFCl_G4
+CC(O)(Cl)CF (CC(O)(Cl)CF) from CHOFCl_G4
+OC(Cl)C(Cl)=CF (OC(Cl)C(Cl)DCF) from CHOFCl_G4
+OC(O)C(F)(F)Cl (OC(O)C(F)(F)Cl) from CHOFCl_G4
+OC(F)(Cl)C=CF (OC(F)(Cl)CDCF) from CHOFCl_G4
+CC(O)(F)Cl (CC(O)(F)Cl) from CHOFCl_G4
+OC(CF)C(F)Cl (OC(CF)C(F)Cl) from CHOFCl_G4
+OC(Cl)(Cl)OCF (OC(Cl)(Cl)OCF) from CHOFCl_G4
+OC(Cl)OCF (OC(Cl)OCF) from CHOFCl_G4
+OC(F)(Cl)COCl (OC(F)(Cl)COCl) from CHOFCl_G4
+CC(F)C(O)(Cl)Cl (CC(F)C(O)(Cl)Cl) from CHOFCl_G4
+OC(Cl)C(F)F (OC(Cl)C(F)F) from CHOFCl_G4
+CC(O)(F)CCl (CC(O)(F)CCl) from CHOFCl_G4
+OC(Cl)C(F)(F)Cl (OC(Cl)C(F)(F)Cl) from CHOFCl_G4
+OC(F)(Cl)C#CF (OC(F)(Cl)C#CF) from CHOFCl_G4
+OCC(O)(F)Cl (OCC(O)(F)Cl) from CHOFCl_G4
+C=C(F)C(O)(F)Cl (CDC(F)C(O)(F)Cl) from CHOFCl_G4
+OC(F)C(F)OCl (OC(F)C(F)OCl) from CHOFCl_G4
+OC(CF)C(Cl)Cl (OC(CF)C(Cl)Cl) from CHOFCl_G4
+OC(F)COCl (OC(F)COCl) from CHOFCl_G4
+O=C(F)C(O)(Cl)Cl (ODC(F)C(O)(Cl)Cl) from CHOFCl_G4
+OC(F)(F)COCl (OC(F)(F)COCl) from CHOFCl_G4
+CC(O)(Cl)C(F)F (CC(O)(Cl)C(F)F) from CHOFCl_G4
+OC(Cl)OC(F)F (OC(Cl)OC(F)F) from CHOFCl_G4
+OCC(F)OCl (OCC(F)OCl) from CHOFCl_G4
+O=CC(O)(F)Cl (ODCC(O)(F)Cl) from CHOFCl_G4
+OC(CCl)C(F)Cl (OC(CCl)C(F)Cl) from CHOFCl_G4
+OC(Cl)C(O)(F)F (OC(Cl)C(O)(F)F) from CHOFCl_G4
+CC(F)C(O)Cl (CC(F)C(O)Cl) from CHOFCl_G4
+OC(F)(Cl)OCF (OC(F)(Cl)OCF) from CHOFCl_G4
+OCC(F)(F)OCl (OCC(F)(F)OCl) from CHOFCl_G4
+OC(Cl)C#CF (OC(Cl)C#CF) from CHOFCl_G4
+CC(F)(Cl)CO (CC(F)(Cl)CO) from CHOFCl_G4
+OC(F)OCl (OC(F)OCl) from CHOFCl_G4
+OC(Br)(Br)C(F)Cl (OC(Br)(Br)C(F)Cl) from CHOFClBr_G4
+OC(OBr)C(F)Cl (OC(OBr)C(F)Cl) from CHOFClBr_G4
+O=C(F)C(O)(Cl)Br (ODC(F)C(O)(Cl)Br) from CHOFClBr_G4
+OC(Br)C(F)Cl (OC(Br)C(F)Cl) from CHOFClBr_G4
+OC(O)(Br)C(F)Cl (OC(O)(Br)C(F)Cl) from CHOFClBr_G4
+OC(CF)C(Cl)Br (OC(CF)C(Cl)Br) from CHOFClBr_G4
+OCC(Br)C(F)Cl (OCC(Br)C(F)Cl) from CHOFClBr_G4
+OCC(Br)=C(F)Cl (OCC(Br)DC(F)Cl) from CHOFClBr_G4
+OC(Cl)(Br)C#CF (OC(Cl)(Br)C#CF) from CHOFClBr_G4
+CC(F)C(O)(Cl)Br (CC(F)C(O)(Cl)Br) from CHOFClBr_G4
+OC(F)(Cl)COBr (OC(F)(Cl)COBr) from CHOFClBr_G4
+OC(CBr)C(F)Cl (OC(CBr)C(F)Cl) from CHOFClBr_G4
+CC(F)(Cl)C(O)Br (CC(F)(Cl)C(O)Br) from CHOFClBr_G4
+OC(Cl)(Br)CCF (OC(Cl)(Br)CCF) from CHOFClBr_G4
+OC(Br)C(F)(Cl)Br (OC(Br)C(F)(Cl)Br) from CHOFClBr_G4
+OC(Cl)(CF)CBr (OC(Cl)(CF)CBr) from CHOFClBr_G4
+OC(Cl)(Br)C=CF (OC(Cl)(Br)CDCF) from CHOFClBr_G4
+OCC(F)(Cl)Br (OCC(F)(Cl)Br) from CHOFClBr_G4
+OC(Cl)(Br)COF (OC(Cl)(Br)COF) from CHOFClBr_G4
+OC(O)C(F)(Cl)Br (OC(O)C(F)(Cl)Br) from CHOFClBr_G4
+OC(Br)C(Cl)=CF (OC(Br)C(Cl)DCF) from CHOFClBr_G4
+OCCC(F)(Cl)Br (OCCC(F)(Cl)Br) from CHOFClBr_G4
+OC(Br)C(F)(F)Cl (OC(Br)C(F)(F)Cl) from CHOFClBr_G4
+CC(O)C(F)(Cl)Br (CC(O)C(F)(Cl)Br) from CHOFClBr_G4
+OC(Br)OC(F)Cl (OC(Br)OC(F)Cl) from CHOFClBr_G4
+CC(O)(F)C(Cl)Br (CC(O)(F)C(Cl)Br) from CHOFClBr_G4
+OC(Cl)(CF)OBr (OC(Cl)(CF)OBr) from CHOFClBr_G4
+OC(F)C(Cl)OBr (OC(F)C(Cl)OBr) from CHOFClBr_G4
+OC(Br)C(F)(Cl)Cl (OC(Br)C(F)(Cl)Cl) from CHOFClBr_G4
+OC(Cl)(Br)OCF (OC(Cl)(Br)OCF) from CHOFClBr_G4
+OC(F)(Cl)Br (OC(F)(Cl)Br) from CHOFClBr_G4
+OC(Br)CC(F)Cl (OC(Br)CC(F)Cl) from CHOFClBr_G4
+CC(O)(Br)C(F)Cl (CC(O)(Br)C(F)Cl) from CHOFClBr_G4
+OC(Br)C(O)(F)Cl (OC(Br)C(O)(F)Cl) from CHOFClBr_G4
+OCC(Cl)(Br)OF (OCC(Cl)(Br)OF) from CHOFClBr_G4
+OCOC(F)(Cl)Br (OCOC(F)(Cl)Br) from CHOFClBr_G4
+OC(F)C(O)(Cl)Br (OC(F)C(O)(Cl)Br) from CHOFClBr_G4
+OC(F)(Cl)OBr (OC(F)(Cl)OBr) from CHOFClBr_G4
+OCC(Cl)(Br)CF (OCC(Cl)(Br)CF) from CHOFClBr_G4
+OC(Br)C=C(F)Cl (OC(Br)CDC(F)Cl) from CHOFClBr_G4
+OC(Cl)(Br)OF (OC(Cl)(Br)OF) from CHOFClBr_G4
+OC(Cl)(Br)C(F)Cl (OC(Cl)(Br)C(F)Cl) from CHOFClBr_G4
+OC(Br)C(Cl)OF (OC(Br)C(Cl)OF) from CHOFClBr_G4
+OC(Cl)(Br)CF (OC(Cl)(Br)CF) from CHOFClBr_G4
+C=C(F)C(O)(Cl)Br (CDC(F)C(O)(Cl)Br) from CHOFClBr_G4
+OC(Cl)(Br)C(F)F (OC(Cl)(Br)C(F)F) from CHOFClBr_G4
+OCC(F)(Cl)OBr (OCC(F)(Cl)OBr) from CHOFClBr_G4
+OC(Br)C(Cl)CF (OC(Br)C(Cl)CF) from CHOFClBr_G4
+OC(F)C(F)(F)OBr (OC(F)C(F)(F)OBr) from CHOFBr_G4
+OC(F)OBr (OC(F)OBr) from CHOFBr_G4
+OC(CBr)C(F)(F)Br (OC(CBr)C(F)(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(F)(F)F (OC(Br)(Br)C(F)(F)F) from CHOFBr_G4
+OC(CF)C(Br)(Br)Br (OC(CF)C(Br)(Br)Br) from CHOFBr_G4
+OC(Br)C(F)(Br)CF (OC(Br)C(F)(Br)CF) from CHOFBr_G4
+OC(Br)OF (OC(Br)OF) from CHOFBr_G4
+OCC(Br)CF (OCC(Br)CF) from CHOFBr_G4
+OC(Br)C(Br)(Br)CF (OC(Br)C(Br)(Br)CF) from CHOFBr_G4
+OCC(F)(F)OBr (OCC(F)(F)OBr) from CHOFBr_G4
+OC(Br)C(F)=CF (OC(Br)C(F)DCF) from CHOFBr_G4
+OCC(F)(Br)OF (OCC(F)(Br)OF) from CHOFBr_G4
+OC(O)C(F)(Br)Br (OC(O)C(F)(Br)Br) from CHOFBr_G4
+OC(Br)(Br)OC(F)Br (OC(Br)(Br)OC(F)Br) from CHOFBr_G4
+CC(F)C(O)Br (CC(F)C(O)Br) from CHOFBr_G4
+OC(Br)(OBr)C(F)F (OC(Br)(OBr)C(F)F) from CHOFBr_G4
+O=CC(O)(F)Br (ODCC(O)(F)Br) from CHOFBr_G4
+OCC(F)OBr (OCC(F)OBr) from CHOFBr_G4
+OC(F)(F)COBr (OC(F)(F)COBr) from CHOFBr_G4
+OC(OBr)C(F)F (OC(OBr)C(F)F) from CHOFBr_G4
+OC(Br)CF (OC(Br)CF) from CHOFBr_G4
+OCC(Br)OF (OCC(Br)OF) from CHOFBr_G4
+OC(O)(Br)C(F)(F)F (OC(O)(Br)C(F)(F)F) from CHOFBr_G4
+OC(Br)C(F)(Br)OF (OC(Br)C(F)(Br)OF) from CHOFBr_G4
+OC(CBr)C(F)(Br)Br (OC(CBr)C(F)(Br)Br) from CHOFBr_G4
+OC(Br)C(Br)(Br)OF (OC(Br)C(Br)(Br)OF) from CHOFBr_G4
+OC(O)(Br)C(F)(F)Br (OC(O)(Br)C(F)(F)Br) from CHOFBr_G4
+OCC(Br)=C(F)F (OCC(Br)DC(F)F) from CHOFBr_G4
+OC(F)(OBr)C(F)F (OC(F)(OBr)C(F)F) from CHOFBr_G4
+OC(Br)C(Br)=CF (OC(Br)C(Br)DCF) from CHOFBr_G4
+OCC(F)(Br)CF (OCC(F)(Br)CF) from CHOFBr_G4
+OCCC(F)(Br)Br (OCCC(F)(Br)Br) from CHOFBr_G4
+OC(F)COBr (OC(F)COBr) from CHOFBr_G4
+OC(Br)C=C(F)Br (OC(Br)CDC(F)Br) from CHOFBr_G4
+OC(Br)C(O)(F)F (OC(Br)C(O)(F)F) from CHOFBr_G4
+OCOC(F)(F)Br (OCOC(F)(F)Br) from CHOFBr_G4
+OC(Br)(CF)C(Br)Br (OC(Br)(CF)C(Br)Br) from CHOFBr_G4
+OC(F)C(F)OBr (OC(F)C(F)OBr) from CHOFBr_G4
+OC(F)(Br)CC(F)F (OC(F)(Br)CC(F)F) from CHOFBr_G4
+OC(Br)(Br)C(F)(F)Br (OC(Br)(Br)C(F)(F)Br) from CHOFBr_G4
+OC(Br)C(F)(Br)Br (OC(Br)C(F)(Br)Br) from CHOFBr_G4
+OC(Br)(CBr)C(F)F (OC(Br)(CBr)C(F)F) from CHOFBr_G4
+C=C(F)C(O)(F)Br (CDC(F)C(O)(F)Br) from CHOFBr_G4
+OCC(O)(F)Br (OCC(O)(F)Br) from CHOFBr_G4
+OC(Br)(Br)OCF (OC(Br)(Br)OCF) from CHOFBr_G4
+OC(F)(F)C(F)OBr (OC(F)(F)C(F)OBr) from CHOFBr_G4
+OC(Br)CC(F)F (OC(Br)CC(F)F) from CHOFBr_G4
+CC(F)(F)C(O)(Br)Br (CC(F)(F)C(O)(Br)Br) from CHOFBr_G4
+OCC(F)(Br)Br (OCC(F)(Br)Br) from CHOFBr_G4
+OC(CBr)C(F)F (OC(CBr)C(F)F) from CHOFBr_G4
+OC(Br)(Br)C(F)(Br)Br (OC(Br)(Br)C(F)(Br)Br) from CHOFBr_G4
+OC(Br)(CF)OBr (OC(Br)(CF)OBr) from CHOFBr_G4
+OC(Br)(Br)CC(F)F (OC(Br)(Br)CC(F)F) from CHOFBr_G4
+OCC(Br)C(F)(F)F (OCC(Br)C(F)(F)F) from CHOFBr_G4
+OCC(Br)C(F)(F)Br (OCC(Br)C(F)(F)Br) from CHOFBr_G4
+OC(F)(CF)C(F)Br (OC(F)(CF)C(F)Br) from CHOFBr_G4
+CC(O)(F)CBr (CC(O)(F)CBr) from CHOFBr_G4
+OC(Br)C(O)(F)Br (OC(Br)C(O)(F)Br) from CHOFBr_G4
+OC(F)(CBr)C(F)F (OC(F)(CBr)C(F)F) from CHOFBr_G4
+OC(Br)OC(F)(F)Br (OC(Br)OC(F)(F)Br) from CHOFBr_G4
+CC(O)(Br)C(F)Br (CC(O)(Br)C(F)Br) from CHOFBr_G4
+OC(Br)CC(F)Br (OC(Br)CC(F)Br) from CHOFBr_G4
+OC(F)(CF)C(Br)Br (OC(F)(CF)C(Br)Br) from CHOFBr_G4
+OC(CF)C(F)Br (OC(CF)C(F)Br) from CHOFBr_G4
+CC(O)(F)Br (CC(O)(F)Br) from CHOFBr_G4
+OC(F)(Br)COBr (OC(F)(Br)COBr) from CHOFBr_G4
+OC(Br)(Br)C(F)F (OC(Br)(Br)C(F)F) from CHOFBr_G4
+OC(C(F)Br)C(Br)Br (OC(C(F)Br)C(Br)Br) from CHOFBr_G4
+OC(Br)(Br)OC(F)F (OC(Br)(Br)OC(F)F) from CHOFBr_G4
+OC(O)C(F)(F)Br (OC(O)C(F)(F)Br) from CHOFBr_G4
+CC(O)(F)C(F)(Br)Br (CC(O)(F)C(F)(Br)Br) from CHOFBr_G4
+OC(CF)C(Br)Br (OC(CF)C(Br)Br) from CHOFBr_G4
+CC(F)C(O)(F)Br (CC(F)C(O)(F)Br) from CHOFBr_G4
+OC(Br)(Br)CF (OC(Br)(Br)CF) from CHOFBr_G4
+OCC=C(F)Br (OCCDC(F)Br) from CHOFBr_G4
+OC(Br)C(F)C(F)F (OC(Br)C(F)C(F)F) from CHOFBr_G4
+OC(CF)C(F)(F)Br (OC(CF)C(F)(F)Br) from CHOFBr_G4
+OC(Br)CCF (OC(Br)CCF) from CHOFBr_G4
+OC(C(F)F)C(Br)Br (OC(C(F)F)C(Br)Br) from CHOFBr_G4
+OC(Br)C(Br)=C(F)Br (OC(Br)C(Br)DC(F)Br) from CHOFBr_G4
+OCC(Br)C(F)(Br)Br (OCC(Br)C(F)(Br)Br) from CHOFBr_G4
+OC(F)(Br)OC(F)F (OC(F)(Br)OC(F)F) from CHOFBr_G4
+OC(CF)CBr (OC(CF)CBr) from CHOFBr_G4
+OC(Br)(Br)OF (OC(Br)(Br)OF) from CHOFBr_G4
+OC(Br)COF (OC(Br)COF) from CHOFBr_G4
+OC(Br)(Br)CC(F)Br (OC(Br)(Br)CC(F)Br) from CHOFBr_G4
+CC(F)C(O)(Br)Br (CC(F)C(O)(Br)Br) from CHOFBr_G4
+OC(Br)OC(F)F (OC(Br)OC(F)F) from CHOFBr_G4
+OC(Br)C(F)F (OC(Br)C(F)F) from CHOFBr_G4
+C=CC(O)(F)Br (CDCC(O)(F)Br) from CHOFBr_G4
+CC(O)(Br)C(F)(F)F (CC(O)(Br)C(F)(F)F) from CHOFBr_G4
+OC(F)(CF)CBr (OC(F)(CF)CBr) from CHOFBr_G4
+OC(C(F)F)C(F)Br (OC(C(F)F)C(F)Br) from CHOFBr_G4
+OC(F)C(Br)(Br)OBr (OC(F)C(Br)(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)C(F)=CF (OC(Br)(Br)C(F)DCF) from CHOFBr_G4
+OC(Br)CC(F)(F)Br (OC(Br)CC(F)(F)Br) from CHOFBr_G4
+OCC(Br)(Br)CF (OCC(Br)(Br)CF) from CHOFBr_G4
+OC(O)(F)Br (OC(O)(F)Br) from CHOFBr_G4
+OC(F)(Br)COF (OC(F)(Br)COF) from CHOFBr_G4
+OC(Br)OC(F)Br (OC(Br)OC(F)Br) from CHOFBr_G4
+OCCC(F)(F)Br (OCCC(F)(F)Br) from CHOFBr_G4
+OC(F)Br (OC(F)Br) from CHOFBr_G4
+OC(Br)C(F)=C(F)F (OC(Br)C(F)DC(F)F) from CHOFBr_G4
+OC(F)(Br)C(F)=CF (OC(F)(Br)C(F)DCF) from CHOFBr_G4
+OC(O)(Br)CF (OC(O)(Br)CF) from CHOFBr_G4
+CC(O)(F)C(F)Br (CC(O)(F)C(F)Br) from CHOFBr_G4
+OCC(Br)=CF (OCC(Br)DCF) from CHOFBr_G4
+CC(O)(Br)C(F)F (CC(O)(Br)C(F)F) from CHOFBr_G4
+CC(O)C(F)Br (CC(O)C(F)Br) from CHOFBr_G4
+OCC(Br)(Br)OF (OCC(Br)(Br)OF) from CHOFBr_G4
+OC(F)(Br)CCF (OC(F)(Br)CCF) from CHOFBr_G4
+OCC(F)(Br)C(F)F (OCC(F)(Br)C(F)F) from CHOFBr_G4
+OC(Br)CC(F)(Br)Br (OC(Br)CC(F)(Br)Br) from CHOFBr_G4
+O=C(F)C(O)(Br)Br (ODC(F)C(O)(Br)Br) from CHOFBr_G4
+OC(Br)C(Br)=C(F)F (OC(Br)C(Br)DC(F)F) from CHOFBr_G4
+OC(F)(Br)OCF (OC(F)(Br)OCF) from CHOFBr_G4
+OCC(Br)(Br)C(F)Br (OCC(Br)(Br)C(F)Br) from CHOFBr_G4
+OC(Br)C#CF (OC(Br)C#CF) from CHOFBr_G4
+OCC(F)(Br)OBr (OCC(F)(Br)OBr) from CHOFBr_G4
+O=C(F)C(O)Br (ODC(F)C(O)Br) from CHOFBr_G4
+OC(Br)C(F)(F)F (OC(Br)C(F)(F)F) from CHOFBr_G4
+OC(Br)C(F)(F)Br (OC(Br)C(F)(F)Br) from CHOFBr_G4
+OC(O)(Br)C(F)F (OC(O)(Br)C(F)F) from CHOFBr_G4
+OC(F)(Br)C(Br)OBr (OC(F)(Br)C(Br)OBr) from CHOFBr_G4
+CCC(O)(F)Br (CCC(O)(F)Br) from CHOFBr_G4
+OC(Br)(Br)C=CF (OC(Br)(Br)CDCF) from CHOFBr_G4
+OC(Br)(OBr)C(F)Br (OC(Br)(OBr)C(F)Br) from CHOFBr_G4
+OC(Br)(Br)C=C(F)F (OC(Br)(Br)CDC(F)F) from CHOFBr_G4
+OC(Br)C(Br)OF (OC(Br)C(Br)OF) from CHOFBr_G4
+OC(F)(Br)C=C(F)F (OC(F)(Br)CDC(F)F) from CHOFBr_G4
+OC(Br)OC(F)(F)F (OC(Br)OC(F)(F)F) from CHOFBr_G4
+OC(OBr)C(F)(F)F (OC(OBr)C(F)(F)F) from CHOFBr_G4
+OC(O)(Br)C(F)(Br)Br (OC(O)(Br)C(F)(Br)Br) from CHOFBr_G4
+C=C(F)C(O)(Br)Br (CDC(F)C(O)(Br)Br) from CHOFBr_G4
+OC(F)(CF)OBr (OC(F)(CF)OBr) from CHOFBr_G4
+OCC(F)(F)Br (OCC(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)CO (CC(F)(Br)CO) from CHOFBr_G4
+OC(Br)(Br)C(Br)=CF (OC(Br)(Br)C(Br)DCF) from CHOFBr_G4
+OC(Br)C(Br)CF (OC(Br)C(Br)CF) from CHOFBr_G4
+OC(F)(Br)C(F)(F)F (OC(F)(Br)C(F)(F)F) from CHOFBr_G4
+OC(F)C(O)Br (OC(F)C(O)Br) from CHOFBr_G4
+OC(F)(F)C(O)(F)Br (OC(F)(F)C(O)(F)Br) from CHOFBr_G4
+OCCC(F)Br (OCCC(F)Br) from CHOFBr_G4
+OC(F)(F)C(Br)OBr (OC(F)(F)C(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)C=C(F)Br (OC(Br)(Br)CDC(F)Br) from CHOFBr_G4
+OC(Br)C(F)(F)CF (OC(Br)C(F)(F)CF) from CHOFBr_G4
+OC(CF)OBr (OC(CF)OBr) from CHOFBr_G4
+OC(F)(Br)C#CF (OC(F)(Br)C#CF) from CHOFBr_G4
+OC(Br)C(Br)C(F)Br (OC(Br)C(Br)C(F)Br) from CHOFBr_G4
+OC(Br)C(Br)C(F)F (OC(Br)C(Br)C(F)F) from CHOFBr_G4
+OC(F)(Br)OBr (OC(F)(Br)OBr) from CHOFBr_G4
+OCC(F)Br (OCC(F)Br) from CHOFBr_G4
+OCOC(F)(Br)Br (OCOC(F)(Br)Br) from CHOFBr_G4
+OCC(Br)C(F)F (OCC(Br)C(F)F) from CHOFBr_G4
+OC(Br)OCF (OC(Br)OCF) from CHOFBr_G4
+OC(Br)CC(F)(F)F (OC(Br)CC(F)(F)F) from CHOFBr_G4
+OC(OBr)C(F)(F)Br (OC(OBr)C(F)(F)Br) from CHOFBr_G4
+OC(F)(Br)C(O)(Br)Br (OC(F)(Br)C(O)(Br)Br) from CHOFBr_G4
+OC(CBr)C(F)Br (OC(CBr)C(F)Br) from CHOFBr_G4
+OC(Br)C(F)(F)OF (OC(Br)C(F)(F)OF) from CHOFBr_G4
+OC(F)C(O)(F)Br (OC(F)C(O)(F)Br) from CHOFBr_G4
+OC(CF)C(F)(Br)Br (OC(CF)C(F)(Br)Br) from CHOFBr_G4
+CC(O)C(F)(F)Br (CC(O)C(F)(F)Br) from CHOFBr_G4
+OC(F)C(O)(Br)Br (OC(F)C(O)(Br)Br) from CHOFBr_G4
+OC(Br)(Br)COF (OC(Br)(Br)COF) from CHOFBr_G4
+OC(F)(Br)C=CF (OC(F)(Br)CDCF) from CHOFBr_G4
+CC(O)(F)C(Br)Br (CC(O)(F)C(Br)Br) from CHOFBr_G4
+OC(CBr)C(F)(F)F (OC(CBr)C(F)(F)F) from CHOFBr_G4
+CC(O)(F)C(Br)(Br)Br (CC(O)(F)C(Br)(Br)Br) from CHOFBr_G4
+OC(F)(Br)C(F)CF (OC(F)(Br)C(F)CF) from CHOFBr_G4
+OC(Br)(Br)C(F)OF (OC(Br)(Br)C(F)OF) from CHOFBr_G4
+OC(Br)(CF)CBr (OC(Br)(CF)CBr) from CHOFBr_G4
+CC(O)(F)OBr (CC(O)(F)OBr) from CHOFBr_G4
+CC(F)(F)C(O)Br (CC(F)(F)C(O)Br) from CHOFBr_G4
+OC(Br)C(F)CF (OC(Br)C(F)CF) from CHOFBr_G4
+OCC(Br)=C(F)Br (OCC(Br)DC(F)Br) from CHOFBr_G4
+O=C(F)C(O)(F)Br (ODC(F)C(O)(F)Br) from CHOFBr_G4
+OC(F)(Br)C(F)F (OC(F)(Br)C(F)F) from CHOFBr_G4
+OCC(Br)C(F)Br (OCC(Br)C(F)Br) from CHOFBr_G4
+CC(O)(Br)C(F)(Br)Br (CC(O)(Br)C(F)(Br)Br) from CHOFBr_G4
+OC(Br)(Br)CCF (OC(Br)(Br)CCF) from CHOFBr_G4
+OC(Br)OC(F)(Br)Br (OC(Br)OC(F)(Br)Br) from CHOFBr_G4
+OC(F)(F)C(O)(Br)Br (OC(F)(F)C(O)(Br)Br) from CHOFBr_G4
+C=C(F)C(O)Br (CDC(F)C(O)Br) from CHOFBr_G4
+COC(O)(F)Br (COC(O)(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(F)CF (OC(Br)(Br)C(F)CF) from CHOFBr_G4
+OC(O)C(F)Br (OC(O)C(F)Br) from CHOFBr_G4
+CC(F)(F)C(O)(F)Br (CC(F)(F)C(O)(F)Br) from CHOFBr_G4
+OC(F)(Br)C(F)OF (OC(F)(Br)C(F)OF) from CHOFBr_G4
+OC(Br)(CBr)C(F)Br (OC(Br)(CBr)C(F)Br) from CHOFBr_G4
+OC(F)(Br)Br (OC(F)(Br)Br) from CHOFBr_G4
+OC(F)C(Br)OBr (OC(F)C(Br)OBr) from CHOFBr_G4
+OC(Br)C(F)OF (OC(Br)C(F)OF) from CHOFBr_G4
+OC(O)(Br)C(F)Br (OC(O)(Br)C(F)Br) from CHOFBr_G4
+CC(O)(Br)CF (CC(O)(Br)CF) from CHOFBr_G4
+OC(F)(F)Br (OC(F)(F)Br) from CHOFBr_G4
+OC(Br)C(F)Br (OC(Br)C(F)Br) from CHOFBr_G4
+OC(F)(F)OBr (OC(F)(F)OBr) from CHOFBr_G4
+OC(F)(Br)OF (OC(F)(Br)OF) from CHOFBr_G4
+OC(Br)C=C(F)F (OC(Br)CDC(F)F) from CHOFBr_G4
+OC(Br)(Br)C#CF (OC(Br)(Br)C#CF) from CHOFBr_G4
+OC(OBr)C(F)Br (OC(OBr)C(F)Br) from CHOFBr_G4
+CC(O)C(F)(Br)Br (CC(O)C(F)(Br)Br) from CHOFBr_G4
+OC(OBr)C(F)(Br)Br (OC(OBr)C(F)(Br)Br) from CHOFBr_G4
+CC(O)(F)C(F)(F)Br (CC(O)(F)C(F)(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(Br)OF (OC(Br)(Br)C(Br)OF) from CHOFBr_G4
+OC(Br)C=CF (OC(Br)CDCF) from CHOFBr_G4
+OCC(Br)(Br)C(F)F (OCC(Br)(Br)C(F)F) from CHOFBr_G4
+CC(F)(Br)C(O)(Br)Br (CC(F)(Br)C(O)(Br)Br) from CHOFBr_G4
+OC(F)(Br)CF (OC(F)(Br)CF) from CHOFBr_G4
+OCOC(F)Br (OCOC(F)Br) from CHOFBr_G4
+OC(Br)(Br)C(F)Br (OC(Br)(Br)C(F)Br) from CHOFBr_G4
+OC(F)C(F)(Br)OBr (OC(F)C(F)(Br)OBr) from CHOFBr_G4
+OC(Br)(Br)C(Br)CF (OC(Br)(Br)C(Br)CF) from CHOFBr_G4
+CC(O)(Br)C(F)(F)Br (CC(O)(Br)C(F)(F)Br) from CHOFBr_G4
+CC(F)(Br)C(O)Br (CC(F)(Br)C(O)Br) from CHOFBr_G4
 """,
 )
 
 entry(
-    index = 2307,
+    index = 2428,
     label = "O2s-CbH",
     group = 
 """
@@ -51371,7 +61744,7 @@ entry(
 )
 
 entry(
-    index = 2308,
+    index = 2429,
     label = "O2s-CSH",
     group = 
 """
@@ -51394,7 +61767,31 @@ entry(
 )
 
 entry(
-    index = 2309,
+    index = 2430,
+    label = "O2s-C2sH",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   C2s u0 {1,S}
+3   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([19.551,20.455,20.6378,21.2113,24.2299,26.1079,30.4307],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-158.429,'kJ/mol','+|-',18.9287),
+        S298 = (129.999,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O[C]F (O[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2431,
     label = "O2s-OsC",
     group = 
 """
@@ -51411,7 +61808,7 @@ entry(
 )
 
 entry(
-    index = 2310,
+    index = 2432,
     label = "O2s-OsCt",
     group = 
 """
@@ -51433,7 +61830,7 @@ entry(
 )
 
 entry(
-    index = 2311,
+    index = 2433,
     label = "O2s-OsCds",
     group = 
 """
@@ -51450,7 +61847,7 @@ entry(
 )
 
 entry(
-    index = 2312,
+    index = 2434,
     label = "O2s-O2s(Cds-O2d)",
     group = 
 """
@@ -51476,7 +61873,7 @@ O=C(C)OO    -84.1 (Klipp_Glar)        -86.5              -83.5
 )
 
 entry(
-    index = 2313,
+    index = 2435,
     label = "O2s-O2s(Cds-Cd)",
     group = 
 """
@@ -51499,7 +61896,7 @@ entry(
 )
 
 entry(
-    index = 2314,
+    index = 2436,
     label = "O2s-OsCs",
     group = 
 """
@@ -51521,7 +61918,7 @@ entry(
 )
 
 entry(
-    index = 2315,
+    index = 2437,
     label = "O2s-OsCb",
     group = 
 """
@@ -51538,7 +61935,7 @@ entry(
 )
 
 entry(
-    index = 2316,
+    index = 2438,
     label = "O2s-CC",
     group = 
 """
@@ -51555,7 +61952,7 @@ entry(
 )
 
 entry(
-    index = 2317,
+    index = 2439,
     label = "O2s-CtCt",
     group = 
 """
@@ -51572,7 +61969,7 @@ entry(
 )
 
 entry(
-    index = 2318,
+    index = 2440,
     label = "O2s-CtCds",
     group = 
 """
@@ -51589,7 +61986,7 @@ entry(
 )
 
 entry(
-    index = 2319,
+    index = 2441,
     label = "O2s-Ct(Cds-O2d)",
     group = 
 """
@@ -51607,7 +62004,7 @@ entry(
 )
 
 entry(
-    index = 2320,
+    index = 2442,
     label = "O2s-Ct(Cds-Cd)",
     group = 
 """
@@ -51625,7 +62022,7 @@ entry(
 )
 
 entry(
-    index = 2321,
+    index = 2443,
     label = "O2s-CtCs",
     group = 
 """
@@ -51633,16 +62030,27 @@ entry(
 2   Ct  u0 {1,S}
 3   Cs  u0 {1,S}
 """,
-    thermo = 'O2s-Cs(Cds-Cd)',
-    shortDesc = """""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.2766,15.054,15.471,16.8476,18.9132,20.356,21.3546],'J/(mol*K)','+|-',[2.67045,2.79152,2.61726,2.43021,2.107,1.87101,3.61635]),
+        H298 = (-96.9954,'kJ/mol','+|-',12.8906),
+        S298 = (28.9518,'J/(mol*K)','+|-',7.33859),
+    ),
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
+Previously contains O2s-Cs(Cds-Cd) as data. New data fitted from following species using Ridge regression
 
+C#COC(F)F (C#COC(F)F) from CHOF_G4
+FC#COC(F)(F)F (FC#COC(F)(F)F) from CHOF_G4
+FC#COCF (FC#COCF) from CHOF_G4
+C#COC(F)(F)F (C#COC(F)(F)F) from CHOF_G4
+FC#COC(F)F (FC#COC(F)F) from CHOF_G4
 """,
 )
 
 entry(
-    index = 2322,
+    index = 2444,
     label = "O2s-CtCb",
     group = 
 """
@@ -51659,7 +62067,7 @@ entry(
 )
 
 entry(
-    index = 2323,
+    index = 2445,
     label = "O2s-CdsCds",
     group = 
 """
@@ -51676,7 +62084,7 @@ entry(
 )
 
 entry(
-    index = 2324,
+    index = 2446,
     label = "O2s-(Cds-O2d)(Cds-O2d)",
     group = 
 """
@@ -51702,7 +62110,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2325,
+    index = 2447,
     label = "O2s-(Cds-O2d)(Cds-Cd)",
     group = 
 """
@@ -51728,7 +62136,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2326,
+    index = 2448,
     label = "O2s-(Cds-Cd)(Cds-Cd)",
     group = 
 """
@@ -51750,7 +62158,7 @@ entry(
 )
 
 entry(
-    index = 2327,
+    index = 2449,
     label = "O2s-CdsCs",
     group = 
 """
@@ -51767,7 +62175,7 @@ entry(
 )
 
 entry(
-    index = 2328,
+    index = 2450,
     label = "O2s-Cs(Cds-O2d)",
     group = 
 """
@@ -51792,7 +62200,835 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2329,
+    index = 2451,
+    label = "O2s-(F1sF1s)(O2d)COCs",
+    group = 
+"""
+1   Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {3,S} {6,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.8009,9.78153,10.1928,12.0757,15.2495,17.2455,20.6594],'J/(mol*K)','+|-',[2.98861,3.1241,2.92908,2.71974,2.35803,2.09393,4.0472]),
+        H298 = (-153.511,'kJ/mol','+|-',14.4264),
+        S298 = (40.6684,'J/(mol*K)','+|-',8.21291),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC1(F)F (PF2lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)F (c_CF2OC_O) from PFCA_thermo
+O=C1OC1(F)F (ODC1OC1(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2452,
+    label = "O2s-(CsF1s)(O2d)COCs",
+    group = 
+"""
+1   Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {3,S} {6,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   Cs  u0 {1,S}
+6   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.0913,28.9645,31.3741,33.2321,35.2618,36.034,36.467],'J/(mol*K)','+|-',[0.764663,0.799329,0.74943,0.695871,0.603323,0.53575,1.03551]),
+        H298 = (-193.326,'kJ/mol','+|-',3.69113),
+        S298 = (3.96019,'J/(mol*K)','+|-',2.10135),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC1(F)C(F)(F)F (PF3lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)F (PF4lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (PF5lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF6lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF7lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF8lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF9lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF10lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF11lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF12lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF13lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF14lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF15lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (PF16lactone) from NCSU_C2_C8_PFAS
+O=C1OC1(F)C(F)(F)F (CF3_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)F (C2F5_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)F (C3F7_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C4F9_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C5F11_c_FCOC_O) from PFCA_thermo
+O=C1OC1(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F (C6F13_c_FCOC_O) from PFCA_thermo
+""",
+)
+
+entry(
+    index = 2453,
+    label = "O2s-(F1sO2d)(HHH)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,S} {8,D}
+3 * O2s u0 {1,S} {2,S}
+4   H   u0 {1,S}
+5   H   u0 {1,S}
+6   H   u0 {1,S}
+7   F1s u0 {2,S}
+8   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.9127,14.1299,14.6942,16.5523,20.3997,21.9192,21.9812],'J/(mol*K)','+|-',[4.54701,4.75316,4.45643,4.13794,3.58762,3.1858,6.15761]),
+        H298 = (-132.646,'kJ/mol','+|-',21.9491),
+        S298 = (32.0629,'J/(mol*K)','+|-',12.4955),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+COC(=O)F (COC(DO)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2454,
+    label = "O2s-(F1sF1sH)(O2dH)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,D} {8,S}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   H   u0 {1,S}
+7   O2d u0 {2,D}
+8   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([13.0964,14.3882,14.9647,15.4499,17.0122,18.6322,19.9036],'J/(mol*K)','+|-',[3.949,4.12803,3.87033,3.59373,3.11578,2.76681,5.34777]),
+        H298 = (-91.4484,'kJ/mol','+|-',19.0624),
+        S298 = (41.8113,'J/(mol*K)','+|-',10.8521),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)F (ODCOC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2455,
+    label = "O2s-(F1sHH)(F1sO2d)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,S} {8,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+6   H   u0 {1,S}
+7   F1s u0 {2,S}
+8   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.8576,13.879,14.4696,16.0001,18.4996,19.3974,21.4196],'J/(mol*K)','+|-',[4.54655,4.75267,4.45598,4.13752,3.58725,3.18547,6.15698]),
+        H298 = (-119.025,'kJ/mol','+|-',21.9468),
+        S298 = (35.875,'J/(mol*K)','+|-',12.4942),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)OCF (ODC(F)OCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2456,
+    label = "O2s-(F1sF1sF1s)(F1sO2d)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,S} {8,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   F1s u0 {1,S}
+7   F1s u0 {2,S}
+8   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.9797,22.8421,21.2546,20.9206,21.6098,22.1561,21.1959],'J/(mol*K)','+|-',[4.55839,4.76505,4.46758,4.1483,3.59659,3.19377,6.17301]),
+        H298 = (-105.524,'kJ/mol','+|-',22.004),
+        S298 = (30.3438,'J/(mol*K)','+|-',12.5268),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)OC(F)(F)F (ODC(F)OC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2457,
+    label = "O2s-(F1sF1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,D} {8,S}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   F1s u0 {1,S}
+7   O2d u0 {2,D}
+8   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([23.9378,22.1558,19.6807,17.5312,15.7117,15.6454,15.9095],'J/(mol*K)','+|-',[3.95643,4.1358,3.87762,3.60049,3.12165,2.77202,5.35784]),
+        H298 = (-85.0615,'kJ/mol','+|-',19.0982),
+        S298 = (43.2988,'J/(mol*K)','+|-',10.8725),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(F)F (ODCOC(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2458,
+    label = "O2s-(F1sF1sH)(F1sO2d)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,S} {8,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   H   u0 {1,S}
+7   F1s u0 {2,S}
+8   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([12.5598,14.9824,16.5226,18.1071,21.3146,23.2949,23.8777],'J/(mol*K)','+|-',[4.55194,4.7583,4.46126,4.14243,3.5915,3.18925,6.16428]),
+        H298 = (-114.631,'kJ/mol','+|-',21.9728),
+        S298 = (31.7512,'J/(mol*K)','+|-',12.509),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(F)OC(F)F (ODC(F)OC(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2459,
+    label = "O2s-(F1sHH)(O2dH)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,D} {8,S}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+6   H   u0 {1,S}
+7   O2d u0 {2,D}
+8   H   u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.877,13.9169,12.779,12.2477,12.7106,14.2205,16.7476],'J/(mol*K)','+|-',[3.94278,4.12153,3.86424,3.58807,3.11088,2.76245,5.33935]),
+        H298 = (-91.9472,'kJ/mol','+|-',19.0324),
+        S298 = (48.5772,'J/(mol*K)','+|-',10.835),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COCF (ODCOCF) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2460,
+    label = "O2s-(F1sH)(O2d)COCs",
+    group = 
+"""
+1   Cs  u0 {2,S} {3,S} {4,S} {5,S}
+2   CO  u0 {1,S} {3,S} {6,D}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   H   u0 {1,S}
+6   O2d u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.405,10.7084,11.626,13.1387,16.2246,18.5318,21.1966],'J/(mol*K)','+|-',[4.10783,4.29406,4.026,3.73827,3.2411,2.87809,5.56286]),
+        H298 = (-142.206,'kJ/mol','+|-',19.8291),
+        S298 = (37.6654,'J/(mol*K)','+|-',11.2886),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC1F (ODC1OC1F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2461,
+    label = "O2s-(CsF1sF1s)(CsO2d)COCs",
+    group = 
+"""
+1   Cs  u0 {3,S} {4,S} {5,S} {6,S}
+2   CO  u0 {3,S} {7,D} {8,S}
+3 * O2s u0 {1,S} {2,S}
+4   F1s u0 {1,S}
+5   F1s u0 {1,S}
+6   Cs  u0 {1,S}
+7   O2d u0 {2,D}
+8   Cs  u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([23.9574,22.0477,15.8645,11.8683,12.2212,13.1288,7.50808],'J/(mol*K)','+|-',[3.05389,3.19234,2.99305,2.77915,2.40954,2.13966,4.13561]),
+        H298 = (-176.601,'kJ/mol','+|-',14.7415),
+        S298 = (62.0314,'J/(mol*K)','+|-',8.3923),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C1OC(F)(F)C(F)(F)C(F)(F)C1(F)F (ODC1OC(F)(F)C(F)(F)C(F)(F)C1(F)F) from CHOF_G4
+O=C1OC(F)(F)C(F)(F)C1(F)C(F)(F)F (ODC1OC(F)(F)C(F)(F)C1(F)C(F)(F)F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2462,
+    label = "O2s-(Cl1sF1sH)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Cl1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([11.164,11.9138,13.0893,14.4487,16.7352,18.6784,19.9968],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-90.8197,'kJ/mol','+|-',18.9287),
+        S298 = (47.6569,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)Cl (ODCOC(F)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2463,
+    label = "O2s-(Cl1sO2d)(F1sF1sH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   Cl1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.1798,9.47849,10.9634,13.1377,16.6653,17.9786,20.2511],'J/(mol*K)','+|-',[3.949,4.12803,3.87033,3.59373,3.11578,2.76681,5.34777]),
+        H298 = (-97.3159,'kJ/mol','+|-',19.0624),
+        S298 = (42.2057,'J/(mol*K)','+|-',10.8521),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Cl)OC(F)F (ODC(Cl)OC(F)F) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2464,
+    label = "O2s-(Cl1sF1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Cl1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   F1s  u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.9776,22.05,20.1693,18.7962,17.1577,16.911,17.1132],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-81.7297,'kJ/mol','+|-',18.9287),
+        S298 = (46.6583,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(F)Cl (ODCOC(F)(F)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2465,
+    label = "O2s-(Cl1sF1sH)(Cl1sO2d)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   Cl1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   Cl1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.0906,9.04171,9.97501,11.7411,14.99,17.0448,19.4506],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-97.7079,'kJ/mol','+|-',18.9287),
+        S298 = (48.5177,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Cl)OC(F)Cl (ODC(Cl)OC(F)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2466,
+    label = "O2s-(Cl1sO2d)(F1sHH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   F1s  u0 {1,S}
+5   H    u0 {1,S}
+6   H    u0 {1,S}
+7   Cl1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.5273,12.7175,12.1332,12.1366,12.7104,14.4059,17.9519],'J/(mol*K)','+|-',[3.94278,4.12153,3.86424,3.58807,3.11088,2.76245,5.33935]),
+        H298 = (-101.417,'kJ/mol','+|-',19.0324),
+        S298 = (43.9537,'J/(mol*K)','+|-',10.835),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Cl)OCF (ODC(Cl)OCF) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2467,
+    label = "O2s-(Cl1sCl1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Cl1s u0 {1,S}
+5   Cl1s u0 {1,S}
+6   F1s  u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.3421,22.4955,20.5415,19.2501,17.534,17.101,16.9503],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-80.3775,'kJ/mol','+|-',18.9287),
+        S298 = (44.8003,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(Cl)Cl (ODCOC(F)(Cl)Cl) from CHOFCl_G4
+""",
+)
+
+entry(
+    index = 2468,
+    label = "O2s-(Br1sCl1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   Cl1s u0 {1,S}
+6   F1s  u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.6102,23.2926,21.7113,20.554,18.5714,17.7143,16.7527],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-79.9253,'kJ/mol','+|-',18.9287),
+        S298 = (50.5776,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(Cl)Br (ODCOC(F)(Cl)Br) from CHOFClBr_G4
+""",
+)
+
+entry(
+    index = 2469,
+    label = "O2s-(Br1sO2d)(Cl1sF1sH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   Cl1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.6726,9.52974,9.99773,11.1497,13.634,15.6615,18.7916],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-94.6733,'kJ/mol','+|-',18.9287),
+        S298 = (68.6595,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)Cl (ODC(Br)OC(F)Cl) from CHOFClBr_G4
+""",
+)
+
+entry(
+    index = 2470,
+    label = "O2s-(Br1sO2d)(F1sF1sF1s)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+6   F1s  u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([18.1301,18.4685,19.0561,18.8807,17.8209,18.1283,19.1662],'J/(mol*K)','+|-',[3.95643,4.1358,3.87762,3.60049,3.12165,2.77202,5.35784]),
+        H298 = (-86.5119,'kJ/mol','+|-',19.0982),
+        S298 = (51.536,'J/(mol*K)','+|-',10.8725),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)(F)F (ODC(Br)OC(F)(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2471,
+    label = "O2s-(Br1sBr1sF1s)(Br1sO2d)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   Br1s u0 {1,S}
+6   F1s  u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([16.136,15.6284,15.9802,16.938,18.7637,20.0765,20.6691],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-85.7381,'kJ/mol','+|-',18.9287),
+        S298 = (47.2426,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)(Br)Br (ODC(Br)OC(F)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2472,
+    label = "O2s-(Br1sBr1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   Br1s u0 {1,S}
+6   F1s  u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([24.5694,24.644,22.9712,20.8781,17.5822,16.7019,17.3373],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-80.6413,'kJ/mol','+|-',18.9287),
+        S298 = (39.8053,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(Br)Br (ODCOC(F)(Br)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2473,
+    label = "O2s-(Br1sF1sF1s)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   F1s  u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([22.8221,22.0061,20.2753,19.0256,17.4768,17.2231,17.0432],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-79.8251,'kJ/mol','+|-',18.9287),
+        S298 = (45.8827,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)(F)Br (ODCOC(F)(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2474,
+    label = "O2s-(Br1sO2d)(F1sHH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   F1s  u0 {1,S}
+5   H    u0 {1,S}
+6   H    u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.8978,12.7905,11.7451,11.3622,11.6943,13.038,17.1646],'J/(mol*K)','+|-',[3.94278,4.12153,3.86424,3.58807,3.11088,2.76245,5.33935]),
+        H298 = (-98.0418,'kJ/mol','+|-',19.0324),
+        S298 = (63.794,'J/(mol*K)','+|-',10.835),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OCF (ODC(Br)OCF) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2475,
+    label = "O2s-(Br1sF1sH)(Br1sO2d)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([9.68283,8.52932,9.16862,10.5443,13.6004,16.1161,18.6587],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-94.5626,'kJ/mol','+|-',18.9287),
+        S298 = (63.6593,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)Br (ODC(Br)OC(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2476,
+    label = "O2s-(Br1sF1sH)(O2dH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,D} {8,S}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   O2d  u0 {2,D}
+8   H    u0 {2,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.2985,13.154,13.0764,13.6949,15.6349,18.007,20.1525],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-90.456,'kJ/mol','+|-',18.9287),
+        S298 = (49.1312,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=COC(F)Br (ODCOC(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2477,
+    label = "O2s-(Br1sF1sF1s)(Br1sO2d)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   Br1s u0 {1,S}
+5   F1s  u0 {1,S}
+6   F1s  u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.2643,16.6184,17.9684,18.6246,18.4563,18.179,20.0852],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-83.2167,'kJ/mol','+|-',18.9287),
+        S298 = (54.0581,'J/(mol*K)','+|-',10.7761),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)(F)Br (ODC(Br)OC(F)(F)Br) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2478,
+    label = "O2s-(Br1sO2d)(F1sF1sH)COCs",
+    group = 
+"""
+1   Cs   u0 {3,S} {4,S} {5,S} {6,S}
+2   CO   u0 {3,S} {7,S} {8,D}
+3 * O2s  u0 {1,S} {2,S}
+4   F1s  u0 {1,S}
+5   F1s  u0 {1,S}
+6   H    u0 {1,S}
+7   Br1s u0 {2,S}
+8   O2d  u0 {2,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([10.7096,9.733,10.6672,12.2839,15.5053,17.0471,19.4925],'J/(mol*K)','+|-',[3.949,4.12803,3.87033,3.59373,3.11578,2.76681,5.34777]),
+        H298 = (-93.8211,'kJ/mol','+|-',19.0624),
+        S298 = (62.5439,'J/(mol*K)','+|-',10.8521),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=C(Br)OC(F)F (ODC(Br)OC(F)F) from CHOFBr_G4
+""",
+)
+
+entry(
+    index = 2479,
     label = "O2s-Cs(Cds-Cd)",
     group = 
 """
@@ -51817,7 +63053,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2330,
+    index = 2480,
     label = "O2s-CdsCb",
     group = 
 """
@@ -51834,7 +63070,7 @@ entry(
 )
 
 entry(
-    index = 2331,
+    index = 2481,
     label = "O2s-Cb(Cds-O2d)",
     group = 
 """
@@ -51852,7 +63088,7 @@ entry(
 )
 
 entry(
-    index = 2332,
+    index = 2482,
     label = "O2s-Cb(Cds-Cd)",
     group = 
 """
@@ -51870,7 +63106,7 @@ entry(
 )
 
 entry(
-    index = 2333,
+    index = 2483,
     label = "O2s-CsCs",
     group = 
 """
@@ -51894,7 +63130,7 @@ DOI: 10.1002/chem.201301381
 )
 
 entry(
-    index = 2334,
+    index = 2484,
     label = "O2s-CsCb",
     group = 
 """
@@ -51916,7 +63152,7 @@ entry(
 )
 
 entry(
-    index = 2335,
+    index = 2485,
     label = "O2s-CbCb",
     group = 
 """
@@ -51938,7 +63174,7 @@ entry(
 )
 
 entry(
-    index = 2336,
+    index = 2486,
     label = "O2s-Cs(Cds-S2d)",
     group = 
 """
@@ -51961,7 +63197,34 @@ entry(
 )
 
 entry(
-    index = 2337,
+    index = 2487,
+    label = "O2s-C2sCs",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   Cs  u0 {1,S}
+3   C2s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.5103,15.864,16.0791,16.6075,19.0306,20.0168,20.8243],'J/(mol*K)','+|-',[1.97338,2.06284,1.93407,1.79584,1.55701,1.38262,2.67237]),
+        H298 = (-82.7721,'kJ/mol','+|-',9.52576),
+        S298 = (39.7767,'J/(mol*K)','+|-',5.42298),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+F[C]OC(F)(F)F (F[C]OC(F)(F)F) from CHOF_G4
+F[C]OC(F)F (F[C]OC(F)F) from CHOF_G4
+F[C]OCF (F[C]OCF) from CHOF_G4
+CO[C]F (CO[C]F) from CHOF_G4
+""",
+)
+
+entry(
+    index = 2488,
     label = "O2s-CS",
     group = 
 """
@@ -51978,7 +63241,7 @@ entry(
 )
 
 entry(
-    index = 2338,
+    index = 2489,
     label = "O2s-CS2",
     group = 
 """
@@ -52000,7 +63263,7 @@ entry(
 )
 
 entry(
-    index = 2339,
+    index = 2490,
     label = "O2s-CS4",
     group = 
 """
@@ -52022,7 +63285,46 @@ entry(
 )
 
 entry(
-    index = 2340,
+    index = 2491,
+    label = "O2s-CsS4d",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   Cs  u0 {1,S}
+3   S4d u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.9578,25.6084,28.1398,29.7387,31.2754,32.0602,33.1153],'J/(mol*K)','+|-',[0.355124,0.371224,0.34805,0.323175,0.280195,0.248812,0.480912]),
+        H298 = (-139.961,'kJ/mol','+|-',1.71423),
+        S298 = (61.6149,'J/(mol*K)','+|-',0.975905),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(OS(=O)O)(F)F (PF1Sulfite) from NCSU_C2_C8_PFAS
+FC(C(F)(F)F)(OS(=O)O)F (PF2Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2492,
     label = "O2s-CS6",
     group = 
 """
@@ -52044,7 +63346,46 @@ entry(
 )
 
 entry(
-    index = 2341,
+    index = 2493,
+    label = "O2s-CsS6dd",
+    group = 
+"""
+1 * O2s  u0 {2,S} {3,S}
+2   Cs   u0 {1,S}
+3   S6dd u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([30.7115,33.9115,35.5186,36.6762,39.7817,41.1033,41.1459],'J/(mol*K)','+|-',[1.2343,1.29026,1.20971,1.12326,0.973869,0.864793,1.6715]),
+        H298 = (-222.388,'kJ/mol','+|-',5.95813),
+        S298 = (36.408,'J/(mol*K)','+|-',3.39194),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC1(F)OS1(=O)=O (PF1Sultone) from NCSU_C2_C8_PFAS
+FC(C1(F)OS1(=O)=O)(F)F (PF2Sultone) from NCSU_C2_C8_PFAS
+FC(C(C1(F)OS1(=O)=O)(F)F)(F)F (PF3Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F (PF4Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(C(F)(F)F)F (PF5Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF6Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF9Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF10Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF11Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF12Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF13Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sultone) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2494,
     label = "O2s-SH",
     group = 
 """
@@ -52061,7 +63402,7 @@ entry(
 )
 
 entry(
-    index = 2342,
+    index = 2495,
     label = "O2s-S_nonDeH",
     group = 
 """
@@ -52083,7 +63424,7 @@ entry(
 )
 
 entry(
-    index = 2343,
+    index = 2496,
     label = "O2s-S_DeH",
     group = 
 """
@@ -52105,7 +63446,86 @@ entry(
 )
 
 entry(
-    index = 2344,
+    index = 2497,
+    label = "O2s-S6ddH",
+    group = 
+"""
+1 * O2s  u0 {2,S} {3,S}
+2   S6dd u0 {1,S}
+3   H    u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([47.96,56.5891,63.1547,67.9318,73.3858,76.3814,80.4837],'J/(mol*K)','+|-',[1.5108,1.57929,1.48071,1.37488,1.19203,1.05852,2.04594]),
+        H298 = (-459.278,'kJ/mol','+|-',7.29284),
+        S298 = (174.467,'J/(mol*K)','+|-',4.15178),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OS(=O)(=O)F (FSO3H) from NCSU_C2_C8_PFAS
+FC(S(=O)(=O)O)(F)F (PF1Sacid) from NCSU_C2_C8_PFAS
+FC(S(=O)(=O)O)(C(F)(F)F)F (PF2Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F (PF3Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(C(F)(F)F)F (PF4Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF7Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF8Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF10Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF11Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF12Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF13Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sacid) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2498,
+    label = "O2s-S4dH",
+    group = 
+"""
+1 * O2s u0 {2,S} {3,S}
+2   S4d u0 {1,S}
+3   H   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.9578,25.6084,28.1398,29.7387,31.2754,32.0602,33.1153],'J/(mol*K)','+|-',[0.355124,0.371224,0.34805,0.323175,0.280195,0.248812,0.480912]),
+        H298 = (-139.961,'kJ/mol','+|-',1.71423),
+        S298 = (61.6149,'J/(mol*K)','+|-',0.975905),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(OS(=O)O)(F)F (PF1Sulfite) from NCSU_C2_C8_PFAS
+FC(C(F)(F)F)(OS(=O)O)F (PF2Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2499,
     label = "O2s-N",
     group = 
 """
@@ -52126,7 +63546,7 @@ entry(
 )
 
 entry(
-    index = 2345,
+    index = 2500,
     label = "O2s-N5tc",
     group = 
 """
@@ -52142,7 +63562,7 @@ entry(
 )
 
 entry(
-    index = 2346,
+    index = 2501,
     label = "O2s-N5tcH",
     group = 
 """
@@ -52166,7 +63586,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2347,
+    index = 2502,
     label = "O2s-HN",
     group = 
 """
@@ -52190,7 +63610,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 2348,
+    index = 2503,
     label = "O2s-HN5dc",
     group = 
 """
@@ -52214,7 +63634,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 2349,
+    index = 2504,
     label = "O2s-HN5sc",
     group = 
 """
@@ -52238,7 +63658,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 2350,
+    index = 2505,
     label = "O2s-HN3s",
     group = 
 """
@@ -52262,7 +63682,7 @@ CHON_G4 |         140
 )
 
 entry(
-    index = 2351,
+    index = 2506,
     label = "O2s-HN3d",
     group = 
 """
@@ -52286,7 +63706,7 @@ CHON_G4 |         53
 )
 
 entry(
-    index = 2352,
+    index = 2507,
     label = "O2s-NO",
     group = 
 """
@@ -52303,7 +63723,7 @@ entry(
 )
 
 entry(
-    index = 2353,
+    index = 2508,
     label = "O2s-OsN3d",
     group = 
 """
@@ -52328,7 +63748,7 @@ thermo_DFT_CCSDTF12_BAC |         2
 )
 
 entry(
-    index = 2354,
+    index = 2509,
     label = "O2s-ON",
     group = 
 """
@@ -52352,7 +63772,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2355,
+    index = 2510,
     label = "O2s-OsN3s",
     group = 
 """
@@ -52376,7 +63796,7 @@ CHON_G4 |         27
 )
 
 entry(
-    index = 2356,
+    index = 2511,
     label = "O2s-OsNH2",
     group = 
 """
@@ -52402,7 +63822,7 @@ CHON_G4 |         13
 )
 
 entry(
-    index = 2357,
+    index = 2512,
     label = "O2s-OsN5dc",
     group = 
 """
@@ -52427,7 +63847,7 @@ thermo_DFT_CCSDTF12_BAC |         3
 )
 
 entry(
-    index = 2358,
+    index = 2513,
     label = "O2s-CN",
     group = 
 """
@@ -52452,7 +63872,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2359,
+    index = 2514,
     label = "O2s-CsN3s",
     group = 
 """
@@ -52476,7 +63896,7 @@ CHON_G4 |         53
 )
 
 entry(
-    index = 2360,
+    index = 2515,
     label = "O2s-CsN3d",
     group = 
 """
@@ -52501,7 +63921,7 @@ NOx2018 |         1
 )
 
 entry(
-    index = 2361,
+    index = 2516,
     label = "O2s-CdN3d",
     group = 
 """
@@ -52525,7 +63945,7 @@ CHON_G4 |         5
 )
 
 entry(
-    index = 2362,
+    index = 2517,
     label = "O2s-CsN5dc",
     group = 
 """
@@ -52552,7 +63972,7 @@ CHON                    |         2
 )
 
 entry(
-    index = 2363,
+    index = 2518,
     label = "O2s-NN",
     group = 
 """
@@ -52577,7 +63997,7 @@ thermo_DFT_CCSDTF12_BAC |         2
 )
 
 entry(
-    index = 2364,
+    index = 2519,
     label = "O2s-N3sdN3sd",
     group = 
 """
@@ -52601,7 +64021,46 @@ CHON_G4 |         50
 )
 
 entry(
-    index = 2365,
+    index = 2520,
+    label = "O4tc",
+    group = 
+"""
+1 * O4tc u0
+""",
+    thermo = None,
+    shortDesc = """Dummy L3 group added by Hao-Wei Pang""",
+    longDesc = 
+"""
+Dummy L3 group added by Hao-Wei Pang during fitting groups from thermo libraries
+""",
+)
+
+entry(
+    index = 2521,
+    label = "O4tc-C2tc",
+    group = 
+"""
+1   C2tc u0 {2,T}
+2 * O4tc u0 {1,T}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([14.5715,14.6874,14.9054,15.2075,15.9469,16.5814,17.5858],'J/(mol*K)','+|-',[1.3864,1.44925,1.35878,1.26167,1.09387,0.971358,1.87747]),
+        H298 = (-55.267,'kJ/mol','+|-',6.69233),
+        S298 = (98.8209,'J/(mol*K)','+|-',3.80991),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+[C-]#[O+] (CO) from C1_C3_hydrofluorocarbons_NIST
+[C-]#[O+] (CO) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2522,
     label = "Si",
     group = 
 """
@@ -52616,7 +64075,7 @@ entry(
 )
 
 entry(
-    index = 2366,
+    index = 2523,
     label = "SiJ2(S)",
     group = 
 """
@@ -52631,7 +64090,7 @@ entry(
 )
 
 entry(
-    index = 2367,
+    index = 2524,
     label = "S",
     group = 
 """
@@ -52646,7 +64105,7 @@ entry(
 )
 
 entry(
-    index = 2368,
+    index = 2525,
     label = "Sc",
     group = 
 """
@@ -52666,7 +64125,7 @@ entry(
 )
 
 entry(
-    index = 2369,
+    index = 2526,
     label = "Sa(S)",
     group = 
 """
@@ -52687,7 +64146,7 @@ Singlet sulfur, thermo data copied from triplet sulfur, likely very incorrect (t
 )
 
 entry(
-    index = 2370,
+    index = 2527,
     label = "S2d",
     group = 
 """
@@ -52702,7 +64161,7 @@ entry(
 )
 
 entry(
-    index = 2371,
+    index = 2528,
     label = "S2d-C",
     group = 
 """
@@ -52723,7 +64182,7 @@ entry(
 )
 
 entry(
-    index = 2372,
+    index = 2529,
     label = "S2d-S",
     group = 
 """
@@ -52744,7 +64203,7 @@ entry(
 )
 
 entry(
-    index = 2373,
+    index = 2530,
     label = "S2d-O",
     group = 
 """
@@ -52765,7 +64224,30 @@ entry(
 )
 
 entry(
-    index = 2374,
+    index = 2531,
+    label = "S2d-O2d",
+    group = 
+"""
+1   O2d u0 {2,D}
+2 * S2d u0 {1,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([15.0991,15.7454,16.3945,16.9439,17.6124,18.0487,18.7602],'J/(mol*K)','+|-',[1.96066,2.04955,1.9216,1.78427,1.54697,1.37371,2.65514]),
+        H298 = (2.37788,'kJ/mol','+|-',9.46438),
+        S298 = (110.963,'J/(mol*K)','+|-',5.38803),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+O=S (SO) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2532,
     label = "S2s",
     group = 
 """
@@ -52780,7 +64262,7 @@ entry(
 )
 
 entry(
-    index = 2375,
+    index = 2533,
     label = "S2s-HH",
     group = 
 """
@@ -52802,7 +64284,7 @@ entry(
 )
 
 entry(
-    index = 2376,
+    index = 2534,
     label = "S2s-CH",
     group = 
 """
@@ -52819,7 +64301,7 @@ entry(
 )
 
 entry(
-    index = 2377,
+    index = 2535,
     label = "S2s-CsH",
     group = 
 """
@@ -52841,7 +64323,7 @@ entry(
 )
 
 entry(
-    index = 2378,
+    index = 2536,
     label = "S2s-CdH",
     group = 
 """
@@ -52863,7 +64345,7 @@ entry(
 )
 
 entry(
-    index = 2379,
+    index = 2537,
     label = "S2s-CtH",
     group = 
 """
@@ -52885,7 +64367,7 @@ entry(
 )
 
 entry(
-    index = 2380,
+    index = 2538,
     label = "S2s-CbH",
     group = 
 """
@@ -52907,7 +64389,7 @@ entry(
 )
 
 entry(
-    index = 2381,
+    index = 2539,
     label = "S2s-(C=O)H",
     group = 
 """
@@ -52930,7 +64412,7 @@ entry(
 )
 
 entry(
-    index = 2382,
+    index = 2540,
     label = "S2s-(C=S2d)H",
     group = 
 """
@@ -52953,7 +64435,7 @@ entry(
 )
 
 entry(
-    index = 2383,
+    index = 2541,
     label = "S2s-SH",
     group = 
 """
@@ -52970,7 +64452,7 @@ entry(
 )
 
 entry(
-    index = 2384,
+    index = 2542,
     label = "S2s-S2sH",
     group = 
 """
@@ -52992,7 +64474,7 @@ entry(
 )
 
 entry(
-    index = 2385,
+    index = 2543,
     label = "S2s-S_DeH",
     group = 
 """
@@ -53014,7 +64496,7 @@ entry(
 )
 
 entry(
-    index = 2386,
+    index = 2544,
     label = "S2s-SS",
     group = 
 """
@@ -53031,7 +64513,7 @@ entry(
 )
 
 entry(
-    index = 2387,
+    index = 2545,
     label = "S2s-SsSs",
     group = 
 """
@@ -53053,7 +64535,7 @@ entry(
 )
 
 entry(
-    index = 2388,
+    index = 2546,
     label = "S2s-SO",
     group = 
 """
@@ -53070,7 +64552,7 @@ entry(
 )
 
 entry(
-    index = 2389,
+    index = 2547,
     label = "S2s-S2O",
     group = 
 """
@@ -53092,7 +64574,7 @@ entry(
 )
 
 entry(
-    index = 2390,
+    index = 2548,
     label = "S2s-S4O",
     group = 
 """
@@ -53114,7 +64596,7 @@ entry(
 )
 
 entry(
-    index = 2391,
+    index = 2549,
     label = "S2s-S6O",
     group = 
 """
@@ -53136,7 +64618,7 @@ entry(
 )
 
 entry(
-    index = 2392,
+    index = 2550,
     label = "S2s-SC",
     group = 
 """
@@ -53153,7 +64635,7 @@ entry(
 )
 
 entry(
-    index = 2393,
+    index = 2551,
     label = "S2s-S2sC",
     group = 
 """
@@ -53170,7 +64652,7 @@ entry(
 )
 
 entry(
-    index = 2394,
+    index = 2552,
     label = "S2s-S2sCs",
     group = 
 """
@@ -53192,7 +64674,7 @@ entry(
 )
 
 entry(
-    index = 2395,
+    index = 2553,
     label = "S2s-S2sCd",
     group = 
 """
@@ -53214,7 +64696,7 @@ entry(
 )
 
 entry(
-    index = 2396,
+    index = 2554,
     label = "S2s-S2sCt",
     group = 
 """
@@ -53236,7 +64718,7 @@ entry(
 )
 
 entry(
-    index = 2397,
+    index = 2555,
     label = "S2s-S2sCb",
     group = 
 """
@@ -53258,7 +64740,7 @@ entry(
 )
 
 entry(
-    index = 2398,
+    index = 2556,
     label = "S2s-S46C",
     group = 
 """
@@ -53280,7 +64762,7 @@ entry(
 )
 
 entry(
-    index = 2399,
+    index = 2557,
     label = "S2s-CC",
     group = 
 """
@@ -53297,7 +64779,7 @@ entry(
 )
 
 entry(
-    index = 2400,
+    index = 2558,
     label = "S2s-CsCs",
     group = 
 """
@@ -53319,7 +64801,7 @@ entry(
 )
 
 entry(
-    index = 2401,
+    index = 2559,
     label = "S2s-CsCd",
     group = 
 """
@@ -53341,7 +64823,7 @@ entry(
 )
 
 entry(
-    index = 2402,
+    index = 2560,
     label = "S2s-Cs(C=O)",
     group = 
 """
@@ -53364,7 +64846,7 @@ entry(
 )
 
 entry(
-    index = 2403,
+    index = 2561,
     label = "S2s-CsCt",
     group = 
 """
@@ -53386,7 +64868,7 @@ entry(
 )
 
 entry(
-    index = 2404,
+    index = 2562,
     label = "S2s-CsCb",
     group = 
 """
@@ -53408,7 +64890,7 @@ entry(
 )
 
 entry(
-    index = 2405,
+    index = 2563,
     label = "S2s-CdCd",
     group = 
 """
@@ -53430,7 +64912,7 @@ entry(
 )
 
 entry(
-    index = 2406,
+    index = 2564,
     label = "S2s-CdCt",
     group = 
 """
@@ -53452,7 +64934,7 @@ entry(
 )
 
 entry(
-    index = 2407,
+    index = 2565,
     label = "S2s-CdCb",
     group = 
 """
@@ -53474,7 +64956,7 @@ entry(
 )
 
 entry(
-    index = 2408,
+    index = 2566,
     label = "S2s-CtCt",
     group = 
 """
@@ -53496,7 +64978,7 @@ entry(
 )
 
 entry(
-    index = 2409,
+    index = 2567,
     label = "S2s-CtCb",
     group = 
 """
@@ -53518,7 +65000,7 @@ entry(
 )
 
 entry(
-    index = 2410,
+    index = 2568,
     label = "S2s-CbCb",
     group = 
 """
@@ -53540,7 +65022,7 @@ entry(
 )
 
 entry(
-    index = 2411,
+    index = 2569,
     label = "S2s-(C=S2d)Cs",
     group = 
 """
@@ -53563,7 +65045,7 @@ entry(
 )
 
 entry(
-    index = 2412,
+    index = 2570,
     label = "S2s-(C=S2d)(C=S2d)",
     group = 
 """
@@ -53587,7 +65069,7 @@ entry(
 )
 
 entry(
-    index = 2413,
+    index = 2571,
     label = "S2s-(C=S2d)Cmb",
     group = 
 """
@@ -53610,7 +65092,7 @@ entry(
 )
 
 entry(
-    index = 2414,
+    index = 2572,
     label = "S2s-OH",
     group = 
 """
@@ -53632,7 +65114,7 @@ entry(
 )
 
 entry(
-    index = 2415,
+    index = 2573,
     label = "S2s-OO",
     group = 
 """
@@ -53654,7 +65136,7 @@ entry(
 )
 
 entry(
-    index = 2416,
+    index = 2574,
     label = "S2s-OC",
     group = 
 """
@@ -53671,7 +65153,7 @@ entry(
 )
 
 entry(
-    index = 2417,
+    index = 2575,
     label = "S2s-OCs",
     group = 
 """
@@ -53693,7 +65175,7 @@ entry(
 )
 
 entry(
-    index = 2418,
+    index = 2576,
     label = "S4dd",
     group = 
 """
@@ -53708,7 +65190,7 @@ entry(
 )
 
 entry(
-    index = 2419,
+    index = 2577,
     label = "S4dd-OdOd",
     group = 
 """
@@ -53718,19 +65200,21 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([39.9084,43.373,46.4504,48.9767,52.2961,54.3207,56.6494],'J/(mol*K)','+|-',[3.92132,4.0991,3.8432,3.56854,3.09394,2.74741,5.31029]),
+        H298 = (-296.814,'kJ/mol','+|-',18.9287),
+        S298 = (248.201,'J/(mol*K)','+|-',10.7761),
     ),
-    shortDesc = """RMG-type entries for Sulfur Groups, based on quantum calculations perfomred by Vandeputte (2011), Gillis, Class (2013), and Bozzelli, refit by Ryan Gillis in 2019""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-"
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+O=S=O (SO2) from NCSU_C2_C8_PFAS
 """,
 )
 
 entry(
-    index = 2420,
+    index = 2578,
     label = "S4dd-CdOd",
     group = 
 """
@@ -53752,7 +65236,7 @@ entry(
 )
 
 entry(
-    index = 2421,
+    index = 2579,
     label = "S4dd-CdCd",
     group = 
 """
@@ -53774,7 +65258,7 @@ entry(
 )
 
 entry(
-    index = 2422,
+    index = 2580,
     label = "S4dd-OdSd",
     group = 
 """
@@ -53791,7 +65275,7 @@ entry(
 )
 
 entry(
-    index = 2423,
+    index = 2581,
     label = "S4dd-OdS4d",
     group = 
 """
@@ -53813,7 +65297,7 @@ entry(
 )
 
 entry(
-    index = 2424,
+    index = 2582,
     label = "S4dd-OdS6d",
     group = 
 """
@@ -53835,7 +65319,7 @@ entry(
 )
 
 entry(
-    index = 2425,
+    index = 2583,
     label = "S4dd-SdCd",
     group = 
 """
@@ -53852,7 +65336,7 @@ entry(
 )
 
 entry(
-    index = 2426,
+    index = 2584,
     label = "S4dd-S2dCd",
     group = 
 """
@@ -53874,7 +65358,7 @@ entry(
 )
 
 entry(
-    index = 2427,
+    index = 2585,
     label = "S4dd-S46dCd",
     group = 
 """
@@ -53896,7 +65380,7 @@ entry(
 )
 
 entry(
-    index = 2428,
+    index = 2586,
     label = "S4d",
     group = 
 """
@@ -53911,7 +65395,7 @@ entry(
 )
 
 entry(
-    index = 2429,
+    index = 2587,
     label = "S4d-Od",
     group = 
 """
@@ -53927,7 +65411,7 @@ entry(
 )
 
 entry(
-    index = 2430,
+    index = 2588,
     label = "S4d-OdHH",
     group = 
 """
@@ -53950,7 +65434,7 @@ entry(
 )
 
 entry(
-    index = 2431,
+    index = 2589,
     label = "S4d-OdCC",
     group = 
 """
@@ -53969,7 +65453,7 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2432,
+    index = 2590,
     label = "S4d-OdCsCs",
     group = 
 """
@@ -53992,7 +65476,7 @@ entry(
 )
 
 entry(
-    index = 2433,
+    index = 2591,
     label = "S4d-OdCdCd",
     group = 
 """
@@ -54015,7 +65499,7 @@ entry(
 )
 
 entry(
-    index = 2434,
+    index = 2592,
     label = "S4d-OdCH",
     group = 
 """
@@ -54034,7 +65518,7 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2435,
+    index = 2593,
     label = "S4d-OdCsH",
     group = 
 """
@@ -54057,7 +65541,7 @@ entry(
 )
 
 entry(
-    index = 2436,
+    index = 2594,
     label = "S4d-OdCdH",
     group = 
 """
@@ -54080,7 +65564,7 @@ entry(
 )
 
 entry(
-    index = 2437,
+    index = 2595,
     label = "S4d-OdCS",
     group = 
 """
@@ -54103,7 +65587,7 @@ entry(
 )
 
 entry(
-    index = 2438,
+    index = 2596,
     label = "S4d-OdCO",
     group = 
 """
@@ -54121,7 +65605,7 @@ entry(
 )
 
 entry(
-    index = 2439,
+    index = 2597,
     label = "S4d-OdOsCs",
     group = 
 """
@@ -54144,7 +65628,7 @@ entry(
 )
 
 entry(
-    index = 2440,
+    index = 2598,
     label = "S4d-OdOsCd",
     group = 
 """
@@ -54167,7 +65651,7 @@ entry(
 )
 
 entry(
-    index = 2441,
+    index = 2599,
     label = "S4d-OdOO",
     group = 
 """
@@ -54190,7 +65674,47 @@ entry(
 )
 
 entry(
-    index = 2442,
+    index = 2600,
+    label = "S4d-O2dO2sO2s",
+    group = 
+"""
+1 * S4d u0 p1 {2,S} {3,D} {4,S}
+2   O2s u0 {1,S}
+3   O2d u0 {1,D}
+4   O2s u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([21.9578,25.6084,28.1398,29.7387,31.2754,32.0602,33.1153],'J/(mol*K)','+|-',[0.355124,0.371224,0.34805,0.323175,0.280195,0.248812,0.480912]),
+        H298 = (-139.961,'kJ/mol','+|-',1.71423),
+        S298 = (61.6149,'J/(mol*K)','+|-',0.975905),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(OS(=O)O)(F)F (PF1Sulfite) from NCSU_C2_C8_PFAS
+FC(C(F)(F)F)(OS(=O)O)F (PF2Sulfite) from NCSU_C2_C8_PFAS
+FC(C(C(F)(F)F)(F)F)(OS(=O)O)F (PF3Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(F)(F)F)(F)F)(F)F)(F)F (PF4Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF10Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF11Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF12Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF13Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF14Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF15Sulfite) from NCSU_C2_C8_PFAS
+OS(=O)OC(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF16Sulfite) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2601,
     label = "S4d-OdOH",
     group = 
 """
@@ -54213,7 +65737,7 @@ entry(
 )
 
 entry(
-    index = 2443,
+    index = 2602,
     label = "S4d-OdOS",
     group = 
 """
@@ -54236,7 +65760,7 @@ entry(
 )
 
 entry(
-    index = 2444,
+    index = 2603,
     label = "S4d-OdSS",
     group = 
 """
@@ -54259,7 +65783,7 @@ entry(
 )
 
 entry(
-    index = 2445,
+    index = 2604,
     label = "S4d-OdSH",
     group = 
 """
@@ -54282,7 +65806,7 @@ entry(
 )
 
 entry(
-    index = 2446,
+    index = 2605,
     label = "S4d-Cd",
     group = 
 """
@@ -54298,7 +65822,7 @@ entry(
 )
 
 entry(
-    index = 2447,
+    index = 2606,
     label = "S4d-CdCC",
     group = 
 """
@@ -54321,7 +65845,7 @@ entry(
 )
 
 entry(
-    index = 2448,
+    index = 2607,
     label = "S4d-CdCH",
     group = 
 """
@@ -54344,7 +65868,7 @@ entry(
 )
 
 entry(
-    index = 2449,
+    index = 2608,
     label = "S4d-CdHH",
     group = 
 """
@@ -54367,7 +65891,7 @@ entry(
 )
 
 entry(
-    index = 2450,
+    index = 2609,
     label = "S4d-CdOC",
     group = 
 """
@@ -54390,7 +65914,7 @@ entry(
 )
 
 entry(
-    index = 2451,
+    index = 2610,
     label = "S4d-CdOH",
     group = 
 """
@@ -54413,7 +65937,7 @@ entry(
 )
 
 entry(
-    index = 2452,
+    index = 2611,
     label = "S4d-Sd",
     group = 
 """
@@ -54429,7 +65953,7 @@ entry(
 )
 
 entry(
-    index = 2453,
+    index = 2612,
     label = "S4d-SdOC",
     group = 
 """
@@ -54452,7 +65976,7 @@ entry(
 )
 
 entry(
-    index = 2454,
+    index = 2613,
     label = "S4d-SdOH",
     group = 
 """
@@ -54475,7 +65999,7 @@ entry(
 )
 
 entry(
-    index = 2455,
+    index = 2614,
     label = "S4d-SdCH",
     group = 
 """
@@ -54498,7 +66022,7 @@ entry(
 )
 
 entry(
-    index = 2456,
+    index = 2615,
     label = "S4d-SdSC",
     group = 
 """
@@ -54521,7 +66045,7 @@ entry(
 )
 
 entry(
-    index = 2457,
+    index = 2616,
     label = "S4s",
     group = 
 """
@@ -54537,7 +66061,7 @@ Couldn't converge these geometries to calculate values and so I copied the S6s v
 )
 
 entry(
-    index = 2458,
+    index = 2617,
     label = "S4s-OCCH",
     group = 
 """
@@ -54561,7 +66085,7 @@ entry(
 )
 
 entry(
-    index = 2459,
+    index = 2618,
     label = "S4s-CCCH",
     group = 
 """
@@ -54585,7 +66109,7 @@ entry(
 )
 
 entry(
-    index = 2460,
+    index = 2619,
     label = "S4s-OOCC",
     group = 
 """
@@ -54609,7 +66133,7 @@ entry(
 )
 
 entry(
-    index = 2461,
+    index = 2620,
     label = "S4s-SOCH",
     group = 
 """
@@ -54633,7 +66157,7 @@ entry(
 )
 
 entry(
-    index = 2462,
+    index = 2621,
     label = "S4s-SOOH",
     group = 
 """
@@ -54657,7 +66181,7 @@ entry(
 )
 
 entry(
-    index = 2463,
+    index = 2622,
     label = "S4t",
     group = 
 """
@@ -54672,7 +66196,7 @@ entry(
 )
 
 entry(
-    index = 2464,
+    index = 2623,
     label = "S4t-CtC",
     group = 
 """
@@ -54694,7 +66218,7 @@ entry(
 )
 
 entry(
-    index = 2465,
+    index = 2624,
     label = "S4t-CtH",
     group = 
 """
@@ -54716,7 +66240,7 @@ entry(
 )
 
 entry(
-    index = 2466,
+    index = 2625,
     label = "S4t-CtO",
     group = 
 """
@@ -54738,7 +66262,7 @@ entry(
 )
 
 entry(
-    index = 2467,
+    index = 2626,
     label = "S6s",
     group = 
 """
@@ -54753,7 +66277,7 @@ entry(
 )
 
 entry(
-    index = 2468,
+    index = 2627,
     label = "S6s-CCCCCH",
     group = 
 """
@@ -54780,7 +66304,7 @@ Calculated at CBS-QB3, June 2017
 )
 
 entry(
-    index = 2469,
+    index = 2628,
     label = "S6s-OCCCCH",
     group = 
 """
@@ -54806,7 +66330,7 @@ entry(
 )
 
 entry(
-    index = 2470,
+    index = 2629,
     label = "S6s-SOOCCH",
     group = 
 """
@@ -54833,7 +66357,7 @@ Calculated at CBS-QB3, June 2017
 )
 
 entry(
-    index = 2471,
+    index = 2630,
     label = "S6d",
     group = 
 """
@@ -54848,7 +66372,7 @@ entry(
 )
 
 entry(
-    index = 2472,
+    index = 2631,
     label = "S6d-OdOCCH",
     group = 
 """
@@ -54873,7 +66397,7 @@ entry(
 )
 
 entry(
-    index = 2473,
+    index = 2632,
     label = "S6d-OdCCCH",
     group = 
 """
@@ -54898,7 +66422,7 @@ entry(
 )
 
 entry(
-    index = 2474,
+    index = 2633,
     label = "S6dd",
     group = 
 """
@@ -54913,7 +66437,7 @@ entry(
 )
 
 entry(
-    index = 2475,
+    index = 2634,
     label = "S6dd-OdOd",
     group = 
 """
@@ -54930,7 +66454,7 @@ entry(
 )
 
 entry(
-    index = 2476,
+    index = 2635,
     label = "S6dd-OdOdHH",
     group = 
 """
@@ -54954,7 +66478,7 @@ entry(
 )
 
 entry(
-    index = 2477,
+    index = 2636,
     label = "S6dd-OdOdCC",
     group = 
 """
@@ -54974,7 +66498,7 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2478,
+    index = 2637,
     label = "S6dd-OdOdCsCs",
     group = 
 """
@@ -54998,7 +66522,7 @@ entry(
 )
 
 entry(
-    index = 2479,
+    index = 2638,
     label = "S6dd-OdOdCdCd",
     group = 
 """
@@ -55022,7 +66546,7 @@ entry(
 )
 
 entry(
-    index = 2480,
+    index = 2639,
     label = "S6dd-OdOdCH",
     group = 
 """
@@ -55042,7 +66566,7 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2481,
+    index = 2640,
     label = "S6dd-OdOdCsH",
     group = 
 """
@@ -55066,7 +66590,7 @@ entry(
 )
 
 entry(
-    index = 2482,
+    index = 2641,
     label = "S6dd-OdOdCdH",
     group = 
 """
@@ -55090,7 +66614,7 @@ entry(
 )
 
 entry(
-    index = 2483,
+    index = 2642,
     label = "S6dd-OdOdCS",
     group = 
 """
@@ -55114,7 +66638,7 @@ entry(
 )
 
 entry(
-    index = 2484,
+    index = 2643,
     label = "S6dd-OdOdCO",
     group = 
 """
@@ -55134,7 +66658,7 @@ Inferred from a least squares fit from 40 species mostly calculated at cbsqb3, 4
 )
 
 entry(
-    index = 2485,
+    index = 2644,
     label = "S6dd-OdOdCsOs",
     group = 
 """
@@ -55158,7 +66682,64 @@ entry(
 )
 
 entry(
-    index = 2486,
+    index = 2645,
+    label = "S6dd-CsO2dO2dO2s",
+    group = 
+"""
+1 * S6dd u0 p0 {2,S} {3,D} {4,D} {5,S}
+2   O2s  u0 {1,S}
+3   O2d  u0 {1,D}
+4   O2d  u0 {1,D}
+5   Cs   u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([53.1769,61.3789,66.851,70.7481,76.4868,79.6472,82.0173],'J/(mol*K)','+|-',[1.17685,1.2302,1.1534,1.07097,0.928539,0.824541,1.5937]),
+        H298 = (-413.972,'kJ/mol','+|-',5.68081),
+        S298 = (92.508,'J/(mol*K)','+|-',3.23406),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+FC(S(=O)(=O)O)(F)F (PF1Sacid) from NCSU_C2_C8_PFAS
+FC(S(=O)(=O)O)(C(F)(F)F)F (PF2Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F (PF3Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(S(=O)(=O)O)(F)F)(F)F)(C(F)(F)F)F (PF4Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F (PF5Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF6Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF7Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF8Sacid) from NCSU_C2_C8_PFAS
+FC1(F)OS1(=O)=O (PF1Sultone) from NCSU_C2_C8_PFAS
+FC(C1(F)OS1(=O)=O)(F)F (PF2Sultone) from NCSU_C2_C8_PFAS
+FC(C(C1(F)OS1(=O)=O)(F)F)(F)F (PF3Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F (PF4Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(C(F)(F)F)F (PF5Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(C(F)(F)F)F (PF6Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF7Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF8Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F (PF9Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF10Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF11Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF12Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF13Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sacid) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF9Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)F (PF10Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF11Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)F (PF12Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF13Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF14Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF15Sultone) from NCSU_C2_C8_PFAS
+FC(C(C(C(C(C(C(C(C(C1(F)OS1(=O)=O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F (PF16Sultone) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2646,
     label = "S6dd-OdOdCdOs",
     group = 
 """
@@ -55182,7 +66763,7 @@ entry(
 )
 
 entry(
-    index = 2487,
+    index = 2647,
     label = "S6dd-OdOdOO",
     group = 
 """
@@ -55206,7 +66787,7 @@ entry(
 )
 
 entry(
-    index = 2488,
+    index = 2648,
     label = "S6dd-OdOdOH",
     group = 
 """
@@ -55230,7 +66811,7 @@ entry(
 )
 
 entry(
-    index = 2489,
+    index = 2649,
     label = "S6dd-OdOdOS",
     group = 
 """
@@ -55254,7 +66835,7 @@ entry(
 )
 
 entry(
-    index = 2490,
+    index = 2650,
     label = "S6dd-OdOdSS",
     group = 
 """
@@ -55278,7 +66859,7 @@ entry(
 )
 
 entry(
-    index = 2491,
+    index = 2651,
     label = "S6dd-OdOdSH",
     group = 
 """
@@ -55302,7 +66883,33 @@ entry(
 )
 
 entry(
-    index = 2492,
+    index = 2652,
+    label = "S6dd-F1sO2dO2dO2s",
+    group = 
+"""
+1 * S6dd u0 p0 {2,S} {3,D} {4,D} {5,S}
+2   O2s  u0 {1,S}
+3   O2d  u0 {1,D}
+4   O2d  u0 {1,D}
+5   F1s  u0 {1,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([25.4946,29.1217,31.8222,33.86,36.6806,37.8375,39.6122],'J/(mol*K)','+|-',[2.66228,2.78298,2.60925,2.42277,2.10056,1.86529,3.60529]),
+        H298 = (-267.695,'kJ/mol','+|-',12.8512),
+        S298 = (118.367,'J/(mol*K)','+|-',7.31614),
+    ),
+    shortDesc = """Group added & fitted from RMG thermo libraries by Hao-Wei Pang""",
+    longDesc = 
+"""
+Fitted from following species using Ridge regression
+
+OS(=O)(=O)F (FSO3H) from NCSU_C2_C8_PFAS
+""",
+)
+
+entry(
+    index = 2653,
     label = "S6dd-OdCd",
     group = 
 """
@@ -55319,7 +66926,7 @@ entry(
 )
 
 entry(
-    index = 2493,
+    index = 2654,
     label = "S6dd-OdCdCC",
     group = 
 """
@@ -55343,7 +66950,7 @@ entry(
 )
 
 entry(
-    index = 2494,
+    index = 2655,
     label = "S6dd-OdCdCH",
     group = 
 """
@@ -55367,7 +66974,7 @@ entry(
 )
 
 entry(
-    index = 2495,
+    index = 2656,
     label = "S6dd-OdCdOC",
     group = 
 """
@@ -55391,7 +66998,7 @@ entry(
 )
 
 entry(
-    index = 2496,
+    index = 2657,
     label = "S6dd-OdCdOO",
     group = 
 """
@@ -55415,7 +67022,7 @@ entry(
 )
 
 entry(
-    index = 2497,
+    index = 2658,
     label = "S6dd-OdCdOH",
     group = 
 """
@@ -55439,7 +67046,7 @@ entry(
 )
 
 entry(
-    index = 2498,
+    index = 2659,
     label = "S6dd-OdCdSH",
     group = 
 """
@@ -55463,7 +67070,7 @@ entry(
 )
 
 entry(
-    index = 2499,
+    index = 2660,
     label = "S6dd-OdCdOS",
     group = 
 """
@@ -55487,7 +67094,7 @@ entry(
 )
 
 entry(
-    index = 2500,
+    index = 2661,
     label = "S6dd-CdCd",
     group = 
 """
@@ -55504,7 +67111,7 @@ entry(
 )
 
 entry(
-    index = 2501,
+    index = 2662,
     label = "S6dd-CdCdCC",
     group = 
 """
@@ -55528,7 +67135,7 @@ entry(
 )
 
 entry(
-    index = 2502,
+    index = 2663,
     label = "S6dd-CdCdCH",
     group = 
 """
@@ -55552,7 +67159,7 @@ entry(
 )
 
 entry(
-    index = 2503,
+    index = 2664,
     label = "S6dd-CdCdOC",
     group = 
 """
@@ -55576,7 +67183,7 @@ entry(
 )
 
 entry(
-    index = 2504,
+    index = 2665,
     label = "S6dd-OdSd",
     group = 
 """
@@ -55593,7 +67200,7 @@ entry(
 )
 
 entry(
-    index = 2505,
+    index = 2666,
     label = "S6dd-OdSdOC",
     group = 
 """
@@ -55617,7 +67224,7 @@ entry(
 )
 
 entry(
-    index = 2506,
+    index = 2667,
     label = "S6dd-OdSdOH",
     group = 
 """
@@ -55641,7 +67248,7 @@ entry(
 )
 
 entry(
-    index = 2507,
+    index = 2668,
     label = "S6dd-OdSdCH",
     group = 
 """
@@ -55665,7 +67272,7 @@ entry(
 )
 
 entry(
-    index = 2508,
+    index = 2669,
     label = "S6ddd",
     group = 
 """
@@ -55680,7 +67287,7 @@ entry(
 )
 
 entry(
-    index = 2509,
+    index = 2670,
     label = "S6ddd-OdOdOd",
     group = 
 """
@@ -55691,19 +67298,21 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([0,0,0,0,0,0,0],'J/(mol*K)'),
-        H298 = (0,'kJ/mol'),
-        S298 = (0,'J/(mol*K)'),
+        Cpdata = ([5.07611,5.76318,6.30649,6.72569,7.27659,7.59804,7.94889],'J/(mol*K)','+|-',[0.392132,0.40991,0.384321,0.356854,0.309394,0.274742,0.531029]),
+        H298 = (-39.5906,'kJ/mol','+|-',1.89288),
+        S298 = (25.652,'J/(mol*K)','+|-',1.07761),
     ),
-    shortDesc = """RMG-type entries for Sulfur Groups, based on quantum calculations perfomred by Vandeputte (2011), Gillis, Class (2013), and Bozzelli, refit by Ryan Gillis in 2019""",
+    shortDesc = """Fitted from RMG thermo libraries by Hao-Wei Pang""",
     longDesc = 
 """
-"
+Previously contains all zeros as data. New data fitted from following species using Ridge regression
+
+O=S(=O)=O (SO3) from NCSU_C2_C8_PFAS
 """,
 )
 
 entry(
-    index = 2510,
+    index = 2671,
     label = "S6ddd-OdOdXd",
     group = 
 """
@@ -55726,7 +67335,7 @@ entry(
 )
 
 entry(
-    index = 2511,
+    index = 2672,
     label = "S6ddd-OdXdXd",
     group = 
 """
@@ -55749,7 +67358,7 @@ entry(
 )
 
 entry(
-    index = 2512,
+    index = 2673,
     label = "S6t",
     group = 
 """
@@ -55764,7 +67373,7 @@ entry(
 )
 
 entry(
-    index = 2513,
+    index = 2674,
     label = "S6t-CtCCC",
     group = 
 """
@@ -55788,7 +67397,7 @@ entry(
 )
 
 entry(
-    index = 2514,
+    index = 2675,
     label = "S6t-CtHHH",
     group = 
 """
@@ -55812,7 +67421,7 @@ entry(
 )
 
 entry(
-    index = 2515,
+    index = 2676,
     label = "S6t-CtOCC",
     group = 
 """
@@ -55836,7 +67445,7 @@ entry(
 )
 
 entry(
-    index = 2516,
+    index = 2677,
     label = "S6t-CtOCH",
     group = 
 """
@@ -55860,7 +67469,7 @@ entry(
 )
 
 entry(
-    index = 2517,
+    index = 2678,
     label = "S6td",
     group = 
 """
@@ -55875,7 +67484,7 @@ entry(
 )
 
 entry(
-    index = 2518,
+    index = 2679,
     label = "S6td-CtCdC",
     group = 
 """
@@ -55898,7 +67507,7 @@ entry(
 )
 
 entry(
-    index = 2519,
+    index = 2680,
     label = "S6td-CtOdC",
     group = 
 """
@@ -55921,7 +67530,7 @@ entry(
 )
 
 entry(
-    index = 2520,
+    index = 2681,
     label = "S6td-CtOdH",
     group = 
 """
@@ -55944,7 +67553,7 @@ entry(
 )
 
 entry(
-    index = 2521,
+    index = 2682,
     label = "Cl1s",
     group = 
 """
@@ -55964,7 +67573,7 @@ Dummy group for singly-bonded chlorine. Benson groups for chloroalkanes already 
 )
 
 entry(
-    index = 2522,
+    index = 2683,
     label = "Br1s",
     group = 
 """
@@ -55984,7 +67593,7 @@ Dummy group for singly-bonded bromine. Benson groups for chloroalkanes already a
 )
 
 entry(
-    index = 2523,
+    index = 2684,
     label = "F1s",
     group = 
 """
@@ -56004,7 +67613,7 @@ Dummy group for singly-bonded fluroine. Benson groups for chloroalkanes already 
 )
 
 entry(
-    index = 2524,
+    index = 2685,
     label = "I1s",
     group = 
 """
@@ -56025,7 +67634,7 @@ Benson groups for iodoalkanes already account for I in the Carbon-centered group
 )
 
 entry(
-    index = 2525,
+    index = 2686,
     label = "N",
     group = 
 """
@@ -56040,7 +67649,7 @@ entry(
 )
 
 entry(
-    index = 2526,
+    index = 2687,
     label = "N5sc-HHHN",
     group = 
 """
@@ -56066,7 +67675,7 @@ primaryNS |         1
 )
 
 entry(
-    index = 2527,
+    index = 2688,
     label = "N5sc-HHNN",
     group = 
 """
@@ -56092,7 +67701,7 @@ primaryNS |         3
 )
 
 entry(
-    index = 2528,
+    index = 2689,
     label = "N5sc-HHNO",
     group = 
 """
@@ -56118,7 +67727,7 @@ CHON_G4 |         27
 )
 
 entry(
-    index = 2529,
+    index = 2690,
     label = "N5sc-HNNO",
     group = 
 """
@@ -56144,7 +67753,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2530,
+    index = 2691,
     label = "N5sc-HHOO",
     group = 
 """
@@ -56170,7 +67779,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 2531,
+    index = 2692,
     label = "N5sc-HNOO",
     group = 
 """
@@ -56196,7 +67805,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2532,
+    index = 2693,
     label = "N5sc-HOOO",
     group = 
 """
@@ -56222,7 +67831,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2533,
+    index = 2694,
     label = "N5sc-CHHO",
     group = 
 """
@@ -56248,7 +67857,7 @@ CHON_G4 |         42
 )
 
 entry(
-    index = 2534,
+    index = 2695,
     label = "N5sc-CHNO",
     group = 
 """
@@ -56274,7 +67883,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2535,
+    index = 2696,
     label = "N5sc-CHOO",
     group = 
 """
@@ -56300,7 +67909,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2536,
+    index = 2697,
     label = "N5sc-CCHO",
     group = 
 """
@@ -56326,7 +67935,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2537,
+    index = 2698,
     label = "N1s",
     group = 
 """
@@ -56341,7 +67950,7 @@ Nitrogen with two lone pairs and a single bond
 )
 
 entry(
-    index = 2538,
+    index = 2699,
     label = "N1s-H",
     group = 
 """
@@ -56362,7 +67971,7 @@ Data base on species NH(S), source: GRIMech3.0-N
 )
 
 entry(
-    index = 2539,
+    index = 2700,
     label = "N1s-Cs",
     group = 
 """
@@ -56386,7 +67995,7 @@ subtracting the Cs-N2sHHH group
 )
 
 entry(
-    index = 2540,
+    index = 2701,
     label = "N1s-Cd",
     group = 
 """
@@ -56409,7 +68018,7 @@ NOx2018 |         1
 )
 
 entry(
-    index = 2541,
+    index = 2702,
     label = "N1s-N1s",
     group = 
 """
@@ -56425,7 +68034,7 @@ Pointing to NH(S), so far no better alternative
 )
 
 entry(
-    index = 2542,
+    index = 2703,
     label = "N1s-O2s",
     group = 
 """
@@ -56441,7 +68050,7 @@ Pointing to NH(S), so far no better alternative
 )
 
 entry(
-    index = 2543,
+    index = 2704,
     label = "N1s-N3s",
     group = 
 """
@@ -56464,7 +68073,7 @@ subtracting the N3s-N3sFF group
 )
 
 entry(
-    index = 2544,
+    index = 2705,
     label = "N1dc",
     group = 
 """
@@ -56485,7 +68094,7 @@ entry(
 )
 
 entry(
-    index = 2545,
+    index = 2706,
     label = "N1sc",
     group = 
 """
@@ -56502,7 +68111,7 @@ Nitrogen with two lone pairs and two single bonds
 )
 
 entry(
-    index = 2546,
+    index = 2707,
     label = "N1sc-HN",
     group = 
 """
@@ -56527,7 +68136,7 @@ primaryNS |         3
 )
 
 entry(
-    index = 2547,
+    index = 2708,
     label = "N1sc-NN",
     group = 
 """
@@ -56552,7 +68161,7 @@ primaryNS |         2
 )
 
 entry(
-    index = 2548,
+    index = 2709,
     label = "N1sc-NO",
     group = 
 """
@@ -56576,7 +68185,7 @@ CHON_G4 |         5
 )
 
 entry(
-    index = 2549,
+    index = 2710,
     label = "N1sc-CH",
     group = 
 """
@@ -56600,7 +68209,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2550,
+    index = 2711,
     label = "N1sc-CN",
     group = 
 """
@@ -56624,7 +68233,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 2551,
+    index = 2712,
     label = "N3s",
     group = 
 """
@@ -56639,7 +68248,7 @@ entry(
 )
 
 entry(
-    index = 2552,
+    index = 2713,
     label = "N3s-HHN",
     group = 
 """
@@ -56665,7 +68274,7 @@ primaryNS |         4
 )
 
 entry(
-    index = 2553,
+    index = 2714,
     label = "N3s-N3dHH",
     group = 
 """
@@ -56691,7 +68300,7 @@ primaryNS |         1
 )
 
 entry(
-    index = 2554,
+    index = 2715,
     label = "N3s-N3sHH",
     group = 
 """
@@ -56717,7 +68326,7 @@ primaryNS |         1
 )
 
 entry(
-    index = 2555,
+    index = 2716,
     label = "N3s-HNN",
     group = 
 """
@@ -56743,7 +68352,7 @@ primaryNS |         1
 )
 
 entry(
-    index = 2556,
+    index = 2717,
     label = "N3s-H(NO)(NO)",
     group = 
 """
@@ -56770,7 +68379,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2557,
+    index = 2718,
     label = "N3s-NNN",
     group = 
 """
@@ -56795,7 +68404,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2558,
+    index = 2719,
     label = "N3s-HNO",
     group = 
 """
@@ -56820,7 +68429,7 @@ CHON_G4 |         64
 )
 
 entry(
-    index = 2559,
+    index = 2720,
     label = "N3s-NNO",
     group = 
 """
@@ -56845,7 +68454,7 @@ CHON_G4 |         8
 )
 
 entry(
-    index = 2560,
+    index = 2721,
     label = "N3s-HOO",
     group = 
 """
@@ -56870,7 +68479,7 @@ CHON_G4 |         21
 )
 
 entry(
-    index = 2561,
+    index = 2722,
     label = "N3s-NOO",
     group = 
 """
@@ -56895,7 +68504,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 2562,
+    index = 2723,
     label = "N3s-OOO",
     group = 
 """
@@ -56920,7 +68529,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2563,
+    index = 2724,
     label = "N3s-CHO",
     group = 
 """
@@ -56945,7 +68554,7 @@ CHON_G4 |         32
 )
 
 entry(
-    index = 2564,
+    index = 2725,
     label = "N3s-CsHOs",
     group = 
 """
@@ -56970,7 +68579,7 @@ CHON_G4 |         47
 )
 
 entry(
-    index = 2565,
+    index = 2726,
     label = "N3s-CNN",
     group = 
 """
@@ -56996,7 +68605,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2566,
+    index = 2727,
     label = "N3s-CNO",
     group = 
 """
@@ -57021,7 +68630,7 @@ CHON_G4 |         18
 )
 
 entry(
-    index = 2567,
+    index = 2728,
     label = "N3s-COO",
     group = 
 """
@@ -57046,7 +68655,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 2568,
+    index = 2729,
     label = "N3s-CCO",
     group = 
 """
@@ -57071,7 +68680,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2569,
+    index = 2730,
     label = "N3s-CsCsOs",
     group = 
 """
@@ -57096,7 +68705,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2570,
+    index = 2731,
     label = "N3s-CHH",
     group = 
 """
@@ -57122,7 +68731,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2571,
+    index = 2732,
     label = "N3s-CsHH",
     group = 
 """
@@ -57150,7 +68759,7 @@ CHON     |         7
 )
 
 entry(
-    index = 2572,
+    index = 2733,
     label = "N3s-CbHH",
     group = 
 """
@@ -57173,7 +68782,7 @@ entry(
 )
 
 entry(
-    index = 2573,
+    index = 2734,
     label = "N3s-(CO)HH",
     group = 
 """
@@ -57201,7 +68810,7 @@ CHON     |         1
 )
 
 entry(
-    index = 2574,
+    index = 2735,
     label = "N3s-CdHH",
     group = 
 """
@@ -57227,7 +68836,7 @@ BurcatNS |         2
 )
 
 entry(
-    index = 2575,
+    index = 2736,
     label = "N3s-CCH",
     group = 
 """
@@ -57252,7 +68861,7 @@ CHON_G4 |         31
 )
 
 entry(
-    index = 2576,
+    index = 2737,
     label = "N3s-CsCsH",
     group = 
 """
@@ -57279,7 +68888,7 @@ CHON    |         5
 )
 
 entry(
-    index = 2577,
+    index = 2738,
     label = "N3s-CbCsH",
     group = 
 """
@@ -57302,7 +68911,7 @@ entry(
 )
 
 entry(
-    index = 2578,
+    index = 2739,
     label = "N3s-CbCbH",
     group = 
 """
@@ -57325,7 +68934,7 @@ entry(
 )
 
 entry(
-    index = 2579,
+    index = 2740,
     label = "N3s-(CO)CsH",
     group = 
 """
@@ -57352,7 +68961,7 @@ CHON    |         1
 )
 
 entry(
-    index = 2580,
+    index = 2741,
     label = "N3s-(CO)CbH",
     group = 
 """
@@ -57376,7 +68985,7 @@ entry(
 )
 
 entry(
-    index = 2581,
+    index = 2742,
     label = "N3s-(CO)(CO)H",
     group = 
 """
@@ -57403,7 +69012,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2582,
+    index = 2743,
     label = "N3s-(CdCd)CsH",
     group = 
 """
@@ -57430,7 +69039,7 @@ CHON_G4 |         10
 )
 
 entry(
-    index = 2583,
+    index = 2744,
     label = "N3s-CCC",
     group = 
 """
@@ -57455,7 +69064,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2584,
+    index = 2745,
     label = "N3s-CsCsCs",
     group = 
 """
@@ -57482,7 +69091,7 @@ CHON    |         2
 )
 
 entry(
-    index = 2585,
+    index = 2746,
     label = "N3s-CbCsCs",
     group = 
 """
@@ -57505,7 +69114,7 @@ entry(
 )
 
 entry(
-    index = 2586,
+    index = 2747,
     label = "N3s-(CO)CsCs",
     group = 
 """
@@ -57532,7 +69141,7 @@ CHON    |         1
 )
 
 entry(
-    index = 2587,
+    index = 2748,
     label = "N3s-(CO)(CO)Cs",
     group = 
 """
@@ -57552,7 +69161,7 @@ entry(
 )
 
 entry(
-    index = 2588,
+    index = 2749,
     label = "N3s-(CO)(CO)Cb",
     group = 
 """
@@ -57577,7 +69186,7 @@ entry(
 )
 
 entry(
-    index = 2589,
+    index = 2750,
     label = "N3s-(CdCd)CsCs",
     group = 
 """
@@ -57604,7 +69213,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2590,
+    index = 2751,
     label = "N3s-NCH",
     group = 
 """
@@ -57630,7 +69239,7 @@ BurcatNS |         2
 )
 
 entry(
-    index = 2591,
+    index = 2752,
     label = "N3s-N3sCbH",
     group = 
 """
@@ -57653,7 +69262,7 @@ entry(
 )
 
 entry(
-    index = 2592,
+    index = 2753,
     label = "N3s-N3sCsH",
     group = 
 """
@@ -57678,7 +69287,7 @@ CHON_G4 |         57
 )
 
 entry(
-    index = 2593,
+    index = 2754,
     label = "N3s-NCC",
     group = 
 """
@@ -57703,7 +69312,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 2594,
+    index = 2755,
     label = "N3s-NCdCs",
     group = 
 """
@@ -57728,7 +69337,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2595,
+    index = 2756,
     label = "N3s-(CdCd)CsN3s",
     group = 
 """
@@ -57755,7 +69364,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2596,
+    index = 2757,
     label = "N3s-NCsCs",
     group = 
 """
@@ -57781,7 +69390,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2597,
+    index = 2758,
     label = "N3s-CsCsN3s",
     group = 
 """
@@ -57806,7 +69415,7 @@ CHON_G4 |         7
 )
 
 entry(
-    index = 2598,
+    index = 2759,
     label = "N3s-OsHH",
     group = 
 """
@@ -57831,7 +69440,7 @@ CHON_G4 |         77
 )
 
 entry(
-    index = 2599,
+    index = 2760,
     label = "N3s-OsHH(Os)",
     group = 
 """
@@ -57855,7 +69464,7 @@ entry(
 )
 
 entry(
-    index = 2600,
+    index = 2761,
     label = "N3d",
     group = 
 """
@@ -57870,7 +69479,7 @@ entry(
 )
 
 entry(
-    index = 2601,
+    index = 2762,
     label = "N3dOd-C",
     group = 
 """
@@ -57887,7 +69496,7 @@ entry(
 )
 
 entry(
-    index = 2602,
+    index = 2763,
     label = "N3dOd-Cs",
     group = 
 """
@@ -57911,7 +69520,7 @@ CHON_G4 |         22
 )
 
 entry(
-    index = 2603,
+    index = 2764,
     label = "N3dOd-Cd",
     group = 
 """
@@ -57935,7 +69544,7 @@ CHON_G4 |         15
 )
 
 entry(
-    index = 2604,
+    index = 2765,
     label = "N3dOd-Ct",
     group = 
 """
@@ -57959,7 +69568,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 2605,
+    index = 2766,
     label = "N3dOd-CO",
     group = 
 """
@@ -57984,7 +69593,7 @@ CHON_G4 |         4
 )
 
 entry(
-    index = 2606,
+    index = 2767,
     label = "N3dOd-N",
     group = 
 """
@@ -58001,7 +69610,7 @@ entry(
 )
 
 entry(
-    index = 2607,
+    index = 2768,
     label = "N3dOd-N3s",
     group = 
 """
@@ -58025,7 +69634,7 @@ CHON_G4 |         25
 )
 
 entry(
-    index = 2608,
+    index = 2769,
     label = "N3dOd-N3d",
     group = 
 """
@@ -58050,7 +69659,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2609,
+    index = 2770,
     label = "N3dOd-N5sdtc",
     group = 
 """
@@ -58074,7 +69683,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2610,
+    index = 2771,
     label = "N3dOd-N1sc",
     group = 
 """
@@ -58098,7 +69707,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2611,
+    index = 2772,
     label = "N3dOd-O",
     group = 
 """
@@ -58124,7 +69733,7 @@ NOx2018                 |         1
 )
 
 entry(
-    index = 2612,
+    index = 2773,
     label = "N3d-OdOH",
     group = 
 """
@@ -58149,7 +69758,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2613,
+    index = 2774,
     label = "N3d-HN",
     group = 
 """
@@ -58175,7 +69784,7 @@ primaryNS               |         1
 )
 
 entry(
-    index = 2614,
+    index = 2775,
     label = "N3d-N3dH",
     group = 
 """
@@ -58200,7 +69809,7 @@ primaryNS |         1
 )
 
 entry(
-    index = 2615,
+    index = 2776,
     label = "N3d-NN",
     group = 
 """
@@ -58225,7 +69834,7 @@ primaryNS |         2
 )
 
 entry(
-    index = 2616,
+    index = 2777,
     label = "N3d-N3dN3s",
     group = 
 """
@@ -58249,7 +69858,7 @@ CHON_G4 |         44
 )
 
 entry(
-    index = 2617,
+    index = 2778,
     label = "N3d-NO",
     group = 
 """
@@ -58273,7 +69882,7 @@ CHON_G4 |         42
 )
 
 entry(
-    index = 2618,
+    index = 2779,
     label = "N3d-OC",
     group = 
 """
@@ -58290,7 +69899,7 @@ entry(
 )
 
 entry(
-    index = 2619,
+    index = 2780,
     label = "N3d-OCd",
     group = 
 """
@@ -58314,7 +69923,7 @@ CHON_G4 |         43
 )
 
 entry(
-    index = 2620,
+    index = 2781,
     label = "N3d-OCdd",
     group = 
 """
@@ -58338,7 +69947,7 @@ CHON_G4 |         20
 )
 
 entry(
-    index = 2621,
+    index = 2782,
     label = "N3d-CN",
     group = 
 """
@@ -58364,7 +69973,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2622,
+    index = 2783,
     label = "N3d-N3dCs",
     group = 
 """
@@ -58389,7 +69998,7 @@ CBS_QB3_1dHR |         1
 )
 
 entry(
-    index = 2623,
+    index = 2784,
     label = "N3d-N3dCs(CsCsCs)",
     group = 
 """
@@ -58414,7 +70023,7 @@ entry(
 )
 
 entry(
-    index = 2624,
+    index = 2785,
     label = "N3d-N3dCs(CsCsH)",
     group = 
 """
@@ -58439,7 +70048,7 @@ entry(
 )
 
 entry(
-    index = 2625,
+    index = 2786,
     label = "N3d-N3dCs(CsHH)",
     group = 
 """
@@ -58464,7 +70073,7 @@ entry(
 )
 
 entry(
-    index = 2626,
+    index = 2787,
     label = "N3d-N3dCs(HHH)",
     group = 
 """
@@ -58489,7 +70098,7 @@ entry(
 )
 
 entry(
-    index = 2627,
+    index = 2788,
     label = "N3d-NC",
     group = 
 """
@@ -58514,7 +70123,7 @@ BurcatNS |         2
 )
 
 entry(
-    index = 2628,
+    index = 2789,
     label = "N3d-N3sCd",
     group = 
 """
@@ -58538,7 +70147,7 @@ CHON_G4 |         50
 )
 
 entry(
-    index = 2629,
+    index = 2790,
     label = "N3d-N3sCdd",
     group = 
 """
@@ -58562,7 +70171,7 @@ CHON_G4 |         18
 )
 
 entry(
-    index = 2630,
+    index = 2791,
     label = "N3d-N3dCd",
     group = 
 """
@@ -58586,7 +70195,7 @@ CHON_G4 |         15
 )
 
 entry(
-    index = 2631,
+    index = 2792,
     label = "N3d-N3dCdd",
     group = 
 """
@@ -58610,7 +70219,7 @@ CHON_G4 |         9
 )
 
 entry(
-    index = 2632,
+    index = 2793,
     label = "N3d-CC",
     group = 
 """
@@ -58634,7 +70243,7 @@ CHON_G4 |         45
 )
 
 entry(
-    index = 2633,
+    index = 2794,
     label = "N3d-CdCs",
     group = 
 """
@@ -58659,7 +70268,7 @@ CHON    |         3
 )
 
 entry(
-    index = 2634,
+    index = 2795,
     label = "N3d-Cd(CsHHH)",
     group = 
 """
@@ -58684,7 +70293,7 @@ entry(
 )
 
 entry(
-    index = 2635,
+    index = 2796,
     label = "N3d-Cd(CsCsHH)",
     group = 
 """
@@ -58709,7 +70318,7 @@ entry(
 )
 
 entry(
-    index = 2636,
+    index = 2797,
     label = "N3d-CdH",
     group = 
 """
@@ -58734,7 +70343,7 @@ BurcatNS |         1
 )
 
 entry(
-    index = 2637,
+    index = 2798,
     label = "N3d-CddH",
     group = 
 """
@@ -58758,7 +70367,7 @@ CHON_G4 |         55
 )
 
 entry(
-    index = 2638,
+    index = 2799,
     label = "N3t",
     group = 
 """
@@ -58779,7 +70388,7 @@ entry(
 )
 
 entry(
-    index = 2639,
+    index = 2800,
     label = "N3t-CtH",
     group = 
 """
@@ -58801,7 +70410,7 @@ Calculated by subtracting the data for the Ct-CtCs group (Ct-Cs STEIN and FAHR; 
 )
 
 entry(
-    index = 2640,
+    index = 2801,
     label = "N3t-N",
     group = 
 """
@@ -58825,7 +70434,7 @@ primaryNS      |         1
 )
 
 entry(
-    index = 2641,
+    index = 2802,
     label = "N5dc",
     group = 
 """
@@ -58845,7 +70454,7 @@ entry(
 )
 
 entry(
-    index = 2642,
+    index = 2803,
     label = "N5dc-OdO0sc",
     group = 
 """
@@ -58862,7 +70471,7 @@ entry(
 )
 
 entry(
-    index = 2643,
+    index = 2804,
     label = "N5dc-OdO0scH",
     group = 
 """
@@ -58887,7 +70496,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2644,
+    index = 2805,
     label = "N5dc-OdO0scO",
     group = 
 """
@@ -58916,7 +70525,7 @@ CHON                    |         2
 )
 
 entry(
-    index = 2645,
+    index = 2806,
     label = "N5dc-OdO0scC",
     group = 
 """
@@ -58945,7 +70554,7 @@ CHON                    |         30
 )
 
 entry(
-    index = 2646,
+    index = 2807,
     label = "N5dc-OdO0scN",
     group = 
 """
@@ -58972,7 +70581,7 @@ thermo_DFT_CCSDTF12_BAC |         3
 )
 
 entry(
-    index = 2647,
+    index = 2808,
     label = "N5dc-OdOs",
     group = 
 """
@@ -58989,7 +70598,7 @@ entry(
 )
 
 entry(
-    index = 2648,
+    index = 2809,
     label = "N5dc-OdOsN",
     group = 
 """
@@ -59014,7 +70623,7 @@ CHON_G4 |         3
 )
 
 entry(
-    index = 2649,
+    index = 2810,
     label = "N5dc-CdO0sc",
     group = 
 """
@@ -59038,7 +70647,7 @@ CHON_G4 |         45
 )
 
 entry(
-    index = 2650,
+    index = 2811,
     label = "N5dc-CHH",
     group = 
 """
@@ -59063,7 +70672,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2651,
+    index = 2812,
     label = "N5dc-HNN",
     group = 
 """
@@ -59088,7 +70697,7 @@ primaryNS |         3
 )
 
 entry(
-    index = 2652,
+    index = 2813,
     label = "N5dc-HNO",
     group = 
 """
@@ -59113,7 +70722,7 @@ CHON_G4 |         6
 )
 
 entry(
-    index = 2653,
+    index = 2814,
     label = "N5dc-OdNH",
     group = 
 """
@@ -59138,7 +70747,7 @@ CHON_G4 |         18
 )
 
 entry(
-    index = 2654,
+    index = 2815,
     label = "N5dc-NNO",
     group = 
 """
@@ -59163,7 +70772,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2655,
+    index = 2816,
     label = "N5dc-CCH",
     group = 
 """
@@ -59188,7 +70797,7 @@ CHON_G4 |         2
 )
 
 entry(
-    index = 2656,
+    index = 2817,
     label = "N5dc-CNO",
     group = 
 """
@@ -59214,7 +70823,7 @@ thermo_DFT_CCSDTF12_BAC |         1
 )
 
 entry(
-    index = 2657,
+    index = 2818,
     label = "N5ddc",
     group = 
 """
@@ -59236,7 +70845,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2658,
+    index = 2819,
     label = "N5ddc-O2d",
     group = 
 """
@@ -59259,7 +70868,7 @@ CHON_G4 |         1
 )
 
 entry(
-    index = 2659,
+    index = 2820,
     label = "N5ddc-N1dc",
     group = 
 """
@@ -59284,7 +70893,7 @@ primaryNS               |         1
 )
 
 entry(
-    index = 2660,
+    index = 2821,
     label = "N5tc",
     group = 
 """
@@ -59310,10 +70919,13 @@ L1: R
         L3: CJ2_singlet
             L4: CJ2_singlet-F
                 L5: CJ2_singlet-FF
+                    L6: C2s-F1sF1s
                 L5: CJ2_singlet-FC
                     L6: CJ2_singlet-FCs
+                        L7: C2s-CsF1s
                     L6: CJ2_singlet-FCO
                 L5: CJ2_singlet-FO
+                L5: C2s-F1sH
             L4: CJ2_singlet-Cl
                 L5: CJ2_singlet-ClCl
                 L5: CJ2_singlet-ClC
@@ -59342,6 +70954,7 @@ L1: R
                 L5: CsJ2_singlet-(Cds-Cds-Cds-Cds)Cs_6_ring
             L4: CtJ2_singlet-N5tc
             L4: CsJ2_singlet-N5tc
+            L4: C2tc-O4tc
         L3: Cbf
             L4: Cbf-CbCbCbf
             L4: Cbf-CbCbfCbf
@@ -59372,6 +70985,7 @@ L1: R
             L4: CtBrC
             L4: CtCCl
             L4: CtCF
+                L5: Ct-CtF1s
             L4: Ct-CtH
             L4: Ct-StH
             L4: Ct-CtOs
@@ -59430,6 +71044,7 @@ L1: R
                 L5: Cdd-CddOd
                     L6: Cdd-(Cdd-O2d)O2d
                     L6: Cdd-(Cdd-Cd)O2d
+                        L7: Cdd-(Cd)CddO2d
                     L6: Cdd-(CddN)Od
             L4: Cdd-CdSd
                 L5: Cdd-CdsSd
@@ -59451,6 +71066,12 @@ L1: R
                     L6: Cdd-(Cdd-O2d)Cds
                     L6: Cdd-(Cdd-S2d)Cds
                     L6: Cdd-(Cdd-Cd)Cds
+                        L7: Cdd-(Cd)(F1sH)CdCdd
+                        L7: Cdd-(Cd)(F1sF1s)CdCdd
+                        L7: Cdd-(Cd)(Cl1sH)CdCdd
+                        L7: Cdd-(Cd)(Cl1sCl1s)CdCdd
+                        L7: Cdd-(Br1sH)(Cd)CdCdd
+                        L7: Cdd-(Br1sBr1s)(Cd)CdCdd
                 L5: Cdd-CdsCds
             L4: Cdd-NC
                 L5: Cdd-N3dCd
@@ -59479,9 +71100,12 @@ L1: R
             L4: CdCClF
                 L5: Cd(Cdd-O2d)FCl
             L4: COFFO
+                L5: CO-F1sF1sO2d
             L4: CdCFF
                 L5: CdCddFF
                     L6: Cd(Cdd-Od)FF
+                        L7: Cd-(O2d)CddF1sF1s
+                L5: Cd-CdF1sF1s
             L4: COBrHO
             L4: CdBrCH
                 L5: CdBrCddH
@@ -59491,9 +71115,12 @@ L1: R
                 L5: CdCddClH
                     L6: Cd(Cdd-Od)ClH
             L4: COFHO
+                L5: CO-F1sO2dH
             L4: CdCFH
                 L5: CdCddFH
                     L6: Cd(Cdd-Od)FH
+                        L7: Cd-(O2d)CddF1sH
+                L5: Cd-CdF1sH
             L4: COBrOO
             L4: CdBrCO
                 L5: CdBrCddO
@@ -59503,6 +71130,7 @@ L1: R
                 L5: CdClCddO
                     L6: Cd(Cdd-Od)ClO
             L4: COFOO
+                L5: CO-F1sO2dO2s
             L4: CdCFO
                 L5: CdCddFO
                     L6: Cd(Cdd-Od)FO
@@ -59522,8 +71150,10 @@ L1: R
                     L6: Cd(Cdd-Od)CCl
             L4: COCFO
                 L5: COCsFO
+                    L6: CO-CsF1sO2d
             L4: CdCCF
                 L5: CdCsCdF
+                    L6: Cd-CdCsF1s
                 L5: CdCtCdF
                 L5: CdCddCF
                     L6: Cd(Cdd-Od)CF
@@ -59547,6 +71177,7 @@ L1: R
                             L8: Cds-O2d(Cds-Cdd-Cd)H
                 L5: Cds-OdCtH
                 L5: Cds-OdCbH
+                L5: CO-C2sO2dH
             L4: Cds-OdCOs
                 L5: Cds-OdCsOs
                 L5: Cds-OdCdsOs
@@ -59602,12 +71233,15 @@ L1: R
                             L8: Cds-OdCb(Cds-Cdd-Cd)
                 L5: Cds-OdCbCt
                 L5: Cds-OdCbCb
+                L5: CO-C2sCsO2d
             L4: Cds-CdHH
                 L5: Cds-CdsHH
                 L5: Cds-CddHH
                     L6: Cds-(Cdd-O2d)HH
+                        L7: Cd-(O2d)CddHH
                     L6: Cds-(Cdd-S2d)HH
                     L6: Cds-(Cdd-Cd)HH
+                        L7: Cd-(Cd)CddHH
             L4: Cds-CdOsH
                 L5: Cds-CdsOsH
                 L5: Cds-CddOsH
@@ -59649,6 +71283,9 @@ L1: R
                     L6: Cds-(Cdd-O2d)CsH
                     L6: Cds-(Cdd-S2d)CsH
                     L6: Cds-(Cdd-Cd)CsH
+                        L7: Cd-(Cd)(F1sHH)CddCsH
+                        L7: Cd-(Cd)(F1sF1sF1s)CddCsH
+                        L7: Cd-(Cd)(F1sF1sH)CddCsH
                 L5: Cds-CddCdsH
                     L6: Cds-(Cdd-O2d)(Cds-O2d)H
                     L6: Cds-(Cdd-O2d)(Cds-Cd)H
@@ -59679,6 +71316,7 @@ L1: R
                 L5: Cds-(Cdd-Cd)C=SH
                 L5: Cds-(Cdd-S2d)C=SH
                 L5: Cds-CdsC=SH
+                L5: Cd-C2dCsH
             L4: Cds-CdCO
                 L5: Cds-CdsCdsOs
                     L6: Cds-Cds(Cds-O2d)O2s
@@ -59776,6 +71414,12 @@ L1: R
                             L8: Cds-Cds(Cds-Cdd-S2d)(Cds-Cdd-S2d)
                             L8: Cds-Cds(Cds-Cdd-S2d)(Cds-Cdd-Cd)
                             L8: Cds-Cds(Cds-Cdd-Cd)(Cds-Cdd-Cd)
+                    L6: Cd-(F1s)(F1sH)(H)CdCdCd
+                    L6: Cd-(F1s)(F1s)(F1sH)CdCdCd
+                    L6: Cd-(F1s)(F1sF1s)(H)CdCdCd
+                    L6: Cd-(F1sF1s)(H)(H)CdCdCd
+                    L6: Cd-(F1sH)(H)(H)CdCdCd
+                    L6: Cd-(F1s)(F1s)(F1sF1s)CdCdCd
                 L5: Cds-CdsCtCs
                 L5: Cds-CdsCtCds
                     L6: Cds-CdsCt(Cds-O2d)
@@ -60083,6 +71727,7 @@ L1: R
             L4: CsBrFFF
             L4: CsClFFF
             L4: CsFFFF
+                L5: Cs-F1sF1sF1sF1s
             L4: CsBrBrBrH
             L4: CsBrBrClH
             L4: CsBrClClH
@@ -60093,15 +71738,18 @@ L1: R
             L4: CsBrFFH
             L4: CsClFFH
             L4: CsFFFH
+                L5: Cs-F1sF1sF1sH
             L4: CsBrBrHH
             L4: CsBrClHH
             L4: CsClClHH
             L4: CsBrFHH
             L4: CsClFHH
             L4: CsFFHH
+                L5: Cs-F1sF1sHH
             L4: CsBrHHH
             L4: CsClHHH
             L4: CsFHHH
+                L5: Cs-F1sHHH
             L4: CsBrBrBrO
             L4: CsBrBrClO
             L4: CsBrClClO
@@ -60112,15 +71760,18 @@ L1: R
             L4: CsBrFFO
             L4: CsClFFO
             L4: CsFFFO
+                L5: Cs-F1sF1sF1sO2s
             L4: CsBrBrHO
             L4: CsBrClHO
             L4: CsClClHO
             L4: CsBrFHO
             L4: CsClFHO
             L4: CsFFHO
+                L5: Cs-F1sF1sO2sH
             L4: CsBrHHO
             L4: CsClHHO
             L4: CsFHHO
+                L5: Cs-F1sO2sHH
             L4: CsBrBrOO
             L4: CsBrClOO
             L4: CsClClOO
@@ -60154,10 +71805,20 @@ L1: R
             L4: CsCClFF
             L4: CsCFFF
                 L5: CsCsFFF
+                    L6: Cs-CsF1sF1sF1s
                 L5: CsCdFFF
+                    L6: Cs-CdF1sF1sF1s
                 L5: CsCtFFF
+                    L6: Cs-CtF1sF1sF1s
                 L5: CsCOFFF
+                    L6: Cs-(O2dH)COF1sF1sF1s
+                    L6: Cs-(F1sO2d)COF1sF1sF1s
+                    L6: Cs-(O2dO2s)COF1sF1sF1s
+                    L6: Cs-(CsO2d)COF1sF1sF1s
+                    L6: Cs-(Cl1sO2d)COF1sF1sF1s
+                    L6: Cs-(Br1sO2d)COF1sF1sF1s
                 L5: CsC2sFFF
+                    L6: Cs-C2sF1sF1sF1s
             L4: CsBrBrCH
                 L5: CsBrBrCsH
             L4: CsBrCClH
@@ -60167,24 +71828,39 @@ L1: R
             L4: CsCClFH
             L4: CsCFFH
                 L5: CsCsFFH
+                    L6: Cs-CsF1sF1sH
+                L5: Cs-C2sF1sF1sH
+                L5: Cs-CtF1sF1sH
+                L5: Cs-CdF1sF1sH
+                L5: Cs-COF1sF1sH
             L4: CsBrCHH
                 L5: CsBrCsHH
             L4: CsCClHH
                 L5: CsClCsHH
             L4: CsCFHH
                 L5: CsCsFHH
+                    L6: Cs-CsF1sHH
+                L5: Cs-C2sF1sHH
+                L5: Cs-CtF1sHH
+                L5: Cs-CdF1sHH
+                L5: Cs-COF1sHH
             L4: CsBrBrCO
             L4: CsBrCClO
             L4: CsCClClO
             L4: CsBrCFO
             L4: CsCClFO
             L4: CsCFFO
+                L5: Cs-CsF1sF1sO2s
+                L5: Cs-COF1sF1sO2s
+                L5: Cs-CdF1sF1sO2s
+                L5: Cs-CtF1sF1sO2s
             L4: CsBrCHO
             L4: CsCClHO
             L4: CsCFHO
             L4: CsBrCOO
             L4: CsCClOO
             L4: CsCFOO
+                L5: Cs-CsF1sO2sO2s
             L4: CsBrBrCC
                 L5: CsBrBrCsCs
             L4: CsBrCCCl
@@ -60194,6 +71870,12 @@ L1: R
             L4: CsCCClF
             L4: CsCCFF
                 L5: CsCsCsFF
+                    L6: Cs-CsCsF1sF1s
+                L5: Cs-COCsF1sF1s
+                L5: Cs-CdCsF1sF1s
+                L5: Cs-C2sCsF1sF1s
+                L5: Cs-CsCtF1sF1s
+                L5: Cs-CdCdF1sF1s
             L4: CsBrCCH
                 L5: CsBrCsCsH
             L4: CsCCClH
@@ -60203,6 +71885,9 @@ L1: R
             L4: CsBrCCO
             L4: CsCCClO
             L4: CsCCFO
+                L5: Cs-COCsF1sO2s
+                L5: Cs-CsCsF1sO2s
+                L5: Cs-CdCdF1sO2s
             L4: CsBrCCC
             L4: CsCCCCl
             L4: CsCCCF
@@ -60211,16 +71896,31 @@ L1: R
                 L5: Cs-CsHHH
                 L5: Cs-CdsHHH
                     L6: Cs-(Cds-O2d)HHH
+                        L7: Cs-(O2dH)COHHH
+                        L7: Cs-(CsO2d)COHHH
+                        L7: Cs-(C2sO2d)COHHH
+                        L7: Cs-(F1sO2d)COHHH
+                        L7: Cs-(O2dO2s)COHHH
                     L6: Cs-(Cds-Cd)HHH
                         L7: Cs-(Cds-Cds)HHH
+                            L8: Cs-(CdH)CdHHH
+                            L8: Cs-(CdCs)CdHHH
+                            L8: Cs-(CdO2s)CdHHH
+                            L8: Cs-(CdF1s)CdHHH
+                            L8: Cs-(CdCl1s)CdHHH
+                            L8: Cs-(Br1sCd)CdHHH
                         L7: Cs-(Cds-Cdd)HHH
                             L8: Cs-(Cds-Cdd-O2d)HHH
                             L8: Cs-(Cds-Cdd-S2d)HHH
                             L8: Cs-(Cds-Cdd-Cd)HHH
+                                L9: Cs-((Cd)(HHH)CddF1s)((H))((HH))Cd
+                                L9: Cs-((Cd)(HHH)CddCl1s)((H))((HH))Cd
+                                L9: Cs-((Cd)(HHH)Br1sCdd)((H))((HH))Cd
                 L5: Cs-CtHHH
                     L6: Cs-(CtN3t)HHH
                 L5: Cs-CbHHH
                 L5: Cs-C=SHHH
+                L5: Cs-C2sHHH
             L4: Cs-OsHHH
             L4: Cs-OsOsHH
             L4: Cs-OsOsOsH
@@ -60268,6 +71968,11 @@ L1: R
                             L8: Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)HH
                             L8: Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)HH
                             L8: Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)HH
+                    L6: Cs-(F1s)(H)CdCdHH
+                    L6: Cs-(F1s)(F1s)CdCdHH
+                    L6: Cs-(Cs)(F1s)CdCdHH
+                    L6: Cs-(Cs)(H)CdCdHH
+                    L6: Cs-(F1s)(O2s)CdCdHH
                 L5: Cs-CtCsHH
                 L5: Cs-CtCdsHH
                     L6: Cs-(Cds-O2d)CtHH
@@ -60298,6 +72003,7 @@ L1: R
                     L6: Cs-C=S(Cds-Cds)HH
                 L5: Cs-C=SC=SHH
                 L5: Cs-C=SCbHH
+                L5: Cs-C2sCsHH
             L4: Cs-CCCH
                 L5: Cs-CsCsCsH
                 L5: Cs-CdsCsCsH
@@ -60329,6 +72035,16 @@ L1: R
                             L8: Cs-(Cds-Cdd-S2d)(Cds-Cdd-S2d)CsH
                             L8: Cs-(Cds-Cdd-S2d)(Cds-Cdd-Cd)CsH
                             L8: Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)CsH
+                    L6: Cs-(F1s)(F1sF1sH)(H)CdCdCsH
+                    L6: Cs-(F1s)(F1s)(F1sF1sF1s)CdCdCsH
+                    L6: Cs-(F1s)(H)(HHH)CdCdCsH
+                    L6: Cs-(F1sF1sH)(H)(H)CdCdCsH
+                    L6: Cs-(F1s)(F1s)(HHH)CdCdCsH
+                    L6: Cs-(F1s)(F1sF1sF1s)(H)CdCdCsH
+                    L6: Cs-(F1sHH)(H)(H)CdCdCsH
+                    L6: Cs-(F1sF1sF1s)(H)(H)CdCdCsH
+                    L6: Cs-(F1s)(F1sHH)(H)CdCdCsH
+                    L6: Cs-(F1s)(F1s)(F1sHH)CdCdCsH
                 L5: Cs-CtCdsCsH
                     L6: Cs-(Cds-O2d)CtCsH
                     L6: Cs-(Cds-Cd)CtCsH
@@ -61219,6 +72935,8 @@ L1: R
                             L8: Cs-(Cds-Cdd-O2d)(Cds-Cdd-O2d)OsH
                             L8: Cs-(Cds-Cdd-O2d)(Cds-Cdd-Cd)OsH
                             L8: Cs-(Cds-Cdd-Cd)(Cds-Cdd-Cd)OsH
+                    L6: Cs-(F1s)(F1s)(H)CdCdO2sH
+                    L6: Cs-(F1s)(H)(H)CdCdO2sH
                 L5: Cs-CtCsOsH
                 L5: Cs-CtCdsOsH
                     L6: Cs-(Cds-O2d)CtOsH
@@ -61575,6 +73293,11 @@ L1: R
                     L6: Cs-(N3dN3d)HHH
                 L5: Cs-N3sHHH
                 L5: Cs-N5sdtcHHH
+            L4: Cs-F1sF1sF1sS6dd
+            L4: Cs-CsF1sF1sS6dd
+            L4: Cs-F1sF1sO2sS6dd
+            L4: Cs-CsF1sO2sS6dd
+        L3: Ca
     L2: O
         L3: O0sc
         L3: Oa(S)
@@ -61582,6 +73305,8 @@ L1: R
             L4: O2d-Cd
             L4: O2d-O2d
             L4: O2d-Sd
+                L5: O2d-S2d
+                L5: O2d-S6ddd
             L4: O2d-N3d
             L4: O2d-N5dc
         L3: O2s
@@ -61591,12 +73316,15 @@ L1: R
             L4: O2sBrF
             L4: O2sClF
             L4: O2sFF
+                L5: O2s-F1sF1s
             L4: O2sBrH
             L4: O2sClH
             L4: O2sFH
+                L5: O2s-F1sH
             L4: O2sBrO
             L4: O2sClO
             L4: O2sFO
+                L5: O2s-F1sO2s
             L4: O2sBrC
             L4: O2sCCl
             L4: O2sCF
@@ -61609,11 +73337,14 @@ L1: R
                 L5: O2s-CtH
                 L5: O2s-CdsH
                     L6: O2s-(Cds-O2d)H
+                        L7: O2s-(CsO2d)COH
+                        L7: O2s-(F1sO2d)COH
                     L6: O2s-(Cds-Cd)H
                     L6: O2s-(Cds-Nd)H
                 L5: O2s-CsH
                 L5: O2s-CbH
                 L5: O2s-CSH
+                L5: O2s-C2sH
             L4: O2s-OsC
                 L5: O2s-OsCt
                 L5: O2s-OsCds
@@ -61634,6 +73365,34 @@ L1: R
                     L6: O2s-(Cds-Cd)(Cds-Cd)
                 L5: O2s-CdsCs
                     L6: O2s-Cs(Cds-O2d)
+                        L7: O2s-(F1sF1s)(O2d)COCs
+                        L7: O2s-(CsF1s)(O2d)COCs
+                        L7: O2s-(F1sO2d)(HHH)COCs
+                        L7: O2s-(F1sF1sH)(O2dH)COCs
+                        L7: O2s-(F1sHH)(F1sO2d)COCs
+                        L7: O2s-(F1sF1sF1s)(F1sO2d)COCs
+                        L7: O2s-(F1sF1sF1s)(O2dH)COCs
+                        L7: O2s-(F1sF1sH)(F1sO2d)COCs
+                        L7: O2s-(F1sHH)(O2dH)COCs
+                        L7: O2s-(F1sH)(O2d)COCs
+                        L7: O2s-(CsF1sF1s)(CsO2d)COCs
+                        L7: O2s-(Cl1sF1sH)(O2dH)COCs
+                        L7: O2s-(Cl1sO2d)(F1sF1sH)COCs
+                        L7: O2s-(Cl1sF1sF1s)(O2dH)COCs
+                        L7: O2s-(Cl1sF1sH)(Cl1sO2d)COCs
+                        L7: O2s-(Cl1sO2d)(F1sHH)COCs
+                        L7: O2s-(Cl1sCl1sF1s)(O2dH)COCs
+                        L7: O2s-(Br1sCl1sF1s)(O2dH)COCs
+                        L7: O2s-(Br1sO2d)(Cl1sF1sH)COCs
+                        L7: O2s-(Br1sO2d)(F1sF1sF1s)COCs
+                        L7: O2s-(Br1sBr1sF1s)(Br1sO2d)COCs
+                        L7: O2s-(Br1sBr1sF1s)(O2dH)COCs
+                        L7: O2s-(Br1sF1sF1s)(O2dH)COCs
+                        L7: O2s-(Br1sO2d)(F1sHH)COCs
+                        L7: O2s-(Br1sF1sH)(Br1sO2d)COCs
+                        L7: O2s-(Br1sF1sH)(O2dH)COCs
+                        L7: O2s-(Br1sF1sF1s)(Br1sO2d)COCs
+                        L7: O2s-(Br1sO2d)(F1sF1sH)COCs
                     L6: O2s-Cs(Cds-Cd)
                 L5: O2s-CdsCb
                     L6: O2s-Cb(Cds-O2d)
@@ -61642,13 +73401,18 @@ L1: R
                 L5: O2s-CsCb
                 L5: O2s-CbCb
                 L5: O2s-Cs(Cds-S2d)
+                L5: O2s-C2sCs
             L4: O2s-CS
                 L5: O2s-CS2
                 L5: O2s-CS4
+                    L6: O2s-CsS4d
                 L5: O2s-CS6
+                    L6: O2s-CsS6dd
             L4: O2s-SH
                 L5: O2s-S_nonDeH
                 L5: O2s-S_DeH
+                    L6: O2s-S6ddH
+                    L6: O2s-S4dH
             L4: O2s-N
                 L5: O2s-N5tc
                     L6: O2s-N5tcH
@@ -61670,6 +73434,8 @@ L1: R
                     L6: O2s-CsN5dc
                 L5: O2s-NN
                     L6: O2s-N3sdN3sd
+        L3: O4tc
+            L4: O4tc-C2tc
     L2: Si
         L3: SiJ2(S)
     L2: S
@@ -61679,6 +73445,7 @@ L1: R
             L4: S2d-C
             L4: S2d-S
             L4: S2d-O
+                L5: S2d-O2d
         L3: S2s
             L4: S2s-HH
             L4: S2s-CH
@@ -61747,6 +73514,7 @@ L1: R
                     L6: S4d-OdOsCs
                     L6: S4d-OdOsCd
                 L5: S4d-OdOO
+                    L6: S4d-O2dO2sO2s
                 L5: S4d-OdOH
                 L5: S4d-OdOS
                 L5: S4d-OdSS
@@ -61791,12 +73559,14 @@ L1: R
                 L5: S6dd-OdOdCS
                 L5: S6dd-OdOdCO
                     L6: S6dd-OdOdCsOs
+                        L7: S6dd-CsO2dO2dO2s
                     L6: S6dd-OdOdCdOs
                 L5: S6dd-OdOdOO
                 L5: S6dd-OdOdOH
                 L5: S6dd-OdOdOS
                 L5: S6dd-OdOdSS
                 L5: S6dd-OdOdSH
+                L5: S6dd-F1sO2dO2dO2s
             L4: S6dd-OdCd
                 L5: S6dd-OdCdCC
                 L5: S6dd-OdCdCH

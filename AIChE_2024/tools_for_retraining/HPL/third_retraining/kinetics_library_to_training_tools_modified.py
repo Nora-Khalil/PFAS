@@ -204,7 +204,7 @@ def process_reactions(database, libraries, families, compare_kinetics=True, show
                 
                 CO_flag = False
                 for spec in fam_rxn.reactants + fam_rxn.products: 
-                    if spec.smiles == '[C-]#[O+]' or spec.smiles=='O=C=O': 
+                    if spec.smiles == '[C-]#[O+]' or spec.smiles=='O=C=O' or '[C-]=[O+]' in spec.smiles: 
                         CO_flag=True
                 if CO_flag==True: 
                     database.kinetics.families[fam_rxn.family].add_atom_labels_for_reaction(fam_rxn, output_with_resonance=False) #added by NK
